@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<title>Loki signal viewer</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../main.css">
+<style>
+    .legend {{
+        width: 1.5em;
+        display: inline-block;
+        border-radius: 50%;
+    }}
+
+    canvas {{
+        position: absolute;
+    }}
+</style>
+
+<header>
+    <nav>
+        <ul class="breadcrumbs">
+            <li><a href="../index.html">Loki</a></li>
+            <li><a href="">Signal viewer</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="row">
+        {channel_enables}
+    </div>
+    <div class="row">
+        <canvas id="xy-canvas" height="500"></canvas>
+        <canvas id="xy-axis-canvas" height="500"></canvas>
+        <canvas id="xy-norm-canvas" height="500"></canvas>
+        <canvas id="xy-norm-axis-canvas" height="500"></canvas>
+        {disp_cvs}
+    </div>
+</div>
+
+<script>
+    const demod_channels = {demod_channels};
+    const record_channels = {record_channels};
+</script>
+<script src="../plot.js"></script>
+
+</html>

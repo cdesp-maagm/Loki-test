@@ -1,0 +1,5 @@
+
+#include "zynq-redpitaya.dts"
+#include "loki-common.dtsi"
+#include "loki-modem.dtsi"
+#include "loki-env-sensors.dtsi"

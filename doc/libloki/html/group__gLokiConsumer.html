@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Exemple de consommateur</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Exemple de consommateur <div class="ingroups"><a class="el" href="group__ggLokiInterconnect.html">Échange de données entre modules d'acquisition, de traitement et d'enregistrement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module fournit une implémentation de référence d'un consommateur qui lit les données dans une <a class="el" href="group__gLokiFIFO.html" title="Structure de données FIFO">FIFO</a> et qui ne les utilise pas.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Exemple de consommateur:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer.png" border="0" usemap="#agroup____gLokiConsumer" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiConsumer" id="agroup____gLokiConsumer">
+<area shape="rect" title="Ce module fournit une implémentation de référence d&#39;un consommateur qui lit les données dans une FIFO..." alt="" coords="301,20,501,45"/>
+<area shape="rect" href="group__ggLokiInterconnect.html" title=" " alt="" coords="5,5,253,60"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-consumer_2Ec" id="r_libloki-consumer_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-consumer_8c.html">libloki-consumer.c</a></td></tr>
+<tr class="memitem:libloki-consumer_2Eh" id="r_libloki-consumer_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-consumer_8h.html">libloki-consumer.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiConsumer" id="r_LokiConsumer"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiConsumer.html">LokiConsumer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définition d'un consommateur.  <a href="structLokiConsumer.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaea7f489db0b26a3757469944359828e1" id="r_gaea7f489db0b26a3757469944359828e1"><td class="memItemLeft">typedef struct LokiConsumer&#160;</td><td class="memItemRight"><a class="el" href="#gaea7f489db0b26a3757469944359828e1">LokiConsumer</a></td></tr>
+<tr class="memdesc:gaea7f489db0b26a3757469944359828e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type consommateur.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga117feeff6c10a12d8d3ff5297c82dfc7" id="r_ga117feeff6c10a12d8d3ff5297c82dfc7"><td class="memItemLeft"><a class="el" href="structLokiConsumer.html">LokiConsumer</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga117feeff6c10a12d8d3ff5297c82dfc7">LokiConsumer_new</a> (void)</td></tr>
+<tr class="memdesc:ga117feeff6c10a12d8d3ff5297c82dfc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un consommateur.  <br /></td></tr>
+<tr class="memitem:gac44de59993950d0183ecd089f65091d1" id="r_gac44de59993950d0183ecd089f65091d1"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="#gac44de59993950d0183ecd089f65091d1">LokiConsumer_work</a> (void *ptr)</td></tr>
+<tr class="memdesc:gac44de59993950d0183ecd089f65091d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire les données de la FIFO.  <br /></td></tr>
+<tr class="memitem:ga365cf2545eef317565f4a35ac3ef1c4d" id="r_ga365cf2545eef317565f4a35ac3ef1c4d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga365cf2545eef317565f4a35ac3ef1c4d">LokiConsumer_start</a> (<a class="el" href="structLokiConsumer.html">LokiConsumer</a> *self, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *in, size_t cid)</td></tr>
+<tr class="memdesc:ga365cf2545eef317565f4a35ac3ef1c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer un consommateur.  <br /></td></tr>
+<tr class="memitem:ga3596ff29c7812a18f78bc33c73755c63" id="r_ga3596ff29c7812a18f78bc33c73755c63"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3596ff29c7812a18f78bc33c73755c63">LokiConsumer_stop</a> (<a class="el" href="structLokiConsumer.html">LokiConsumer</a> *self)</td></tr>
+<tr class="memdesc:ga3596ff29c7812a18f78bc33c73755c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter un consommateur.  <br /></td></tr>
+<tr class="memitem:gad453aa02e1aea8e9e1771b2a84f0b319" id="r_gad453aa02e1aea8e9e1771b2a84f0b319"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gad453aa02e1aea8e9e1771b2a84f0b319">LokiConsumer_del</a> (<a class="el" href="structLokiConsumer.html">LokiConsumer</a> *self)</td></tr>
+<tr class="memdesc:gad453aa02e1aea8e9e1771b2a84f0b319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un consommateur.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module fournit une implémentation de référence d'un consommateur qui lit les données dans une <a class="el" href="group__gLokiFIFO.html" title="Structure de données FIFO">FIFO</a> et qui ne les utilise pas. </p>
+<p>Il peut être utilisé comme <em>bouchon</em> en sortie d'une FIFO dont les données ne sont pas utilisées.</p>
+<p>Il peut aussi servir d'exemple de référence pour construire d'autres consommateurs </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="gaea7f489db0b26a3757469944359828e1" name="gaea7f489db0b26a3757469944359828e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea7f489db0b26a3757469944359828e1">&#9670;&#160;</a></span>LokiConsumer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiConsumer LokiConsumer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le type consommateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8h_source.html#l00022">22</a> du fichier <a class="el" href="libloki-consumer_8h_source.html">libloki-consumer.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gad453aa02e1aea8e9e1771b2a84f0b319" name="gad453aa02e1aea8e9e1771b2a84f0b319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad453aa02e1aea8e9e1771b2a84f0b319">&#9670;&#160;</a></span>LokiConsumer_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiConsumer_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiConsumer.html">LokiConsumer</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un consommateur. </p>
+<p>Désallouer la mémoire allouée par <a class="el" href="#ga117feeff6c10a12d8d3ff5297c82dfc7" title="Construire un consommateur.">LokiConsumer_new</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le consommateur à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8c_source.html#l00076">76</a> du fichier <a class="el" href="libloki-consumer_8c_source.html">libloki-consumer.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319_cgraph.png" border="0" usemap="#agroup__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319_icgraph.png" border="0" usemap="#agroup__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ga117feeff6c10a12d8d3ff5297c82dfc7" name="ga117feeff6c10a12d8d3ff5297c82dfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga117feeff6c10a12d8d3ff5297c82dfc7">&#9670;&#160;</a></span>LokiConsumer_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiConsumer.html">LokiConsumer</a> * LokiConsumer_new </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un consommateur. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau consommateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8c_source.html#l00031">31</a> du fichier <a class="el" href="libloki-consumer_8c_source.html">libloki-consumer.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7_cgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7_icgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ga365cf2545eef317565f4a35ac3ef1c4d" name="ga365cf2545eef317565f4a35ac3ef1c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga365cf2545eef317565f4a35ac3ef1c4d">&#9670;&#160;</a></span>LokiConsumer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiConsumer_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiConsumer.html">LokiConsumer</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarrer un consommateur. </p>
+<p>Cette fonction est non bloquante. Elle crée un nouveau thread qui consomme les données d'une FIFO.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le consommateur à démarrer. </td></tr>
+    <tr><td class="paramname">in</td><td>La FIFO à lire. </td></tr>
+    <tr><td class="paramname">cid</td><td>Le numéro de consommateur pour la FIFO. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le code d'erreur retourné par <span class="tt">pthread_create</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-consumer_8c_source.html">libloki-consumer.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_cgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_cgraph" id="agroup__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_cgraph">
+<area shape="rect" title="Démarrer un consommateur." alt="" coords="5,31,157,56"/>
+<area shape="rect" href="group__gLokiConsumer.html#gac44de59993950d0183ecd089f65091d1" title="Lire les données de la FIFO." alt="" coords="205,31,360,56"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="408,5,623,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="460,55,571,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_icgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="ga3596ff29c7812a18f78bc33c73755c63" name="ga3596ff29c7812a18f78bc33c73755c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3596ff29c7812a18f78bc33c73755c63">&#9670;&#160;</a></span>LokiConsumer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiConsumer_stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiConsumer.html">LokiConsumer</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter un consommateur. </p>
+<p>Cette fonction arrête le thread démarré par <a class="el" href="#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur.">LokiConsumer_start</a> pour le même consommateur.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le consommateur à arrêter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8c_source.html#l00067">67</a> du fichier <a class="el" href="libloki-consumer_8c_source.html">libloki-consumer.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_cgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_cgraph" id="agroup__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_cgraph">
+<area shape="rect" title="Arrêter un consommateur." alt="" coords="5,5,156,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="204,5,324,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_icgraph.png" border="0" usemap="#agroup__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="gac44de59993950d0183ecd089f65091d1" name="gac44de59993950d0183ecd089f65091d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac44de59993950d0183ecd089f65091d1">&#9670;&#160;</a></span>LokiConsumer_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiConsumer_work </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire les données de la FIFO. </p>
+<p>Cette fonction est exécutée dans un thread démarré par <a class="el" href="#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur.">LokiConsumer_start</a>. Elle consomme les données de la FIFO jusqu'à la demande d'arrêt par <a class="el" href="#ga3596ff29c7812a18f78bc33c73755c63" title="Arrêter un consommateur.">LokiConsumer_stop</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Le consommateur courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-consumer_8c_source.html#l00047">47</a> du fichier <a class="el" href="libloki-consumer_8c_source.html">libloki-consumer.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_cgraph.png" border="0" usemap="#agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_cgraph" id="agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_cgraph">
+<area shape="rect" title="Lire les données de la FIFO." alt="" coords="5,31,160,56"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="208,5,423,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="260,55,371,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_icgraph.png" border="0" usemap="#agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_icgraph" id="agroup__gLokiConsumer_gac44de59993950d0183ecd089f65091d1_icgraph">
+<area shape="rect" title="Lire les données de la FIFO." alt="" coords="205,5,360,31"/>
+<area shape="rect" href="group__gLokiConsumer.html#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur." alt="" coords="5,5,157,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

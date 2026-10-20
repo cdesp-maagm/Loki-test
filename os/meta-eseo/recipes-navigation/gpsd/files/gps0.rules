@@ -1,0 +1,2 @@
+
+KERNEL=="ttyPS1", SYMLINK+="gps0", RUN+="/bin/stty -F /dev/ttyPS1 115200 raw -echo"

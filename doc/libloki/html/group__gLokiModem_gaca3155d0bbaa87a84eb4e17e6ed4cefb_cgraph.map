@@ -1,0 +1,4 @@
+<map id="LokiModem_set_packet_item" name="LokiModem_set_packet_item">
+<area shape="rect" id="node1" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur." alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga27f4f0afdf1b651dd85f485bbbff196a" title="Mettre à l&#39;échelle une composante X (I) ou Y (Q) d&#39;un échantillon démodulé." alt="" coords="245,5,393,32"/>
+</map>

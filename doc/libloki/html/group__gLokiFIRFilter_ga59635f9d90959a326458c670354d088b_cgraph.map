@@ -1,0 +1,10 @@
+<map id="LokiFIRFilter_work" name="LokiFIRFilter_work">
+<area shape="rect" id="node1" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="5,153,148,179"/>
+<area shape="rect" id="node2" href="$group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="212,5,295,31"/>
+<area shape="rect" id="node3" href="$group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="196,55,311,80"/>
+<area shape="rect" id="node4" href="$group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="196,104,311,129"/>
+<area shape="rect" id="node5" href="$group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="199,153,308,179"/>
+<area shape="rect" id="node6" href="$group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="210,203,297,228"/>
+<area shape="rect" id="node7" href="$group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="208,252,299,277"/>
+<area shape="rect" id="node8" href="$group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="198,301,309,327"/>
+</map>

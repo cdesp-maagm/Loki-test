@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Support de structures de données avec polymorphisme.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle">
+<div class="title">Support de structures de données avec polymorphisme.</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module fournit des macros facilitant la définition d'interfaces et de classes.  
+<a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga022adc7968dc4c2770aa21581bf8b862"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(prefix)&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#ga9404439ed46dc67d489a7d4ec2853e8f">CAT</a>(prefix, Interface)</td></tr>
+<tr class="memdesc:ga022adc7968dc4c2770aa21581bf8b862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construit un nom d'interface pour le préfixe donné.  <a href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga022adc7968dc4c2770aa21581bf8b862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cd222081c0b93c561a3a02830d10dd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix)&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#ga9404439ed46dc67d489a7d4ec2853e8f">CAT</a>(prefix, Class)</td></tr>
+<tr class="memdesc:ga1cd222081c0b93c561a3a02830d10dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construit un nom de classe pour le préfixe donné.  <a href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga1cd222081c0b93c561a3a02830d10dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b53f2a9bf24378ca9c4117e777d8d71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(prefix,  name)&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#gaa6fa13246c1d6df342c083aac0f2ef95">CAT3</a>(prefix, _, name)</td></tr>
+<tr class="memdesc:ga7b53f2a9bf24378ca9c4117e777d8d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construit un nom de fonction pour une méthode d'une classe.  <a href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga7b53f2a9bf24378ca9c4117e777d8d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad71e11b51da42268464af1bb6e7656e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#gad71e11b51da42268464af1bb6e7656e8">LokiClass_interface</a>(prefix,  methods)</td></tr>
+<tr class="memdesc:gad71e11b51da42268464af1bb6e7656e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclare une interface.  <a href="group__LokiClass.html#gad71e11b51da42268464af1bb6e7656e8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gad71e11b51da42268464af1bb6e7656e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73dc50ecb993ab72efa7f10803140240"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga73dc50ecb993ab72efa7f10803140240">LokiClass_attribute</a>(decl)&#160;&#160;&#160;decl;</td></tr>
+<tr class="memdesc:ga73dc50ecb993ab72efa7f10803140240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dans une interface, déclare un attribut.  <a href="group__LokiClass.html#ga73dc50ecb993ab72efa7f10803140240">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga73dc50ecb993ab72efa7f10803140240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d764260014249229fd23ebadcc96134"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(prefix,  name)&#160;&#160;&#160;typeof(<a class="el" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(prefix, name)) *name;</td></tr>
+<tr class="memdesc:ga5d764260014249229fd23ebadcc96134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dans une interface, déclare une méthode.  <a href="group__LokiClass.html#ga5d764260014249229fd23ebadcc96134">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga5d764260014249229fd23ebadcc96134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a873899c9f1e6e82823479c42632dad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga9a873899c9f1e6e82823479c42632dad">LokiClass_declare_implementation</a>(superclass,  prefix)&#160;&#160;&#160;extern <a class="el" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(superclass) <a class="el" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix)</td></tr>
+<tr class="memdesc:ga9a873899c9f1e6e82823479c42632dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déclare une classe qui implémente une interface donnée.  <a href="group__LokiClass.html#ga9a873899c9f1e6e82823479c42632dad">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga9a873899c9f1e6e82823479c42632dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8e41e7a9fd0583e6314d14c757d26ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a>(superclass,  prefix,  impls)</td></tr>
+<tr class="memdesc:gaa8e41e7a9fd0583e6314d14c757d26ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit le contenu d'une classe qui implémente une interface donnée.  <a href="group__LokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gaa8e41e7a9fd0583e6314d14c757d26ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ba32abc96ab47c9211d12fa57c3ba3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(name,  value)&#160;&#160;&#160;.name = value,</td></tr>
+<tr class="memdesc:ga8ba32abc96ab47c9211d12fa57c3ba3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dans une implémentation, affecte une valeur à un attribut.  <a href="group__LokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga8ba32abc96ab47c9211d12fa57c3ba3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6da5df82ee2afb9112000c287919133f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(prefix,  name)&#160;&#160;&#160;.name = (typeof(<a class="el" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix).name))<a class="el" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(prefix, name),</td></tr>
+<tr class="memdesc:ga6da5df82ee2afb9112000c287919133f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dans une implémentation, associe une fonction à une méthode.  <a href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga6da5df82ee2afb9112000c287919133f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<p>Ce module fournit des macros facilitant la définition d'interfaces et de classes. </p>
+<ul>
+<li>Une interface est un type <code>struct</code> qui déclare des attributs (des champs de données) et des méthodes (des pointeurs sur des fonctions).</li>
+<li>Une implémentation est une variable de ce type <code>struct</code>, dans laquelle on a affecté des valeurs aux attributs, et des fonctions aux méthodes.</li>
+</ul>
+<p>On ne fournit pas de support particulier pour créer des instances de ces classes.</p>
+<p>Exemple :</p>
+<div class="fragment"><div class="line"><span class="comment">// Déclarer une interface Config.</span></div>
+<div class="line"><a class="code" href="group__LokiClass.html#gad71e11b51da42268464af1bb6e7656e8">LokiClass_interface</a>(Config,</div>
+<div class="line">    <a class="code" href="group__LokiClass.html#ga73dc50ecb993ab72efa7f10803140240">LokiClass_attribute</a>(<span class="keywordtype">char</span> *category)</div>
+<div class="line">    <a class="code" href="group__LokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(Config, <span class="keyword">new</span>)</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Le type des instances de Config.</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">    <span class="keywordtype">void</span> *instance;</div>
+<div class="line">    ConfigInterface impl;</div>
+<div class="line">} Config;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Un constructeur de Config, qui délègue à une implémentation.</span></div>
+<div class="line">Config *Config_new(<span class="keyword">const</span> ConfigInterface *impl) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Création d&#39;une configuration dans la catégorie : %s.\n&quot;</span>, impl-&gt;category);</div>
+<div class="line">    Config *<span class="keyword">self</span> = calloc(1, <span class="keyword">sizeof</span>(Config));</div>
+<div class="line">    <span class="keyword">self</span>-&gt;instance = impl-&gt;new();</div>
+<div class="line">    memcpy(&amp;self-&gt;impl, impl, <span class="keyword">sizeof</span>(ConfigInterface));</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Déclarer une classe UserConfig qui implémente Config.</span></div>
+<div class="line"><span class="comment">// Cette ligne se place généralement dans un fichier .h</span></div>
+<div class="line"><a class="code" href="group__LokiClass.html#ga9a873899c9f1e6e82823479c42632dad">LokiClass_declare_implementation</a>(Config, UserConfig)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Le type des instances de UserConfig.</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">    ...</div>
+<div class="line">} UserConfig;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Le constructeur de UserConfig, associé à la méthode Config.new.</span></div>
+<div class="line">UserConfig *UserConfig_new() {</div>
+<div class="line">    UserConfig *<span class="keyword">self</span> = calloc(1, <span class="keyword">sizeof</span>(UserConfig));</div>
+<div class="line">    ...</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Définir l&#39;implémentation de UserConfig.</span></div>
+<div class="line"><a class="code" href="group__LokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a>(Config, UserConfig,</div>
+<div class="line">    <a class="code" href="group__LokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(category, <span class="stringliteral">&quot;User&quot;</span>)</div>
+<div class="line">    <a class="code" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(UserConfig, <span class="keyword">new</span>)</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line">    Config *cfg = Config_new(UserConfig);</div>
+<div class="line">    ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h2 class="groupheader">Documentation des macros</h2>
+<a id="ga73dc50ecb993ab72efa7f10803140240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73dc50ecb993ab72efa7f10803140240">&#9670;&nbsp;</a></span>LokiClass_attribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_attribute</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">decl</td><td>)</td>
+          <td>&#160;&#160;&#160;decl;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dans une interface, déclare un attribut. </p>
+<p>Un attribut est un champ qui sera affecté dans la structure qui décrit une classe (voir <a class="el" href="group__LokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff" title="Définit le contenu d&#39;une classe qui implémente une interface donnée.">LokiClass_implementation</a>).</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decl</td><td>Une déclaration de champ, sans <code>;</code> terminal. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00120">120</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga1cd222081c0b93c561a3a02830d10dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cd222081c0b93c561a3a02830d10dd8">&#9670;&nbsp;</a></span>LokiClass_class_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_class_name</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#ga9404439ed46dc67d489a7d4ec2853e8f">CAT</a>(prefix, Class)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construit un nom de classe pour le préfixe donné. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de la classe.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exemple : </p><div class="fragment"><div class="line"><a class="code" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(UserConfig) <span class="comment">// --&gt; UserConfigClass</span></div>
+</div><!-- fragment --> 
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00089">89</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9a873899c9f1e6e82823479c42632dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a873899c9f1e6e82823479c42632dad">&#9670;&nbsp;</a></span>LokiClass_declare_implementation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_declare_implementation</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">superclass, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;extern <a class="el" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(superclass) <a class="el" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Déclare une classe qui implémente une interface donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">superclass</td><td>Le nom de base de l'interface. </td></tr>
+    <tr><td class="paramname">prefix</td><td>Le nom de base de la classe. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00136">136</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga6da5df82ee2afb9112000c287919133f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6da5df82ee2afb9112000c287919133f">&#9670;&nbsp;</a></span>LokiClass_define_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_define_method</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;.name = (typeof(<a class="el" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix).name))<a class="el" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(prefix, name),</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dans une implémentation, associe une fonction à une méthode. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de la classe. </td></tr>
+    <tr><td class="paramname">name</td><td>Le nom de la méthode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00163">163</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga7b53f2a9bf24378ca9c4117e777d8d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b53f2a9bf24378ca9c4117e777d8d71">&#9670;&nbsp;</a></span>LokiClass_function_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_function_name</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#gaa6fa13246c1d6df342c083aac0f2ef95">CAT3</a>(prefix, _, name)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construit un nom de fonction pour une méthode d'une classe. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de l'interface ou de la classe. </td></tr>
+    <tr><td class="paramname">name</td><td>Le nom de la méthode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exemple : </p><div class="fragment"><div class="line"><a class="code" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(Config, <span class="keyword">new</span>) <span class="comment">// --&gt; Config_new</span></div>
+</div><!-- fragment --> 
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00101">101</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="gaa8e41e7a9fd0583e6314d14c757d26ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8e41e7a9fd0583e6314d14c757d26ff">&#9670;&nbsp;</a></span>LokiClass_implementation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_implementation</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">superclass, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">impls&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">    <a class="code" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(superclass) <a class="code" href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a>(prefix) = { \</div>
+<div class="line">        impls                                                             \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Définit le contenu d'une classe qui implémente une interface donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">superclass</td><td>Le nom de base de l'interface. </td></tr>
+    <tr><td class="paramname">prefix</td><td>Le nom de base de la classe. </td></tr>
+    <tr><td class="paramname">impls</td><td>Les affectations d'attributs et de méthodes qui implémentent l'interface. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00145">145</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="gad71e11b51da42268464af1bb6e7656e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad71e11b51da42268464af1bb6e7656e8">&#9670;&nbsp;</a></span>LokiClass_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_interface</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">methods&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur :</b><div class="fragment"><div class="line">    <span class="keyword">typedef</span> <span class="keyword">struct </span>{                         \</div>
+<div class="line">        methods                              \</div>
+<div class="line">    } <a class="code" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(prefix)</div>
+</div><!-- fragment -->
+<p>Déclare une interface. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de l'interface. </td></tr>
+    <tr><td class="paramname">methods</td><td>Les attributs ou méthodes déclarées dans cette interface. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00108">108</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga022adc7968dc4c2770aa21581bf8b862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga022adc7968dc4c2770aa21581bf8b862">&#9670;&nbsp;</a></span>LokiClass_interface_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_interface_name</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group__LokiCommon.html#ga9404439ed46dc67d489a7d4ec2853e8f">CAT</a>(prefix, Interface)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construit un nom d'interface pour le préfixe donné. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de l'interface.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Exemple : </p><div class="fragment"><div class="line"><a class="code" href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a>(Config) <span class="comment">// --&gt; ConfigInterface</span></div>
+</div><!-- fragment --> 
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00078">78</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga5d764260014249229fd23ebadcc96134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d764260014249229fd23ebadcc96134">&#9670;&nbsp;</a></span>LokiClass_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_method</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">prefix, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;typeof(<a class="el" href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a>(prefix, name)) *name;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dans une interface, déclare une méthode. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Le nom de base de l'interface. </td></tr>
+    <tr><td class="paramname">name</td><td>Le nom de la méthode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00128">128</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+<a id="ga8ba32abc96ab47c9211d12fa57c3ba3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ba32abc96ab47c9211d12fa57c3ba3f">&#9670;&nbsp;</a></span>LokiClass_set_attribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LokiClass_set_attribute</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;.name = value,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dans une implémentation, affecte une valeur à un attribut. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Le nom de l'attribut. </td></tr>
+    <tr><td class="paramname">value</td><td>La valeur de l'attribut. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-class_8h_source.html#l00155">155</a> du fichier <a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup__LokiClass_html_ga73dc50ecb993ab72efa7f10803140240"><div class="ttname"><a href="group__LokiClass.html#ga73dc50ecb993ab72efa7f10803140240">LokiClass_attribute</a></div><div class="ttdeci">#define LokiClass_attribute(decl)</div><div class="ttdoc">Dans une interface, déclare un attribut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00120">libloki-class.h:120</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_gaa8e41e7a9fd0583e6314d14c757d26ff"><div class="ttname"><a href="group__LokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a></div><div class="ttdeci">#define LokiClass_implementation(superclass, prefix, impls)</div><div class="ttdoc">Définit le contenu d'une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00145">libloki-class.h:145</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_gad71e11b51da42268464af1bb6e7656e8"><div class="ttname"><a href="group__LokiClass.html#gad71e11b51da42268464af1bb6e7656e8">LokiClass_interface</a></div><div class="ttdeci">#define LokiClass_interface(prefix, methods)</div><div class="ttdoc">Déclare une interface.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00108">libloki-class.h:108</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga5d764260014249229fd23ebadcc96134"><div class="ttname"><a href="group__LokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a></div><div class="ttdeci">#define LokiClass_method(prefix, name)</div><div class="ttdoc">Dans une interface, déclare une méthode.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00128">libloki-class.h:128</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga6da5df82ee2afb9112000c287919133f"><div class="ttname"><a href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a></div><div class="ttdeci">#define LokiClass_define_method(prefix, name)</div><div class="ttdoc">Dans une implémentation, associe une fonction à une méthode.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00163">libloki-class.h:163</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga9a873899c9f1e6e82823479c42632dad"><div class="ttname"><a href="group__LokiClass.html#ga9a873899c9f1e6e82823479c42632dad">LokiClass_declare_implementation</a></div><div class="ttdeci">#define LokiClass_declare_implementation(superclass, prefix)</div><div class="ttdoc">Déclare une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00136">libloki-class.h:136</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga1cd222081c0b93c561a3a02830d10dd8"><div class="ttname"><a href="group__LokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">LokiClass_class_name</a></div><div class="ttdeci">#define LokiClass_class_name(prefix)</div><div class="ttdoc">Construit un nom de classe pour le préfixe donné.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00089">libloki-class.h:89</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga022adc7968dc4c2770aa21581bf8b862"><div class="ttname"><a href="group__LokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">LokiClass_interface_name</a></div><div class="ttdeci">#define LokiClass_interface_name(prefix)</div><div class="ttdoc">Construit un nom d'interface pour le préfixe donné.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00078">libloki-class.h:78</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga8ba32abc96ab47c9211d12fa57c3ba3f"><div class="ttname"><a href="group__LokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a></div><div class="ttdeci">#define LokiClass_set_attribute(name, value)</div><div class="ttdoc">Dans une implémentation, affecte une valeur à un attribut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00155">libloki-class.h:155</a></div></div>
+<div class="ttc" id="agroup__LokiClass_html_ga7b53f2a9bf24378ca9c4117e777d8d71"><div class="ttname"><a href="group__LokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">LokiClass_function_name</a></div><div class="ttdeci">#define LokiClass_function_name(prefix, name)</div><div class="ttdoc">Construit un nom de fonction pour une méthode d'une classe.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-class_8h_source.html#l00101">libloki-class.h:101</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

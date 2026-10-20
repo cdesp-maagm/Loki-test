@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Filtre NLMS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Filtre NLMS <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estimation des paramètres d'une ellipse par filtrage <em>Normalized Least Mean Squares</em>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Filtre NLMS:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS.png" border="0" usemap="#agroup____gLokiNLMS" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiNLMS" id="agroup____gLokiNLMS">
+<area shape="rect" title="Estimation des paramètres d&#39;une ellipse par filtrage Normalized Least Mean Squares." alt="" coords="224,5,320,31"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,5,176,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-nlms_2Ec" id="r_libloki-nlms_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-nlms_8c.html">libloki-nlms.c</a></td></tr>
+<tr class="memitem:libloki-nlms_2Eh" id="r_libloki-nlms_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-nlms_8h.html">libloki-nlms.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiNLMS" id="r_LokiNLMS"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiNLMS.html">LokiNLMS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentattion d'un filtre NLMS.  <a href="structLokiNLMS.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga27520f191041dfb5256574ddf3012916" id="r_ga27520f191041dfb5256574ddf3012916"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga27520f191041dfb5256574ddf3012916">NLMS_NU</a>&#160;&#160;&#160;1.0e-30f</td></tr>
+<tr class="memdesc:ga27520f191041dfb5256574ddf3012916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correction des poids du filtre pour éviter une division par zéro.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga7c7bf1864a46d1aa425dec8af5a01ad9" id="r_ga7c7bf1864a46d1aa425dec8af5a01ad9"><td class="memItemLeft">typedef struct LokiNLMS&#160;</td><td class="memItemRight"><a class="el" href="#ga7c7bf1864a46d1aa425dec8af5a01ad9">LokiNLMS</a></td></tr>
+<tr class="memdesc:ga7c7bf1864a46d1aa425dec8af5a01ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentattion d'un filtre NLMS.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga223f503319f72940e4a72e35603688d1" id="r_ga223f503319f72940e4a72e35603688d1"><td class="memItemLeft"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga223f503319f72940e4a72e35603688d1">LokiNLMS_new</a> (float initial_radius, const float params[static 2])</td></tr>
+<tr class="memdesc:ga223f503319f72940e4a72e35603688d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau filtre NLMS.  <br /></td></tr>
+<tr class="memitem:ga53265a2ce95e05007398c56b172a6581" id="r_ga53265a2ce95e05007398c56b172a6581"><td class="memItemLeft"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga53265a2ce95e05007398c56b172a6581">LokiNLMS_clone</a> (const <a class="el" href="structLokiNLMS.html">LokiNLMS</a> *other)</td></tr>
+<tr class="memdesc:ga53265a2ce95e05007398c56b172a6581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un filtre NLMS.  <br /></td></tr>
+<tr class="memitem:ga3a15a3fd08cb442d5ca0653259c36655" id="r_ga3a15a3fd08cb442d5ca0653259c36655"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#ga3a15a3fd08cb442d5ca0653259c36655">LokiNLMS_get_state</a> (<a class="el" href="structLokiNLMS.html">LokiNLMS</a> *self)</td></tr>
+<tr class="memdesc:ga3a15a3fd08cb442d5ca0653259c36655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant du filtre.  <br /></td></tr>
+<tr class="memitem:gac85c1545cbecebc3991e12e35c69e4b4" id="r_gac85c1545cbecebc3991e12e35c69e4b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gac85c1545cbecebc3991e12e35c69e4b4">LokiNLMS_work</a> (<a class="el" href="structLokiNLMS.html">LokiNLMS</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:gac85c1545cbecebc3991e12e35c69e4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:ga7c3da7c54b9cead5e36c5be832d04a1f" id="r_ga7c3da7c54b9cead5e36c5be832d04a1f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga7c3da7c54b9cead5e36c5be832d04a1f">LokiNLMS_del</a> (<a class="el" href="structLokiNLMS.html">LokiNLMS</a> *self)</td></tr>
+<tr class="memdesc:ga7c3da7c54b9cead5e36c5be832d04a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un filtre NLMS.  <br /></td></tr>
+<tr class="memitem:gaf15adee1239327457872da6688dc980f" id="r_gaf15adee1239327457872da6688dc980f"><td class="memItemLeft"><a id="gaf15adee1239327457872da6688dc980f" name="gaf15adee1239327457872da6688dc980f"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiNLMS.html">LokiNLMS</a>, <a class="el" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(params_length, 2) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiNLMS.html">LokiNLMS</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiNLMS.html">LokiNLMS</a>, clone) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiNLMS.html">LokiNLMS</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiNLMS.html">LokiNLMS</a>, get_state) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiNLMS.html">LokiNLMS</a>, del))</td></tr>
+<tr class="memitem:ga468d5839960e2ac0f18fa628d4f98a93" id="r_ga468d5839960e2ac0f18fa628d4f98a93"><td class="memItemLeft"><a id="ga468d5839960e2ac0f18fa628d4f98a93" name="ga468d5839960e2ac0f18fa628d4f98a93"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_declare_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiNLMS.html">LokiNLMS</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Estimation des paramètres d'une ellipse par filtrage <em>Normalized Least Mean Squares</em>. </p>
+<p>Ce module implémente l'interface <a class="el" href="group__gLokiEllipseEstimator.html" title="Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse">LokiEllipseEstimator</a>. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ga27520f191041dfb5256574ddf3012916" name="ga27520f191041dfb5256574ddf3012916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27520f191041dfb5256574ddf3012916">&#9670;&#160;</a></span>NLMS_NU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NLMS_NU&#160;&#160;&#160;1.0e-30f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Correction des poids du filtre pour éviter une division par zéro. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00012">12</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga7c7bf1864a46d1aa425dec8af5a01ad9" name="ga7c7bf1864a46d1aa425dec8af5a01ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c7bf1864a46d1aa425dec8af5a01ad9">&#9670;&#160;</a></span>LokiNLMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiNLMS LokiNLMS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentattion d'un filtre NLMS. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8h_source.html#l00017">17</a> du fichier <a class="el" href="libloki-nlms_8h_source.html">libloki-nlms.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga53265a2ce95e05007398c56b172a6581" name="ga53265a2ce95e05007398c56b172a6581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53265a2ce95e05007398c56b172a6581">&#9670;&#160;</a></span>LokiNLMS_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> * LokiNLMS_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiNLMS.html">LokiNLMS</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un clone d'un filtre NLMS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Le filtre NLMS à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre NLMS. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00041">41</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581_cgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581_icgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ga7c3da7c54b9cead5e36c5be832d04a1f" name="ga7c3da7c54b9cead5e36c5be832d04a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c3da7c54b9cead5e36c5be832d04a1f">&#9670;&#160;</a></span>LokiNLMS_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiNLMS_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un filtre NLMS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00079">79</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f_cgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f_icgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ga3a15a3fd08cb442d5ca0653259c36655" name="ga3a15a3fd08cb442d5ca0653259c36655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a15a3fd08cb442d5ca0653259c36655">&#9670;&#160;</a></span>LokiNLMS_get_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiNLMS_get_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourner l'état courant du filtre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Un filtre NLMS. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le vecteur d'état du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00052">52</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655_cgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655_icgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ga223f503319f72940e4a72e35603688d1" name="ga223f503319f72940e4a72e35603688d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga223f503319f72940e4a72e35603688d1">&#9670;&#160;</a></span>LokiNLMS_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> * LokiNLMS_new </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>initial_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>params</em></span>[static 2]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau filtre NLMS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_radius</td><td>Le rayon initial de l'ellipse estimée. </td></tr>
+    <tr><td class="paramname">params</td><td>Le facteur d'apprentissage du filtre LMS et le coefficients du filtre de mise à jour des facteur de normalisation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre NLMS. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00026">26</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1_cgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga223f503319f72940e4a72e35603688d1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1_icgraph.png" border="0" usemap="#agroup__gLokiNLMS_ga223f503319f72940e4a72e35603688d1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="gac85c1545cbecebc3991e12e35c69e4b4" name="gac85c1545cbecebc3991e12e35c69e4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac85c1545cbecebc3991e12e35c69e4b4">&#9670;&#160;</a></span>LokiNLMS_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiNLMS_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiNLMS.html">LokiNLMS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées. </p>
+<p>Cette fonction met à jour l'état interne du filtre et les paramètre de l'ellipse de destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre NLMS à exécuter. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X du point courant. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y du point courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-nlms_8c_source.html#l00056">56</a> du fichier <a class="el" href="libloki-nlms_8c_source.html">libloki-nlms.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4_cgraph.png" border="0" usemap="#agroup__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4_icgraph.png" border="0" usemap="#agroup__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

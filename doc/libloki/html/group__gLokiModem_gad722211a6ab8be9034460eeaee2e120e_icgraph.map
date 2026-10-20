@@ -1,0 +1,4 @@
+<map id="LokiModem_set_mod_osc2_wave_frequency" name="LokiModem_set_mod_osc2_wave_frequency">
+<area shape="rect" id="node1" title="Affecter une fréquence au signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="281,5,480,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gaa40ad8ef296c7038b6f747f5407108d0" title="Affecter une fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="5,5,233,45"/>
+</map>

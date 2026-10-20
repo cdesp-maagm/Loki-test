@@ -1,0 +1,229 @@
+\doxysection{libloki-\/socket-\/server.c}
+\hypertarget{libloki-socket-server_8c_source}{}\label{libloki-socket-server_8c_source}\index{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}}
+\doxymbox{\hyperlink{libloki-socket-server_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00003}\doxymbox{\hyperlink{libloki-socket-server_8c_a369266c24eacffb87046522897a570d5}{00003}}\ \textcolor{preprocessor}{\#define\ \_GNU\_SOURCE}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki_8h}{libloki.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <sys/socket.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <sys/un.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00023}\doxymbox{\hyperlink{structLokiSocketServer}{00023}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00025}\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{00025}}\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00027}\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{00027}}\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00029}\doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{00029}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{cid}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00031}\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{00031}}\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00033}\doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{00033}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{is\_streaming}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00035}\doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{00035}}\ \ \ \ \ pthread\_t\ \doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{receiver\_thread}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00037}\doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{00037}}\ \ \ \ \ pthread\_t\ \doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{server\_thread}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00039}\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{00039}}\ \ \ \ \ pthread\_mutex\_t\ \doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00041}\doxymbox{\hyperlink{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}{00041}}\ \ \ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}{data}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00043}\doxymbox{\hyperlink{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}{00043}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}{data\_size}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00045}\doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{00045}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{has\_data}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00047}\doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{00047}}\ \ \ \ \ pthread\_cond\_t\ \doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\_data\_cond}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00048}00048\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00050}\doxymbox{\hyperlink{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}{00050}}\ \doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *\doxymbox{\hyperlink{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}{LokiSocketServer\_new}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00051}00051\ \ \ \ \ \doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00056}00056\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}}\ =\ strdup(filename);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{LokiSocketServer\_del}}(self);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00062}00062\ \ \ \ \ pthread\_mutex\_init(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00063}00063\ \ \ \ \ pthread\_cond\_init(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\_data\_cond}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00077}\doxymbox{\hyperlink{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}{00077}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}{LokiSocketServer\_receive}}(\textcolor{keywordtype}{void}\ *ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00078}00078\ \ \ \ \ \doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self\ =\ ptr;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00080}00080\ \ \ \ \ pthread\_setname\_np(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{receiver\_thread}},\ \textcolor{stringliteral}{"{}LokiSocketRecv"{}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00082}00082\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}{data\_size}}\ =\ LokiPacket\_get\_length(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}},\ \ 1);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{while}\ (!self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lire\ un\ paquet\ de\ données.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structLokiPacket}{LokiPacket}}\ *in\_packet\ =\ \doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{LokiFIFO\_get\_consumer\_item}}(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{cid}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!in\_packet)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ une\ connexion\ est\ ouverte,\ indiquer\ la\ disponibilité}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ des\ données\ au\ thread\ serveur.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}{data}}\ =\ in\_packet-\/>\doxymbox{\hyperlink{structLokiPacket_afbb0c3d44760e9d9dab41578f6863105}{buffer}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{has\_data}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ pthread\_cond\_signal(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\_data\_cond}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{LokiFIFO\_pull}}(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{cid}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00102}00102\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{is\_streaming}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00114}\doxymbox{\hyperlink{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}{00114}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}{LokiSocketServer\_serve}}(\textcolor{keywordtype}{void}\ *ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00115}00115\ \ \ \ \ \doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self\ =\ ptr;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00117}00117\ \ \ \ \ pthread\_setname\_np(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{server\_thread}},\ \textcolor{stringliteral}{"{}LokiSocketServe"{}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ Créer\ une\ socket.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{int}\ sock\ =\ socket(AF\_UNIX,\ SOCK\_STREAM\ |\ SOCK\_NONBLOCK,\ 0);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00121}00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_file\ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00122}00122\ \ \ \ \ \textcolor{keywordtype}{bool}\ listening\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{int}\ conn[\doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}}];}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ status[\doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}}]\ =\ \{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ accept\_index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (sock\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiSocketServer\_serve\ (\%s):\ socket\ creation\ failed\ (\%s).\(\backslash\)n"{}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Attacher\ cette\ socket\ à\ un\ nom\ de\ fichier.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\_un\ addr;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ memset(\&addr,\ 0,\ \textcolor{keyword}{sizeof}(addr));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ addr.sun\_family\ =\ AF\_UNIX;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ strncpy(addr.sun\_path,\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ \textcolor{keyword}{sizeof}(addr.sun\_path)\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ has\_file\ =\ !bind(sock,\ (\textcolor{keyword}{struct}\ sockaddr*)\&addr,\ \textcolor{keyword}{sizeof}(addr));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!has\_file)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiSocketServer\_serve\ (\%s):\ failed\ to\ bind\ socket\ (\%s).\(\backslash\)n"{}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ En\ cas\ de\ succès,\ écouter\ les\ demandes\ de\ connexion.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ listening\ =\ !listen(sock,\ 1);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!listening)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiSocketServer\_serve\ (\%s):\ failed\ to\ start\ listening\ on\ socket\ (\%s).\(\backslash\)n"{}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{while}\ (!self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{has\_data}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ pthread\_cond\_wait(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\_data\_cond}},\ \&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data\ =\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}{data}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{has\_data}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00159}00159\ \ \ \ \ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!listening)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ si\ une\ demande\ de\ connexion\ est\ présente\ en\ file\ d'attente.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ La\ socket\ est\ non\ bloquante.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (accept\_index\ <\ \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ conn[accept\_index]\ =\ accept(sock,\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (conn[accept\_index]\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiSocketServer\_serve\ (\%s):\ accepting\ connection\ \%zu/\%zu.\(\backslash\)n"{}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ accept\_index,\ \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marquer\ la\ connexion\ comme\ établie\ et\ chercher\ un\ slot\ libre}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pour\ la\ prochaine\ connexion.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ status[accept\_index]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (accept\_index\ =\ 0;\ accept\_index\ <\ \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}}\ \&\&\ status[accept\_index];\ accept\_index\ ++);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pour\ chaque\ connexion\ ouverte,\ transmettre\ le\ paquet\ au\ client.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}};\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!status[i])\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ remaining\_data\ =\ data;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ remaining\_size\ \ \ \ \ \ =\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}{data\_size}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (remaining\_size\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ssize\_t\ sz\ =\ write(conn[i],\ remaining\_data,\ remaining\_size);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sz\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remaining\_size\ -\/=\ sz;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remaining\_data\ +=\ sz;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (errno\ !=\ EINTR)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiSocketServer\_serve\ (\%s):\ write\ error\ on\ connection\ \%zu\ (\%s).\(\backslash\)n"{}},\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}},\ i,\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ status[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\_index\ =\ i;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00200}00200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00202}00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (sock\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ close(sock);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00204}00204\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{if}\ (has\_file)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ unlink(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00208}00208\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00209}00209\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00211}\doxymbox{\hyperlink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{00211}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{LokiSocketServer\_start}}(\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self,\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *in,\ \textcolor{keywordtype}{size\_t}\ cid)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00212}00212\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{is\_streaming}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00213}00213\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}}\ \ \ \ \ \ \ \ \ \ \ =\ in;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00214}00214\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{cid}}\ \ \ \ \ \ \ \ \ \ =\ cid;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00215}00215\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00216}00216\ \ \ \ \ \textcolor{keywordtype}{int}\ err\ =\ pthread\_create(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{receiver\_thread}},\ NULL,\ \doxymbox{\hyperlink{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}{LokiSocketServer\_receive}},\ self);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{if}\ (err)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00218}00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ err;}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00219}00219\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00220}00220\ \ \ \ \ \textcolor{keywordflow}{return}\ pthread\_create(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{server\_thread}},\ NULL,\ \doxymbox{\hyperlink{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}{LokiSocketServer\_serve}},\ self);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00221}00221\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00223}\doxymbox{\hyperlink{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}{00223}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}{LokiSocketServer\_is\_streaming}}(\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{return}\ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{is\_streaming}};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00225}00225\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00227}\doxymbox{\hyperlink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{00227}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{LokiSocketServer\_stop}}(\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00230}00230\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00231}00231\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\_request}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00233}00233\ \ \ \ \ \textcolor{comment}{//\ Débloquer\ le\ thread\ de\ réception.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00234}00234\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{LokiFIFO\_abort}}(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00236}00236\ \ \ \ \ \textcolor{comment}{//\ Débloquer\ le\ thread\ serveur.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00237}00237\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00238}00238\ \ \ \ \ pthread\_cond\_signal(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\_data\_cond}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00239}00239\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00241}00241\ \ \ \ \ \textcolor{comment}{//\ Attendre\ la\ terminaison\ normale\ des\ deux\ threads.}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00242}00242\ \ \ \ \ pthread\_join(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{receiver\_thread}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00243}00243\ \ \ \ \ pthread\_join(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{server\_thread}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00244}00244\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00246}\doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{00246}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{LokiSocketServer\_del}}(\doxymbox{\hyperlink{structLokiSocketServer}{LokiSocketServer}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00249}00249\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00251}00251\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ free(self-\/>\doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}});}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00253}00253\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00255}00255\ \ \ \ \ free(self);}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00256}00256\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-socket-server_8c_source_l00257}00257\ }
+
+\end{DoxyCode}

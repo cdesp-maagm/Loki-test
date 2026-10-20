@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-class.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-class.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-class_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#ifndef LIBLOKI_CLASS_H_</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define LIBLOKI_CLASS_H_</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-common_8h.html">libloki-common.h</a>&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga022adc7968dc4c2770aa21581bf8b862">   82</a></span><span class="preprocessor">#define LokiClass_interface_name(prefix) CAT(prefix, Interface)</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga1cd222081c0b93c561a3a02830d10dd8">   93</a></span><span class="preprocessor">#define LokiClass_class_name(prefix) CAT(prefix, Class)</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga7b53f2a9bf24378ca9c4117e777d8d71">  105</a></span><span class="preprocessor">#define LokiClass_function_name(prefix, name) CAT3(prefix, _, name)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="foldopen" id="foldopen00112" data-start="" data-end="">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#gad71e11b51da42268464af1bb6e7656e8">  112</a></span><span class="preprocessor">#define LokiClass_interface(prefix, methods) \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">    typedef struct {                         \</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">        methods                              \</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">    } LokiClass_interface_name(prefix)</span></div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="foldopen" id="foldopen00124" data-start="" data-end="">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga73dc50ecb993ab72efa7f10803140240">  124</a></span><span class="preprocessor">#define LokiClass_attribute(decl) \</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">    decl;</span></div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="foldopen" id="foldopen00132" data-start="" data-end="">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">  132</a></span><span class="preprocessor">#define LokiClass_method(prefix, name) \</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    typeof(LokiClass_function_name(prefix, name)) *name;</span></div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00140" data-start="" data-end="">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga9a873899c9f1e6e82823479c42632dad">  140</a></span><span class="preprocessor">#define LokiClass_declare_implementation(superclass, prefix) \</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">    extern LokiClass_interface_name(superclass) LokiClass_class_name(prefix)</span></div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="foldopen" id="foldopen00149" data-start="" data-end="">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">  149</a></span><span class="preprocessor">#define LokiClass_implementation(superclass, prefix, impls)               \</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">    LokiClass_interface_name(superclass) LokiClass_class_name(prefix) = { \</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">        impls                                                             \</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    }</span></div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00159" data-start="" data-end="">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">  159</a></span><span class="preprocessor">#define LokiClass_set_attribute(name, value) \</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">    .name = value,</span></div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00167" data-start="" data-end="">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">  167</a></span><span class="preprocessor">#define LokiClass_define_method(prefix, name) \</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">    .name = (typeof(LokiClass_class_name(prefix).name))LokiClass_function_name(prefix, name),</span></div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="ttc" id="alibloki-common_8h_html"><div class="ttname"><a href="libloki-common_8h.html">libloki-common.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

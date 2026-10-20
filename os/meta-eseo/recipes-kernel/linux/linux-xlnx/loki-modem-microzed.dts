@@ -1,0 +1,4 @@
+
+#include "loki-microzed.dtsi"
+#include "loki-modem.dtsi"
+#include "loki-env-sensors.dtsi"

@@ -1,0 +1,38 @@
+\doxysection{Référence du fichier libloki-\/formatter.c}
+\hypertarget{libloki-formatter_8c}{}\label{libloki-formatter_8c}\index{libloki-\/formatter.c@{libloki-\/formatter.c}}
+{\ttfamily \+\#include "{}libloki-\/formatter.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/formatter.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de séries temporelles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFormatter_ga8b0886a7cf3fcedd5f6865cd6db7f4ed}{Loki\+Formatter\+\_\+new}} (void \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau formateur de séries temporelles. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36}{Loki\+Formatter\+\_\+new\+\_\+with\+\_\+implementation}} (const Loki\+Formatter\+Interface \texorpdfstring{$\ast$}{*}impl, void \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau formateur de séries temporelles avec une implémentation donnée. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3}{Loki\+Formatter\+\_\+work}} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}filename, \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp, bool file\+\_\+change, void \texorpdfstring{$\ast$}{*}data, size\+\_\+t length, size\+\_\+t max\+\_\+channels, int32\+\_\+t channels, size\+\_\+t sample\+\_\+size, float sampling\+\_\+frequency)
+\begin{DoxyCompactList}\small\item\em Enregistrer un paquet de données. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c}{Loki\+Formatter\+\_\+close}} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Fermer un formateur de séries temporelles. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8}{Loki\+Formatter\+\_\+del}} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire de mise en forme de séries temporelles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-formatter_8c_source}{libloki-\/formatter.\+c}}.
+

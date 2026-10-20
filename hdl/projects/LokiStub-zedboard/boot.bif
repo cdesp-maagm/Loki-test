@@ -1,0 +1,6 @@
+
+image : {
+    [bootloader]build/sdk/fsbl/Release/fsbl.elf
+    build/system.bit
+    ../../../os/build/zedboard/tmp/deploy/images/zedboard-zynq7/u-boot.elf
+}

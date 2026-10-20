@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence de la structure LokiFIFO</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Champs de données</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la structure LokiFIFO<div class="ingroups"><a class="el" href="group__ggLokiInterconnect.html">Échange de données entre modules d'acquisition, de traitement et d'enregistrement</a> &raquo; <a class="el" href="group__gLokiFIFO.html">Structure de données FIFO</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Représentation d'une FIFO.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de LokiFIFO:</div>
+<div class="dyncontent">
+<div class="center"><img src="structLokiFIFO__coll__graph.png" border="0" usemap="#aLokiFIFO_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aLokiFIFO_coll__map" id="aLokiFIFO_coll__map">
+<area shape="rect" title="Représentation d&#39;une FIFO." alt="" coords="28,108,107,133"/>
+<area shape="rect" href="structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,129,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:af0bcda30be22f45d41b446144967fc32" id="r_af0bcda30be22f45d41b446144967fc32"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#af0bcda30be22f45d41b446144967fc32">item_size</a></td></tr>
+<tr class="memdesc:af0bcda30be22f45d41b446144967fc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">La taille d'un élément, en octets.  <br /></td></tr>
+<tr class="memitem:a77c20935df935fb3f071889db55240a2" id="r_a77c20935df935fb3f071889db55240a2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a77c20935df935fb3f071889db55240a2">all_read</a></td></tr>
+<tr class="memdesc:a77c20935df935fb3f071889db55240a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le masque binaire indiquant que tous les consommateurs ont lu le dernier élément.  <br /></td></tr>
+<tr class="memitem:af65fe20699fa1ec6d776c41834b8a959" id="r_af65fe20699fa1ec6d776c41834b8a959"><td class="memItemLeft">volatile bool&#160;</td><td class="memItemRight"><a class="el" href="#af65fe20699fa1ec6d776c41834b8a959">abort</a></td></tr>
+<tr class="memdesc:af65fe20699fa1ec6d776c41834b8a959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faut-il interrompre l'opération en cours.  <br /></td></tr>
+<tr class="memitem:a9e9b80f18213060cadad39858606f03f" id="r_a9e9b80f18213060cadad39858606f03f"><td class="memItemLeft">pthread_mutex_t&#160;</td><td class="memItemRight"><a class="el" href="#a9e9b80f18213060cadad39858606f03f">mutex</a></td></tr>
+<tr class="memdesc:a9e9b80f18213060cadad39858606f03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un mutex pour protéger les accès concurrents à la FIFO.  <br /></td></tr>
+<tr class="memitem:ab6cdec00d1b328885bec58dd109632a1" id="r_ab6cdec00d1b328885bec58dd109632a1"><td class="memItemLeft">pthread_cond_t&#160;</td><td class="memItemRight"><a class="el" href="#ab6cdec00d1b328885bec58dd109632a1">pushed</a></td></tr>
+<tr class="memdesc:ab6cdec00d1b328885bec58dd109632a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable conditionnelle indiquant qu'un élément vient d'être ajouté à la FIFO.  <br /></td></tr>
+<tr class="memitem:a70f3e2a889af770d607375a207896157" id="r_a70f3e2a889af770d607375a207896157"><td class="memItemLeft">pthread_cond_t&#160;</td><td class="memItemRight"><a class="el" href="#a70f3e2a889af770d607375a207896157">pulled</a></td></tr>
+<tr class="memdesc:a70f3e2a889af770d607375a207896157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable conditionnelle indiquant qu'un élément vient d'être retiré de la FIFO.  <br /></td></tr>
+<tr class="memitem:a318ce7f7b2fc67583e2d6babd043920f" id="r_a318ce7f7b2fc67583e2d6babd043920f"><td class="memItemLeft"><a class="el" href="structLokiFIFORecord.html">LokiFIFORecord</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a></td></tr>
+<tr class="memdesc:a318ce7f7b2fc67583e2d6babd043920f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un pointeur vers le record courant en écriture.  <br /></td></tr>
+<tr class="memitem:a0b8567cedd77bd8962713393a7a1d2ab" id="r_a0b8567cedd77bd8962713393a7a1d2ab"><td class="memItemLeft"><a class="el" href="structLokiFIFORecord.html">LokiFIFORecord</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a> [0]</td></tr>
+<tr class="memdesc:a0b8567cedd77bd8962713393a7a1d2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointeurs vers les records courants en lecture pour chaque consommateur.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représentation d'une FIFO. </p>
+<p>Le contenu de la FIFO est construit comme une liste cirulaire dont les maillons sont de type <a class="el" href="structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO.">LokiFIFORecord</a>. Cette liste circulaire n'est pas représentée explicitement dans la structure <a class="el" href="structLokiFIFO.html" title="Représentation d&#39;une FIFO.">LokiFIFO</a>. Elle est allouée à la suite du tableau <span class="tt"><a class="el" href="#a0b8567cedd77bd8962713393a7a1d2ab" title="Pointeurs vers les records courants en lecture pour chaque consommateur.">consumer_records</a></span>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00020">20</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="af65fe20699fa1ec6d776c41834b8a959" name="af65fe20699fa1ec6d776c41834b8a959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65fe20699fa1ec6d776c41834b8a959">&#9670;&#160;</a></span>abort</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool LokiFIFO::abort</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faut-il interrompre l'opération en cours. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00026">26</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="a77c20935df935fb3f071889db55240a2" name="a77c20935df935fb3f071889db55240a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c20935df935fb3f071889db55240a2">&#9670;&#160;</a></span>all_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiFIFO::all_read</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le masque binaire indiquant que tous les consommateurs ont lu le dernier élément. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00024">24</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="a0b8567cedd77bd8962713393a7a1d2ab" name="a0b8567cedd77bd8962713393a7a1d2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8567cedd77bd8962713393a7a1d2ab">&#9670;&#160;</a></span>consumer_records</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFORecord.html">LokiFIFORecord</a>* LokiFIFO::consumer_records[0]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointeurs vers les records courants en lecture pour chaque consommateur. </p>
+<p>Ce tableau est alloué dans <a class="el" href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1" title="Créer une FIFO.">LokiFIFO_new</a> selon le nombre de consommateurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00039">39</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="af0bcda30be22f45d41b446144967fc32" name="af0bcda30be22f45d41b446144967fc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bcda30be22f45d41b446144967fc32">&#9670;&#160;</a></span>item_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiFIFO::item_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La taille d'un élément, en octets. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00022">22</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="a9e9b80f18213060cadad39858606f03f" name="a9e9b80f18213060cadad39858606f03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9b80f18213060cadad39858606f03f">&#9670;&#160;</a></span>mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t LokiFIFO::mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un mutex pour protéger les accès concurrents à la FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00028">28</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="a318ce7f7b2fc67583e2d6babd043920f" name="a318ce7f7b2fc67583e2d6babd043920f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318ce7f7b2fc67583e2d6babd043920f">&#9670;&#160;</a></span>producer_record</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFORecord.html">LokiFIFORecord</a>* LokiFIFO::producer_record</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un pointeur vers le record courant en écriture. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00034">34</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="a70f3e2a889af770d607375a207896157" name="a70f3e2a889af770d607375a207896157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f3e2a889af770d607375a207896157">&#9670;&#160;</a></span>pulled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_cond_t LokiFIFO::pulled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable conditionnelle indiquant qu'un élément vient d'être retiré de la FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00032">32</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a id="ab6cdec00d1b328885bec58dd109632a1" name="ab6cdec00d1b328885bec58dd109632a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cdec00d1b328885bec58dd109632a1">&#9670;&#160;</a></span>pushed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_cond_t LokiFIFO::pushed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable conditionnelle indiquant qu'un élément vient d'être ajouté à la FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00030">30</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="LokiModem_get_demod_phase_x_res" name="LokiModem_get_demod_phase_x_res">
+<area shape="rect" id="node1" title="Lire le pas de réglage du déphasage applicable à la composante X (I) du signal démodulé pour une voie..." alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga90cd71479d70dfc9e25eacec2c083c79" title="Lire le retard maximal applicable à la composante X (I) du signal démodulé pour une voie." alt="" coords="232,5,411,45"/>
+</map>

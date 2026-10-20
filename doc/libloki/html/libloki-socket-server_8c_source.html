@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-socket-server.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-socket-server.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-socket-server_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="libloki-socket-server_8c.html#a369266c24eacffb87046522897a570d5">    3</a></span><span class="preprocessor">#define _GNU_SOURCE</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="libloki_8h.html">libloki.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sys/un.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">   25</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">   27</a></span>    <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">   29</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">cid</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">   31</a></span>    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">   33</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">is_streaming</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">   35</a></span>    pthread_t <a class="code hl_variable" href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">receiver_thread</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">   37</a></span>    pthread_t <a class="code hl_variable" href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">server_thread</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">   39</a></span>    pthread_mutex_t <a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a249e02834d620a403c74a5dac6250dc9">   41</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structLokiSocketServer.html#a249e02834d620a403c74a5dac6250dc9">data</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#afcc27f30cb2646ad77ec53fd1a1c5f48">   43</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiSocketServer.html#afcc27f30cb2646ad77ec53fd1a1c5f48">data_size</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">   45</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">has_data</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">   47</a></span>    pthread_cond_t <a class="code hl_variable" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">has_data_cond</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gaf9a8245cd675157f3ab859b5b93ec3a3">   50</a></span><a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *<a class="code hl_function" href="group__gLokiSocketServer.html#gaf9a8245cd675157f3ab859b5b93ec3a3">LokiSocketServer_new</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a>));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a> = strdup(filename);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="group__gLokiSocketServer.html#gaa39ef8dd070cc5b528bdfe6182501107">LokiSocketServer_del</a>(self);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    pthread_mutex_init(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>, NULL);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    pthread_cond_init(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">has_data_cond</a>, NULL);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02">   77</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02">LokiSocketServer_receive</a>(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self = ptr;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    pthread_setname_np(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">receiver_thread</a>, <span class="stringliteral">&quot;LokiSocketRecv&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#afcc27f30cb2646ad77ec53fd1a1c5f48">data_size</a> = LokiPacket_get_length(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>,  1);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">while</span> (!self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// Lire un paquet de données.</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_struct" href="structLokiPacket.html">LokiPacket</a> *in_packet = <a class="code hl_function" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a>(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">cid</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span> (!in_packet) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// Si une connexion est ouverte, indiquer la disponibilité</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// des données au thread serveur.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a249e02834d620a403c74a5dac6250dc9">data</a> = in_packet-&gt;<a class="code hl_variable" href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">buffer</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">has_data</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        pthread_cond_signal(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">has_data_cond</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_function" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a>(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">cid</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">is_streaming</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf">  114</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf">LokiSocketServer_serve</a>(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self = ptr;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    pthread_setname_np(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">server_thread</a>, <span class="stringliteral">&quot;LokiSocketServe&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// Créer une socket.</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">int</span> sock = socket(AF_UNIX, SOCK_STREAM | SOCK_NONBLOCK, 0);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">bool</span> has_file  = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">bool</span> listening = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">int</span> conn[<a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a>];</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">bool</span> status[<a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a>] = {<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">size_t</span> accept_index = 0;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> (sock &lt; 0) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        fprintf(stderr, <span class="stringliteral">&quot;LokiSocketServer_serve (%s): socket creation failed (%s).\n&quot;</span>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, strerror(errno));</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="comment">// Attacher cette socket à un nom de fichier.</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">struct </span>sockaddr_un addr;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        memset(&amp;addr, 0, <span class="keyword">sizeof</span>(addr));</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        addr.sun_family = AF_UNIX;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        strncpy(addr.sun_path, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, <span class="keyword">sizeof</span>(addr.sun_path) - 1);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        has_file = !bind(sock, (<span class="keyword">struct</span> sockaddr*)&amp;addr, <span class="keyword">sizeof</span>(addr));</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span> (!has_file) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            fprintf(stderr, <span class="stringliteral">&quot;LokiSocketServer_serve (%s): failed to bind socket (%s).\n&quot;</span>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, strerror(errno));</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="comment">// En cas de succès, écouter les demandes de connexion.</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            listening = !listen(sock, 1);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span> (!listening) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                fprintf(stderr, <span class="stringliteral">&quot;LokiSocketServer_serve (%s): failed to start listening on socket (%s).\n&quot;</span>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, strerror(errno));</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">while</span> (!self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a>) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">has_data</a>) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            pthread_cond_wait(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">has_data_cond</a>, &amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a>) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *data = self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a249e02834d620a403c74a5dac6250dc9">data</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">has_data</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (!listening) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="comment">// Vérifier si une demande de connexion est présente en file d&#39;attente.</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="comment">// La socket est non bloquante.</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">if</span> (accept_index &lt; <a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a>) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            conn[accept_index] = accept(sock, NULL, NULL);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">if</span> (conn[accept_index] &gt;= 0) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                fprintf(stderr, <span class="stringliteral">&quot;LokiSocketServer_serve (%s): accepting connection %zu/%zu.\n&quot;</span>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, accept_index, <a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="comment">// Marquer la connexion comme établie et chercher un slot libre</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="comment">// pour la prochaine connexion.</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                status[accept_index] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">for</span> (accept_index = 0; accept_index &lt; <a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a> &amp;&amp; status[accept_index]; accept_index ++);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="comment">// Pour chaque connexion ouverte, transmettre le paquet au client.</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_define" href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a>; i ++) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">if</span> (!status[i]) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* remaining_data = data;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordtype">size_t</span> remaining_size      = self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#afcc27f30cb2646ad77ec53fd1a1c5f48">data_size</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">while</span> (remaining_size &gt; 0) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                ssize_t sz = write(conn[i], remaining_data, remaining_size);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                <span class="keywordflow">if</span> (sz &gt;= 0) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    remaining_size -= sz;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                    remaining_data += sz;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (errno != EINTR) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    fprintf(stderr, <span class="stringliteral">&quot;LokiSocketServer_serve (%s): write error on connection %zu (%s).\n&quot;</span>, self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>, i, strerror(errno));</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    status[i] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                    accept_index = i;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">if</span> (sock &gt;= 0) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        close(sock);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">if</span> (has_file) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        unlink(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
+</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241">  211</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241">LokiSocketServer_start</a>(<a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self, <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *in, <span class="keywordtype">size_t</span> cid) {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">is_streaming</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>           = in;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">cid</a>          = cid;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">int</span> err = pthread_create(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">receiver_thread</a>, NULL, <a class="code hl_function" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02">LokiSocketServer_receive</a>, self);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">return</span> err;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">return</span> pthread_create(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">server_thread</a>, NULL, <a class="code hl_function" href="group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf">LokiSocketServer_serve</a>, self);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gaedd8533779526c5febfacfa5238bc1f9">  223</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__gLokiSocketServer.html#gaedd8533779526c5febfacfa5238bc1f9">LokiSocketServer_is_streaming</a>(<a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">return</span> self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">is_streaming</a>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23">  227</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23">LokiSocketServer_stop</a>(<a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a>) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">stop_request</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">// Débloquer le thread de réception.</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_function" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a>(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">in</a>);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="comment">// Débloquer le thread serveur.</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    pthread_cond_signal(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">has_data_cond</a>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">mutex</a>);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="comment">// Attendre la terminaison normale des deux threads.</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    pthread_join(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">receiver_thread</a>, NULL);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    pthread_join(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">server_thread</a>, NULL);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>}</div>
+</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="foldopen" id="foldopen00246" data-start="{" data-end="}">
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="group__gLokiSocketServer.html#gaa39ef8dd070cc5b528bdfe6182501107">  246</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiSocketServer.html#gaa39ef8dd070cc5b528bdfe6182501107">LokiSocketServer_del</a>(<a class="code hl_struct" href="structLokiSocketServer.html">LokiSocketServer</a> *self) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        free(self-&gt;<a class="code hl_variable" href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">filename</a>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    free(self);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
+</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga4e8cda4ed922ac5128c716735c0724c8"><div class="ttname"><a href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a></div><div class="ttdeci">void LokiFIFO_pull(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Libérer l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00160">libloki-fifo.c:160</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga64953835cd85d15393a6b14030a845c5"><div class="ttname"><a href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a></div><div class="ttdeci">void * LokiFIFO_get_consumer_item(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Obtenir une référence vers l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00142">libloki-fifo.c:142</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaaff05dfee1870a70b14718028d830f21"><div class="ttname"><a href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a></div><div class="ttdeci">void LokiFIFO_abort(LokiFIFO *self)</div><div class="ttdoc">Terminer les attentes en cours.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00180">libloki-fifo.c:180</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_ga2812e3037b7580d56b3a3762ea1d2e02"><div class="ttname"><a href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02">LokiSocketServer_receive</a></div><div class="ttdeci">static void * LokiSocketServer_receive(void *ptr)</div><div class="ttdoc">Recevoir les données d&#39;entrée.</div><div class="ttdef"><b>Définition</b> <a href="#l00077">libloki-socket-server.c:77</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_ga35e148de562749531db09ba2c41ccdc0"><div class="ttname"><a href="group__gLokiSocketServer.html#ga35e148de562749531db09ba2c41ccdc0">LIBLOKI_SOCKET_SERVER_CONNECTIONS</a></div><div class="ttdeci">#define LIBLOKI_SOCKET_SERVER_CONNECTIONS</div><div class="ttdoc">Le nombre maximum de connexions simultanées acceptées par un serveur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-socket-server_8h_source.html#l00016">libloki-socket-server.h:16</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gaa39ef8dd070cc5b528bdfe6182501107"><div class="ttname"><a href="group__gLokiSocketServer.html#gaa39ef8dd070cc5b528bdfe6182501107">LokiSocketServer_del</a></div><div class="ttdeci">void LokiSocketServer_del(LokiSocketServer *self)</div><div class="ttdoc">Détruire un serveur.</div><div class="ttdef"><b>Définition</b> <a href="#l00246">libloki-socket-server.c:246</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gaa92bff856b113d9609a5ffbe2acc8a23"><div class="ttname"><a href="group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23">LokiSocketServer_stop</a></div><div class="ttdeci">void LokiSocketServer_stop(LokiSocketServer *self)</div><div class="ttdoc">Arrêter un serveur.</div><div class="ttdef"><b>Définition</b> <a href="#l00227">libloki-socket-server.c:227</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gad43863e67afcbce842c5d1d5ebd86ccf"><div class="ttname"><a href="group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf">LokiSocketServer_serve</a></div><div class="ttdeci">static void * LokiSocketServer_serve(void *ptr)</div><div class="ttdoc">Gérer les connexions et transmettre les données aux clients.</div><div class="ttdef"><b>Définition</b> <a href="#l00114">libloki-socket-server.c:114</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gae93b5af5135cc58ce3e13229becc3241"><div class="ttname"><a href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241">LokiSocketServer_start</a></div><div class="ttdeci">int LokiSocketServer_start(LokiSocketServer *self, LokiFIFO *in, size_t cid)</div><div class="ttdoc">Démarrer un serveur.</div><div class="ttdef"><b>Définition</b> <a href="#l00211">libloki-socket-server.c:211</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gaedd8533779526c5febfacfa5238bc1f9"><div class="ttname"><a href="group__gLokiSocketServer.html#gaedd8533779526c5febfacfa5238bc1f9">LokiSocketServer_is_streaming</a></div><div class="ttdeci">bool LokiSocketServer_is_streaming(LokiSocketServer *self)</div><div class="ttdoc">Lire l&#39;état du serveur.</div><div class="ttdef"><b>Définition</b> <a href="#l00223">libloki-socket-server.c:223</a></div></div>
+<div class="ttc" id="agroup__gLokiSocketServer_html_gaf9a8245cd675157f3ab859b5b93ec3a3"><div class="ttname"><a href="group__gLokiSocketServer.html#gaf9a8245cd675157f3ab859b5b93ec3a3">LokiSocketServer_new</a></div><div class="ttdeci">LokiSocketServer * LokiSocketServer_new(const char *filename)</div><div class="ttdoc">Construire un serveur de données.</div><div class="ttdef"><b>Définition</b> <a href="#l00050">libloki-socket-server.c:50</a></div></div>
+<div class="ttc" id="alibloki_8h_html"><div class="ttname"><a href="libloki_8h.html">libloki.h</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d&#39;une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="astructLokiPacket_html"><div class="ttname"><a href="structLokiPacket.html">LokiPacket</a></div><div class="ttdoc">Structure d&#39;un paquet d&#39;échantillons échangés entre tâches concurrentes.</div><div class="ttdef"><b>Définition</b> <a href="libloki-packet_8h_source.html#l00016">libloki-packet.h:16</a></div></div>
+<div class="ttc" id="astructLokiPacket_html_afbb0c3d44760e9d9dab41578f6863105"><div class="ttname"><a href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">LokiPacket::buffer</a></div><div class="ttdeci">char buffer[0]</div><div class="ttdoc">Les valeurs d&#39;échantillons. La taille et le type de ce tableau son spécifiés ultérieurement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-packet_8h_source.html#l00020">libloki-packet.h:20</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html"><div class="ttname"><a href="structLokiSocketServer.html">LokiSocketServer</a></div><div class="ttdoc">Représentation d&#39;un serveur de données.</div><div class="ttdef"><b>Définition</b> <a href="#l00023">libloki-socket-server.c:23</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a1caaaec355e9f8fe7295b032f0cf46ca"><div class="ttname"><a href="structLokiSocketServer.html#a1caaaec355e9f8fe7295b032f0cf46ca">LokiSocketServer::is_streaming</a></div><div class="ttdeci">bool is_streaming</div><div class="ttdoc">Le serveur est-il en service ?</div><div class="ttdef"><b>Définition</b> <a href="#l00033">libloki-socket-server.c:33</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a249e02834d620a403c74a5dac6250dc9"><div class="ttname"><a href="structLokiSocketServer.html#a249e02834d620a403c74a5dac6250dc9">LokiSocketServer::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">Le dernier paquet de données reçu.</div><div class="ttdef"><b>Définition</b> <a href="#l00041">libloki-socket-server.c:41</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a465868df39b34bd524b976f8d0fe1d88"><div class="ttname"><a href="structLokiSocketServer.html#a465868df39b34bd524b976f8d0fe1d88">LokiSocketServer::has_data_cond</a></div><div class="ttdeci">pthread_cond_t has_data_cond</div><div class="ttdoc">Variable conditionnelle pour débloquer le thread serveur lorsqu&#39;un nouveau paquet est disponible.</div><div class="ttdef"><b>Définition</b> <a href="#l00047">libloki-socket-server.c:47</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a639e8f26186618250296264ae47eb90d"><div class="ttname"><a href="structLokiSocketServer.html#a639e8f26186618250296264ae47eb90d">LokiSocketServer::has_data</a></div><div class="ttdeci">bool has_data</div><div class="ttdoc">Indicateur de présence d&#39;un nouveau paquet à transmettre.</div><div class="ttdef"><b>Définition</b> <a href="#l00045">libloki-socket-server.c:45</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a6cb58606a3f1ac3c66cbfebe013a3b6f"><div class="ttname"><a href="structLokiSocketServer.html#a6cb58606a3f1ac3c66cbfebe013a3b6f">LokiSocketServer::in</a></div><div class="ttdeci">LokiFIFO * in</div><div class="ttdoc">La FIFO contenant les données à transmettre.</div><div class="ttdef"><b>Définition</b> <a href="#l00027">libloki-socket-server.c:27</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a96bbce34531c9088dfd664b4e1d0028c"><div class="ttname"><a href="structLokiSocketServer.html#a96bbce34531c9088dfd664b4e1d0028c">LokiSocketServer::cid</a></div><div class="ttdeci">size_t cid</div><div class="ttdoc">Le numéro de consommateur de ce serveur dans sa FIFO d&#39;entrée.</div><div class="ttdef"><b>Définition</b> <a href="#l00029">libloki-socket-server.c:29</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_a9c204fcb723771a2ef21107bbf722feb"><div class="ttname"><a href="structLokiSocketServer.html#a9c204fcb723771a2ef21107bbf722feb">LokiSocketServer::mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdoc">Un mutex pour gérer les accès concurrents au paquet de données courant.</div><div class="ttdef"><b>Définition</b> <a href="#l00039">libloki-socket-server.c:39</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_ab4d95a1e48fc38006b69514c0e5c4933"><div class="ttname"><a href="structLokiSocketServer.html#ab4d95a1e48fc38006b69514c0e5c4933">LokiSocketServer::filename</a></div><div class="ttdeci">char * filename</div><div class="ttdoc">Le nom de fichier à utiliser pour représenter la socket Unix dans le système de fichiers.</div><div class="ttdef"><b>Définition</b> <a href="#l00025">libloki-socket-server.c:25</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_ab551a2004dcacc4916e094f94164b336"><div class="ttname"><a href="structLokiSocketServer.html#ab551a2004dcacc4916e094f94164b336">LokiSocketServer::stop_request</a></div><div class="ttdeci">volatile bool stop_request</div><div class="ttdoc">Indicateur de demande d&#39;arrêt du serveur.</div><div class="ttdef"><b>Définition</b> <a href="#l00031">libloki-socket-server.c:31</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_af671cbad24fc84ebc532f54d246df3f1"><div class="ttname"><a href="structLokiSocketServer.html#af671cbad24fc84ebc532f54d246df3f1">LokiSocketServer::receiver_thread</a></div><div class="ttdeci">pthread_t receiver_thread</div><div class="ttdoc">Le thread de réception des données.</div><div class="ttdef"><b>Définition</b> <a href="#l00035">libloki-socket-server.c:35</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_afaf754ac375d72c6c866e3e9dd38ff7c"><div class="ttname"><a href="structLokiSocketServer.html#afaf754ac375d72c6c866e3e9dd38ff7c">LokiSocketServer::server_thread</a></div><div class="ttdeci">pthread_t server_thread</div><div class="ttdoc">Le thread qui gère les connexions des clients et transmet les données.</div><div class="ttdef"><b>Définition</b> <a href="#l00037">libloki-socket-server.c:37</a></div></div>
+<div class="ttc" id="astructLokiSocketServer_html_afcc27f30cb2646ad77ec53fd1a1c5f48"><div class="ttname"><a href="structLokiSocketServer.html#afcc27f30cb2646ad77ec53fd1a1c5f48">LokiSocketServer::data_size</a></div><div class="ttdeci">size_t data_size</div><div class="ttdoc">La taille totale d&#39;un paquet de données, en octets.</div><div class="ttdef"><b>Définition</b> <a href="#l00043">libloki-socket-server.c:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

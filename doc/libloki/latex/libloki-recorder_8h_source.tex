@@ -1,0 +1,36 @@
+\doxysection{libloki-\/recorder.h}
+\hypertarget{libloki-recorder_8h_source}{}\label{libloki-recorder_8h_source}\index{libloki-\/recorder.h@{libloki-\/recorder.h}}
+\doxymbox{\hyperlink{libloki-recorder_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_RECORDER\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ LIBLOKI\_RECORDER\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-fifo_8h}{libloki-\/fifo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00019}\doxymbox{\hyperlink{group__gLokiRecorder_gade9192ee45215b240cb01c74c83d5128}{00019}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ \doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}};}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00034}00034\ \doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *\doxymbox{\hyperlink{group__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae}{LokiRecorder\_new}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiRecorder_a9fc80d1dbce59b5ec31e57548b00a1b3}{filename}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiRecorder_a1d6bca3a226f84ec37f82339bd10dc4e}{filetype}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiRecorder_afd00b906ebc7b3e5951bbc0fe21166c8}{max\_channels}},\ int32\_t\ \doxymbox{\hyperlink{structLokiRecorder_aa1f2fad80e1728976bf7cc1300111805}{channels}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiRecorder_abc75d5f39bafdac8a0c3de5dfc646c85}{sample\_size}},\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiRecorder_ac3e59b5fd45b119b6b83b48581d45156}{sampling\_frequency}},\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ duration\_per\_file,\ \textcolor{keywordtype}{void}\ *config);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00041}00041\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__gLokiRecorder_gab0cf8ecbf4d7485f468a54f4f19ac9bb}{LokiRecorder\_get\_filename}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00048}00048\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiRecorder_ga4c4c75b9e574887bea2605e78df3a4aa}{LokiRecorder\_get\_channel\_count}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00060}00060\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e}{LokiRecorder\_start}}(\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self,\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *\doxymbox{\hyperlink{structLokiRecorder_aa467b2260da34bd08b7b0a1e226ae5f0}{in}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiRecorder_a89d4667439b403fe453795d90c6456c2}{cid}});}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00067}00067\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiRecorder_gaa45a1fc3757fe0ff2226e05661ea49a4}{LokiRecorder\_is\_recording}}(\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00076}00076\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9}{LokiRecorder\_wait}}(\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00084}00084\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de}{LokiRecorder\_stop}}(\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00090}00090\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550}{LokiRecorder\_del}}(\doxymbox{\hyperlink{structLokiRecorder}{LokiRecorder}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00092}00092\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{libloki-recorder_8h_source_l00096}00096\ }
+
+\end{DoxyCode}

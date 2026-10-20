@@ -1,0 +1,25 @@
+<map id="LokiModem_set_reg" name="LokiModem_set_reg">
+<area shape="rect" id="node1" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="795,483,948,508"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="564,5,696,31"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gabaa67fb5b5e0b8faf9cc91c184f88223" title="Redémarrer le modem." alt="" coords="556,55,704,80"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#ga6db2465578c86756f1add7b181ba5fcf" title="Activer ou désactiver le démodulateur." alt="" coords="541,105,719,145"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga3dae87fc80640dfcdb311ff910eb1629" title="Affecter un retard à la composante X (I) du signal démodulé pour une voie." alt="" coords="541,169,719,209"/>
+<area shape="rect" id="node9" href="$group__gLokiModem.html#gad371ab9c535880040f2c2edd940214a7" title="Affecter un retard à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="541,233,719,273"/>
+<area shape="rect" id="node11" href="$group__gLokiModem.html#ga915c87d5c51e251962e73f877877191e" title="Affecter une fréquence au signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="541,297,719,337"/>
+<area shape="rect" id="node12" href="$group__gLokiModem.html#ga004a61e3be64e2baaa34b8d8972e6a14" title="Affecter une fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="263,326,440,366"/>
+<area shape="rect" id="node14" href="$group__gLokiModem.html#ga54d3f84ff16f8151a1bce5cc260319f8" title="Affecter un gain à l&#39;amplificateur en entrée du démodulateur pour une voie." alt="" coords="541,411,719,451"/>
+<area shape="rect" id="node15" href="$group__gLokiModem.html#ga576ca4b34004e2abc8fc56676ae94d5c" title="Affecter un courant moyen de commande de la diode laser." alt="" coords="539,475,721,515"/>
+<area shape="rect" id="node16" href="$group__gLokiModem.html#ga145b497260f02412a57b080ce54ce887" title="Affecter un offset en sortie du modulateur." alt="" coords="527,540,733,565"/>
+<area shape="rect" id="node17" href="$group__gLokiModem.html#ga13ea309bfb24d266143fa5b423cb214e" title="Affecter une amplitude au signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="513,589,747,615"/>
+<area shape="rect" id="node18" href="$group__gLokiModem.html#ga3644d43b3d196126fcc4e7cae35586ef" title="Affecter une fréquence au signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="531,639,729,679"/>
+<area shape="rect" id="node19" href="$group__gLokiModem.html#gaa40ad8ef296c7038b6f747f5407108d0" title="Affecter une fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="237,697,465,737"/>
+<area shape="rect" id="node20" href="$group__gLokiModem.html#gaf407427ac9c86260ef17e64ed085cc8d" title="Affecter une amplitude au signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="513,755,747,780"/>
+<area shape="rect" id="node21" href="$group__gLokiModem.html#gad722211a6ab8be9034460eeaee2e120e" title="Affecter une fréquence au signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="531,805,729,845"/>
+<area shape="rect" id="node22" href="$group__gLokiModem.html#ga364f35ace5bfa66da9afd5814a4cf1e8" title="Affecter un gain à l&#39;amplificateur de sortie." alt="" coords="517,869,743,895"/>
+<area shape="rect" id="node23" href="$group__gLokiModem.html#gae39a7a556f2691d8674fc690bdb6a238" title="Activer ou désactiver le mode de test." alt="" coords="529,919,731,944"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="285,5,417,31"/>
+<area shape="rect" id="node5" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="247,55,455,80"/>
+<area shape="rect" id="node8" href="$group__gLokiModem.html#gaf0714c10db4b9dd9af015706532fab6a" title="Affecter un déphasage à la composante X (I) du signal démodulé pour une voie." alt="" coords="263,169,440,209"/>
+<area shape="rect" id="node10" href="$group__gLokiModem.html#gab3cc855369372902491bf46d42aa072a" title="Affecter un déphasage à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="263,233,440,273"/>
+<area shape="rect" id="node13" href="$group__gLokiModem.html#ga817eb7cc3b696dfd0d6937eee51468bd" title="Affecter une fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="5,326,189,366"/>
+</map>

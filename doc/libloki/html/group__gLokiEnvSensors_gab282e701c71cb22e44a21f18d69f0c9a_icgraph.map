@@ -1,0 +1,5 @@
+<map id="LokiEnvSensors_dma_is_streaming" name="LokiEnvSensors_dma_is_streaming">
+<area shape="rect" id="node1" title="Lire l&#39;état des transferts DMA." alt="" coords="268,27,428,67"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#gabde1553662bb4376eb15ed7b9c4ec2fe" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="5,5,220,31"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="32,55,193,95"/>
+</map>

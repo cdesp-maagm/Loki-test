@@ -1,0 +1,6 @@
+<map id="LokiDisplacement" name="LokiDisplacement">
+<area shape="rect" id="node1" title="Représentation d&#39;un calculateur de déplacement." alt="" coords="130,93,269,119"/>
+<area shape="rect" id="node2" href="$structLokiEllipse.html" title="Structure de données représentant une ellipse." alt="" coords="5,5,97,31"/>
+<area shape="rect" id="node3" href="$structLokiEllipseEstimator.html" title="Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse." alt="" coords="122,5,277,31"/>
+<area shape="rect" id="node4" href="$structLokiFIRFilter.html" title="Représentation d&#39;un filtre FIR." alt="" coords="301,5,404,31"/>
+</map>

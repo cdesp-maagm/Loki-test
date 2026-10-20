@@ -1,0 +1,5 @@
+<map id="LokiModem_set_demod_osc_wave_frequency" name="LokiModem_set_demod_osc_wave_frequency">
+<area shape="rect" id="node1" title="Affecter une fréquence au signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="463,5,640,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga004a61e3be64e2baaa34b8d8972e6a14" title="Affecter une fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="237,5,415,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga817eb7cc3b696dfd0d6937eee51468bd" title="Affecter une fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="5,5,189,45"/>
+</map>

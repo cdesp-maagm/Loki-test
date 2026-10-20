@@ -1,0 +1,366 @@
+\doxysubsection{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse }
+\hypertarget{group__gLokiEllipseEstimator}{}\label{group__gLokiEllipseEstimator}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+
+
+Définition des méthodes communes pour estimer les paramètres d\textquotesingle{}une ellipse au cours de la réception d\textquotesingle{}une série de points.  
+
+
+Graphe de collaboration de Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c}{libloki-\/ellipse-\/estimator.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8h}{libloki-\/ellipse-\/estimator.\+h}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-ellipse_8c}{libloki-\/ellipse.\+c}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre d\textquotesingle{}estimation des paramètres d\textquotesingle{}une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Ellipse\+Estimator \doxymbox{\hyperlink{group__gLokiEllipseEstimator_gaa57cdc8d5f80ec0a91eaf30b9f76c718}{Loki\+Ellipse\+Estimator}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre d\textquotesingle{}estimation des paramètres d\textquotesingle{}une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0}{Loki\+Ellipse\+Estimator\+\_\+new}} (float initial\+\_\+radius, const float params\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Construire un estimateur. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa}{Loki\+Ellipse\+Estimator\+\_\+new\+\_\+with\+\_\+implementation}} (const Loki\+Ellipse\+Estimator\+Interface \texorpdfstring{$\ast$}{*}impl, float initial\+\_\+radius, const float params\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Construire un estimateur avec une implémentation donnée. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2}{Loki\+Ellipse\+Estimator\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un estimateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5}{Loki\+Ellipse\+Estimator\+\_\+work}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898}{Loki\+Ellipse\+Estimator\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant de l\textquotesingle{}estimateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298}{Loki\+Ellipse\+Estimator\+\_\+del}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un estimateur. \end{DoxyCompactList}\item 
+\Hypertarget{group__gLokiEllipseEstimator_gadebb7f654257ff34ceac276fdcf73ee5}\label{group__gLokiEllipseEstimator_gadebb7f654257ff34ceac276fdcf73ee5} 
+{\bfseries Loki\+Class\+\_\+interface} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240}{Loki\+Class\+\_\+attribute}}(size\+\_\+t params\+\_\+length) \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, del))
+\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e}{Loki\+Ellipse\+\_\+set\+\_\+from\+\_\+coeffs}} (\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, const \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}} coeffs)
+\begin{DoxyCompactList}\small\item\em Affecter les paramètres d\textquotesingle{}une ellipse en fonction des coefficients de son équation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844}{Loki\+Ellipse\+\_\+get\+\_\+coeffs}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}} coeffs)
+\begin{DoxyCompactList}\small\item\em Calculer les coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5}{Loki\+Ellipse\+\_\+get\+\_\+point}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, float theta, float \texorpdfstring{$\ast$}{*}x, float \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Calculer les coordonnées d\textquotesingle{}un point d\textquotesingle{}une ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9}{Loki\+Ellipse\+\_\+get\+\_\+angle}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, float x, float y, float \texorpdfstring{$\ast$}{*}x\+\_\+norm, float \texorpdfstring{$\ast$}{*}y\+\_\+norm)
+\begin{DoxyCompactList}\small\item\em Calculer l\textquotesingle{}angle correspondant à un point d\textquotesingle{}une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Définition des méthodes communes pour estimer les paramètres d\textquotesingle{}une ellipse au cours de la réception d\textquotesingle{}une série de points. 
+
+
+
+\label{group__gLokiEllipseEstimator_doc-typedef-members}
+\Hypertarget{group__gLokiEllipseEstimator_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiEllipseEstimator_gaa57cdc8d5f80ec0a91eaf30b9f76c718}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator@{LokiEllipseEstimator}}
+\index{LokiEllipseEstimator@{LokiEllipseEstimator}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator}{LokiEllipseEstimator}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_gaa57cdc8d5f80ec0a91eaf30b9f76c718} 
+typedef struct Loki\+Ellipse\+Estimator Loki\+Ellipse\+Estimator}
+
+
+
+Représentation d\textquotesingle{}un filtre d\textquotesingle{}estimation des paramètres d\textquotesingle{}une ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8h_source_l00019}{19}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8h_source}{libloki-\/ellipse-\/estimator.\+h}}.
+
+
+
+\label{group__gLokiEllipseEstimator_doc-func-members}
+\Hypertarget{group__gLokiEllipseEstimator_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}}
+\index{LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_angle()}{LokiEllipse\_get\_angle()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9} 
+float Loki\+Ellipse\+\_\+get\+\_\+angle (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{x\+\_\+norm}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{y\+\_\+norm}{}\end{DoxyParamCaption})}
+
+
+
+Calculer l\textquotesingle{}angle correspondant à un point d\textquotesingle{}une ellipse. 
+
+Cette fonction calcule également les coordonées d\textquotesingle{}un point du cercle unité correspondant au point de l\textquotesingle{}ellipse passé en argument.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em x} & La coordonnée X d\textquotesingle{}un point de l\textquotesingle{}ellipse. \\
+\hline
+{\em y} & La coordonnée Y d\textquotesingle{}un point de l\textquotesingle{}ellipse. \\
+\hline
+{\em x\+\_\+norm} & Un pointeur vers l\textquotesingle{}emplacement où écrire la coordonnée X du point ramené sur le cercle unité. \\
+\hline
+{\em y\+\_\+norm} & Un pointeur vers l\textquotesingle{}emplacement où écrire la coordonnée Y du point ramené sur le cercle unité. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}angle. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00068}{68}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}}
+\index{LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_coeffs()}{LokiEllipse\_get\_coeffs()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844} 
+void Loki\+Ellipse\+\_\+get\+\_\+coeffs (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}}}]{coeffs}{}\end{DoxyParamCaption})}
+
+
+
+Calculer les coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse. 
+
+Les coefficients sont normalisés de telle sorte que \$a + c = 1\$. Le résultat ne contient que les coefficients (a, b, d, e, f).
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em coeffs} & Le tableau de destination. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00042}{42}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_point@{LokiEllipse\_get\_point}}
+\index{LokiEllipse\_get\_point@{LokiEllipse\_get\_point}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_point()}{LokiEllipse\_get\_point()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5} 
+void Loki\+Ellipse\+\_\+get\+\_\+point (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{theta}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Calculer les coordonnées d\textquotesingle{}un point d\textquotesingle{}une ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em theta} & La coordonnée du point sur l\textquotesingle{}ellipse, en radians. \\
+\hline
+{\em x} & Un pointeur vers la coordonnée X calculée pour ce point. \\
+\hline
+{\em y} & Un pointeur vers la coordonnée Y calculée pour ce point. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}}
+\index{LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_set\_from\_coeffs()}{LokiEllipse\_set\_from\_coeffs()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e} 
+void Loki\+Ellipse\+\_\+set\+\_\+from\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}}}]{coeffs}{}\end{DoxyParamCaption})}
+
+
+
+Affecter les paramètres d\textquotesingle{}une ellipse en fonction des coefficients de son équation. 
+
+L\textquotesingle{}équation de l\textquotesingle{}ellipse est considérée comme normalisée avec \$a + c = 1\$.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse à calculer. \\
+\hline
+{\em coeffs} & Les coefficients (a, b, d, e, f) de l\textquotesingle{}équation. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00010}{10}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_clone@{LokiEllipseEstimator\_clone}}
+\index{LokiEllipseEstimator\_clone@{LokiEllipseEstimator\_clone}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_clone()}{LokiEllipseEstimator\_clone()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2} 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} Loki\+Ellipse\+Estimator\+\_\+clone (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Construire un clone d\textquotesingle{}un estimateur. 
+
+Le nouvel estimateur aura la même implémentation et les mêmes paramètres que l\textquotesingle{}original.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & L\textquotesingle{}estimateur à cloner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouvel estimateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00043}{43}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_del@{LokiEllipseEstimator\_del}}
+\index{LokiEllipseEstimator\_del@{LokiEllipseEstimator\_del}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_del()}{LokiEllipseEstimator\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298} 
+void Loki\+Ellipse\+Estimator\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un estimateur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}estimateur à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00068}{68}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+\Hypertarget{group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_get\_state@{LokiEllipseEstimator\_get\_state}}
+\index{LokiEllipseEstimator\_get\_state@{LokiEllipseEstimator\_get\_state}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_get\_state()}{LokiEllipseEstimator\_get\_state()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898} 
+float \texorpdfstring{$\ast$}{*} Loki\+Ellipse\+Estimator\+\_\+get\+\_\+state (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Retourner l\textquotesingle{}état courant de l\textquotesingle{}estimateur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Un estimateur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le vecteur d\textquotesingle{}état de cet estimateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00064}{64}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 13
+Voici le graphe des appelants de cette fonction :
+% FIG 14
+\Hypertarget{group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_new@{LokiEllipseEstimator\_new}}
+\index{LokiEllipseEstimator\_new@{LokiEllipseEstimator\_new}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_new()}{LokiEllipseEstimator\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0} 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} Loki\+Ellipse\+Estimator\+\_\+new (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+radius}{, }\item[{const float}]{params}{\+[$\,$]}\end{DoxyParamCaption})}
+
+
+
+Construire un estimateur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em initial\+\_\+radius} & Le rayon initial de l\textquotesingle{}ellipse estimée. \\
+\hline
+{\em params} & Les paramètres de cet estimateur (selon l\textquotesingle{}implémentation). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouvel estimateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 15
+Voici le graphe des appelants de cette fonction :
+% FIG 16
+\Hypertarget{group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_new\_with\_implementation@{LokiEllipseEstimator\_new\_with\_implementation}}
+\index{LokiEllipseEstimator\_new\_with\_implementation@{LokiEllipseEstimator\_new\_with\_implementation}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_new\_with\_implementation()}{LokiEllipseEstimator\_new\_with\_implementation()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa} 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} Loki\+Ellipse\+Estimator\+\_\+new\+\_\+with\+\_\+implementation (\begin{DoxyParamCaption}\item[{const Loki\+Ellipse\+Estimator\+Interface \texorpdfstring{$\ast$}{*}}]{impl}{, }\item[{float}]{initial\+\_\+radius}{, }\item[{const float}]{params}{\+[$\,$]}\end{DoxyParamCaption})}
+
+
+
+Construire un estimateur avec une implémentation donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em impl} & L\textquotesingle{}implémentation de \doxylink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator} à utiliser. \\
+\hline
+{\em initial\+\_\+radius} & Le rayon initial de l\textquotesingle{}ellipse estimée. \\
+\hline
+{\em params} & Les paramètres de cet estimateur (selon l\textquotesingle{}implémentation). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouvel estimateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 17
+Voici le graphe des appelants de cette fonction :
+% FIG 18
+\Hypertarget{group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5}\index{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_work@{LokiEllipseEstimator\_work}}
+\index{LokiEllipseEstimator\_work@{LokiEllipseEstimator\_work}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEstimator\_work()}{LokiEllipseEstimator\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5} 
+void Loki\+Ellipse\+Estimator\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. 
+
+Cette fonction met à jour l\textquotesingle{}état interne du filtre et les paramètres de l\textquotesingle{}ellipse de destination.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}estimateur à exécuter. \\
+\hline
+{\em x} & La coordonnée X du point courant. \\
+\hline
+{\em y} & La coordonnée Y du point courant. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 19
+Voici le graphe des appelants de cette fonction :
+% FIG 20

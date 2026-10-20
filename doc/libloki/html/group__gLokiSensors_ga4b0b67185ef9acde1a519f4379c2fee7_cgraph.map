@@ -1,0 +1,8 @@
+<map id="LokiSensors_new" name="LokiSensors_new">
+<area shape="rect" id="node1" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,93,131,120"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b" title="Détruire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="202,5,321,32"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="179,57,344,98"/>
+<area shape="rect" id="node4" href="$group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="392,93,536,120"/>
+<area shape="rect" id="node5" href="$group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="179,174,344,215"/>
+<area shape="rect" id="node6" href="$group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="392,181,536,208"/>
+</map>

@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Instrumentation des fonctions malloc et free</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Instrumentation des fonctions malloc et free <div class="ingroups"><a class="el" href="group__ggLokiCommon.html">Définitions communes</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module peut être utilisées en phase de mise au point pour identifier l'origine de fuites mémoire ou de double désallocation.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Instrumentation des fonctions malloc et free:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks.png" border="0" usemap="#agroup____gLokiHooks" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiHooks" id="agroup____gLokiHooks">
+<area shape="rect" title="Ce module peut être utilisées en phase de mise au point pour identifier l&#39;origine de fuites mémoire o..." alt="" coords="221,5,403,45"/>
+<area shape="rect" href="group__ggLokiCommon.html" title=" " alt="" coords="5,13,173,38"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-hooks_2Ec" id="r_libloki-hooks_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-hooks_8c.html">libloki-hooks.c</a></td></tr>
+<tr class="memitem:libloki-hooks_2Eh" id="r_libloki-hooks_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-hooks_8h.html">libloki-hooks.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga4175410f57244d03a197a9ca698d7fa3" id="r_ga4175410f57244d03a197a9ca698d7fa3"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a> (size_t size, const void *caller)</td></tr>
+<tr class="memdesc:ga4175410f57244d03a197a9ca698d7fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une version instrumentée du hook de la fonction <span class="tt">malloc</span>.  <br /></td></tr>
+<tr class="memitem:gaf60068237975d6170328c5dd9fcb875f" id="r_gaf60068237975d6170328c5dd9fcb875f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gaf60068237975d6170328c5dd9fcb875f">LokiHooks_free</a> (void *ptr, const void *caller)</td></tr>
+<tr class="memdesc:gaf60068237975d6170328c5dd9fcb875f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une version instrumentée du hook de la fonction <span class="tt">free</span>.  <br /></td></tr>
+<tr class="memitem:ga754ec741c3c59c815440fa4b8bc5bda2" id="r_ga754ec741c3c59c815440fa4b8bc5bda2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a> (void)</td></tr>
+<tr class="memdesc:ga754ec741c3c59c815440fa4b8bc5bda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter les hooks des fonctions <span class="tt">malloc</span> et <span class="tt">free</span>.  <br /></td></tr>
+<tr class="memitem:gadc8f630bfbfcb249ae0e14722f9e3141" id="r_gadc8f630bfbfcb249ae0e14722f9e3141"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a> (void)</td></tr>
+<tr class="memdesc:gadc8f630bfbfcb249ae0e14722f9e3141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder les hooks des fonctions <span class="tt">malloc</span> et <span class="tt">free</span>.  <br /></td></tr>
+<tr class="memitem:gaa7d235f5db9c92d3af4c3e816983f4ae" id="r_gaa7d235f5db9c92d3af4c3e816983f4ae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaa7d235f5db9c92d3af4c3e816983f4ae">LokiHooks_restore</a> (void)</td></tr>
+<tr class="memdesc:gaa7d235f5db9c92d3af4c3e816983f4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restaurer les hooks d'origine pour l'allocation/désallocation de mémoire.  <br /></td></tr>
+<tr class="memitem:ga8452f9f1793e6d1091ac294f15406592" id="r_ga8452f9f1793e6d1091ac294f15406592"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8452f9f1793e6d1091ac294f15406592">LokiHooks_init</a> (void)</td></tr>
+<tr class="memdesc:ga8452f9f1793e6d1091ac294f15406592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialiser l'utilisation des hooks instrumentés pour l'allocation/désallocation de mémoire.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gaa645859efa9eecf1d6279f922cf25147" id="r_gaa645859efa9eecf1d6279f922cf25147"><td class="memItemLeft">static void *(*)&#160;</td><td class="memItemRight"><a class="el" href="#gaa645859efa9eecf1d6279f922cf25147">LokiHooks_saved_malloc</a> (size_t, const void *)</td></tr>
+<tr class="memdesc:gaa645859efa9eecf1d6279f922cf25147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointeur vers le hook qui exécute la fonction <span class="tt">malloc</span> d'origine.  <br /></td></tr>
+<tr class="memitem:ga2d338f0f660cf9d8d44cbc22e134b003" id="r_ga2d338f0f660cf9d8d44cbc22e134b003"><td class="memItemLeft">static void(*)&#160;</td><td class="memItemRight"><a class="el" href="#ga2d338f0f660cf9d8d44cbc22e134b003">LokiHooks_saved_free</a> (void *, const void *)</td></tr>
+<tr class="memdesc:ga2d338f0f660cf9d8d44cbc22e134b003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointeur vers le hook qui exécute la fonction <span class="tt">free</span> d'origine.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module peut être utilisées en phase de mise au point pour identifier l'origine de fuites mémoire ou de double désallocation. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gaf60068237975d6170328c5dd9fcb875f" name="gaf60068237975d6170328c5dd9fcb875f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf60068237975d6170328c5dd9fcb875f">&#9670;&#160;</a></span>LokiHooks_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiHooks_free </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>caller</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Une version instrumentée du hook de la fonction <span class="tt">free</span>. </p>
+<p>Cette fonction libère une région de la mémoire en utilisant la fonction <span class="tt">free</span> d'origine, puis elle affiche des informations sur la sortie d'erreur.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Un pointeur vers la région de mémoire à libérer. </td></tr>
+    <tr><td class="paramname">caller</td><td>Un pointeur vers la fonction appelante. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00080">80</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_cgraph.png" border="0" usemap="#agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_cgraph" id="agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_cgraph">
+<area shape="rect" title="Une version instrumentée du hook de la fonction free." alt="" coords="5,29,128,55"/>
+<area shape="rect" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="547,5,689,31"/>
+<area shape="rect" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="554,55,682,80"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="176,29,309,55"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="357,29,499,55"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_icgraph.png" border="0" usemap="#agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_icgraph" id="agroup__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f_icgraph">
+<area shape="rect" title="Une version instrumentée du hook de la fonction free." alt="" coords="723,31,845,56"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="541,31,675,56"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,5,304,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="352,31,493,56"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8452f9f1793e6d1091ac294f15406592" name="ga8452f9f1793e6d1091ac294f15406592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8452f9f1793e6d1091ac294f15406592">&#9670;&#160;</a></span>LokiHooks_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiHooks_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialiser l'utilisation des hooks instrumentés pour l'allocation/désallocation de mémoire. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00039">39</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_cgraph.png" border="0" usemap="#agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_cgraph" id="agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_cgraph">
+<area shape="rect" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="5,81,124,107"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="172,31,313,56"/>
+<area shape="rect" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="721,81,849,107"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="361,31,495,56"/>
+<area shape="rect" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="713,5,856,31"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="543,31,665,56"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_icgraph.png" border="0" usemap="#agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_icgraph" id="agroup__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592_icgraph">
+<area shape="rect" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,5,304,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4175410f57244d03a197a9ca698d7fa3" name="ga4175410f57244d03a197a9ca698d7fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4175410f57244d03a197a9ca698d7fa3">&#9670;&#160;</a></span>LokiHooks_malloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiHooks_malloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>caller</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Une version instrumentée du hook de la fonction <span class="tt">malloc</span>. </p>
+<p>Cette fonction alloue une région de la mémoire en utilisant la fonction <span class="tt">malloc</span> d'origine, puis elle affiche des informations sur la sortie d'erreur.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>La taille de la région de mémoire à allouer. </td></tr>
+    <tr><td class="paramname">caller</td><td>Un pointeur vers la fonction appelante. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers la région de mémoire allouée. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00056">56</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_cgraph.png" border="0" usemap="#agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_cgraph" id="agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_cgraph">
+<area shape="rect" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="5,29,147,55"/>
+<area shape="rect" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="547,5,689,31"/>
+<area shape="rect" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="554,55,682,80"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="195,29,328,55"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="376,29,499,55"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_icgraph.png" border="0" usemap="#agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_icgraph" id="agroup__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3_icgraph">
+<area shape="rect" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="537,55,679,80"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="187,5,306,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="356,55,489,80"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="185,55,308,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa7d235f5db9c92d3af4c3e816983f4ae" name="gaa7d235f5db9c92d3af4c3e816983f4ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7d235f5db9c92d3af4c3e816983f4ae">&#9670;&#160;</a></span>LokiHooks_restore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiHooks_restore </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restaurer les hooks d'origine pour l'allocation/désallocation de mémoire. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00034">34</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_cgraph.png" border="0" usemap="#agroup__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_icgraph.png" border="0" usemap="#agroup__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_icgraph" id="agroup__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae_icgraph">
+<area shape="rect" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="893,31,1036,56"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="723,5,845,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="352,31,493,56"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="541,5,675,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,5,304,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gadc8f630bfbfcb249ae0e14722f9e3141" name="gadc8f630bfbfcb249ae0e14722f9e3141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc8f630bfbfcb249ae0e14722f9e3141">&#9670;&#160;</a></span>LokiHooks_save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiHooks_save </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sauvegarder les hooks des fonctions <span class="tt">malloc</span> et <span class="tt">free</span>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00029">29</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_cgraph.png" border="0" usemap="#agroup__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_icgraph.png" border="0" usemap="#agroup__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_icgraph" id="agroup__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141_icgraph">
+<area shape="rect" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="893,56,1021,81"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="723,5,845,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,56,304,81"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="352,56,493,81"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="541,5,675,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,56,137,81"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga754ec741c3c59c815440fa4b8bc5bda2" name="ga754ec741c3c59c815440fa4b8bc5bda2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga754ec741c3c59c815440fa4b8bc5bda2">&#9670;&#160;</a></span>LokiHooks_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiHooks_setup </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affecter les hooks des fonctions <span class="tt">malloc</span> et <span class="tt">free</span>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00023">23</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_cgraph.png" border="0" usemap="#agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_cgraph" id="agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_cgraph">
+<area shape="rect" title="Affecter les hooks des fonctions malloc et free." alt="" coords="5,31,139,56"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="196,5,319,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="187,55,328,80"/>
+<area shape="rect" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="376,5,519,31"/>
+<area shape="rect" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="383,55,511,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_icgraph.png" border="0" usemap="#agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_icgraph" id="agroup__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2_icgraph">
+<area shape="rect" title="Affecter les hooks des fonctions malloc et free." alt="" coords="541,56,675,81"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="361,5,484,31"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,81,304,107"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="352,107,493,132"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,81,137,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ga2d338f0f660cf9d8d44cbc22e134b003" name="ga2d338f0f660cf9d8d44cbc22e134b003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d338f0f660cf9d8d44cbc22e134b003">&#9670;&#160;</a></span>LokiHooks_saved_free</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(*) LokiHooks_saved_free(void *, const void *) </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointeur vers le hook qui exécute la fonction <span class="tt">free</span> d'origine. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00016">16</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+
+</div>
+</div>
+<a id="gaa645859efa9eecf1d6279f922cf25147" name="gaa645859efa9eecf1d6279f922cf25147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa645859efa9eecf1d6279f922cf25147">&#9670;&#160;</a></span>LokiHooks_saved_malloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void *(*) LokiHooks_saved_malloc(size_t, const void *) </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointeur vers le hook qui exécute la fonction <span class="tt">malloc</span> d'origine. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-hooks_8c_source.html#l00013">13</a> du fichier <a class="el" href="libloki-hooks_8c_source.html">libloki-hooks.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

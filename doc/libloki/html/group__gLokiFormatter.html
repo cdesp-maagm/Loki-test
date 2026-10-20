@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Interface pour la mise en forme de séries temporelles</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Interface pour la mise en forme de séries temporelles <div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition des méthodes communes pour enregistrer des séries temporelles.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Interface pour la mise en forme de séries temporelles:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter.png" border="0" usemap="#agroup____gLokiFormatter" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiFormatter" id="agroup____gLokiFormatter">
+<area shape="rect" title="Définition des méthodes communes pour enregistrer des séries temporelles." alt="" coords="280,5,511,45"/>
+<area shape="rect" href="group__ggLokiRecording.html" title=" " alt="" coords="5,5,232,45"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-formatter_2Ec" id="r_libloki-formatter_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-formatter_8c.html">libloki-formatter.c</a></td></tr>
+<tr class="memitem:libloki-formatter_2Eh" id="r_libloki-formatter_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-formatter_8h.html">libloki-formatter.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiFormatter" id="r_LokiFormatter"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiFormatter.html">LokiFormatter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de séries temporelles.  <a href="structLokiFormatter.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga0ed4ee37eb7df177e186a8119d531547" id="r_ga0ed4ee37eb7df177e186a8119d531547"><td class="memItemLeft">typedef struct LokiFormatter&#160;</td><td class="memItemRight"><a class="el" href="#ga0ed4ee37eb7df177e186a8119d531547">LokiFormatter</a></td></tr>
+<tr class="memdesc:ga0ed4ee37eb7df177e186a8119d531547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de séries temporelles.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga8b0886a7cf3fcedd5f6865cd6db7f4ed" id="r_ga8b0886a7cf3fcedd5f6865cd6db7f4ed"><td class="memItemLeft"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga8b0886a7cf3fcedd5f6865cd6db7f4ed">LokiFormatter_new</a> (void *config)</td></tr>
+<tr class="memdesc:ga8b0886a7cf3fcedd5f6865cd6db7f4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau formateur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:gaf56c5bf018b8dbc9d5fcb2a1edf35f36" id="r_gaf56c5bf018b8dbc9d5fcb2a1edf35f36"><td class="memItemLeft"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaf56c5bf018b8dbc9d5fcb2a1edf35f36">LokiFormatter_new_with_implementation</a> (const LokiFormatterInterface *impl, void *config)</td></tr>
+<tr class="memdesc:gaf56c5bf018b8dbc9d5fcb2a1edf35f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau formateur de séries temporelles avec une implémentation donnée.  <br /></td></tr>
+<tr class="memitem:ga8108986b27bbe1e5fd15399e3f0a8ce3" id="r_ga8108986b27bbe1e5fd15399e3f0a8ce3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8108986b27bbe1e5fd15399e3f0a8ce3">LokiFormatter_work</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self, const char *filename, <a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</td></tr>
+<tr class="memdesc:ga8108986b27bbe1e5fd15399e3f0a8ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer un paquet de données.  <br /></td></tr>
+<tr class="memitem:ga764b53438aeaad6ee0d026740b48078c" id="r_ga764b53438aeaad6ee0d026740b48078c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga764b53438aeaad6ee0d026740b48078c">LokiFormatter_close</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self)</td></tr>
+<tr class="memdesc:ga764b53438aeaad6ee0d026740b48078c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer un formateur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:ga061b486e06e9cc730f6cb82103ad53a8" id="r_ga061b486e06e9cc730f6cb82103ad53a8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga061b486e06e9cc730f6cb82103ad53a8">LokiFormatter_del</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self)</td></tr>
+<tr class="memdesc:ga061b486e06e9cc730f6cb82103ad53a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire de mise en forme de séries temporelles.  <br /></td></tr>
+<tr class="memitem:ga8a4b85545a2923171bb16592c5fcaab4" id="r_ga8a4b85545a2923171bb16592c5fcaab4"><td class="memItemLeft"><a id="ga8a4b85545a2923171bb16592c5fcaab4" name="ga8a4b85545a2923171bb16592c5fcaab4"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_interface</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, new) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, work) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, close) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, del))</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition des méthodes communes pour enregistrer des séries temporelles. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga0ed4ee37eb7df177e186a8119d531547" name="ga0ed4ee37eb7df177e186a8119d531547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ed4ee37eb7df177e186a8119d531547">&#9670;&#160;</a></span>LokiFormatter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiFormatter LokiFormatter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un formateur de séries temporelles. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8h_source.html#l00021">21</a> du fichier <a class="el" href="libloki-formatter_8h_source.html">libloki-formatter.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga764b53438aeaad6ee0d026740b48078c" name="ga764b53438aeaad6ee0d026740b48078c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga764b53438aeaad6ee0d026740b48078c">&#9670;&#160;</a></span>LokiFormatter_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFormatter_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fermer un formateur de séries temporelles. </p>
+<p>Cette fonction ferme le dernier fichier ouvert. Elle doit être appelée à la fin de l'enregistrement.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'instance à fermer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8c_source.html#l00047">47</a> du fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_cgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_icgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_icgraph" id="agroup__gLokiFormatter_ga764b53438aeaad6ee0d026740b48078c_icgraph">
+<area shape="rect" title="Fermer un formateur de séries temporelles." alt="" coords="392,5,547,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="197,5,344,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="5,5,149,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga061b486e06e9cc730f6cb82103ad53a8" name="ga061b486e06e9cc730f6cb82103ad53a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga061b486e06e9cc730f6cb82103ad53a8">&#9670;&#160;</a></span>LokiFormatter_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFormatter_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire de mise en forme de séries temporelles. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'instance à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8c_source.html#l00051">51</a> du fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_cgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_icgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_icgraph" id="agroup__gLokiFormatter_ga061b486e06e9cc730f6cb82103ad53a8_icgraph">
+<area shape="rect" title="Détruire de mise en forme de séries temporelles." alt="" coords="676,42,816,67"/>
+<area shape="rect" href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="445,5,628,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550" title="Détruire un enregistreur." alt="" coords="229,66,363,91"/>
+<area shape="rect" href="group__gLokiRecorder.html#gaebc49d7bf1849c2cc5ea7e0ea05532d9" title="Affecter un formateur à un enregistreur." alt="" coords="195,15,397,41"/>
+<area shape="rect" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae" title="Construire un enregistreur de séries temporelles." alt="" coords="5,42,147,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8b0886a7cf3fcedd5f6865cd6db7f4ed" name="ga8b0886a7cf3fcedd5f6865cd6db7f4ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b0886a7cf3fcedd5f6865cd6db7f4ed">&#9670;&#160;</a></span>LokiFormatter_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> * LokiFormatter_new </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>config</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau formateur de séries temporelles. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Une configuration pour le nouveau formateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une instance de <a class="el" href="structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles.">LokiFormatter</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8c_source.html#l00022">22</a> du fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga8b0886a7cf3fcedd5f6865cd6db7f4ed_cgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga8b0886a7cf3fcedd5f6865cd6db7f4ed_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga8b0886a7cf3fcedd5f6865cd6db7f4ed_icgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga8b0886a7cf3fcedd5f6865cd6db7f4ed_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="gaf56c5bf018b8dbc9d5fcb2a1edf35f36" name="gaf56c5bf018b8dbc9d5fcb2a1edf35f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf56c5bf018b8dbc9d5fcb2a1edf35f36">&#9670;&#160;</a></span>LokiFormatter_new_with_implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> * LokiFormatter_new_with_implementation </td>
+          <td>(</td>
+          <td class="paramtype">const LokiFormatterInterface *</td>          <td class="paramname"><span class="paramname"><em>impl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau formateur de séries temporelles avec une implémentation donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">impl</td><td>L'implémentation de <a class="el" href="structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles.">LokiFormatter</a> à utiliser. </td></tr>
+    <tr><td class="paramname">config</td><td>Une configuration pour le nouveau formateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une instance de <a class="el" href="structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles.">LokiFormatter</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8c_source.html#l00026">26</a> du fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_cgraph.png" border="0" usemap="#agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_cgraph" id="agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_cgraph">
+<area shape="rect" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="5,5,188,45"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8" title="Détruire de mise en forme de séries temporelles." alt="" coords="236,13,376,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_icgraph.png" border="0" usemap="#agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_icgraph" id="agroup__gLokiFormatter_gaf56c5bf018b8dbc9d5fcb2a1edf35f36_icgraph">
+<area shape="rect" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="445,5,628,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#gaebc49d7bf1849c2cc5ea7e0ea05532d9" title="Affecter un formateur à un enregistreur." alt="" coords="195,13,397,38"/>
+<area shape="rect" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae" title="Construire un enregistreur de séries temporelles." alt="" coords="5,13,147,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8108986b27bbe1e5fd15399e3f0a8ce3" name="ga8108986b27bbe1e5fd15399e3f0a8ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8108986b27bbe1e5fd15399e3f0a8ce3">&#9670;&#160;</a></span>LokiFormatter_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFormatter_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>file_change</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>sample_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sampling_frequency</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enregistrer un paquet de données. </p>
+<p>Cette fonction délègue à une implémentation de l'interface <a class="el" href="structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles.">LokiFormatter</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'instance à utiliser. </td></tr>
+    <tr><td class="paramname">filename</td><td>Le nom du fichier de destination. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>La date du paquet de données. </td></tr>
+    <tr><td class="paramname">file_change</td><td>Faut-il ouvrir un nouveau fichier de destination ou poursuivre le fichier précédent ? </td></tr>
+    <tr><td class="paramname">data</td><td>Les données à écrire. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre d'échantillons à écrire. </td></tr>
+    <tr><td class="paramname">max_channels</td><td>Le nombre maximal de voies à traiter. </td></tr>
+    <tr><td class="paramname">channels</td><td>Un masque indiquant les voies à traiter. </td></tr>
+    <tr><td class="paramname">sample_size</td><td>La taille d'un échantillon, en octets. </td></tr>
+    <tr><td class="paramname">sampling_frequency</td><td>La fréquence d'échantillonage. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-formatter_8c_source.html#l00043">43</a> du fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_cgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_icgraph.png" border="0" usemap="#agroup__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_icgraph" id="agroup__gLokiFormatter_ga8108986b27bbe1e5fd15399e3f0a8ce3_icgraph">
+<area shape="rect" title="Enregistrer un paquet de données." alt="" coords="392,5,544,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="197,5,344,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="5,5,149,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

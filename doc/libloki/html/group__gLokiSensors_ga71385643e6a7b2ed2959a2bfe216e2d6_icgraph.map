@@ -1,0 +1,6 @@
+<map id="LokiSensors_set_reg" name="LokiSensors_set_reg">
+<area shape="rect" id="node1" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="405,46,549,73"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="185,5,351,47"/>
+<area shape="rect" id="node4" href="$group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c" title="Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition." alt="" coords="179,71,357,112"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,13,131,39"/>
+</map>

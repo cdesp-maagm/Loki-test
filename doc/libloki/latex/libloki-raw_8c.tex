@@ -1,0 +1,42 @@
+\doxysection{Référence du fichier libloki-\/raw.c}
+\hypertarget{libloki-raw_8c}{}\label{libloki-raw_8c}\index{libloki-\/raw.c@{libloki-\/raw.c}}
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/raw.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de données brutes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74}{Loki\+Raw\+\_\+new}} (void \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Construire un formateur de données brutes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d}{Loki\+Raw\+\_\+work}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}filename, \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp, bool file\+\_\+change, void \texorpdfstring{$\ast$}{*}data, size\+\_\+t length, size\+\_\+t max\+\_\+channels, int32\+\_\+t channels, size\+\_\+t sample\+\_\+size, float sampling\+\_\+frequency)
+\begin{DoxyCompactList}\small\item\em Enregistrer un paquet de données. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}{Loki\+Raw\+\_\+close}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Fermer un formateur de données brutes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c}{Loki\+Raw\+\_\+del}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un formateur de données brutes. \end{DoxyCompactList}\item 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}, \doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, close) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, del))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-raw_8c_source}{libloki-\/raw.\+c}}.
+

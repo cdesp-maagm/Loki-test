@@ -1,0 +1,9 @@
+<map id="LokiDisplacement_clone" name="LokiDisplacement_clone">
+<area shape="rect" id="node1" title="Cloner une instance de LokiDisplacement." alt="" coords="5,70,187,95"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="235,70,401,95"/>
+<area shape="rect" id="node5" href="$group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2" title="Construire un clone d&#39;un estimateur." alt="" coords="241,5,395,45"/>
+<area shape="rect" id="node6" href="$group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="245,119,391,145"/>
+<area shape="rect" id="node3" href="$group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="449,17,632,42"/>
+<area shape="rect" id="node4" href="$group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="475,70,606,95"/>
+<area shape="rect" id="node7" href="$group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="459,120,622,160"/>
+</map>

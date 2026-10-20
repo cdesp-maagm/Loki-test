@@ -1,0 +1,113 @@
+\doxysubsection{Macros utiles. }
+\hypertarget{group__gLokiCommon}{}\label{group__gLokiCommon}\index{Macros utiles.@{Macros utiles.}}
+Graphe de collaboration de Macros utiles.:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-common_8h}{libloki-\/common.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiCommon_ga4fde9cd0a1a1ac6d3f649f15a3c32890}{LEN}}(a)
+\begin{DoxyCompactList}\small\item\em Retourner le nombre d\textquotesingle{}éléments d\textquotesingle{}un tableau. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiCommon_ga9404439ed46dc67d489a7d4ec2853e8f}{CAT}}(a,  b)
+\begin{DoxyCompactList}\small\item\em Concaténer deux identifiants. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiCommon_gaa6fa13246c1d6df342c083aac0f2ef95}{CAT3}}(a,  b,  c)
+\begin{DoxyCompactList}\small\item\em Concaténer deux identifiants en insérant un séparateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+
+
+\label{group__gLokiCommon_doc-define-members}
+\Hypertarget{group__gLokiCommon_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiCommon_ga9404439ed46dc67d489a7d4ec2853e8f}\index{Macros utiles.@{Macros utiles.}!CAT@{CAT}}
+\index{CAT@{CAT}!Macros utiles.@{Macros utiles.}}
+\doxysubsubsubsection{\texorpdfstring{CAT}{CAT}}
+{\footnotesize\ttfamily \label{group__gLokiCommon_ga9404439ed46dc67d489a7d4ec2853e8f} 
+\+\#define CAT(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{a\#\#b}
+
+\end{DoxyCode}
+
+
+Concaténer deux identifiants. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le préfixe. \\
+\hline
+{\em b} & Le suffixe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un identifiant construit à partir de a et b. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-common_8h_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-common_8h_source}{libloki-\/common.\+h}}.
+
+\Hypertarget{group__gLokiCommon_gaa6fa13246c1d6df342c083aac0f2ef95}\index{Macros utiles.@{Macros utiles.}!CAT3@{CAT3}}
+\index{CAT3@{CAT3}!Macros utiles.@{Macros utiles.}}
+\doxysubsubsubsection{\texorpdfstring{CAT3}{CAT3}}
+{\footnotesize\ttfamily \label{group__gLokiCommon_gaa6fa13246c1d6df342c083aac0f2ef95} 
+\+\#define CAT3(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{a\#\#b\#\#c}
+
+\end{DoxyCode}
+
+
+Concaténer deux identifiants en insérant un séparateur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le préfixe. \\
+\hline
+{\em b} & Le séparateur. \\
+\hline
+{\em c} & Le suffixe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un identifiant construit à partir de a, b et c. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-common_8h_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-common_8h_source}{libloki-\/common.\+h}}.
+
+\Hypertarget{group__gLokiCommon_ga4fde9cd0a1a1ac6d3f649f15a3c32890}\index{Macros utiles.@{Macros utiles.}!LEN@{LEN}}
+\index{LEN@{LEN}!Macros utiles.@{Macros utiles.}}
+\doxysubsubsubsection{\texorpdfstring{LEN}{LEN}}
+{\footnotesize\ttfamily \label{group__gLokiCommon_ga4fde9cd0a1a1ac6d3f649f15a3c32890} 
+\+\#define LEN(\begin{DoxyParamCaption}\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keyword}{sizeof}(a)\ /\ \textcolor{keyword}{sizeof}(a[0]))}
+
+\end{DoxyCode}
+
+
+Retourner le nombre d\textquotesingle{}éléments d\textquotesingle{}un tableau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Un tableau alloué statiquement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre d\textquotesingle{}éléments dans a. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-common_8h_source_l00015}{15}} du fichier \doxymbox{\hyperlink{libloki-common_8h_source}{libloki-\/common.\+h}}.
+

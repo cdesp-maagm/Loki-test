@@ -1,0 +1,10 @@
+{
+    "package_name" : "OscillatorExample_cfg",
+    "EX_use" : "Oscillator_pkg",
+    "declarations" : {
+        "OSC_SIN_COS_FRACTIONAL_WIDTH" : {"type" : "integer", "value"  : 16},
+        "EX_CHANNELS"                  : {"type" : "integer", "value"  : 2},
+        "EX_WAVE_FREQUENCY_MIN"        : {"type" : "integer", "value"  : 50},
+        "EX_SAMPLE_FREQUENCY"          : {"type" : "positive", "value" : 2000000}
+    }
+}

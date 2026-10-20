@@ -1,0 +1,6 @@
+<map id="LokiConsumer_start" name="LokiConsumer_start">
+<area shape="rect" id="node1" title="Démarrer un consommateur." alt="" coords="5,31,144,57"/>
+<area shape="rect" id="node2" href="$group__LokiConsumer.html#gaafa0755d508e7348f5c6b777ff46b987" title="Lire les données de la FIFO." alt="" coords="192,31,333,57"/>
+<area shape="rect" id="node3" href="$group__LokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="381,5,579,32"/>
+<area shape="rect" id="node4" href="$group__LokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="429,56,531,83"/>
+</map>

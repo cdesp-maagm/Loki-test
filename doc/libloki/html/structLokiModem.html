@@ -1,0 +1,1153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence de la structure LokiModem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Champs de données</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la structure LokiModem<div class="ingroups"><a class="el" href="group__ggLokiAcquisition.html">Acquisition</a> &raquo; <a class="el" href="group__gLokiModem.html">Pilotage des composants modulateur et démodulateur</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Représentation des périphériques modulateur et démodulateur.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de LokiModem:</div>
+<div class="dyncontent">
+<div class="center"><img src="structLokiModem__coll__graph.png" border="0" usemap="#aLokiModem_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aLokiModem_coll__map" id="aLokiModem_coll__map">
+<area shape="rect" title="Représentation des périphériques modulateur et démodulateur." alt="" coords="18,196,117,221"/>
+<area shape="rect" href="structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="28,108,107,133"/>
+<area shape="rect" href="structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,129,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:a9ec03b6c1b70c560d85fe273a6f496b9" id="r_a9ec03b6c1b70c560d85fe273a6f496b9"><td class="memItemLeft">FILE *&#160;</td><td class="memItemRight"><a class="el" href="#a9ec03b6c1b70c560d85fe273a6f496b9">file</a></td></tr>
+<tr class="memdesc:a9ec03b6c1b70c560d85fe273a6f496b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le fichier représentant le périphérique qui gère le modem.  <br /></td></tr>
+<tr class="memitem:a33e0848e406aa834cb6608806fe7c5f2" id="r_a33e0848e406aa834cb6608806fe7c5f2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a33e0848e406aa834cb6608806fe7c5f2">fileno</a></td></tr>
+<tr class="memdesc:a33e0848e406aa834cb6608806fe7c5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le numéro du fichier représentant le périphérique qui gère le modem.  <br /></td></tr>
+<tr class="memitem:af16cb116b1081bc7d5c89ee0662f82a6" id="r_af16cb116b1081bc7d5c89ee0662f82a6"><td class="memItemLeft">volatile bool&#160;</td><td class="memItemRight"><a class="el" href="#af16cb116b1081bc7d5c89ee0662f82a6">stop_request</a></td></tr>
+<tr class="memdesc:af16cb116b1081bc7d5c89ee0662f82a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de demande d'arrêt d'acquisition.  <br /></td></tr>
+<tr class="memitem:a7ac40b0fd810c236374624ce5d04c6d1" id="r_a7ac40b0fd810c236374624ce5d04c6d1"><td class="memItemLeft"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7ac40b0fd810c236374624ce5d04c6d1">out</a></td></tr>
+<tr class="memdesc:a7ac40b0fd810c236374624ce5d04c6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La FIFO de sortie des données démodulées.  <br /></td></tr>
+<tr class="memitem:a830eda648e8d962ae06c3a8cfdfc4ddc" id="r_a830eda648e8d962ae06c3a8cfdfc4ddc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a830eda648e8d962ae06c3a8cfdfc4ddc">raw</a></td></tr>
+<tr class="memdesc:a830eda648e8d962ae06c3a8cfdfc4ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conserver les données démodulées brutes (entiers sans mise à l'échelle).  <br /></td></tr>
+<tr class="memitem:a6441378ffc113893328fb22fbf6754a9" id="r_a6441378ffc113893328fb22fbf6754a9"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a6441378ffc113893328fb22fbf6754a9">stream_channels</a></td></tr>
+<tr class="memdesc:a6441378ffc113893328fb22fbf6754a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un masque indiquant les voies à traiter, -1 pour toutes les voies.  <br /></td></tr>
+<tr class="memitem:a6ebdf5883cb7f7bc56f398e40cab55e9" id="r_a6ebdf5883cb7f7bc56f398e40cab55e9"><td class="memItemLeft">pthread_t&#160;</td><td class="memItemRight"><a class="el" href="#a6ebdf5883cb7f7bc56f398e40cab55e9">thread</a></td></tr>
+<tr class="memdesc:a6ebdf5883cb7f7bc56f398e40cab55e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le thread démarré par LokiModem_start_streaming.  <br /></td></tr>
+<tr class="memitem:a8304b27819945fa7bdbe93b97a0a78dc" id="r_a8304b27819945fa7bdbe93b97a0a78dc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8304b27819945fa7bdbe93b97a0a78dc">simulate</a></td></tr>
+<tr class="memdesc:a8304b27819945fa7bdbe93b97a0a78dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faut-il simuler les capteurs logiciellement ?  <br /></td></tr>
+<tr class="memitem:a936b8b9655011a0bd8c789cd51f456f4" id="r_a936b8b9655011a0bd8c789cd51f456f4"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a936b8b9655011a0bd8c789cd51f456f4">sim_channel</a></td></tr>
+<tr class="memdesc:a936b8b9655011a0bd8c789cd51f456f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le numéro de la voie courante pendant une simulation logicielle des capteurs.  <br /></td></tr>
+<tr class="memitem:a01405300feccb0f2fbeb08c2ced51f58" id="r_a01405300feccb0f2fbeb08c2ced51f58"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a01405300feccb0f2fbeb08c2ced51f58">sim_osc1_phase</a></td></tr>
+<tr class="memdesc:a01405300feccb0f2fbeb08c2ced51f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">La phase courante du déplacement fictif pendant une simulation logicielle des capteurs.  <br /></td></tr>
+<tr class="memitem:a8fdc7370ab410eede4f05a4c619c8599" id="r_a8fdc7370ab410eede4f05a4c619c8599"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8fdc7370ab410eede4f05a4c619c8599">sim_disp_phase</a></td></tr>
+<tr class="memdesc:a8fdc7370ab410eede4f05a4c619c8599"><td class="mdescLeft">&#160;</td><td class="mdescRight">La phase courante correspondant au déplacement réel pendant une simulation logicielle des capteurs.  <br /></td></tr>
+<tr class="memitem:a8c85ba6f240600b896d7b62b41d6c54d" id="r_a8c85ba6f240600b896d7b62b41d6c54d"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a8c85ba6f240600b896d7b62b41d6c54d">clk_frequency</a></td></tr>
+<tr class="memdesc:a8c85ba6f240600b896d7b62b41d6c54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence d'horloge du circuit modem.  <br /></td></tr>
+<tr class="memitem:a5285059c28e92d4ebcd48ed8242918e2" id="r_a5285059c28e92d4ebcd48ed8242918e2"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a5285059c28e92d4ebcd48ed8242918e2">mod_sample_frequency_ref</a></td></tr>
+<tr class="memdesc:a5285059c28e92d4ebcd48ed8242918e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence d'échantillonnage de référence en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:af9ca150a8527d58bd876489b58a3bc5b" id="r_af9ca150a8527d58bd876489b58a3bc5b"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#af9ca150a8527d58bd876489b58a3bc5b">mod_cycles_per_sample_max</a></td></tr>
+<tr class="memdesc:af9ca150a8527d58bd876489b58a3bc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre maximal de périodes d'horloge par échantillon en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a66e2d337f49a90f6a338c4838c421cf8" id="r_a66e2d337f49a90f6a338c4838c421cf8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a66e2d337f49a90f6a338c4838c421cf8">mod_cycles_per_sample_ref</a></td></tr>
+<tr class="memdesc:a66e2d337f49a90f6a338c4838c421cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de périodes d'horloge de référence par échantillon en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a62e07bbea25151c18a05287b3e580ea8" id="r_a62e07bbea25151c18a05287b3e580ea8"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a62e07bbea25151c18a05287b3e580ea8">mod_osc1_wave_frequency_min</a></td></tr>
+<tr class="memdesc:a62e07bbea25151c18a05287b3e580ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence minimale du premier oscillateur du modulateur pour la fréquence d'échantillonnage de référence, en Hz.  <br /></td></tr>
+<tr class="memitem:a132b981bb473bb0c4463e57fa38da3a2" id="r_a132b981bb473bb0c4463e57fa38da3a2"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a132b981bb473bb0c4463e57fa38da3a2">mod_osc2_wave_frequency_min</a></td></tr>
+<tr class="memdesc:a132b981bb473bb0c4463e57fa38da3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence minimale du second oscillateur du modulateur pour la fréquence d'échantillonnage de référence, en Hz.  <br /></td></tr>
+<tr class="memitem:aaecb28095a48e7d7616462e0f2e63a8b" id="r_aaecb28095a48e7d7616462e0f2e63a8b"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aaecb28095a48e7d7616462e0f2e63a8b">mod_gain_integer_width</a></td></tr>
+<tr class="memdesc:aaecb28095a48e7d7616462e0f2e63a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie entière de l'amplitude de sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a03b7b50769eb99dc37b78c775c81ed5b" id="r_a03b7b50769eb99dc37b78c775c81ed5b"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a03b7b50769eb99dc37b78c775c81ed5b">mod_gain_fractional_width</a></td></tr>
+<tr class="memdesc:a03b7b50769eb99dc37b78c775c81ed5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie fractionnaire de l'amplitude de sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a3a49c14c17434da4b6a7799d4a440a0a" id="r_a3a49c14c17434da4b6a7799d4a440a0a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a3a49c14c17434da4b6a7799d4a440a0a">mod_gain_res</a></td></tr>
+<tr class="memdesc:a3a49c14c17434da4b6a7799d4a440a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La résolution du réglage d'amplitude en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a8ec0e31b992f973a03b56268cfee72d9" id="r_a8ec0e31b992f973a03b56268cfee72d9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a8ec0e31b992f973a03b56268cfee72d9">mod_phase_amplitude_max</a></td></tr>
+<tr class="memdesc:a8ec0e31b992f973a03b56268cfee72d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'amplitude maximale de sortie du modulateur, en mA.  <br /></td></tr>
+<tr class="memitem:aadf77dab8c2bce9bd10735c7c81a3194" id="r_aadf77dab8c2bce9bd10735c7c81a3194"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aadf77dab8c2bce9bd10735c7c81a3194">mod_phase_integer_width</a></td></tr>
+<tr class="memdesc:aadf77dab8c2bce9bd10735c7c81a3194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie entière de la valeur de sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:aef64d7f592dac273f3f95e0f4278ff6e" id="r_aef64d7f592dac273f3f95e0f4278ff6e"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aef64d7f592dac273f3f95e0f4278ff6e">mod_phase_fractional_width</a></td></tr>
+<tr class="memdesc:aef64d7f592dac273f3f95e0f4278ff6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie fractionnaire de la valeur de sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a65c3b44073a7d26e7f51f72ad3f3905d" id="r_a65c3b44073a7d26e7f51f72ad3f3905d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a65c3b44073a7d26e7f51f72ad3f3905d">mod_offset_res</a></td></tr>
+<tr class="memdesc:a65c3b44073a7d26e7f51f72ad3f3905d"><td class="mdescLeft">&#160;</td><td class="mdescRight">La résolution du réglage d'offset en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:ad8bc6f04aca1d7dd20952044e5f02ac5" id="r_ad8bc6f04aca1d7dd20952044e5f02ac5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad8bc6f04aca1d7dd20952044e5f02ac5">mod_dc_value_max</a></td></tr>
+<tr class="memdesc:ad8bc6f04aca1d7dd20952044e5f02ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le courant moyen maximal applicable en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a7156b14c912c713f4951fc9b84794312" id="r_a7156b14c912c713f4951fc9b84794312"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a7156b14c912c713f4951fc9b84794312">mod_dc_value_width</a></td></tr>
+<tr class="memdesc:a7156b14c912c713f4951fc9b84794312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits pour représenter le courant moyen en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a859375ddb31cc497c1ef695da2669f5c" id="r_a859375ddb31cc497c1ef695da2669f5c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a859375ddb31cc497c1ef695da2669f5c">mod_dc_value_res</a></td></tr>
+<tr class="memdesc:a859375ddb31cc497c1ef695da2669f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">La résolution du réglage du courant moyen en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a5754b9847c2675b63f4fdb3191b50237" id="r_a5754b9847c2675b63f4fdb3191b50237"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a5754b9847c2675b63f4fdb3191b50237">mod_pga_gain_width</a></td></tr>
+<tr class="memdesc:a5754b9847c2675b63f4fdb3191b50237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits pour représenter le gain de l'amplificateur de sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a26e3a83462ce6413eee54cb0019f0325" id="r_a26e3a83462ce6413eee54cb0019f0325"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a26e3a83462ce6413eee54cb0019f0325">mod_pga_gain_max</a></td></tr>
+<tr class="memdesc:a26e3a83462ce6413eee54cb0019f0325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le gain maximal de l'amplificateur en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:a46cf054254a35cf9e9a8b0adfb39810b" id="r_a46cf054254a35cf9e9a8b0adfb39810b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a46cf054254a35cf9e9a8b0adfb39810b">demod_mixerless</a></td></tr>
+<tr class="memdesc:a46cf054254a35cf9e9a8b0adfb39810b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le démodulateur fonctionne-t-il par décimation ?  <br /></td></tr>
+<tr class="memitem:a42b99594788f2b76357ec2352f8a15ae" id="r_a42b99594788f2b76357ec2352f8a15ae"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a42b99594788f2b76357ec2352f8a15ae">demod_channels</a></td></tr>
+<tr class="memdesc:a42b99594788f2b76357ec2352f8a15ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de voies d'entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:a1669b788ca1d62d20c25cf04b210d4e5" id="r_a1669b788ca1d62d20c25cf04b210d4e5"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a1669b788ca1d62d20c25cf04b210d4e5">demod_channel_output_width</a></td></tr>
+<tr class="memdesc:a1669b788ca1d62d20c25cf04b210d4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits pour représenter le numéro de voie dans un échantillon brut produit par le démodulateur.  <br /></td></tr>
+<tr class="memitem:a81a29155b727d029adae1881b461e57a" id="r_a81a29155b727d029adae1881b461e57a"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a81a29155b727d029adae1881b461e57a">demod_channel_mask</a></td></tr>
+<tr class="memdesc:a81a29155b727d029adae1881b461e57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le masque binaire pour lire le numéro de voie dans un échantillon démodulé.  <br /></td></tr>
+<tr class="memitem:a1683df555988bcd3c07aa848dc23dcd3" id="r_a1683df555988bcd3c07aa848dc23dcd3"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a1683df555988bcd3c07aa848dc23dcd3">demod_power_integer_width</a></td></tr>
+<tr class="memdesc:a1683df555988bcd3c07aa848dc23dcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie entière des échantillons en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:ade847efd4cd09416e7e2af12e3f172a7" id="r_ade847efd4cd09416e7e2af12e3f172a7"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ade847efd4cd09416e7e2af12e3f172a7">demod_power_fractional_width</a></td></tr>
+<tr class="memdesc:ade847efd4cd09416e7e2af12e3f172a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie fractionnaire des échantillons en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:a1967c90ace20e4b5cfcf0b26c8ac9874" id="r_a1967c90ace20e4b5cfcf0b26c8ac9874"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1967c90ace20e4b5cfcf0b26c8ac9874">demod_power_max</a></td></tr>
+<tr class="memdesc:a1967c90ace20e4b5cfcf0b26c8ac9874"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur maximale des échantillons en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:a6cbf7ee6c94a273cce43345834c1d289" id="r_a6cbf7ee6c94a273cce43345834c1d289"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a6cbf7ee6c94a273cce43345834c1d289">demod_sample_frequency_ref</a></td></tr>
+<tr class="memdesc:a6cbf7ee6c94a273cce43345834c1d289"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence d'échantillonnage de référence en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:af106b51bf8658b1774792533d3ef9bfc" id="r_af106b51bf8658b1774792533d3ef9bfc"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#af106b51bf8658b1774792533d3ef9bfc">demod_cycles_per_sample_max</a></td></tr>
+<tr class="memdesc:af106b51bf8658b1774792533d3ef9bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre maximal de périodes d'horloge par échantillon en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:a0861daa5fdafd18e46fc3db8656268ab" id="r_a0861daa5fdafd18e46fc3db8656268ab"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0861daa5fdafd18e46fc3db8656268ab">demod_cycles_per_sample_ref</a></td></tr>
+<tr class="memdesc:a0861daa5fdafd18e46fc3db8656268ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de périodes d'horloge de référence par échantillon en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:adbebc3cfcbbd7f1e90fbc087d73709b1" id="r_adbebc3cfcbbd7f1e90fbc087d73709b1"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#adbebc3cfcbbd7f1e90fbc087d73709b1">demod_osc_wave_frequency_min</a></td></tr>
+<tr class="memdesc:adbebc3cfcbbd7f1e90fbc087d73709b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence minimale de l'oscillateur du démodulateur pour la fréquence d'échantillonnage de référence, en Hz.  <br /></td></tr>
+<tr class="memitem:ac9f1fe2d1563a2b85b5f399001d66f61" id="r_ac9f1fe2d1563a2b85b5f399001d66f61"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ac9f1fe2d1563a2b85b5f399001d66f61">demod_fir1_decimation</a></td></tr>
+<tr class="memdesc:ac9f1fe2d1563a2b85b5f399001d66f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le facteur de décimation du premier étage de filtrage dans le démodulateur.  <br /></td></tr>
+<tr class="memitem:af2433940a4569da79817b24303d5c4ac" id="r_af2433940a4569da79817b24303d5c4ac"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#af2433940a4569da79817b24303d5c4ac">demod_fir1_length</a></td></tr>
+<tr class="memdesc:af2433940a4569da79817b24303d5c4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de coefficients du premier étage de filtrage dans le démodulateur.  <br /></td></tr>
+<tr class="memitem:a4b898cc31c707fd9867dc3b6c1b3d07f" id="r_a4b898cc31c707fd9867dc3b6c1b3d07f"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4b898cc31c707fd9867dc3b6c1b3d07f">demod_fir2_decimation</a></td></tr>
+<tr class="memdesc:a4b898cc31c707fd9867dc3b6c1b3d07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le facteur de décimation du second étage de filtrage dans le démodulateur.  <br /></td></tr>
+<tr class="memitem:abec3e3e4c27e6c9afd620f71c5a7a999" id="r_abec3e3e4c27e6c9afd620f71c5a7a999"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#abec3e3e4c27e6c9afd620f71c5a7a999">demod_fir2_length</a></td></tr>
+<tr class="memdesc:abec3e3e4c27e6c9afd620f71c5a7a999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de coefficients du second étage de filtrage dans le démodulateur.  <br /></td></tr>
+<tr class="memitem:adbdd3ce866a392159bf2a3e7b1ed3697" id="r_adbdd3ce866a392159bf2a3e7b1ed3697"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#adbdd3ce866a392159bf2a3e7b1ed3697">demod_fir2_bandwidth</a></td></tr>
+<tr class="memdesc:adbdd3ce866a392159bf2a3e7b1ed3697"><td class="mdescLeft">&#160;</td><td class="mdescRight">La bande passante de sortie du second étage de filtrage dans le démodulateur.  <br /></td></tr>
+<tr class="memitem:a3b3b6642c8399c55315ab2818729c81c" id="r_a3b3b6642c8399c55315ab2818729c81c"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a3b3b6642c8399c55315ab2818729c81c">demod_xy_integer_width</a></td></tr>
+<tr class="memdesc:a3b3b6642c8399c55315ab2818729c81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie entière des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé.  <br /></td></tr>
+<tr class="memitem:a0f5d473e029e1e4593ae2056d6a1c722" id="r_a0f5d473e029e1e4593ae2056d6a1c722"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a0f5d473e029e1e4593ae2056d6a1c722">demod_xy_fractional_width</a></td></tr>
+<tr class="memdesc:a0f5d473e029e1e4593ae2056d6a1c722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de bits de la partie fractionnaire des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé.  <br /></td></tr>
+<tr class="memitem:a4ae8eee8c480f933d9f297ed2205913a" id="r_a4ae8eee8c480f933d9f297ed2205913a"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4ae8eee8c480f933d9f297ed2205913a">demod_xy_width</a></td></tr>
+<tr class="memdesc:a4ae8eee8c480f933d9f297ed2205913a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre total de bits d'un échantillon de chaque composante X (I) ou Y (Q) du signal démodulé.  <br /></td></tr>
+<tr class="memitem:af8aed7faabc1d46b4fc04790b3204a6c" id="r_af8aed7faabc1d46b4fc04790b3204a6c"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#af8aed7faabc1d46b4fc04790b3204a6c">demod_xy_mask</a></td></tr>
+<tr class="memdesc:af8aed7faabc1d46b4fc04790b3204a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le masque binaire pour lire une composante X (I) ou Y (Q) d'un échantillon du signal démodulé.  <br /></td></tr>
+<tr class="memitem:a2f41fc3a5e0923e415777381e1c23ce0" id="r_a2f41fc3a5e0923e415777381e1c23ce0"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a2f41fc3a5e0923e415777381e1c23ce0">demod_xy_sign_mask</a></td></tr>
+<tr class="memdesc:a2f41fc3a5e0923e415777381e1c23ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le masque binaire pour lire le bit de signe d'une composante X (I) ou Y (Q) d'un échantillon du signal démodulé.  <br /></td></tr>
+<tr class="memitem:ad345196b85b0a6b09f31ebc3a0fde052" id="r_ad345196b85b0a6b09f31ebc3a0fde052"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ad345196b85b0a6b09f31ebc3a0fde052">demod_xy_max</a></td></tr>
+<tr class="memdesc:ad345196b85b0a6b09f31ebc3a0fde052"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur maximale d'un échantillon pour une composante X (I) ou Y (Q) du signal démodulé.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représentation des périphériques modulateur et démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00023">23</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="a8c85ba6f240600b896d7b62b41d6c54d" name="a8c85ba6f240600b896d7b62b41d6c54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c85ba6f240600b896d7b62b41d6c54d">&#9670;&#160;</a></span>clk_frequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::clk_frequency</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence d'horloge du circuit modem. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00047">47</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a81a29155b727d029adae1881b461e57a" name="a81a29155b727d029adae1881b461e57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a29155b727d029adae1881b461e57a">&#9670;&#160;</a></span>demod_channel_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_channel_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le masque binaire pour lire le numéro de voie dans un échantillon démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00089">89</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a1669b788ca1d62d20c25cf04b210d4e5" name="a1669b788ca1d62d20c25cf04b210d4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1669b788ca1d62d20c25cf04b210d4e5">&#9670;&#160;</a></span>demod_channel_output_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_channel_output_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits pour représenter le numéro de voie dans un échantillon brut produit par le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00087">87</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a42b99594788f2b76357ec2352f8a15ae" name="a42b99594788f2b76357ec2352f8a15ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b99594788f2b76357ec2352f8a15ae">&#9670;&#160;</a></span>demod_channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de voies d'entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00085">85</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="af106b51bf8658b1774792533d3ef9bfc" name="af106b51bf8658b1774792533d3ef9bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af106b51bf8658b1774792533d3ef9bfc">&#9670;&#160;</a></span>demod_cycles_per_sample_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_cycles_per_sample_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre maximal de périodes d'horloge par échantillon en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00099">99</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a0861daa5fdafd18e46fc3db8656268ab" name="a0861daa5fdafd18e46fc3db8656268ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0861daa5fdafd18e46fc3db8656268ab">&#9670;&#160;</a></span>demod_cycles_per_sample_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::demod_cycles_per_sample_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de périodes d'horloge de référence par échantillon en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00101">101</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="ac9f1fe2d1563a2b85b5f399001d66f61" name="ac9f1fe2d1563a2b85b5f399001d66f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f1fe2d1563a2b85b5f399001d66f61">&#9670;&#160;</a></span>demod_fir1_decimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_fir1_decimation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le facteur de décimation du premier étage de filtrage dans le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00105">105</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="af2433940a4569da79817b24303d5c4ac" name="af2433940a4569da79817b24303d5c4ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2433940a4569da79817b24303d5c4ac">&#9670;&#160;</a></span>demod_fir1_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_fir1_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de coefficients du premier étage de filtrage dans le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00107">107</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="adbdd3ce866a392159bf2a3e7b1ed3697" name="adbdd3ce866a392159bf2a3e7b1ed3697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdd3ce866a392159bf2a3e7b1ed3697">&#9670;&#160;</a></span>demod_fir2_bandwidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_fir2_bandwidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La bande passante de sortie du second étage de filtrage dans le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00113">113</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a4b898cc31c707fd9867dc3b6c1b3d07f" name="a4b898cc31c707fd9867dc3b6c1b3d07f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b898cc31c707fd9867dc3b6c1b3d07f">&#9670;&#160;</a></span>demod_fir2_decimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_fir2_decimation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le facteur de décimation du second étage de filtrage dans le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00109">109</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="abec3e3e4c27e6c9afd620f71c5a7a999" name="abec3e3e4c27e6c9afd620f71c5a7a999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec3e3e4c27e6c9afd620f71c5a7a999">&#9670;&#160;</a></span>demod_fir2_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_fir2_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de coefficients du second étage de filtrage dans le démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00111">111</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a46cf054254a35cf9e9a8b0adfb39810b" name="a46cf054254a35cf9e9a8b0adfb39810b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46cf054254a35cf9e9a8b0adfb39810b">&#9670;&#160;</a></span>demod_mixerless</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiModem::demod_mixerless</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le démodulateur fonctionne-t-il par décimation ? </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00083">83</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="adbebc3cfcbbd7f1e90fbc087d73709b1" name="adbebc3cfcbbd7f1e90fbc087d73709b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbebc3cfcbbd7f1e90fbc087d73709b1">&#9670;&#160;</a></span>demod_osc_wave_frequency_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_osc_wave_frequency_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence minimale de l'oscillateur du démodulateur pour la fréquence d'échantillonnage de référence, en Hz. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00103">103</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="ade847efd4cd09416e7e2af12e3f172a7" name="ade847efd4cd09416e7e2af12e3f172a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade847efd4cd09416e7e2af12e3f172a7">&#9670;&#160;</a></span>demod_power_fractional_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_power_fractional_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie fractionnaire des échantillons en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00093">93</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a1683df555988bcd3c07aa848dc23dcd3" name="a1683df555988bcd3c07aa848dc23dcd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1683df555988bcd3c07aa848dc23dcd3">&#9670;&#160;</a></span>demod_power_integer_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_power_integer_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie entière des échantillons en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00091">91</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a1967c90ace20e4b5cfcf0b26c8ac9874" name="a1967c90ace20e4b5cfcf0b26c8ac9874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1967c90ace20e4b5cfcf0b26c8ac9874">&#9670;&#160;</a></span>demod_power_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::demod_power_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La valeur maximale des échantillons en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00095">95</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a6cbf7ee6c94a273cce43345834c1d289" name="a6cbf7ee6c94a273cce43345834c1d289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbf7ee6c94a273cce43345834c1d289">&#9670;&#160;</a></span>demod_sample_frequency_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_sample_frequency_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence d'échantillonnage de référence en entrée du démodulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00097">97</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a0f5d473e029e1e4593ae2056d6a1c722" name="a0f5d473e029e1e4593ae2056d6a1c722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5d473e029e1e4593ae2056d6a1c722">&#9670;&#160;</a></span>demod_xy_fractional_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_xy_fractional_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie fractionnaire des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00117">117</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a3b3b6642c8399c55315ab2818729c81c" name="a3b3b6642c8399c55315ab2818729c81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3b6642c8399c55315ab2818729c81c">&#9670;&#160;</a></span>demod_xy_integer_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_xy_integer_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie entière des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00115">115</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="af8aed7faabc1d46b4fc04790b3204a6c" name="af8aed7faabc1d46b4fc04790b3204a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8aed7faabc1d46b4fc04790b3204a6c">&#9670;&#160;</a></span>demod_xy_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_xy_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le masque binaire pour lire une composante X (I) ou Y (Q) d'un échantillon du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00121">121</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="ad345196b85b0a6b09f31ebc3a0fde052" name="ad345196b85b0a6b09f31ebc3a0fde052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad345196b85b0a6b09f31ebc3a0fde052">&#9670;&#160;</a></span>demod_xy_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::demod_xy_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La valeur maximale d'un échantillon pour une composante X (I) ou Y (Q) du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00125">125</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a2f41fc3a5e0923e415777381e1c23ce0" name="a2f41fc3a5e0923e415777381e1c23ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f41fc3a5e0923e415777381e1c23ce0">&#9670;&#160;</a></span>demod_xy_sign_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_xy_sign_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le masque binaire pour lire le bit de signe d'une composante X (I) ou Y (Q) d'un échantillon du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00123">123</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a4ae8eee8c480f933d9f297ed2205913a" name="a4ae8eee8c480f933d9f297ed2205913a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae8eee8c480f933d9f297ed2205913a">&#9670;&#160;</a></span>demod_xy_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::demod_xy_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre total de bits d'un échantillon de chaque composante X (I) ou Y (Q) du signal démodulé. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00119">119</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a9ec03b6c1b70c560d85fe273a6f496b9" name="a9ec03b6c1b70c560d85fe273a6f496b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec03b6c1b70c560d85fe273a6f496b9">&#9670;&#160;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* LokiModem::file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le fichier représentant le périphérique qui gère le modem. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00025">25</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a33e0848e406aa834cb6608806fe7c5f2" name="a33e0848e406aa834cb6608806fe7c5f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e0848e406aa834cb6608806fe7c5f2">&#9670;&#160;</a></span>fileno</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiModem::fileno</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le numéro du fichier représentant le périphérique qui gère le modem. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00027">27</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="af9ca150a8527d58bd876489b58a3bc5b" name="af9ca150a8527d58bd876489b58a3bc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ca150a8527d58bd876489b58a3bc5b">&#9670;&#160;</a></span>mod_cycles_per_sample_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_cycles_per_sample_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre maximal de périodes d'horloge par échantillon en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00051">51</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a66e2d337f49a90f6a338c4838c421cf8" name="a66e2d337f49a90f6a338c4838c421cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e2d337f49a90f6a338c4838c421cf8">&#9670;&#160;</a></span>mod_cycles_per_sample_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_cycles_per_sample_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de périodes d'horloge de référence par échantillon en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00053">53</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="ad8bc6f04aca1d7dd20952044e5f02ac5" name="ad8bc6f04aca1d7dd20952044e5f02ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bc6f04aca1d7dd20952044e5f02ac5">&#9670;&#160;</a></span>mod_dc_value_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_dc_value_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le courant moyen maximal applicable en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00073">73</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a859375ddb31cc497c1ef695da2669f5c" name="a859375ddb31cc497c1ef695da2669f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859375ddb31cc497c1ef695da2669f5c">&#9670;&#160;</a></span>mod_dc_value_res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_dc_value_res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La résolution du réglage du courant moyen en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00077">77</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a7156b14c912c713f4951fc9b84794312" name="a7156b14c912c713f4951fc9b84794312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7156b14c912c713f4951fc9b84794312">&#9670;&#160;</a></span>mod_dc_value_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_dc_value_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits pour représenter le courant moyen en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00075">75</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a03b7b50769eb99dc37b78c775c81ed5b" name="a03b7b50769eb99dc37b78c775c81ed5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b7b50769eb99dc37b78c775c81ed5b">&#9670;&#160;</a></span>mod_gain_fractional_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_gain_fractional_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie fractionnaire de l'amplitude de sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00061">61</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="aaecb28095a48e7d7616462e0f2e63a8b" name="aaecb28095a48e7d7616462e0f2e63a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecb28095a48e7d7616462e0f2e63a8b">&#9670;&#160;</a></span>mod_gain_integer_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_gain_integer_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie entière de l'amplitude de sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00059">59</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a3a49c14c17434da4b6a7799d4a440a0a" name="a3a49c14c17434da4b6a7799d4a440a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a49c14c17434da4b6a7799d4a440a0a">&#9670;&#160;</a></span>mod_gain_res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_gain_res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La résolution du réglage d'amplitude en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00063">63</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a65c3b44073a7d26e7f51f72ad3f3905d" name="a65c3b44073a7d26e7f51f72ad3f3905d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c3b44073a7d26e7f51f72ad3f3905d">&#9670;&#160;</a></span>mod_offset_res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_offset_res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La résolution du réglage d'offset en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00071">71</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a62e07bbea25151c18a05287b3e580ea8" name="a62e07bbea25151c18a05287b3e580ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e07bbea25151c18a05287b3e580ea8">&#9670;&#160;</a></span>mod_osc1_wave_frequency_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_osc1_wave_frequency_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence minimale du premier oscillateur du modulateur pour la fréquence d'échantillonnage de référence, en Hz. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00055">55</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a132b981bb473bb0c4463e57fa38da3a2" name="a132b981bb473bb0c4463e57fa38da3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132b981bb473bb0c4463e57fa38da3a2">&#9670;&#160;</a></span>mod_osc2_wave_frequency_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_osc2_wave_frequency_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence minimale du second oscillateur du modulateur pour la fréquence d'échantillonnage de référence, en Hz. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00057">57</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a26e3a83462ce6413eee54cb0019f0325" name="a26e3a83462ce6413eee54cb0019f0325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e3a83462ce6413eee54cb0019f0325">&#9670;&#160;</a></span>mod_pga_gain_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_pga_gain_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le gain maximal de l'amplificateur en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00081">81</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a5754b9847c2675b63f4fdb3191b50237" name="a5754b9847c2675b63f4fdb3191b50237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5754b9847c2675b63f4fdb3191b50237">&#9670;&#160;</a></span>mod_pga_gain_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_pga_gain_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits pour représenter le gain de l'amplificateur de sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00079">79</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a8ec0e31b992f973a03b56268cfee72d9" name="a8ec0e31b992f973a03b56268cfee72d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec0e31b992f973a03b56268cfee72d9">&#9670;&#160;</a></span>mod_phase_amplitude_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::mod_phase_amplitude_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>L'amplitude maximale de sortie du modulateur, en mA. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00065">65</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="aef64d7f592dac273f3f95e0f4278ff6e" name="aef64d7f592dac273f3f95e0f4278ff6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef64d7f592dac273f3f95e0f4278ff6e">&#9670;&#160;</a></span>mod_phase_fractional_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_phase_fractional_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie fractionnaire de la valeur de sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00069">69</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="aadf77dab8c2bce9bd10735c7c81a3194" name="aadf77dab8c2bce9bd10735c7c81a3194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf77dab8c2bce9bd10735c7c81a3194">&#9670;&#160;</a></span>mod_phase_integer_width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_phase_integer_width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de bits de la partie entière de la valeur de sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00067">67</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a5285059c28e92d4ebcd48ed8242918e2" name="a5285059c28e92d4ebcd48ed8242918e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5285059c28e92d4ebcd48ed8242918e2">&#9670;&#160;</a></span>mod_sample_frequency_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::mod_sample_frequency_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence d'échantillonnage de référence en sortie du modulateur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00049">49</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a7ac40b0fd810c236374624ce5d04c6d1" name="a7ac40b0fd810c236374624ce5d04c6d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac40b0fd810c236374624ce5d04c6d1">&#9670;&#160;</a></span>out</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFO.html">LokiFIFO</a>* LokiModem::out</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La FIFO de sortie des données démodulées. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00031">31</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a830eda648e8d962ae06c3a8cfdfc4ddc" name="a830eda648e8d962ae06c3a8cfdfc4ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830eda648e8d962ae06c3a8cfdfc4ddc">&#9670;&#160;</a></span>raw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiModem::raw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Conserver les données démodulées brutes (entiers sans mise à l'échelle). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00033">33</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a936b8b9655011a0bd8c789cd51f456f4" name="a936b8b9655011a0bd8c789cd51f456f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936b8b9655011a0bd8c789cd51f456f4">&#9670;&#160;</a></span>sim_channel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiModem::sim_channel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le numéro de la voie courante pendant une simulation logicielle des capteurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00041">41</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a8fdc7370ab410eede4f05a4c619c8599" name="a8fdc7370ab410eede4f05a4c619c8599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fdc7370ab410eede4f05a4c619c8599">&#9670;&#160;</a></span>sim_disp_phase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::sim_disp_phase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La phase courante correspondant au déplacement réel pendant une simulation logicielle des capteurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00045">45</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a01405300feccb0f2fbeb08c2ced51f58" name="a01405300feccb0f2fbeb08c2ced51f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01405300feccb0f2fbeb08c2ced51f58">&#9670;&#160;</a></span>sim_osc1_phase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiModem::sim_osc1_phase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La phase courante du déplacement fictif pendant une simulation logicielle des capteurs. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00043">43</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a8304b27819945fa7bdbe93b97a0a78dc" name="a8304b27819945fa7bdbe93b97a0a78dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8304b27819945fa7bdbe93b97a0a78dc">&#9670;&#160;</a></span>simulate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiModem::simulate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faut-il simuler les capteurs logiciellement ? </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00039">39</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="af16cb116b1081bc7d5c89ee0662f82a6" name="af16cb116b1081bc7d5c89ee0662f82a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af16cb116b1081bc7d5c89ee0662f82a6">&#9670;&#160;</a></span>stop_request</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool LokiModem::stop_request</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicateur de demande d'arrêt d'acquisition. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00029">29</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a6441378ffc113893328fb22fbf6754a9" name="a6441378ffc113893328fb22fbf6754a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6441378ffc113893328fb22fbf6754a9">&#9670;&#160;</a></span>stream_channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t LokiModem::stream_channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un masque indiquant les voies à traiter, -1 pour toutes les voies. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00035">35</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="a6ebdf5883cb7f7bc56f398e40cab55e9" name="a6ebdf5883cb7f7bc56f398e40cab55e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebdf5883cb7f7bc56f398e40cab55e9">&#9670;&#160;</a></span>thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t LokiModem::thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le thread démarré par LokiModem_start_streaming. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00037">37</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

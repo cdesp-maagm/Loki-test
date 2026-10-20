@@ -1,0 +1,943 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Index des sujets}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sujets}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Index des structures de données}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Structures de données}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index des fichiers}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Liste des fichiers}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Documentation des sujets}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Définitions communes }{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Description détaillée}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Support de structures de données avec polymorphisme. }{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Description détaillée}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Documentation des macros}{9}{subsubsection.4.1.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.1}LokiClass\_attribute}{9}{subsubsubsection.4.1.2.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.2}LokiClass\_class\_name}{10}{subsubsubsection.4.1.2.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.3}LokiClass\_declare\_implementation}{10}{subsubsubsection.4.1.2.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.4}LokiClass\_define\_method}{10}{subsubsubsection.4.1.2.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.5}LokiClass\_function\_name}{11}{subsubsubsection.4.1.2.2.5}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.6}LokiClass\_implementation}{11}{subsubsubsection.4.1.2.2.6}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.7}LokiClass\_interface}{12}{subsubsubsection.4.1.2.2.7}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.8}LokiClass\_interface\_name}{12}{subsubsubsection.4.1.2.2.8}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.9}LokiClass\_method}{12}{subsubsubsection.4.1.2.2.9}%
+\contentsline {subsubsubsection}{\numberline {4.1.2.2.10}LokiClass\_set\_attribute}{13}{subsubsubsection.4.1.2.2.10}%
+\contentsline {subsection}{\numberline {4.1.3}Macros utiles. }{13}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}Description détaillée}{14}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}Documentation des macros}{14}{subsubsection.4.1.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.3.2.1}CAT}{14}{subsubsubsection.4.1.3.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.1.3.2.2}CAT3}{14}{subsubsubsection.4.1.3.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.3.2.3}LEN}{15}{subsubsubsection.4.1.3.2.3}%
+\contentsline {subsection}{\numberline {4.1.4}Instrumentation des fonctions malloc et free }{15}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}Description détaillée}{16}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.4.2}Documentation des fonctions}{16}{subsubsection.4.1.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.1}LokiHooks\_free()}{16}{subsubsubsection.4.1.4.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.2}LokiHooks\_init()}{16}{subsubsubsection.4.1.4.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.3}LokiHooks\_malloc()}{17}{subsubsubsection.4.1.4.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.4}LokiHooks\_restore()}{17}{subsubsubsection.4.1.4.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.5}LokiHooks\_save()}{17}{subsubsubsection.4.1.4.2.5}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.2.6}LokiHooks\_setup()}{17}{subsubsubsection.4.1.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.4.3}Documentation des variables}{18}{subsubsection.4.1.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.3.1}LokiHooks\_saved\_free}{18}{subsubsubsection.4.1.4.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.1.4.3.2}LokiHooks\_saved\_malloc}{18}{subsubsubsection.4.1.4.3.2}%
+\contentsline {subsection}{\numberline {4.1.5}Support des fonctions intrinsics ARM NEON }{18}{subsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.5.1}Description détaillée}{19}{subsubsection.4.1.5.1}%
+\contentsline {subsubsection}{\numberline {4.1.5.2}Documentation des fonctions}{19}{subsubsection.4.1.5.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.1}vadd\_f32()}{19}{subsubsubsection.4.1.5.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.2}vget\_high\_f32()}{20}{subsubsubsection.4.1.5.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.3}vget\_lane\_f32()}{20}{subsubsubsection.4.1.5.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.4}vget\_low\_f32()}{21}{subsubsubsection.4.1.5.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.5}vld1q\_f32()}{21}{subsubsubsection.4.1.5.2.5}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.6}vld1q\_lane\_f32()}{21}{subsubsubsection.4.1.5.2.6}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.7}vmlaq\_f32()}{22}{subsubsubsection.4.1.5.2.7}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.8}vmovq\_n\_f32()}{22}{subsubsubsection.4.1.5.2.8}%
+\contentsline {subsubsubsection}{\numberline {4.1.5.2.9}vmulq\_f32()}{22}{subsubsubsection.4.1.5.2.9}%
+\contentsline {section}{\numberline {4.2}Échange de données entre modules d\textquotesingle {}acquisition, de traitement et d\textquotesingle {}enregistrement }{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Description détaillée}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Exemple de consommateur }{23}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Description détaillée}{24}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Documentation des définitions de type}{25}{subsubsection.4.2.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.2.1}LokiConsumer}{25}{subsubsubsection.4.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Documentation des fonctions}{25}{subsubsection.4.2.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.3.1}LokiConsumer\_del()}{25}{subsubsubsection.4.2.2.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.3.2}LokiConsumer\_new()}{25}{subsubsubsection.4.2.2.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.3.3}LokiConsumer\_start()}{26}{subsubsubsection.4.2.2.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.3.4}LokiConsumer\_stop()}{26}{subsubsubsection.4.2.2.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.2.2.3.5}LokiConsumer\_work()}{27}{subsubsubsection.4.2.2.3.5}%
+\contentsline {subsection}{\numberline {4.2.3}Structure de données FIFO }{27}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Description détaillée}{28}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}Documentation des définitions de type}{28}{subsubsection.4.2.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.2.1}LokiFIFO}{28}{subsubsubsection.4.2.3.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.2.2}LokiFIFORecord}{28}{subsubsubsection.4.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Documentation des fonctions}{29}{subsubsection.4.2.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.1}LokiFIFO\_abort()}{29}{subsubsubsection.4.2.3.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.2}LokiFIFO\_del()}{29}{subsubsubsection.4.2.3.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.3}LokiFIFO\_get\_consumer\_item()}{29}{subsubsubsection.4.2.3.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.4}LokiFIFO\_get\_item\_size()}{30}{subsubsubsection.4.2.3.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.5}LokiFIFO\_get\_producer\_item()}{30}{subsubsubsection.4.2.3.3.5}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.6}LokiFIFO\_new()}{31}{subsubsubsection.4.2.3.3.6}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.7}LokiFIFO\_pull()}{31}{subsubsubsection.4.2.3.3.7}%
+\contentsline {subsubsubsection}{\numberline {4.2.3.3.8}LokiFIFO\_push()}{32}{subsubsubsection.4.2.3.3.8}%
+\contentsline {subsection}{\numberline {4.2.4}Type paquets d\textquotesingle {}échantillons }{32}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}Description détaillée}{32}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}Documentation des fonctions}{33}{subsubsection.4.2.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.4.2.1}LokiPacket\_get\_fifo\_item\_size()}{33}{subsubsubsection.4.2.4.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.4.2.2}LokiPacket\_get\_length()}{33}{subsubsubsection.4.2.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.5}Types et fonctions de gestion du temps }{33}{subsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.5.1}Description détaillée}{34}{subsubsection.4.2.5.1}%
+\contentsline {subsubsection}{\numberline {4.2.5.2}Documentation des macros}{34}{subsubsection.4.2.5.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.2.1}TIMESTAMP\_MS}{34}{subsubsubsection.4.2.5.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.2.2}TIMESTAMP\_SEC}{35}{subsubsubsection.4.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.5.3}Documentation des définitions de type}{35}{subsubsection.4.2.5.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.3.1}LokiTimeDelta}{35}{subsubsubsection.4.2.5.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.3.2}LokiTimestamp}{35}{subsubsubsection.4.2.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.5.4}Documentation des fonctions}{35}{subsubsection.4.2.5.4}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.4.1}LokiTime\_milliseconds()}{35}{subsubsubsection.4.2.5.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.4.2}LokiTime\_seconds()}{36}{subsubsubsection.4.2.5.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.4.3}LokiTime\_to\_timestamp()}{36}{subsubsubsection.4.2.5.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.2.5.4.4}LokiTime\_update()}{36}{subsubsubsection.4.2.5.4.4}%
+\contentsline {section}{\numberline {4.3}Acquisition }{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Description détaillée}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Acquisition de données provenant des capteurs auxiliaires }{37}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Description détaillée}{40}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Documentation des macros}{40}{subsubsection.4.3.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.2.1}USE\_MMAP}{40}{subsubsubsection.4.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Documentation des définitions de type}{40}{subsubsection.4.3.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.3.1}LokiDMASample}{40}{subsubsubsection.4.3.2.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.3.2}LokiEnvSensors}{40}{subsubsubsection.4.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}Documentation des fonctions}{40}{subsubsection.4.3.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.1}LokiEnvSensors\_bmp390\_compensate\_pressure()}{40}{subsubsubsection.4.3.2.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.2}LokiEnvSensors\_bmp390\_compensate\_temperature()}{41}{subsubsubsection.4.3.2.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.3}LokiEnvSensors\_del()}{41}{subsubsubsection.4.3.2.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.4}LokiEnvSensors\_dma\_get\_packet\_time()}{41}{subsubsubsection.4.3.2.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.5}LokiEnvSensors\_dma\_get\_start\_time()}{42}{subsubsubsection.4.3.2.4.5}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.6}LokiEnvSensors\_dma\_is\_streaming()}{42}{subsubsubsection.4.3.2.4.6}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.7}LokiEnvSensors\_dma\_start()}{42}{subsubsubsection.4.3.2.4.7}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.8}LokiEnvSensors\_dma\_stop()}{43}{subsubsubsection.4.3.2.4.8}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.9}LokiEnvSensors\_force\_stop()}{43}{subsubsubsection.4.3.2.4.9}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.10}LokiEnvSensors\_get\_channels()}{43}{subsubsubsection.4.3.2.4.10}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.11}LokiEnvSensors\_get\_clk\_frequency()}{44}{subsubsubsection.4.3.2.4.11}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.12}LokiEnvSensors\_get\_last\_data()}{44}{subsubsubsection.4.3.2.4.12}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.13}LokiEnvSensors\_get\_packet\_index()}{45}{subsubsubsection.4.3.2.4.13}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.14}LokiEnvSensors\_get\_packet\_length()}{45}{subsubsubsection.4.3.2.4.14}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.15}LokiEnvSensors\_get\_packet\_length\_max()}{46}{subsubsubsection.4.3.2.4.15}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.16}LokiEnvSensors\_get\_reg()}{46}{subsubsubsection.4.3.2.4.16}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.17}LokiEnvSensors\_get\_sampling\_frequency()}{47}{subsubsubsection.4.3.2.4.17}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.18}LokiEnvSensors\_get\_scaling\_factor()}{47}{subsubsubsection.4.3.2.4.18}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.19}LokiEnvSensors\_is\_streaming()}{48}{subsubsubsection.4.3.2.4.19}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.20}LokiEnvSensors\_new()}{48}{subsubsubsection.4.3.2.4.20}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.21}LokiEnvSensors\_restart()}{48}{subsubsubsection.4.3.2.4.21}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.22}LokiEnvSensors\_set\_packet\_item()}{49}{subsubsubsection.4.3.2.4.22}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.23}LokiEnvSensors\_set\_reg()}{49}{subsubsubsection.4.3.2.4.23}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.24}LokiEnvSensors\_set\_sampling\_frequency()}{50}{subsubsubsection.4.3.2.4.24}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.25}LokiEnvSensors\_set\_scaling\_factor()}{50}{subsubsubsection.4.3.2.4.25}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.26}LokiEnvSensors\_start\_streaming()}{50}{subsubsubsection.4.3.2.4.26}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.27}LokiEnvSensors\_stop\_streaming()}{51}{subsubsubsection.4.3.2.4.27}%
+\contentsline {subsubsubsection}{\numberline {4.3.2.4.28}LokiEnvSensors\_work()}{51}{subsubsubsection.4.3.2.4.28}%
+\contentsline {subsection}{\numberline {4.3.3}Pilotage des composants modulateur et démodulateur }{52}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Description détaillée}{60}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}Documentation des macros}{60}{subsubsection.4.3.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.1}AD8370\_GAIN\_CODE\_MAX}{60}{subsubsubsection.4.3.3.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.2}AD8370\_GAIN\_CODE\_SIZE}{60}{subsubsubsection.4.3.3.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.3}AD8370\_HIGH\_GAIN\_FACTOR}{60}{subsubsubsection.4.3.3.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.4}AD8370\_HIGH\_GAIN\_MAX}{61}{subsubsubsection.4.3.3.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.5}AD8370\_LOW\_GAIN\_MAX}{61}{subsubsubsection.4.3.3.2.5}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.6}AD8370\_PREGAIN}{61}{subsubsubsection.4.3.3.2.6}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.7}AD8370\_VERNIER}{61}{subsubsubsection.4.3.3.2.7}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.8}SIMULATED\_DISP\_AMPLITUDE}{61}{subsubsubsection.4.3.3.2.8}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.9}SIMULATED\_DISP\_WAVE\_FREQUENCY}{61}{subsubsubsection.4.3.3.2.9}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.10}SIMULATED\_ELLIPSE\_A}{62}{subsubsubsection.4.3.3.2.10}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.11}SIMULATED\_ELLIPSE\_ANGLE}{62}{subsubsubsection.4.3.3.2.11}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.12}SIMULATED\_ELLIPSE\_B}{62}{subsubsubsection.4.3.3.2.12}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.13}SIMULATED\_ELLIPSE\_XC}{62}{subsubsubsection.4.3.3.2.13}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.14}SIMULATED\_ELLIPSE\_YC}{62}{subsubsubsection.4.3.3.2.14}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.2.15}USE\_MMAP}{62}{subsubsubsection.4.3.3.2.15}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}Documentation des définitions de type}{63}{subsubsection.4.3.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.3.1}LokiDMASample}{63}{subsubsubsection.4.3.3.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.3.2}LokiModem}{63}{subsubsubsection.4.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.4}Documentation des fonctions}{63}{subsubsection.4.3.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.1}LokiModem\_del()}{63}{subsubsubsection.4.3.3.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.2}LokiModem\_dma\_get\_dropped\_packets()}{63}{subsubsubsection.4.3.3.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.3}LokiModem\_dma\_get\_packet\_time()}{64}{subsubsubsection.4.3.3.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.4}LokiModem\_dma\_get\_start\_time()}{64}{subsubsubsection.4.3.3.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.5}LokiModem\_dma\_is\_streaming()}{64}{subsubsubsection.4.3.3.4.5}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.6}LokiModem\_dma\_start()}{65}{subsubsubsection.4.3.3.4.6}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.7}LokiModem\_dma\_stop()}{65}{subsubsubsection.4.3.3.4.7}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.8}LokiModem\_force\_stop()}{66}{subsubsubsection.4.3.3.4.8}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.9}LokiModem\_get\_adc\_sample\_count()}{66}{subsubsubsection.4.3.3.4.9}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.10}LokiModem\_get\_clk\_frequency()}{66}{subsubsubsection.4.3.3.4.10}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.11}LokiModem\_get\_dac\_sample\_count()}{67}{subsubsubsection.4.3.3.4.11}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.12}LokiModem\_get\_demod\_adc\_max\_ratio()}{67}{subsubsubsection.4.3.3.4.12}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.13}LokiModem\_get\_demod\_adc\_min\_ratio()}{68}{subsubsubsection.4.3.3.4.13}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.14}LokiModem\_get\_demod\_bandwidth()}{68}{subsubsubsection.4.3.3.4.14}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.15}LokiModem\_get\_demod\_bypass()}{69}{subsubsubsection.4.3.3.4.15}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.16}LokiModem\_get\_demod\_channels()}{69}{subsubsubsection.4.3.3.4.16}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.17}LokiModem\_get\_demod\_decimation()}{70}{subsubsubsection.4.3.3.4.17}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.18}LokiModem\_get\_demod\_delay\_x()}{70}{subsubsubsection.4.3.3.4.18}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.19}LokiModem\_get\_demod\_delay\_x\_max()}{71}{subsubsubsection.4.3.3.4.19}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.20}LokiModem\_get\_demod\_delay\_y()}{71}{subsubsubsection.4.3.3.4.20}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.21}LokiModem\_get\_demod\_delay\_y\_max()}{72}{subsubsubsection.4.3.3.4.21}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.22}LokiModem\_get\_demod\_mixerless()}{72}{subsubsubsection.4.3.3.4.22}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.23}LokiModem\_get\_demod\_osc\_wave\_frequency()}{73}{subsubsubsection.4.3.3.4.23}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.24}LokiModem\_get\_demod\_osc\_wave\_frequency\_max()}{73}{subsubsubsection.4.3.3.4.24}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.25}LokiModem\_get\_demod\_osc\_wave\_frequency\_res()}{73}{subsubsubsection.4.3.3.4.25}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.26}LokiModem\_get\_demod\_packet\_length()}{74}{subsubsubsection.4.3.3.4.26}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.27}LokiModem\_get\_demod\_packet\_length\_max()}{74}{subsubsubsection.4.3.3.4.27}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.28}LokiModem\_get\_demod\_pga\_gain()}{75}{subsubsubsection.4.3.3.4.28}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.29}LokiModem\_get\_demod\_pga\_gain\_max()}{75}{subsubsubsection.4.3.3.4.29}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.30}LokiModem\_get\_demod\_phase\_x()}{76}{subsubsubsection.4.3.3.4.30}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.31}LokiModem\_get\_demod\_phase\_x\_max()}{76}{subsubsubsection.4.3.3.4.31}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.32}LokiModem\_get\_demod\_phase\_x\_res()}{77}{subsubsubsection.4.3.3.4.32}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.33}LokiModem\_get\_demod\_phase\_y()}{77}{subsubsubsection.4.3.3.4.33}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.34}LokiModem\_get\_demod\_phase\_y\_max()}{78}{subsubsubsection.4.3.3.4.34}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.35}LokiModem\_get\_demod\_phase\_y\_res()}{78}{subsubsubsection.4.3.3.4.35}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.36}LokiModem\_get\_demod\_sample\_count()}{79}{subsubsubsection.4.3.3.4.36}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.37}LokiModem\_get\_demod\_sampling\_frequency()}{79}{subsubsubsection.4.3.3.4.37}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.38}LokiModem\_get\_demod\_xy\_sampling\_frequency()}{80}{subsubsubsection.4.3.3.4.38}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.39}LokiModem\_get\_dropped\_packets()}{80}{subsubsubsection.4.3.3.4.39}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.40}LokiModem\_get\_mod\_dc\_value()}{81}{subsubsubsection.4.3.3.4.40}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.41}LokiModem\_get\_mod\_dc\_value\_max()}{81}{subsubsubsection.4.3.3.4.41}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.42}LokiModem\_get\_mod\_dc\_value\_res()}{81}{subsubsubsection.4.3.3.4.42}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.43}LokiModem\_get\_mod\_offset()}{82}{subsubsubsection.4.3.3.4.43}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.44}LokiModem\_get\_mod\_offset\_max()}{82}{subsubsubsection.4.3.3.4.44}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.45}LokiModem\_get\_mod\_offset\_res()}{82}{subsubsubsection.4.3.3.4.45}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.46}LokiModem\_get\_mod\_osc1\_gain()}{83}{subsubsubsection.4.3.3.4.46}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.47}LokiModem\_get\_mod\_osc1\_gain\_max()}{83}{subsubsubsection.4.3.3.4.47}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.48}LokiModem\_get\_mod\_osc1\_gain\_res()}{83}{subsubsubsection.4.3.3.4.48}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.49}LokiModem\_get\_mod\_osc1\_wave\_frequency()}{84}{subsubsubsection.4.3.3.4.49}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.50}LokiModem\_get\_mod\_osc1\_wave\_frequency\_max()}{84}{subsubsubsection.4.3.3.4.50}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.51}LokiModem\_get\_mod\_osc1\_wave\_frequency\_res()}{85}{subsubsubsection.4.3.3.4.51}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.52}LokiModem\_get\_mod\_osc2\_gain()}{85}{subsubsubsection.4.3.3.4.52}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.53}LokiModem\_get\_mod\_osc2\_gain\_max()}{86}{subsubsubsection.4.3.3.4.53}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.54}LokiModem\_get\_mod\_osc2\_gain\_res()}{86}{subsubsubsection.4.3.3.4.54}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.55}LokiModem\_get\_mod\_osc2\_wave\_frequency()}{87}{subsubsubsection.4.3.3.4.55}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.56}LokiModem\_get\_mod\_osc2\_wave\_frequency\_max()}{87}{subsubsubsection.4.3.3.4.56}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.57}LokiModem\_get\_mod\_osc2\_wave\_frequency\_res()}{87}{subsubsubsection.4.3.3.4.57}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.58}LokiModem\_get\_mod\_pga\_gain()}{88}{subsubsubsection.4.3.3.4.58}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.59}LokiModem\_get\_mod\_pga\_gain\_max()}{88}{subsubsubsection.4.3.3.4.59}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.60}LokiModem\_get\_mod\_sampling\_frequency()}{89}{subsubsubsection.4.3.3.4.60}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.61}LokiModem\_get\_packet\_index()}{89}{subsubsubsection.4.3.3.4.61}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.62}LokiModem\_get\_reg()}{90}{subsubsubsection.4.3.3.4.62}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.63}LokiModem\_get\_test\_mode()}{90}{subsubsubsection.4.3.3.4.63}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.64}LokiModem\_is\_streaming()}{91}{subsubsubsection.4.3.3.4.64}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.65}LokiModem\_new()}{91}{subsubsubsection.4.3.3.4.65}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.66}LokiModem\_print\_config()}{91}{subsubsubsection.4.3.3.4.66}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.67}LokiModem\_restart()}{92}{subsubsubsection.4.3.3.4.67}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.68}LokiModem\_scale\_power()}{92}{subsubsubsection.4.3.3.4.68}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.69}LokiModem\_scale\_xy()}{92}{subsubsubsection.4.3.3.4.69}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.70}LokiModem\_set\_demod\_bypass()}{93}{subsubsubsection.4.3.3.4.70}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.71}LokiModem\_set\_demod\_delay\_x()}{93}{subsubsubsection.4.3.3.4.71}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.72}LokiModem\_set\_demod\_delay\_y()}{94}{subsubsubsection.4.3.3.4.72}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.73}LokiModem\_set\_demod\_osc\_wave\_frequency()}{94}{subsubsubsection.4.3.3.4.73}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.74}LokiModem\_set\_demod\_pga\_gain()}{94}{subsubsubsection.4.3.3.4.74}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.75}LokiModem\_set\_demod\_phase\_x()}{95}{subsubsubsection.4.3.3.4.75}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.76}LokiModem\_set\_demod\_phase\_y()}{95}{subsubsubsection.4.3.3.4.76}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.77}LokiModem\_set\_demod\_sampling\_frequency()}{96}{subsubsubsection.4.3.3.4.77}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.78}LokiModem\_set\_demod\_xy\_sampling\_frequency()}{96}{subsubsubsection.4.3.3.4.78}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.79}LokiModem\_set\_mod\_dc\_value()}{97}{subsubsubsection.4.3.3.4.79}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.80}LokiModem\_set\_mod\_offset()}{97}{subsubsubsection.4.3.3.4.80}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.81}LokiModem\_set\_mod\_osc1\_gain()}{97}{subsubsubsection.4.3.3.4.81}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.82}LokiModem\_set\_mod\_osc1\_wave\_frequency()}{98}{subsubsubsection.4.3.3.4.82}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.83}LokiModem\_set\_mod\_osc2\_gain()}{98}{subsubsubsection.4.3.3.4.83}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.84}LokiModem\_set\_mod\_osc2\_wave\_frequency()}{98}{subsubsubsection.4.3.3.4.84}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.85}LokiModem\_set\_mod\_pga\_gain()}{99}{subsubsubsection.4.3.3.4.85}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.86}LokiModem\_set\_mod\_sampling\_frequency()}{99}{subsubsubsection.4.3.3.4.86}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.87}LokiModem\_set\_packet\_item()}{99}{subsubsubsection.4.3.3.4.87}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.88}LokiModem\_set\_reg()}{100}{subsubsubsection.4.3.3.4.88}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.89}LokiModem\_set\_simulated\_item()}{100}{subsubsubsection.4.3.3.4.89}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.90}LokiModem\_set\_test\_mode()}{101}{subsubsubsection.4.3.3.4.90}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.91}LokiModem\_start\_streaming()}{101}{subsubsubsection.4.3.3.4.91}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.92}LokiModem\_stop\_streaming()}{102}{subsubsubsection.4.3.3.4.92}%
+\contentsline {subsubsubsection}{\numberline {4.3.3.4.93}LokiModem\_work()}{102}{subsubsubsection.4.3.3.4.93}%
+\contentsline {section}{\numberline {4.4}Enregistrement et transmission de données }{102}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Description détaillée}{103}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Interface pour la mise en forme de séries temporelles }{103}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Description détaillée}{104}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Documentation des définitions de type}{104}{subsubsection.4.4.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.2.1}LokiFormatter}{104}{subsubsubsection.4.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}Documentation des fonctions}{104}{subsubsection.4.4.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.3.1}LokiFormatter\_close()}{104}{subsubsubsection.4.4.2.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.3.2}LokiFormatter\_del()}{105}{subsubsubsection.4.4.2.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.3.3}LokiFormatter\_new()}{105}{subsubsubsection.4.4.2.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.3.4}LokiFormatter\_new\_with\_implementation()}{106}{subsubsubsection.4.4.2.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.2.3.5}LokiFormatter\_work()}{106}{subsubsubsection.4.4.2.3.5}%
+\contentsline {subsection}{\numberline {4.4.3}Enregistrement de séries temporelles au format mini\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SEED }{107}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Description détaillée}{108}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}Documentation des macros}{109}{subsubsection.4.4.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.2.1}CHANNEL\_NAME\_LEN}{109}{subsubsubsection.4.4.3.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.2.2}MSEED\_FILENAME\_SUFFIX\_LEN}{109}{subsubsubsection.4.4.3.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.2.3}MSEED\_RECLEN}{109}{subsubsubsection.4.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}Documentation des définitions de type}{109}{subsubsection.4.4.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.3.1}LokiMSeed}{109}{subsubsubsection.4.4.3.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.3.2}LokiMSeedConfig}{109}{subsubsubsection.4.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}Documentation des fonctions}{110}{subsubsection.4.4.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.1}LokiMSeed\_close()}{110}{subsubsubsection.4.4.3.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.2}LokiMSeed\_del()}{110}{subsubsubsection.4.4.3.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.3}LokiMSeed\_new()}{110}{subsubsubsection.4.4.3.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.4}LokiMSeed\_work()}{111}{subsubsubsection.4.4.3.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.5}LokiMSeedConfig\_del()}{111}{subsubsubsection.4.4.3.4.5}%
+\contentsline {subsubsubsection}{\numberline {4.4.3.4.6}LokiMSeedConfig\_new()}{112}{subsubsubsection.4.4.3.4.6}%
+\contentsline {subsection}{\numberline {4.4.4}Enregistrement de séries temporelles brutes }{112}{subsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.4.1}Description détaillée}{113}{subsubsection.4.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.4.2}Documentation des définitions de type}{113}{subsubsection.4.4.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.4.2.1}LokiRaw}{113}{subsubsubsection.4.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.4.3}Documentation des fonctions}{114}{subsubsection.4.4.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.4.3.1}LokiRaw\_close()}{114}{subsubsubsection.4.4.4.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.4.3.2}LokiRaw\_del()}{114}{subsubsubsection.4.4.4.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.4.3.3}LokiRaw\_new()}{114}{subsubsubsection.4.4.4.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.4.3.4}LokiRaw\_work()}{115}{subsubsubsection.4.4.4.3.4}%
+\contentsline {subsection}{\numberline {4.4.5}Enregistrement de séries temporelles }{115}{subsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.5.1}Description détaillée}{117}{subsubsection.4.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.4.5.2}Documentation des macros}{117}{subsubsection.4.4.5.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.2.1}FILENAME\_SUFFIX\_DATE\_LEN}{117}{subsubsubsection.4.4.5.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.2.2}FILENAME\_SUFFIX\_LEN}{117}{subsubsubsection.4.4.5.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.2.3}FILENAME\_SUFFIX\_MSEC\_LEN}{117}{subsubsubsection.4.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.5.3}Documentation des définitions de type}{118}{subsubsection.4.4.5.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.3.1}LokiRecorder}{118}{subsubsubsection.4.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.5.4}Documentation des fonctions}{118}{subsubsection.4.4.5.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.1}LokiRecorder\_del()}{118}{subsubsubsection.4.4.5.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.2}LokiRecorder\_get\_channel\_count()}{118}{subsubsubsection.4.4.5.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.3}LokiRecorder\_get\_filename()}{119}{subsubsubsection.4.4.5.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.4}LokiRecorder\_is\_recording()}{119}{subsubsubsection.4.4.5.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.5}LokiRecorder\_new()}{119}{subsubsubsection.4.4.5.4.5}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.6}LokiRecorder\_set\_formatter()}{120}{subsubsubsection.4.4.5.4.6}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.7}LokiRecorder\_signal\_handler()}{121}{subsubsubsection.4.4.5.4.7}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.8}LokiRecorder\_start()}{121}{subsubsubsection.4.4.5.4.8}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.9}LokiRecorder\_stop()}{122}{subsubsubsection.4.4.5.4.9}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.10}LokiRecorder\_wait()}{122}{subsubsubsection.4.4.5.4.10}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.4.11}LokiRecorder\_work()}{122}{subsubsubsection.4.4.5.4.11}%
+\contentsline {subsubsection}{\numberline {4.4.5.5}Documentation des variables}{123}{subsubsection.4.4.5.5}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.5.1}LokiRecorder\_formatter\_impls}{123}{subsubsubsection.4.4.5.5.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.5.2}LokiRecorder\_formatter\_names}{123}{subsubsubsection.4.4.5.5.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.5.5.3}LokiRecorder\_waiting\_instance}{123}{subsubsubsection.4.4.5.5.3}%
+\contentsline {subsection}{\numberline {4.4.6}Serveur de données sur socket Unix }{123}{subsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.6.1}Description détaillée}{124}{subsubsection.4.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.4.6.2}Documentation des macros}{125}{subsubsection.4.4.6.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.2.1}LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}{125}{subsubsubsection.4.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.6.3}Documentation des définitions de type}{125}{subsubsection.4.4.6.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.3.1}LokiSocketServer}{125}{subsubsubsection.4.4.6.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.6.4}Documentation des fonctions}{125}{subsubsection.4.4.6.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.1}LokiSocketServer\_del()}{125}{subsubsubsection.4.4.6.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.2}LokiSocketServer\_is\_streaming()}{125}{subsubsubsection.4.4.6.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.3}LokiSocketServer\_new()}{126}{subsubsubsection.4.4.6.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.4}LokiSocketServer\_receive()}{126}{subsubsubsection.4.4.6.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.5}LokiSocketServer\_serve()}{127}{subsubsubsection.4.4.6.4.5}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.6}LokiSocketServer\_start()}{127}{subsubsubsection.4.4.6.4.6}%
+\contentsline {subsubsubsection}{\numberline {4.4.6.4.7}LokiSocketServer\_stop()}{128}{subsubsubsection.4.4.6.4.7}%
+\contentsline {section}{\numberline {4.5}Calcul de déplacement }{128}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Description détaillée}{129}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Calcul de déplacement }{129}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Description détaillée}{130}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}Documentation des définitions de type}{130}{subsubsection.4.5.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.2.1}LokiDisplacement}{130}{subsubsubsection.4.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}Documentation des fonctions}{130}{subsubsection.4.5.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.1}LokiDisplacement\_clone()}{130}{subsubsubsection.4.5.2.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.2}LokiDisplacement\_del()}{131}{subsubsubsection.4.5.2.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.3}LokiDisplacement\_get\_ellipse()}{131}{subsubsubsection.4.5.2.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.4}LokiDisplacement\_new()}{132}{subsubsubsection.4.5.2.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.5}LokiDisplacement\_reset()}{132}{subsubsubsection.4.5.2.3.5}%
+\contentsline {subsubsubsection}{\numberline {4.5.2.3.6}LokiDisplacement\_work()}{133}{subsubsubsection.4.5.2.3.6}%
+\contentsline {subsection}{\numberline {4.5.3}Interface d\textquotesingle {}un filtre adaptatif pour estimer les paramètres d\textquotesingle {}une ellipse }{133}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}Description détaillée}{134}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}Documentation des définitions de type}{135}{subsubsection.4.5.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.2.1}LokiEllipseEstimator}{135}{subsubsubsection.4.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}Documentation des fonctions}{135}{subsubsection.4.5.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.1}LokiEllipse\_get\_angle()}{135}{subsubsubsection.4.5.3.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.2}LokiEllipse\_get\_coeffs()}{136}{subsubsubsection.4.5.3.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.3}LokiEllipse\_get\_point()}{136}{subsubsubsection.4.5.3.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.4}LokiEllipse\_set\_from\_coeffs()}{136}{subsubsubsection.4.5.3.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.5}LokiEllipseEstimator\_clone()}{137}{subsubsubsection.4.5.3.3.5}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.6}LokiEllipseEstimator\_del()}{137}{subsubsubsection.4.5.3.3.6}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.7}LokiEllipseEstimator\_get\_state()}{138}{subsubsubsection.4.5.3.3.7}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.8}LokiEllipseEstimator\_new()}{138}{subsubsubsection.4.5.3.3.8}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.9}LokiEllipseEstimator\_new\_with\_implementation()}{139}{subsubsubsection.4.5.3.3.9}%
+\contentsline {subsubsubsection}{\numberline {4.5.3.3.10}LokiEllipseEstimator\_work()}{139}{subsubsubsection.4.5.3.3.10}%
+\contentsline {subsection}{\numberline {4.5.4}Représentation et manipulation d\textquotesingle {}ellipses }{139}{subsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {4.5.4.1}Description détaillée}{140}{subsubsection.4.5.4.1}%
+\contentsline {subsubsection}{\numberline {4.5.4.2}Documentation des définitions de type}{140}{subsubsection.4.5.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.4.2.1}LokiEllipseEquation}{140}{subsubsubsection.4.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.4.3}Documentation des fonctions}{141}{subsubsection.4.5.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.4.3.1}LokiEllipse\_get\_angle()}{141}{subsubsubsection.4.5.4.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.4.3.2}LokiEllipse\_get\_coeffs()}{141}{subsubsubsection.4.5.4.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.4.3.3}LokiEllipse\_get\_point()}{142}{subsubsubsection.4.5.4.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.4.3.4}LokiEllipse\_set\_from\_coeffs()}{142}{subsubsubsection.4.5.4.3.4}%
+\contentsline {subsection}{\numberline {4.5.5}Filtre FIR }{142}{subsection.4.5.5}%
+\contentsline {subsubsection}{\numberline {4.5.5.1}Description détaillée}{144}{subsubsection.4.5.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.5.2}Documentation des définitions de type}{144}{subsubsection.4.5.5.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.2.1}LokiFIRFilter}{144}{subsubsubsection.4.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.5.3}Documentation des fonctions}{144}{subsubsection.4.5.5.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.1}bessel0()}{144}{subsubsubsection.4.5.5.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.2}LokiFIRFilter\_allocate\_samples()}{144}{subsubsubsection.4.5.5.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.3}LokiFIRFilter\_clone()}{145}{subsubsubsection.4.5.5.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.4}LokiFIRFilter\_del()}{145}{subsubsubsection.4.5.5.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.5}LokiFIRFilter\_get\_actual\_length()}{145}{subsubsubsection.4.5.5.3.5}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.6}LokiFIRFilter\_new()}{146}{subsubsubsection.4.5.5.3.6}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.7}LokiFIRFilter\_new\_kaiser\_bessel()}{146}{subsubsubsection.4.5.5.3.7}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.8}LokiFIRFilter\_reset()}{147}{subsubsubsection.4.5.5.3.8}%
+\contentsline {subsubsubsection}{\numberline {4.5.5.3.9}LokiFIRFilter\_work()}{147}{subsubsubsection.4.5.5.3.9}%
+\contentsline {subsection}{\numberline {4.5.6}Filtre de Kalman }{148}{subsection.4.5.6}%
+\contentsline {subsubsection}{\numberline {4.5.6.1}Description détaillée}{149}{subsubsection.4.5.6.1}%
+\contentsline {subsubsection}{\numberline {4.5.6.2}Documentation des définitions de type}{149}{subsubsection.4.5.6.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.2.1}LokiKalman}{149}{subsubsubsection.4.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.6.3}Documentation des fonctions}{149}{subsubsection.4.5.6.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.3.1}LokiKalman\_clone()}{149}{subsubsubsection.4.5.6.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.3.2}LokiKalman\_del()}{149}{subsubsubsection.4.5.6.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.3.3}LokiKalman\_get\_state()}{150}{subsubsubsection.4.5.6.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.3.4}LokiKalman\_new()}{150}{subsubsubsection.4.5.6.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.6.3.5}LokiKalman\_work()}{151}{subsubsubsection.4.5.6.3.5}%
+\contentsline {subsection}{\numberline {4.5.7}Filtre NLMS }{151}{subsection.4.5.7}%
+\contentsline {subsubsection}{\numberline {4.5.7.1}Description détaillée}{152}{subsubsection.4.5.7.1}%
+\contentsline {subsubsection}{\numberline {4.5.7.2}Documentation des macros}{152}{subsubsection.4.5.7.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.2.1}NLMS\_NU}{152}{subsubsubsection.4.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.7.3}Documentation des définitions de type}{152}{subsubsection.4.5.7.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.3.1}LokiNLMS}{152}{subsubsubsection.4.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.7.4}Documentation des fonctions}{153}{subsubsection.4.5.7.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.4.1}LokiNLMS\_clone()}{153}{subsubsubsection.4.5.7.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.4.2}LokiNLMS\_del()}{153}{subsubsubsection.4.5.7.4.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.4.3}LokiNLMS\_get\_state()}{153}{subsubsubsection.4.5.7.4.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.4.4}LokiNLMS\_new()}{154}{subsubsubsection.4.5.7.4.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.7.4.5}LokiNLMS\_work()}{154}{subsubsubsection.4.5.7.4.5}%
+\contentsline {subsection}{\numberline {4.5.8}Filtre RLS }{154}{subsection.4.5.8}%
+\contentsline {subsubsection}{\numberline {4.5.8.1}Description détaillée}{155}{subsubsection.4.5.8.1}%
+\contentsline {subsubsection}{\numberline {4.5.8.2}Documentation des définitions de type}{156}{subsubsection.4.5.8.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.2.1}LokiRLS}{156}{subsubsubsection.4.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.8.3}Documentation des fonctions}{156}{subsubsection.4.5.8.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.3.1}LokiRLS\_clone()}{156}{subsubsubsection.4.5.8.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.3.2}LokiRLS\_del()}{156}{subsubsubsection.4.5.8.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.3.3}LokiRLS\_get\_state()}{157}{subsubsubsection.4.5.8.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.3.4}LokiRLS\_new()}{157}{subsubsubsection.4.5.8.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.8.3.5}LokiRLS\_work()}{158}{subsubsubsection.4.5.8.3.5}%
+\contentsline {subsection}{\numberline {4.5.9}Valeurs par défaut des paramètres de calcul de déplacement }{158}{subsection.4.5.9}%
+\contentsline {subsubsection}{\numberline {4.5.9.1}Description détaillée}{159}{subsubsection.4.5.9.1}%
+\contentsline {subsubsection}{\numberline {4.5.9.2}Documentation des macros}{160}{subsubsection.4.5.9.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.1}LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}{160}{subsubsubsection.4.5.9.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.2}LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}{160}{subsubsubsection.4.5.9.2.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.3}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}{160}{subsubsubsection.4.5.9.2.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.4}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}{160}{subsubsubsection.4.5.9.2.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.5}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}{160}{subsubsubsection.4.5.9.2.5}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.6}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}{160}{subsubsubsection.4.5.9.2.6}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.7}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}{161}{subsubsubsection.4.5.9.2.7}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.8}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}{161}{subsubsubsection.4.5.9.2.8}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.9}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}{161}{subsubsubsection.4.5.9.2.9}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.10}LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}{161}{subsubsubsection.4.5.9.2.10}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.11}LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}{161}{subsubsubsection.4.5.9.2.11}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.12}LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}{161}{subsubsubsection.4.5.9.2.12}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.13}LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}{162}{subsubsubsection.4.5.9.2.13}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.14}LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}{162}{subsubsubsection.4.5.9.2.14}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.15}LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}{162}{subsubsubsection.4.5.9.2.15}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.16}LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}{162}{subsubsubsection.4.5.9.2.16}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.17}LOKI\_SYSTEM\_DEFAULT\_SIMULATE}{162}{subsubsubsection.4.5.9.2.17}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.18}LOKI\_SYSTEM\_DEFAULT\_SKIP}{162}{subsubsubsection.4.5.9.2.18}%
+\contentsline {subsubsubsection}{\numberline {4.5.9.2.19}LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}{163}{subsubsubsection.4.5.9.2.19}%
+\contentsline {subsection}{\numberline {4.5.10}Gestion des acquisitions et du calcul de déplacement }{163}{subsection.4.5.10}%
+\contentsline {subsubsection}{\numberline {4.5.10.1}Description détaillée}{167}{subsubsection.4.5.10.1}%
+\contentsline {subsubsection}{\numberline {4.5.10.2}Documentation des définitions de type}{167}{subsubsection.4.5.10.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.2.1}LokiSystem}{167}{subsubsubsection.4.5.10.2.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.2.2}LokiSystemConfig}{167}{subsubsubsection.4.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.10.3}Documentation des fonctions}{167}{subsubsection.4.5.10.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.1}LokiSystem\_del()}{167}{subsubsubsection.4.5.10.3.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.2}LokiSystem\_displacement\_reset()}{168}{subsubsubsection.4.5.10.3.2}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.3}LokiSystem\_get\_config()}{168}{subsubsubsection.4.5.10.3.3}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.4}LokiSystem\_get\_ellipse()}{168}{subsubsubsection.4.5.10.3.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.5}LokiSystem\_get\_modem()}{169}{subsubsubsection.4.5.10.3.5}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.6}LokiSystem\_get\_sampling\_frequency()}{169}{subsubsubsection.4.5.10.3.6}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.7}LokiSystem\_is\_streaming()}{170}{subsubsubsection.4.5.10.3.7}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.8}LokiSystem\_new()}{170}{subsubsubsection.4.5.10.3.8}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.9}LokiSystem\_start\_streaming()}{171}{subsubsubsection.4.5.10.3.9}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.10}LokiSystem\_stop\_streaming()}{171}{subsubsubsection.4.5.10.3.10}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.11}LokiSystem\_work()}{172}{subsubsubsection.4.5.10.3.11}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.12}LokiSystemConfig\_del()}{172}{subsubsubsection.4.5.10.3.12}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.13}LokiSystemConfig\_get\_cavity\_index()}{172}{subsubsubsection.4.5.10.3.13}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.14}LokiSystemConfig\_get\_distance\_unit()}{173}{subsubsubsection.4.5.10.3.14}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.15}LokiSystemConfig\_get\_estimator\_initial\_radius()}{173}{subsubsubsection.4.5.10.3.15}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.16}LokiSystemConfig\_get\_estimator\_name()}{173}{subsubsubsection.4.5.10.3.16}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.17}LokiSystemConfig\_get\_estimator\_params()}{174}{subsubsubsection.4.5.10.3.17}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.18}LokiSystemConfig\_get\_estimator\_params\_length()}{174}{subsubsubsection.4.5.10.3.18}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.19}LokiSystemConfig\_get\_estimator\_throttle()}{174}{subsubsubsection.4.5.10.3.19}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.20}LokiSystemConfig\_get\_filter\_attenuation()}{175}{subsubsubsection.4.5.10.3.20}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.21}LokiSystemConfig\_get\_filter\_bandwidth()}{175}{subsubsubsection.4.5.10.3.21}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.22}LokiSystemConfig\_get\_filter\_decimation()}{175}{subsubsubsection.4.5.10.3.22}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.23}LokiSystemConfig\_get\_filter\_length()}{176}{subsubsubsection.4.5.10.3.23}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.24}LokiSystemConfig\_get\_reflections()}{176}{subsubsubsection.4.5.10.3.24}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.25}LokiSystemConfig\_get\_scale()}{176}{subsubsubsection.4.5.10.3.25}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.26}LokiSystemConfig\_get\_simulate()}{177}{subsubsubsection.4.5.10.3.26}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.27}LokiSystemConfig\_get\_skip()}{177}{subsubsubsection.4.5.10.3.27}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.28}LokiSystemConfig\_get\_time\_constants()}{178}{subsubsubsection.4.5.10.3.28}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.29}LokiSystemConfig\_get\_time\_constants\_length()}{178}{subsubsubsection.4.5.10.3.29}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.30}LokiSystemConfig\_get\_wavelength()}{179}{subsubsubsection.4.5.10.3.30}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.31}LokiSystemConfig\_new()}{179}{subsubsubsection.4.5.10.3.31}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.32}LokiSystemConfig\_set\_cavity\_index()}{179}{subsubsubsection.4.5.10.3.32}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.33}LokiSystemConfig\_set\_distance\_unit()}{180}{subsubsubsection.4.5.10.3.33}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.34}LokiSystemConfig\_set\_estimator\_initial\_radius()}{180}{subsubsubsection.4.5.10.3.34}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.35}LokiSystemConfig\_set\_estimator\_name()}{180}{subsubsubsection.4.5.10.3.35}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.36}LokiSystemConfig\_set\_estimator\_params()}{181}{subsubsubsection.4.5.10.3.36}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.37}LokiSystemConfig\_set\_estimator\_throttle()}{181}{subsubsubsection.4.5.10.3.37}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.38}LokiSystemConfig\_set\_filter\_attenuation()}{181}{subsubsubsection.4.5.10.3.38}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.39}LokiSystemConfig\_set\_filter\_bandwidth()}{182}{subsubsubsection.4.5.10.3.39}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.40}LokiSystemConfig\_set\_filter\_decimation()}{182}{subsubsubsection.4.5.10.3.40}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.41}LokiSystemConfig\_set\_filter\_length()}{182}{subsubsubsection.4.5.10.3.41}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.42}LokiSystemConfig\_set\_reflections()}{183}{subsubsubsection.4.5.10.3.42}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.43}LokiSystemConfig\_set\_simulate()}{183}{subsubsubsection.4.5.10.3.43}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.44}LokiSystemConfig\_set\_skip()}{183}{subsubsubsection.4.5.10.3.44}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.45}LokiSystemConfig\_set\_time\_constants()}{184}{subsubsubsection.4.5.10.3.45}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.3.46}LokiSystemConfig\_set\_wavelength()}{184}{subsubsubsection.4.5.10.3.46}%
+\contentsline {subsubsection}{\numberline {4.5.10.4}Documentation des variables}{184}{subsubsection.4.5.10.4}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.4.1}LokiSystemConfig\_estimator\_impls}{184}{subsubsubsection.4.5.10.4.1}%
+\contentsline {subsubsubsection}{\numberline {4.5.10.4.2}LokiSystemConfig\_estimator\_names}{185}{subsubsubsection.4.5.10.4.2}%
+\contentsline {chapter}{\numberline {5}Documentation des structures de données}{187}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Référence de la structure AD8370\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Word::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[struct].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{187}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Description détaillée}{187}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Référence de la structure float32x4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[struct].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{187}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Description détaillée}{188}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Référence de l\textquotesingle {}union Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Env\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sensors\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[union].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{188}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Description détaillée}{188}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Référence de l\textquotesingle {}union Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[union].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{188}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Description détaillée}{189}{subsection.5.4.1}%
+\contentsline {section}{\numberline {5.5}Référence de l\textquotesingle {}union Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MSeed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[union].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{189}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Description détaillée}{189}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}Référence de l\textquotesingle {}union Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}[union].\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unnamed1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_}{189}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Description détaillée}{190}{subsection.5.6.1}%
+\contentsline {section}{\numberline {5.7}Référence de l\textquotesingle {}union AD8370\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Word}{190}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Description détaillée}{190}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Documentation des champs}{191}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}raw}{191}{subsubsection.5.7.2.1}%
+\contentsline {section}{\numberline {5.8}Référence de la structure float32x2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t}{191}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Description détaillée}{191}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Documentation des champs}{191}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}val}{191}{subsubsection.5.8.2.1}%
+\contentsline {section}{\numberline {5.9}Référence de l\textquotesingle {}union float32x4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t}{192}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Description détaillée}{192}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Documentation des champs}{192}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}val}{192}{subsubsection.5.9.2.1}%
+\contentsline {section}{\numberline {5.10}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Consumer}{192}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Description détaillée}{193}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Documentation des champs}{193}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}cid}{193}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}in}{193}{subsubsection.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.3}stop\_request}{193}{subsubsection.5.10.2.3}%
+\contentsline {subsubsection}{\numberline {5.10.2.4}thread}{194}{subsubsection.5.10.2.4}%
+\contentsline {section}{\numberline {5.11}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Displacement}{194}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Description détaillée}{195}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Documentation des champs}{195}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}alpha\_prev}{195}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.2}alpha\_ref}{195}{subsubsection.5.11.2.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.3}ellipse}{195}{subsubsection.5.11.2.3}%
+\contentsline {subsubsection}{\numberline {5.11.2.4}estimator}{196}{subsubsection.5.11.2.4}%
+\contentsline {subsubsection}{\numberline {5.11.2.5}estimator\_cnt}{196}{subsubsection.5.11.2.5}%
+\contentsline {subsubsection}{\numberline {5.11.2.6}estimator\_throttle}{196}{subsubsection.5.11.2.6}%
+\contentsline {subsubsection}{\numberline {5.11.2.7}filter}{196}{subsubsection.5.11.2.7}%
+\contentsline {subsubsection}{\numberline {5.11.2.8}iir\_a}{196}{subsubsection.5.11.2.8}%
+\contentsline {subsubsection}{\numberline {5.11.2.9}iir\_b}{196}{subsubsection.5.11.2.9}%
+\contentsline {subsubsection}{\numberline {5.11.2.10}phi\_filt}{197}{subsubsection.5.11.2.10}%
+\contentsline {subsubsection}{\numberline {5.11.2.11}phi\_prev}{197}{subsubsection.5.11.2.11}%
+\contentsline {subsubsection}{\numberline {5.11.2.12}phi\_ref}{197}{subsubsection.5.11.2.12}%
+\contentsline {subsubsection}{\numberline {5.11.2.13}phi\_turns}{197}{subsubsection.5.11.2.13}%
+\contentsline {subsubsection}{\numberline {5.11.2.14}scale}{197}{subsubsection.5.11.2.14}%
+\contentsline {section}{\numberline {5.12}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ellipse}{197}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Description détaillée}{198}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Documentation des champs}{198}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}A}{198}{subsubsection.5.12.2.1}%
+\contentsline {subsubsection}{\numberline {5.12.2.2}alpha}{198}{subsubsection.5.12.2.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.3}B}{198}{subsubsection.5.12.2.3}%
+\contentsline {subsubsection}{\numberline {5.12.2.4}xc}{199}{subsubsection.5.12.2.4}%
+\contentsline {subsubsection}{\numberline {5.12.2.5}yc}{199}{subsubsection.5.12.2.5}%
+\contentsline {section}{\numberline {5.13}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ellipse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Estimator}{199}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Description détaillée}{199}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}Documentation des champs}{199}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}impl}{199}{subsubsection.5.13.2.1}%
+\contentsline {subsubsection}{\numberline {5.13.2.2}instance}{200}{subsubsection.5.13.2.2}%
+\contentsline {section}{\numberline {5.14}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Env\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sensors}{200}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Description détaillée}{201}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}Documentation des champs}{201}{subsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.1}bmp390\_t\_fine}{201}{subsubsection.5.14.2.1}%
+\contentsline {subsubsection}{\numberline {5.14.2.2}channel\_mask}{201}{subsubsection.5.14.2.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.3}channel\_output\_width}{202}{subsubsection.5.14.2.3}%
+\contentsline {subsubsection}{\numberline {5.14.2.4}channels}{202}{subsubsection.5.14.2.4}%
+\contentsline {subsubsection}{\numberline {5.14.2.5}clk\_frequency}{202}{subsubsection.5.14.2.5}%
+\contentsline {subsubsection}{\numberline {5.14.2.6}cycles\_per\_sample\_max}{202}{subsubsection.5.14.2.6}%
+\contentsline {subsubsection}{\numberline {5.14.2.7}data\_mask}{202}{subsubsection.5.14.2.7}%
+\contentsline {subsubsection}{\numberline {5.14.2.8}data\_sign\_mask}{202}{subsubsection.5.14.2.8}%
+\contentsline {subsubsection}{\numberline {5.14.2.9}data\_width}{203}{subsubsection.5.14.2.9}%
+\contentsline {subsubsection}{\numberline {5.14.2.10}file}{203}{subsubsection.5.14.2.10}%
+\contentsline {subsubsection}{\numberline {5.14.2.11}fileno}{203}{subsubsection.5.14.2.11}%
+\contentsline {subsubsection}{\numberline {5.14.2.12}out}{203}{subsubsection.5.14.2.12}%
+\contentsline {subsubsection}{\numberline {5.14.2.13}raw}{203}{subsubsection.5.14.2.13}%
+\contentsline {subsubsection}{\numberline {5.14.2.14}scales}{203}{subsubsection.5.14.2.14}%
+\contentsline {subsubsection}{\numberline {5.14.2.15}stop\_request}{204}{subsubsection.5.14.2.15}%
+\contentsline {subsubsection}{\numberline {5.14.2.16}stream\_channels}{204}{subsubsection.5.14.2.16}%
+\contentsline {subsubsection}{\numberline {5.14.2.17}thread}{204}{subsubsection.5.14.2.17}%
+\contentsline {section}{\numberline {5.15}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Env\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sensors\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample}{204}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Description détaillée}{205}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Documentation des champs}{205}{subsection.5.15.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}channel}{205}{subsubsection.5.15.2.1}%
+\contentsline {section}{\numberline {5.16}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FIFO}{205}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Description détaillée}{206}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Documentation des champs}{206}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}abort}{206}{subsubsection.5.16.2.1}%
+\contentsline {subsubsection}{\numberline {5.16.2.2}all\_read}{206}{subsubsection.5.16.2.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.3}consumer\_records}{206}{subsubsection.5.16.2.3}%
+\contentsline {subsubsection}{\numberline {5.16.2.4}item\_size}{206}{subsubsection.5.16.2.4}%
+\contentsline {subsubsection}{\numberline {5.16.2.5}mutex}{207}{subsubsection.5.16.2.5}%
+\contentsline {subsubsection}{\numberline {5.16.2.6}producer\_record}{207}{subsubsection.5.16.2.6}%
+\contentsline {subsubsection}{\numberline {5.16.2.7}pulled}{207}{subsubsection.5.16.2.7}%
+\contentsline {subsubsection}{\numberline {5.16.2.8}pushed}{207}{subsubsection.5.16.2.8}%
+\contentsline {section}{\numberline {5.17}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FIFORecord}{207}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Description détaillée}{208}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Documentation des champs}{208}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}item}{208}{subsubsection.5.17.2.1}%
+\contentsline {subsubsection}{\numberline {5.17.2.2}next}{208}{subsubsection.5.17.2.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.3}status}{208}{subsubsection.5.17.2.3}%
+\contentsline {section}{\numberline {5.18}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FIRFilter}{209}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Description détaillée}{209}{subsection.5.18.1}%
+\contentsline {subsection}{\numberline {5.18.2}Documentation des champs}{210}{subsection.5.18.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.1}acc}{210}{subsubsection.5.18.2.1}%
+\contentsline {subsubsection}{\numberline {5.18.2.2}coeff\_ptr}{210}{subsubsection.5.18.2.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.3}coeffs}{210}{subsubsection.5.18.2.3}%
+\contentsline {subsubsection}{\numberline {5.18.2.4}coeffs\_end}{210}{subsubsection.5.18.2.4}%
+\contentsline {subsubsection}{\numberline {5.18.2.5}decimation}{210}{subsubsection.5.18.2.5}%
+\contentsline {subsubsection}{\numberline {5.18.2.6}is\_clone}{210}{subsubsection.5.18.2.6}%
+\contentsline {subsubsection}{\numberline {5.18.2.7}length}{211}{subsubsection.5.18.2.7}%
+\contentsline {subsubsection}{\numberline {5.18.2.8}phase\_length}{211}{subsubsection.5.18.2.8}%
+\contentsline {subsubsection}{\numberline {5.18.2.9}phase\_ptr}{211}{subsubsection.5.18.2.9}%
+\contentsline {subsubsection}{\numberline {5.18.2.10}sample\_index}{211}{subsubsection.5.18.2.10}%
+\contentsline {subsubsection}{\numberline {5.18.2.11}samples}{211}{subsubsection.5.18.2.11}%
+\contentsline {subsubsection}{\numberline {5.18.2.12}samples\_end}{211}{subsubsection.5.18.2.12}%
+\contentsline {section}{\numberline {5.19}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Formatter}{212}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Description détaillée}{212}{subsection.5.19.1}%
+\contentsline {subsection}{\numberline {5.19.2}Documentation des champs}{212}{subsection.5.19.2}%
+\contentsline {subsubsection}{\numberline {5.19.2.1}impl}{212}{subsubsection.5.19.2.1}%
+\contentsline {subsubsection}{\numberline {5.19.2.2}instance}{212}{subsubsection.5.19.2.2}%
+\contentsline {section}{\numberline {5.20}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kalman}{212}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Description détaillée}{213}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Documentation des champs}{213}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}P}{213}{subsubsection.5.20.2.1}%
+\contentsline {subsubsection}{\numberline {5.20.2.2}rv}{213}{subsubsection.5.20.2.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.3}rw}{213}{subsubsection.5.20.2.3}%
+\contentsline {subsubsection}{\numberline {5.20.2.4}state}{214}{subsubsection.5.20.2.4}%
+\contentsline {section}{\numberline {5.21}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modem}{214}{section.5.21}%
+\contentsline {subsection}{\numberline {5.21.1}Description détaillée}{217}{subsection.5.21.1}%
+\contentsline {subsection}{\numberline {5.21.2}Documentation des champs}{217}{subsection.5.21.2}%
+\contentsline {subsubsection}{\numberline {5.21.2.1}clk\_frequency}{217}{subsubsection.5.21.2.1}%
+\contentsline {subsubsection}{\numberline {5.21.2.2}demod\_channel\_mask}{218}{subsubsection.5.21.2.2}%
+\contentsline {subsubsection}{\numberline {5.21.2.3}demod\_channel\_output\_width}{218}{subsubsection.5.21.2.3}%
+\contentsline {subsubsection}{\numberline {5.21.2.4}demod\_channels}{218}{subsubsection.5.21.2.4}%
+\contentsline {subsubsection}{\numberline {5.21.2.5}demod\_cycles\_per\_sample\_max}{218}{subsubsection.5.21.2.5}%
+\contentsline {subsubsection}{\numberline {5.21.2.6}demod\_cycles\_per\_sample\_ref}{218}{subsubsection.5.21.2.6}%
+\contentsline {subsubsection}{\numberline {5.21.2.7}demod\_fir1\_decimation}{218}{subsubsection.5.21.2.7}%
+\contentsline {subsubsection}{\numberline {5.21.2.8}demod\_fir1\_length}{219}{subsubsection.5.21.2.8}%
+\contentsline {subsubsection}{\numberline {5.21.2.9}demod\_fir2\_bandwidth}{219}{subsubsection.5.21.2.9}%
+\contentsline {subsubsection}{\numberline {5.21.2.10}demod\_fir2\_decimation}{219}{subsubsection.5.21.2.10}%
+\contentsline {subsubsection}{\numberline {5.21.2.11}demod\_fir2\_length}{219}{subsubsection.5.21.2.11}%
+\contentsline {subsubsection}{\numberline {5.21.2.12}demod\_mixerless}{219}{subsubsection.5.21.2.12}%
+\contentsline {subsubsection}{\numberline {5.21.2.13}demod\_osc\_wave\_frequency\_min}{219}{subsubsection.5.21.2.13}%
+\contentsline {subsubsection}{\numberline {5.21.2.14}demod\_power\_fractional\_width}{220}{subsubsection.5.21.2.14}%
+\contentsline {subsubsection}{\numberline {5.21.2.15}demod\_power\_integer\_width}{220}{subsubsection.5.21.2.15}%
+\contentsline {subsubsection}{\numberline {5.21.2.16}demod\_power\_max}{220}{subsubsection.5.21.2.16}%
+\contentsline {subsubsection}{\numberline {5.21.2.17}demod\_sample\_frequency\_ref}{220}{subsubsection.5.21.2.17}%
+\contentsline {subsubsection}{\numberline {5.21.2.18}demod\_xy\_fractional\_width}{220}{subsubsection.5.21.2.18}%
+\contentsline {subsubsection}{\numberline {5.21.2.19}demod\_xy\_integer\_width}{220}{subsubsection.5.21.2.19}%
+\contentsline {subsubsection}{\numberline {5.21.2.20}demod\_xy\_mask}{221}{subsubsection.5.21.2.20}%
+\contentsline {subsubsection}{\numberline {5.21.2.21}demod\_xy\_max}{221}{subsubsection.5.21.2.21}%
+\contentsline {subsubsection}{\numberline {5.21.2.22}demod\_xy\_sign\_mask}{221}{subsubsection.5.21.2.22}%
+\contentsline {subsubsection}{\numberline {5.21.2.23}demod\_xy\_width}{221}{subsubsection.5.21.2.23}%
+\contentsline {subsubsection}{\numberline {5.21.2.24}file}{221}{subsubsection.5.21.2.24}%
+\contentsline {subsubsection}{\numberline {5.21.2.25}fileno}{221}{subsubsection.5.21.2.25}%
+\contentsline {subsubsection}{\numberline {5.21.2.26}mod\_cycles\_per\_sample\_max}{222}{subsubsection.5.21.2.26}%
+\contentsline {subsubsection}{\numberline {5.21.2.27}mod\_cycles\_per\_sample\_ref}{222}{subsubsection.5.21.2.27}%
+\contentsline {subsubsection}{\numberline {5.21.2.28}mod\_dc\_value\_max}{222}{subsubsection.5.21.2.28}%
+\contentsline {subsubsection}{\numberline {5.21.2.29}mod\_dc\_value\_res}{222}{subsubsection.5.21.2.29}%
+\contentsline {subsubsection}{\numberline {5.21.2.30}mod\_dc\_value\_width}{222}{subsubsection.5.21.2.30}%
+\contentsline {subsubsection}{\numberline {5.21.2.31}mod\_gain\_fractional\_width}{222}{subsubsection.5.21.2.31}%
+\contentsline {subsubsection}{\numberline {5.21.2.32}mod\_gain\_integer\_width}{223}{subsubsection.5.21.2.32}%
+\contentsline {subsubsection}{\numberline {5.21.2.33}mod\_gain\_res}{223}{subsubsection.5.21.2.33}%
+\contentsline {subsubsection}{\numberline {5.21.2.34}mod\_offset\_res}{223}{subsubsection.5.21.2.34}%
+\contentsline {subsubsection}{\numberline {5.21.2.35}mod\_osc1\_wave\_frequency\_min}{223}{subsubsection.5.21.2.35}%
+\contentsline {subsubsection}{\numberline {5.21.2.36}mod\_osc2\_wave\_frequency\_min}{223}{subsubsection.5.21.2.36}%
+\contentsline {subsubsection}{\numberline {5.21.2.37}mod\_pga\_gain\_max}{223}{subsubsection.5.21.2.37}%
+\contentsline {subsubsection}{\numberline {5.21.2.38}mod\_pga\_gain\_width}{224}{subsubsection.5.21.2.38}%
+\contentsline {subsubsection}{\numberline {5.21.2.39}mod\_phase\_amplitude\_max}{224}{subsubsection.5.21.2.39}%
+\contentsline {subsubsection}{\numberline {5.21.2.40}mod\_phase\_fractional\_width}{224}{subsubsection.5.21.2.40}%
+\contentsline {subsubsection}{\numberline {5.21.2.41}mod\_phase\_integer\_width}{224}{subsubsection.5.21.2.41}%
+\contentsline {subsubsection}{\numberline {5.21.2.42}mod\_sample\_frequency\_ref}{224}{subsubsection.5.21.2.42}%
+\contentsline {subsubsection}{\numberline {5.21.2.43}out}{224}{subsubsection.5.21.2.43}%
+\contentsline {subsubsection}{\numberline {5.21.2.44}raw}{225}{subsubsection.5.21.2.44}%
+\contentsline {subsubsection}{\numberline {5.21.2.45}sim\_channel}{225}{subsubsection.5.21.2.45}%
+\contentsline {subsubsection}{\numberline {5.21.2.46}sim\_disp\_phase}{225}{subsubsection.5.21.2.46}%
+\contentsline {subsubsection}{\numberline {5.21.2.47}sim\_osc1\_phase}{225}{subsubsection.5.21.2.47}%
+\contentsline {subsubsection}{\numberline {5.21.2.48}simulate}{225}{subsubsection.5.21.2.48}%
+\contentsline {subsubsection}{\numberline {5.21.2.49}stop\_request}{225}{subsubsection.5.21.2.49}%
+\contentsline {subsubsection}{\numberline {5.21.2.50}stream\_channels}{226}{subsubsection.5.21.2.50}%
+\contentsline {subsubsection}{\numberline {5.21.2.51}thread}{226}{subsubsection.5.21.2.51}%
+\contentsline {section}{\numberline {5.22}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample}{226}{section.5.22}%
+\contentsline {subsection}{\numberline {5.22.1}Description détaillée}{226}{subsection.5.22.1}%
+\contentsline {subsection}{\numberline {5.22.2}Documentation des champs}{227}{subsection.5.22.2}%
+\contentsline {subsubsection}{\numberline {5.22.2.1}channel}{227}{subsubsection.5.22.2.1}%
+\contentsline {section}{\numberline {5.23}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MSeed}{227}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Description détaillée}{227}{subsection.5.23.1}%
+\contentsline {subsection}{\numberline {5.23.2}Documentation des champs}{227}{subsection.5.23.2}%
+\contentsline {subsubsection}{\numberline {5.23.2.1}buffer}{227}{subsubsection.5.23.2.1}%
+\contentsline {subsubsection}{\numberline {5.23.2.2}config}{228}{subsubsection.5.23.2.2}%
+\contentsline {subsubsection}{\numberline {5.23.2.3}msr}{228}{subsubsection.5.23.2.3}%
+\contentsline {section}{\numberline {5.24}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MSeed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Config}{228}{section.5.24}%
+\contentsline {subsection}{\numberline {5.24.1}Description détaillée}{229}{subsection.5.24.1}%
+\contentsline {subsection}{\numberline {5.24.2}Documentation des champs}{229}{subsection.5.24.2}%
+\contentsline {subsubsection}{\numberline {5.24.2.1}channel\_names}{229}{subsubsection.5.24.2.1}%
+\contentsline {subsubsection}{\numberline {5.24.2.2}location}{229}{subsubsection.5.24.2.2}%
+\contentsline {subsubsection}{\numberline {5.24.2.3}network}{229}{subsubsection.5.24.2.3}%
+\contentsline {subsubsection}{\numberline {5.24.2.4}raw}{229}{subsubsection.5.24.2.4}%
+\contentsline {subsubsection}{\numberline {5.24.2.5}separate\_channels}{229}{subsubsection.5.24.2.5}%
+\contentsline {subsubsection}{\numberline {5.24.2.6}station}{230}{subsubsection.5.24.2.6}%
+\contentsline {subsubsection}{\numberline {5.24.2.7}steim2}{230}{subsubsection.5.24.2.7}%
+\contentsline {section}{\numberline {5.25}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MSeed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample}{230}{section.5.25}%
+\contentsline {subsection}{\numberline {5.25.1}Description détaillée}{230}{subsection.5.25.1}%
+\contentsline {subsection}{\numberline {5.25.2}Documentation des champs}{231}{subsection.5.25.2}%
+\contentsline {subsubsection}{\numberline {5.25.2.1}channel}{231}{subsubsection.5.25.2.1}%
+\contentsline {section}{\numberline {5.26}Référence de l\textquotesingle {}union Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MSeed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Output\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample}{231}{section.5.26}%
+\contentsline {subsection}{\numberline {5.26.1}Description détaillée}{231}{subsection.5.26.1}%
+\contentsline {subsection}{\numberline {5.26.2}Documentation des champs}{231}{subsection.5.26.2}%
+\contentsline {subsubsection}{\numberline {5.26.2.1}f}{231}{subsubsection.5.26.2.1}%
+\contentsline {subsubsection}{\numberline {5.26.2.2}i}{232}{subsubsection.5.26.2.2}%
+\contentsline {section}{\numberline {5.27}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NLMS}{232}{section.5.27}%
+\contentsline {subsection}{\numberline {5.27.1}Description détaillée}{232}{subsection.5.27.1}%
+\contentsline {subsection}{\numberline {5.27.2}Documentation des champs}{232}{subsection.5.27.2}%
+\contentsline {subsubsection}{\numberline {5.27.2.1}alpha}{232}{subsubsection.5.27.2.1}%
+\contentsline {subsubsection}{\numberline {5.27.2.2}mu}{233}{subsubsection.5.27.2.2}%
+\contentsline {subsubsection}{\numberline {5.27.2.3}state}{233}{subsubsection.5.27.2.3}%
+\contentsline {subsubsection}{\numberline {5.27.2.4}weights}{233}{subsubsection.5.27.2.4}%
+\contentsline {section}{\numberline {5.28}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Packet}{233}{section.5.28}%
+\contentsline {subsection}{\numberline {5.28.1}Description détaillée}{233}{subsection.5.28.1}%
+\contentsline {subsection}{\numberline {5.28.2}Documentation des champs}{234}{subsection.5.28.2}%
+\contentsline {subsubsection}{\numberline {5.28.2.1}buffer}{234}{subsubsection.5.28.2.1}%
+\contentsline {subsubsection}{\numberline {5.28.2.2}timestamp}{234}{subsubsection.5.28.2.2}%
+\contentsline {section}{\numberline {5.29}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Raw}{234}{section.5.29}%
+\contentsline {subsection}{\numberline {5.29.1}Description détaillée}{234}{subsection.5.29.1}%
+\contentsline {subsection}{\numberline {5.29.2}Documentation des champs}{234}{subsection.5.29.2}%
+\contentsline {subsubsection}{\numberline {5.29.2.1}out}{234}{subsubsection.5.29.2.1}%
+\contentsline {section}{\numberline {5.30}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Recorder}{235}{section.5.30}%
+\contentsline {subsection}{\numberline {5.30.1}Description détaillée}{236}{subsection.5.30.1}%
+\contentsline {subsection}{\numberline {5.30.2}Documentation des champs}{236}{subsection.5.30.2}%
+\contentsline {subsubsection}{\numberline {5.30.2.1}channel\_count}{236}{subsubsection.5.30.2.1}%
+\contentsline {subsubsection}{\numberline {5.30.2.2}channels}{236}{subsubsection.5.30.2.2}%
+\contentsline {subsubsection}{\numberline {5.30.2.3}cid}{236}{subsubsection.5.30.2.3}%
+\contentsline {subsubsection}{\numberline {5.30.2.4}filename}{237}{subsubsection.5.30.2.4}%
+\contentsline {subsubsection}{\numberline {5.30.2.5}filetype}{237}{subsubsection.5.30.2.5}%
+\contentsline {subsubsection}{\numberline {5.30.2.6}formatter}{237}{subsubsection.5.30.2.6}%
+\contentsline {subsubsection}{\numberline {5.30.2.7}in}{237}{subsubsection.5.30.2.7}%
+\contentsline {subsubsection}{\numberline {5.30.2.8}is\_recording}{237}{subsubsection.5.30.2.8}%
+\contentsline {subsubsection}{\numberline {5.30.2.9}max\_channels}{237}{subsubsection.5.30.2.9}%
+\contentsline {subsubsection}{\numberline {5.30.2.10}multifile}{238}{subsubsection.5.30.2.10}%
+\contentsline {subsubsection}{\numberline {5.30.2.11}mutex}{238}{subsubsection.5.30.2.11}%
+\contentsline {subsubsection}{\numberline {5.30.2.12}recording\_done}{238}{subsubsection.5.30.2.12}%
+\contentsline {subsubsection}{\numberline {5.30.2.13}sample\_count}{238}{subsubsection.5.30.2.13}%
+\contentsline {subsubsection}{\numberline {5.30.2.14}sample\_count\_per\_file}{238}{subsubsection.5.30.2.14}%
+\contentsline {subsubsection}{\numberline {5.30.2.15}sample\_size}{238}{subsubsection.5.30.2.15}%
+\contentsline {subsubsection}{\numberline {5.30.2.16}sampling\_frequency}{239}{subsubsection.5.30.2.16}%
+\contentsline {subsubsection}{\numberline {5.30.2.17}stop\_request}{239}{subsubsection.5.30.2.17}%
+\contentsline {subsubsection}{\numberline {5.30.2.18}thread}{239}{subsubsection.5.30.2.18}%
+\contentsline {section}{\numberline {5.31}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RLS}{239}{section.5.31}%
+\contentsline {subsection}{\numberline {5.31.1}Description détaillée}{240}{subsection.5.31.1}%
+\contentsline {subsection}{\numberline {5.31.2}Documentation des champs}{240}{subsection.5.31.2}%
+\contentsline {subsubsection}{\numberline {5.31.2.1}lambda}{240}{subsubsection.5.31.2.1}%
+\contentsline {subsubsection}{\numberline {5.31.2.2}lambda\_inv}{240}{subsubsection.5.31.2.2}%
+\contentsline {subsubsection}{\numberline {5.31.2.3}P}{240}{subsubsection.5.31.2.3}%
+\contentsline {subsubsection}{\numberline {5.31.2.4}state}{240}{subsubsection.5.31.2.4}%
+\contentsline {section}{\numberline {5.32}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Socket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Server}{240}{section.5.32}%
+\contentsline {subsection}{\numberline {5.32.1}Description détaillée}{241}{subsection.5.32.1}%
+\contentsline {subsection}{\numberline {5.32.2}Documentation des champs}{242}{subsection.5.32.2}%
+\contentsline {subsubsection}{\numberline {5.32.2.1}cid}{242}{subsubsection.5.32.2.1}%
+\contentsline {subsubsection}{\numberline {5.32.2.2}data}{242}{subsubsection.5.32.2.2}%
+\contentsline {subsubsection}{\numberline {5.32.2.3}data\_size}{242}{subsubsection.5.32.2.3}%
+\contentsline {subsubsection}{\numberline {5.32.2.4}filename}{242}{subsubsection.5.32.2.4}%
+\contentsline {subsubsection}{\numberline {5.32.2.5}has\_data}{242}{subsubsection.5.32.2.5}%
+\contentsline {subsubsection}{\numberline {5.32.2.6}has\_data\_cond}{242}{subsubsection.5.32.2.6}%
+\contentsline {subsubsection}{\numberline {5.32.2.7}in}{243}{subsubsection.5.32.2.7}%
+\contentsline {subsubsection}{\numberline {5.32.2.8}is\_streaming}{243}{subsubsection.5.32.2.8}%
+\contentsline {subsubsection}{\numberline {5.32.2.9}mutex}{243}{subsubsection.5.32.2.9}%
+\contentsline {subsubsection}{\numberline {5.32.2.10}receiver\_thread}{243}{subsubsection.5.32.2.10}%
+\contentsline {subsubsection}{\numberline {5.32.2.11}server\_thread}{243}{subsubsection.5.32.2.11}%
+\contentsline {subsubsection}{\numberline {5.32.2.12}stop\_request}{243}{subsubsection.5.32.2.12}%
+\contentsline {section}{\numberline {5.33}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System}{244}{section.5.33}%
+\contentsline {subsection}{\numberline {5.33.1}Description détaillée}{245}{subsection.5.33.1}%
+\contentsline {subsection}{\numberline {5.33.2}Documentation des champs}{245}{subsection.5.33.2}%
+\contentsline {subsubsection}{\numberline {5.33.2.1}channels}{245}{subsubsection.5.33.2.1}%
+\contentsline {subsubsection}{\numberline {5.33.2.2}cid}{245}{subsubsection.5.33.2.2}%
+\contentsline {subsubsection}{\numberline {5.33.2.3}config}{245}{subsubsection.5.33.2.3}%
+\contentsline {subsubsection}{\numberline {5.33.2.4}disp}{245}{subsubsection.5.33.2.4}%
+\contentsline {subsubsection}{\numberline {5.33.2.5}has\_own\_modem}{245}{subsubsection.5.33.2.5}%
+\contentsline {subsubsection}{\numberline {5.33.2.6}in}{246}{subsubsection.5.33.2.6}%
+\contentsline {subsubsection}{\numberline {5.33.2.7}is\_streaming}{246}{subsubsection.5.33.2.7}%
+\contentsline {subsubsection}{\numberline {5.33.2.8}modem}{246}{subsubsection.5.33.2.8}%
+\contentsline {subsubsection}{\numberline {5.33.2.9}mutex}{246}{subsubsection.5.33.2.9}%
+\contentsline {subsubsection}{\numberline {5.33.2.10}out}{246}{subsubsection.5.33.2.10}%
+\contentsline {subsubsection}{\numberline {5.33.2.11}stop\_request}{246}{subsubsection.5.33.2.11}%
+\contentsline {subsubsection}{\numberline {5.33.2.12}thread}{247}{subsubsection.5.33.2.12}%
+\contentsline {section}{\numberline {5.34}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Config}{247}{section.5.34}%
+\contentsline {subsection}{\numberline {5.34.1}Description détaillée}{248}{subsection.5.34.1}%
+\contentsline {subsection}{\numberline {5.34.2}Documentation des champs}{248}{subsection.5.34.2}%
+\contentsline {subsubsection}{\numberline {5.34.2.1}cavity\_index}{248}{subsubsection.5.34.2.1}%
+\contentsline {subsubsection}{\numberline {5.34.2.2}distance\_unit}{248}{subsubsection.5.34.2.2}%
+\contentsline {subsubsection}{\numberline {5.34.2.3}estimator\_impl}{248}{subsubsection.5.34.2.3}%
+\contentsline {subsubsection}{\numberline {5.34.2.4}estimator\_initial\_radius}{249}{subsubsection.5.34.2.4}%
+\contentsline {subsubsection}{\numberline {5.34.2.5}estimator\_params}{249}{subsubsection.5.34.2.5}%
+\contentsline {subsubsection}{\numberline {5.34.2.6}estimator\_throttle}{249}{subsubsection.5.34.2.6}%
+\contentsline {subsubsection}{\numberline {5.34.2.7}filter\_attenuation}{249}{subsubsection.5.34.2.7}%
+\contentsline {subsubsection}{\numberline {5.34.2.8}filter\_bandwidth}{249}{subsubsection.5.34.2.8}%
+\contentsline {subsubsection}{\numberline {5.34.2.9}filter\_decimation}{249}{subsubsection.5.34.2.9}%
+\contentsline {subsubsection}{\numberline {5.34.2.10}filter\_length}{250}{subsubsection.5.34.2.10}%
+\contentsline {subsubsection}{\numberline {5.34.2.11}reflections}{250}{subsubsection.5.34.2.11}%
+\contentsline {subsubsection}{\numberline {5.34.2.12}simulate}{250}{subsubsection.5.34.2.12}%
+\contentsline {subsubsection}{\numberline {5.34.2.13}skip}{250}{subsubsection.5.34.2.13}%
+\contentsline {subsubsection}{\numberline {5.34.2.14}time\_constants}{250}{subsubsection.5.34.2.14}%
+\contentsline {subsubsection}{\numberline {5.34.2.15}wavelength}{250}{subsubsection.5.34.2.15}%
+\contentsline {section}{\numberline {5.35}Référence de la structure Loki\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sample}{251}{section.5.35}%
+\contentsline {subsection}{\numberline {5.35.1}Description détaillée}{251}{subsection.5.35.1}%
+\contentsline {subsection}{\numberline {5.35.2}Documentation des champs}{251}{subsection.5.35.2}%
+\contentsline {subsubsection}{\numberline {5.35.2.1}channel}{251}{subsubsection.5.35.2.1}%
+\contentsline {subsubsection}{\numberline {5.35.2.2}value}{251}{subsubsection.5.35.2.2}%
+\contentsline {subsubsection}{\numberline {5.35.2.3}x\_norm}{252}{subsubsection.5.35.2.3}%
+\contentsline {subsubsection}{\numberline {5.35.2.4}y\_norm}{252}{subsubsection.5.35.2.4}%
+\contentsline {chapter}{\numberline {6}Documentation des fichiers}{253}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Référence du fichier libloki-\/class.h}{253}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Description détaillée}{254}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}libloki-\/class.h}{254}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Référence du fichier libloki-\/common.h}{255}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Description détaillée}{255}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}libloki-\/common.h}{255}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Référence du fichier libloki-\/consumer.c}{256}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Description détaillée}{256}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Documentation des macros}{257}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}\_GNU\_SOURCE}{257}{subsubsection.6.5.2.1}%
+\contentsline {section}{\numberline {6.6}libloki-\/consumer.c}{257}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Référence du fichier libloki-\/consumer.h}{258}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Description détaillée}{258}{subsection.6.7.1}%
+\contentsline {section}{\numberline {6.8}libloki-\/consumer.h}{259}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Référence du fichier libloki-\/displacement.c}{259}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Description détaillée}{260}{subsection.6.9.1}%
+\contentsline {section}{\numberline {6.10}libloki-\/displacement.c}{260}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Référence du fichier libloki-\/displacement.h}{262}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Description détaillée}{263}{subsection.6.11.1}%
+\contentsline {section}{\numberline {6.12}libloki-\/displacement.h}{263}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Référence du fichier libloki-\/ellipse-\/estimator.c}{263}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Description détaillée}{264}{subsection.6.13.1}%
+\contentsline {section}{\numberline {6.14}libloki-\/ellipse-\/estimator.c}{264}{section.6.14}%
+\contentsline {section}{\numberline {6.15}Référence du fichier libloki-\/ellipse-\/estimator.h}{265}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Description détaillée}{266}{subsection.6.15.1}%
+\contentsline {section}{\numberline {6.16}libloki-\/ellipse-\/estimator.h}{266}{section.6.16}%
+\contentsline {section}{\numberline {6.17}Référence du fichier libloki-\/ellipse.c}{267}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Description détaillée}{267}{subsection.6.17.1}%
+\contentsline {section}{\numberline {6.18}libloki-\/ellipse.c}{268}{section.6.18}%
+\contentsline {section}{\numberline {6.19}Référence du fichier libloki-\/ellipse.h}{269}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Description détaillée}{269}{subsection.6.19.1}%
+\contentsline {section}{\numberline {6.20}libloki-\/ellipse.h}{270}{section.6.20}%
+\contentsline {section}{\numberline {6.21}Référence du fichier libloki-\/env-\/sensors.c}{270}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Description détaillée}{273}{subsection.6.21.1}%
+\contentsline {subsection}{\numberline {6.21.2}Documentation des macros}{273}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}\_GNU\_SOURCE}{273}{subsubsection.6.21.2.1}%
+\contentsline {section}{\numberline {6.22}libloki-\/env-\/sensors.c}{273}{section.6.22}%
+\contentsline {section}{\numberline {6.23}Référence du fichier libloki-\/env-\/sensors.h}{279}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Description détaillée}{280}{subsection.6.23.1}%
+\contentsline {section}{\numberline {6.24}libloki-\/env-\/sensors.h}{281}{section.6.24}%
+\contentsline {section}{\numberline {6.25}Référence du fichier libloki-\/fifo.c}{281}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Description détaillée}{282}{subsection.6.25.1}%
+\contentsline {section}{\numberline {6.26}libloki-\/fifo.c}{283}{section.6.26}%
+\contentsline {section}{\numberline {6.27}Référence du fichier libloki-\/fifo.h}{285}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Description détaillée}{286}{subsection.6.27.1}%
+\contentsline {section}{\numberline {6.28}libloki-\/fifo.h}{286}{section.6.28}%
+\contentsline {section}{\numberline {6.29}Référence du fichier libloki-\/fir.c}{286}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Description détaillée}{287}{subsection.6.29.1}%
+\contentsline {section}{\numberline {6.30}libloki-\/fir.c}{287}{section.6.30}%
+\contentsline {section}{\numberline {6.31}Référence du fichier libloki-\/fir.h}{291}{section.6.31}%
+\contentsline {subsection}{\numberline {6.31.1}Description détaillée}{292}{subsection.6.31.1}%
+\contentsline {section}{\numberline {6.32}libloki-\/fir.h}{292}{section.6.32}%
+\contentsline {section}{\numberline {6.33}Référence du fichier libloki-\/formatter.c}{292}{section.6.33}%
+\contentsline {subsection}{\numberline {6.33.1}Description détaillée}{293}{subsection.6.33.1}%
+\contentsline {section}{\numberline {6.34}libloki-\/formatter.c}{293}{section.6.34}%
+\contentsline {section}{\numberline {6.35}Référence du fichier libloki-\/formatter.h}{294}{section.6.35}%
+\contentsline {subsection}{\numberline {6.35.1}Description détaillée}{295}{subsection.6.35.1}%
+\contentsline {section}{\numberline {6.36}libloki-\/formatter.h}{295}{section.6.36}%
+\contentsline {section}{\numberline {6.37}Référence du fichier libloki-\/hooks.c}{296}{section.6.37}%
+\contentsline {subsection}{\numberline {6.37.1}Description détaillée}{297}{subsection.6.37.1}%
+\contentsline {subsection}{\numberline {6.37.2}Documentation des macros}{297}{subsection.6.37.2}%
+\contentsline {subsubsection}{\numberline {6.37.2.1}\_GNU\_SOURCE}{297}{subsubsection.6.37.2.1}%
+\contentsline {section}{\numberline {6.38}libloki-\/hooks.c}{297}{section.6.38}%
+\contentsline {section}{\numberline {6.39}Référence du fichier libloki-\/hooks.h}{298}{section.6.39}%
+\contentsline {subsection}{\numberline {6.39.1}Description détaillée}{298}{subsection.6.39.1}%
+\contentsline {section}{\numberline {6.40}libloki-\/hooks.h}{299}{section.6.40}%
+\contentsline {section}{\numberline {6.41}Référence du fichier libloki-\/kalman.c}{299}{section.6.41}%
+\contentsline {subsection}{\numberline {6.41.1}Description détaillée}{300}{subsection.6.41.1}%
+\contentsline {section}{\numberline {6.42}libloki-\/kalman.c}{300}{section.6.42}%
+\contentsline {section}{\numberline {6.43}Référence du fichier libloki-\/kalman.h}{302}{section.6.43}%
+\contentsline {subsection}{\numberline {6.43.1}Description détaillée}{302}{subsection.6.43.1}%
+\contentsline {section}{\numberline {6.44}libloki-\/kalman.h}{303}{section.6.44}%
+\contentsline {section}{\numberline {6.45}Référence du fichier libloki-\/modem.c}{303}{section.6.45}%
+\contentsline {subsection}{\numberline {6.45.1}Description détaillée}{311}{subsection.6.45.1}%
+\contentsline {subsection}{\numberline {6.45.2}Documentation des macros}{311}{subsection.6.45.2}%
+\contentsline {subsubsection}{\numberline {6.45.2.1}\_GNU\_SOURCE}{311}{subsubsection.6.45.2.1}%
+\contentsline {section}{\numberline {6.46}libloki-\/modem.c}{311}{section.6.46}%
+\contentsline {section}{\numberline {6.47}Référence du fichier libloki-\/modem.h}{324}{section.6.47}%
+\contentsline {subsection}{\numberline {6.47.1}Description détaillée}{330}{subsection.6.47.1}%
+\contentsline {section}{\numberline {6.48}libloki-\/modem.h}{330}{section.6.48}%
+\contentsline {section}{\numberline {6.49}Référence du fichier libloki-\/mseed.c}{332}{section.6.49}%
+\contentsline {subsection}{\numberline {6.49.1}Description détaillée}{334}{subsection.6.49.1}%
+\contentsline {section}{\numberline {6.50}libloki-\/mseed.c}{334}{section.6.50}%
+\contentsline {section}{\numberline {6.51}Référence du fichier libloki-\/mseed.h}{337}{section.6.51}%
+\contentsline {subsection}{\numberline {6.51.1}Description détaillée}{337}{subsection.6.51.1}%
+\contentsline {section}{\numberline {6.52}libloki-\/mseed.h}{338}{section.6.52}%
+\contentsline {section}{\numberline {6.53}Référence du fichier libloki-\/neon.h}{338}{section.6.53}%
+\contentsline {subsection}{\numberline {6.53.1}Description détaillée}{339}{subsection.6.53.1}%
+\contentsline {section}{\numberline {6.54}libloki-\/neon.h}{339}{section.6.54}%
+\contentsline {section}{\numberline {6.55}Référence du fichier libloki-\/nlms.c}{340}{section.6.55}%
+\contentsline {subsection}{\numberline {6.55.1}Description détaillée}{341}{subsection.6.55.1}%
+\contentsline {section}{\numberline {6.56}libloki-\/nlms.c}{341}{section.6.56}%
+\contentsline {section}{\numberline {6.57}Référence du fichier libloki-\/nlms.h}{342}{section.6.57}%
+\contentsline {subsection}{\numberline {6.57.1}Description détaillée}{343}{subsection.6.57.1}%
+\contentsline {section}{\numberline {6.58}libloki-\/nlms.h}{343}{section.6.58}%
+\contentsline {section}{\numberline {6.59}Référence du fichier libloki-\/packet.h}{344}{section.6.59}%
+\contentsline {subsection}{\numberline {6.59.1}Description détaillée}{344}{subsection.6.59.1}%
+\contentsline {section}{\numberline {6.60}libloki-\/packet.h}{345}{section.6.60}%
+\contentsline {section}{\numberline {6.61}Référence du fichier libloki-\/raw.c}{345}{section.6.61}%
+\contentsline {subsection}{\numberline {6.61.1}Description détaillée}{346}{subsection.6.61.1}%
+\contentsline {section}{\numberline {6.62}libloki-\/raw.c}{346}{section.6.62}%
+\contentsline {section}{\numberline {6.63}Référence du fichier libloki-\/raw.h}{347}{section.6.63}%
+\contentsline {subsection}{\numberline {6.63.1}Description détaillée}{348}{subsection.6.63.1}%
+\contentsline {section}{\numberline {6.64}libloki-\/raw.h}{348}{section.6.64}%
+\contentsline {section}{\numberline {6.65}Référence du fichier libloki-\/recorder.c}{348}{section.6.65}%
+\contentsline {subsection}{\numberline {6.65.1}Description détaillée}{350}{subsection.6.65.1}%
+\contentsline {subsection}{\numberline {6.65.2}Documentation des macros}{350}{subsection.6.65.2}%
+\contentsline {subsubsection}{\numberline {6.65.2.1}\_GNU\_SOURCE}{350}{subsubsection.6.65.2.1}%
+\contentsline {section}{\numberline {6.66}libloki-\/recorder.c}{351}{section.6.66}%
+\contentsline {section}{\numberline {6.67}Référence du fichier libloki-\/recorder.h}{354}{section.6.67}%
+\contentsline {subsection}{\numberline {6.67.1}Description détaillée}{354}{subsection.6.67.1}%
+\contentsline {section}{\numberline {6.68}libloki-\/recorder.h}{355}{section.6.68}%
+\contentsline {section}{\numberline {6.69}Référence du fichier libloki-\/rls.c}{355}{section.6.69}%
+\contentsline {subsection}{\numberline {6.69.1}Description détaillée}{356}{subsection.6.69.1}%
+\contentsline {section}{\numberline {6.70}libloki-\/rls.c}{356}{section.6.70}%
+\contentsline {section}{\numberline {6.71}Référence du fichier libloki-\/rls.h}{358}{section.6.71}%
+\contentsline {subsection}{\numberline {6.71.1}Description détaillée}{358}{subsection.6.71.1}%
+\contentsline {section}{\numberline {6.72}libloki-\/rls.h}{359}{section.6.72}%
+\contentsline {section}{\numberline {6.73}Référence du fichier libloki-\/socket-\/server.c}{359}{section.6.73}%
+\contentsline {subsection}{\numberline {6.73.1}Description détaillée}{360}{subsection.6.73.1}%
+\contentsline {subsection}{\numberline {6.73.2}Documentation des macros}{360}{subsection.6.73.2}%
+\contentsline {subsubsection}{\numberline {6.73.2.1}\_GNU\_SOURCE}{360}{subsubsection.6.73.2.1}%
+\contentsline {section}{\numberline {6.74}libloki-\/socket-\/server.c}{361}{section.6.74}%
+\contentsline {section}{\numberline {6.75}Référence du fichier libloki-\/socket-\/server.h}{363}{section.6.75}%
+\contentsline {subsection}{\numberline {6.75.1}Description détaillée}{364}{subsection.6.75.1}%
+\contentsline {section}{\numberline {6.76}libloki-\/socket-\/server.h}{364}{section.6.76}%
+\contentsline {section}{\numberline {6.77}Référence du fichier libloki-\/system-\/defaults.h}{365}{section.6.77}%
+\contentsline {subsection}{\numberline {6.77.1}Description détaillée}{366}{subsection.6.77.1}%
+\contentsline {section}{\numberline {6.78}libloki-\/system-\/defaults.h}{366}{section.6.78}%
+\contentsline {section}{\numberline {6.79}Référence du fichier libloki-\/system.c}{367}{section.6.79}%
+\contentsline {subsection}{\numberline {6.79.1}Description détaillée}{371}{subsection.6.79.1}%
+\contentsline {subsection}{\numberline {6.79.2}Documentation des macros}{371}{subsection.6.79.2}%
+\contentsline {subsubsection}{\numberline {6.79.2.1}\_GNU\_SOURCE}{371}{subsubsection.6.79.2.1}%
+\contentsline {section}{\numberline {6.80}libloki-\/system.c}{371}{section.6.80}%
+\contentsline {section}{\numberline {6.81}Référence du fichier libloki-\/system.h}{378}{section.6.81}%
+\contentsline {subsection}{\numberline {6.81.1}Description détaillée}{381}{subsection.6.81.1}%
+\contentsline {section}{\numberline {6.82}libloki-\/system.h}{381}{section.6.82}%
+\contentsline {section}{\numberline {6.83}Référence du fichier libloki-\/time.h}{383}{section.6.83}%
+\contentsline {subsection}{\numberline {6.83.1}Description détaillée}{384}{subsection.6.83.1}%
+\contentsline {section}{\numberline {6.84}libloki-\/time.h}{384}{section.6.84}%
+\contentsline {section}{\numberline {6.85}Référence du fichier libloki.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{385}{section.6.85}%
+\contentsline {subsection}{\numberline {6.85.1}Description détaillée}{385}{subsection.6.85.1}%
+\contentsline {section}{\numberline {6.86}libloki.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{385}{section.6.86}%
+\contentsline {section}{\numberline {6.87}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py}{386}{section.6.87}%

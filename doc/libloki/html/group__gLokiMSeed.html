@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Enregistrement de séries temporelles au format miniSEED</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Enregistrement de séries temporelles au format miniSEED <div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module implémente l'interface <a class="el" href="group__gLokiFormatter.html" title="Interface pour la mise en forme de séries temporelles">LokiFormatter</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Enregistrement de séries temporelles au format miniSEED:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed.png" border="0" usemap="#agroup____gLokiMSeed" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiMSeed" id="agroup____gLokiMSeed">
+<area shape="rect" title="Ce module implémente l&#39;interface LokiFormatter." alt="" coords="280,5,465,60"/>
+<area shape="rect" href="group__ggLokiRecording.html" title=" " alt="" coords="5,13,232,53"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-mseed_2Ec" id="r_libloki-mseed_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-mseed_8c.html">libloki-mseed.c</a></td></tr>
+<tr class="memitem:libloki-mseed_2Eh" id="r_libloki-mseed_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-mseed_8h.html">libloki-mseed.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiMSeedConfig" id="r_LokiMSeedConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration d'un formateur de séries temporelles miniSEED.  <a href="structLokiMSeedConfig.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiMSeedInputSample" id="r_LokiMSeedInputSample"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type des échantillons attendus par <a class="el" href="#gabbb34da41c5e60aa871bf96f875eb82b" title="Enregistrer un paquet de données au format miniSEED.">LokiMSeed_work</a>.  <a href="structLokiMSeedInputSample.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiMSeedInputSample_3A_3A_5Bunion_5D_2E_5F_5Funnamed0_5F_5F" id="r_LokiMSeedInputSample_3A_3A_5Bunion_5D_2E_5F_5Funnamed0_5F_5F"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="unionLokiMSeedInputSample_1_1_0funion_0e_8____unnamed0____.html">LokiMSeedInputSample::[union].__unnamed0__</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">La valeur de l'échantillon.  <a href="unionLokiMSeedInputSample_1_1_0funion_0e_8____unnamed0____.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiMSeed" id="r_LokiMSeed"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiMSeed.html">LokiMSeed</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de séries temporelles miniSEED.  <a href="structLokiMSeed.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiMSeedOutputSample" id="r_LokiMSeedOutputSample"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type des échantillons passés à la bibliothèque <span class="tt">libmseed</span>.  <a href="unionLokiMSeedOutputSample.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2f37cc76e8b3cdaf2ba22de5e314e651" id="r_ga2f37cc76e8b3cdaf2ba22de5e314e651"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga2f37cc76e8b3cdaf2ba22de5e314e651">CHANNEL_NAME_LEN</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:ga2f37cc76e8b3cdaf2ba22de5e314e651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre maximal de caractères représentant le nom de la voie.  <br /></td></tr>
+<tr class="memitem:gae35423396dc4d9d76efe24f7cd5d0f44" id="r_gae35423396dc4d9d76efe24f7cd5d0f44"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gae35423396dc4d9d76efe24f7cd5d0f44">MSEED_FILENAME_SUFFIX_LEN</a>&#160;&#160;&#160;(<a class="el" href="#ga2f37cc76e8b3cdaf2ba22de5e314e651">CHANNEL_NAME_LEN</a> + 7)</td></tr>
+<tr class="memdesc:gae35423396dc4d9d76efe24f7cd5d0f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le format du suffixe du nom de fichier: "_{n°de voie}.mseed".  <br /></td></tr>
+<tr class="memitem:gae18b59e922e6992a4642f749ce2c08f6" id="r_gae18b59e922e6992a4642f749ce2c08f6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gae18b59e922e6992a4642f749ce2c08f6">MSEED_RECLEN</a>&#160;&#160;&#160;512</td></tr>
+<tr class="memdesc:gae18b59e922e6992a4642f749ce2c08f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">La longueur d'un record miniSEED.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga1abf2faddffba06494e5cd6df5b62b71" id="r_ga1abf2faddffba06494e5cd6df5b62b71"><td class="memItemLeft">typedef struct LokiMSeedConfig&#160;</td><td class="memItemRight"><a class="el" href="#ga1abf2faddffba06494e5cd6df5b62b71">LokiMSeedConfig</a></td></tr>
+<tr class="memdesc:ga1abf2faddffba06494e5cd6df5b62b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration d'un formateur de séries temporelles miniSEED.  <br /></td></tr>
+<tr class="memitem:gad28337b6ee0e6eefa9e5055208839f1d" id="r_gad28337b6ee0e6eefa9e5055208839f1d"><td class="memItemLeft">typedef struct LokiMSeed&#160;</td><td class="memItemRight"><a class="el" href="#gad28337b6ee0e6eefa9e5055208839f1d">LokiMSeed</a></td></tr>
+<tr class="memdesc:gad28337b6ee0e6eefa9e5055208839f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de séries temporelles miniSEED.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga440adb8f5fed77f82de38c980222dc53" id="r_ga440adb8f5fed77f82de38c980222dc53"><td class="memItemLeft"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga440adb8f5fed77f82de38c980222dc53">LokiMSeedConfig_new</a> (bool separate_channels, const char *station, const char *location, const char *network, bool raw, bool steim2, const char *channel_names)</td></tr>
+<tr class="memdesc:ga440adb8f5fed77f82de38c980222dc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire une configuration d'enregistrement de données au format miniSEED.  <br /></td></tr>
+<tr class="memitem:ga8987eac779b7ca81e375eed8bf1df39b" id="r_ga8987eac779b7ca81e375eed8bf1df39b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8987eac779b7ca81e375eed8bf1df39b">LokiMSeedConfig_del</a> (<a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *self)</td></tr>
+<tr class="memdesc:ga8987eac779b7ca81e375eed8bf1df39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire une configuration d'enregistrement de données au format miniSEED.  <br /></td></tr>
+<tr class="memitem:ga221c91d70be47fc5d37f8adb3befc3f8" id="r_ga221c91d70be47fc5d37f8adb3befc3f8"><td class="memItemLeft"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga221c91d70be47fc5d37f8adb3befc3f8">LokiMSeed_new</a> (<a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *config)</td></tr>
+<tr class="memdesc:ga221c91d70be47fc5d37f8adb3befc3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un formateur de séries temporelles miniSEED.  <br /></td></tr>
+<tr class="memitem:gabbb34da41c5e60aa871bf96f875eb82b" id="r_gabbb34da41c5e60aa871bf96f875eb82b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gabbb34da41c5e60aa871bf96f875eb82b">LokiMSeed_work</a> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self, const char *filename, <a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</td></tr>
+<tr class="memdesc:gabbb34da41c5e60aa871bf96f875eb82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer un paquet de données au format miniSEED.  <br /></td></tr>
+<tr class="memitem:ga5595492db02f9142435569f7f5be7702" id="r_ga5595492db02f9142435569f7f5be7702"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga5595492db02f9142435569f7f5be7702">LokiMSeed_close</a> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self)</td></tr>
+<tr class="memdesc:ga5595492db02f9142435569f7f5be7702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer un formateur de séries temporelles miniSEED.  <br /></td></tr>
+<tr class="memitem:ga48e4baaa7bf097b70867237f57fd335d" id="r_ga48e4baaa7bf097b70867237f57fd335d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga48e4baaa7bf097b70867237f57fd335d">LokiMSeed_del</a> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self)</td></tr>
+<tr class="memdesc:ga48e4baaa7bf097b70867237f57fd335d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un formateur de séries temporelles miniSEED.  <br /></td></tr>
+<tr class="memitem:gab2336a8d017373a81f0c9ae111a247a2" id="r_gab2336a8d017373a81f0c9ae111a247a2"><td class="memItemLeft"><a id="gab2336a8d017373a81f0c9ae111a247a2" name="gab2336a8d017373a81f0c9ae111a247a2"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="structLokiMSeed.html">LokiMSeed</a>, <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, close) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, del))</td></tr>
+<tr class="memitem:gac6c9592172dd8f7c2a47854438c7c970" id="r_gac6c9592172dd8f7c2a47854438c7c970"><td class="memItemLeft"><a id="gac6c9592172dd8f7c2a47854438c7c970" name="gac6c9592172dd8f7c2a47854438c7c970"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_declare_implementation</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="structLokiMSeed.html">LokiMSeed</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module implémente l'interface <a class="el" href="group__gLokiFormatter.html" title="Interface pour la mise en forme de séries temporelles">LokiFormatter</a>. </p>
+<p>Il s'appuie sur la bibliothèque <span class="tt">libmseed</span> de l'IRIS. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ga2f37cc76e8b3cdaf2ba22de5e314e651" name="ga2f37cc76e8b3cdaf2ba22de5e314e651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f37cc76e8b3cdaf2ba22de5e314e651">&#9670;&#160;</a></span>CHANNEL_NAME_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHANNEL_NAME_LEN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre maximal de caractères représentant le nom de la voie. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00133">133</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+
+</div>
+</div>
+<a id="gae35423396dc4d9d76efe24f7cd5d0f44" name="gae35423396dc4d9d76efe24f7cd5d0f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae35423396dc4d9d76efe24f7cd5d0f44">&#9670;&#160;</a></span>MSEED_FILENAME_SUFFIX_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSEED_FILENAME_SUFFIX_LEN&#160;&#160;&#160;(<a class="el" href="#ga2f37cc76e8b3cdaf2ba22de5e314e651">CHANNEL_NAME_LEN</a> + 7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le format du suffixe du nom de fichier: "_{n°de voie}.mseed". </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00136">136</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+
+</div>
+</div>
+<a id="gae18b59e922e6992a4642f749ce2c08f6" name="gae18b59e922e6992a4642f749ce2c08f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae18b59e922e6992a4642f749ce2c08f6">&#9670;&#160;</a></span>MSEED_RECLEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSEED_RECLEN&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La longueur d'un record miniSEED. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00139">139</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="gad28337b6ee0e6eefa9e5055208839f1d" name="gad28337b6ee0e6eefa9e5055208839f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad28337b6ee0e6eefa9e5055208839f1d">&#9670;&#160;</a></span>LokiMSeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiMSeed LokiMSeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un formateur de séries temporelles miniSEED. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8h_source.html#l00038">38</a> du fichier <a class="el" href="libloki-mseed_8h_source.html">libloki-mseed.h</a>.</p>
+
+</div>
+</div>
+<a id="ga1abf2faddffba06494e5cd6df5b62b71" name="ga1abf2faddffba06494e5cd6df5b62b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1abf2faddffba06494e5cd6df5b62b71">&#9670;&#160;</a></span>LokiMSeedConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiMSeedConfig LokiMSeedConfig</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration d'un formateur de séries temporelles miniSEED. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8h_source.html#l00016">16</a> du fichier <a class="el" href="libloki-mseed_8h_source.html">libloki-mseed.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga5595492db02f9142435569f7f5be7702" name="ga5595492db02f9142435569f7f5be7702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5595492db02f9142435569f7f5be7702">&#9670;&#160;</a></span>LokiMSeed_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiMSeed_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fermer un formateur de séries temporelles miniSEED. </p>
+<p>Cette fonction ferme le dernier fichier ouvert. Elle doit être appelée à la fin de l'enregistrement.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le formateur à fermer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00216">216</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga5595492db02f9142435569f7f5be7702_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga5595492db02f9142435569f7f5be7702_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ga48e4baaa7bf097b70867237f57fd335d" name="ga48e4baaa7bf097b70867237f57fd335d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48e4baaa7bf097b70867237f57fd335d">&#9670;&#160;</a></span>LokiMSeed_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiMSeed_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un formateur de séries temporelles miniSEED. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le formateur à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00223">223</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_icgraph" id="agroup__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d_icgraph">
+<area shape="rect" title="Détruire un formateur de séries temporelles miniSEED." alt="" coords="180,5,300,31"/>
+<area shape="rect" href="group__gLokiMSeed.html#ga221c91d70be47fc5d37f8adb3befc3f8" title="Construire un formateur de séries temporelles miniSEED." alt="" coords="5,5,132,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga221c91d70be47fc5d37f8adb3befc3f8" name="ga221c91d70be47fc5d37f8adb3befc3f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga221c91d70be47fc5d37f8adb3befc3f8">&#9670;&#160;</a></span>LokiMSeed_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> * LokiMSeed_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un formateur de séries temporelles miniSEED. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>La configuration à appliquer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau formateur de séries temporelles miniSEED. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00112">112</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_cgraph" id="agroup__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_cgraph">
+<area shape="rect" title="Construire un formateur de séries temporelles miniSEED." alt="" coords="5,5,132,31"/>
+<area shape="rect" href="group__gLokiMSeed.html#ga48e4baaa7bf097b70867237f57fd335d" title="Détruire un formateur de séries temporelles miniSEED." alt="" coords="180,5,300,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="gabbb34da41c5e60aa871bf96f875eb82b" name="gabbb34da41c5e60aa871bf96f875eb82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbb34da41c5e60aa871bf96f875eb82b">&#9670;&#160;</a></span>LokiMSeed_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiMSeed_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>file_change</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>sample_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sampling_frequency</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enregistrer un paquet de données au format miniSEED. </p>
+<p>Cette fonction attend un tableau d'échantillons dont les éléments ont un type de la forme :</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Sample {</div>
+<div class="line">    uint32_t channel;</div>
+<div class="line">    <span class="keywordtype">float</span> value;</div>
+<div class="line">    ... <span class="comment">// Autres données spécifiques</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>On doit avoir <span class="tt">sample_size == sizeof(struct Sample)</span></p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le formateur de séries temporelles miniSEED. </td></tr>
+    <tr><td class="paramname">filename</td><td>Le nom du fichier de destination. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>La date du paquet de données (inutilisée pour ce format). </td></tr>
+    <tr><td class="paramname">file_change</td><td>Faut-il ouvrir un nouveau fichier de destination ou poursuivre le fichier précédent ? </td></tr>
+    <tr><td class="paramname">data</td><td>Les données à écrire. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre d'échantillons à écrire. </td></tr>
+    <tr><td class="paramname">max_channels</td><td>Le nombre maximal de voies que ce formateur peut traiter. </td></tr>
+    <tr><td class="paramname">channels</td><td>Un masque indiquant les voies à traiter. </td></tr>
+    <tr><td class="paramname">sample_size</td><td>La taille d'un échantillon, en octets. </td></tr>
+    <tr><td class="paramname">sampling_frequency</td><td>La fréquence d'échantillonage (inutilisée pour ce format). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00141">141</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ga8987eac779b7ca81e375eed8bf1df39b" name="ga8987eac779b7ca81e375eed8bf1df39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8987eac779b7ca81e375eed8bf1df39b">&#9670;&#160;</a></span>LokiMSeedConfig_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiMSeedConfig_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire une configuration d'enregistrement de données au format miniSEED. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00058">58</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_icgraph" id="agroup__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b_icgraph">
+<area shape="rect" title="Détruire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="221,5,383,31"/>
+<area shape="rect" href="group__gLokiMSeed.html#ga440adb8f5fed77f82de38c980222dc53" title="Construire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="5,5,173,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga440adb8f5fed77f82de38c980222dc53" name="ga440adb8f5fed77f82de38c980222dc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga440adb8f5fed77f82de38c980222dc53">&#9670;&#160;</a></span>LokiMSeedConfig_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> * LokiMSeedConfig_new </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>separate_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>station</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>network</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>raw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>steim2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>channel_names</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire une configuration d'enregistrement de données au format miniSEED. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">separate_channels</td><td>Faut-il enregistrer chaque voie dans un fichier séparé ? </td></tr>
+    <tr><td class="paramname">station</td><td>L'identifiant de station de l'interrogateur. </td></tr>
+    <tr><td class="paramname">location</td><td>L'identifiant de localisation de l'interrogateur. </td></tr>
+    <tr><td class="paramname">network</td><td>L'identifiant de réseau de l'interrogateur. </td></tr>
+    <tr><td class="paramname">raw</td><td>Faut-il utiliser les valeurs brutes des échantillons ? </td></tr>
+    <tr><td class="paramname">steim2</td><td>Faut-il utiliser l'algorithme de compression STEIM2 ? </td></tr>
+    <tr><td class="paramname">channel_names</td><td>Un tableau de nom de voies. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une nouvelle configuration d'enregistrement au format miniSEED. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00029">29</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_cgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_cgraph" id="agroup__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_cgraph">
+<area shape="rect" title="Construire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="5,5,173,31"/>
+<area shape="rect" href="group__gLokiMSeed.html#ga8987eac779b7ca81e375eed8bf1df39b" title="Détruire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="221,5,383,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_icgraph.png" border="0" usemap="#agroup__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="LokiSensors_force_stop" name="LokiSensors_force_stop">
+<area shape="rect" id="node1" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="216,5,375,32"/>
+</map>

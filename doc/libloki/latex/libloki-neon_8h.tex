@@ -1,0 +1,45 @@
+\doxysection{Référence du fichier libloki-\/neon.h}
+\hypertarget{libloki-neon_8h}{}\label{libloki-neon_8h}\index{libloki-\/neon.h@{libloki-\/neon.h}}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Vecteur de deux nombres flottants 32 bits. \end{DoxyCompactList}\item 
+union \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Vecteur de quatre nombres flottants 32 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57}{vadd\+\_\+f32}} (\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} a, \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} b)
+\begin{DoxyCompactList}\small\item\em Additionner deux vecteurs. \end{DoxyCompactList}\item 
+static float \doxymbox{\hyperlink{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0}{vget\+\_\+lane\+\_\+f32}} (\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} a, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Lire un élément d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67}{vmovq\+\_\+n\+\_\+f32}} (float a)
+\begin{DoxyCompactList}\small\item\em Construire un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd}{vld1q\+\_\+f32}} (const float \texorpdfstring{$\ast$}{*}a)
+\begin{DoxyCompactList}\small\item\em Lire un vecteur en mémoire. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d}{vget\+\_\+low\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a)
+\begin{DoxyCompactList}\small\item\em Lire la première moitié d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2}{vget\+\_\+high\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a)
+\begin{DoxyCompactList}\small\item\em Lire la seconde moitié d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f}{vld1q\+\_\+lane\+\_\+f32}} (const float \texorpdfstring{$\ast$}{*}a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Remplacer un élément d\textquotesingle{}un vecteur avec une valeur lue en mémoire. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1}{vmulq\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b)
+\begin{DoxyCompactList}\small\item\em Multiplier deux vecteurs terme à terme. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf}{vmlaq\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} c)
+\begin{DoxyCompactList}\small\item\em Calculer le résultat d\textquotesingle{}une multiplication-\/accumulation sur des vecteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+

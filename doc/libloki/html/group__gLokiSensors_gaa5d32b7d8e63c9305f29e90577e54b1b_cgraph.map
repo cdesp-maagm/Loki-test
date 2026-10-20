@@ -1,0 +1,4 @@
+<map id="LokiSensors_is_streaming" name="LokiSensors_is_streaming">
+<area shape="rect" id="node1" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="5,13,180,39"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744" title="Lire l&#39;état des transferts DMA." alt="" coords="228,5,371,47"/>
+</map>

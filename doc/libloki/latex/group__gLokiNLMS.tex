@@ -1,0 +1,230 @@
+\doxysubsection{Filtre NLMS }
+\hypertarget{group__gLokiNLMS}{}\label{group__gLokiNLMS}\index{Filtre NLMS@{Filtre NLMS}}
+
+
+Estimation des paramètres d\textquotesingle{}une ellipse par filtrage {\itshape Normalized Least Mean Squares}.  
+
+
+Graphe de collaboration de Filtre NLMS:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-nlms_8c}{libloki-\/nlms.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-nlms_8h}{libloki-\/nlms.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}
+\begin{DoxyCompactList}\small\item\em Représentattion d\textquotesingle{}un filtre NLMS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiNLMS_ga27520f191041dfb5256574ddf3012916}{NLMS\+\_\+\+NU}}~1.\+0e-\/30f
+\begin{DoxyCompactList}\small\item\em Correction des poids du filtre pour éviter une division par zéro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+NLMS \doxymbox{\hyperlink{group__gLokiNLMS_ga7c7bf1864a46d1aa425dec8af5a01ad9}{Loki\+NLMS}}
+\begin{DoxyCompactList}\small\item\em Représentattion d\textquotesingle{}un filtre NLMS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1}{Loki\+NLMS\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 2]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre NLMS. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581}{Loki\+NLMS\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre NLMS. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655}{Loki\+NLMS\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4}{Loki\+NLMS\+\_\+work}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f}{Loki\+NLMS\+\_\+del}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre NLMS. \end{DoxyCompactList}\item 
+\Hypertarget{group__gLokiNLMS_gaf15adee1239327457872da6688dc980f}\label{group__gLokiNLMS_gaf15adee1239327457872da6688dc980f} 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(params\+\_\+length, 2) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, del))
+\item 
+\Hypertarget{group__gLokiNLMS_ga468d5839960e2ac0f18fa628d4f98a93}\label{group__gLokiNLMS_ga468d5839960e2ac0f18fa628d4f98a93} 
+{\bfseries Loki\+Class\+\_\+declare\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Estimation des paramètres d\textquotesingle{}une ellipse par filtrage {\itshape Normalized Least Mean Squares}. 
+
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}. 
+
+\label{group__gLokiNLMS_doc-define-members}
+\Hypertarget{group__gLokiNLMS_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiNLMS_ga27520f191041dfb5256574ddf3012916}\index{Filtre NLMS@{Filtre NLMS}!NLMS\_NU@{NLMS\_NU}}
+\index{NLMS\_NU@{NLMS\_NU}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{NLMS\_NU}{NLMS\_NU}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga27520f191041dfb5256574ddf3012916} 
+\+\#define NLMS\+\_\+\+NU~1.\+0e-\/30f}
+
+
+
+Correction des poids du filtre pour éviter une division par zéro. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00012}{12}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+
+
+\label{group__gLokiNLMS_doc-typedef-members}
+\Hypertarget{group__gLokiNLMS_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiNLMS_ga7c7bf1864a46d1aa425dec8af5a01ad9}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS@{LokiNLMS}}
+\index{LokiNLMS@{LokiNLMS}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS}{LokiNLMS}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga7c7bf1864a46d1aa425dec8af5a01ad9} 
+typedef struct Loki\+NLMS Loki\+NLMS}
+
+
+
+Représentattion d\textquotesingle{}un filtre NLMS. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-nlms_8h_source}{libloki-\/nlms.\+h}}.
+
+
+
+\label{group__gLokiNLMS_doc-func-members}
+\Hypertarget{group__gLokiNLMS_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_clone@{LokiNLMS\_clone}}
+\index{LokiNLMS\_clone@{LokiNLMS\_clone}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS\_clone()}{LokiNLMS\_clone()}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581} 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} Loki\+NLMS\+\_\+clone (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Construire un clone d\textquotesingle{}un filtre NLMS. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & Le filtre NLMS à cloner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre NLMS. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_del@{LokiNLMS\_del}}
+\index{LokiNLMS\_del@{LokiNLMS\_del}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS\_del()}{LokiNLMS\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f} 
+void Loki\+NLMS\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un filtre NLMS. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00079}{79}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_get\_state@{LokiNLMS\_get\_state}}
+\index{LokiNLMS\_get\_state@{LokiNLMS\_get\_state}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS\_get\_state()}{LokiNLMS\_get\_state()}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655} 
+float \texorpdfstring{$\ast$}{*} Loki\+NLMS\+\_\+get\+\_\+state (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Retourner l\textquotesingle{}état courant du filtre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Un filtre NLMS. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le vecteur d\textquotesingle{}état du filtre. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00052}{52}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_new@{LokiNLMS\_new}}
+\index{LokiNLMS\_new@{LokiNLMS\_new}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS\_new()}{LokiNLMS\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1} 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} Loki\+NLMS\+\_\+new (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+radius}{, }\item[{const float}]{params}{\+[static 2]}\end{DoxyParamCaption})}
+
+
+
+Construire un nouveau filtre NLMS. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em initial\+\_\+radius} & Le rayon initial de l\textquotesingle{}ellipse estimée. \\
+\hline
+{\em params} & Le facteur d\textquotesingle{}apprentissage du filtre LMS et le coefficients du filtre de mise à jour des facteur de normalisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre NLMS. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4}\index{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_work@{LokiNLMS\_work}}
+\index{LokiNLMS\_work@{LokiNLMS\_work}!Filtre NLMS@{Filtre NLMS}}
+\doxysubsubsubsection{\texorpdfstring{LokiNLMS\_work()}{LokiNLMS\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4} 
+void Loki\+NLMS\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. 
+
+Cette fonction met à jour l\textquotesingle{}état interne du filtre et les paramètre de l\textquotesingle{}ellipse de destination.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre NLMS à exécuter. \\
+\hline
+{\em x} & La coordonnée X du point courant. \\
+\hline
+{\em y} & La coordonnée Y du point courant. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-nlms_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10

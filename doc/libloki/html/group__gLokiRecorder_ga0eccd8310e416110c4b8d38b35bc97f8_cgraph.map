@@ -1,0 +1,5 @@
+<map id="LokiRecorder_signal_handler" name="LokiRecorder_signal_handler">
+<area shape="rect" id="node1" title="Gestionnaire d&#39;événements." alt="" coords="5,5,159,45"/>
+<area shape="rect" id="node2" href="$group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="207,13,349,38"/>
+<area shape="rect" id="node3" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="397,13,517,38"/>
+</map>

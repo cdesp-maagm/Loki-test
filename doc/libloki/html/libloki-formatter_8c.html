@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-formatter.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-formatter.c<div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a> &raquo; <a class="el" href="group__gLokiFormatter.html">Interface pour la mise en forme de séries temporelles</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki-formatter_8h_source.html">libloki-formatter.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-formatter.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-formatter_8c__incl.png" border="0" usemap="#alibloki-formatter_8c" loading="lazy" alt=""/></div>
+<map name="alibloki-formatter_8c" id="alibloki-formatter_8c">
+<area shape="rect" title=" " alt="" coords="351,5,489,31"/>
+<area shape="rect" href="libloki-formatter_8h.html" title=" " alt="" coords="221,79,361,104"/>
+<area shape="rect" title=" " alt="" coords="385,79,455,104"/>
+<area shape="rect" title=" " alt="" coords="479,79,550,104"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="39,152,151,177"/>
+<area shape="rect" href="libloki-time_8h.html" title=" " alt="" coords="236,152,345,177"/>
+<area shape="rect" title=" " alt="" coords="166,225,253,251"/>
+<area shape="rect" title=" " alt="" coords="369,152,452,177"/>
+<area shape="rect" title=" " alt="" coords="476,152,551,177"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="5,225,141,251"/>
+<area shape="rect" title=" " alt="" coords="277,225,341,251"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-formatter_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiFormatter" id="r_LokiFormatter"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiFormatter.html">LokiFormatter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de séries temporelles.  <a href="structLokiFormatter.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga8b0886a7cf3fcedd5f6865cd6db7f4ed" id="r_ga8b0886a7cf3fcedd5f6865cd6db7f4ed"><td class="memItemLeft"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiFormatter.html#ga8b0886a7cf3fcedd5f6865cd6db7f4ed">LokiFormatter_new</a> (void *config)</td></tr>
+<tr class="memdesc:ga8b0886a7cf3fcedd5f6865cd6db7f4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau formateur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:gaf56c5bf018b8dbc9d5fcb2a1edf35f36" id="r_gaf56c5bf018b8dbc9d5fcb2a1edf35f36"><td class="memItemLeft"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36">LokiFormatter_new_with_implementation</a> (const LokiFormatterInterface *impl, void *config)</td></tr>
+<tr class="memdesc:gaf56c5bf018b8dbc9d5fcb2a1edf35f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau formateur de séries temporelles avec une implémentation donnée.  <br /></td></tr>
+<tr class="memitem:ga8108986b27bbe1e5fd15399e3f0a8ce3" id="r_ga8108986b27bbe1e5fd15399e3f0a8ce3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3">LokiFormatter_work</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self, const char *filename, <a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</td></tr>
+<tr class="memdesc:ga8108986b27bbe1e5fd15399e3f0a8ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer un paquet de données.  <br /></td></tr>
+<tr class="memitem:ga764b53438aeaad6ee0d026740b48078c" id="r_ga764b53438aeaad6ee0d026740b48078c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c">LokiFormatter_close</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self)</td></tr>
+<tr class="memdesc:ga764b53438aeaad6ee0d026740b48078c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer un formateur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:ga061b486e06e9cc730f6cb82103ad53a8" id="r_ga061b486e06e9cc730f6cb82103ad53a8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8">LokiFormatter_del</a> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a> *self)</td></tr>
+<tr class="memdesc:ga061b486e06e9cc730f6cb82103ad53a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire de mise en forme de séries temporelles.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-formatter_8c_source.html">libloki-formatter.c</a>.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

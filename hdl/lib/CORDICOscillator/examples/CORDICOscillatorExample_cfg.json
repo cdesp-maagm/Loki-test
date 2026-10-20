@@ -1,0 +1,9 @@
+{
+    "package_name" : "CORDICOscillatorExample_cfg",
+    "declarations" : {
+        "CORDIC_ANGLE_FRACTIONAL_WIDTH" : {"type" : "integer", "value" : 29},
+        "EX_ROTATIONS_PER_CYCLE"        : {"type" : "integer", "value" : 4},
+        "EX_STEP_WIDTH"                 : {"type" : "integer", "value" : 32},
+        "EX_COORD_WIDTH"                : {"type" : "integer", "value" : 32}
+    }
+}

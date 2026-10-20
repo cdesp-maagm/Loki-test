@@ -1,0 +1,117 @@
+\doxysection{libloki-\/system.h}
+\hypertarget{libloki-system_8h_source}{}\label{libloki-system_8h_source}\index{libloki-\/system.h@{libloki-\/system.h}}
+\doxymbox{\hyperlink{libloki-system_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_SYSTEM\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ LIBLOKI\_SYSTEM\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-modem_8h}{libloki-\/modem.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-fifo_8h}{libloki-\/fifo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-ellipse-estimator_8h}{libloki-\/ellipse-\/estimator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00021}\doxymbox{\hyperlink{structLokiSystemSample}{00021}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00023}\doxymbox{\hyperlink{structLokiSystemSample_a7c7c56a609ebbcfb98ba40d8d56514b1}{00023}}\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{structLokiSystemSample_a7c7c56a609ebbcfb98ba40d8d56514b1}{channel}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00025}\doxymbox{\hyperlink{structLokiSystemSample_a49470a663d02c93a44ba76e0432a8121}{00025}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiSystemSample_a49470a663d02c93a44ba76e0432a8121}{value}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00027}\doxymbox{\hyperlink{structLokiSystemSample_a1f3afce3a8da27712324c4b7a35c7b34}{00027}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiSystemSample_a1f3afce3a8da27712324c4b7a35c7b34}{x\_norm}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00029}\doxymbox{\hyperlink{structLokiSystemSample_ab1844388b90bda5774754ac8af1cd2fa}{00029}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiSystemSample_ab1844388b90bda5774754ac8af1cd2fa}{y\_norm}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00030}00030\ \}\ \doxymbox{\hyperlink{structLokiSystemSample}{LokiSystemSample}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00033}\doxymbox{\hyperlink{group__gLokiSystem_gaaa7e01df6c0f16dd011132c131436414}{00033}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ \doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00039}00039\ \doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *\ \doxymbox{\hyperlink{group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997}{LokiSystemConfig\_new}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00045}00045\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b}{LokiSystemConfig\_del}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00055}00055\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0}{LokiSystemConfig\_get\_simulate}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe}{LokiSystemConfig\_set\_simulate}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00075}00075\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841}{LokiSystemConfig\_get\_skip}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00085}00085\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5}{LokiSystemConfig\_set\_skip}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00095}00095\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a}{LokiSystemConfig\_get\_scale}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00102}00102\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e}{LokiSystemConfig\_get\_wavelength}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00109}00109\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3}{LokiSystemConfig\_set\_wavelength}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00116}00116\ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb}{LokiSystemConfig\_get\_reflections}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00123}00123\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f}{LokiSystemConfig\_set\_reflections}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00130}00130\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b}{LokiSystemConfig\_get\_cavity\_index}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00137}00137\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gab04647c634e62c7452730d95d525af43}{LokiSystemConfig\_set\_cavity\_index}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00144}00144\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46}{LokiSystemConfig\_get\_distance\_unit}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00151}00151\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700}{LokiSystemConfig\_set\_distance\_unit}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{char}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00158}00158\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb}{LokiSystemConfig\_get\_estimator\_name}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00165}00165\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af}{LokiSystemConfig\_set\_estimator\_name}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00172}00172\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957}{LokiSystemConfig\_get\_estimator\_initial\_radius}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00179}00179\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87}{LokiSystemConfig\_set\_estimator\_initial\_radius}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00186}00186\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}{LokiSystemConfig\_get\_estimator\_params\_length}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00196}00196\ \textcolor{keywordtype}{float}\ *\doxymbox{\hyperlink{group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0}{LokiSystemConfig\_get\_estimator\_params}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00207}00207\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece}{LokiSystemConfig\_set\_estimator\_params}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00214}00214\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e}{LokiSystemConfig\_get\_filter\_bandwidth}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00221}00221\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a}{LokiSystemConfig\_set\_filter\_bandwidth}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00228}00228\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7}{LokiSystemConfig\_get\_filter\_attenuation}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00235}00235\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01}{LokiSystemConfig\_set\_filter\_attenuation}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00242}00242\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187}{LokiSystemConfig\_get\_filter\_length}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00249}00249\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf}{LokiSystemConfig\_set\_filter\_length}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{size\_t}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00256}00256\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98}{LokiSystemConfig\_get\_filter\_decimation}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00263}00263\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a}{LokiSystemConfig\_set\_filter\_decimation}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keywordtype}{size\_t}\ value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00270}00270\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}{LokiSystemConfig\_get\_time\_constants\_length}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00280}00280\ \textcolor{keywordtype}{float}\ *\doxymbox{\hyperlink{group__gLokiSystem_gada0540089bb3af061badae98523ed1d5}{LokiSystemConfig\_get\_time\_constants}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00290}00290\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a}{LokiSystemConfig\_set\_time\_constants}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *value);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00293}\doxymbox{\hyperlink{group__gLokiSystem_ga9d2558c9006381cbcd39a82afa901d77}{00293}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ \doxymbox{\hyperlink{structLokiSystem}{LokiSystem}};}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00301}00301\ \doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *\doxymbox{\hyperlink{group__gLokiSystem_ga84434fa604921c7470b81c375921807f}{LokiSystem\_new}}(\doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *\doxymbox{\hyperlink{structLokiSystem_aa93697e44722331cef44c62044e7a664}{config}},\ \doxymbox{\hyperlink{structLokiModem}{LokiModem}}\ *\doxymbox{\hyperlink{structLokiSystem_ab9b7636739d69c315bde9cda3a9388bb}{modem}});}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00307}00307\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f}{LokiSystem\_del}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00314}00314\ \doxymbox{\hyperlink{structLokiSystemConfig}{LokiSystemConfig}}\ *\doxymbox{\hyperlink{group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b}{LokiSystem\_get\_config}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00321}00321\ \doxymbox{\hyperlink{structLokiModem}{LokiModem}}\ *\doxymbox{\hyperlink{group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783}{LokiSystem\_get\_modem}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00328}00328\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8}{LokiSystem\_get\_sampling\_frequency}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00335}00335\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f}{LokiSystem\_displacement\_reset}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00350}00350\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}{LokiSystem\_start\_streaming}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self,\ int32\_t\ \doxymbox{\hyperlink{structLokiSystem_ad04afaf0be4bc92bad662ad779e80946}{channels}},\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *modem\_out,\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *disp\_out,\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiSystem_a3d52ba2735183fc2800f36656c46c7bc}{cid}});}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00358}00358\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiSystem_ga5b0a59178eb774740066325c1b178397}{LokiSystem\_stop\_streaming}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00365}00365\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600}{LokiSystem\_is\_streaming}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00366}00366\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00373}00373\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *\doxymbox{\hyperlink{group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8}{LokiSystem\_get\_ellipse}}(\doxymbox{\hyperlink{structLokiSystem}{LokiSystem}}\ *self,\ \textcolor{keywordtype}{size\_t}\ channel);}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00374}00374\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00375}00375\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00376}00376\ }
+\DoxyCodeLine{\Hypertarget{libloki-system_8h_source_l00379}00379\ }
+
+\end{DoxyCode}

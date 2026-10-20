@@ -1,0 +1,9 @@
+<map id="LokiModem_set_simulated_item" name="LokiModem_set_simulated_item">
+<area shape="rect" id="node1" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="5,70,240,95"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="295,5,479,45"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#gae81b1c2702720959857d0a6e33db86ac" title="Lire l&#39;amplitude du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="535,70,769,95"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef" title="Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="288,120,487,160"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="563,5,741,45"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="817,95,972,121"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga23886c6a62d90b718d3069b8fe4ab328" title="Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)..." alt="" coords="553,171,751,211"/>
+</map>

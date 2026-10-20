@@ -1,0 +1,12 @@
+{
+    "package_name" : "CORDICAngleTestbench_cfg",
+    "declarations" : {
+        "CORDIC_ANGLE_FRACTIONAL_WIDTH" : {"type" : "integer", "value" : 29},
+        "TB_ROTATIONS_PER_CYCLE"        : {"type" : "integer", "value" : 4},
+        "TB_COORD_INTEGER_WIDTH"        : {"type" : "integer", "value" : 2},
+        "TB_COORD_FRACTIONAL_WIDTH"     : {"type" : "integer", "value" : 27},
+        "TB_TEST_DATA_LENGTH"           : {"type" : "integer", "value" : 360},
+        "TB_UNIT_CIRCLE"                : {"type" : "boolean", "value" : false},
+        "TB_CLK_PERIOD"                 : {"type" : "time",    "value" : "10 ns"}
+    }
+}

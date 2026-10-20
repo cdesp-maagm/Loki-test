@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Fonctions de conversions d&#39;unités de temps.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Fonctions de conversions d'unités de temps.</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga74c6657849c03dab21733f4f13f003c5"><td class="memItemLeft" align="right" valign="top"><a id="ga74c6657849c03dab21733f4f13f003c5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIMESTAMP_SEC</b>&#160;&#160;&#160;1000000000</td></tr>
+<tr class="separator:ga74c6657849c03dab21733f4f13f003c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga991afc2a69e3e5ff2475202bcaa5a284"><td class="memItemLeft" align="right" valign="top"><a id="ga991afc2a69e3e5ff2475202bcaa5a284"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIMESTAMP_MS</b>&#160;&#160;&#160;1000000</td></tr>
+<tr class="separator:ga991afc2a69e3e5ff2475202bcaa5a284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga775c6dbda9586caf849a80cad5b5b0bc"><td class="memItemLeft" align="right" valign="top"><a id="ga775c6dbda9586caf849a80cad5b5b0bc"></a>
+typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTimestamp</b></td></tr>
+<tr class="separator:ga775c6dbda9586caf849a80cad5b5b0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46dbc3b25e68f088954bab33cbdd84a4"><td class="memItemLeft" align="right" valign="top"><a id="ga46dbc3b25e68f088954bab33cbdd84a4"></a>
+typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTimeDelta</b></td></tr>
+<tr class="separator:ga46dbc3b25e68f088954bab33cbdd84a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga8ca611d70fff98658ab83c2e6ad29077"><td class="memItemLeft" align="right" valign="top"><a id="ga8ca611d70fff98658ab83c2e6ad29077"></a>
+static LokiTimestamp&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTime_to_timestamp</b> (struct timespec ts)</td></tr>
+<tr class="separator:ga8ca611d70fff98658ab83c2e6ad29077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab40a41437974e36b8ed59281177b32a"><td class="memItemLeft" align="right" valign="top"><a id="gaab40a41437974e36b8ed59281177b32a"></a>
+static time_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTime_seconds</b> (LokiTimestamp timestamp)</td></tr>
+<tr class="separator:gaab40a41437974e36b8ed59281177b32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9184c3ae04d720de377b3f7ad426976"><td class="memItemLeft" align="right" valign="top"><a id="gaf9184c3ae04d720de377b3f7ad426976"></a>
+static time_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTime_milliseconds</b> (LokiTimestamp timestamp)</td></tr>
+<tr class="separator:gaf9184c3ae04d720de377b3f7ad426976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ecb76bda575caf4ad17e18e65b0bb96"><td class="memItemLeft" align="right" valign="top"><a id="ga4ecb76bda575caf4ad17e18e65b0bb96"></a>
+static LokiTimestamp&#160;</td><td class="memItemRight" valign="bottom"><b>LokiTime_update</b> (LokiTimestamp ref, size_t index, float frequency)</td></tr>
+<tr class="separator:ga4ecb76bda575caf4ad17e18e65b0bb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

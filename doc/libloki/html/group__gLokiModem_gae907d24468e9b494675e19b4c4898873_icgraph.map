@@ -1,0 +1,4 @@
+<map id="LokiModem_get_demod_delay_y" name="LokiModem_get_demod_delay_y">
+<area shape="rect" id="node1" title="Lire le retard appliqué à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="232,5,411,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gaccf6eda66a54b5e7de7326a8e7e842d9" title="Lire le déphasage appliqué à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="5,5,184,45"/>
+</map>

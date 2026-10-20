@@ -1,0 +1,319 @@
+\doxysection{Référence de la structure Loki\+Recorder}
+\hypertarget{structLokiRecorder}{}\label{structLokiRecorder}\index{LokiRecorder@{LokiRecorder}}
+
+
+Représentation d\textquotesingle{}un enregistreur de séries temporelles.  
+
+
+
+
+Graphe de collaboration de Loki\+Recorder:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiRecorder_a9fc80d1dbce59b5ec31e57548b00a1b3}{filename}}
+\begin{DoxyCompactList}\small\item\em Le nom de base des fichiers de destination (sans extension). \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiRecorder_a1d6bca3a226f84ec37f82339bd10dc4e}{filetype}}
+\begin{DoxyCompactList}\small\item\em Le format des fichiers de destination ("{}raw"{} ou "{}mseed"{}). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiRecorder_a7b761edaa9f28eb07d59d7a1b948b9d6}{formatter}}
+\begin{DoxyCompactList}\small\item\em Le formateur à utiliser pour écrire dans les fichiers. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_afd00b906ebc7b3e5951bbc0fe21166c8}{max\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Le nombre maximal de voies que cet enregistreur peut traiter. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_aa1f2fad80e1728976bf7cc1300111805}{channels}}
+\begin{DoxyCompactList}\small\item\em Un masque indiquant quelles voies enregistrer. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a0f3c09751c3e7ae87f36a5d699b745d9}{channel\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Le nombre de voies à enregistrer. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiRecorder_ac3e59b5fd45b119b6b83b48581d45156}{sampling\+\_\+frequency}}
+\begin{DoxyCompactList}\small\item\em La fréquence d\textquotesingle{}échantillonnage, en Hz. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_abc75d5f39bafdac8a0c3de5dfc646c85}{sample\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em La taille d\textquotesingle{}un échantillon, en octets. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a5b67667d919a7fa9856aa8e5e00fba0f}{sample\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Le nombre total d\textquotesingle{}échantillons à enregistrer toutes voies confondues, 0 pour enregistrer indéfiniment. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a2863fa0bdfbd70431faca15abcc2bf95}{sample\+\_\+count\+\_\+per\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em Le nombre total d\textquotesingle{}échantillons à enregistrer par fichier toutes voies confondues, 0 pour tout enregistrer dans un seul fichier. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiRecorder_a788bdd06663b44df6cb0ed126e824357}{multifile}}
+\begin{DoxyCompactList}\small\item\em Faut-\/il produire plusieurs fichiers (true si sample\+\_\+count\+\_\+per\+\_\+file \texorpdfstring{$>$}{>} 0). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiRecorder_aa467b2260da34bd08b7b0a1e226ae5f0}{in}}
+\begin{DoxyCompactList}\small\item\em La FIFO contenant les données à enregistrer. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a89d4667439b403fe453795d90c6456c2}{cid}}
+\begin{DoxyCompactList}\small\item\em Le numéro de consommateur de cette instance dans la FIFO. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiRecorder_a98295a223c1e22b7fa4a7333449eb9ed}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt de l\textquotesingle{}enregistrement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiRecorder_afe1e496c9ec488ae00283f62f83abfe5}{is\+\_\+recording}}
+\begin{DoxyCompactList}\small\item\em Indicateur d\textquotesingle{}enregistrement en cours. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_afa597b588fe89f578c6cb0b4f8bfac8c}{mutex}}
+\begin{DoxyCompactList}\small\item\em Un mutex pour gérer les accès concurrents à l\textquotesingle{}état de l\textquotesingle{}enregistrement. \end{DoxyCompactList}\item 
+pthread\+\_\+cond\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a70a6127a872e1bd375d7d899b473d8b8}{recording\+\_\+done}}
+\begin{DoxyCompactList}\small\item\em Variable conditionnelle activée en fin d\textquotesingle{}enregistrement. \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiRecorder_a19ccec1e82c8bf7612c02dc51d967413}{thread}}
+\begin{DoxyCompactList}\small\item\em Le thread qui lit les données de la FIFO et les enregistre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un enregistreur de séries temporelles. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+
+
+\label{structLokiRecorder_doc-variable-members}
+\Hypertarget{structLokiRecorder_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiRecorder_a0f3c09751c3e7ae87f36a5d699b745d9}\index{LokiRecorder@{LokiRecorder}!channel\_count@{channel\_count}}
+\index{channel\_count@{channel\_count}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{channel\_count}{channel\_count}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a0f3c09751c3e7ae87f36a5d699b745d9} 
+size\+\_\+t Loki\+Recorder::\+channel\+\_\+count}
+
+
+
+Le nombre de voies à enregistrer. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_aa1f2fad80e1728976bf7cc1300111805}\index{LokiRecorder@{LokiRecorder}!channels@{channels}}
+\index{channels@{channels}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \label{structLokiRecorder_aa1f2fad80e1728976bf7cc1300111805} 
+int32\+\_\+t Loki\+Recorder::\+channels}
+
+
+
+Un masque indiquant quelles voies enregistrer. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00030}{30}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a89d4667439b403fe453795d90c6456c2}\index{LokiRecorder@{LokiRecorder}!cid@{cid}}
+\index{cid@{cid}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{cid}{cid}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a89d4667439b403fe453795d90c6456c2} 
+size\+\_\+t Loki\+Recorder::\+cid}
+
+
+
+Le numéro de consommateur de cette instance dans la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00046}{46}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a9fc80d1dbce59b5ec31e57548b00a1b3}\index{LokiRecorder@{LokiRecorder}!filename@{filename}}
+\index{filename@{filename}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a9fc80d1dbce59b5ec31e57548b00a1b3} 
+char\texorpdfstring{$\ast$}{*} Loki\+Recorder::\+filename}
+
+
+
+Le nom de base des fichiers de destination (sans extension). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a1d6bca3a226f84ec37f82339bd10dc4e}\index{LokiRecorder@{LokiRecorder}!filetype@{filetype}}
+\index{filetype@{filetype}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{filetype}{filetype}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a1d6bca3a226f84ec37f82339bd10dc4e} 
+char\texorpdfstring{$\ast$}{*} Loki\+Recorder::\+filetype}
+
+
+
+Le format des fichiers de destination ("{}raw"{} ou "{}mseed"{}). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a7b761edaa9f28eb07d59d7a1b948b9d6}\index{LokiRecorder@{LokiRecorder}!formatter@{formatter}}
+\index{formatter@{formatter}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{formatter}{formatter}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a7b761edaa9f28eb07d59d7a1b948b9d6} 
+\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}\texorpdfstring{$\ast$}{*} Loki\+Recorder::\+formatter}
+
+
+
+Le formateur à utiliser pour écrire dans les fichiers. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_aa467b2260da34bd08b7b0a1e226ae5f0}\index{LokiRecorder@{LokiRecorder}!in@{in}}
+\index{in@{in}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily \label{structLokiRecorder_aa467b2260da34bd08b7b0a1e226ae5f0} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+Recorder::\+in}
+
+
+
+La FIFO contenant les données à enregistrer. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00044}{44}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_afe1e496c9ec488ae00283f62f83abfe5}\index{LokiRecorder@{LokiRecorder}!is\_recording@{is\_recording}}
+\index{is\_recording@{is\_recording}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{is\_recording}{is\_recording}}
+{\footnotesize\ttfamily \label{structLokiRecorder_afe1e496c9ec488ae00283f62f83abfe5} 
+bool Loki\+Recorder::\+is\+\_\+recording}
+
+
+
+Indicateur d\textquotesingle{}enregistrement en cours. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_afd00b906ebc7b3e5951bbc0fe21166c8}\index{LokiRecorder@{LokiRecorder}!max\_channels@{max\_channels}}
+\index{max\_channels@{max\_channels}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{max\_channels}{max\_channels}}
+{\footnotesize\ttfamily \label{structLokiRecorder_afd00b906ebc7b3e5951bbc0fe21166c8} 
+size\+\_\+t Loki\+Recorder::\+max\+\_\+channels}
+
+
+
+Le nombre maximal de voies que cet enregistreur peut traiter. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00028}{28}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a788bdd06663b44df6cb0ed126e824357}\index{LokiRecorder@{LokiRecorder}!multifile@{multifile}}
+\index{multifile@{multifile}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{multifile}{multifile}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a788bdd06663b44df6cb0ed126e824357} 
+bool Loki\+Recorder::\+multifile}
+
+
+
+Faut-\/il produire plusieurs fichiers (true si sample\+\_\+count\+\_\+per\+\_\+file \texorpdfstring{$>$}{>} 0). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00042}{42}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_afa597b588fe89f578c6cb0b4f8bfac8c}\index{LokiRecorder@{LokiRecorder}!mutex@{mutex}}
+\index{mutex@{mutex}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \label{structLokiRecorder_afa597b588fe89f578c6cb0b4f8bfac8c} 
+pthread\+\_\+mutex\+\_\+t Loki\+Recorder::\+mutex}
+
+
+
+Un mutex pour gérer les accès concurrents à l\textquotesingle{}état de l\textquotesingle{}enregistrement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00052}{52}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a70a6127a872e1bd375d7d899b473d8b8}\index{LokiRecorder@{LokiRecorder}!recording\_done@{recording\_done}}
+\index{recording\_done@{recording\_done}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{recording\_done}{recording\_done}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a70a6127a872e1bd375d7d899b473d8b8} 
+pthread\+\_\+cond\+\_\+t Loki\+Recorder::\+recording\+\_\+done}
+
+
+
+Variable conditionnelle activée en fin d\textquotesingle{}enregistrement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00054}{54}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a5b67667d919a7fa9856aa8e5e00fba0f}\index{LokiRecorder@{LokiRecorder}!sample\_count@{sample\_count}}
+\index{sample\_count@{sample\_count}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{sample\_count}{sample\_count}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a5b67667d919a7fa9856aa8e5e00fba0f} 
+size\+\_\+t Loki\+Recorder::\+sample\+\_\+count}
+
+
+
+Le nombre total d\textquotesingle{}échantillons à enregistrer toutes voies confondues, 0 pour enregistrer indéfiniment. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00038}{38}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a2863fa0bdfbd70431faca15abcc2bf95}\index{LokiRecorder@{LokiRecorder}!sample\_count\_per\_file@{sample\_count\_per\_file}}
+\index{sample\_count\_per\_file@{sample\_count\_per\_file}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{sample\_count\_per\_file}{sample\_count\_per\_file}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a2863fa0bdfbd70431faca15abcc2bf95} 
+size\+\_\+t Loki\+Recorder::\+sample\+\_\+count\+\_\+per\+\_\+file}
+
+
+
+Le nombre total d\textquotesingle{}échantillons à enregistrer par fichier toutes voies confondues, 0 pour tout enregistrer dans un seul fichier. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00040}{40}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_abc75d5f39bafdac8a0c3de5dfc646c85}\index{LokiRecorder@{LokiRecorder}!sample\_size@{sample\_size}}
+\index{sample\_size@{sample\_size}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{sample\_size}{sample\_size}}
+{\footnotesize\ttfamily \label{structLokiRecorder_abc75d5f39bafdac8a0c3de5dfc646c85} 
+size\+\_\+t Loki\+Recorder::\+sample\+\_\+size}
+
+
+
+La taille d\textquotesingle{}un échantillon, en octets. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00036}{36}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_ac3e59b5fd45b119b6b83b48581d45156}\index{LokiRecorder@{LokiRecorder}!sampling\_frequency@{sampling\_frequency}}
+\index{sampling\_frequency@{sampling\_frequency}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{sampling\_frequency}{sampling\_frequency}}
+{\footnotesize\ttfamily \label{structLokiRecorder_ac3e59b5fd45b119b6b83b48581d45156} 
+float Loki\+Recorder::\+sampling\+\_\+frequency}
+
+
+
+La fréquence d\textquotesingle{}échantillonnage, en Hz. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00034}{34}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a98295a223c1e22b7fa4a7333449eb9ed}\index{LokiRecorder@{LokiRecorder}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a98295a223c1e22b7fa4a7333449eb9ed} 
+volatile bool Loki\+Recorder::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt de l\textquotesingle{}enregistrement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00048}{48}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+\Hypertarget{structLokiRecorder_a19ccec1e82c8bf7612c02dc51d967413}\index{LokiRecorder@{LokiRecorder}!thread@{thread}}
+\index{thread@{thread}!LokiRecorder@{LokiRecorder}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \label{structLokiRecorder_a19ccec1e82c8bf7612c02dc51d967413} 
+pthread\+\_\+t Loki\+Recorder::\+thread}
+
+
+
+Le thread qui lit les données de la FIFO et les enregistre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-recorder_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-recorder_8c_source}{libloki-\/recorder.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-recorder_8c}{libloki-\/recorder.\+c}}\end{DoxyCompactItemize}

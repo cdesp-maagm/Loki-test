@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Faut-il transmettre l'état de l'interrogateur à un serveur distant ?
+ENABLE=$(loki-record-config status_enable)
+
+# Le nom du fichier log qui contiendra l'état de l'interrogateur.
+STATUS_LOG_FILE=/media/data/log/$(date -u -Iseconds)-$(hostname)-status.json
+
+# Le nom du fichier log qui contiendra l'état de la connexion à internet.
+MTR_LOG_FILE=/media/data/log/$(date -u -Iseconds)-$(hostname)-mtr.log
+
+# L'adresse IP à interroger (ping).
+MTR_IP=8.8.8.8
+
+# Enregistrer l'état de l'interrogateur au format JSON.
+python3 -m eseo.loki.web.status > $STATUS_LOG_FILE
+
+# Tester l'état de la connexion à internet.
+mtr -c 3 -r $MTR_IP > $MTR_LOG_FILE &
+
+# Si activé dans la configuration, envoyer le fichier JSON à un serveur par SSH.
+if [ "$ENABLE" == True ]; then
+    DEST=$(loki-record-config status_dest)
+    USER=$(loki-record-config status_user)
+    HOST=$(loki-record-config status_host)
+
+    logger -t loki-status "Sending status info to server"
+    nice scp -S /usr/bin/dbclient-noask -i /media/data/config/id_rsa $STATUS_LOG_FILE $USER@$HOST:$DEST 2>&1 | logger -t loki-status
+fi

@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+import argparse
+import time
+from eseo.loki.native import *
+from eseo.loki.util import *
+
+modem = LokiModem()
+
+parser = argparse.ArgumentParser()
+
+def bounded(t, a, b=None):
+    def check(x):
+        res = t(x)
+        if res < a or (b is not None and res > b):
+            raise argparse.ArgumentTypeError("Value out of bounds")
+        return res
+    return check
+
+parser.add_argument("-c", "--channels",
+    type=bounded(int, -1, (1 << modem.get_demod_channels()) - 1), default=-1,
+    help="A mask that specifies the channels to record (default, -1 for all channels)")
+parser.add_argument("-t", "--duration",
+    type=bounded(float, 0.0), default=1.0,
+    help="The recording duration (seconds)")
+parser.add_argument("-T", "--duration-per-file",
+    type=bounded(float, 0.0), default=0.0,
+    help="Record to multiple files with the given maximum duration per file (seconds)")
+parser.add_argument("--simulate",
+    action="store_true",
+    help="Simulate sensors in software")
+parser.add_argument("-r", "--raw",
+    action="store_true",
+    help="Record raw sample values")
+parser.add_argument("-p", "--packet-length",
+    type=bounded(int, 1), default=1024,
+    help="Number of samples per packet")
+parser.add_argument("filename",
+    type=str,
+    help="The target file base name")
+
+args = parser.parse_args()
+
+# Le nombre de paquets dépend de la durée d'enregistrement,
+# de la taille d'un paquet, et de l'activation du bypass.
+if modem.get_demod_bypass():
+    sampling_frequency = modem.get_demod_sampling_frequency()
+else:
+    sampling_frequency = modem.get_demod_xy_sampling_frequency()
+
+sample_size = modem.get_sample_size()
+fifo_length = 4
+fifo        = LokiFIFO(args.packet_length * sample_size, fifo_length)
+recorder    = LokiRecorder(args.filename, "raw", modem.get_demod_channels(), args.channels, sample_size, sampling_frequency, args.duration, args.duration_per_file)
+
+print("Recording...")
+
+recorder.start(fifo)
+modem.restart()
+modem.start_streaming(args.channels, args.simulate, args.raw, fifo)
+start_time = time.time()
+recorder.wait()
+end_time = time.time()
+modem.stop_streaming()
+
+print("Recording stopped after {:.1f} seconds".format(end_time - start_time))

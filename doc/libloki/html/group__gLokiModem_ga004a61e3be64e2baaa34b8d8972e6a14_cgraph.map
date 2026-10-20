@@ -1,0 +1,8 @@
+<map id="LokiModem_set_demod_sampling_frequency" name="LokiModem_set_demod_sampling_frequency">
+<area shape="rect" id="node1" title="Affecter une fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="5,113,183,153"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gad7f609df03c12f9062c37fd9862e6757" title="Lire la fréquence du signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="231,49,409,89"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#ga915c87d5c51e251962e73f877877191e" title="Affecter une fréquence au signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="231,113,409,153"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="477,174,630,199"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gaf4bda53977ea345053fe5287aabd7ae5" title="Lire le pas de réglage de la fréquence du signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="457,5,649,45"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="697,70,852,95"/>
+</map>

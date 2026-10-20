@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-mseed.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-mseed.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-mseed_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="libloki_8h.html">libloki.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;libmseed.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#a88b34a18cdf1e67427a2d53d5407435b">   14</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiMSeedConfig.html#a88b34a18cdf1e67427a2d53d5407435b">separate_channels</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">   16</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">   18</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">   20</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#abd145f1afff2c227d0c2eb9711632d9b">   22</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiMSeedConfig.html#abd145f1afff2c227d0c2eb9711632d9b">raw</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">   24</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">steim2</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">   26</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga440adb8f5fed77f82de38c980222dc53">   29</a></span><a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *<a class="code hl_function" href="group__gLokiMSeed.html#ga440adb8f5fed77f82de38c980222dc53">LokiMSeedConfig_new</a>(<span class="keywordtype">bool</span> separate_channels, <span class="keyword">const</span> <span class="keywordtype">char</span> *station, <span class="keyword">const</span> <span class="keywordtype">char</span> *location, <span class="keyword">const</span> <span class="keywordtype">char</span> *network, <span class="keywordtype">bool</span> raw, <span class="keywordtype">bool</span> steim2, <span class="keyword">const</span> <span class="keywordtype">char</span> *channel_names) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a>));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a88b34a18cdf1e67427a2d53d5407435b">separate_channels</a> = separate_channels;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a>           = strdup(station);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a>          = strdup(location);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a>           = strdup(network);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#abd145f1afff2c227d0c2eb9711632d9b">raw</a>               = raw;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">steim2</a>            = steim2;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>     = strdup(channel_names);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a> || !self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a> || !self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a> || !self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="group__gLokiMSeed.html#ga8987eac779b7ca81e375eed8bf1df39b">LokiMSeedConfig_del</a>(self);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Dans la liste des nom de voies, remplacer les virgules par des fins de chaîne.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; strlen(channel_names); i++) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (channel_names[i] == <span class="charliteral">&#39;,&#39;</span>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>[i] = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga8987eac779b7ca81e375eed8bf1df39b">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiMSeed.html#ga8987eac779b7ca81e375eed8bf1df39b">LokiMSeedConfig_del</a>(<a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *self) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        free(self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        free(self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a>) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        free(self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        free(self-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    free(self);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="};">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structLokiMSeedInputSample.html">   83</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structLokiMSeedInputSample.html#ab885f8d8f28df38d8682209bb3cfb3bd">   85</a></span>    uint32_t <a class="code hl_variable" href="structLokiMSeedInputSample.html#ab885f8d8f28df38d8682209bb3cfb3bd">channel</a>;</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="};">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="unionLokiMSeedInputSample_1_1_0funion_0e_8____unnamed0____.html">   87</a></span>    <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        int32_t value_raw;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">float</span>   value;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    };</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// D&#39;autres données non utilisées ici.</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <a class="code hl_struct" href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a>;</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="};">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="unionLokiMSeedOutputSample.html">   95</a></span><span class="keyword">typedef</span> <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="unionLokiMSeedOutputSample.html#a846f8ba76b2cd4696284afcdb506892f">   97</a></span>    int32_t <a class="code hl_variable" href="unionLokiMSeedOutputSample.html#a846f8ba76b2cd4696284afcdb506892f">i</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="unionLokiMSeedOutputSample.html#a432d65cae22b2736ff7f5547de07deef">   99</a></span>    <span class="keywordtype">float</span>   <a class="code hl_variable" href="unionLokiMSeedOutputSample.html#a432d65cae22b2736ff7f5547de07deef">f</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <a class="code hl_union" href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a>;</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="structLokiMSeed.html">  103</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">  105</a></span>    <a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">  107</a></span>    <a class="code hl_union" href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a> *<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">  109</a></span>    MSRecord *<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga221c91d70be47fc5d37f8adb3befc3f8">  112</a></span><a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> *<a class="code hl_function" href="group__gLokiMSeed.html#ga221c91d70be47fc5d37f8adb3befc3f8">LokiMSeed_new</a>(<a class="code hl_struct" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *config) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>));</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a> = config;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// Initialiser un record MiniSEED.</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a> = msr_init(NULL);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_function" href="group__gLokiMSeed.html#ga48e4baaa7bf097b70867237f57fd335d">LokiMSeed_del</a>(self);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    strncpy(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;station,  config-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">station</a>,  5);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    strncpy(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;location, config-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">location</a>, 2);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    strncpy(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;network,  config-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">network</a>,  2);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;dataquality = <span class="charliteral">&#39;R&#39;</span>; <span class="comment">// TODO</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;sampletype  = config-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">steim2</a> ? <span class="charliteral">&#39;i&#39;</span> : <span class="charliteral">&#39;f&#39;</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga2f37cc76e8b3cdaf2ba22de5e314e651">  133</a></span><span class="preprocessor">#define CHANNEL_NAME_LEN 4</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#gae35423396dc4d9d76efe24f7cd5d0f44">  136</a></span><span class="preprocessor">#define MSEED_FILENAME_SUFFIX_LEN (CHANNEL_NAME_LEN + 7)</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#gae18b59e922e6992a4642f749ce2c08f6">  139</a></span><span class="preprocessor">#define MSEED_RECLEN 512</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#gabbb34da41c5e60aa871bf96f875eb82b">  141</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiMSeed.html#gabbb34da41c5e60aa871bf96f875eb82b">LokiMSeed_work</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> *self, <span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_typedef" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, <span class="keywordtype">bool</span> file_change, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> length, <span class="keywordtype">size_t</span> max_channels, int32_t channels, <span class="keywordtype">size_t</span> sample_size, <span class="keywordtype">float</span> sampling_frequency) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// Allouer le buffer des déplacements au premier appel.</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a> = calloc(length, <span class="keyword">sizeof</span>(<a class="code hl_union" href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a>));</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;samprate    = sampling_frequency;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;datasamples = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> raw               = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a>-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#abd145f1afff2c227d0c2eb9711632d9b">raw</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> steim2            = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a>-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">steim2</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> separate_channels = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a>-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a88b34a18cdf1e67427a2d53d5407435b">separate_channels</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">bool</span> overwrite = file_change;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> filename_len    = strlen(filename);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">char</span> *actual_filename        = calloc(filename_len + <a class="code hl_define" href="group__gLokiMSeed.html#ga2f37cc76e8b3cdaf2ba22de5e314e651">CHANNEL_NAME_LEN</a> + 1, 1);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">char</span> *filename_suffix        = actual_filename + filename_len - 6;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    strcpy(actual_filename, filename);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">const</span> flag encoding  = steim2 ? DE_STEIM2 : DE_FLOAT32;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">const</span> flag byteorder = 1; <span class="comment">// big-endian (requis pour le codage Steim2)</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">char</span> *name = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">config</a>-&gt;<a class="code hl_variable" href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">channel_names</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c = 0; c &lt; max_channels; c ++) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">if</span> (!(channels &amp; (1 &lt;&lt; c))) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="comment">// Collecter les données pour la voie c</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordtype">size_t</span> actual_length = 0;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        uint8_t *ptr_end = (uint8_t*)data + length * sample_size;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">for</span> (uint8_t *ptr = data; ptr != ptr_end; ptr += sample_size) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keyword">const</span> <a class="code hl_struct" href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a> *<span class="keyword">const</span> sample = (<a class="code hl_struct" href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a>*)ptr;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordflow">if</span> (sample-&gt;<a class="code hl_variable" href="structLokiMSeedInputSample.html#ab885f8d8f28df38d8682209bb3cfb3bd">channel</a> != c) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keywordflow">if</span> (!steim2) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>[actual_length].<a class="code hl_variable" href="unionLokiMSeedOutputSample.html#a432d65cae22b2736ff7f5547de07deef">f</a> = sample-&gt;value;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (raw) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>[actual_length].<a class="code hl_variable" href="unionLokiMSeedOutputSample.html#a846f8ba76b2cd4696284afcdb506892f">i</a> = sample-&gt;value_raw;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>[actual_length].<a class="code hl_variable" href="unionLokiMSeedOutputSample.html#a846f8ba76b2cd4696284afcdb506892f">i</a> = roundf(sample-&gt;value);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            actual_length ++;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        strncpy(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;channel, name, 3);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        name += strlen(name) + 1;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;starttime  = timestamp / 1000;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;numsamples = self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;samplecnt = actual_length;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="comment">// Écriture de l&#39;enregistrement dans le fichier de destination.</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="comment">// overwrite=file_change, reclen=512, verbose=false</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">if</span> (separate_channels) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            snprintf(filename_suffix, <a class="code hl_define" href="group__gLokiMSeed.html#gae35423396dc4d9d76efe24f7cd5d0f44">MSEED_FILENAME_SUFFIX_LEN</a>, <span class="stringliteral">&quot;_%zu.mseed&quot;</span>, c);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="comment">/*PhM* correctif ecriture dans un seul fichier ( evite l&#39;ecrasement du packet de voie 0 à n-1) */</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            overwrite = file_change; </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }<span class="keywordflow">else</span>{   </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        overwrite = (file_change &amp;&amp; (c==0));</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">        /***********************************************************************************************/</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">if</span> (msr_writemseed(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>, actual_filename, overwrite, <a class="code hl_define" href="group__gLokiMSeed.html#gae18b59e922e6992a4642f749ce2c08f6">MSEED_RECLEN</a>, encoding, byteorder, <span class="keyword">false</span>) &lt; 0) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            fprintf(stderr, <span class="stringliteral">&quot;LokiMSeed_work: msr_writemseed failed to write to &#39;%s&#39;\n&quot;</span>, actual_filename);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="foldopen" id="foldopen00216" data-start="{" data-end="}">
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga5595492db02f9142435569f7f5be7702">  216</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiMSeed.html#ga5595492db02f9142435569f7f5be7702">LokiMSeed_close</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> *self) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        free(self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">buffer</a> = NULL;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="group__gLokiMSeed.html#ga48e4baaa7bf097b70867237f57fd335d">  223</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiMSeed.html#ga48e4baaa7bf097b70867237f57fd335d">LokiMSeed_del</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a> *self) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>-&gt;datasamples = NULL;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        msr_free(&amp;self-&gt;<a class="code hl_variable" href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">msr</a>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    free(self);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><a class="code hl_define" href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, <a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>, <span class="keyword">new</span>)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>, work)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>, close)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiMSeed.html">LokiMSeed</a>, del)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga6da5df82ee2afb9112000c287919133f"><div class="ttname"><a href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a></div><div class="ttdeci">#define LokiClass_define_method(prefix, name)</div><div class="ttdoc">Dans une implémentation, associe une fonction à une méthode.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00167">libloki-class.h:167</a></div></div>
+<div class="ttc" id="agroup__gLokiClass_html_gaa8e41e7a9fd0583e6314d14c757d26ff"><div class="ttname"><a href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a></div><div class="ttdeci">#define LokiClass_implementation(superclass, prefix, impls)</div><div class="ttdoc">Définit le contenu d&#39;une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00149">libloki-class.h:149</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga221c91d70be47fc5d37f8adb3befc3f8"><div class="ttname"><a href="group__gLokiMSeed.html#ga221c91d70be47fc5d37f8adb3befc3f8">LokiMSeed_new</a></div><div class="ttdeci">LokiMSeed * LokiMSeed_new(LokiMSeedConfig *config)</div><div class="ttdoc">Construire un formateur de séries temporelles miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00112">libloki-mseed.c:112</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga2f37cc76e8b3cdaf2ba22de5e314e651"><div class="ttname"><a href="group__gLokiMSeed.html#ga2f37cc76e8b3cdaf2ba22de5e314e651">CHANNEL_NAME_LEN</a></div><div class="ttdeci">#define CHANNEL_NAME_LEN</div><div class="ttdoc">Le nombre maximal de caractères représentant le nom de la voie.</div><div class="ttdef"><b>Définition</b> <a href="#l00133">libloki-mseed.c:133</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga440adb8f5fed77f82de38c980222dc53"><div class="ttname"><a href="group__gLokiMSeed.html#ga440adb8f5fed77f82de38c980222dc53">LokiMSeedConfig_new</a></div><div class="ttdeci">LokiMSeedConfig * LokiMSeedConfig_new(bool separate_channels, const char *station, const char *location, const char *network, bool raw, bool steim2, const char *channel_names)</div><div class="ttdoc">Construire une configuration d&#39;enregistrement de données au format miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00029">libloki-mseed.c:29</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga48e4baaa7bf097b70867237f57fd335d"><div class="ttname"><a href="group__gLokiMSeed.html#ga48e4baaa7bf097b70867237f57fd335d">LokiMSeed_del</a></div><div class="ttdeci">void LokiMSeed_del(LokiMSeed *self)</div><div class="ttdoc">Détruire un formateur de séries temporelles miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00223">libloki-mseed.c:223</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga5595492db02f9142435569f7f5be7702"><div class="ttname"><a href="group__gLokiMSeed.html#ga5595492db02f9142435569f7f5be7702">LokiMSeed_close</a></div><div class="ttdeci">void LokiMSeed_close(LokiMSeed *self)</div><div class="ttdoc">Fermer un formateur de séries temporelles miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00216">libloki-mseed.c:216</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_ga8987eac779b7ca81e375eed8bf1df39b"><div class="ttname"><a href="group__gLokiMSeed.html#ga8987eac779b7ca81e375eed8bf1df39b">LokiMSeedConfig_del</a></div><div class="ttdeci">void LokiMSeedConfig_del(LokiMSeedConfig *self)</div><div class="ttdoc">Détruire une configuration d&#39;enregistrement de données au format miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00058">libloki-mseed.c:58</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_gabbb34da41c5e60aa871bf96f875eb82b"><div class="ttname"><a href="group__gLokiMSeed.html#gabbb34da41c5e60aa871bf96f875eb82b">LokiMSeed_work</a></div><div class="ttdeci">void LokiMSeed_work(LokiMSeed *self, const char *filename, LokiTimestamp timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</div><div class="ttdoc">Enregistrer un paquet de données au format miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00141">libloki-mseed.c:141</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_gae18b59e922e6992a4642f749ce2c08f6"><div class="ttname"><a href="group__gLokiMSeed.html#gae18b59e922e6992a4642f749ce2c08f6">MSEED_RECLEN</a></div><div class="ttdeci">#define MSEED_RECLEN</div><div class="ttdoc">La longueur d&#39;un record miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00139">libloki-mseed.c:139</a></div></div>
+<div class="ttc" id="agroup__gLokiMSeed_html_gae35423396dc4d9d76efe24f7cd5d0f44"><div class="ttname"><a href="group__gLokiMSeed.html#gae35423396dc4d9d76efe24f7cd5d0f44">MSEED_FILENAME_SUFFIX_LEN</a></div><div class="ttdeci">#define MSEED_FILENAME_SUFFIX_LEN</div><div class="ttdoc">Le format du suffixe du nom de fichier: &quot;_{n°de voie}.mseed&quot;.</div><div class="ttdef"><b>Définition</b> <a href="#l00136">libloki-mseed.c:136</a></div></div>
+<div class="ttc" id="agroup__gLokiTime_html_ga775c6dbda9586caf849a80cad5b5b0bc"><div class="ttname"><a href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></div><div class="ttdeci">uint64_t LokiTimestamp</div><div class="ttdoc">Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.</div><div class="ttdef"><b>Définition</b> <a href="libloki-time_8h_source.html#l00017">libloki-time.h:17</a></div></div>
+<div class="ttc" id="alibloki_8h_html"><div class="ttname"><a href="libloki_8h.html">libloki.h</a></div></div>
+<div class="ttc" id="astructLokiFormatter_html"><div class="ttname"><a href="structLokiFormatter.html">LokiFormatter</a></div><div class="ttdoc">Représentation d&#39;un formateur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00011">libloki-formatter.c:11</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html"><div class="ttname"><a href="structLokiMSeedConfig.html">LokiMSeedConfig</a></div><div class="ttdoc">Configuration d&#39;un formateur de séries temporelles miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00012">libloki-mseed.c:12</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_a0803689925688ed4df64928ce9b9e26a"><div class="ttname"><a href="structLokiMSeedConfig.html#a0803689925688ed4df64928ce9b9e26a">LokiMSeedConfig::channel_names</a></div><div class="ttdeci">char * channel_names</div><div class="ttdoc">Un tableau de nom de voies.</div><div class="ttdef"><b>Définition</b> <a href="#l00026">libloki-mseed.c:26</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_a31abfb817880fd2ea67e6d5a71dd4bf0"><div class="ttname"><a href="structLokiMSeedConfig.html#a31abfb817880fd2ea67e6d5a71dd4bf0">LokiMSeedConfig::location</a></div><div class="ttdeci">char * location</div><div class="ttdoc">L&#39;identifiant de localisation de l&#39;interrogateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00018">libloki-mseed.c:18</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_a88b34a18cdf1e67427a2d53d5407435b"><div class="ttname"><a href="structLokiMSeedConfig.html#a88b34a18cdf1e67427a2d53d5407435b">LokiMSeedConfig::separate_channels</a></div><div class="ttdeci">bool separate_channels</div><div class="ttdoc">Faut-il enregistrer chaque voie dans un fichier séparé ?</div><div class="ttdef"><b>Définition</b> <a href="#l00014">libloki-mseed.c:14</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_ab80069cd73db984ee54ca29b52e94b3f"><div class="ttname"><a href="structLokiMSeedConfig.html#ab80069cd73db984ee54ca29b52e94b3f">LokiMSeedConfig::steim2</a></div><div class="ttdeci">bool steim2</div><div class="ttdoc">Faut-il utiliser l&#39;algorithme de compression STEIM2 ?</div><div class="ttdef"><b>Définition</b> <a href="#l00024">libloki-mseed.c:24</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_abd145f1afff2c227d0c2eb9711632d9b"><div class="ttname"><a href="structLokiMSeedConfig.html#abd145f1afff2c227d0c2eb9711632d9b">LokiMSeedConfig::raw</a></div><div class="ttdeci">bool raw</div><div class="ttdoc">Faut-il considérer les valeurs brutes des échantillons ?</div><div class="ttdef"><b>Définition</b> <a href="#l00022">libloki-mseed.c:22</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_ae1a9ee5e2775909af386c9a146724d66"><div class="ttname"><a href="structLokiMSeedConfig.html#ae1a9ee5e2775909af386c9a146724d66">LokiMSeedConfig::network</a></div><div class="ttdeci">char * network</div><div class="ttdoc">L&#39;identifiant de réseau de l&#39;interrogateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00020">libloki-mseed.c:20</a></div></div>
+<div class="ttc" id="astructLokiMSeedConfig_html_afe172ada58d7c149e86d1750c1a77be9"><div class="ttname"><a href="structLokiMSeedConfig.html#afe172ada58d7c149e86d1750c1a77be9">LokiMSeedConfig::station</a></div><div class="ttdeci">char * station</div><div class="ttdoc">L&#39;identifiant de station de l&#39;interrogateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00016">libloki-mseed.c:16</a></div></div>
+<div class="ttc" id="astructLokiMSeedInputSample_html"><div class="ttname"><a href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a></div><div class="ttdoc">Type des échantillons attendus par LokiMSeed_work.</div><div class="ttdef"><b>Définition</b> <a href="#l00083">libloki-mseed.c:83</a></div></div>
+<div class="ttc" id="astructLokiMSeedInputSample_html_ab885f8d8f28df38d8682209bb3cfb3bd"><div class="ttname"><a href="structLokiMSeedInputSample.html#ab885f8d8f28df38d8682209bb3cfb3bd">LokiMSeedInputSample::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdoc">Le numéro de voie.</div><div class="ttdef"><b>Définition</b> <a href="#l00085">libloki-mseed.c:85</a></div></div>
+<div class="ttc" id="astructLokiMSeed_html"><div class="ttname"><a href="structLokiMSeed.html">LokiMSeed</a></div><div class="ttdoc">Représentation d&#39;un formateur de séries temporelles miniSEED.</div><div class="ttdef"><b>Définition</b> <a href="#l00103">libloki-mseed.c:103</a></div></div>
+<div class="ttc" id="astructLokiMSeed_html_a08ecbdabe58cb8c04d9db57d1c93b233"><div class="ttname"><a href="structLokiMSeed.html#a08ecbdabe58cb8c04d9db57d1c93b233">LokiMSeed::msr</a></div><div class="ttdeci">MSRecord * msr</div><div class="ttdoc">Record MiniSEED préalloué pour toutes les écritures.</div><div class="ttdef"><b>Définition</b> <a href="#l00109">libloki-mseed.c:109</a></div></div>
+<div class="ttc" id="astructLokiMSeed_html_a1c33d3aff58b073bdd634d6fdfb01df7"><div class="ttname"><a href="structLokiMSeed.html#a1c33d3aff58b073bdd634d6fdfb01df7">LokiMSeed::buffer</a></div><div class="ttdeci">LokiMSeedOutputSample * buffer</div><div class="ttdoc">Buffer d&#39;échantillons préalloué, sans numéro de voie ni numéro de séquence.</div><div class="ttdef"><b>Définition</b> <a href="#l00107">libloki-mseed.c:107</a></div></div>
+<div class="ttc" id="astructLokiMSeed_html_ade9110e1ee6905e04bf593d806b22843"><div class="ttname"><a href="structLokiMSeed.html#ade9110e1ee6905e04bf593d806b22843">LokiMSeed::config</a></div><div class="ttdeci">LokiMSeedConfig * config</div><div class="ttdoc">La configuration d&#39;enregistrement à utiliser.</div><div class="ttdef"><b>Définition</b> <a href="#l00105">libloki-mseed.c:105</a></div></div>
+<div class="ttc" id="aunionLokiMSeedOutputSample_html"><div class="ttname"><a href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a></div><div class="ttdoc">Type des échantillons passés à la bibliothèque libmseed.</div><div class="ttdef"><b>Définition</b> <a href="#l00095">libloki-mseed.c:95</a></div></div>
+<div class="ttc" id="aunionLokiMSeedOutputSample_html_a432d65cae22b2736ff7f5547de07deef"><div class="ttname"><a href="unionLokiMSeedOutputSample.html#a432d65cae22b2736ff7f5547de07deef">LokiMSeedOutputSample::f</a></div><div class="ttdeci">float f</div><div class="ttdoc">Valeur d&#39;un échantillon flottant.</div><div class="ttdef"><b>Définition</b> <a href="#l00099">libloki-mseed.c:99</a></div></div>
+<div class="ttc" id="aunionLokiMSeedOutputSample_html_a846f8ba76b2cd4696284afcdb506892f"><div class="ttname"><a href="unionLokiMSeedOutputSample.html#a846f8ba76b2cd4696284afcdb506892f">LokiMSeedOutputSample::i</a></div><div class="ttdeci">int32_t i</div><div class="ttdoc">Valeur d&#39;un échantillon entier.</div><div class="ttdef"><b>Définition</b> <a href="#l00097">libloki-mseed.c:97</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

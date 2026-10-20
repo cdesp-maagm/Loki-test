@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['a_0',['A',['../structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21',1,'LokiEllipse']]],
+  ['abort_1',['abort',['../structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959',1,'LokiFIFO']]],
+  ['acc_2',['acc',['../structLokiFIRFilter.html#abdfa0baa70436d1486f05dc6161f7715',1,'LokiFIRFilter']]],
+  ['acquisition_3',['Acquisition',['../group__ggLokiAcquisition.html',1,'']]],
+  ['acquisition_20de_20données_20provenant_20des_20capteurs_20auxiliaires_4',['Acquisition de données provenant des capteurs auxiliaires',['../group__gLokiEnvSensors.html',1,'']]],
+  ['acquisition_20de_20traitement_20et_20d_20enregistrement_5',['Échange de données entre modules d&apos;acquisition, de traitement et d&apos;enregistrement',['../group__ggLokiInterconnect.html',1,'']]],
+  ['acquisitions_20et_20du_20calcul_20de_20déplacement_6',['Gestion des acquisitions et du calcul de déplacement',['../group__gLokiSystem.html',1,'']]],
+  ['ad8370_5fgain_5fcode_5fmax_7',['AD8370_GAIN_CODE_MAX',['../group__gLokiModem.html#gaf0e4506f0536eb0c07e09109fbe2efe0',1,'libloki-modem.c']]],
+  ['ad8370_5fgain_5fcode_5fsize_8',['AD8370_GAIN_CODE_SIZE',['../group__gLokiModem.html#gaa3d385c4d758bd43f884382cd34878af',1,'libloki-modem.c']]],
+  ['ad8370_5fhigh_5fgain_5ffactor_9',['AD8370_HIGH_GAIN_FACTOR',['../group__gLokiModem.html#ga11b8bd1290fccb0b319ec3ddcf163630',1,'libloki-modem.c']]],
+  ['ad8370_5fhigh_5fgain_5fmax_10',['AD8370_HIGH_GAIN_MAX',['../group__gLokiModem.html#ga8d0ae3934f893570043e83d0ca205621',1,'libloki-modem.c']]],
+  ['ad8370_5flow_5fgain_5fmax_11',['AD8370_LOW_GAIN_MAX',['../group__gLokiModem.html#ga1310224697289c3414523ac5593ac24f',1,'libloki-modem.c']]],
+  ['ad8370_5fpregain_12',['AD8370_PREGAIN',['../group__gLokiModem.html#gaa090987afa6c718a00f7935b03d3e92c',1,'libloki-modem.c']]],
+  ['ad8370_5fvernier_13',['AD8370_VERNIER',['../group__gLokiModem.html#gafe9f03d58c0514bad0fe3eb215e06605',1,'libloki-modem.c']]],
+  ['ad8370controlword_14',['AD8370ControlWord',['../unionAD8370ControlWord.html',1,'']]],
+  ['adaptatif_20pour_20estimer_20les_20paramètres_20d_20une_20ellipse_15',['Interface d&apos;un filtre adaptatif pour estimer les paramètres d&apos;une ellipse',['../group__gLokiEllipseEstimator.html',1,'']]],
+  ['all_5fread_16',['all_read',['../structLokiFIFO.html#a77c20935df935fb3f071889db55240a2',1,'LokiFIFO']]],
+  ['alpha_17',['alpha',['../structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99',1,'LokiEllipse::alpha'],['../structLokiNLMS.html#a8d2cc8a5b74b4f0614062204967c1738',1,'LokiNLMS::alpha']]],
+  ['alpha_5fprev_18',['alpha_prev',['../structLokiDisplacement.html#a55d07c368ae3072d9f64d3851aa1d64f',1,'LokiDisplacement']]],
+  ['alpha_5fref_19',['alpha_ref',['../structLokiDisplacement.html#a72cd5368238e215ae275dd357aa4cf04',1,'LokiDisplacement']]],
+  ['arm_20neon_20',['Support des fonctions intrinsics ARM NEON',['../group__gLokiNeon.html',1,'']]],
+  ['au_20format_20miniseed_21',['Enregistrement de séries temporelles au format miniSEED',['../group__gLokiMSeed.html',1,'']]],
+  ['auxiliaires_22',['Acquisition de données provenant des capteurs auxiliaires',['../group__gLokiEnvSensors.html',1,'']]],
+  ['avec_20polymorphisme_23',['Support de structures de données avec polymorphisme.',['../group__gLokiClass.html',1,'']]]
+];

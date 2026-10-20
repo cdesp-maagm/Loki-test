@@ -1,0 +1,4 @@
+<map id="LokiEnvSensors_set_sampling_frequency" name="LokiEnvSensors_set_sampling_frequency">
+<area shape="rect" id="node1" title="Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition." alt="" coords="5,5,167,45"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#gab1a9ddca7f23c277de1236b32392ce5a" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="215,13,393,38"/>
+</map>

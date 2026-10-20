@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-fir.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-fir.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-fir_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef LIBLOKI_FIR_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define LIBLOKI_FIR_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="group__gLokiFIRFilter.html#ga87ea977cff213fcd36220315045756ce">   17</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> <a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *<a class="code hl_function" href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2">LokiFIRFilter_new</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code hl_variable" href="structLokiFIRFilter.html#a748ee8c29617200a9d6bf1939272705e">coeffs</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIRFilter.html#aaebcaf11cbc869831f044b03d9df91f5">length</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIRFilter.html#a3e3229003c7da4b79e75d0bf00c0253f">decimation</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *<a class="code hl_function" href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615">LokiFIRFilter_clone</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *other);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *<a class="code hl_function" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37">LokiFIRFilter_new_kaiser_bessel</a>(<span class="keywordtype">float</span> fs, <span class="keywordtype">float</span> fa, <span class="keywordtype">float</span> fb, <span class="keywordtype">float</span> att, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIRFilter.html#aaebcaf11cbc869831f044b03d9df91f5">length</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIRFilter.html#a3e3229003c7da4b79e75d0bf00c0253f">decimation</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b">LokiFIRFilter_work</a>(<a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self, <span class="keywordtype">float</span> in, <span class="keywordtype">float</span> *out);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384">LokiFIRFilter_reset</a>(<a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__gLokiFIRFilter.html#gaf94ba76272ee9b71a6288fe8f0b8ba6c">LokiFIRFilter_get_actual_length</a>(<a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196">LokiFIRFilter_del</a>(<a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_ga1e35f12c031afb576a345201e67dc196"><div class="ttname"><a href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196">LokiFIRFilter_del</a></div><div class="ttdeci">void LokiFIRFilter_del(LokiFIRFilter *self)</div><div class="ttdoc">Détruire un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00297">libloki-fir.c:297</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_ga55fd82df12ca5fa1121dd8660bea9615"><div class="ttname"><a href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615">LokiFIRFilter_clone</a></div><div class="ttdeci">LokiFIRFilter * LokiFIRFilter_clone(const LokiFIRFilter *other)</div><div class="ttdoc">Construire un clone d&#39;un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00106">libloki-fir.c:106</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_ga59635f9d90959a326458c670354d088b"><div class="ttname"><a href="group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b">LokiFIRFilter_work</a></div><div class="ttdeci">bool LokiFIRFilter_work(LokiFIRFilter *self, float in, float *out)</div><div class="ttdoc">Exécuter un pas de calcul d&#39;un fitre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00175">libloki-fir.c:175</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_ga706ef2fc38b1e2f8b59a5574b5b25d37"><div class="ttname"><a href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37">LokiFIRFilter_new_kaiser_bessel</a></div><div class="ttdeci">LokiFIRFilter * LokiFIRFilter_new_kaiser_bessel(float fs, float fa, float fb, float att, size_t length, size_t decimation)</div><div class="ttdoc">Construire un filtre FIR en utilisant une fenêtre de Kaiser-Bessel.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00136">libloki-fir.c:136</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_gab1dc8db60b04feb37955487102cfb384"><div class="ttname"><a href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384">LokiFIRFilter_reset</a></div><div class="ttdeci">void LokiFIRFilter_reset(LokiFIRFilter *self)</div><div class="ttdoc">Réinitialiser un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00293">libloki-fir.c:293</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_gae36c56835eb19d1db8aa1552d53e41b2"><div class="ttname"><a href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2">LokiFIRFilter_new</a></div><div class="ttdeci">LokiFIRFilter * LokiFIRFilter_new(const float *coeffs, size_t length, size_t decimation)</div><div class="ttdoc">Construire un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00060">libloki-fir.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiFIRFilter_html_gaf94ba76272ee9b71a6288fe8f0b8ba6c"><div class="ttname"><a href="group__gLokiFIRFilter.html#gaf94ba76272ee9b71a6288fe8f0b8ba6c">LokiFIRFilter_get_actual_length</a></div><div class="ttdeci">size_t LokiFIRFilter_get_actual_length(LokiFIRFilter *self)</div><div class="ttdoc">Lire la longueur effective d&#39;un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00171">libloki-fir.c:171</a></div></div>
+<div class="ttc" id="astructLokiFIRFilter_html"><div class="ttname"><a href="structLokiFIRFilter.html">LokiFIRFilter</a></div><div class="ttdoc">Représentation d&#39;un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00017">libloki-fir.c:17</a></div></div>
+<div class="ttc" id="astructLokiFIRFilter_html_a3e3229003c7da4b79e75d0bf00c0253f"><div class="ttname"><a href="structLokiFIRFilter.html#a3e3229003c7da4b79e75d0bf00c0253f">LokiFIRFilter::decimation</a></div><div class="ttdeci">size_t decimation</div><div class="ttdoc">Le facteur de décimation de ce filtre.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00039">libloki-fir.c:39</a></div></div>
+<div class="ttc" id="astructLokiFIRFilter_html_a748ee8c29617200a9d6bf1939272705e"><div class="ttname"><a href="structLokiFIRFilter.html#a748ee8c29617200a9d6bf1939272705e">LokiFIRFilter::coeffs</a></div><div class="ttdeci">float * coeffs</div><div class="ttdoc">Le tableau des coefficients de ce filtre.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00021">libloki-fir.c:21</a></div></div>
+<div class="ttc" id="astructLokiFIRFilter_html_aaebcaf11cbc869831f044b03d9df91f5"><div class="ttname"><a href="structLokiFIRFilter.html#aaebcaf11cbc869831f044b03d9df91f5">LokiFIRFilter::length</a></div><div class="ttdeci">size_t length</div><div class="ttdoc">Le nombre de coefficients de ce filtre.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00037">libloki-fir.c:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

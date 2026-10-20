@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Interface d'un filtre adaptatif pour estimer les paramètres d'une ellipse <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition des méthodes communes pour estimer les paramètres d'une ellipse au cours de la réception d'une série de points.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Interface d'un filtre adaptatif pour estimer les paramètres d'une ellipse:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator.png" border="0" usemap="#agroup____gLokiEllipseEstimator" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiEllipseEstimator" id="agroup____gLokiEllipseEstimator">
+<area shape="rect" title="Définition des méthodes communes pour estimer les paramètres d&#39;une ellipse au cours de la réception d..." alt="" coords="224,5,396,75"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,27,176,53"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-ellipse-estimator_2Ec" id="r_libloki-ellipse-estimator_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-ellipse-estimator_8c.html">libloki-ellipse-estimator.c</a></td></tr>
+<tr class="memitem:libloki-ellipse-estimator_2Eh" id="r_libloki-ellipse-estimator_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a></td></tr>
+<tr class="memitem:libloki-ellipse_2Ec" id="r_libloki-ellipse_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-ellipse_8c.html">libloki-ellipse.c</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiEllipseEstimator" id="r_LokiEllipseEstimator"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre d'estimation des paramètres d'une ellipse.  <a href="structLokiEllipseEstimator.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaa57cdc8d5f80ec0a91eaf30b9f76c718" id="r_gaa57cdc8d5f80ec0a91eaf30b9f76c718"><td class="memItemLeft">typedef struct LokiEllipseEstimator&#160;</td><td class="memItemRight"><a class="el" href="#gaa57cdc8d5f80ec0a91eaf30b9f76c718">LokiEllipseEstimator</a></td></tr>
+<tr class="memdesc:gaa57cdc8d5f80ec0a91eaf30b9f76c718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre d'estimation des paramètres d'une ellipse.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga1e625c5268fb3d3430d741de55c44bc0" id="r_ga1e625c5268fb3d3430d741de55c44bc0"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga1e625c5268fb3d3430d741de55c44bc0">LokiEllipseEstimator_new</a> (float initial_radius, const float params[])</td></tr>
+<tr class="memdesc:ga1e625c5268fb3d3430d741de55c44bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un estimateur.  <br /></td></tr>
+<tr class="memitem:ga77e0d9338c0eddbf5f3d79374f8a77fa" id="r_ga77e0d9338c0eddbf5f3d79374f8a77fa"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga77e0d9338c0eddbf5f3d79374f8a77fa">LokiEllipseEstimator_new_with_implementation</a> (const LokiEllipseEstimatorInterface *impl, float initial_radius, const float params[])</td></tr>
+<tr class="memdesc:ga77e0d9338c0eddbf5f3d79374f8a77fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un estimateur avec une implémentation donnée.  <br /></td></tr>
+<tr class="memitem:ga8913e5508a4b3cac1c5552f1d404a9b2" id="r_ga8913e5508a4b3cac1c5552f1d404a9b2"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga8913e5508a4b3cac1c5552f1d404a9b2">LokiEllipseEstimator_clone</a> (const <a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *other)</td></tr>
+<tr class="memdesc:ga8913e5508a4b3cac1c5552f1d404a9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un estimateur.  <br /></td></tr>
+<tr class="memitem:ga136afdab868b56c531d462ed5e587cf5" id="r_ga136afdab868b56c531d462ed5e587cf5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga136afdab868b56c531d462ed5e587cf5">LokiEllipseEstimator_work</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:ga136afdab868b56c531d462ed5e587cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:ga3bf89eb128ef2dfcbdf1921060467898" id="r_ga3bf89eb128ef2dfcbdf1921060467898"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#ga3bf89eb128ef2dfcbdf1921060467898">LokiEllipseEstimator_get_state</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self)</td></tr>
+<tr class="memdesc:ga3bf89eb128ef2dfcbdf1921060467898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant de l'estimateur.  <br /></td></tr>
+<tr class="memitem:ga96a80f684b2cf60d831ad7207f21d298" id="r_ga96a80f684b2cf60d831ad7207f21d298"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self)</td></tr>
+<tr class="memdesc:ga96a80f684b2cf60d831ad7207f21d298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un estimateur.  <br /></td></tr>
+<tr class="memitem:gadebb7f654257ff34ceac276fdcf73ee5" id="r_gadebb7f654257ff34ceac276fdcf73ee5"><td class="memItemLeft"><a id="gadebb7f654257ff34ceac276fdcf73ee5" name="gadebb7f654257ff34ceac276fdcf73ee5"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_interface</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="group__gLokiClass.html#ga73dc50ecb993ab72efa7f10803140240">LokiClass_attribute</a>(size_t params_length) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, new) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, clone) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, work) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, get_state) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, del))</td></tr>
+<tr class="memitem:ga6c07dc7246a56661060f219512071d9e" id="r_ga6c07dc7246a56661060f219512071d9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga6c07dc7246a56661060f219512071d9e">LokiEllipse_set_from_coeffs</a> (<a class="el" href="structLokiEllipse.html">LokiEllipse</a> *self, const <a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> coeffs)</td></tr>
+<tr class="memdesc:ga6c07dc7246a56661060f219512071d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter les paramètres d'une ellipse en fonction des coefficients de son équation.  <br /></td></tr>
+<tr class="memitem:ga6a9d8dee572f56889695bb96a2835844" id="r_ga6a9d8dee572f56889695bb96a2835844"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga6a9d8dee572f56889695bb96a2835844">LokiEllipse_get_coeffs</a> (const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *self, <a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> coeffs)</td></tr>
+<tr class="memdesc:ga6a9d8dee572f56889695bb96a2835844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer les coefficients de l'équation d'une ellipse.  <br /></td></tr>
+<tr class="memitem:ga70aa22f2b32427cb365981412de7daf5" id="r_ga70aa22f2b32427cb365981412de7daf5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga70aa22f2b32427cb365981412de7daf5">LokiEllipse_get_point</a> (const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *self, float theta, float *x, float *y)</td></tr>
+<tr class="memdesc:ga70aa22f2b32427cb365981412de7daf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer les coordonnées d'un point d'une ellipse.  <br /></td></tr>
+<tr class="memitem:ga35d3ff1907a5e87a070466b4c3204ec9" id="r_ga35d3ff1907a5e87a070466b4c3204ec9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga35d3ff1907a5e87a070466b4c3204ec9">LokiEllipse_get_angle</a> (const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *self, float x, float y, float *x_norm, float *y_norm)</td></tr>
+<tr class="memdesc:ga35d3ff1907a5e87a070466b4c3204ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer l'angle correspondant à un point d'une ellipse.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition des méthodes communes pour estimer les paramètres d'une ellipse au cours de la réception d'une série de points. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="gaa57cdc8d5f80ec0a91eaf30b9f76c718" name="gaa57cdc8d5f80ec0a91eaf30b9f76c718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa57cdc8d5f80ec0a91eaf30b9f76c718">&#9670;&#160;</a></span>LokiEllipseEstimator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiEllipseEstimator LokiEllipseEstimator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un filtre d'estimation des paramètres d'une ellipse. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8h_source.html#l00019">19</a> du fichier <a class="el" href="libloki-ellipse-estimator_8h_source.html">libloki-ellipse-estimator.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga35d3ff1907a5e87a070466b4c3204ec9" name="ga35d3ff1907a5e87a070466b4c3204ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35d3ff1907a5e87a070466b4c3204ec9">&#9670;&#160;</a></span>LokiEllipse_get_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiEllipse_get_angle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>x_norm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>y_norm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculer l'angle correspondant à un point d'une ellipse. </p>
+<p>Cette fonction calcule également les coordonées d'un point du cercle unité correspondant au point de l'ellipse passé en argument.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'ellipse de référence. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X d'un point de l'ellipse. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y d'un point de l'ellipse. </td></tr>
+    <tr><td class="paramname">x_norm</td><td>Un pointeur vers l'emplacement où écrire la coordonnée X du point ramené sur le cercle unité. </td></tr>
+    <tr><td class="paramname">y_norm</td><td>Un pointeur vers l'emplacement où écrire la coordonnée Y du point ramené sur le cercle unité. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'angle. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse_8c_source.html#l00068">68</a> du fichier <a class="el" href="libloki-ellipse_8c_source.html">libloki-ellipse.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_icgraph" id="agroup__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9_icgraph">
+<area shape="rect" title="Calculer l&#39;angle correspondant à un point d&#39;une ellipse." alt="" coords="673,5,836,31"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,5,625,31"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,5,399,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,213,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga6a9d8dee572f56889695bb96a2835844" name="ga6a9d8dee572f56889695bb96a2835844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a9d8dee572f56889695bb96a2835844">&#9670;&#160;</a></span>LokiEllipse_get_coeffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiEllipse_get_coeffs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a></td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculer les coefficients de l'équation d'une ellipse. </p>
+<p>Les coefficients sont normalisés de telle sorte que $a + c = 1$. Le résultat ne contient que les coefficients (a, b, d, e, f).</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'ellipse de référence. </td></tr>
+    <tr><td class="paramname">coeffs</td><td>Le tableau de destination. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse_8c_source.html#l00042">42</a> du fichier <a class="el" href="libloki-ellipse_8c_source.html">libloki-ellipse.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ga70aa22f2b32427cb365981412de7daf5" name="ga70aa22f2b32427cb365981412de7daf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga70aa22f2b32427cb365981412de7daf5">&#9670;&#160;</a></span>LokiEllipse_get_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiEllipse_get_point </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiEllipse.html">LokiEllipse</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculer les coordonnées d'un point d'une ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'ellipse de référence. </td></tr>
+    <tr><td class="paramname">theta</td><td>La coordonnée du point sur l'ellipse, en radians. </td></tr>
+    <tr><td class="paramname">x</td><td>Un pointeur vers la coordonnée X calculée pour ce point. </td></tr>
+    <tr><td class="paramname">y</td><td>Un pointeur vers la coordonnée Y calculée pour ce point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-ellipse_8c_source.html">libloki-ellipse.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="ga6c07dc7246a56661060f219512071d9e" name="ga6c07dc7246a56661060f219512071d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c07dc7246a56661060f219512071d9e">&#9670;&#160;</a></span>LokiEllipse_set_from_coeffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiEllipse_set_from_coeffs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiEllipse.html">LokiEllipse</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a></td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter les paramètres d'une ellipse en fonction des coefficients de son équation. </p>
+<p>L'équation de l'ellipse est considérée comme normalisée avec $a + c = 1$.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'ellipse à calculer. </td></tr>
+    <tr><td class="paramname">coeffs</td><td>Les coefficients (a, b, d, e, f) de l'équation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse_8c_source.html#l00010">10</a> du fichier <a class="el" href="libloki-ellipse_8c_source.html">libloki-ellipse.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_icgraph" id="agroup__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e_icgraph">
+<area shape="rect" title="Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation." alt="" coords="673,5,831,45"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,13,625,38"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,13,399,38"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,13,213,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8913e5508a4b3cac1c5552f1d404a9b2" name="ga8913e5508a4b3cac1c5552f1d404a9b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8913e5508a4b3cac1c5552f1d404a9b2">&#9670;&#160;</a></span>LokiEllipseEstimator_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> * LokiEllipseEstimator_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un clone d'un estimateur. </p>
+<p>Le nouvel estimateur aura la même implémentation et les mêmes paramètres que l'original.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>L'estimateur à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouvel estimateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00043">43</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_cgraph" id="agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_cgraph">
+<area shape="rect" title="Construire un clone d&#39;un estimateur." alt="" coords="5,5,160,45"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="208,13,391,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_icgraph" id="agroup__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2_icgraph">
+<area shape="rect" title="Construire un clone d&#39;un estimateur." alt="" coords="415,5,569,45"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="185,13,367,38"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga96a80f684b2cf60d831ad7207f21d298" name="ga96a80f684b2cf60d831ad7207f21d298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96a80f684b2cf60d831ad7207f21d298">&#9670;&#160;</a></span>LokiEllipseEstimator_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiEllipseEstimator_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un estimateur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'estimateur à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00068">68</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_icgraph" id="agroup__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298_icgraph">
+<area shape="rect" title="Détruire un estimateur." alt="" coords="651,70,833,95"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="436,70,603,95"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2" title="Construire un clone d&#39;un estimateur." alt="" coords="442,5,597,45"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa" title="Construire un estimateur avec une implémentation donnée." alt="" coords="185,117,388,157"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="196,18,377,43"/>
+<area shape="rect" href="group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="224,67,349,93"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,67,137,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga3bf89eb128ef2dfcbdf1921060467898" name="ga3bf89eb128ef2dfcbdf1921060467898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3bf89eb128ef2dfcbdf1921060467898">&#9670;&#160;</a></span>LokiEllipseEstimator_get_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiEllipseEstimator_get_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourner l'état courant de l'estimateur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Un estimateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le vecteur d'état de cet estimateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00064">64</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_icgraph" id="agroup__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898_icgraph">
+<area shape="rect" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="673,5,828,45"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,13,625,38"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,13,399,38"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,13,213,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga1e625c5268fb3d3430d741de55c44bc0" name="ga1e625c5268fb3d3430d741de55c44bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e625c5268fb3d3430d741de55c44bc0">&#9670;&#160;</a></span>LokiEllipseEstimator_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> * LokiEllipseEstimator_new </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>initial_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>params</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un estimateur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_radius</td><td>Le rayon initial de l'ellipse estimée. </td></tr>
+    <tr><td class="paramname">params</td><td>Les paramètres de cet estimateur (selon l'implémentation). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouvel estimateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00022">22</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="ga77e0d9338c0eddbf5f3d79374f8a77fa" name="ga77e0d9338c0eddbf5f3d79374f8a77fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77e0d9338c0eddbf5f3d79374f8a77fa">&#9670;&#160;</a></span>LokiEllipseEstimator_new_with_implementation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> * LokiEllipseEstimator_new_with_implementation </td>
+          <td>(</td>
+          <td class="paramtype">const LokiEllipseEstimatorInterface *</td>          <td class="paramname"><span class="paramname"><em>impl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>initial_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>params</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un estimateur avec une implémentation donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">impl</td><td>L'implémentation de <a class="el" href="structLokiEllipseEstimator.html" title="Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse.">LokiEllipseEstimator</a> à utiliser. </td></tr>
+    <tr><td class="paramname">initial_radius</td><td>Le rayon initial de l'ellipse estimée. </td></tr>
+    <tr><td class="paramname">params</td><td>Les paramètres de cet estimateur (selon l'implémentation). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouvel estimateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00026">26</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_cgraph" id="agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_cgraph">
+<area shape="rect" title="Construire un estimateur avec une implémentation donnée." alt="" coords="5,5,208,45"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="256,13,439,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_icgraph" id="agroup__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa_icgraph">
+<area shape="rect" title="Construire un estimateur avec une implémentation donnée." alt="" coords="185,5,388,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga136afdab868b56c531d462ed5e587cf5" name="ga136afdab868b56c531d462ed5e587cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga136afdab868b56c531d462ed5e587cf5">&#9670;&#160;</a></span>LokiEllipseEstimator_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiEllipseEstimator_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées. </p>
+<p>Cette fonction met à jour l'état interne du filtre et les paramètres de l'ellipse de destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'estimateur à exécuter. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X du point courant. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y du point courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-ellipse-estimator_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-ellipse-estimator_8c_source.html">libloki-ellipse-estimator.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_cgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_icgraph.png" border="0" usemap="#agroup__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_icgraph" id="agroup__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5_icgraph">
+<area shape="rect" title="Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées." alt="" coords="673,5,868,31"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,5,625,31"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,5,399,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,213,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

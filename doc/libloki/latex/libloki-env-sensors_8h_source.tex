@@ -1,0 +1,60 @@
+\doxysection{libloki-\/env-\/sensors.h}
+\hypertarget{libloki-env-sensors_8h_source}{}\label{libloki-env-sensors_8h_source}\index{libloki-\/env-\/sensors.h@{libloki-\/env-\/sensors.h}}
+\doxymbox{\hyperlink{libloki-env-sensors_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00015}00015\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_ENV\_SENSORS\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00016}00016\ \textcolor{preprocessor}{\#define\ LIBLOKI\_ENV\_SENSORS\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00023}\doxymbox{\hyperlink{group__gLokiEnvSensors_ga14689417d7c68408edf52758c9f387e2}{00023}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00026}\doxymbox{\hyperlink{structLokiEnvSensorsSample}{00026}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00028}\doxymbox{\hyperlink{structLokiEnvSensorsSample_a80f96b2f91086104989c60f5ea46ce41}{00028}}\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{structLokiEnvSensorsSample_a80f96b2f91086104989c60f5ea46ce41}{channel}};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00030}\doxymbox{\hyperlink{unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____}{00030}}\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0_____a635a029d1a2ff0845f59527750e00259}{data}};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ int32\_t\ \doxymbox{\hyperlink{unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0_____a4aa3f4a30511be76b03d69acb45edb31}{data\_raw}};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00035}00035\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00036}00036\ \}\ \doxymbox{\hyperlink{structLokiEnvSensorsSample}{LokiEnvSensorsSample}};}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00042}00042\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *\doxymbox{\hyperlink{group__gLokiEnvSensors_ga96d2d529c200e14e2056cb6a07221b51}{LokiEnvSensors\_new}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gab4a1dc32803805865b0b76fb8ba9f6e9}{LokiEnvSensors\_del}}(\doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00057}00057\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gadda8b640c1f17b5d096896d73e2df06d}{LokiEnvSensors\_restart}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00064}00064\ uint32\_t\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga30cb4552b6b9b6921e108e3daca8749a}{LokiEnvSensors\_get\_clk\_frequency}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00071}00071\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga600792997301c4bed3dbbae28c397e79}{LokiEnvSensors\_get\_channels}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00078}00078\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gae7e8ce5a5470bb0d7271e623d45a20fc}{LokiEnvSensors\_get\_sampling\_frequency}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00085}00085\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga5aeffec7e9fcf6f043d089e3ad157308}{LokiEnvSensors\_set\_sampling\_frequency}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self,\ \textcolor{keywordtype}{float}\ freq);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00092}00092\ uint32\_t\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gadf0e53d8c7a5580dbeebb2f24216d2f6}{LokiEnvSensors\_get\_packet\_length\_max}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00099}00099\ uint32\_t\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gae4fc28946ee8a1e02238df371861a901}{LokiEnvSensors\_get\_packet\_length}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00110}00110\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga176acbc5974ccb760b50c01f30bf2f26}{LokiEnvSensors\_get\_scaling\_factor}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self,\ \textcolor{keywordtype}{size\_t}\ channel);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00121}00121\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gae08bb0f35070b8ff5d9d68dda74002d4}{LokiEnvSensors\_set\_scaling\_factor}}(\doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self,\ \textcolor{keywordtype}{size\_t}\ channel,\ \textcolor{keywordtype}{float}\ scale);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00129}00129\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga0ec5f0af8af44aed10903abb24ae7ef6}{LokiEnvSensors\_get\_last\_data}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self,\ \textcolor{keywordtype}{size\_t}\ channel);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00143}00143\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga73bc770ef666badd820b39d8519c2835}{LokiEnvSensors\_start\_streaming}}(\doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self,\ int32\_t\ channels,\ \textcolor{keywordtype}{bool}\ raw,\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *out);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00152}00152\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_ga25d2fc754531818073da17164ca9db6a}{LokiEnvSensors\_stop\_streaming}}(\doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00161}00161\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gab19c1189c6764d5e8762043a96afb377}{LokiEnvSensors\_force\_stop}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00168}00168\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiEnvSensors_gabde1553662bb4376eb15ed7b9c4ec2fe}{LokiEnvSensors\_is\_streaming}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEnvSensors}{LokiEnvSensors}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00170}00170\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-env-sensors_8h_source_l00171}00171\ }
+
+\end{DoxyCode}

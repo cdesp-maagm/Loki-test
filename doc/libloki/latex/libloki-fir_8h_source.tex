@@ -1,0 +1,33 @@
+\doxysection{libloki-\/fir.h}
+\hypertarget{libloki-fir_8h_source}{}\label{libloki-fir_8h_source}\index{libloki-\/fir.h@{libloki-\/fir.h}}
+\doxymbox{\hyperlink{libloki-fir_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_FIR\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ LIBLOKI\_FIR\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00017}\doxymbox{\hyperlink{group__gLokiFIRFilter_ga87ea977cff213fcd36220315045756ce}{00017}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}};}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00032}00032\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *\doxymbox{\hyperlink{group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2}{LokiFIRFilter\_new}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *\doxymbox{\hyperlink{structLokiFIRFilter_a748ee8c29617200a9d6bf1939272705e}{coeffs}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIRFilter_aaebcaf11cbc869831f044b03d9df91f5}{length}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIRFilter_a3e3229003c7da4b79e75d0bf00c0253f}{decimation}});}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00042}00042\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *\doxymbox{\hyperlink{group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615}{LokiFIRFilter\_clone}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *other);}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00064}00064\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *\doxymbox{\hyperlink{group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37}{LokiFIRFilter\_new\_kaiser\_bessel}}(\textcolor{keywordtype}{float}\ fs,\ \textcolor{keywordtype}{float}\ fa,\ \textcolor{keywordtype}{float}\ fb,\ \textcolor{keywordtype}{float}\ att,\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIRFilter_aaebcaf11cbc869831f044b03d9df91f5}{length}},\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIRFilter_a3e3229003c7da4b79e75d0bf00c0253f}{decimation}});}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00078}00078\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b}{LokiFIRFilter\_work}}(\doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *self,\ \textcolor{keywordtype}{float}\ in,\ \textcolor{keywordtype}{float}\ *out);}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00086}00086\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384}{LokiFIRFilter\_reset}}(\doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00099}00099\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c}{LokiFIRFilter\_get\_actual\_length}}(\doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00105}00105\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196}{LokiFIRFilter\_del}}(\doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00107}00107\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-fir_8h_source_l00108}00108\ }
+
+\end{DoxyCode}

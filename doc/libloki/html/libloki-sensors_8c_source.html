@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-sensors.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8b7cb6c889a10e2a101a7e90c854ca4d.html">os</a></li><li class="navelem"><a class="el" href="dir_36bc09716899fd4d3c84c9f0faf1cb50.html">meta-eseo</a></li><li class="navelem"><a class="el" href="dir_910adc6d6742ed566096ff9e2f2e4fff.html">recipes-extended</a></li><li class="navelem"><a class="el" href="dir_e89a0b2c36fccf03d955eac7c1446893.html">libloki</a></li><li class="navelem"><a class="el" href="dir_1f3ced7451fad93586c67e306c44328d.html">files</a></li><li class="navelem"><a class="el" href="dir_366827a056754e4d7e2683c72dca3f00.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">libloki-sensors.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-sensors_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// TODO Ajouter les sources XADC et capteur de température I2C</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="libloki-sensors_8c.html#a369266c24eacffb87046522897a570d5">    5</a></span>&#160;<span class="preprocessor">#define _GNU_SOURCE</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sys/ioctl.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sys/mman.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;loki-adc-regs.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;loki-device-ioctl.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="libloki_8h.html">libloki.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structLokiSensors.html">   25</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structLokiSensors.html">LokiSensors</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structLokiSensors.html#aa37b8cd6be0dc84d23771fdc83bf4719">   27</a></span>&#160;    FILE *<a class="code" href="structLokiSensors.html#aa37b8cd6be0dc84d23771fdc83bf4719">file</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a6af4a8c1bb6d7285f502d68de4bc2836">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structLokiSensors.html#a6af4a8c1bb6d7285f502d68de4bc2836">fileno</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a05aa239dafd211d356f0f0f49768a375">   31</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code" href="structLokiSensors.html#a05aa239dafd211d356f0f0f49768a375">stop_request</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a664922157417914edbbd544033e57a53">   33</a></span>&#160;    <a class="code" href="structLokiFIFO.html">LokiFIFO</a> *<a class="code" href="structLokiSensors.html#a664922157417914edbbd544033e57a53">out</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structLokiSensors.html#aa6322b380f3f473a8b2cb41dc91cec32">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structLokiSensors.html#aa6322b380f3f473a8b2cb41dc91cec32">raw</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a935a9b059d802268c820f568e5df115a">   37</a></span>&#160;    int32_t <a class="code" href="structLokiSensors.html#a935a9b059d802268c820f568e5df115a">stream_channels</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structLokiSensors.html#abfec405520b01315e70d6acdec1b1687">   39</a></span>&#160;    pthread_t <a class="code" href="structLokiSensors.html#abfec405520b01315e70d6acdec1b1687">thread</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a308b1009656402fb600e052fc166e3dd">   41</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a308b1009656402fb600e052fc166e3dd">clk_frequency</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a6cb3307a8a043f1f85b8cb9f154b1e9b">   43</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a6cb3307a8a043f1f85b8cb9f154b1e9b">channels</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structLokiSensors.html#ac39332e3638d196dff621ca5ef5f9ba9">   45</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#ac39332e3638d196dff621ca5ef5f9ba9">cycles_per_sample_max</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a5117d4b846f9ec450f22c17185d038de">   47</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a5117d4b846f9ec450f22c17185d038de">channel_output_width</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structLokiSensors.html#aec2466a37f9fcbfebebc460abf4c5a1b">   49</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#aec2466a37f9fcbfebebc460abf4c5a1b">data_width</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structLokiSensors.html#ad37ccb2b10ff2c8f58ee0309997dfc20">   51</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#ad37ccb2b10ff2c8f58ee0309997dfc20">packet_length_min</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a3ce6cdf63e6168dea5e06fbda37d2804">   53</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a3ce6cdf63e6168dea5e06fbda37d2804">packet_length_max</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a003085765f88244f010533d34371d2c3">   55</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a003085765f88244f010533d34371d2c3">channel_mask</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structLokiSensors.html#ad59993e2dadcc1c3af6501d92fd9dd44">   57</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#ad59993e2dadcc1c3af6501d92fd9dd44">data_mask</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a86a57ccc7e3b64490066850b819247da">   59</a></span>&#160;    uint32_t <a class="code" href="structLokiSensors.html#a86a57ccc7e3b64490066850b819247da">data_sign_mask</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structLokiSensors.html#a076d8b26fda94e4131b205e5ee54a5e7">   61</a></span>&#160;    <span class="keywordtype">float</span> *<a class="code" href="structLokiSensors.html#a076d8b26fda94e4131b205e5ee54a5e7">scales</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">   65</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">   76</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> uint32_t <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a>* <span class="keyword">self</span>, LokiADCRegister reg) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    LokiRegisterQuery query = {.reg = reg};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_REG_READ, &amp;query);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_get_reg: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> query.value;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">   94</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">LokiSensors_set_reg</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a>* <span class="keyword">self</span>, LokiADCRegister reg, uint32_t value) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    LokiRegisterQuery query = {.reg = reg, .value = value};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_REG_WRITE, &amp;query);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_set_reg: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">  109</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">LokiSensors_dma_start</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_DMA_START);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_dma_start: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">  123</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">LokiSensors_dma_stop</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_DMA_STOP);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_dma_stop: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">  136</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">LokiSensors_dma_is_streaming</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">bool</span> res;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_DMA_IS_STREAMING, &amp;res);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_dma_is_streaming: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gabdfcb53bd798c7b84e7824956ee483ec">  152</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#gabdfcb53bd798c7b84e7824956ee483ec">LokiSensors_dma_get_start_time</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keyword">struct</span> timespec *res) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_DMA_START_TIME, res);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_dma_get_start_time: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">  166</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">LokiSensors_dma_get_packet_time</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keyword">struct</span> timespec *res) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> err = ioctl(self-&gt;fileno, LOKI_IOCTL_DMA_PACKET_TIME, res);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (err) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_dma_get_packet_time: ioctl returned %d\n&quot;</span>, err);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7">  173</a></span>&#160;<a class="code" href="structLokiSensors.html">LokiSensors</a> *<a class="code" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7">LokiSensors_new</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span> = calloc(1, <span class="keyword">sizeof</span>(<a class="code" href="structLokiSensors.html">LokiSensors</a>));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">self</span>-&gt;file = fopen(<span class="stringliteral">&quot;/dev/loki-adc&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> (!self-&gt;file) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">LokiSensors_del</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">self</span>-&gt;fileno = fileno(self-&gt;file);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">self</span>-&gt;clk_frequency         = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CLK_FREQUENCY);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">self</span>-&gt;channels              = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CHANNELS);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">self</span>-&gt;channel_output_width  = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CHANNEL_OUTPUT_WIDTH);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">self</span>-&gt;data_width            = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_DATA_WIDTH);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">self</span>-&gt;cycles_per_sample_max = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CYCLES_PER_SAMPLE_MAX);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keyword">self</span>-&gt;packet_length_max     = <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_PACKET_LENGTH_MAX);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">self</span>-&gt;channel_mask          = (1 &lt;&lt; <span class="keyword">self</span>-&gt;channel_output_width) - 1;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">self</span>-&gt;data_mask             = (1 &lt;&lt; <span class="keyword">self</span>-&gt;data_width) - 1;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">self</span>-&gt;data_sign_mask        = 1 &lt;&lt; (<span class="keyword">self</span>-&gt;data_width - 1);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// Allouer un tableau pour les facteurs de mise à l&#39;échelle,</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// et les initialiser à 1.</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">self</span>-&gt;scales = calloc(self-&gt;channels, <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span> (!self-&gt;scales) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <a class="code" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">LokiSensors_del</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <span class="keyword">self</span>-&gt;channels; i ++) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">self</span>-&gt;scales[i] = 1.0f;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">// Le nombre d&#39;octets d&#39;un transfert DMA doit être multiple de</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// * la taille d&#39;une page mémoire</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// * le nombre de voies * la taille d&#39;un échantillon</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    uint32_t page_size = getpagesize();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    uint32_t a         = page_size;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    uint32_t b         = <span class="keyword">self</span>-&gt;channels * <span class="keyword">sizeof</span>(<a class="code" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">while</span> (a != b) {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> (a &gt; b) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            a -= b;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> (b &gt; a) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            b -= a;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">self</span>-&gt;packet_length_min = page_size / a;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">self</span>-&gt;packet_length_max -= <span class="keyword">self</span>-&gt;packet_length_max % <span class="keyword">self</span>-&gt;packet_length_min;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">LokiSensors_set_packet_length</a>(<span class="keyword">self</span>, <a class="code" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">LokiSensors_get_packet_length</a>(<span class="keyword">self</span>));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">  232</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">LokiSensors_del</a>(<a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> (!<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">if</span> (self-&gt;file) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        fclose(self-&gt;file);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> (self-&gt;scales) {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        free(self-&gt;scales);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    free(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga97f3a1213a3b5af9d35d4436a44c979c">  248</a></span>&#160;uint32_t <a class="code" href="group__gLokiSensors.html#ga97f3a1213a3b5af9d35d4436a44c979c">LokiSensors_get_clk_frequency</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;clk_frequency;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga796a8dd28b4a9bf4cfc92f031d8005f1">  252</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__gLokiSensors.html#ga796a8dd28b4a9bf4cfc92f031d8005f1">LokiSensors_get_channels</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;channels;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">  256</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">LokiSensors_get_sampling_frequency</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)<span class="keyword">self</span>-&gt;clk_frequency / <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CYCLES_PER_SAMPLE);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c">  260</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c">LokiSensors_set_sampling_frequency</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keywordtype">float</span> freq) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">LokiSensors_set_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_CYCLES_PER_SAMPLE, roundf((<span class="keywordtype">float</span>)self-&gt;clk_frequency / freq));</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga222c227838147f429c734f06a668a5e1">  264</a></span>&#160;uint32_t <a class="code" href="group__gLokiSensors.html#ga222c227838147f429c734f06a668a5e1">LokiSensors_get_packet_length_max</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;packet_length_max;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">  268</a></span>&#160;uint32_t <a class="code" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">LokiSensors_get_packet_length</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_PACKET_LENGTH);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">  272</a></span>&#160;uint32_t <a class="code" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">LokiSensors_get_transfer_length</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;channels * <a class="code" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">LokiSensors_get_packet_length</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">  276</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">LokiSensors_set_packet_length</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, uint32_t length) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    length -= length % <span class="keyword">self</span>-&gt;packet_length_min;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">if</span> (length == 0) {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        length = <span class="keyword">self</span>-&gt;packet_length_min;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (length &gt; self-&gt;packet_length_max) {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        length = <span class="keyword">self</span>-&gt;packet_length_max;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">LokiSensors_set_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_PACKET_LENGTH, length);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga4b1b187b0aa26684641c88768c532e3b">  287</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="group__gLokiSensors.html#ga4b1b187b0aa26684641c88768c532e3b">LokiSensors_get_scaling_factor</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keywordtype">size_t</span> channel) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;scales[channel];</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gac39854322c9402bf8b6e08b3b834fca8">  291</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#gac39854322c9402bf8b6e08b3b834fca8">LokiSensors_set_scaling_factor</a>(<a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keywordtype">size_t</span> channel, <span class="keywordtype">float</span> scale) {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">self</span>-&gt;scales[channel] = scale;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087">  295</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087">LokiSensors_get_last_data</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <span class="keywordtype">size_t</span> channel) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">self</span>-&gt;scales[channel] * (int32_t)<a class="code" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a>(<span class="keyword">self</span>, LOKI_ADC_REG_LAST_DATA + channel);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">  307</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> uint32_t <a class="code" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">LokiSensors_get_packet_index</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> raw_item) {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> raw_item &gt;&gt; (<span class="keyword">self</span>-&gt;data_width + <span class="keyword">self</span>-&gt;channel_output_width);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">  321</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">LokiSensors_set_packet_item</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, <a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a> *item, <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> raw_item) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// Lire la valeur de l&#39;échantillon, alignée à droite en complément à deux.</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">// Effectuer l&#39;extension du bit de signe.</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    int32_t data_raw = raw_item &amp; <span class="keyword">self</span>-&gt;data_mask;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    raw_item &gt;&gt;= <span class="keyword">self</span>-&gt;data_width;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span> (data_raw &amp; self-&gt;data_sign_mask) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        data_raw |= ~self-&gt;data_mask;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        data_raw &amp;= <span class="keyword">self</span>-&gt;data_mask;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="comment">// Convertir les coordonnées en flottants si nécessaire.</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (self-&gt;raw) {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        item-&gt;<a class="code" href="structLokiSensorsSample.html#a1a3bfe2961484e9225b1405e0d0f179c">data_raw</a> = data_raw;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        item-&gt;<a class="code" href="structLokiSensorsSample.html#a58e39a9cc33c1d2d8aed07a2a8183dc8">data</a> = <span class="keyword">self</span>-&gt;scales[item-&gt;<a class="code" href="structLokiSensorsSample.html#a159a991e5a79c6d8526b3af2eeba37f2">channel</a>] * data_raw;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// Lire le numéro de la voie.</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    item-&gt;<a class="code" href="structLokiSensorsSample.html#a159a991e5a79c6d8526b3af2eeba37f2">channel</a> = raw_item &amp; <span class="keyword">self</span>-&gt;channel_mask;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gac65edfa5d1dbb5f1b560b4383a72555f">  350</a></span>&#160;<span class="preprocessor">#define USE_MMAP</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">  368</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">LokiSensors_work</a>(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span> = ptr;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    pthread_setname_np(self-&gt;thread, <span class="stringliteral">&quot;LokiSensors&quot;</span>);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="comment">// Obtenir un pointeur vers le buffer courant des échantillons mise en forme.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> out_length = <a class="code" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555">LokiPacket_get_length</a>(self-&gt;out, <span class="keyword">sizeof</span>(<a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a>));</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="structLokiPacket.html">LokiPacket</a> *out_packet  = <a class="code" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a>(self-&gt;out);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">if</span> (!out_packet) {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a> *out_ptr = (<a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a>*)out_packet-&gt;<a class="code" href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">buffer</a>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a> *out_end = out_ptr + out_length;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="comment">// Avec la fonction fread, allouer un buffer de données.</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">// Avec l&#39;accès par mmap, le buffer est fourni par le pilote.</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> in_length = <a class="code" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">LokiSensors_get_transfer_length</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">    #ifndef USE_MMAP</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> *in_buffer = calloc(in_length, <span class="keyword">sizeof</span>(<a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a>));</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> *in_end    = in_buffer + in_length;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordtype">size_t</span> in_length_bytes = in_length * <span class="keyword">sizeof</span>(<a class="code" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a>);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="comment">// Calculer la durée d&#39;un paquet d&#39;entrée, en nanosecondes.</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">double</span> in_period_ns = 1.0e9 * in_length / <span class="keyword">self</span>-&gt;channels / <a class="code" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">LokiSensors_get_sampling_frequency</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="comment">// Calculer le modulo du compteur de paquets du FPGA.</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    uint32_t packet_count_mod = 1 &lt;&lt; (<span class="keyword">sizeof</span>(<a class="code" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a>) * 8 - self-&gt;channel_output_width - self-&gt;data_width);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">bool</span> first_packet = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    uint32_t packet_index_prev = 0;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> in_timestamp;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">// Démarrer l&#39;acquisition.</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">LokiSensors_dma_start</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">while</span> (!self-&gt;stop_request) {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="comment">// Lire un buffer d&#39;échantillons en provenance du DMA.</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">        #ifndef USE_MMAP</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordflow">if</span> (fread(in_buffer, <span class="keyword">sizeof</span>(<a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a>), in_length, self-&gt;file) != in_length) {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_work: read failed (error: %d, %s)\n&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <span class="comment">// Accès au buffer DMA en mode zero-copy.</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="comment">// Contrairement à l&#39;acquisition des voies optiques, l&#39;appel à mmap</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="comment">// peut bloquer le processus pendant une longue durée.</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="comment">// On utilise le timeout pour le débloquer jusqu&#39;au succès.</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> *in_buffer;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                in_buffer = mmap(NULL, in_length_bytes, PROT_READ, MAP_PRIVATE, self-&gt;fileno, 0);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            } <span class="keywordflow">while</span> (in_buffer == MAP_FAILED &amp;&amp; errno == ETIMEDOUT);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">if</span> (in_buffer == MAP_FAILED) {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_work: mmap failed (error: %d, %s)\n&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> *in_end = in_buffer + in_length;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="comment">// Convertir la date du paquet reçu en timestamp.</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keyword">struct </span>timespec ts;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <a class="code" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">LokiSensors_dma_get_packet_time</a>(<span class="keyword">self</span>, &amp;ts);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <a class="code" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp = <a class="code" href="group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077">LokiTime_to_timestamp</a>(ts);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="comment">// Attendre le paquet numéro 0 pour commencer.</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        uint32_t packet_index = <a class="code" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">LokiSensors_get_packet_index</a>(<span class="keyword">self</span>, *in_buffer);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        <span class="comment">// Prendre pour référence temporelle la date du premier paquet.</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        <span class="comment">// Les dates des autres paquets seront calculées en fonction du nombre d&#39;échantillons.</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">if</span> (first_packet <span class="comment">/* &amp;&amp; !packet_index */</span>) { <span class="comment">// TODO ajouter une réinitialisation du numéro de paquet dans LTC2325_AXI</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            in_timestamp = timestamp;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">true</span> <span class="comment">/* !first_packet || !packet_index */</span>) {  <span class="comment">// TODO ajouter une réinitialisation du numéro de paquet dans LTC2325_AXI</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="comment">// Calculer le timestamp du paquet d&#39;entrée, en nanosecondes,</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            <span class="comment">// en utilisant le numéro de paquet fourni par le FPGA.</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            int32_t packet_interval = packet_index - packet_index_prev;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            packet_index_prev = packet_index;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            first_packet = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            <span class="keywordflow">if</span> (packet_interval &lt; 0) {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_work: packet index rollover (%u).\n&quot;</span>, packet_index);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                packet_interval += packet_count_mod;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                <span class="comment">// Ignorer le paquet si l&#39;inversion de chronologie est liée à une perte de paquet.</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                <span class="keywordflow">if</span> (packet_interval &gt; 1) {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    fprintf(stderr, <span class="stringliteral">&quot;LokiSensors_work: discarding packet.\n&quot;</span>);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                    <span class="keywordflow">goto</span> LokiSensors_work_continue;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                }</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            }</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            in_timestamp += round(in_period_ns * packet_interval);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="comment">// En commençant un nouveau paquet de sortie, copier la date du paquet d&#39;entrée.</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            <span class="keywordflow">if</span> (out_ptr == (<a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a>*)out_packet-&gt;<a class="code" href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">buffer</a>) {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                out_packet-&gt;<a class="code" href="structLokiPacket.html#acea64d7ebf465201bb26d9c33c275af1">timestamp</a> = in_timestamp;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> *in_ptr = in_buffer;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <span class="keywordflow">while</span> (in_ptr != in_end &amp;&amp; !self-&gt;stop_request) {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                <a class="code" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> in = *in_ptr ++;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                <a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a> s;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                <a class="code" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">LokiSensors_set_packet_item</a>(<span class="keyword">self</span>, &amp;s, in);</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                <span class="keywordflow">if</span> (self-&gt;stream_channels &amp; (1 &lt;&lt; s.<a class="code" href="structLokiSensorsSample.html#a159a991e5a79c6d8526b3af2eeba37f2">channel</a>)) {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    *out_ptr ++ = s;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                    <span class="keywordflow">if</span> (out_ptr == out_end) {</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                        <a class="code" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a>(self-&gt;out);</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                        out_packet = <a class="code" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a>(self-&gt;out);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                        <span class="keywordflow">if</span> (!out_packet) {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                        }</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                        <span class="keywordflow">if</span> (in_ptr != in_end) {</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                            out_packet-&gt;<a class="code" href="structLokiPacket.html#acea64d7ebf465201bb26d9c33c275af1">timestamp</a> = in_timestamp + round(in_period_ns * (in_ptr - in_buffer) / in_length);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                        }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                        out_ptr = (<a class="code" href="structLokiSensorsSample.html">LokiSensorsSample</a>*)out_packet-&gt;<a class="code" href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">buffer</a>;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                        out_end = out_ptr + out_length;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                    }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                }</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            }</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        }</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    LokiSensors_work_continue:</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="preprocessor">        #ifdef USE_MMAP</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            munmap(in_buffer, in_length_bytes);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    }</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;<span class="preprocessor">    #ifndef USE_MMAP</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        free(in_buffer);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <a class="code" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">LokiSensors_dma_stop</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;}</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
+<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7">  507</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7">LokiSensors_start_streaming</a>(<a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>, int32_t channels, <span class="keywordtype">bool</span> raw, <a class="code" href="structLokiFIFO.html">LokiFIFO</a> *out) {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">LokiSensors_dma_is_streaming</a>(<span class="keyword">self</span>)) {</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        <span class="keywordflow">return</span> EBUSY;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    }</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keyword">self</span>-&gt;stop_request    = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keyword">self</span>-&gt;out             = out;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keyword">self</span>-&gt;raw             = raw;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keyword">self</span>-&gt;stream_channels = channels;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">return</span> pthread_create(&amp;self-&gt;thread, NULL, <a class="code" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">LokiSensors_work</a>, <span class="keyword">self</span>);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;}</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709">  518</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709">LokiSensors_stop_streaming</a>(<a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (self-&gt;stop_request) {</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    }</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    <span class="keyword">self</span>-&gt;stop_request = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <a class="code" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a>(self-&gt;out);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    pthread_join(self-&gt;thread, NULL);</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;}</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
+<div class="line"><a name="l00527"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6">  527</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6">LokiSensors_force_stop</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <a class="code" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">LokiSensors_dma_stop</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;}</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160; </div>
+<div class="line"><a name="l00531"></a><span class="lineno"><a class="line" href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b">  531</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b">LokiSensors_is_streaming</a>(<span class="keyword">const</span> <a class="code" href="structLokiSensors.html">LokiSensors</a> *<span class="keyword">self</span>) {</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">LokiSensors_dma_is_streaming</a>(<span class="keyword">self</span>);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;}</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="agroup__gLokiSensors_html_ga222c227838147f429c734f06a668a5e1"><div class="ttname"><a href="group__gLokiSensors.html#ga222c227838147f429c734f06a668a5e1">LokiSensors_get_packet_length_max</a></div><div class="ttdeci">uint32_t LokiSensors_get_packet_length_max(const LokiSensors *self)</div><div class="ttdoc">Lire la longueur maximale des paquets DMA pour une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00264">libloki-sensors.c:264</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a86a57ccc7e3b64490066850b819247da"><div class="ttname"><a href="structLokiSensors.html#a86a57ccc7e3b64490066850b819247da">LokiSensors::data_sign_mask</a></div><div class="ttdeci">uint32_t data_sign_mask</div><div class="ttdoc">Le masque binaire permettant d'isoler le bit de signe de la valeur d'un échantillon brut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00059">libloki-sensors.c:59</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a003085765f88244f010533d34371d2c3"><div class="ttname"><a href="structLokiSensors.html#a003085765f88244f010533d34371d2c3">LokiSensors::channel_mask</a></div><div class="ttdeci">uint32_t channel_mask</div><div class="ttdoc">Le masque binaire permettant d'isoler le numéro de voie dans un échantillon brut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00055">libloki-sensors.c:55</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gaddedaed69cd104ec1095687841046fc8"><div class="ttname"><a href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a></div><div class="ttdeci">uint32_t LokiDMASample</div><div class="ttdoc">Le type de donnée brut d'un échantillon passé par transfert DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00065">libloki-sensors.c:65</a></div></div>
+<div class="ttc" id="agroup__gLokiModem_html_gac11ada7ec17dc89095e83bd867d822e1"><div class="ttname"><a href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a></div><div class="ttdeci">uint64_t LokiDMASample</div><div class="ttdoc">Le type brut d'un échantillon démodulé transféré par DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-modem_8c_source.html#l00133">libloki-modem.c:133</a></div></div>
+<div class="ttc" id="astructLokiPacket_html_afbb0c3d44760e9d9dab41578f6863105"><div class="ttname"><a href="structLokiPacket.html#afbb0c3d44760e9d9dab41578f6863105">LokiPacket::buffer</a></div><div class="ttdeci">char buffer[0]</div><div class="ttdoc">Les valeurs d'échantillons. La taille et le type de ce tableau son spécifiés ultérieurement.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-packet_8h_source.html#l00020">libloki-packet.h:20</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga3cde3b0337f50e2855c57facb372240c"><div class="ttname"><a href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c">LokiSensors_set_sampling_frequency</a></div><div class="ttdeci">void LokiSensors_set_sampling_frequency(const LokiSensors *self, float freq)</div><div class="ttdoc">Affecter une fréquence d'échantillonnage au circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00260">libloki-sensors.c:260</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga1857007bf991eed3f72c20bd42522709"><div class="ttname"><a href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709">LokiSensors_stop_streaming</a></div><div class="ttdeci">void LokiSensors_stop_streaming(LokiSensors *self)</div><div class="ttdoc">Arrêter l'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00518">libloki-sensors.c:518</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gabdfcb53bd798c7b84e7824956ee483ec"><div class="ttname"><a href="group__gLokiSensors.html#gabdfcb53bd798c7b84e7824956ee483ec">LokiSensors_dma_get_start_time</a></div><div class="ttdeci">static void LokiSensors_dma_get_start_time(const LokiSensors *self, struct timespec *res)</div><div class="ttdoc">Lire la date de démarrage des transferts DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00152">libloki-sensors.c:152</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaaff05dfee1870a70b14718028d830f21"><div class="ttname"><a href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a></div><div class="ttdeci">void LokiFIFO_abort(LokiFIFO *self)</div><div class="ttdoc">Terminer les attentes en cours.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-fifo_8c_source.html#l00180">libloki-fifo.c:180</a></div></div>
+<div class="ttc" id="astructLokiPacket_html_acea64d7ebf465201bb26d9c33c275af1"><div class="ttname"><a href="structLokiPacket.html#acea64d7ebf465201bb26d9c33c275af1">LokiPacket::timestamp</a></div><div class="ttdeci">LokiTimestamp timestamp</div><div class="ttdoc">La date de réception du paquet, en microsecondes depuis l'epoch Unix.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-packet_8h_source.html#l00018">libloki-packet.h:18</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a5117d4b846f9ec450f22c17185d038de"><div class="ttname"><a href="structLokiSensors.html#a5117d4b846f9ec450f22c17185d038de">LokiSensors::channel_output_width</a></div><div class="ttdeci">uint32_t channel_output_width</div><div class="ttdoc">Le nombre de bits représentant le numéro de voie dans un échantillon brut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00047">libloki-sensors.c:47</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga715fe749a0006ed6ca3952ec8568ccc8"><div class="ttname"><a href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">LokiSensors_work</a></div><div class="ttdeci">static void * LokiSensors_work(void *ptr)</div><div class="ttdoc">Traiter un tableau d'échantillons issu d'un transfert DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00368">libloki-sensors.c:368</a></div></div>
+<div class="ttc" id="agroup__gLokiTime_html_ga775c6dbda9586caf849a80cad5b5b0bc"><div class="ttname"><a href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></div><div class="ttdeci">uint64_t LokiTimestamp</div><div class="ttdoc">Représentation d'une date, en nanosecondes par rapport à une date de référence.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-time_8h_source.html#l00017">libloki-time.h:17</a></div></div>
+<div class="ttc" id="astructLokiSensorsSample_html"><div class="ttname"><a href="structLokiSensorsSample.html">LokiSensorsSample</a></div><div class="ttdoc">Représentation d'un échantillon en provenance des capteurs auxiliaires.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8h_source.html#l00026">libloki-sensors.h:26</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga71385643e6a7b2ed2959a2bfe216e2d6"><div class="ttname"><a href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">LokiSensors_set_reg</a></div><div class="ttdeci">static void LokiSensors_set_reg(const LokiSensors *self, LokiADCRegister reg, uint32_t value)</div><div class="ttdoc">Affecter un registre du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00094">libloki-sensors.c:94</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_ad59993e2dadcc1c3af6501d92fd9dd44"><div class="ttname"><a href="structLokiSensors.html#ad59993e2dadcc1c3af6501d92fd9dd44">LokiSensors::data_mask</a></div><div class="ttdeci">uint32_t data_mask</div><div class="ttdoc">Le masque binaire permettant d'isoler la valeur d'un échantillon brut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00057">libloki-sensors.c:57</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga37c927170b57fa2979fbdd86bc7cbbe6"><div class="ttname"><a href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6">LokiSensors_force_stop</a></div><div class="ttdeci">void LokiSensors_force_stop(const LokiSensors *self)</div><div class="ttdoc">Arrêter l'acquisition immédiatement.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00527">libloki-sensors.c:527</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga47b324a625c39935ced2029a33b2d087"><div class="ttname"><a href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087">LokiSensors_get_last_data</a></div><div class="ttdeci">float LokiSensors_get_last_data(const LokiSensors *self, size_t channel)</div><div class="ttdoc">Lire la valeur du dernier échantillon acquis sur une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00295">libloki-sensors.c:295</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gaa9f4a33a40dd038a4bd50d897f6cddfa"><div class="ttname"><a href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">LokiSensors_set_packet_length</a></div><div class="ttdeci">void LokiSensors_set_packet_length(const LokiSensors *self, uint32_t length)</div><div class="ttdoc">Affecter la longueur d'un paquet DMA pour une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00276">libloki-sensors.c:276</a></div></div>
+<div class="ttc" id="astructLokiSensorsSample_html_a58e39a9cc33c1d2d8aed07a2a8183dc8"><div class="ttname"><a href="structLokiSensorsSample.html#a58e39a9cc33c1d2d8aed07a2a8183dc8">LokiSensorsSample::data</a></div><div class="ttdeci">float data</div><div class="ttdoc">La valeur de l'échantillon, en virgule flottante après mise à l'échelle.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8h_source.html#l00032">libloki-sensors.h:32</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga098d1895abd4748aa16344e32a790744"><div class="ttname"><a href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">LokiSensors_dma_is_streaming</a></div><div class="ttdeci">static bool LokiSensors_dma_is_streaming(const LokiSensors *self)</div><div class="ttdoc">Lire l'état des transferts DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00136">libloki-sensors.c:136</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_ac39332e3638d196dff621ca5ef5f9ba9"><div class="ttname"><a href="structLokiSensors.html#ac39332e3638d196dff621ca5ef5f9ba9">LokiSensors::cycles_per_sample_max</a></div><div class="ttdeci">uint32_t cycles_per_sample_max</div><div class="ttdoc">Le nombre maximal de cycles d'horloge par échantillon.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00045">libloki-sensors.c:45</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a935a9b059d802268c820f568e5df115a"><div class="ttname"><a href="structLokiSensors.html#a935a9b059d802268c820f568e5df115a">LokiSensors::stream_channels</a></div><div class="ttdeci">int32_t stream_channels</div><div class="ttdoc">Un masque indiquant les voies à traiter, -1 pour toutes les voies.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00037">libloki-sensors.c:37</a></div></div>
+<div class="ttc" id="astructLokiSensorsSample_html_a1a3bfe2961484e9225b1405e0d0f179c"><div class="ttname"><a href="structLokiSensorsSample.html#a1a3bfe2961484e9225b1405e0d0f179c">LokiSensorsSample::data_raw</a></div><div class="ttdeci">int32_t data_raw</div><div class="ttdoc">La valeur de l'échantillon, en virgule fixe.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8h_source.html#l00034">libloki-sensors.h:34</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga89a9f59324867192240ebfd86cf645cc"><div class="ttname"><a href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">LokiSensors_set_packet_item</a></div><div class="ttdeci">static void LokiSensors_set_packet_item(const LokiSensors *self, LokiSensorsSample *item, LokiDMASample raw_item)</div><div class="ttdoc">Convertir un échantillon issu du DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00321">libloki-sensors.c:321</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga4013763de51f952b4923355b1006c4a7"><div class="ttname"><a href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">LokiSensors_dma_get_packet_time</a></div><div class="ttdeci">static void LokiSensors_dma_get_packet_time(const LokiSensors *self, struct timespec *res)</div><div class="ttdoc">Lire la date du dernier transfert DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00166">libloki-sensors.c:166</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga97f3a1213a3b5af9d35d4436a44c979c"><div class="ttname"><a href="group__gLokiSensors.html#ga97f3a1213a3b5af9d35d4436a44c979c">LokiSensors_get_clk_frequency</a></div><div class="ttdeci">uint32_t LokiSensors_get_clk_frequency(const LokiSensors *self)</div><div class="ttdoc">Lire la fréquence d'horloge du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00248">libloki-sensors.c:248</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a6cb3307a8a043f1f85b8cb9f154b1e9b"><div class="ttname"><a href="structLokiSensors.html#a6cb3307a8a043f1f85b8cb9f154b1e9b">LokiSensors::channels</a></div><div class="ttdeci">uint32_t channels</div><div class="ttdoc">Le nombre de voies supportées par le circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00043">libloki-sensors.c:43</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a3ce6cdf63e6168dea5e06fbda37d2804"><div class="ttname"><a href="structLokiSensors.html#a3ce6cdf63e6168dea5e06fbda37d2804">LokiSensors::packet_length_max</a></div><div class="ttdeci">uint32_t packet_length_max</div><div class="ttdoc">La longueur maximale d'un paquet DMA, en échantillons par voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00053">libloki-sensors.c:53</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_aa6322b380f3f473a8b2cb41dc91cec32"><div class="ttname"><a href="structLokiSensors.html#aa6322b380f3f473a8b2cb41dc91cec32">LokiSensors::raw</a></div><div class="ttdeci">bool raw</div><div class="ttdoc">Conserver les données brutes (entiers sans mise à l'échelle).</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00035">libloki-sensors.c:35</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga16e71c40a26b79bde03715acbc3d7902"><div class="ttname"><a href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">LokiSensors_dma_stop</a></div><div class="ttdeci">static void LokiSensors_dma_stop(const LokiSensors *self)</div><div class="ttdoc">Demander au circuit d'acquisition d'arrêter les transferts DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00123">libloki-sensors.c:123</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a076d8b26fda94e4131b205e5ee54a5e7"><div class="ttname"><a href="structLokiSensors.html#a076d8b26fda94e4131b205e5ee54a5e7">LokiSensors::scales</a></div><div class="ttdeci">float * scales</div><div class="ttdoc">Le tableau des facteurs d'échelle à appliquer à chaque voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00061">libloki-sensors.c:61</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga7574d0a4603cc6713c8e3b43e8516b68"><div class="ttname"><a href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">LokiSensors_get_packet_index</a></div><div class="ttdeci">static uint32_t LokiSensors_get_packet_index(const LokiSensors *self, LokiDMASample raw_item)</div><div class="ttdoc">Lire l'indice d'un paquet reçu.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00307">libloki-sensors.c:307</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_aa37b8cd6be0dc84d23771fdc83bf4719"><div class="ttname"><a href="structLokiSensors.html#aa37b8cd6be0dc84d23771fdc83bf4719">LokiSensors::file</a></div><div class="ttdeci">FILE * file</div><div class="ttdoc">Le fichier représentant le périphérique qui gère les capteurs.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00027">libloki-sensors.c:27</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gac39854322c9402bf8b6e08b3b834fca8"><div class="ttname"><a href="group__gLokiSensors.html#gac39854322c9402bf8b6e08b3b834fca8">LokiSensors_set_scaling_factor</a></div><div class="ttdeci">void LokiSensors_set_scaling_factor(LokiSensors *self, size_t channel, float scale)</div><div class="ttdoc">Affecter un facteur de mise à l'échelle des échantillons d'une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00291">libloki-sensors.c:291</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_ad37ccb2b10ff2c8f58ee0309997dfc20"><div class="ttname"><a href="structLokiSensors.html#ad37ccb2b10ff2c8f58ee0309997dfc20">LokiSensors::packet_length_min</a></div><div class="ttdeci">uint32_t packet_length_min</div><div class="ttdoc">La longueur minimale d'un paquet DMA, en échantillons par voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00051">libloki-sensors.c:51</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gacf8b4b66fef82cc02ed212ebe2f171cd"><div class="ttname"><a href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a></div><div class="ttdeci">static uint32_t LokiSensors_get_reg(const LokiSensors *self, LokiADCRegister reg)</div><div class="ttdoc">Lire un registre du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00076">libloki-sensors.c:76</a></div></div>
+<div class="ttc" id="astructLokiPacket_html"><div class="ttname"><a href="structLokiPacket.html">LokiPacket</a></div><div class="ttdoc">Structure d'un paquet d'échantillons échangés entre tâches concurrentes.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-packet_8h_source.html#l00016">libloki-packet.h:16</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_abfec405520b01315e70d6acdec1b1687"><div class="ttname"><a href="structLokiSensors.html#abfec405520b01315e70d6acdec1b1687">LokiSensors::thread</a></div><div class="ttdeci">pthread_t thread</div><div class="ttdoc">Le thread démarré par LokiSensors_start_streaming.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00039">libloki-sensors.c:39</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a05aa239dafd211d356f0f0f49768a375"><div class="ttname"><a href="structLokiSensors.html#a05aa239dafd211d356f0f0f49768a375">LokiSensors::stop_request</a></div><div class="ttdeci">volatile bool stop_request</div><div class="ttdoc">Indicateur de demande d'arrêt d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00031">libloki-sensors.c:31</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga9d21708a76ac74826125a8fbf5a5efaf"><div class="ttname"><a href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a></div><div class="ttdeci">void LokiFIFO_push(LokiFIFO *self)</div><div class="ttdoc">Valider l'élément courant en écriture.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-fifo_8c_source.html#l00123">libloki-fifo.c:123</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gae83f05513344aea82443b92f28ee18fd"><div class="ttname"><a href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">LokiSensors_get_sampling_frequency</a></div><div class="ttdeci">float LokiSensors_get_sampling_frequency(const LokiSensors *self)</div><div class="ttdoc">Lire la fréquence d'échantillonnage du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00256">libloki-sensors.c:256</a></div></div>
+<div class="ttc" id="astructLokiSensorsSample_html_a159a991e5a79c6d8526b3af2eeba37f2"><div class="ttname"><a href="structLokiSensorsSample.html#a159a991e5a79c6d8526b3af2eeba37f2">LokiSensorsSample::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdoc">Le numéro de la voie sur lequel l'échantillon a été reçu.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8h_source.html#l00028">libloki-sensors.h:28</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga4b1b187b0aa26684641c88768c532e3b"><div class="ttname"><a href="group__gLokiSensors.html#ga4b1b187b0aa26684641c88768c532e3b">LokiSensors_get_scaling_factor</a></div><div class="ttdeci">float LokiSensors_get_scaling_factor(const LokiSensors *self, size_t channel)</div><div class="ttdoc">Lire le facteur de mise à l'échelle des échantillons d'une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00287">libloki-sensors.c:287</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a664922157417914edbbd544033e57a53"><div class="ttname"><a href="structLokiSensors.html#a664922157417914edbbd544033e57a53">LokiSensors::out</a></div><div class="ttdeci">LokiFIFO * out</div><div class="ttdoc">La FIFO de sortie de ce module d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00033">libloki-sensors.c:33</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gaf9c872bf8182d8d50e3dbafb69a3dea1"><div class="ttname"><a href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">LokiSensors_get_packet_length</a></div><div class="ttdeci">uint32_t LokiSensors_get_packet_length(const LokiSensors *self)</div><div class="ttdoc">Lire la longueur courante d'un paquet DMA pour une voie.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00268">libloki-sensors.c:268</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gaa5d32b7d8e63c9305f29e90577e54b1b"><div class="ttname"><a href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b">LokiSensors_is_streaming</a></div><div class="ttdeci">bool LokiSensors_is_streaming(const LokiSensors *self)</div><div class="ttdoc">Lire l'état de l'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00531">libloki-sensors.c:531</a></div></div>
+<div class="ttc" id="agroup__gLokiPacket_html_gae0204abb3e85eacc5e915eb170245555"><div class="ttname"><a href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555">LokiPacket_get_length</a></div><div class="ttdeci">static size_t LokiPacket_get_length(LokiFIFO *fifo, size_t sample_size)</div><div class="ttdoc">Lire la longueur des paquets supportés par une FIFO.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-packet_8h_source.html#l00041">libloki-packet.h:41</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gabc57b82efb0c7c156185c1dfc972f6f7"><div class="ttname"><a href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7">LokiSensors_start_streaming</a></div><div class="ttdeci">int LokiSensors_start_streaming(LokiSensors *self, int32_t channels, bool raw, LokiFIFO *out)</div><div class="ttdoc">Démarrer l'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00507">libloki-sensors.c:507</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gac4ae3143767c6ead1aaae6b0bdb3e463"><div class="ttname"><a href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a></div><div class="ttdeci">void * LokiFIFO_get_producer_item(LokiFIFO *self)</div><div class="ttdoc">Obtenir une référence vers l'élément courant en écriture.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-fifo_8c_source.html#l00106">libloki-fifo.c:106</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga643f5e3bec3eb3988c4e23a5d4c3bdcd"><div class="ttname"><a href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">LokiSensors_dma_start</a></div><div class="ttdeci">static void LokiSensors_dma_start(const LokiSensors *self)</div><div class="ttdoc">Demander au circuit d'acquisition de démarrer les transferts DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00109">libloki-sensors.c:109</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga4b0b67185ef9acde1a519f4379c2fee7"><div class="ttname"><a href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7">LokiSensors_new</a></div><div class="ttdeci">LokiSensors * LokiSensors_new(void)</div><div class="ttdoc">Construire un module d'acquisition pour les capteurs auxiliaires.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00173">libloki-sensors.c:173</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d'une FIFO.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-fifo_8c_source.html#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="alibloki_8h_html"><div class="ttname"><a href="libloki_8h.html">libloki.h</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga4de58974236aecf5c5f9f8f306173f15"><div class="ttname"><a href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">LokiSensors_get_transfer_length</a></div><div class="ttdeci">uint32_t LokiSensors_get_transfer_length(const LokiSensors *self)</div><div class="ttdoc">Lire la longueur courante d'un transfert DMA.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00272">libloki-sensors.c:272</a></div></div>
+<div class="ttc" id="astructLokiSensors_html"><div class="ttname"><a href="structLokiSensors.html">LokiSensors</a></div><div class="ttdoc">Représentation de l'interface d'acquisition des capteurs auxiliaires.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00025">libloki-sensors.c:25</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_ga796a8dd28b4a9bf4cfc92f031d8005f1"><div class="ttname"><a href="group__gLokiSensors.html#ga796a8dd28b4a9bf4cfc92f031d8005f1">LokiSensors_get_channels</a></div><div class="ttdeci">size_t LokiSensors_get_channels(const LokiSensors *self)</div><div class="ttdoc">Lire le nombre de voies du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00252">libloki-sensors.c:252</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_aec2466a37f9fcbfebebc460abf4c5a1b"><div class="ttname"><a href="structLokiSensors.html#aec2466a37f9fcbfebebc460abf4c5a1b">LokiSensors::data_width</a></div><div class="ttdeci">uint32_t data_width</div><div class="ttdoc">Le nombre de bits de données dans un échantillon brut.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00049">libloki-sensors.c:49</a></div></div>
+<div class="ttc" id="agroup__gLokiSensors_html_gaaa06702e691e70c9945dbd1a4387c27b"><div class="ttname"><a href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">LokiSensors_del</a></div><div class="ttdeci">void LokiSensors_del(LokiSensors *self)</div><div class="ttdoc">Détruire un module d'acquisition pour les capteurs auxiliaires.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00232">libloki-sensors.c:232</a></div></div>
+<div class="ttc" id="agroup__gLokiTime_html_ga8ca611d70fff98658ab83c2e6ad29077"><div class="ttname"><a href="group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077">LokiTime_to_timestamp</a></div><div class="ttdeci">static LokiTimestamp LokiTime_to_timestamp(struct timespec ts)</div><div class="ttdoc">Convertir une date en timestamp.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-time_8h_source.html#l00033">libloki-time.h:33</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a308b1009656402fb600e052fc166e3dd"><div class="ttname"><a href="structLokiSensors.html#a308b1009656402fb600e052fc166e3dd">LokiSensors::clk_frequency</a></div><div class="ttdeci">uint32_t clk_frequency</div><div class="ttdoc">La fréquence d'horloge du circuit d'acquisition.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00041">libloki-sensors.c:41</a></div></div>
+<div class="ttc" id="astructLokiSensors_html_a6af4a8c1bb6d7285f502d68de4bc2836"><div class="ttname"><a href="structLokiSensors.html#a6af4a8c1bb6d7285f502d68de4bc2836">LokiSensors::fileno</a></div><div class="ttdeci">int fileno</div><div class="ttdoc">Le numéro du fichier représentant le périphérique qui gère les capteurs.</div><div class="ttdef"><b>Definition:</b> <a href="libloki-sensors_8c_source.html#l00029">libloki-sensors.c:29</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

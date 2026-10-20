@@ -1,0 +1,5 @@
+<map id="LokiFIRFilter_new" name="LokiFIRFilter_new">
+<area shape="rect" id="node1" title="Construire un filtre FIR." alt="" coords="5,42,143,67"/>
+<area shape="rect" id="node2" href="$group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="191,5,353,45"/>
+<area shape="rect" id="node3" href="$group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="207,70,337,95"/>
+</map>

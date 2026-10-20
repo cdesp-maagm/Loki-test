@@ -1,0 +1,81 @@
+\doxysection{Référence de la structure Loki\+FIFORecord}
+\hypertarget{structLokiFIFORecord}{}\label{structLokiFIFORecord}\index{LokiFIFORecord@{LokiFIFORecord}}
+
+
+Représentation d\textquotesingle{}un enregistrement dans une FIFO.  
+
+
+
+
+Graphe de collaboration de Loki\+FIFORecord:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+volatile int \doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}
+\begin{DoxyCompactList}\small\item\em Le masque indiquant l\textquotesingle{}état de lecture de cet enregistrement par les consommateurs de la FIFO. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers le prochain enregistrement dans la FIFO. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}{item}} \+[0]
+\begin{DoxyCompactList}\small\item\em Les données logées dans cet enregistrement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un enregistrement dans une FIFO. 
+
+Un enregistrement constitue un maillon dans une liste chaînée circulaire. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+
+
+\label{structLokiFIFORecord_doc-variable-members}
+\Hypertarget{structLokiFIFORecord_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}\index{LokiFIFORecord@{LokiFIFORecord}!item@{item}}
+\index{item@{item}!LokiFIFORecord@{LokiFIFORecord}}
+\doxysubsubsection{\texorpdfstring{item}{item}}
+{\footnotesize\ttfamily \label{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04} 
+char Loki\+FIFORecord::\+item\+[0]}
+
+
+
+Les données logées dans cet enregistrement. 
+
+La taille effective de ce tableau dépend du champ {\ttfamily item\+\_\+size} de la FIFO. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}\index{LokiFIFORecord@{LokiFIFORecord}!next@{next}}
+\index{next@{next}!LokiFIFORecord@{LokiFIFORecord}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3} 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}}\texorpdfstring{$\ast$}{*} Loki\+FIFORecord::\+next}
+
+
+
+Un pointeur vers le prochain enregistrement dans la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00051}{51}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}\index{LokiFIFORecord@{LokiFIFORecord}!status@{status}}
+\index{status@{status}!LokiFIFORecord@{LokiFIFORecord}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \label{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd} 
+volatile int Loki\+FIFORecord::\+status}
+
+
+
+Le masque indiquant l\textquotesingle{}état de lecture de cet enregistrement par les consommateurs de la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00049}{49}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-fifo_8c}{libloki-\/fifo.\+c}}\end{DoxyCompactItemize}

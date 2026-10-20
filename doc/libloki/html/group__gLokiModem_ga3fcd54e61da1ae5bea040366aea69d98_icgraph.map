@@ -1,0 +1,6 @@
+<map id="LokiModem_get_demod_transfer_length" name="LokiModem_get_demod_transfer_length">
+<area shape="rect" id="node1" title="Lire la longueur totale d&#39;un transfert DMA en sortie du démodulateur." alt="" coords="648,5,808,47"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga3fce7ed2b2c9970e15db1ac8e989c429" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="476,13,600,39"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="241,13,428,39"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,13,193,39"/>
+</map>

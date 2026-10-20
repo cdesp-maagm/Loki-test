@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Support des fonctions intrinsics ARM NEON</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Support des fonctions intrinsics ARM NEON <div class="ingroups"><a class="el" href="group__ggLokiCommon.html">Définitions communes</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l'en-tête <span class="tt">arm_neon.h</span> officiel.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Support des fonctions intrinsics ARM NEON:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNeon.png" border="0" usemap="#agroup____gLokiNeon" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiNeon" id="agroup____gLokiNeon">
+<area shape="rect" title="Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l&#39;..." alt="" coords="221,5,384,45"/>
+<area shape="rect" href="group__ggLokiCommon.html" title=" " alt="" coords="5,13,173,38"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-neon_2Eh" id="r_libloki-neon_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-neon_8h.html">libloki-neon.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:float32x2_5Ft" id="r_float32x2_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfloat32x2__t.html">float32x2_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur de deux nombres flottants 32 bits.  <a href="structfloat32x2__t.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:float32x4_5Ft" id="r_float32x4_5Ft"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur de quatre nombres flottants 32 bits.  <a href="unionfloat32x4__t.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:float32x4_5Ft_3A_3A_5Bstruct_5D_2E_5F_5Funnamed0_5F_5F" id="r_float32x4_5Ft_3A_3A_5Bstruct_5D_2E_5F_5Funnamed0_5F_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html">float32x4_t::[struct].__unnamed0__</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décomposition d'un vecteur en deux moitiés.  <a href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaba27536d26fcbc97a15f400f73972e57" id="r_gaba27536d26fcbc97a15f400f73972e57"><td class="memItemLeft">static <a class="el" href="structfloat32x2__t.html">float32x2_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaba27536d26fcbc97a15f400f73972e57">vadd_f32</a> (<a class="el" href="structfloat32x2__t.html">float32x2_t</a> a, <a class="el" href="structfloat32x2__t.html">float32x2_t</a> b)</td></tr>
+<tr class="memdesc:gaba27536d26fcbc97a15f400f73972e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additionner deux vecteurs.  <br /></td></tr>
+<tr class="memitem:ga5d641bccda9d8e8f640b8143d0e665e0" id="r_ga5d641bccda9d8e8f640b8143d0e665e0"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ga5d641bccda9d8e8f640b8143d0e665e0">vget_lane_f32</a> (<a class="el" href="structfloat32x2__t.html">float32x2_t</a> a, size_t i)</td></tr>
+<tr class="memdesc:ga5d641bccda9d8e8f640b8143d0e665e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire un élément d'un vecteur.  <br /></td></tr>
+<tr class="memitem:ga596baa99e028d163e0c5677c7df63a67" id="r_ga596baa99e028d163e0c5677c7df63a67"><td class="memItemLeft">static <a class="el" href="unionfloat32x4__t.html">float32x4_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga596baa99e028d163e0c5677c7df63a67">vmovq_n_f32</a> (float a)</td></tr>
+<tr class="memdesc:ga596baa99e028d163e0c5677c7df63a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un vecteur.  <br /></td></tr>
+<tr class="memitem:ga43644674ee0d3be5ad07d70f5514e4dd" id="r_ga43644674ee0d3be5ad07d70f5514e4dd"><td class="memItemLeft">static <a class="el" href="unionfloat32x4__t.html">float32x4_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga43644674ee0d3be5ad07d70f5514e4dd">vld1q_f32</a> (const float *a)</td></tr>
+<tr class="memdesc:ga43644674ee0d3be5ad07d70f5514e4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire un vecteur en mémoire.  <br /></td></tr>
+<tr class="memitem:gabbf872ea2fc8ef09526511ff3b92768d" id="r_gabbf872ea2fc8ef09526511ff3b92768d"><td class="memItemLeft">static <a class="el" href="structfloat32x2__t.html">float32x2_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#gabbf872ea2fc8ef09526511ff3b92768d">vget_low_f32</a> (<a class="el" href="unionfloat32x4__t.html">float32x4_t</a> a)</td></tr>
+<tr class="memdesc:gabbf872ea2fc8ef09526511ff3b92768d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la première moitié d'un vecteur.  <br /></td></tr>
+<tr class="memitem:ga0a8ed8e46776dc54632b64f4a45550d2" id="r_ga0a8ed8e46776dc54632b64f4a45550d2"><td class="memItemLeft">static <a class="el" href="structfloat32x2__t.html">float32x2_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga0a8ed8e46776dc54632b64f4a45550d2">vget_high_f32</a> (<a class="el" href="unionfloat32x4__t.html">float32x4_t</a> a)</td></tr>
+<tr class="memdesc:ga0a8ed8e46776dc54632b64f4a45550d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la seconde moitié d'un vecteur.  <br /></td></tr>
+<tr class="memitem:ga4850b6090cca948746e81838676bcc8f" id="r_ga4850b6090cca948746e81838676bcc8f"><td class="memItemLeft">static <a class="el" href="unionfloat32x4__t.html">float32x4_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4850b6090cca948746e81838676bcc8f">vld1q_lane_f32</a> (const float *a, <a class="el" href="unionfloat32x4__t.html">float32x4_t</a> b, size_t i)</td></tr>
+<tr class="memdesc:ga4850b6090cca948746e81838676bcc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remplacer un élément d'un vecteur avec une valeur lue en mémoire.  <br /></td></tr>
+<tr class="memitem:ga7e2b584d069001335fd779fbfa3aa8b1" id="r_ga7e2b584d069001335fd779fbfa3aa8b1"><td class="memItemLeft">static <a class="el" href="unionfloat32x4__t.html">float32x4_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7e2b584d069001335fd779fbfa3aa8b1">vmulq_f32</a> (<a class="el" href="unionfloat32x4__t.html">float32x4_t</a> a, <a class="el" href="unionfloat32x4__t.html">float32x4_t</a> b)</td></tr>
+<tr class="memdesc:ga7e2b584d069001335fd779fbfa3aa8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier deux vecteurs terme à terme.  <br /></td></tr>
+<tr class="memitem:ga1984dad8a1957ac5e5c7f2429d82a5cf" id="r_ga1984dad8a1957ac5e5c7f2429d82a5cf"><td class="memItemLeft">static <a class="el" href="unionfloat32x4__t.html">float32x4_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga1984dad8a1957ac5e5c7f2429d82a5cf">vmlaq_f32</a> (<a class="el" href="unionfloat32x4__t.html">float32x4_t</a> a, <a class="el" href="unionfloat32x4__t.html">float32x4_t</a> b, <a class="el" href="unionfloat32x4__t.html">float32x4_t</a> c)</td></tr>
+<tr class="memdesc:ga1984dad8a1957ac5e5c7f2429d82a5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le résultat d'une multiplication-accumulation sur des vecteurs.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l'en-tête <span class="tt">arm_neon.h</span> officiel. </p>
+<p>Pour les autres architectures, ce fichier fournit des implémentations en C standard de quelques fonctions intrinsics pour les types flottants 32 bits. Cela permet, par exemple, de tester sur PC une fonction destinée à un processeur ARM. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gaba27536d26fcbc97a15f400f73972e57" name="gaba27536d26fcbc97a15f400f73972e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba27536d26fcbc97a15f400f73972e57">&#9670;&#160;</a></span>vadd_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfloat32x2__t.html">float32x2_t</a> vadd_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloat32x2__t.html">float32x2_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfloat32x2__t.html">float32x2_t</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Additionner deux vecteurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le premier opérande. </td></tr>
+    <tr><td class="paramname">b</td><td>Le second opérande. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur obtenu en additionnant <span class="tt">a</span> et <span class="tt">b</span> terme à terme. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00050">50</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga0a8ed8e46776dc54632b64f4a45550d2" name="ga0a8ed8e46776dc54632b64f4a45550d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a8ed8e46776dc54632b64f4a45550d2">&#9670;&#160;</a></span>vget_high_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfloat32x2__t.html">float32x2_t</a> vget_high_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire la seconde moitié d'un vecteur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le vecteur à décomposer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur contenant la seconde moitié de <span class="tt">a</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00100">100</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga5d641bccda9d8e8f640b8143d0e665e0" name="ga5d641bccda9d8e8f640b8143d0e665e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d641bccda9d8e8f640b8143d0e665e0">&#9670;&#160;</a></span>vget_lane_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float vget_lane_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloat32x2__t.html">float32x2_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire un élément d'un vecteur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le vecteur à inspecter. </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de l'élément à lire. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'élément d'indice <span class="tt">i</span> dans <span class="tt">a</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00062">62</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="gabbf872ea2fc8ef09526511ff3b92768d" name="gabbf872ea2fc8ef09526511ff3b92768d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbf872ea2fc8ef09526511ff3b92768d">&#9670;&#160;</a></span>vget_low_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfloat32x2__t.html">float32x2_t</a> vget_low_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire la première moitié d'un vecteur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le vecteur à décomposer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur contenant la première moitié de <span class="tt">a</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00091">91</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga43644674ee0d3be5ad07d70f5514e4dd" name="ga43644674ee0d3be5ad07d70f5514e4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43644674ee0d3be5ad07d70f5514e4dd">&#9670;&#160;</a></span>vld1q_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a> vld1q_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const float *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire un vecteur en mémoire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Un pointeur vers la région à lire. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur des éléments pointés par <span class="tt">a</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00082">82</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga4850b6090cca948746e81838676bcc8f" name="ga4850b6090cca948746e81838676bcc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4850b6090cca948746e81838676bcc8f">&#9670;&#160;</a></span>vld1q_lane_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a> vld1q_lane_f32 </td>
+          <td>(</td>
+          <td class="paramtype">const float *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remplacer un élément d'un vecteur avec une valeur lue en mémoire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Un pointeur vers la valeur à lire. </td></tr>
+    <tr><td class="paramname">b</td><td>Le vecteur à modifier. </td></tr>
+    <tr><td class="paramname">i</td><td>L'indice de l'élément à remplacer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une copie de <span class="tt">b</span> dont un élément a été modifié. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00111">111</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f_cgraph.png" border="0" usemap="#agroup__gLokiNeon_ga4850b6090cca948746e81838676bcc8f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f_icgraph.png" border="0" usemap="#agroup__gLokiNeon_ga4850b6090cca948746e81838676bcc8f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ga1984dad8a1957ac5e5c7f2429d82a5cf" name="ga1984dad8a1957ac5e5c7f2429d82a5cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1984dad8a1957ac5e5c7f2429d82a5cf">&#9670;&#160;</a></span>vmlaq_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a> vmlaq_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculer le résultat d'une multiplication-accumulation sur des vecteurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>La valeur courante de l'accumulateur. </td></tr>
+    <tr><td class="paramname">b</td><td>Le premier opérande de la multiplication. </td></tr>
+    <tr><td class="paramname">c</td><td>Le second opérande de la multiplication. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La nouvelle valeur de l'accumulateur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00136">136</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga596baa99e028d163e0c5677c7df63a67" name="ga596baa99e028d163e0c5677c7df63a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga596baa99e028d163e0c5677c7df63a67">&#9670;&#160;</a></span>vmovq_n_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a> vmovq_n_f32 </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construire un vecteur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>La valeur des éléments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur dont tous les éléments sont égaux à <span class="tt">a</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00071">71</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+
+</div>
+</div>
+<a id="ga7e2b584d069001335fd779fbfa3aa8b1" name="ga7e2b584d069001335fd779fbfa3aa8b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e2b584d069001335fd779fbfa3aa8b1">&#9670;&#160;</a></span>vmulq_f32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a> vmulq_f32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionfloat32x4__t.html">float32x4_t</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiplier deux vecteurs terme à terme. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Le premier opérande. </td></tr>
+    <tr><td class="paramname">b</td><td>Le second opérande. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un vecteur obtenu en calculant le produit de <span class="tt">a</span> et <span class="tt">b</span> terme à terme. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-neon_8h_source.html#l00122">122</a> du fichier <a class="el" href="libloki-neon_8h_source.html">libloki-neon.h</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1_cgraph.png" border="0" usemap="#agroup__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1_icgraph.png" border="0" usemap="#agroup__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

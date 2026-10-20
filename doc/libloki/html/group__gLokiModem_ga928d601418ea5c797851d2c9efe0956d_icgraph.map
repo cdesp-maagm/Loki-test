@@ -1,0 +1,5 @@
+<map id="LokiModem_set_demod_packet_length" name="LokiModem_set_demod_packet_length">
+<area shape="rect" id="node1" title="Affecter une longueur de paquet de données en sortie du démodulateur." alt="" coords="344,5,504,47"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="176,13,296,39"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,128,39"/>
+</map>

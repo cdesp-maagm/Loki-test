@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+from eseo.loki.native import *
+
+modem = LokiModem()
+modem.force_stop()
+
+env_sensors = LokiEnvSensors()
+env_sensors.force_stop()

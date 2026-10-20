@@ -1,0 +1,6 @@
+<map id="LokiDisplacement_reset" name="LokiDisplacement_reset">
+<area shape="rect" id="node1" title="Remettre à zéro le déplacement." alt="" coords="503,42,681,67"/>
+<area shape="rect" id="node2" href="$group__gLokiSystem.html#gab9bbe589511d2d9ba0a0571d4c5a3c3f" title="Mettre à zéro le déplacement calculé." alt="" coords="261,5,455,45"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="289,70,427,95"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,70,213,95"/>
+</map>

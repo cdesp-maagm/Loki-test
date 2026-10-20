@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-fifo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-fifo.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-fifo_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef LIBLOKI_FIFO_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define LIBLOKI_FIFO_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga9809c8ea8fd596bac8faed62a50d615d">   20</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *<a class="code hl_function" href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1">LokiFIFO_new</a>(<span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">item_size</a>, <span class="keywordtype">size_t</span> length, <span class="keywordtype">size_t</span> consumers);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga53fadc179b294d35e3ed7f7d55671f3a">LokiFIFO_del</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229">LokiFIFO_get_item_size</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self, <span class="keywordtype">size_t</span> cid);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self, <span class="keywordtype">size_t</span> cid);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga4e8cda4ed922ac5128c716735c0724c8"><div class="ttname"><a href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a></div><div class="ttdeci">void LokiFIFO_pull(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Libérer l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00160">libloki-fifo.c:160</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga53fadc179b294d35e3ed7f7d55671f3a"><div class="ttname"><a href="group__gLokiFIFO.html#ga53fadc179b294d35e3ed7f7d55671f3a">LokiFIFO_del</a></div><div class="ttdeci">void LokiFIFO_del(LokiFIFO *self)</div><div class="ttdoc">Détruire une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00095">libloki-fifo.c:95</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga64953835cd85d15393a6b14030a845c5"><div class="ttname"><a href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a></div><div class="ttdeci">void * LokiFIFO_get_consumer_item(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Obtenir une référence vers l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00142">libloki-fifo.c:142</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga6772f40ab458b60abd3e8b87bca259b1"><div class="ttname"><a href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1">LokiFIFO_new</a></div><div class="ttdeci">LokiFIFO * LokiFIFO_new(size_t item_size, size_t length, size_t consumers)</div><div class="ttdoc">Créer une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00060">libloki-fifo.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga9d21708a76ac74826125a8fbf5a5efaf"><div class="ttname"><a href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a></div><div class="ttdeci">void LokiFIFO_push(LokiFIFO *self)</div><div class="ttdoc">Valider l&#39;élément courant en écriture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00123">libloki-fifo.c:123</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaa57901e87eacff515a67b913d69e5229"><div class="ttname"><a href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229">LokiFIFO_get_item_size</a></div><div class="ttdeci">size_t LokiFIFO_get_item_size(const LokiFIFO *self)</div><div class="ttdoc">Obtenir la taille d&#39;un élément de la FIFO, en octets.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00102">libloki-fifo.c:102</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaaff05dfee1870a70b14718028d830f21"><div class="ttname"><a href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a></div><div class="ttdeci">void LokiFIFO_abort(LokiFIFO *self)</div><div class="ttdoc">Terminer les attentes en cours.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00180">libloki-fifo.c:180</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gac4ae3143767c6ead1aaae6b0bdb3e463"><div class="ttname"><a href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a></div><div class="ttdeci">void * LokiFIFO_get_producer_item(LokiFIFO *self)</div><div class="ttdoc">Obtenir une référence vers l&#39;élément courant en écriture.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00106">libloki-fifo.c:106</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d&#39;une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_af0bcda30be22f45d41b446144967fc32"><div class="ttname"><a href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">LokiFIFO::item_size</a></div><div class="ttdeci">size_t item_size</div><div class="ttdoc">La taille d&#39;un élément, en octets.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00022">libloki-fifo.c:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

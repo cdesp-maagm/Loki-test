@@ -1,0 +1,6 @@
+
+image : {
+    [bootloader]build/sdk/fsbl/Release/fsbl.elf
+    build/system.bit
+    ../../../os/build/redpitaya/tmp/deploy/images/redpitaya/u-boot.elf
+}

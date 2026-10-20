@@ -1,0 +1,6 @@
+<map id="LokiModem_del" name="LokiModem_del">
+<area shape="rect" id="node1" title="Détruire un modem." alt="" coords="365,31,491,56"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="185,5,317,31"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="189,55,314,80"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,31,137,56"/>
+</map>

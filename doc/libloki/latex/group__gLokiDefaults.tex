@@ -1,0 +1,331 @@
+\doxysubsection{Valeurs par défaut des paramètres de calcul de déplacement }
+\hypertarget{group__gLokiDefaults}{}\label{group__gLokiDefaults}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+
+
+Constantes utilisées pour la configuration d\textquotesingle{}un \doxylink{group__gLokiSystem}{Loki\+System}.  
+
+
+Graphe de collaboration de Valeurs par défaut des paramètres de calcul de déplacement:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-system-defaults_8h}{libloki-\/system-\/defaults.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga5058dc2b31b01c32a987811ff71622b6}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+SIMULATE}}~false
+\begin{DoxyCompactList}\small\item\em Ne pas activer le mode de simulation logicielle des capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga1ab35478c037f059399902753922072b}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+SKIP}}~0
+\begin{DoxyCompactList}\small\item\em Remplir la FIFO des déplacements immédiatement après la réception des premiers échantillons démodulés. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga3df3e861670a02c3442257ef363232b8}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+WAVELENGTH}}~1310
+\begin{DoxyCompactList}\small\item\em La longueur d\textquotesingle{}onde par défaut, 1310 nm. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga2cd0643a5bbb4e6fd427b1582bcbe9ba}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+REFLECTIONS}}~1
+\begin{DoxyCompactList}\small\item\em Supposer qu\textquotesingle{}il n\textquotesingle{}y a qu\textquotesingle{}une seule réflexion. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga7479ffd42dcfdf57e0ce90e4ef87a6ce}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+CAVITY\+\_\+\+INDEX}}~1.\+0f
+\begin{DoxyCompactList}\small\item\em Supposer un indice de cavité de Fabry-\/\+Pérot égal à 1. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga07a7e748c7ffdce1145be7d1d4e6169a}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+DISTANCE\+\_\+\+UNIT}}~\textquotesingle{}p\textquotesingle{};
+\begin{DoxyCompactList}\small\item\em Calculer les déplacements en picomètres. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga1b0ac4dd3b39811061a7a1f4821df521}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+RLS}}~Loki\+RLSClass
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}implémentation du filtre RLS. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga0328898b77f9abfa95fdbf57b8f7256d}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+RLS}}~\{0.\+999f, 0.\+1f\}
+\begin{DoxyCompactList}\small\item\em Les paramètres par défaut du filtre RLS. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga52781867dbbd4bf4e6efb6675a8d6a48}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+KALMAN}}~Loki\+Kalman\+Class
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}implémentation du filtre de Kalman. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga99d66d15bb453fb606c4572480e43407}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+KALMAN}}~\{0.\+999f, 0.\+0f, 0.\+1f\}
+\begin{DoxyCompactList}\small\item\em Les paramètres par défaut du filtre de Kalman. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga7b0c8854efe953840980984cf5f9167b}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL}}~\doxymbox{\hyperlink{group__gLokiDefaults_ga52781867dbbd4bf4e6efb6675a8d6a48}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+KALMAN}}
+\begin{DoxyCompactList}\small\item\em Utiliser un filtre de Kalman. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga81af0dca091947ef0759423d356f127b}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS}}~\doxymbox{\hyperlink{group__gLokiDefaults_ga99d66d15bb453fb606c4572480e43407}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+KALMAN}}
+\begin{DoxyCompactList}\small\item\em Utiliser les paramètres par défaut du filtre de Kalman. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga8c0ecd943b380475264a317b2025b6f3}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+THROTTLE}}~1
+\begin{DoxyCompactList}\small\item\em La périodicité par défaut du calcul des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga06071ebaec444a511b61e2872a22ca4b}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+INITIAL\+\_\+\+RADIUS}}~1e-\/3
+\begin{DoxyCompactList}\small\item\em Le rayon initial par défaut des ellipses estimées. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga782e6db13fd280c3d75a606f7f2b6ec7}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+BANDWIDTH}}~250.\+0f
+\begin{DoxyCompactList}\small\item\em La bande passante par défaut du filtre de suppression du déplacement fictif. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_gac74995da6157f9a7c0d4b0b7dc15d87f}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+ATTENUATION}}~60.\+0f
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}atténuation par défaut du filtre de suppression du déplacement fictif. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga9929a67904c9c4c477e4a395a806f37c}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+LENGTH}}~1000
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients par défaut du filtre de suppression du déplacement fictif. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_gab8841fcc648c5ff5fcb4f8009404d49c}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+DECIMATION}}~50
+\begin{DoxyCompactList}\small\item\em La facteur de décimation par défaut du filtre de suppression du déplacement fictif. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiDefaults_ga7f161e2fd2c68e9cc38fb74f3415b6ce}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+IIR\+\_\+\+TAU}}~1.\+0f
+\begin{DoxyCompactList}\small\item\em La constante de temps par défaut des filtres de lissage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Constantes utilisées pour la configuration d\textquotesingle{}un \doxylink{group__gLokiSystem}{Loki\+System}. 
+
+
+
+\label{group__gLokiDefaults_doc-define-members}
+\Hypertarget{group__gLokiDefaults_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiDefaults_ga7479ffd42dcfdf57e0ce90e4ef87a6ce}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX@{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}}
+\index{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX@{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga7479ffd42dcfdf57e0ce90e4ef87a6ce} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+CAVITY\+\_\+\+INDEX~1.\+0f}
+
+
+
+Supposer un indice de cavité de Fabry-\/\+Pérot égal à 1. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga07a7e748c7ffdce1145be7d1d4e6169a}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT@{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}}
+\index{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT@{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga07a7e748c7ffdce1145be7d1d4e6169a} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+DISTANCE\+\_\+\+UNIT~\textquotesingle{}p\textquotesingle{};}
+
+
+
+Calculer les déplacements en picomètres. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga7b0c8854efe953840980984cf5f9167b}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga7b0c8854efe953840980984cf5f9167b} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL~\doxymbox{\hyperlink{group__gLokiDefaults_ga52781867dbbd4bf4e6efb6675a8d6a48}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+KALMAN}}}
+
+
+
+Utiliser un filtre de Kalman. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga52781867dbbd4bf4e6efb6675a8d6a48}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga52781867dbbd4bf4e6efb6675a8d6a48} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+KALMAN~Loki\+Kalman\+Class}
+
+
+
+L\textquotesingle{}implémentation du filtre de Kalman. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga1b0ac4dd3b39811061a7a1f4821df521}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga1b0ac4dd3b39811061a7a1f4821df521} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+IMPL\+\_\+\+RLS~Loki\+RLSClass}
+
+
+
+L\textquotesingle{}implémentation du filtre RLS. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00035}{35}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga06071ebaec444a511b61e2872a22ca4b}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga06071ebaec444a511b61e2872a22ca4b} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+INITIAL\+\_\+\+RADIUS~1e-\/3}
+
+
+
+Le rayon initial par défaut des ellipses estimées. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga81af0dca091947ef0759423d356f127b}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga81af0dca091947ef0759423d356f127b} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS~\doxymbox{\hyperlink{group__gLokiDefaults_ga99d66d15bb453fb606c4572480e43407}{LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+KALMAN}}}
+
+
+
+Utiliser les paramètres par défaut du filtre de Kalman. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga99d66d15bb453fb606c4572480e43407}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga99d66d15bb453fb606c4572480e43407} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+KALMAN~\{0.\+999f, 0.\+0f, 0.\+1f\}}
+
+
+
+Les paramètres par défaut du filtre de Kalman. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00044}{44}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga0328898b77f9abfa95fdbf57b8f7256d}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga0328898b77f9abfa95fdbf57b8f7256d} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+PARAMS\+\_\+\+RLS~\{0.\+999f, 0.\+1f\}}
+
+
+
+Les paramètres par défaut du filtre RLS. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00038}{38}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga8c0ecd943b380475264a317b2025b6f3}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}}
+\index{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga8c0ecd943b380475264a317b2025b6f3} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+ESTIMATOR\+\_\+\+THROTTLE~1}
+
+
+
+La périodicité par défaut du calcul des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00053}{53}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_gac74995da6157f9a7c0d4b0b7dc15d87f}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}}
+\index{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_gac74995da6157f9a7c0d4b0b7dc15d87f} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+ATTENUATION~60.\+0f}
+
+
+
+L\textquotesingle{}atténuation par défaut du filtre de suppression du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00062}{62}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga782e6db13fd280c3d75a606f7f2b6ec7}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}}
+\index{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga782e6db13fd280c3d75a606f7f2b6ec7} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+BANDWIDTH~250.\+0f}
+
+
+
+La bande passante par défaut du filtre de suppression du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00059}{59}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_gab8841fcc648c5ff5fcb4f8009404d49c}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}}
+\index{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_gab8841fcc648c5ff5fcb4f8009404d49c} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+DECIMATION~50}
+
+
+
+La facteur de décimation par défaut du filtre de suppression du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00068}{68}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga9929a67904c9c4c477e4a395a806f37c}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}}
+\index{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga9929a67904c9c4c477e4a395a806f37c} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+FILTER\+\_\+\+LENGTH~1000}
+
+
+
+Le nombre de coefficients par défaut du filtre de suppression du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00065}{65}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga7f161e2fd2c68e9cc38fb74f3415b6ce}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU@{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}}
+\index{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU@{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga7f161e2fd2c68e9cc38fb74f3415b6ce} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+IIR\+\_\+\+TAU~1.\+0f}
+
+
+
+La constante de temps par défaut des filtres de lissage des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00071}{71}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga2cd0643a5bbb4e6fd427b1582bcbe9ba}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS@{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}}
+\index{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS@{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga2cd0643a5bbb4e6fd427b1582bcbe9ba} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+REFLECTIONS~1}
+
+
+
+Supposer qu\textquotesingle{}il n\textquotesingle{}y a qu\textquotesingle{}une seule réflexion. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga5058dc2b31b01c32a987811ff71622b6}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_SIMULATE@{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}}
+\index{LOKI\_SYSTEM\_DEFAULT\_SIMULATE@{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga5058dc2b31b01c32a987811ff71622b6} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+SIMULATE~false}
+
+
+
+Ne pas activer le mode de simulation logicielle des capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga1ab35478c037f059399902753922072b}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_SKIP@{LOKI\_SYSTEM\_DEFAULT\_SKIP}}
+\index{LOKI\_SYSTEM\_DEFAULT\_SKIP@{LOKI\_SYSTEM\_DEFAULT\_SKIP}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_SKIP}{LOKI\_SYSTEM\_DEFAULT\_SKIP}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga1ab35478c037f059399902753922072b} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+SKIP~0}
+
+
+
+Remplir la FIFO des déplacements immédiatement après la réception des premiers échantillons démodulés. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+
+\Hypertarget{group__gLokiDefaults_ga3df3e861670a02c3442257ef363232b8}\index{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH@{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}}
+\index{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH@{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}}
+{\footnotesize\ttfamily \label{group__gLokiDefaults_ga3df3e861670a02c3442257ef363232b8} 
+\+\#define LOKI\+\_\+\+SYSTEM\+\_\+\+DEFAULT\+\_\+\+WAVELENGTH~1310}
+
+
+
+La longueur d\textquotesingle{}onde par défaut, 1310 nm. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system-defaults_8h_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-system-defaults_8h_source}{libloki-\/system-\/defaults.\+h}}.
+

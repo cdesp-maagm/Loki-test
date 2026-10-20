@@ -1,0 +1,13 @@
+<map id="LokiModem_get_demod_sampling_frequency" name="LokiModem_get_demod_sampling_frequency">
+<area shape="rect" id="node1" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="1235,63,1413,103"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga584a9ea31a6fcf590a3ccdd683d73d6f" title="Lire la fréquence maximale supportée pour le signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="985,5,1187,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="729,19,911,45"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="994,120,1178,160"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#gac7ad56144a69fcdc52eac5dd41e944d7" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="703,69,937,94"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,119,655,145"/>
+<area shape="rect" id="node9" href="$group__gLokiSystem.html#gaab6533e9d6b9bfa464a9a30e242133a8" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="723,169,917,209"/>
+<area shape="rect" id="node10" href="$group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="517,177,655,202"/>
+<area shape="rect" id="node11" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="754,285,886,310"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,121,469,146"/>
+<area shape="rect" id="node8" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,149,213,174"/>
+</map>

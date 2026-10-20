@@ -1,0 +1,5 @@
+<map id="LokiModem" name="LokiModem">
+<area shape="rect" id="node1" title="Représentation des périphériques modulateur et démodulateur." alt="" coords="18,196,117,221"/>
+<area shape="rect" id="node2" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="28,108,107,133"/>
+<area shape="rect" id="node3" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,129,31"/>
+</map>

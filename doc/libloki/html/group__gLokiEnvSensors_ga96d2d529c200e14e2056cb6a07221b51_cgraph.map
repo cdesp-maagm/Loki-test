@@ -1,0 +1,6 @@
+<map id="LokiEnvSensors_new" name="LokiEnvSensors_new">
+<area shape="rect" id="node1" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,55,164,80"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#gab4a1dc32803805865b0b76fb8ba9f6e9" title="Détruire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="227,5,377,31"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga0e297cd4ccf77382ad54687db062b895" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="212,55,392,80"/>
+<area shape="rect" id="node4" href="$group__gLokiEnvSensors.html#gab1a9ddca7f23c277de1236b32392ce5a" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="213,104,391,129"/>
+</map>

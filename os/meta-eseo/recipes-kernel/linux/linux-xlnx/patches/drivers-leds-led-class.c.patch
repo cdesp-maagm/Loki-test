@@ -1,0 +1,12 @@
+--- a/drivers/leds/led-class.c	2021-02-02 09:32:59.408363382 +0100
++++ b/drivers/leds/led-class.c	2021-02-02 09:35:33.344186397 +0100
+@@ -23,7 +23,8 @@
+ #include <uapi/linux/uleds.h>
+ #include "leds.h"
+
+-static struct class *leds_class;
++struct class *leds_class;
++EXPORT_SYMBOL_GPL(leds_class);
+
+ static ssize_t brightness_show(struct device *dev,
+ 		struct device_attribute *attr, char *buf)

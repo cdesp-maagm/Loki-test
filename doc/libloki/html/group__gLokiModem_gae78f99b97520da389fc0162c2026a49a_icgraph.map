@@ -1,0 +1,8 @@
+<map id="LokiModem_scale_power" name="LokiModem_scale_power">
+<area shape="rect" id="node1" title="Mettre à l&#39;échelle une valeur d&#39;entrée du démodulateur." alt="" coords="415,106,601,131"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga5221dd8bb49fde3275dd7b34b890d9dc" title="Lire la valeur maximale du signal en entrée du démodulateur pour une voie." alt="" coords="187,5,365,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gac5cab6b74363ef5928a67130ed07af67" title="Lire la valeur minimale du signal en entrée du démodulateur pour une voie." alt="" coords="187,69,365,109"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="210,134,342,159"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="185,183,367,209"/>
+<area shape="rect" id="node5" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,134,137,159"/>
+</map>

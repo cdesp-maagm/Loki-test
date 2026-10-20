@@ -1,0 +1,7 @@
+<map id="LokiFormatter_del" name="LokiFormatter_del">
+<area shape="rect" id="node1" title="Détruire de mise en forme de séries temporelles." alt="" coords="676,42,816,67"/>
+<area shape="rect" id="node2" href="$group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="445,5,628,45"/>
+<area shape="rect" id="node5" href="$group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550" title="Détruire un enregistreur." alt="" coords="229,66,363,91"/>
+<area shape="rect" id="node3" href="$group__gLokiRecorder.html#gaebc49d7bf1849c2cc5ea7e0ea05532d9" title="Affecter un formateur à un enregistreur." alt="" coords="195,15,397,41"/>
+<area shape="rect" id="node4" href="$group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae" title="Construire un enregistreur de séries temporelles." alt="" coords="5,42,147,67"/>
+</map>

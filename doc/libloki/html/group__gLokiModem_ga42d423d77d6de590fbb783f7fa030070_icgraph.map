@@ -1,0 +1,4 @@
+<map id="LokiModem_get_mod_offset_max" name="LokiModem_get_mod_offset_max">
+<area shape="rect" id="node1" title="Lire l&#39;offset maximal supporté en sortie du modulateur." alt="" coords="235,5,477,31"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="5,5,187,31"/>
+</map>

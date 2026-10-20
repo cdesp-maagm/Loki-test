@@ -1,0 +1,18 @@
+--- a/drivers/leds/Makefile	2018-08-12 22:41:04.000000000 +0200
++++ b/drivers/leds/Makefile	2021-02-01 16:57:39.893588680 +0100
+@@ -4,6 +4,7 @@
+ obj-$(CONFIG_NEW_LEDS)			+= led-core.o
+ obj-$(CONFIG_LEDS_CLASS)		+= led-class.o
+ obj-$(CONFIG_LEDS_CLASS_FLASH)		+= led-class-flash.o
++obj-$(CONFIG_LEDS_CLASS_MULTICOLOR)	+= led-class-multicolor.o
+ obj-$(CONFIG_LEDS_TRIGGERS)		+= led-triggers.o
+
+ # LED Platform Drivers
+@@ -19,6 +20,7 @@
+ obj-$(CONFIG_LEDS_LM3530)		+= leds-lm3530.o
+ obj-$(CONFIG_LEDS_LM3533)		+= leds-lm3533.o
+ obj-$(CONFIG_LEDS_LM3642)		+= leds-lm3642.o
++obj-$(CONFIG_LEDS_LP50XX)               += leds-lp50xx.o
+ obj-$(CONFIG_LEDS_MIKROTIK_RB532)	+= leds-rb532.o
+ obj-$(CONFIG_LEDS_S3C24XX)		+= leds-s3c24xx.o
+ obj-$(CONFIG_LEDS_NET48XX)		+= leds-net48xx.o

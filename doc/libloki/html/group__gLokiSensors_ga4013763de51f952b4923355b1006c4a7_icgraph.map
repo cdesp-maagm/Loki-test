@@ -1,0 +1,5 @@
+<map id="LokiSensors_dma_get_packet_time" name="LokiSensors_dma_get_packet_time">
+<area shape="rect" id="node1" title="Lire la date du dernier transfert DMA." alt="" coords="421,5,572,47"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>

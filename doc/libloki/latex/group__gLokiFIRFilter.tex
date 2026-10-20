@@ -1,0 +1,327 @@
+\doxysubsection{Filtre FIR }
+\hypertarget{group__gLokiFIRFilter}{}\label{group__gLokiFIRFilter}\index{Filtre FIR@{Filtre FIR}}
+
+
+Implémentation polyphase d\textquotesingle{}un filtre à réponse impulsionnelle finie.  
+
+
+Graphe de collaboration de Filtre FIR:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-fir_8c}{libloki-\/fir.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-fir_8h}{libloki-\/fir.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre FIR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+FIRFilter \doxymbox{\hyperlink{group__gLokiFIRFilter_ga87ea977cff213fcd36220315045756ce}{Loki\+FIRFilter}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre FIR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{group__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4}{Loki\+FIRFilter\+\_\+allocate\+\_\+samples}} (\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Allouer le tableau des échantillons mémorisés par un filtre FIR. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2}{Loki\+FIRFilter\+\_\+new}} (const float \texorpdfstring{$\ast$}{*}coeffs, size\+\_\+t length, size\+\_\+t decimation)
+\begin{DoxyCompactList}\small\item\em Construire un filtre FIR. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615}{Loki\+FIRFilter\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre FIR. \end{DoxyCompactList}\item 
+static float \doxymbox{\hyperlink{group__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d}{bessel0}} (float x)
+\begin{DoxyCompactList}\small\item\em Function de Bessel de première espèce, d\textquotesingle{}ordre 0. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37}{Loki\+FIRFilter\+\_\+new\+\_\+kaiser\+\_\+bessel}} (float fs, float fa, float fb, float att, size\+\_\+t length, size\+\_\+t decimation)
+\begin{DoxyCompactList}\small\item\em Construire un filtre FIR en utilisant une fenêtre de Kaiser-\/\+Bessel. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c}{Loki\+FIRFilter\+\_\+get\+\_\+actual\+\_\+length}} (\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur effective d\textquotesingle{}un filtre FIR. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b}{Loki\+FIRFilter\+\_\+work}} (\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}self, float in, float \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Exécuter un pas de calcul d\textquotesingle{}un fitre FIR. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384}{Loki\+FIRFilter\+\_\+reset}} (\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Réinitialiser un filtre FIR. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196}{Loki\+FIRFilter\+\_\+del}} (\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre FIR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Implémentation polyphase d\textquotesingle{}un filtre à réponse impulsionnelle finie. 
+
+
+
+\label{group__gLokiFIRFilter_doc-typedef-members}
+\Hypertarget{group__gLokiFIRFilter_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiFIRFilter_ga87ea977cff213fcd36220315045756ce}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter@{LokiFIRFilter}}
+\index{LokiFIRFilter@{LokiFIRFilter}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter}{LokiFIRFilter}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga87ea977cff213fcd36220315045756ce} 
+typedef struct Loki\+FIRFilter Loki\+FIRFilter}
+
+
+
+Représentation d\textquotesingle{}un filtre FIR. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-fir_8h_source}{libloki-\/fir.\+h}}.
+
+
+
+\label{group__gLokiFIRFilter_doc-func-members}
+\Hypertarget{group__gLokiFIRFilter_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d}\index{Filtre FIR@{Filtre FIR}!bessel0@{bessel0}}
+\index{bessel0@{bessel0}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{bessel0()}{bessel0()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d} 
+float bessel0 (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Function de Bessel de première espèce, d\textquotesingle{}ordre 0. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00125}{125}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_allocate\_samples@{LokiFIRFilter\_allocate\_samples}}
+\index{LokiFIRFilter\_allocate\_samples@{LokiFIRFilter\_allocate\_samples}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_allocate\_samples()}{LokiFIRFilter\_allocate\_samples()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4} 
+void Loki\+FIRFilter\+\_\+allocate\+\_\+samples (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Allouer le tableau des échantillons mémorisés par un filtre FIR. 
+
+Cette fonction alloue le tableau {\ttfamily samples} du filtre passé en paramètre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à allouer. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_clone@{LokiFIRFilter\_clone}}
+\index{LokiFIRFilter\_clone@{LokiFIRFilter\_clone}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_clone()}{LokiFIRFilter\_clone()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615} 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} Loki\+FIRFilter\+\_\+clone (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Construire un clone d\textquotesingle{}un filtre FIR. 
+
+Le nouveau filtre possédera les mêmes coefficients et le même facteur de décimation que celui passé en paramètre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & Le filtre à cloner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre FIR. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00106}{106}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_del@{LokiFIRFilter\_del}}
+\index{LokiFIRFilter\_del@{LokiFIRFilter\_del}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_del()}{LokiFIRFilter\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196} 
+void Loki\+FIRFilter\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un filtre FIR. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00297}{297}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_get\_actual\_length@{LokiFIRFilter\_get\_actual\_length}}
+\index{LokiFIRFilter\_get\_actual\_length@{LokiFIRFilter\_get\_actual\_length}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_get\_actual\_length()}{LokiFIRFilter\_get\_actual\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c} 
+size\+\_\+t Loki\+FIRFilter\+\_\+get\+\_\+actual\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la longueur effective d\textquotesingle{}un filtre FIR. 
+
+La longueur effective est toujours multiple du facteur de décimation. Elle peut également avoir été ajustée pour satisfaire les contraintes d\textquotesingle{}une méthode de synthèse de filtre. Pour ces raisons, elle peut différer de la valeur du paramètre {\ttfamily length} fourni à la construction.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La longueur du filtre. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00171}{171}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_new@{LokiFIRFilter\_new}}
+\index{LokiFIRFilter\_new@{LokiFIRFilter\_new}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_new()}{LokiFIRFilter\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2} 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} Loki\+FIRFilter\+\_\+new (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{coeffs}{, }\item[{size\+\_\+t}]{length}{, }\item[{size\+\_\+t}]{decimation}{}\end{DoxyParamCaption})}
+
+
+
+Construire un filtre FIR. 
+
+Le paramètre {\ttfamily length} indique la longueur souhaitée. Elle peut être augmentée pour que la longueur effective soit multiple du facteur de décimation et de la taille de vecteur utilisée par les instructions SIMD du processeur. Dans ce cas, le tableau de coefficients est complété avec des zéros.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coeffs} & Les coefficients du filtre. \\
+\hline
+{\em length} & Le nombre de coefficients. \\
+\hline
+{\em decimation} & Le facteur de décimation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre FIR. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+\Hypertarget{group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_new\_kaiser\_bessel@{LokiFIRFilter\_new\_kaiser\_bessel}}
+\index{LokiFIRFilter\_new\_kaiser\_bessel@{LokiFIRFilter\_new\_kaiser\_bessel}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_new\_kaiser\_bessel()}{LokiFIRFilter\_new\_kaiser\_bessel()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37} 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} Loki\+FIRFilter\+\_\+new\+\_\+kaiser\+\_\+bessel (\begin{DoxyParamCaption}\item[{float}]{fs}{, }\item[{float}]{fa}{, }\item[{float}]{fb}{, }\item[{float}]{att}{, }\item[{size\+\_\+t}]{length}{, }\item[{size\+\_\+t}]{decimation}{}\end{DoxyParamCaption})}
+
+
+
+Construire un filtre FIR en utilisant une fenêtre de Kaiser-\/\+Bessel. 
+
+La méthode de synthèse du filtre est détaillée dans l\textquotesingle{}article \href{http://www.arc.id.au/FilterDesign.html}{\texttt{Window method of FIR filter design}}.
+
+Le paramètre {\ttfamily length} indique la longueur souhaitée. Elle peut être augmentée pour satisfaire les contraintes de la méthode de synthèse utilisée, et pour que la longueur effective soit multiple du facteur de décimation et de la taille de vecteur utilisée par les instructions SIMD du processeur. Dans ce cas, le tableau de coefficients est complété avec des zéros.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fs} & La fréquence d\textquotesingle{}échantillonnage. \\
+\hline
+{\em fa} & La fréquence de coupure basse (0 pour un filtre passe-\/bas). \\
+\hline
+{\em fb} & La fréquence de coupure haute. \\
+\hline
+{\em att} & L\textquotesingle{}atténuation, en dB. \\
+\hline
+{\em length} & Le nombre de coefficients. \\
+\hline
+{\em decimation} & Le facteur de décimation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre FIR. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00136}{136}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 13
+Voici le graphe des appelants de cette fonction :
+% FIG 14
+\Hypertarget{group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_reset@{LokiFIRFilter\_reset}}
+\index{LokiFIRFilter\_reset@{LokiFIRFilter\_reset}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_reset()}{LokiFIRFilter\_reset()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384} 
+void Loki\+FIRFilter\+\_\+reset (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Réinitialiser un filtre FIR. 
+
+Cette fonction remet à zéro l\textquotesingle{}état du filtre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à réinitialiser. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00293}{293}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 15
+Voici le graphe des appelants de cette fonction :
+% FIG 16
+\Hypertarget{group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b}\index{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_work@{LokiFIRFilter\_work}}
+\index{LokiFIRFilter\_work@{LokiFIRFilter\_work}!Filtre FIR@{Filtre FIR}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIRFilter\_work()}{LokiFIRFilter\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b} 
+bool Loki\+FIRFilter\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{in}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+
+
+Exécuter un pas de calcul d\textquotesingle{}un fitre FIR. 
+
+Le filtre consomme un échantillon d\textquotesingle{}entrée, indique si un échantillon de sortie est disponible et le range à l\textquotesingle{}emplacement indiqué. Si le facteur de décimation de ce filtre est N, il produira un échantillon de sortie tous les N appels.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à exécuter. \\
+\hline
+{\em in} & L\textquotesingle{}échantillon d\textquotesingle{}entrée. \\
+\hline
+{\em out} & Un pointeur vers l\textquotesingle{}emplacement où ranger l\textquotesingle{}échantillon de sortie. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}échantillon de sortie est valide. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00175}{175}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 17
+Voici le graphe des appelants de cette fonction :
+% FIG 18

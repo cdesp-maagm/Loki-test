@@ -1,0 +1,18 @@
+
+{
+    "package_name" : "FIRFilterExample_cfg",
+    "EX_use" : "FIRFilter_pkg",
+    "declarations" : {
+        "FIR_COEFF_WIDTH"          : {"type" : "integer",  "value"  : 18},
+        "EX_SAMPLE_FREQUENCY"      : {"type" : "integer",  "value"  : 1250000},
+        "EX_DECIMATION"            : {"type" : "integer",  "value"  : 5},
+        "EX_CUTOFF_FREQUENCY_LOW"  : {"type" : "integer",  "value"  : 0},
+        "EX_CUTOFF_FREQUENCY_HIGH" : {"type" : "integer",  "value"  : 100000},
+        "EX_TAPS"                  : {"type" : "integer",  "value"  : 100},
+        "EX_WINDOW"                : {"type" : "string",   "value"  : "('kaiser', 3 * pi)"},
+        "EX_PARALLELISM"           : {"type" : "positive", "value"  : 4},
+        "EX_CHANNELS"              : {"type" : "integer",  "value"  : 4},
+        "EX_DATA_INTEGER_WIDTH"    : {"type" : "integer",  "value"  : 2},
+        "EX_DATA_FRACTIONAL_WIDTH" : {"type" : "integer",  "value"  : 14}
+    }
+}

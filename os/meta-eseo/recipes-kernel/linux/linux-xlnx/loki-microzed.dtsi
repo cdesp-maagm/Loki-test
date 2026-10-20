@@ -1,0 +1,151 @@
+
+#include "zynq-microzed.dts"
+#include "loki-common.dtsi"
+
+#include <dt-bindings/leds/common.h>
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+
+&watchdog0 {
+    status = "okay";
+    timeout-sec = <300>;
+    reset-on-timeout;
+};
+
+&uart0 {
+	status = "okay";
+};
+
+&i2c0 {
+	status = "okay";
+	/* MAC address, EEPROM: Microchip 24AA02E48T */
+	mac_eeprom: eeprom@50 {
+		compatible = "atmel,24c02";
+        reg = <0x50>;
+    };
+};
+
+&i2c1 {
+	status = "okay";
+
+	tmp112@48 {
+		compatible = "ti,tmp112";
+		reg = <0x48>; /* I2C address ADDR0=GND */
+	};
+
+	led-controller@14 {
+		compatible = "ti,lp5012";
+
+		#address-cells = <1>;
+		#size-cells = <0>;
+		reg = <0x14>; /* I2C address ADDR0=ADDR1=GND */
+
+		multi-led@0 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <0>;
+			label = "multi-led-0";
+			color = <LED_COLOR_ID_RGB>;
+			led-0 {color = <LED_COLOR_ID_RED>;};
+			led-1 {color = <LED_COLOR_ID_GREEN>;};
+			led-2 {color = <LED_COLOR_ID_BLUE>;};
+		};
+
+		multi-led@1 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <1>;
+			label = "multi-led-1";
+			color = <LED_COLOR_ID_RGB>;
+			led-3 {color = <LED_COLOR_ID_RED>;};
+			led-4 {color = <LED_COLOR_ID_GREEN>;};
+			led-5 {color = <LED_COLOR_ID_BLUE>;};
+		};
+
+		multi-led@2 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <2>;
+			label = "multi-led-2";
+			color = <LED_COLOR_ID_RGB>;
+			led-6 {color = <LED_COLOR_ID_RED>;};
+			led-7 {color = <LED_COLOR_ID_GREEN>;};
+			led-8 {color = <LED_COLOR_ID_BLUE>;};
+		};
+
+		multi-led@3 {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			reg = <3>;
+			label = "multi-led-3";
+			color = <LED_COLOR_ID_RGB>;
+			led-9  {color = <LED_COLOR_ID_RED>;};
+			led-10 {color = <LED_COLOR_ID_GREEN>;};
+			led-11 {color = <LED_COLOR_ID_BLUE>;};
+		};
+   	};
+};
+
+&amba_pl {
+	xadc: xadc@41240000 {
+		compatible = "xlnx,axi-xadc-1.00.a";
+        reg = <0x41250000 0x1000>;
+		interrupts = <0 31 4>; /* IRQ_F2P[2], maps to Linux IRQ 63 */
+        interrupt-parent = <&intc>;
+        clocks = <&clkc 15>;
+
+		xlnx,channels {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			/* VAUXP0/VAUXN0, differential, unipolar */
+			channel@1 {
+				reg = <1>;
+			};
+
+			/* VAUXP1/VAUXN1, differential, unipolar */
+			channel@2 {
+				reg = <2>;
+			};
+
+			/* Not connected */
+/*
+			channel@3 {
+				reg = <3>;
+				xlnx,bipolar;
+			};
+
+			channel@4 {
+				reg = <4>;
+				xlnx,bipolar;
+			};
+*/
+		};
+	};
+};
+
+/ {
+    gpio-leds {
+        compatible = "gpio-leds";
+        led-0 {
+			label = "led-0";
+            gpios = <&gpio0 47 GPIO_ACTIVE_HIGH>;
+			default-state = "off";
+			linux,default-trigger = "heartbeat";
+        };
+    };
+
+	gpio-keys {
+		compatible = "gpio-keys";
+		btn-0 {
+			gpios = <&gpio0 55 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_POWER>;
+			debounce-interval = <10>;
+		};
+	};
+
+    pps {
+		compatible = "pps-gpio";
+		gpios = <&gpio0 54 GPIO_ACTIVE_HIGH>;
+    };
+};

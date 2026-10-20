@@ -1,0 +1,6 @@
+<map id="LokiModem_set_demod_phase_y" name="LokiModem_set_demod_phase_y">
+<area shape="rect" id="node1" title="Affecter un déphasage à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="5,37,183,77"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7aa023bd043cc34a645084d7c25441a0" title="Lire le retard maximal applicable à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="231,5,409,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gad371ab9c535880040f2c2edd940214a7" title="Affecter un retard à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="231,69,409,109"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="457,77,611,102"/>
+</map>

@@ -1,0 +1,21 @@
+{
+    "package_name" : "FIRFilterTestbench_cfg",
+    "TB_use" : "FIRFilter_pkg",
+    "declarations" : {
+        "FIR_COEFF_WIDTH"          : {"type" : "integer",  "value"  : 18},
+        "TB_SAMPLE_FREQUENCY"      : {"type" : "integer",  "value"  : 1250000},
+        "TB_DECIMATION"            : {"type" : "integer",  "value"  : 5},
+        "TB_CUTOFF_FREQUENCY_LOW"  : {"type" : "integer",  "value"  : 0},
+        "TB_CUTOFF_FREQUENCY_HIGH" : {"type" : "integer",  "value"  : 100000},
+        "TB_TAPS"                  : {"type" : "integer",  "value"  : 100},
+        "TB_WINDOW"                : {"type" : "string",   "value"  : "('kaiser', 3 * pi)"},
+        "TB_PARALLELISM"           : {"type" : "positive", "value"  : 4},
+        "TB_CLK_PERIOD"            : {"type" : "time",     "value"  : "20 ns"},
+        "TB_CHANNELS"              : {"type" : "integer",  "value"  : 4},
+        "TB_DATA_INTEGER_WIDTH"    : {"type" : "integer",  "value"  : 2},
+        "TB_DATA_FRACTIONAL_WIDTH" : {"type" : "integer",  "value"  : 14},
+        "TB_DURATION_SAMPLES"      : {"type" : "integer",  "value"  : 800},
+        "TB_CYCLES_AFTER_S_READY"  : {"type" : "integer",  "value"  : 0},
+        "TB_CYCLES_AFTER_M_VALID"  : {"type" : "integer",  "value"  : 0}
+    }
+}

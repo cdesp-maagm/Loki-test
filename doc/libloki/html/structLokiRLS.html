@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence de la structure LokiRLS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Champs de données</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la structure LokiRLS<div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a> &raquo; <a class="el" href="group__gLokiRLS.html">Filtre RLS</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Représentation d'un filtre RLS.  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:a557a04902773c65c14fa63145421ff59" id="r_a557a04902773c65c14fa63145421ff59"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a557a04902773c65c14fa63145421ff59">lambda</a></td></tr>
+<tr class="memdesc:a557a04902773c65c14fa63145421ff59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le facteur d'oubli du filtre.  <br /></td></tr>
+<tr class="memitem:a0fe3428625bd52b82e344f392dca3f8c" id="r_a0fe3428625bd52b82e344f392dca3f8c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0fe3428625bd52b82e344f392dca3f8c">lambda_inv</a></td></tr>
+<tr class="memdesc:a0fe3428625bd52b82e344f392dca3f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'inverse du facteur d'oubli du filtre.  <br /></td></tr>
+<tr class="memitem:ae646efd09f4cba440a5ad9a9727bf1f5" id="r_ae646efd09f4cba440a5ad9a9727bf1f5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae646efd09f4cba440a5ad9a9727bf1f5">P</a> [5][5]</td></tr>
+<tr class="memdesc:ae646efd09f4cba440a5ad9a9727bf1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'inverse de la matrice de covariance du signal d'entrée.  <br /></td></tr>
+<tr class="memitem:a5856c7224c91d0545a05f72b18c56db4" id="r_a5856c7224c91d0545a05f72b18c56db4"><td class="memItemLeft"><a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5856c7224c91d0545a05f72b18c56db4">state</a></td></tr>
+<tr class="memdesc:a5856c7224c91d0545a05f72b18c56db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les coefficients de l'équation de l'ellipse.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représentation d'un filtre RLS. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00012">12</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="a557a04902773c65c14fa63145421ff59" name="a557a04902773c65c14fa63145421ff59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557a04902773c65c14fa63145421ff59">&#9670;&#160;</a></span>lambda</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiRLS::lambda</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le facteur d'oubli du filtre. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00014">14</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+
+</div>
+</div>
+<a id="a0fe3428625bd52b82e344f392dca3f8c" name="a0fe3428625bd52b82e344f392dca3f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe3428625bd52b82e344f392dca3f8c">&#9670;&#160;</a></span>lambda_inv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiRLS::lambda_inv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>L'inverse du facteur d'oubli du filtre. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00016">16</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+
+</div>
+</div>
+<a id="ae646efd09f4cba440a5ad9a9727bf1f5" name="ae646efd09f4cba440a5ad9a9727bf1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae646efd09f4cba440a5ad9a9727bf1f5">&#9670;&#160;</a></span>P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiRLS::P[5][5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>L'inverse de la matrice de covariance du signal d'entrée. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00018">18</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+
+</div>
+</div>
+<a id="a5856c7224c91d0545a05f72b18c56db4" name="a5856c7224c91d0545a05f72b18c56db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5856c7224c91d0545a05f72b18c56db4">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> LokiRLS::state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Les coefficients de l'équation de l'ellipse. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00020">20</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

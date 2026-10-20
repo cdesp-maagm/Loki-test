@@ -1,0 +1,37 @@
+\doxysection{libloki-\/fifo.h}
+\hypertarget{libloki-fifo_8h_source}{}\label{libloki-fifo_8h_source}\index{libloki-\/fifo.h@{libloki-\/fifo.h}}
+\doxymbox{\hyperlink{libloki-fifo_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_FIFO\_H}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ LIBLOKI\_FIFO\_H}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00020}\doxymbox{\hyperlink{group__gLokiFIFO_ga9809c8ea8fd596bac8faed62a50d615d}{00020}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00032}00032\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *\doxymbox{\hyperlink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{LokiFIFO\_new}}(\textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{item\_size}},\ \textcolor{keywordtype}{size\_t}\ length,\ \textcolor{keywordtype}{size\_t}\ consumers);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}{LokiFIFO\_del}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00045}00045\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{LokiFIFO\_get\_item\_size}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00059}00059\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}{LokiFIFO\_get\_producer\_item}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00069}00069\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}{LokiFIFO\_push}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00084}00084\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{LokiFIFO\_get\_consumer\_item}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self,\ \textcolor{keywordtype}{size\_t}\ cid);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00098}00098\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{LokiFIFO\_pull}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self,\ \textcolor{keywordtype}{size\_t}\ cid);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00104}00104\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{LokiFIFO\_abort}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00106}00106\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8h_source_l00110}00110\ }
+
+\end{DoxyCode}

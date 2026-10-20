@@ -1,0 +1,5 @@
+<map id="LokiFIFO_abort" name="LokiFIFO_abort">
+<area shape="rect" id="node1" title="Terminer les attentes en cours." alt="" coords="239,31,351,57"/>
+<area shape="rect" id="node2" href="$group__LokiConsumer.html#ga3596ff29c7812a18f78bc33c73755c63" title="Arrêter un consommateur." alt="" coords="29,5,167,32"/>
+<area shape="rect" id="node3" href="$group__LokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649" title="Arrêter l&#39;acquisition et le traitement." alt="" coords="5,56,191,83"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="LokiFIRFilter_del" name="LokiFIRFilter_del">
+<area shape="rect" id="node1" title="Détruire un filtre FIR." alt="" coords="631,55,761,80"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="416,55,583,80"/>
+<area shape="rect" id="node6" href="$group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="427,5,572,31"/>
+<area shape="rect" id="node7" href="$group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2" title="Construire un filtre FIR." alt="" coords="431,108,568,133"/>
+<area shape="rect" id="node3" href="$group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="186,5,367,31"/>
+<area shape="rect" id="node5" href="$group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="214,55,339,80"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,55,137,80"/>
+<area shape="rect" id="node8" href="$group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,105,368,145"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="LokiModem_get_demod_delay_x" name="LokiModem_get_demod_delay_x">
+<area shape="rect" id="node1" title="Lire le retard appliqué à la composante X (I) du signal démodulé pour une voie." alt="" coords="232,5,411,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gac60900447f60f45adfb7ed4867902f8e" title="Lire le déphasage appliqué à la composante X (I) du signal démodulé pour une voie." alt="" coords="5,5,184,45"/>
+</map>

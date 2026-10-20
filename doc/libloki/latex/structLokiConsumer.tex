@@ -1,0 +1,95 @@
+\doxysection{Référence de la structure Loki\+Consumer}
+\hypertarget{structLokiConsumer}{}\label{structLokiConsumer}\index{LokiConsumer@{LokiConsumer}}
+
+
+Définition d\textquotesingle{}un consommateur.  
+
+
+
+
+Graphe de collaboration de Loki\+Consumer:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}}
+\begin{DoxyCompactList}\small\item\em La FIFO lue par ce consommateur. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{cid}}
+\begin{DoxyCompactList}\small\item\em Le numéro de consommateur pour la FIFO. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt. \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{thread}}
+\begin{DoxyCompactList}\small\item\em Le thread démarré par \doxylink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Définition d\textquotesingle{}un consommateur. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+
+
+\label{structLokiConsumer_doc-variable-members}
+\Hypertarget{structLokiConsumer_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}\index{LokiConsumer@{LokiConsumer}!cid@{cid}}
+\index{cid@{cid}!LokiConsumer@{LokiConsumer}}
+\doxysubsubsection{\texorpdfstring{cid}{cid}}
+{\footnotesize\ttfamily \label{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75} 
+size\+\_\+t Loki\+Consumer::\+cid}
+
+
+
+Le numéro de consommateur pour la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+\Hypertarget{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}\index{LokiConsumer@{LokiConsumer}!in@{in}}
+\index{in@{in}!LokiConsumer@{LokiConsumer}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily \label{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+Consumer::\+in}
+
+
+
+La FIFO lue par ce consommateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+\Hypertarget{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}\index{LokiConsumer@{LokiConsumer}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiConsumer@{LokiConsumer}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4} 
+volatile bool Loki\+Consumer::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+\Hypertarget{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}\index{LokiConsumer@{LokiConsumer}!thread@{thread}}
+\index{thread@{thread}!LokiConsumer@{LokiConsumer}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \label{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475} 
+pthread\+\_\+t Loki\+Consumer::\+thread}
+
+
+
+Le thread démarré par \doxylink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start}. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00028}{28}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-consumer_8c}{libloki-\/consumer.\+c}}\end{DoxyCompactItemize}

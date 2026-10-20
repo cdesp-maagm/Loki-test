@@ -1,0 +1,1551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Acquisition de données provenant des capteurs auxiliaires</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Acquisition de données provenant des capteurs auxiliaires<div class="ingroups"><a class="el" href="group__ggLokiAcquisition.html">Acquisition</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module fournit une API en espace utilisateur pour accéder aux composants de pilotage des ADC auxiliaires et des capteurs one-wire implantés dans le FPGA.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Acquisition de données provenant des capteurs auxiliaires:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors.png" border="0" usemap="#group____gLokiSensors" alt=""/></div>
+<map name="group____gLokiSensors" id="group____gLokiSensors">
+<area shape="rect" title="Ce module fournit une API en espace utilisateur pour accéder aux composants de pilotage des ADC auxil..." alt="" coords="140,5,303,60"/>
+<area shape="rect" href="group__ggLokiAcquisition.html" title=" " alt="" coords="5,20,92,45"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-sensors_8c"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libloki-sensors_8c.html">libloki-sensors.c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:libloki-sensors_8h"><td class="memItemLeft" align="right" valign="top">fichier &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libloki-sensors_8h.html">libloki-sensors.h</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiSensors.html">LokiSensors</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation de l'interface d'acquisition des capteurs auxiliaires.  <a href="structLokiSensors.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiSensorsSample.html">LokiSensorsSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un échantillon en provenance des capteurs auxiliaires.  <a href="structLokiSensorsSample.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gac65edfa5d1dbb5f1b560b4383a72555f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gac65edfa5d1dbb5f1b560b4383a72555f">USE_MMAP</a></td></tr>
+<tr class="memdesc:gac65edfa5d1dbb5f1b560b4383a72555f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utiliser la fonction <code>mmap</code> pour accéder aux données DMA.  <a href="group__gLokiSensors.html#gac65edfa5d1dbb5f1b560b4383a72555f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gac65edfa5d1dbb5f1b560b4383a72555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaddedaed69cd104ec1095687841046fc8"><td class="memItemLeft" align="right" valign="top"><a id="gaddedaed69cd104ec1095687841046fc8"></a>
+typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaddedaed69cd104ec1095687841046fc8">LokiDMASample</a></td></tr>
+<tr class="memdesc:gaddedaed69cd104ec1095687841046fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type de donnée brut d'un échantillon passé par transfert DMA. <br /></td></tr>
+<tr class="separator:gaddedaed69cd104ec1095687841046fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa1f08cc9c66b74e63303bfe5215be0e"><td class="memItemLeft" align="right" valign="top"><a id="gaaa1f08cc9c66b74e63303bfe5215be0e"></a>
+typedef struct <a class="el" href="structLokiSensors.html">LokiSensors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaaa1f08cc9c66b74e63303bfe5215be0e">LokiSensors</a></td></tr>
+<tr class="memdesc:gaaa1f08cc9c66b74e63303bfe5215be0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation des capteurs auxiliaires. <br /></td></tr>
+<tr class="separator:gaaa1f08cc9c66b74e63303bfe5215be0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gacf8b4b66fef82cc02ed212ebe2f171cd"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">LokiSensors_get_reg</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, LokiADCRegister reg)</td></tr>
+<tr class="memdesc:gacf8b4b66fef82cc02ed212ebe2f171cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire un registre du circuit d'acquisition.  <a href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gacf8b4b66fef82cc02ed212ebe2f171cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71385643e6a7b2ed2959a2bfe216e2d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">LokiSensors_set_reg</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, LokiADCRegister reg, uint32_t value)</td></tr>
+<tr class="memdesc:ga71385643e6a7b2ed2959a2bfe216e2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un registre du circuit d'acquisition.  <a href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga71385643e6a7b2ed2959a2bfe216e2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga643f5e3bec3eb3988c4e23a5d4c3bdcd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">LokiSensors_dma_start</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga643f5e3bec3eb3988c4e23a5d4c3bdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demander au circuit d'acquisition de démarrer les transferts DMA.  <a href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga643f5e3bec3eb3988c4e23a5d4c3bdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16e71c40a26b79bde03715acbc3d7902"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">LokiSensors_dma_stop</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga16e71c40a26b79bde03715acbc3d7902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demander au circuit d'acquisition d'arrêter les transferts DMA.  <a href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga16e71c40a26b79bde03715acbc3d7902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga098d1895abd4748aa16344e32a790744"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">LokiSensors_dma_is_streaming</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga098d1895abd4748aa16344e32a790744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état des transferts DMA.  <a href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga098d1895abd4748aa16344e32a790744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdfcb53bd798c7b84e7824956ee483ec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gabdfcb53bd798c7b84e7824956ee483ec">LokiSensors_dma_get_start_time</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, struct timespec *res)</td></tr>
+<tr class="memdesc:gabdfcb53bd798c7b84e7824956ee483ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la date de démarrage des transferts DMA.  <a href="group__gLokiSensors.html#gabdfcb53bd798c7b84e7824956ee483ec">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gabdfcb53bd798c7b84e7824956ee483ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4013763de51f952b4923355b1006c4a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">LokiSensors_dma_get_packet_time</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, struct timespec *res)</td></tr>
+<tr class="memdesc:ga4013763de51f952b4923355b1006c4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la date du dernier transfert DMA.  <a href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga4013763de51f952b4923355b1006c4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b0b67185ef9acde1a519f4379c2fee7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7">LokiSensors_new</a> (void)</td></tr>
+<tr class="memdesc:ga4b0b67185ef9acde1a519f4379c2fee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un module d'acquisition pour les capteurs auxiliaires.  <a href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga4b0b67185ef9acde1a519f4379c2fee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa06702e691e70c9945dbd1a4387c27b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">LokiSensors_del</a> (<a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:gaaa06702e691e70c9945dbd1a4387c27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un module d'acquisition pour les capteurs auxiliaires.  <a href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gaaa06702e691e70c9945dbd1a4387c27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97f3a1213a3b5af9d35d4436a44c979c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga97f3a1213a3b5af9d35d4436a44c979c">LokiSensors_get_clk_frequency</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga97f3a1213a3b5af9d35d4436a44c979c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'horloge du circuit d'acquisition.  <a href="group__gLokiSensors.html#ga97f3a1213a3b5af9d35d4436a44c979c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga97f3a1213a3b5af9d35d4436a44c979c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga796a8dd28b4a9bf4cfc92f031d8005f1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga796a8dd28b4a9bf4cfc92f031d8005f1">LokiSensors_get_channels</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga796a8dd28b4a9bf4cfc92f031d8005f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de voies du circuit d'acquisition.  <a href="group__gLokiSensors.html#ga796a8dd28b4a9bf4cfc92f031d8005f1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga796a8dd28b4a9bf4cfc92f031d8005f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae83f05513344aea82443b92f28ee18fd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">LokiSensors_get_sampling_frequency</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:gae83f05513344aea82443b92f28ee18fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'échantillonnage du circuit d'acquisition.  <a href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gae83f05513344aea82443b92f28ee18fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cde3b0337f50e2855c57facb372240c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c">LokiSensors_set_sampling_frequency</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, float freq)</td></tr>
+<tr class="memdesc:ga3cde3b0337f50e2855c57facb372240c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence d'échantillonnage au circuit d'acquisition.  <a href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga3cde3b0337f50e2855c57facb372240c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga222c227838147f429c734f06a668a5e1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga222c227838147f429c734f06a668a5e1">LokiSensors_get_packet_length_max</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga222c227838147f429c734f06a668a5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur maximale des paquets DMA pour une voie.  <a href="group__gLokiSensors.html#ga222c227838147f429c734f06a668a5e1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga222c227838147f429c734f06a668a5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9c872bf8182d8d50e3dbafb69a3dea1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">LokiSensors_get_packet_length</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:gaf9c872bf8182d8d50e3dbafb69a3dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur courante d'un paquet DMA pour une voie.  <a href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gaf9c872bf8182d8d50e3dbafb69a3dea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4de58974236aecf5c5f9f8f306173f15"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">LokiSensors_get_transfer_length</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga4de58974236aecf5c5f9f8f306173f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur courante d'un transfert DMA.  <a href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga4de58974236aecf5c5f9f8f306173f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9f4a33a40dd038a4bd50d897f6cddfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">LokiSensors_set_packet_length</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, uint32_t length)</td></tr>
+<tr class="memdesc:gaa9f4a33a40dd038a4bd50d897f6cddfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter la longueur d'un paquet DMA pour une voie.  <a href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gaa9f4a33a40dd038a4bd50d897f6cddfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b1b187b0aa26684641c88768c532e3b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga4b1b187b0aa26684641c88768c532e3b">LokiSensors_get_scaling_factor</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, size_t channel)</td></tr>
+<tr class="memdesc:ga4b1b187b0aa26684641c88768c532e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le facteur de mise à l'échelle des échantillons d'une voie.  <a href="group__gLokiSensors.html#ga4b1b187b0aa26684641c88768c532e3b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga4b1b187b0aa26684641c88768c532e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac39854322c9402bf8b6e08b3b834fca8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gac39854322c9402bf8b6e08b3b834fca8">LokiSensors_set_scaling_factor</a> (<a class="el" href="structLokiSensors.html">LokiSensors</a> *self, size_t channel, float scale)</td></tr>
+<tr class="memdesc:gac39854322c9402bf8b6e08b3b834fca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un facteur de mise à l'échelle des échantillons d'une voie.  <a href="group__gLokiSensors.html#gac39854322c9402bf8b6e08b3b834fca8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gac39854322c9402bf8b6e08b3b834fca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47b324a625c39935ced2029a33b2d087"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087">LokiSensors_get_last_data</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, size_t channel)</td></tr>
+<tr class="memdesc:ga47b324a625c39935ced2029a33b2d087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la valeur du dernier échantillon acquis sur une voie.  <a href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga47b324a625c39935ced2029a33b2d087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7574d0a4603cc6713c8e3b43e8516b68"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">LokiSensors_get_packet_index</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, <a class="el" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> raw_item)</td></tr>
+<tr class="memdesc:ga7574d0a4603cc6713c8e3b43e8516b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'indice d'un paquet reçu.  <a href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga7574d0a4603cc6713c8e3b43e8516b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89a9f59324867192240ebfd86cf645cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">LokiSensors_set_packet_item</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self, <a class="el" href="structLokiSensorsSample.html">LokiSensorsSample</a> *item, <a class="el" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a> raw_item)</td></tr>
+<tr class="memdesc:ga89a9f59324867192240ebfd86cf645cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertir un échantillon issu du DMA.  <a href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga89a9f59324867192240ebfd86cf645cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga715fe749a0006ed6ca3952ec8568ccc8"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">LokiSensors_work</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga715fe749a0006ed6ca3952ec8568ccc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traiter un tableau d'échantillons issu d'un transfert DMA.  <a href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga715fe749a0006ed6ca3952ec8568ccc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc57b82efb0c7c156185c1dfc972f6f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7">LokiSensors_start_streaming</a> (<a class="el" href="structLokiSensors.html">LokiSensors</a> *self, int32_t channels, bool raw, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *out)</td></tr>
+<tr class="memdesc:gabc57b82efb0c7c156185c1dfc972f6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'acquisition.  <a href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gabc57b82efb0c7c156185c1dfc972f6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1857007bf991eed3f72c20bd42522709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709">LokiSensors_stop_streaming</a> (<a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga1857007bf991eed3f72c20bd42522709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition.  <a href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga1857007bf991eed3f72c20bd42522709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37c927170b57fa2979fbdd86bc7cbbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6">LokiSensors_force_stop</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:ga37c927170b57fa2979fbdd86bc7cbbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition immédiatement.  <a href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga37c927170b57fa2979fbdd86bc7cbbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5d32b7d8e63c9305f29e90577e54b1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b">LokiSensors_is_streaming</a> (const <a class="el" href="structLokiSensors.html">LokiSensors</a> *self)</td></tr>
+<tr class="memdesc:gaa5d32b7d8e63c9305f29e90577e54b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état de l'acquisition.  <a href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:gaa5d32b7d8e63c9305f29e90577e54b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<p>Ce module fournit une API en espace utilisateur pour accéder aux composants de pilotage des ADC auxiliaires et des capteurs one-wire implantés dans le FPGA. </p>
+<p>Il s'appuie sur un module noyau Linux à travers les interfaces IOCTL et MMAP. Ce module noyau implémente les mécanismes de plus bas niveau pour l'accès au matériel (registres, DMA). </p>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="gac65edfa5d1dbb5f1b560b4383a72555f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac65edfa5d1dbb5f1b560b4383a72555f">&#9670;&nbsp;</a></span>USE_MMAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_MMAP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Utiliser la fonction <code>mmap</code> pour accéder aux données DMA. </p>
+<p>Commenter cette ligne pour utiliser <code>fread</code>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00350">350</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="gaaa06702e691e70c9945dbd1a4387c27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa06702e691e70c9945dbd1a4387c27b">&#9670;&nbsp;</a></span>LokiSensors_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un module d'acquisition pour les capteurs auxiliaires. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00232">232</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaaa06702e691e70c9945dbd1a4387c27b_icgraph.png" border="0" usemap="#group__gLokiSensors_gaaa06702e691e70c9945dbd1a4387c27b_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaaa06702e691e70c9945dbd1a4387c27b_icgraph" id="group__gLokiSensors_gaaa06702e691e70c9945dbd1a4387c27b_icgraph">
+<area shape="rect" title="Détruire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="179,5,297,32"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,5,131,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4013763de51f952b4923355b1006c4a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4013763de51f952b4923355b1006c4a7">&#9670;&nbsp;</a></span>LokiSensors_dma_get_packet_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_dma_get_packet_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timespec *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire la date du dernier transfert DMA. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour interroger le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">res</td><td>Un pointeur vers le résultat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00166">166</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga4013763de51f952b4923355b1006c4a7_icgraph.png" border="0" usemap="#group__gLokiSensors_ga4013763de51f952b4923355b1006c4a7_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga4013763de51f952b4923355b1006c4a7_icgraph" id="group__gLokiSensors_ga4013763de51f952b4923355b1006c4a7_icgraph">
+<area shape="rect" title="Lire la date du dernier transfert DMA." alt="" coords="421,5,572,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gabdfcb53bd798c7b84e7824956ee483ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabdfcb53bd798c7b84e7824956ee483ec">&#9670;&nbsp;</a></span>LokiSensors_dma_get_start_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_dma_get_start_time </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timespec *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire la date de démarrage des transferts DMA. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour interroger le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">res</td><td>Un pointeur vers le résultat. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00152">152</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="ga098d1895abd4748aa16344e32a790744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga098d1895abd4748aa16344e32a790744">&#9670;&nbsp;</a></span>LokiSensors_dma_is_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool LokiSensors_dma_is_streaming </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire l'état des transferts DMA. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour interroger le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00136">136</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga098d1895abd4748aa16344e32a790744_icgraph.png" border="0" usemap="#group__gLokiSensors_ga098d1895abd4748aa16344e32a790744_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga098d1895abd4748aa16344e32a790744_icgraph" id="group__gLokiSensors_ga098d1895abd4748aa16344e32a790744_icgraph">
+<area shape="rect" title="Lire l&#39;état des transferts DMA." alt="" coords="244,23,387,65"/>
+<area shape="rect" href="group__gLokiSensors.html#gaa5d32b7d8e63c9305f29e90577e54b1b" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="13,5,188,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,56,196,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga643f5e3bec3eb3988c4e23a5d4c3bdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga643f5e3bec3eb3988c4e23a5d4c3bdcd">&#9670;&nbsp;</a></span>LokiSensors_dma_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_dma_start </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Demander au circuit d'acquisition de démarrer les transferts DMA. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour agir sur le circuit d'acquisition à travers le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00109">109</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga643f5e3bec3eb3988c4e23a5d4c3bdcd_icgraph.png" border="0" usemap="#group__gLokiSensors_ga643f5e3bec3eb3988c4e23a5d4c3bdcd_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga643f5e3bec3eb3988c4e23a5d4c3bdcd_icgraph" id="group__gLokiSensors_ga643f5e3bec3eb3988c4e23a5d4c3bdcd_icgraph">
+<area shape="rect" title="Demander au circuit d&#39;acquisition de démarrer les transferts DMA." alt="" coords="421,5,580,32"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,5,373,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga16e71c40a26b79bde03715acbc3d7902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16e71c40a26b79bde03715acbc3d7902">&#9670;&nbsp;</a></span>LokiSensors_dma_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_dma_stop </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Demander au circuit d'acquisition d'arrêter les transferts DMA. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour agir sur le circuit d'acquisition à travers le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00123">123</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga16e71c40a26b79bde03715acbc3d7902_icgraph.png" border="0" usemap="#group__gLokiSensors_ga16e71c40a26b79bde03715acbc3d7902_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga16e71c40a26b79bde03715acbc3d7902_icgraph" id="group__gLokiSensors_ga16e71c40a26b79bde03715acbc3d7902_icgraph">
+<area shape="rect" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="455,31,613,57"/>
+<area shape="rect" href="group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="244,5,407,32"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="261,56,390,83"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,56,196,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga37c927170b57fa2979fbdd86bc7cbbe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37c927170b57fa2979fbdd86bc7cbbe6">&#9670;&nbsp;</a></span>LokiSensors_force_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_force_stop </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter l'acquisition immédiatement. </p>
+<p>Interrompt l'exécution du thread lancé par la fonction <a class="el" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition.">LokiSensors_start_streaming</a>. Cette fonction force l'arrêt des transferts DMA sans attendre la fin d'un paquet.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à arrêter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00527">527</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga37c927170b57fa2979fbdd86bc7cbbe6_cgraph.png" border="0" usemap="#group__gLokiSensors_ga37c927170b57fa2979fbdd86bc7cbbe6_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga37c927170b57fa2979fbdd86bc7cbbe6_cgraph" id="group__gLokiSensors_ga37c927170b57fa2979fbdd86bc7cbbe6_cgraph">
+<area shape="rect" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="5,5,168,32"/>
+<area shape="rect" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="216,5,375,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga796a8dd28b4a9bf4cfc92f031d8005f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga796a8dd28b4a9bf4cfc92f031d8005f1">&#9670;&nbsp;</a></span>LokiSensors_get_channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSensors_get_channels </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nombre de voies du circuit d'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de voies. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00252">252</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="ga97f3a1213a3b5af9d35d4436a44c979c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97f3a1213a3b5af9d35d4436a44c979c">&#9670;&nbsp;</a></span>LokiSensors_get_clk_frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiSensors_get_clk_frequency </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la fréquence d'horloge du circuit d'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La fréquence d'horloge, en Hz. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00248">248</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="ga47b324a625c39935ced2029a33b2d087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47b324a625c39935ced2029a33b2d087">&#9670;&nbsp;</a></span>LokiSensors_get_last_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSensors_get_last_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la valeur du dernier échantillon acquis sur une voie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+    <tr><td class="paramname">channel</td><td>Le numéro de la voie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du dernier échantillon. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00295">295</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga47b324a625c39935ced2029a33b2d087_cgraph.png" border="0" usemap="#group__gLokiSensors_ga47b324a625c39935ced2029a33b2d087_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga47b324a625c39935ced2029a33b2d087_cgraph" id="group__gLokiSensors_ga47b324a625c39935ced2029a33b2d087_cgraph">
+<area shape="rect" title="Lire la valeur du dernier échantillon acquis sur une voie." alt="" coords="5,5,184,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="232,5,376,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga7574d0a4603cc6713c8e3b43e8516b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7574d0a4603cc6713c8e3b43e8516b68">&#9670;&nbsp;</a></span>LokiSensors_get_packet_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t LokiSensors_get_packet_index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a>&#160;</td>
+          <td class="paramname"><em>raw_item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire l'indice d'un paquet reçu. </p>
+<p>Cette fonction extrait d'un échantillon brut le champ contenant l'indice du paquet.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">raw_item</td><td>Un échantillon obtenu lors d'un transfert DMA. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indice du paquet contenant cet échantillon. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00307">307</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga7574d0a4603cc6713c8e3b43e8516b68_icgraph.png" border="0" usemap="#group__gLokiSensors_ga7574d0a4603cc6713c8e3b43e8516b68_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga7574d0a4603cc6713c8e3b43e8516b68_icgraph" id="group__gLokiSensors_ga7574d0a4603cc6713c8e3b43e8516b68_icgraph">
+<area shape="rect" title="Lire l&#39;indice d&#39;un paquet reçu." alt="" coords="421,5,587,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaf9c872bf8182d8d50e3dbafb69a3dea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9c872bf8182d8d50e3dbafb69a3dea1">&#9670;&nbsp;</a></span>LokiSensors_get_packet_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiSensors_get_packet_length </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur courante d'un paquet DMA pour une voie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre d'échantillons par paquet et par voie. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00268">268</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_cgraph.png" border="0" usemap="#group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_cgraph" id="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_cgraph">
+<area shape="rect" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="5,5,171,47"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="219,13,363,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_icgraph.png" border="0" usemap="#group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_icgraph" id="group__gLokiSensors_gaf9c872bf8182d8d50e3dbafb69a3dea1_icgraph">
+<area shape="rect" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="640,35,805,76"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="421,5,592,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="444,71,569,98"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga222c227838147f429c734f06a668a5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga222c227838147f429c734f06a668a5e1">&#9670;&nbsp;</a></span>LokiSensors_get_packet_length_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiSensors_get_packet_length_max </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur maximale des paquets DMA pour une voie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre maximal d'échantillons par paquet et par voie. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00264">264</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="gacf8b4b66fef82cc02ed212ebe2f171cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf8b4b66fef82cc02ed212ebe2f171cd">&#9670;&nbsp;</a></span>LokiSensors_get_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t LokiSensors_get_reg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LokiADCRegister&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lire un registre du circuit d'acquisition. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour interroger le circuit d'acquisition à travers le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">reg</td><td>Le numéro du registre à lire. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du registre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00076">76</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gacf8b4b66fef82cc02ed212ebe2f171cd_icgraph.png" border="0" usemap="#group__gLokiSensors_gacf8b4b66fef82cc02ed212ebe2f171cd_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_gacf8b4b66fef82cc02ed212ebe2f171cd_icgraph" id="group__gLokiSensors_gacf8b4b66fef82cc02ed212ebe2f171cd_icgraph">
+<area shape="rect" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="875,93,1019,120"/>
+<area shape="rect" href="group__gLokiSensors.html#ga47b324a625c39935ced2029a33b2d087" title="Lire la valeur du dernier échantillon acquis sur une voie." alt="" coords="648,5,827,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="655,57,820,98"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="448,120,573,147"/>
+<area shape="rect" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="421,171,600,213"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="425,54,596,95"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,120,373,147"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,120,196,147"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gae83f05513344aea82443b92f28ee18fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae83f05513344aea82443b92f28ee18fd">&#9670;&nbsp;</a></span>LokiSensors_get_sampling_frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSensors_get_sampling_frequency </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la fréquence d'échantillonnage du circuit d'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La fréquence d'échantillonnage, en Hz. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00256">256</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_cgraph.png" border="0" usemap="#group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_cgraph" id="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_cgraph">
+<area shape="rect" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="5,5,184,47"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="232,13,376,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_icgraph.png" border="0" usemap="#group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_icgraph" id="group__gLokiSensors_gae83f05513344aea82443b92f28ee18fd_icgraph">
+<area shape="rect" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="421,5,600,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4b1b187b0aa26684641c88768c532e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b1b187b0aa26684641c88768c532e3b">&#9670;&nbsp;</a></span>LokiSensors_get_scaling_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSensors_get_scaling_factor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le facteur de mise à l'échelle des échantillons d'une voie. </p>
+<p>Ce facteur permet de convertir la valeur numérique brute issue du capteur en une valeur dans une unité de mesure de notre choix.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à modifier. </td></tr>
+    <tr><td class="paramname">channel</td><td>Le numéro de la voie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le facteur d'échelle appliqué à cette voie. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00287">287</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="ga4de58974236aecf5c5f9f8f306173f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4de58974236aecf5c5f9f8f306173f15">&#9670;&nbsp;</a></span>LokiSensors_get_transfer_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LokiSensors_get_transfer_length </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur courante d'un transfert DMA. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre d'échantillons par transfert. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00272">272</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_cgraph.png" border="0" usemap="#group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_cgraph" id="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_cgraph">
+<area shape="rect" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="5,5,176,47"/>
+<area shape="rect" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="224,5,389,47"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="437,13,581,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_icgraph.png" border="0" usemap="#group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_icgraph" id="group__gLokiSensors_ga4de58974236aecf5c5f9f8f306173f15_icgraph">
+<area shape="rect" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="421,5,592,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa5d32b7d8e63c9305f29e90577e54b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5d32b7d8e63c9305f29e90577e54b1b">&#9670;&nbsp;</a></span>LokiSensors_is_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiSensors_is_streaming </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'état de l'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si l'acquisition est en cours. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00531">531</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaa5d32b7d8e63c9305f29e90577e54b1b_cgraph.png" border="0" usemap="#group__gLokiSensors_gaa5d32b7d8e63c9305f29e90577e54b1b_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaa5d32b7d8e63c9305f29e90577e54b1b_cgraph" id="group__gLokiSensors_gaa5d32b7d8e63c9305f29e90577e54b1b_cgraph">
+<area shape="rect" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="5,13,180,39"/>
+<area shape="rect" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744" title="Lire l&#39;état des transferts DMA." alt="" coords="228,5,371,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4b0b67185ef9acde1a519f4379c2fee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b0b67185ef9acde1a519f4379c2fee7">&#9670;&nbsp;</a></span>LokiSensors_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiSensors.html">LokiSensors</a> * LokiSensors_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un module d'acquisition pour les capteurs auxiliaires. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Une instance de <a class="el" href="structLokiSensors.html" title="Représentation de l&#39;interface d&#39;acquisition des capteurs auxiliaires.">LokiSensors</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00173">173</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga4b0b67185ef9acde1a519f4379c2fee7_cgraph.png" border="0" usemap="#group__gLokiSensors_ga4b0b67185ef9acde1a519f4379c2fee7_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga4b0b67185ef9acde1a519f4379c2fee7_cgraph" id="group__gLokiSensors_ga4b0b67185ef9acde1a519f4379c2fee7_cgraph">
+<area shape="rect" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,93,131,120"/>
+<area shape="rect" href="group__gLokiSensors.html#gaaa06702e691e70c9945dbd1a4387c27b" title="Détruire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="202,5,321,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="179,57,344,98"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="392,93,536,120"/>
+<area shape="rect" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="179,174,344,215"/>
+<area shape="rect" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="392,181,536,208"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga89a9f59324867192240ebfd86cf645cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89a9f59324867192240ebfd86cf645cc">&#9670;&nbsp;</a></span>LokiSensors_set_packet_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_set_packet_item </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiSensorsSample.html">LokiSensorsSample</a> *&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__gLokiModem.html#gac11ada7ec17dc89095e83bd867d822e1">LokiDMASample</a>&#160;</td>
+          <td class="paramname"><em>raw_item</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convertir un échantillon issu du DMA. </p>
+<p>Cette fonction extrait les champs contenant le numéro de voie et la valeur de l'échantillon. Elle convertit la valeur en lui appliquant un facteur d'échelle.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">item</td><td>Un pointeur vers une structure qui contiendra le résultat. </td></tr>
+    <tr><td class="paramname">raw_item</td><td>Un échantillon obtenu lors d'un transfert DMA. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00321">321</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga89a9f59324867192240ebfd86cf645cc_icgraph.png" border="0" usemap="#group__gLokiSensors_ga89a9f59324867192240ebfd86cf645cc_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga89a9f59324867192240ebfd86cf645cc_icgraph" id="group__gLokiSensors_ga89a9f59324867192240ebfd86cf645cc_icgraph">
+<area shape="rect" title="Convertir un échantillon issu du DMA." alt="" coords="421,5,619,32"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,5,373,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa9f4a33a40dd038a4bd50d897f6cddfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9f4a33a40dd038a4bd50d897f6cddfa">&#9670;&nbsp;</a></span>LokiSensors_set_packet_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_set_packet_length </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter la longueur d'un paquet DMA pour une voie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre d'échantillons par paquet et par voie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00276">276</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_cgraph.png" border="0" usemap="#group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_cgraph" id="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_cgraph">
+<area shape="rect" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="5,5,171,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="219,13,363,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_icgraph.png" border="0" usemap="#group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_icgraph" id="group__gLokiSensors_gaa9f4a33a40dd038a4bd50d897f6cddfa_icgraph">
+<area shape="rect" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="179,5,344,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,13,131,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga71385643e6a7b2ed2959a2bfe216e2d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71385643e6a7b2ed2959a2bfe216e2d6">&#9670;&nbsp;</a></span>LokiSensors_set_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LokiSensors_set_reg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LokiADCRegister&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affecter un registre du circuit d'acquisition. </p>
+<p>Cette fonction utilise la fonction <code>ioctl</code> pour agir sur le circuit d'acquisition à travers le module noyau <code>loki-adc</code>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition courant. </td></tr>
+    <tr><td class="paramname">reg</td><td>Le numéro du registre à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>La nouvelle valeur du registre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00094">94</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga71385643e6a7b2ed2959a2bfe216e2d6_icgraph.png" border="0" usemap="#group__gLokiSensors_ga71385643e6a7b2ed2959a2bfe216e2d6_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga71385643e6a7b2ed2959a2bfe216e2d6_icgraph" id="group__gLokiSensors_ga71385643e6a7b2ed2959a2bfe216e2d6_icgraph">
+<area shape="rect" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="405,46,549,73"/>
+<area shape="rect" href="group__gLokiSensors.html#gaa9f4a33a40dd038a4bd50d897f6cddfa" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="185,5,351,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga3cde3b0337f50e2855c57facb372240c" title="Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition." alt="" coords="179,71,357,112"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,13,131,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga3cde3b0337f50e2855c57facb372240c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cde3b0337f50e2855c57facb372240c">&#9670;&nbsp;</a></span>LokiSensors_set_sampling_frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_set_sampling_frequency </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>freq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter une fréquence d'échantillonnage au circuit d'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à interroger. </td></tr>
+    <tr><td class="paramname">freq</td><td>La fréquence d'échantillonnage, en Hz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00260">260</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga3cde3b0337f50e2855c57facb372240c_cgraph.png" border="0" usemap="#group__gLokiSensors_ga3cde3b0337f50e2855c57facb372240c_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga3cde3b0337f50e2855c57facb372240c_cgraph" id="group__gLokiSensors_ga3cde3b0337f50e2855c57facb372240c_cgraph">
+<area shape="rect" title="Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition." alt="" coords="5,5,184,47"/>
+<area shape="rect" href="group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="232,13,376,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gac39854322c9402bf8b6e08b3b834fca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac39854322c9402bf8b6e08b3b834fca8">&#9670;&nbsp;</a></span>LokiSensors_set_scaling_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_set_scaling_factor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un facteur de mise à l'échelle des échantillons d'une voie. </p>
+<p>Ce facteur permet de convertir la valeur numérique brute issue du capteur en une valeur dans une unité de mesure de notre choix.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à modifier. </td></tr>
+    <tr><td class="paramname">channel</td><td>Le numéro de la voie. </td></tr>
+    <tr><td class="paramname">scale</td><td>Le facteur d'échelle à appliquer à cette voie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00291">291</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+
+</div>
+</div>
+<a id="gabc57b82efb0c7c156185c1dfc972f6f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc57b82efb0c7c156185c1dfc972f6f7">&#9670;&nbsp;</a></span>LokiSensors_start_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiSensors_start_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>raw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarrer l'acquisition. </p>
+<p>Cette fonction est non bloquante. Elle crée un nouveau thread pour la réception des données en provenance du pilote des capteurs.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à démarrer. </td></tr>
+    <tr><td class="paramname">channels</td><td>Un masque indiquant les voies à traiter, -1 pour toutes les voies. </td></tr>
+    <tr><td class="paramname">raw</td><td>Faut-il conserver les valeurs d'échantillons en virgule fixe ? </td></tr>
+    <tr><td class="paramname">out</td><td>La FIFO où ranger les échantillons mis à l'échelle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le code d'erreur retourné par <code>pthread_create</code>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00507">507</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_gabc57b82efb0c7c156185c1dfc972f6f7_cgraph.png" border="0" usemap="#group__gLokiSensors_gabc57b82efb0c7c156185c1dfc972f6f7_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_gabc57b82efb0c7c156185c1dfc972f6f7_cgraph" id="group__gLokiSensors_gabc57b82efb0c7c156185c1dfc972f6f7_cgraph">
+<area shape="rect" title="Démarrer l&#39;acquisition." alt="" coords="5,245,196,272"/>
+<area shape="rect" href="group__gLokiSensors.html#ga098d1895abd4748aa16344e32a790744" title="Lire l&#39;état des transferts DMA." alt="" coords="244,209,387,250"/>
+<area shape="rect" href="group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="251,275,380,301"/>
+<area shape="rect" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="438,5,629,32"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="478,56,589,83"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="456,107,611,133"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7" title="Lire la date du dernier transfert DMA." alt="" coords="458,158,609,199"/>
+<area shape="rect" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd" title="Demander au circuit d&#39;acquisition de démarrer les transferts DMA." alt="" coords="454,224,613,251"/>
+<area shape="rect" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="454,275,613,301"/>
+<area shape="rect" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68" title="Lire l&#39;indice d&#39;un paquet reçu." alt="" coords="451,326,616,367"/>
+<area shape="rect" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="680,382,859,423"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="448,443,619,485"/>
+<area shape="rect" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc" title="Convertir un échantillon issu du DMA." alt="" coords="435,509,632,536"/>
+<area shape="rect" href="group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077" title="Convertir une date en timestamp." alt="" coords="453,560,614,587"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="687,107,851,133"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="907,423,1051,449"/>
+<area shape="rect" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="687,447,852,489"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga1857007bf991eed3f72c20bd42522709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1857007bf991eed3f72c20bd42522709">&#9670;&nbsp;</a></span>LokiSensors_stop_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSensors_stop_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSensors.html">LokiSensors</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter l'acquisition. </p>
+<p>Interrompt l'exécution du thread lancé par la fonction <a class="el" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition.">LokiSensors_start_streaming</a>. L'arrêt est effectif à la fin du paquet de données en cours de réception.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le module d'acquisition à arrêter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00518">518</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga1857007bf991eed3f72c20bd42522709_cgraph.png" border="0" usemap="#group__gLokiSensors_ga1857007bf991eed3f72c20bd42522709_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga1857007bf991eed3f72c20bd42522709_cgraph" id="group__gLokiSensors_ga1857007bf991eed3f72c20bd42522709_cgraph">
+<area shape="rect" title="Arrêter l&#39;acquisition." alt="" coords="5,5,196,32"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="244,5,356,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga715fe749a0006ed6ca3952ec8568ccc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga715fe749a0006ed6ca3952ec8568ccc8">&#9670;&nbsp;</a></span>LokiSensors_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* LokiSensors_work </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Traiter un tableau d'échantillons issu d'un transfert DMA. </p>
+<p>Cette fonction est exécutée dans un thread démarré par <a class="el" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition.">LokiSensors_start_streaming</a>. Elle se termine lorsqu'une demande d'arrêt est émise par <a class="el" href="group__gLokiSensors.html#ga1857007bf991eed3f72c20bd42522709" title="Arrêter l&#39;acquisition.">LokiSensors_stop_streaming</a>.</p>
+<p>Si la constante <code>USE_MMAP</code> est définie, elle s'appuie sur la fonction <code>mmap</code> pour se synchroniser avec le pilote du circuit modem et accéder au tampon de données de chaque transfert en mode <em>zero-copy</em>. Si la constante <code>USE_MMAP</code> n'est pas définie, la fonction <code>fread</code> est utilisée.</p>
+<p>Cette fonction remplit la FIFO de sortie avec des paquets d'échantillons convertis par la fonction <a class="el" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc" title="Convertir un échantillon issu du DMA.">LokiSensors_set_packet_item</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Le module d'acquisition courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-sensors_8c_source.html#l00368">368</a> du fichier <a class="el" href="libloki-sensors_8c_source.html">libloki-sensors.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_cgraph.png" border="0" usemap="#group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_cgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_cgraph" id="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_cgraph">
+<area shape="rect" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="5,275,135,301"/>
+<area shape="rect" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="186,5,377,32"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="226,56,337,83"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="204,107,359,133"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4013763de51f952b4923355b1006c4a7" title="Lire la date du dernier transfert DMA." alt="" coords="206,158,357,199"/>
+<area shape="rect" href="group__gLokiSensors.html#ga643f5e3bec3eb3988c4e23a5d4c3bdcd" title="Demander au circuit d&#39;acquisition de démarrer les transferts DMA." alt="" coords="202,224,361,251"/>
+<area shape="rect" href="group__gLokiSensors.html#ga16e71c40a26b79bde03715acbc3d7902" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="202,275,361,301"/>
+<area shape="rect" href="group__gLokiSensors.html#ga7574d0a4603cc6713c8e3b43e8516b68" title="Lire l&#39;indice d&#39;un paquet reçu." alt="" coords="199,326,364,367"/>
+<area shape="rect" href="group__gLokiSensors.html#gae83f05513344aea82443b92f28ee18fd" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="428,382,607,423"/>
+<area shape="rect" href="group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="196,443,367,485"/>
+<area shape="rect" href="group__gLokiSensors.html#ga89a9f59324867192240ebfd86cf645cc" title="Convertir un échantillon issu du DMA." alt="" coords="183,509,380,536"/>
+<area shape="rect" href="group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077" title="Convertir une date en timestamp." alt="" coords="201,560,362,587"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="435,107,599,133"/>
+<area shape="rect" href="group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="655,423,799,449"/>
+<area shape="rect" href="group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="435,447,600,489"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_icgraph.png" border="0" usemap="#group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_icgraph" alt=""/></div>
+<map name="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_icgraph" id="group__gLokiSensors_ga715fe749a0006ed6ca3952ec8568ccc8_icgraph">
+<area shape="rect" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,5,373,32"/>
+<area shape="rect" href="group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

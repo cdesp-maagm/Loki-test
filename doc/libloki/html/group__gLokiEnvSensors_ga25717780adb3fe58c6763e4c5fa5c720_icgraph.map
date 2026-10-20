@@ -1,0 +1,5 @@
+<map id="LokiEnvSensors_get_transfer_length" name="LokiEnvSensors_get_transfer_length">
+<area shape="rect" id="node1" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="404,5,547,47"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga0db1c52bfdd3b3f3ef9ff10e38408b75" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="204,13,356,39"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="5,5,156,47"/>
+</map>

@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Calcul de déplacement</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Calcul de déplacement <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Un calculateur de déplacement est composé d'un <a class="el" href="group__gLokiEllipseEstimator.html" title="Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse">filtre adaptatif d'estimation des paramètres d'une ellipse</a> et d'un <a class="el" href="group__gLokiFIRFilter.html" title="Filtre FIR">filtre passe-bas</a> pour éliminer le déplacement fictif.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Calcul de déplacement:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement.png" border="0" usemap="#agroup____gLokiDisplacement" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiDisplacement" id="agroup____gLokiDisplacement">
+<area shape="rect" title="Un calculateur de déplacement est composé d&#39;un filtre adaptatif d&#39;estimation des paramètres d&#39;une ell..." alt="" coords="224,5,395,31"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,5,176,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-displacement_2Ec" id="r_libloki-displacement_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-displacement_8c.html">libloki-displacement.c</a></td></tr>
+<tr class="memitem:libloki-displacement_2Eh" id="r_libloki-displacement_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-displacement_8h.html">libloki-displacement.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiDisplacement" id="r_LokiDisplacement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un calculateur de déplacement.  <a href="structLokiDisplacement.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga0b3ee7ce8410d418822184fa420a565d" id="r_ga0b3ee7ce8410d418822184fa420a565d"><td class="memItemLeft">typedef struct LokiDisplacement&#160;</td><td class="memItemRight"><a class="el" href="#ga0b3ee7ce8410d418822184fa420a565d">LokiDisplacement</a></td></tr>
+<tr class="memdesc:ga0b3ee7ce8410d418822184fa420a565d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un calculateur de déplacement.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaf7841c05f1bb0499f67baf6148b86351" id="r_gaf7841c05f1bb0499f67baf6148b86351"><td class="memItemLeft"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaf7841c05f1bb0499f67baf6148b86351">LokiDisplacement_new</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *estimator, <a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *filter, unsigned throttle, float scale, float tau[static 3], float sampling_frequency)</td></tr>
+<tr class="memdesc:gaf7841c05f1bb0499f67baf6148b86351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un calculateur de déplacement.  <br /></td></tr>
+<tr class="memitem:ga36dea76243bf4820fd30bc6f98855396" id="r_ga36dea76243bf4820fd30bc6f98855396"><td class="memItemLeft"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga36dea76243bf4820fd30bc6f98855396">LokiDisplacement_clone</a> (const <a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *other)</td></tr>
+<tr class="memdesc:ga36dea76243bf4820fd30bc6f98855396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloner une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>.  <br /></td></tr>
+<tr class="memitem:ga0e2aeab5fc6812642102197bd75c26c1" id="r_ga0e2aeab5fc6812642102197bd75c26c1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga0e2aeab5fc6812642102197bd75c26c1">LokiDisplacement_work</a> (<a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *self, float x, float y, float *x_norm, float *y_norm, float *out)</td></tr>
+<tr class="memdesc:ga0e2aeab5fc6812642102197bd75c26c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le déplacement courant.  <br /></td></tr>
+<tr class="memitem:gafd60b0ca41d52718bc816e84eea79a7b" id="r_gafd60b0ca41d52718bc816e84eea79a7b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gafd60b0ca41d52718bc816e84eea79a7b">LokiDisplacement_reset</a> (<a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *self)</td></tr>
+<tr class="memdesc:gafd60b0ca41d52718bc816e84eea79a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remettre à zéro le déplacement.  <br /></td></tr>
+<tr class="memitem:ga8ea969c9065e9f3ebf9d91932e94bfe5" id="r_ga8ea969c9065e9f3ebf9d91932e94bfe5"><td class="memItemLeft"><a class="el" href="structLokiEllipse.html">LokiEllipse</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga8ea969c9065e9f3ebf9d91932e94bfe5">LokiDisplacement_get_ellipse</a> (<a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *self)</td></tr>
+<tr class="memdesc:ga8ea969c9065e9f3ebf9d91932e94bfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner la dernière ellipse calculée par cette instance.  <br /></td></tr>
+<tr class="memitem:ga52cfeb45e5dd95bea7f6ac4327cf3e80" id="r_ga52cfeb45e5dd95bea7f6ac4327cf3e80"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga52cfeb45e5dd95bea7f6ac4327cf3e80">LokiDisplacement_del</a> (<a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *self)</td></tr>
+<tr class="memdesc:ga52cfeb45e5dd95bea7f6ac4327cf3e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Un calculateur de déplacement est composé d'un <a class="el" href="group__gLokiEllipseEstimator.html" title="Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse">filtre adaptatif d'estimation des paramètres d'une ellipse</a> et d'un <a class="el" href="group__gLokiFIRFilter.html" title="Filtre FIR">filtre passe-bas</a> pour éliminer le déplacement fictif. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga0b3ee7ce8410d418822184fa420a565d" name="ga0b3ee7ce8410d418822184fa420a565d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b3ee7ce8410d418822184fa420a565d">&#9670;&#160;</a></span>LokiDisplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiDisplacement LokiDisplacement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un calculateur de déplacement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8h_source.html#l00019">19</a> du fichier <a class="el" href="libloki-displacement_8h_source.html">libloki-displacement.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga36dea76243bf4820fd30bc6f98855396" name="ga36dea76243bf4820fd30bc6f98855396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36dea76243bf4820fd30bc6f98855396">&#9670;&#160;</a></span>LokiDisplacement_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> * LokiDisplacement_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cloner une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a> à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une copie de other. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00064">64</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_cgraph" id="agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_cgraph">
+<area shape="rect" title="Cloner une instance de LokiDisplacement." alt="" coords="5,70,187,95"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="235,70,401,95"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2" title="Construire un clone d&#39;un estimateur." alt="" coords="241,5,395,45"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="245,119,391,145"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="449,17,632,42"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="475,70,606,95"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="459,120,622,160"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_icgraph" id="agroup__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396_icgraph">
+<area shape="rect" title="Cloner une instance de LokiDisplacement." alt="" coords="185,5,367,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga52cfeb45e5dd95bea7f6ac4327cf3e80" name="ga52cfeb45e5dd95bea7f6ac4327cf3e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52cfeb45e5dd95bea7f6ac4327cf3e80">&#9670;&#160;</a></span>LokiDisplacement_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiDisplacement_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a> à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00151">151</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_cgraph" id="agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_cgraph">
+<area shape="rect" title="Détruire une instance de LokiDisplacement." alt="" coords="5,31,172,56"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="220,5,403,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="246,55,377,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_icgraph" id="agroup__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80_icgraph">
+<area shape="rect" title="Détruire une instance de LokiDisplacement." alt="" coords="415,31,581,56"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="185,5,367,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="213,55,339,80"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,31,137,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8ea969c9065e9f3ebf9d91932e94bfe5" name="ga8ea969c9065e9f3ebf9d91932e94bfe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ea969c9065e9f3ebf9d91932e94bfe5">&#9670;&#160;</a></span>LokiDisplacement_get_ellipse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiEllipse.html">LokiEllipse</a> * LokiDisplacement_get_ellipse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourner la dernière ellipse calculée par cette instance. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers une ellipse. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00147">147</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_icgraph" id="agroup__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5_icgraph">
+<area shape="rect" title="Retourner la dernière ellipse calculée par cette instance." alt="" coords="229,5,396,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga062604dae489b0b761e40a063bb3fdf8" title="Lire la dernière ellipse estimée." alt="" coords="5,13,181,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaf7841c05f1bb0499f67baf6148b86351" name="gaf7841c05f1bb0499f67baf6148b86351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7841c05f1bb0499f67baf6148b86351">&#9670;&#160;</a></span>LokiDisplacement_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> * LokiDisplacement_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *</td>          <td class="paramname"><span class="paramname"><em>estimator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>filter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>throttle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>tau</em></span>[static 3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sampling_frequency</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un calculateur de déplacement. </p>
+<p>Le facteur d'échelle détermine l'unité de distance utilisée en sortie de <a class="el" href="#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant.">LokiDisplacement_work</a>. On choisira typiquement scale = λ0 / 2πN où λ0 est la longueur d'onde du laser, dans l'unité de mesure de distance souhaitée, et N est le nombre de réflexions.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">estimator</td><td>Un filtre adaptatif d'estimation d'ellipse. </td></tr>
+    <tr><td class="paramname">filter</td><td>Un filtre passe-bas pour éliminer le déplacement fictif. </td></tr>
+    <tr><td class="paramname">throttle</td><td>La périodicité de mise à jour des paramètres de l'ellipse. </td></tr>
+    <tr><td class="paramname">scale</td><td>Un facteur d'échelle pour la valeur des déplacements calculés. </td></tr>
+    <tr><td class="paramname">tau</td><td>Les constantes de temps du filtrage des paramètres de l'ellipse, en secondes (0 : axes; 1 : centre; 2 : angle). </td></tr>
+    <tr><td class="paramname">sampling_frequency</td><td>La fréquence d'échantillonnage, en Hz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00043">43</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="gafd60b0ca41d52718bc816e84eea79a7b" name="gafd60b0ca41d52718bc816e84eea79a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd60b0ca41d52718bc816e84eea79a7b">&#9670;&#160;</a></span>LokiDisplacement_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiDisplacement_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remettre à zéro le déplacement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00141">141</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_cgraph" id="agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_cgraph">
+<area shape="rect" title="Remettre à zéro le déplacement." alt="" coords="5,5,184,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384" title="Réinitialiser un filtre FIR." alt="" coords="232,5,375,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_icgraph" id="agroup__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b_icgraph">
+<area shape="rect" title="Remettre à zéro le déplacement." alt="" coords="503,42,681,67"/>
+<area shape="rect" href="group__gLokiSystem.html#gab9bbe589511d2d9ba0a0571d4c5a3c3f" title="Mettre à zéro le déplacement calculé." alt="" coords="261,5,455,45"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="289,70,427,95"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,70,213,95"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga0e2aeab5fc6812642102197bd75c26c1" name="ga0e2aeab5fc6812642102197bd75c26c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e2aeab5fc6812642102197bd75c26c1">&#9670;&#160;</a></span>LokiDisplacement_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiDisplacement_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>x_norm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>y_norm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculer le déplacement courant. </p>
+<p>Pour un déplacement d et une longueur d'onde λ0, en mètres, cette fonction retourne : scale * 4π / λ0 * d</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une instance de <a class="el" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement.">LokiDisplacement</a>. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X du point courant de l'ellipse. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y du point courant de l'ellipse. </td></tr>
+    <tr><td class="paramname">x_norm</td><td>La coordonnée X du point courant de l'ellipse, ramené sur le cercle unité. </td></tr>
+    <tr><td class="paramname">y_norm</td><td>La coordonnée Y du point courant de l'ellipse, ramené sur le cercle unité. </td></tr>
+    <tr><td class="paramname">out</td><td>Le déplacement calculé. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true à chaque période de décimation. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-displacement_8c_source.html#l00082">82</a> du fichier <a class="el" href="libloki-displacement_8c_source.html">libloki-displacement.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_cgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_cgraph" id="agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_cgraph">
+<area shape="rect" title="Calculer le déplacement courant." alt="" coords="5,127,184,152"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9" title="Calculer l&#39;angle correspondant à un point d&#39;une ellipse." alt="" coords="248,5,411,31"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e" title="Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation." alt="" coords="251,55,408,95"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="252,119,407,159"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5" title="Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées." alt="" coords="232,184,427,209"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="258,233,401,259"/>
+<area shape="rect" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="491,85,573,111"/>
+<area shape="rect" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="475,135,589,160"/>
+<area shape="rect" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="475,184,589,209"/>
+<area shape="rect" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="477,233,587,259"/>
+<area shape="rect" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="489,283,575,308"/>
+<area shape="rect" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="487,332,577,357"/>
+<area shape="rect" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="477,381,587,407"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_icgraph.png" border="0" usemap="#agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_icgraph" id="agroup__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1_icgraph">
+<area shape="rect" title="Calculer le déplacement courant." alt="" coords="447,5,625,31"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,5,399,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,213,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

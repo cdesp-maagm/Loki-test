@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-kalman.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-kalman.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-kalman_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef LIBLOKI_KALMAN_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define LIBLOKI_KALMAN_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#ga5d595bfc88e801f22e05add7e6572739">   17</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *<a class="code hl_function" href="group__gLokiKalman.html#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">LokiKalman_new</a>(<span class="keywordtype">float</span> initial_radius, <span class="keyword">const</span> <span class="keywordtype">float</span> params[<span class="keyword">static</span> 3]);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *<a class="code hl_function" href="group__gLokiKalman.html#gae1de220a46ec966f9d7fc30fff678ce6">LokiKalman_clone</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *other);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiKalman.html#ga2ec7d2bcf42b57753cf4c1135cc63ef6">LokiKalman_work</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">float</span> *<a class="code hl_function" href="group__gLokiKalman.html#ga9dd2d0bf56568b60cd21fb1f5fae4054">LokiKalman_get_state</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiKalman.html#gad1eafbecc1476c32df47cb901ea44ce5">LokiKalman_del</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_define" href="group__gLokiClass.html#ga9a873899c9f1e6e82823479c42632dad">LokiClass_declare_implementation</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga9a873899c9f1e6e82823479c42632dad"><div class="ttname"><a href="group__gLokiClass.html#ga9a873899c9f1e6e82823479c42632dad">LokiClass_declare_implementation</a></div><div class="ttdeci">#define LokiClass_declare_implementation(superclass, prefix)</div><div class="ttdoc">Déclare une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00140">libloki-class.h:140</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga0d9b7cc8859c8b18f9ccc2fac47b4d23"><div class="ttname"><a href="group__gLokiKalman.html#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">LokiKalman_new</a></div><div class="ttdeci">LokiKalman * LokiKalman_new(float initial_radius, const float params[static 3])</div><div class="ttdoc">Construire un nouveau filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00024">libloki-kalman.c:24</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga2ec7d2bcf42b57753cf4c1135cc63ef6"><div class="ttname"><a href="group__gLokiKalman.html#ga2ec7d2bcf42b57753cf4c1135cc63ef6">LokiKalman_work</a></div><div class="ttdeci">void LokiKalman_work(LokiKalman *self, float x, float y)</div><div class="ttdoc">Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00060">libloki-kalman.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga9dd2d0bf56568b60cd21fb1f5fae4054"><div class="ttname"><a href="group__gLokiKalman.html#ga9dd2d0bf56568b60cd21fb1f5fae4054">LokiKalman_get_state</a></div><div class="ttdeci">float * LokiKalman_get_state(LokiKalman *self)</div><div class="ttdoc">Retourner l&#39;état courant du filtre.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00056">libloki-kalman.c:56</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_gad1eafbecc1476c32df47cb901ea44ce5"><div class="ttname"><a href="group__gLokiKalman.html#gad1eafbecc1476c32df47cb901ea44ce5">LokiKalman_del</a></div><div class="ttdeci">void LokiKalman_del(LokiKalman *self)</div><div class="ttdoc">Détruire un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00132">libloki-kalman.c:132</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_gae1de220a46ec966f9d7fc30fff678ce6"><div class="ttname"><a href="group__gLokiKalman.html#gae1de220a46ec966f9d7fc30fff678ce6">LokiKalman_clone</a></div><div class="ttdeci">LokiKalman * LokiKalman_clone(const LokiKalman *other)</div><div class="ttdoc">Construire un clone d&#39;un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00045">libloki-kalman.c:45</a></div></div>
+<div class="ttc" id="alibloki-ellipse-estimator_8h_html"><div class="ttname"><a href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html"><div class="ttname"><a href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a></div><div class="ttdoc">Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse-estimator_8c_source.html#l00011">libloki-ellipse-estimator.c:11</a></div></div>
+<div class="ttc" id="astructLokiKalman_html"><div class="ttname"><a href="structLokiKalman.html">LokiKalman</a></div><div class="ttdoc">Représentation d&#39;un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="libloki-kalman_8c_source.html#l00013">libloki-kalman.c:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

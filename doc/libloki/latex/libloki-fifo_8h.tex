@@ -1,0 +1,45 @@
+\doxysection{Référence du fichier libloki-\/fifo.h}
+\hypertarget{libloki-fifo_8h}{}\label{libloki-fifo_8h}\index{libloki-\/fifo.h@{libloki-\/fifo.h}}
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/fifo.h:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 1
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+FIFO \doxymbox{\hyperlink{group__gLokiFIFO_ga9809c8ea8fd596bac8faed62a50d615d}{Loki\+FIFO}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}une FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{Loki\+FIFO\+\_\+new}} (size\+\_\+t item\+\_\+size, size\+\_\+t length, size\+\_\+t consumers)
+\begin{DoxyCompactList}\small\item\em Créer une FIFO. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}{Loki\+FIFO\+\_\+del}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une FIFO. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{Loki\+FIFO\+\_\+get\+\_\+item\+\_\+size}} (const \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Obtenir la taille d\textquotesingle{}un élément de la FIFO, en octets. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}{Loki\+FIFO\+\_\+get\+\_\+producer\+\_\+item}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Obtenir une référence vers l\textquotesingle{}élément courant en écriture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}{Loki\+FIFO\+\_\+push}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Valider l\textquotesingle{}élément courant en écriture. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{Loki\+FIFO\+\_\+get\+\_\+consumer\+\_\+item}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Obtenir une référence vers l\textquotesingle{}élément courant en lecture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{Loki\+FIFO\+\_\+pull}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Libérer l\textquotesingle{}élément courant en lecture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{Loki\+FIFO\+\_\+abort}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Terminer les attentes en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-fifo_8h_source}{libloki-\/fifo.\+h}}.
+

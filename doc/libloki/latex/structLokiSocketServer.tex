@@ -1,0 +1,223 @@
+\doxysection{Référence de la structure Loki\+Socket\+Server}
+\hypertarget{structLokiSocketServer}{}\label{structLokiSocketServer}\index{LokiSocketServer@{LokiSocketServer}}
+
+
+Représentation d\textquotesingle{}un serveur de données.  
+
+
+
+
+Graphe de collaboration de Loki\+Socket\+Server:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}{filename}}
+\begin{DoxyCompactList}\small\item\em Le nom de fichier à utiliser pour représenter la socket Unix dans le système de fichiers. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}{in}}
+\begin{DoxyCompactList}\small\item\em La FIFO contenant les données à transmettre. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}{cid}}
+\begin{DoxyCompactList}\small\item\em Le numéro de consommateur de ce serveur dans sa FIFO d\textquotesingle{}entrée. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt du serveur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}{is\+\_\+streaming}}
+\begin{DoxyCompactList}\small\item\em Le serveur est-\/il en service ? \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}{receiver\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em Le thread de réception des données. \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}{server\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em Le thread qui gère les connexions des clients et transmet les données. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}{mutex}}
+\begin{DoxyCompactList}\small\item\em Un mutex pour gérer les accès concurrents au paquet de données courant. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}{data}}
+\begin{DoxyCompactList}\small\item\em Le dernier paquet de données reçu. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}{data\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em La taille totale d\textquotesingle{}un paquet de données, en octets. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}{has\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Indicateur de présence d\textquotesingle{}un nouveau paquet à transmettre. \end{DoxyCompactList}\item 
+pthread\+\_\+cond\+\_\+t \doxymbox{\hyperlink{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}{has\+\_\+data\+\_\+cond}}
+\begin{DoxyCompactList}\small\item\em Variable conditionnelle pour débloquer le thread serveur lorsqu\textquotesingle{}un nouveau paquet est disponible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un serveur de données. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+
+
+\label{structLokiSocketServer_doc-variable-members}
+\Hypertarget{structLokiSocketServer_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c}\index{LokiSocketServer@{LokiSocketServer}!cid@{cid}}
+\index{cid@{cid}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{cid}{cid}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a96bbce34531c9088dfd664b4e1d0028c} 
+size\+\_\+t Loki\+Socket\+Server::\+cid}
+
+
+
+Le numéro de consommateur de ce serveur dans sa FIFO d\textquotesingle{}entrée. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9}\index{LokiSocketServer@{LokiSocketServer}!data@{data}}
+\index{data@{data}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a249e02834d620a403c74a5dac6250dc9} 
+void\texorpdfstring{$\ast$}{*} Loki\+Socket\+Server::\+data}
+
+
+
+Le dernier paquet de données reçu. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48}\index{LokiSocketServer@{LokiSocketServer}!data\_size@{data\_size}}
+\index{data\_size@{data\_size}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{data\_size}{data\_size}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_afcc27f30cb2646ad77ec53fd1a1c5f48} 
+size\+\_\+t Loki\+Socket\+Server::\+data\+\_\+size}
+
+
+
+La taille totale d\textquotesingle{}un paquet de données, en octets. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00043}{43}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933}\index{LokiSocketServer@{LokiSocketServer}!filename@{filename}}
+\index{filename@{filename}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_ab4d95a1e48fc38006b69514c0e5c4933} 
+char\texorpdfstring{$\ast$}{*} Loki\+Socket\+Server::\+filename}
+
+
+
+Le nom de fichier à utiliser pour représenter la socket Unix dans le système de fichiers. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00025}{25}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a639e8f26186618250296264ae47eb90d}\index{LokiSocketServer@{LokiSocketServer}!has\_data@{has\_data}}
+\index{has\_data@{has\_data}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{has\_data}{has\_data}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a639e8f26186618250296264ae47eb90d} 
+bool Loki\+Socket\+Server::\+has\+\_\+data}
+
+
+
+Indicateur de présence d\textquotesingle{}un nouveau paquet à transmettre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00045}{45}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88}\index{LokiSocketServer@{LokiSocketServer}!has\_data\_cond@{has\_data\_cond}}
+\index{has\_data\_cond@{has\_data\_cond}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{has\_data\_cond}{has\_data\_cond}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a465868df39b34bd524b976f8d0fe1d88} 
+pthread\+\_\+cond\+\_\+t Loki\+Socket\+Server::\+has\+\_\+data\+\_\+cond}
+
+
+
+Variable conditionnelle pour débloquer le thread serveur lorsqu\textquotesingle{}un nouveau paquet est disponible. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f}\index{LokiSocketServer@{LokiSocketServer}!in@{in}}
+\index{in@{in}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a6cb58606a3f1ac3c66cbfebe013a3b6f} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+Socket\+Server::\+in}
+
+
+
+La FIFO contenant les données à transmettre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00027}{27}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca}\index{LokiSocketServer@{LokiSocketServer}!is\_streaming@{is\_streaming}}
+\index{is\_streaming@{is\_streaming}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{is\_streaming}{is\_streaming}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a1caaaec355e9f8fe7295b032f0cf46ca} 
+bool Loki\+Socket\+Server::\+is\+\_\+streaming}
+
+
+
+Le serveur est-\/il en service ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb}\index{LokiSocketServer@{LokiSocketServer}!mutex@{mutex}}
+\index{mutex@{mutex}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_a9c204fcb723771a2ef21107bbf722feb} 
+pthread\+\_\+mutex\+\_\+t Loki\+Socket\+Server::\+mutex}
+
+
+
+Un mutex pour gérer les accès concurrents au paquet de données courant. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1}\index{LokiSocketServer@{LokiSocketServer}!receiver\_thread@{receiver\_thread}}
+\index{receiver\_thread@{receiver\_thread}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{receiver\_thread}{receiver\_thread}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_af671cbad24fc84ebc532f54d246df3f1} 
+pthread\+\_\+t Loki\+Socket\+Server::\+receiver\+\_\+thread}
+
+
+
+Le thread de réception des données. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00035}{35}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c}\index{LokiSocketServer@{LokiSocketServer}!server\_thread@{server\_thread}}
+\index{server\_thread@{server\_thread}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{server\_thread}{server\_thread}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_afaf754ac375d72c6c866e3e9dd38ff7c} 
+pthread\+\_\+t Loki\+Socket\+Server::\+server\+\_\+thread}
+
+
+
+Le thread qui gère les connexions des clients et transmet les données. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00037}{37}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+\Hypertarget{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336}\index{LokiSocketServer@{LokiSocketServer}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiSocketServer@{LokiSocketServer}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiSocketServer_ab551a2004dcacc4916e094f94164b336} 
+volatile bool Loki\+Socket\+Server::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt du serveur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-socket-server_8c}{libloki-\/socket-\/server.\+c}}\end{DoxyCompactItemize}

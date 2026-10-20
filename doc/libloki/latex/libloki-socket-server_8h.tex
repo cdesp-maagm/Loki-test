@@ -1,0 +1,43 @@
+\doxysection{Référence du fichier libloki-\/socket-\/server.h}
+\hypertarget{libloki-socket-server_8h}{}\label{libloki-socket-server_8h}\index{libloki-\/socket-\/server.h@{libloki-\/socket-\/server.h}}
+{\ttfamily \+\#include "{}libloki-\/fifo.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/socket-\/server.h:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\+\_\+\+SOCKET\+\_\+\+SERVER\+\_\+\+CONNECTIONS}}~3
+\begin{DoxyCompactList}\small\item\em Le nombre maximum de connexions simultanées acceptées par un serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Socket\+Server \doxymbox{\hyperlink{group__gLokiSocketServer_ga0b38d945e001c61fa2e6038ddee35fc7}{Loki\+Socket\+Server}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un serveur de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}{Loki\+Socket\+Server\+\_\+new}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Construire un serveur de données. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}in, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer un serveur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}{Loki\+Socket\+Server\+\_\+is\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état du serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{Loki\+Socket\+Server\+\_\+stop}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter un serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{Loki\+Socket\+Server\+\_\+del}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-socket-server_8h_source}{libloki-\/socket-\/server.\+h}}.
+

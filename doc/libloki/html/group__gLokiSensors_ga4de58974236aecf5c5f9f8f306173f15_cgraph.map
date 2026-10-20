@@ -1,0 +1,5 @@
+<map id="LokiSensors_get_transfer_length" name="LokiSensors_get_transfer_length">
+<area shape="rect" id="node1" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#gaf9c872bf8182d8d50e3dbafb69a3dea1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="224,5,389,47"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="437,13,581,39"/>
+</map>

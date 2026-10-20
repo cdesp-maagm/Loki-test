@@ -1,0 +1,30 @@
+
+&amba_pl {
+	modem: LokiModem@41220000 {
+		compatible = "eseo,loki-modem";
+		reg = <0x41220000 0x1000>;
+		dmas = <&modem_dma 0>;
+		dma-names = "s2mm";
+	};
+
+	modem_dma: dma@41210000 {
+		#dma-cells = <1>;
+		clock-names = "s_axi_lite_aclk", "m_axi_sg_aclk", "m_axi_s2mm_aclk";
+		clocks = <&clkc 15>, <&clkc 15>, <&clkc 15>;
+		compatible = "xlnx,axi-dma-1.00.a";
+		interrupt-names = "s2mm_introut";
+		interrupt-parent = <&intc>;
+		interrupts = <0 29 4>; /* IRQ_F2P[0], maps to Linux IRQ 61 */
+		reg = <0x41210000 0x10000>;
+		xlnx,addrwidth = <0x20>; /* Adresses sur 32 bits */
+		xlnx,include-sg;
+		xlnx,sg-length-width = <16>;
+		dma-channel@41210000 {
+			compatible = "xlnx,axi-dma-s2mm-channel";
+			dma-channels = <0x1>;
+			interrupts = <0 29 4>;   /* IRQ_F2P[0], maps to Linux IRQ 61 */
+			xlnx,datawidth = <0x40>; /* Données sur 64 bits */
+			xlnx,device-id = <0x0>;
+		};
+	};
+};

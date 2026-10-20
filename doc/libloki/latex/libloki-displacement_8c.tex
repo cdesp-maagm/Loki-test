@@ -1,0 +1,41 @@
+\doxysection{Référence du fichier libloki-\/displacement.c}
+\hypertarget{libloki-displacement_8c}{}\label{libloki-displacement_8c}\index{libloki-\/displacement.c@{libloki-\/displacement.c}}
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/displacement.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un calculateur de déplacement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351}{Loki\+Displacement\+\_\+new}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}estimator, \doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*}filter, unsigned throttle, float scale, float tau\+[static 3]\+, float sampling\+\_\+frequency)
+\begin{DoxyCompactList}\small\item\em Construire un calculateur de déplacement. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396}{Loki\+Displacement\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Cloner une instance de \doxylink{structLokiDisplacement}{Loki\+Displacement}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1}{Loki\+Displacement\+\_\+work}} (\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}self, float x, float y, float \texorpdfstring{$\ast$}{*}x\+\_\+norm, float \texorpdfstring{$\ast$}{*}y\+\_\+norm, float \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Calculer le déplacement courant. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b}{Loki\+Displacement\+\_\+reset}} (\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Remettre à zéro le déplacement. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5}{Loki\+Displacement\+\_\+get\+\_\+ellipse}} (\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner la dernière ellipse calculée par cette instance. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80}{Loki\+Displacement\+\_\+del}} (\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une instance de \doxylink{structLokiDisplacement}{Loki\+Displacement}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+

@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Enregistrement de séries temporelles</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Enregistrement de séries temporelles <div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module délègue les opérations de mise en forme et d'écriture à une implémentation de l'interface <a class="el" href="group__gLokiFormatter.html" title="Interface pour la mise en forme de séries temporelles">LokiFormatter</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Enregistrement de séries temporelles:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder.png" border="0" usemap="#agroup____gLokiRecorder" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiRecorder" id="agroup____gLokiRecorder">
+<area shape="rect" title="Ce module délègue les opérations de mise en forme et d&#39;écriture à une implémentation de l&#39;interface L..." alt="" coords="280,5,465,45"/>
+<area shape="rect" href="group__ggLokiRecording.html" title=" " alt="" coords="5,5,232,45"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-recorder_2Ec" id="r_libloki-recorder_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-recorder_8c.html">libloki-recorder.c</a></td></tr>
+<tr class="memitem:libloki-recorder_2Eh" id="r_libloki-recorder_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-recorder_8h.html">libloki-recorder.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiRecorder" id="r_LokiRecorder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiRecorder.html">LokiRecorder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un enregistreur de séries temporelles.  <a href="structLokiRecorder.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga4d144d1f6a265a12770457592de62399" id="r_ga4d144d1f6a265a12770457592de62399"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga4d144d1f6a265a12770457592de62399">FILENAME_SUFFIX_DATE_LEN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:ga4d144d1f6a265a12770457592de62399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme la date et l'heure d'un fichier ("_YYYYmmddTHHMMSS").  <br /></td></tr>
+<tr class="memitem:ga0a317df8e1ff90b9a17a08876f9822af" id="r_ga0a317df8e1ff90b9a17a08876f9822af"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0a317df8e1ff90b9a17a08876f9822af">FILENAME_SUFFIX_MSEC_LEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:ga0a317df8e1ff90b9a17a08876f9822af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme le nombre de millisecondes de la date d'un fichier (".mmmZ.").  <br /></td></tr>
+<tr class="memitem:ga2c939b997916c872f0e2ca2983a2ff46" id="r_ga2c939b997916c872f0e2ca2983a2ff46"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga2c939b997916c872f0e2ca2983a2ff46">FILENAME_SUFFIX_LEN</a>&#160;&#160;&#160;(<a class="el" href="#ga4d144d1f6a265a12770457592de62399">FILENAME_SUFFIX_DATE_LEN</a> + <a class="el" href="#ga0a317df8e1ff90b9a17a08876f9822af">FILENAME_SUFFIX_MSEC_LEN</a>)</td></tr>
+<tr class="memdesc:ga2c939b997916c872f0e2ca2983a2ff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme la date complète d'un fichier.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gade9192ee45215b240cb01c74c83d5128" id="r_gade9192ee45215b240cb01c74c83d5128"><td class="memItemLeft">typedef struct LokiRecorder&#160;</td><td class="memItemRight"><a class="el" href="#gade9192ee45215b240cb01c74c83d5128">LokiRecorder</a></td></tr>
+<tr class="memdesc:gade9192ee45215b240cb01c74c83d5128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un enregistreur de séries temporelles.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaebc49d7bf1849c2cc5ea7e0ea05532d9" id="r_gaebc49d7bf1849c2cc5ea7e0ea05532d9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gaebc49d7bf1849c2cc5ea7e0ea05532d9">LokiRecorder_set_formatter</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self, void *config)</td></tr>
+<tr class="memdesc:gaebc49d7bf1849c2cc5ea7e0ea05532d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un formateur à un enregistreur.  <br /></td></tr>
+<tr class="memitem:gae6fec426bf7eeb871c675c6c7749feae" id="r_gae6fec426bf7eeb871c675c6c7749feae"><td class="memItemLeft"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gae6fec426bf7eeb871c675c6c7749feae">LokiRecorder_new</a> (const char *filename, const char *filetype, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency, float duration, float duration_per_file, void *config)</td></tr>
+<tr class="memdesc:gae6fec426bf7eeb871c675c6c7749feae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un enregistreur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:gab0cf8ecbf4d7485f468a54f4f19ac9bb" id="r_gab0cf8ecbf4d7485f468a54f4f19ac9bb"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#gab0cf8ecbf4d7485f468a54f4f19ac9bb">LokiRecorder_get_filename</a> (const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gab0cf8ecbf4d7485f468a54f4f19ac9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nom des fichiers gérés par un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga4c4c75b9e574887bea2605e78df3a4aa" id="r_ga4c4c75b9e574887bea2605e78df3a4aa"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ga4c4c75b9e574887bea2605e78df3a4aa">LokiRecorder_get_channel_count</a> (const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:ga4c4c75b9e574887bea2605e78df3a4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de voies gérées par un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga537585a8b069b651a6eaeb26a421eaf1" id="r_ga537585a8b069b651a6eaeb26a421eaf1"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="#ga537585a8b069b651a6eaeb26a421eaf1">LokiRecorder_work</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga537585a8b069b651a6eaeb26a421eaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer les données.  <br /></td></tr>
+<tr class="memitem:ga2065789d6a43516492fd3540ed9f251e" id="r_ga2065789d6a43516492fd3540ed9f251e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga2065789d6a43516492fd3540ed9f251e">LokiRecorder_start</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *in, size_t cid)</td></tr>
+<tr class="memdesc:ga2065789d6a43516492fd3540ed9f251e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'enregistrement.  <br /></td></tr>
+<tr class="memitem:gaa45a1fc3757fe0ff2226e05661ea49a4" id="r_gaa45a1fc3757fe0ff2226e05661ea49a4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gaa45a1fc3757fe0ff2226e05661ea49a4">LokiRecorder_is_recording</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gaa45a1fc3757fe0ff2226e05661ea49a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état d'un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga0eccd8310e416110c4b8d38b35bc97f8" id="r_ga0eccd8310e416110c4b8d38b35bc97f8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ga0eccd8310e416110c4b8d38b35bc97f8">LokiRecorder_signal_handler</a> (int signum)</td></tr>
+<tr class="memdesc:ga0eccd8310e416110c4b8d38b35bc97f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionnaire d'événements.  <br /></td></tr>
+<tr class="memitem:gafd4447bb457336f3bd5d2a61e2d02be9" id="r_gafd4447bb457336f3bd5d2a61e2d02be9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gafd4447bb457336f3bd5d2a61e2d02be9">LokiRecorder_wait</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gafd4447bb457336f3bd5d2a61e2d02be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attendre la fin de l'enregistrement.  <br /></td></tr>
+<tr class="memitem:gad51a013ed81570ffef5517d88b8f30de" id="r_gad51a013ed81570ffef5517d88b8f30de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gad51a013ed81570ffef5517d88b8f30de">LokiRecorder_stop</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gad51a013ed81570ffef5517d88b8f30de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'enregistrement.  <br /></td></tr>
+<tr class="memitem:ga8b7109b9e203e0f4e51346dcf6f36550" id="r_ga8b7109b9e203e0f4e51346dcf6f36550"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8b7109b9e203e0f4e51346dcf6f36550">LokiRecorder_del</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:ga8b7109b9e203e0f4e51346dcf6f36550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un enregistreur.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gae4eb8ea77d0d671bfa4b50bafc73fcc4" id="r_gae4eb8ea77d0d671bfa4b50bafc73fcc4"><td class="memItemLeft">static const char *const&#160;</td><td class="memItemRight"><a class="el" href="#gae4eb8ea77d0d671bfa4b50bafc73fcc4">LokiRecorder_formatter_names</a> []</td></tr>
+<tr class="memdesc:gae4eb8ea77d0d671bfa4b50bafc73fcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des noms de formateurs supportés.  <br /></td></tr>
+<tr class="memitem:ga52fb440ccc44cbcb8f76b2782b283ab9" id="r_ga52fb440ccc44cbcb8f76b2782b283ab9"><td class="memItemLeft">static const LokiFormatterInterface *const&#160;</td><td class="memItemRight"><a class="el" href="#ga52fb440ccc44cbcb8f76b2782b283ab9">LokiRecorder_formatter_impls</a> []</td></tr>
+<tr class="memdesc:ga52fb440ccc44cbcb8f76b2782b283ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des implémentations de formateurs supportées.  <br /></td></tr>
+<tr class="memitem:ga3915e335db719f91979c5323b3d8ff3b" id="r_ga3915e335db719f91979c5323b3d8ff3b"><td class="memItemLeft">static <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga3915e335db719f91979c5323b3d8ff3b">LokiRecorder_waiting_instance</a></td></tr>
+<tr class="memdesc:ga3915e335db719f91979c5323b3d8ff3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'instance de <a class="el" href="structLokiRecorder.html" title="Représentation d&#39;un enregistreur de séries temporelles.">LokiRecorder</a> qui fait l'objet d'une attente par la fonction <a class="el" href="#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement.">LokiRecorder_wait</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce module délègue les opérations de mise en forme et d'écriture à une implémentation de l'interface <a class="el" href="group__gLokiFormatter.html" title="Interface pour la mise en forme de séries temporelles">LokiFormatter</a>. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ga4d144d1f6a265a12770457592de62399" name="ga4d144d1f6a265a12770457592de62399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d144d1f6a265a12770457592de62399">&#9670;&#160;</a></span>FILENAME_SUFFIX_DATE_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAME_SUFFIX_DATE_LEN&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Longueur de chaîne à allouer pour mettre en forme la date et l'heure d'un fichier ("_YYYYmmddTHHMMSS"). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00070">70</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="ga2c939b997916c872f0e2ca2983a2ff46" name="ga2c939b997916c872f0e2ca2983a2ff46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c939b997916c872f0e2ca2983a2ff46">&#9670;&#160;</a></span>FILENAME_SUFFIX_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAME_SUFFIX_LEN&#160;&#160;&#160;(<a class="el" href="#ga4d144d1f6a265a12770457592de62399">FILENAME_SUFFIX_DATE_LEN</a> + <a class="el" href="#ga0a317df8e1ff90b9a17a08876f9822af">FILENAME_SUFFIX_MSEC_LEN</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Longueur de chaîne à allouer pour mettre en forme la date complète d'un fichier. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00076">76</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="ga0a317df8e1ff90b9a17a08876f9822af" name="ga0a317df8e1ff90b9a17a08876f9822af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a317df8e1ff90b9a17a08876f9822af">&#9670;&#160;</a></span>FILENAME_SUFFIX_MSEC_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAME_SUFFIX_MSEC_LEN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Longueur de chaîne à allouer pour mettre en forme le nombre de millisecondes de la date d'un fichier (".mmmZ."). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00073">73</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="gade9192ee45215b240cb01c74c83d5128" name="gade9192ee45215b240cb01c74c83d5128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade9192ee45215b240cb01c74c83d5128">&#9670;&#160;</a></span>LokiRecorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiRecorder LokiRecorder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un enregistreur de séries temporelles. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8h_source.html#l00019">19</a> du fichier <a class="el" href="libloki-recorder_8h_source.html">libloki-recorder.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga8b7109b9e203e0f4e51346dcf6f36550" name="ga8b7109b9e203e0f4e51346dcf6f36550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b7109b9e203e0f4e51346dcf6f36550">&#9670;&#160;</a></span>LokiRecorder_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRecorder_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un enregistreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00284">284</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_cgraph" id="agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_cgraph">
+<area shape="rect" title="Détruire un enregistreur." alt="" coords="5,5,140,31"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8" title="Détruire de mise en forme de séries temporelles." alt="" coords="188,5,328,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_icgraph" id="agroup__gLokiRecorder_ga8b7109b9e203e0f4e51346dcf6f36550_icgraph">
+<area shape="rect" title="Détruire un enregistreur." alt="" coords="195,5,329,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae" title="Construire un enregistreur de séries temporelles." alt="" coords="5,5,147,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4c4c75b9e574887bea2605e78df3a4aa" name="ga4c4c75b9e574887bea2605e78df3a4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c4c75b9e574887bea2605e78df3a4aa">&#9670;&#160;</a></span>LokiRecorder_get_channel_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder_get_channel_count </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nombre de voies gérées par un enregistreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de voies à enregistrer. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00144">144</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga4c4c75b9e574887bea2605e78df3a4aa_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga4c4c75b9e574887bea2605e78df3a4aa_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga4c4c75b9e574887bea2605e78df3a4aa_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga4c4c75b9e574887bea2605e78df3a4aa_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="gab0cf8ecbf4d7485f468a54f4f19ac9bb" name="gab0cf8ecbf4d7485f468a54f4f19ac9bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0cf8ecbf4d7485f468a54f4f19ac9bb">&#9670;&#160;</a></span>LokiRecorder_get_filename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * LokiRecorder_get_filename </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nom des fichiers gérés par un enregistreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nom de base des fichiers de destination. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00140">140</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gab0cf8ecbf4d7485f468a54f4f19ac9bb_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gab0cf8ecbf4d7485f468a54f4f19ac9bb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gab0cf8ecbf4d7485f468a54f4f19ac9bb_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gab0cf8ecbf4d7485f468a54f4f19ac9bb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="gaa45a1fc3757fe0ff2226e05661ea49a4" name="gaa45a1fc3757fe0ff2226e05661ea49a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa45a1fc3757fe0ff2226e05661ea49a4">&#9670;&#160;</a></span>LokiRecorder_is_recording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiRecorder_is_recording </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'état d'un enregistreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si l'enregistrement est en cours. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00239">239</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gaa45a1fc3757fe0ff2226e05661ea49a4_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gaa45a1fc3757fe0ff2226e05661ea49a4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gaa45a1fc3757fe0ff2226e05661ea49a4_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gaa45a1fc3757fe0ff2226e05661ea49a4_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="gae6fec426bf7eeb871c675c6c7749feae" name="gae6fec426bf7eeb871c675c6c7749feae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6fec426bf7eeb871c675c6c7749feae">&#9670;&#160;</a></span>LokiRecorder_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> * LokiRecorder_new </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filetype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>sample_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sampling_frequency</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration_per_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un enregistreur de séries temporelles. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Le nom de base des fichiers de destination (sans extension). </td></tr>
+    <tr><td class="paramname">filetype</td><td>Le format des fichiers de destination ("raw" ou "mseed"). </td></tr>
+    <tr><td class="paramname">max_channels</td><td>Le nombre maximal de voies que cet enregistreur peut traiter. </td></tr>
+    <tr><td class="paramname">channels</td><td>Un masque indiquant les voies à traiter. </td></tr>
+    <tr><td class="paramname">sample_size</td><td>La taille d'un échantillon, en octets. </td></tr>
+    <tr><td class="paramname">sampling_frequency</td><td>La fréquence d'échantillonnage, en Hz. </td></tr>
+    <tr><td class="paramname">duration</td><td>La durée totale d'enregistrement, 0 pour enregistrer indéfiniment. </td></tr>
+    <tr><td class="paramname">duration_per_file</td><td>La durée approximative d'enregistrement par fichier. La durée effective dépend de la taille des paquets de données. </td></tr>
+    <tr><td class="paramname">config</td><td>Une configuration à passer au formateur correspondant au format de fichier choisi. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouvel enregistreur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00098">98</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_cgraph" id="agroup__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_cgraph">
+<area shape="rect" title="Construire un enregistreur de séries temporelles." alt="" coords="5,35,147,60"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550" title="Détruire un enregistreur." alt="" coords="469,5,604,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#gaebc49d7bf1849c2cc5ea7e0ea05532d9" title="Affecter un formateur à un enregistreur." alt="" coords="195,60,397,85"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8" title="Détruire de mise en forme de séries temporelles." alt="" coords="676,35,816,60"/>
+<area shape="rect" href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="445,55,628,95"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gae6fec426bf7eeb871c675c6c7749feae_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="gaebc49d7bf1849c2cc5ea7e0ea05532d9" name="gaebc49d7bf1849c2cc5ea7e0ea05532d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebc49d7bf1849c2cc5ea7e0ea05532d9">&#9670;&#160;</a></span>LokiRecorder_set_formatter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRecorder_set_formatter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affecter un formateur à un enregistreur. </p>
+<p>Cette fonction recherche une implémentation de formateur correspondant au type mentionné dans l'enregistreur. Il instancie un formateur en lui passant en paramètre une configuration.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à configurer. </td></tr>
+    <tr><td class="paramname">config</td><td>La configuration de formateur à appliquer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00087">87</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_cgraph" id="agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_cgraph">
+<area shape="rect" title="Affecter un formateur à un enregistreur." alt="" coords="5,13,208,38"/>
+<area shape="rect" href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="256,5,439,45"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8" title="Détruire de mise en forme de séries temporelles." alt="" coords="487,13,627,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_icgraph" id="agroup__gLokiRecorder_gaebc49d7bf1849c2cc5ea7e0ea05532d9_icgraph">
+<area shape="rect" title="Affecter un formateur à un enregistreur." alt="" coords="195,5,397,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae" title="Construire un enregistreur de séries temporelles." alt="" coords="5,5,147,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga0eccd8310e416110c4b8d38b35bc97f8" name="ga0eccd8310e416110c4b8d38b35bc97f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0eccd8310e416110c4b8d38b35bc97f8">&#9670;&#160;</a></span>LokiRecorder_signal_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRecorder_signal_handler </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>signum</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gestionnaire d'événements. </p>
+<p>Cette fonction est installée comme gestionnaire d'événement par la fonction <a class="el" href="#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement.">LokiRecorder_wait</a>. Elle interrompt l'enregistreur <a class="el" href="#ga3915e335db719f91979c5323b3d8ff3b" title="L&#39;instance de LokiRecorder qui fait l&#39;objet d&#39;une attente par la fonction LokiRecorder_wait.">LokiRecorder_waiting_instance</a> sur réception d'un signal <span class="tt">KILL</span>, <span class="tt">TERM</span> ou <span class="tt">INT</span>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signum</td><td>Le numéro du signal reçu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00255">255</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_cgraph" id="agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_cgraph">
+<area shape="rect" title="Gestionnaire d&#39;événements." alt="" coords="5,5,159,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="207,13,349,38"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="397,13,517,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_icgraph" id="agroup__gLokiRecorder_ga0eccd8310e416110c4b8d38b35bc97f8_icgraph">
+<area shape="rect" title="Gestionnaire d&#39;événements." alt="" coords="196,5,349,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement." alt="" coords="5,13,148,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga2065789d6a43516492fd3540ed9f251e" name="ga2065789d6a43516492fd3540ed9f251e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2065789d6a43516492fd3540ed9f251e">&#9670;&#160;</a></span>LokiRecorder_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiRecorder_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarrer l'enregistrement. </p>
+<p>Cette fonction est non bloquante. Elle démarre un thread qui lit les données d'une FIFO et les enregistre.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à démarrer. </td></tr>
+    <tr><td class="paramname">in</td><td>La FIFO de données à enregistrer. </td></tr>
+    <tr><td class="paramname">cid</td><td>Le numéro de consommateur de cette instance dans la FIFO. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le code d'erreur de <span class="tt">pthread_create</span>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00231">231</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_cgraph" id="agroup__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_cgraph">
+<area shape="rect" title="Démarrer l&#39;enregistrement." alt="" coords="5,153,149,179"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="197,153,344,179"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="392,5,607,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="444,55,555,80"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c" title="Fermer un formateur de séries temporelles." alt="" coords="422,104,577,129"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3" title="Enregistrer un paquet de données." alt="" coords="423,153,575,179"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="416,203,583,228"/>
+<area shape="rect" href="group__gLokiTime.html#gaf9184c3ae04d720de377b3f7ad426976" title="Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp." alt="" coords="414,252,585,277"/>
+<area shape="rect" href="group__gLokiTime.html#gaab40a41437974e36b8ed59281177b32a" title="Calculer le nombre total de secondes dans un timestamp." alt="" coords="428,301,571,327"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="655,203,832,228"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga2065789d6a43516492fd3540ed9f251e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="gad51a013ed81570ffef5517d88b8f30de" name="gad51a013ed81570ffef5517d88b8f30de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad51a013ed81570ffef5517d88b8f30de">&#9670;&#160;</a></span>LokiRecorder_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRecorder_stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter l'enregistrement. </p>
+<p>Interrompt l'exécution du thread démarré par la fonction <a class="el" href="#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement.">LokiRecorder_start</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à arrêter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00275">275</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_cgraph" id="agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_cgraph">
+<area shape="rect" title="Arrêter l&#39;enregistrement." alt="" coords="5,5,148,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="196,5,316,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_icgraph" id="agroup__gLokiRecorder_gad51a013ed81570ffef5517d88b8f30de_icgraph">
+<area shape="rect" title="Arrêter l&#39;enregistrement." alt="" coords="397,13,540,38"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8" title="Gestionnaire d&#39;événements." alt="" coords="196,5,349,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement." alt="" coords="5,13,148,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gafd4447bb457336f3bd5d2a61e2d02be9" name="gafd4447bb457336f3bd5d2a61e2d02be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd4447bb457336f3bd5d2a61e2d02be9">&#9670;&#160;</a></span>LokiRecorder_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRecorder_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attendre la fin de l'enregistrement. </p>
+<p>Cette fonction bloque le thread courant jusqu'à ce que l'enregistrement en cours se termine.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'enregistreur à attendre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00262">262</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_cgraph" id="agroup__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_cgraph">
+<area shape="rect" title="Attendre la fin de l&#39;enregistrement." alt="" coords="5,13,148,38"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8" title="Gestionnaire d&#39;événements." alt="" coords="196,5,349,45"/>
+<area shape="rect" href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="397,13,540,38"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="588,13,708,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_gafd4447bb457336f3bd5d2a61e2d02be9_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="ga537585a8b069b651a6eaeb26a421eaf1" name="ga537585a8b069b651a6eaeb26a421eaf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga537585a8b069b651a6eaeb26a421eaf1">&#9670;&#160;</a></span>LokiRecorder_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiRecorder_work </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enregistrer les données. </p>
+<p>Cette fonction est exécutée dans un thread démarré par la fonction <a class="el" href="#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement.">LokiRecorder_start</a>. Elle reçoit les données de la FIFO d'entrée de l'enregistreur courant et les passe à un formateur qui les enregistre. L'enregistrement se poursuit jusqu'à ce qu'une demande d'arrêt soit effectuée par la fonction <a class="el" href="#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement.">LokiRecorder_stop</a>, ou jusqu'à ce que la durée totale d'enregistrement soit atteinte.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>L'enregistreur courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00161">161</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_cgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_cgraph" id="agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_cgraph">
+<area shape="rect" title="Enregistrer les données." alt="" coords="5,153,152,179"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="200,5,415,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="252,55,363,80"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c" title="Fermer un formateur de séries temporelles." alt="" coords="230,104,385,129"/>
+<area shape="rect" href="group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3" title="Enregistrer un paquet de données." alt="" coords="231,153,383,179"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="224,203,391,228"/>
+<area shape="rect" href="group__gLokiTime.html#gaf9184c3ae04d720de377b3f7ad426976" title="Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp." alt="" coords="222,252,393,277"/>
+<area shape="rect" href="group__gLokiTime.html#gaab40a41437974e36b8ed59281177b32a" title="Calculer le nombre total de secondes dans un timestamp." alt="" coords="236,301,379,327"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="463,203,640,228"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_icgraph.png" border="0" usemap="#agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_icgraph" id="agroup__gLokiRecorder_ga537585a8b069b651a6eaeb26a421eaf1_icgraph">
+<area shape="rect" title="Enregistrer les données." alt="" coords="197,5,344,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="5,5,149,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ga52fb440ccc44cbcb8f76b2782b283ab9" name="ga52fb440ccc44cbcb8f76b2782b283ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52fb440ccc44cbcb8f76b2782b283ab9">&#9670;&#160;</a></span>LokiRecorder_formatter_impls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const LokiFormatterInterface* const LokiRecorder_formatter_impls[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                                       = {</div>
+<div class="line">    &amp;LokiRawClass, &amp;LokiMSeedClass</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>La liste des implémentations de formateurs supportées. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00065">65</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="gae4eb8ea77d0d671bfa4b50bafc73fcc4" name="gae4eb8ea77d0d671bfa4b50bafc73fcc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4eb8ea77d0d671bfa4b50bafc73fcc4">&#9670;&#160;</a></span>LokiRecorder_formatter_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const LokiRecorder_formatter_names[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                     = {</div>
+<div class="line">    <span class="stringliteral">&quot;raw&quot;</span>, <span class="stringliteral">&quot;mseed&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>La liste des noms de formateurs supportés. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="ga3915e335db719f91979c5323b3d8ff3b" name="ga3915e335db719f91979c5323b3d8ff3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3915e335db719f91979c5323b3d8ff3b">&#9670;&#160;</a></span>LokiRecorder_waiting_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiRecorder.html">LokiRecorder</a>* LokiRecorder_waiting_instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>L'instance de <a class="el" href="structLokiRecorder.html" title="Représentation d&#39;un enregistreur de séries temporelles.">LokiRecorder</a> qui fait l'objet d'une attente par la fonction <a class="el" href="#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement.">LokiRecorder_wait</a>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00244">244</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

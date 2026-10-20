@@ -1,0 +1,4 @@
+<map id="LokiSystem_get_ellipse" name="LokiSystem_get_ellipse">
+<area shape="rect" id="node1" title="Lire la dernière ellipse estimée." alt="" coords="5,13,181,38"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#ga8ea969c9065e9f3ebf9d91932e94bfe5" title="Retourner la dernière ellipse calculée par cette instance." alt="" coords="229,5,396,45"/>
+</map>

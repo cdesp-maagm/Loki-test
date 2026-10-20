@@ -1,0 +1,143 @@
+\doxysection{libloki-\/rls.c}
+\hypertarget{libloki-rls_8c_source}{}\label{libloki-rls_8c_source}\index{libloki-\/rls.c@{libloki-\/rls.c}}
+\doxymbox{\hyperlink{libloki-rls_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-rls_8h}{libloki-\/rls.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-ellipse_8h}{libloki-\/ellipse.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00012}\doxymbox{\hyperlink{structLokiRLS}{00012}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00014}\doxymbox{\hyperlink{structLokiRLS_a557a04902773c65c14fa63145421ff59}{00014}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiRLS_a557a04902773c65c14fa63145421ff59}{lambda}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00016}\doxymbox{\hyperlink{structLokiRLS_a0fe3428625bd52b82e344f392dca3f8c}{00016}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiRLS_a0fe3428625bd52b82e344f392dca3f8c}{lambda\_inv}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00018}\doxymbox{\hyperlink{structLokiRLS_ae646efd09f4cba440a5ad9a9727bf1f5}{00018}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiRLS_ae646efd09f4cba440a5ad9a9727bf1f5}{P}}[5][5];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00020}\doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{00020}}\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{LokiEllipseEquation}}\ \doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{state}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00023}\doxymbox{\hyperlink{group__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785}{00023}}\ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *\doxymbox{\hyperlink{group__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785}{LokiRLS\_new}}(\textcolor{keywordtype}{float}\ initial\_radius,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ params[\textcolor{keyword}{static}\ 2])\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00024}00024\ \ \ \ \ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *\ self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}));}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00029}00029\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRLS_a557a04902773c65c14fa63145421ff59}{lambda}}\ \ \ \ \ =\ params[0];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00030}00030\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRLS_a0fe3428625bd52b82e344f392dca3f8c}{lambda\_inv}}\ =\ 1.0f\ /\ self-\/>\doxymbox{\hyperlink{structLokiRLS_a557a04902773c65c14fa63145421ff59}{lambda}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00032}00032\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{state}}[0]\ =\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00033}00033\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{state}}[4]\ =\ -\/initial\_radius\ *\ initial\_radius\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRLS_ae646efd09f4cba440a5ad9a9727bf1f5}{P}}[i][i]\ =\ params[1];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00042}\doxymbox{\hyperlink{group__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59}{00042}}\ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *\doxymbox{\hyperlink{group__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59}{LokiRLS\_clone}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *other)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00043}00043\ \ \ \ \ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *\ self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}));}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00048}00048\ \ \ \ \ memcpy(self,\ other,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}));}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00053}\doxymbox{\hyperlink{group__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1}{00053}}\ \textcolor{keywordtype}{float}\ *\doxymbox{\hyperlink{group__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1}{LokiRLS\_get\_state}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ self-\/>\doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{state}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00057}\doxymbox{\hyperlink{group__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7}{00057}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7}{LokiRLS\_work}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *self,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ out\ \ =\ -\/y\ *\ y;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ in[]\ =\ \{x\ *\ x\ +\ out,\ x\ *\ y,\ x,\ y,\ 1.0f\};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Copies\ locales\ de\ l'état\ du\ filtre.}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00062}00062\ \ \ \ \ float\ (*\ \textcolor{keyword}{const}\ P)[5]\ \ \ =\ self-\/>\doxymbox{\hyperlink{structLokiRLS_ae646efd09f4cba440a5ad9a9727bf1f5}{P}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{float}\ *\textcolor{keyword}{const}\ state\ \ \ \ \ =\ self-\/>\doxymbox{\hyperlink{structLokiRLS_a5856c7224c91d0545a05f72b18c56db4}{state}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ lambda\_inv\ =\ self-\/>\doxymbox{\hyperlink{structLokiRLS_a0fe3428625bd52b82e344f392dca3f8c}{lambda\_inv}};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Dans\ les\ calculs\ suivants,\ on\ tient\ compte\ du\ fait\ que\ in[4]\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ Calcul\ de\ l'erreur\ courante\ :}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ epsilon\ =\ out\ -\/\ in\ *\ state}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{float}\ epsilon\ =\ out\ -\/\ state[4];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 4;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ epsilon\ -\/=\ in[i]\ *\ state[i];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ Calcul\ du\ produits\ G\ =\ P\ *\ in'}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{float}\ G[5];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ G[i]\ =\ P[i][4];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ 4;\ j\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ G[i]\ +=\ P[i][j]\ *\ in[j];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Calcul\ du\ facteur\ de\ normalisation\ K\ =\ lambda\ +\ in\ *\ P\ *\ in'}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{float}\ K\ =\ self-\/>\doxymbox{\hyperlink{structLokiRLS_a557a04902773c65c14fa63145421ff59}{lambda}}\ +\ G[4];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 4;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ K\ +=\ in[i]\ *\ G[i];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ Normalisation\ du\ vecteur\ G\ et\ mise\ à\ jour\ de\ l'état.}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{float}\ K\_inv\ =\ 1.0f\ /\ K;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ G[i]\ *=\ K\_inv;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ state[i]\ +=\ epsilon\ *\ G[i];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//\ Calcul\ de\ J\ =\ I\ -\/\ G\ *\ in}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{float}\ J[5][5];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ J[i][i]\ =\ 1.0f\ -\/\ G[i]\ *\ in[i];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ i\ +\ 1;\ j\ <\ 5;\ j\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ J[i][j]\ =\ -\/G[i]\ *\ in[j];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ J[j][i]\ =\ -\/G[j]\ *\ in[i];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ Mise\ à\ jour\ de\ la\ matrice\ P\_next\ =\ J\ *\ P\ /\ lambda}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{float}\ P\_next[5][5];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ 5;\ j\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ P\_next[i][j]\ =\ J[i][0]\ *\ P[0][j];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ 1;\ k\ <\ 5;\ k\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ P\_next[i][j]\ +=\ J[i][k]\ *\ P[k][j];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ P\_next[i][j]\ *=\ lambda\_inv;}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ Cette\ boucle\ est\ plus\ rapide\ que\ memcpy(P,\ P\_next,\ sizeof(P\_next)).}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//\ Il\ est\ possible\ que\ le\ compilateur\ optimise\ le\ graphe\ flot\ de\ données}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//\ sans\ passer\ par\ l'allocation\ du\ tableau\ P\_next.}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 5;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ 5;\ j\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ P[i][j]\ =\ P\_next[i][j];}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00129}\doxymbox{\hyperlink{group__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c}{00129}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c}{LokiRLS\_del}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00133}00133\ \ \ \ \ free(self);}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00136}00136\ \doxymbox{\hyperlink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{LokiClass\_implementation}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{LokiEllipseEstimator}},\ \doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00137}00137\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{LokiClass\_set\_attribute}}(params\_length,\ 2)}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00138}00138\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},\ \textcolor{keyword}{new})}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00139}00139\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},\ clone)}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00140}00140\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},\ work)}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00141}00141\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},\ get\_state)}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00142}00142\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRLS}{LokiRLS}},\ del)}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00143}00143\ );}
+\DoxyCodeLine{\Hypertarget{libloki-rls_8c_source_l00144}00144\ }
+
+\end{DoxyCode}

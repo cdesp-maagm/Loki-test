@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence de la structure LokiSystem</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Champs de données</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la structure LokiSystem<div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a> &raquo; <a class="el" href="group__gLokiSystem.html">Gestion des acquisitions et du calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Représentation d'un système d'acquisition et de traitement.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de LokiSystem:</div>
+<div class="dyncontent">
+<div class="center"><img src="structLokiSystem__coll__graph.png" border="0" usemap="#aLokiSystem_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aLokiSystem_coll__map" id="aLokiSystem_coll__map">
+<area shape="rect" title="Représentation d&#39;un système d&#39;acquisition et de traitement." alt="" coords="177,288,276,313"/>
+<area shape="rect" href="structLokiSystemConfig.html" title="Les paramètres de configuration d&#39;un système d&#39;acquisition et de traitement." alt="" coords="5,198,144,223"/>
+<area shape="rect" href="structLokiModem.html" title="Représentation des périphériques modulateur et démodulateur." alt="" coords="237,198,336,223"/>
+<area shape="rect" href="structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="153,108,231,133"/>
+<area shape="rect" href="structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="130,5,254,31"/>
+<area shape="rect" href="structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement." alt="" coords="371,198,509,223"/>
+<area shape="rect" href="structLokiEllipse.html" title="Structure de données représentant une ellipse." alt="" coords="255,108,347,133"/>
+<area shape="rect" href="structLokiEllipseEstimator.html" title="Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse." alt="" coords="372,108,527,133"/>
+<area shape="rect" href="structLokiFIRFilter.html" title="Représentation d&#39;un filtre FIR." alt="" coords="551,108,654,133"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:aa93697e44722331cef44c62044e7a664" id="r_aa93697e44722331cef44c62044e7a664"><td class="memItemLeft"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa93697e44722331cef44c62044e7a664">config</a></td></tr>
+<tr class="memdesc:aa93697e44722331cef44c62044e7a664"><td class="mdescLeft">&#160;</td><td class="mdescRight">La configuration de ce système.  <br /></td></tr>
+<tr class="memitem:ad04afaf0be4bc92bad662ad779e80946" id="r_ad04afaf0be4bc92bad662ad779e80946"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ad04afaf0be4bc92bad662ad779e80946">channels</a></td></tr>
+<tr class="memdesc:ad04afaf0be4bc92bad662ad779e80946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de voies prises en charge par ce système.  <br /></td></tr>
+<tr class="memitem:a319605da6e9605073b2ad12a115cdf11" id="r_a319605da6e9605073b2ad12a115cdf11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a319605da6e9605073b2ad12a115cdf11">has_own_modem</a></td></tr>
+<tr class="memdesc:a319605da6e9605073b2ad12a115cdf11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce système a-t-il construit sa propre instance de <a class="el" href="structLokiModem.html" title="Représentation des périphériques modulateur et démodulateur.">LokiModem</a> ?  <br /></td></tr>
+<tr class="memitem:ab9b7636739d69c315bde9cda3a9388bb" id="r_ab9b7636739d69c315bde9cda3a9388bb"><td class="memItemLeft"><a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab9b7636739d69c315bde9cda3a9388bb">modem</a></td></tr>
+<tr class="memdesc:ab9b7636739d69c315bde9cda3a9388bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le modem utilisé par ce système.  <br /></td></tr>
+<tr class="memitem:a78386f190240787b697089f7a2aa642f" id="r_a78386f190240787b697089f7a2aa642f"><td class="memItemLeft"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a> **&#160;</td><td class="memItemRight"><a class="el" href="#a78386f190240787b697089f7a2aa642f">disp</a></td></tr>
+<tr class="memdesc:a78386f190240787b697089f7a2aa642f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un tableau de calculateurs de déplacement.  <br /></td></tr>
+<tr class="memitem:a53f9ad56b3160ec9b631150701a7d69d" id="r_a53f9ad56b3160ec9b631150701a7d69d"><td class="memItemLeft">volatile bool&#160;</td><td class="memItemRight"><a class="el" href="#a53f9ad56b3160ec9b631150701a7d69d">stop_request</a></td></tr>
+<tr class="memdesc:a53f9ad56b3160ec9b631150701a7d69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de demande d'arrêt de l'acquisition.  <br /></td></tr>
+<tr class="memitem:a5810c839e226b631489b21e257708958" id="r_a5810c839e226b631489b21e257708958"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5810c839e226b631489b21e257708958">is_streaming</a></td></tr>
+<tr class="memdesc:a5810c839e226b631489b21e257708958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une acquisition est-elle en cours ?  <br /></td></tr>
+<tr class="memitem:aec93f645a1e5e29b697ad24351387ca0" id="r_aec93f645a1e5e29b697ad24351387ca0"><td class="memItemLeft">pthread_t&#160;</td><td class="memItemRight"><a class="el" href="#aec93f645a1e5e29b697ad24351387ca0">thread</a></td></tr>
+<tr class="memdesc:aec93f645a1e5e29b697ad24351387ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le thread de traitement.  <br /></td></tr>
+<tr class="memitem:afe59d7d81070b39a6472f4c05ed8e277" id="r_afe59d7d81070b39a6472f4c05ed8e277"><td class="memItemLeft"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afe59d7d81070b39a6472f4c05ed8e277">in</a></td></tr>
+<tr class="memdesc:afe59d7d81070b39a6472f4c05ed8e277"><td class="mdescLeft">&#160;</td><td class="mdescRight">La FIFO des données démodulées (alimentée par le modem).  <br /></td></tr>
+<tr class="memitem:a12cfb647be7088113fb568e675145e4a" id="r_a12cfb647be7088113fb568e675145e4a"><td class="memItemLeft"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a12cfb647be7088113fb568e675145e4a">out</a></td></tr>
+<tr class="memdesc:a12cfb647be7088113fb568e675145e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La FIFO des déplacements (alimentée par ce système).  <br /></td></tr>
+<tr class="memitem:a3d52ba2735183fc2800f36656c46c7bc" id="r_a3d52ba2735183fc2800f36656c46c7bc"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3d52ba2735183fc2800f36656c46c7bc">cid</a></td></tr>
+<tr class="memdesc:a3d52ba2735183fc2800f36656c46c7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le numéro de consommateur de ce système pour la FIFO des données démodulées.  <br /></td></tr>
+<tr class="memitem:a402ef0c43f6c3cda7010bc14ced6c762" id="r_a402ef0c43f6c3cda7010bc14ced6c762"><td class="memItemLeft">pthread_mutex_t&#160;</td><td class="memItemRight"><a class="el" href="#a402ef0c43f6c3cda7010bc14ced6c762">mutex</a></td></tr>
+<tr class="memdesc:a402ef0c43f6c3cda7010bc14ced6c762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un mutex pour gérer les accès concurrents au calculateur du déplacement.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représentation d'un système d'acquisition et de traitement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00268">268</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="ad04afaf0be4bc92bad662ad779e80946" name="ad04afaf0be4bc92bad662ad779e80946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04afaf0be4bc92bad662ad779e80946">&#9670;&#160;</a></span>channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystem::channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de voies prises en charge par ce système. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00272">272</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a3d52ba2735183fc2800f36656c46c7bc" name="a3d52ba2735183fc2800f36656c46c7bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d52ba2735183fc2800f36656c46c7bc">&#9670;&#160;</a></span>cid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystem::cid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le numéro de consommateur de ce système pour la FIFO des données démodulées. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00290">290</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="aa93697e44722331cef44c62044e7a664" name="aa93697e44722331cef44c62044e7a664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93697e44722331cef44c62044e7a664">&#9670;&#160;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a>* LokiSystem::config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La configuration de ce système. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00270">270</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a78386f190240787b697089f7a2aa642f" name="a78386f190240787b697089f7a2aa642f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78386f190240787b697089f7a2aa642f">&#9670;&#160;</a></span>disp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiDisplacement.html">LokiDisplacement</a>** LokiSystem::disp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un tableau de calculateurs de déplacement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00278">278</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a319605da6e9605073b2ad12a115cdf11" name="a319605da6e9605073b2ad12a115cdf11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319605da6e9605073b2ad12a115cdf11">&#9670;&#160;</a></span>has_own_modem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiSystem::has_own_modem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ce système a-t-il construit sa propre instance de <a class="el" href="structLokiModem.html" title="Représentation des périphériques modulateur et démodulateur.">LokiModem</a> ? </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00274">274</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="afe59d7d81070b39a6472f4c05ed8e277" name="afe59d7d81070b39a6472f4c05ed8e277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe59d7d81070b39a6472f4c05ed8e277">&#9670;&#160;</a></span>in</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFO.html">LokiFIFO</a>* LokiSystem::in</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La FIFO des données démodulées (alimentée par le modem). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00286">286</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a5810c839e226b631489b21e257708958" name="a5810c839e226b631489b21e257708958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5810c839e226b631489b21e257708958">&#9670;&#160;</a></span>is_streaming</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiSystem::is_streaming</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Une acquisition est-elle en cours ? </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00282">282</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="ab9b7636739d69c315bde9cda3a9388bb" name="ab9b7636739d69c315bde9cda3a9388bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b7636739d69c315bde9cda3a9388bb">&#9670;&#160;</a></span>modem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiModem.html">LokiModem</a>* LokiSystem::modem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le modem utilisé par ce système. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00276">276</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a402ef0c43f6c3cda7010bc14ced6c762" name="a402ef0c43f6c3cda7010bc14ced6c762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402ef0c43f6c3cda7010bc14ced6c762">&#9670;&#160;</a></span>mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t LokiSystem::mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un mutex pour gérer les accès concurrents au calculateur du déplacement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00292">292</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a12cfb647be7088113fb568e675145e4a" name="a12cfb647be7088113fb568e675145e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cfb647be7088113fb568e675145e4a">&#9670;&#160;</a></span>out</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFO.html">LokiFIFO</a>* LokiSystem::out</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La FIFO des déplacements (alimentée par ce système). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00288">288</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="a53f9ad56b3160ec9b631150701a7d69d" name="a53f9ad56b3160ec9b631150701a7d69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f9ad56b3160ec9b631150701a7d69d">&#9670;&#160;</a></span>stop_request</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool LokiSystem::stop_request</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicateur de demande d'arrêt de l'acquisition. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00280">280</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="aec93f645a1e5e29b697ad24351387ca0" name="aec93f645a1e5e29b697ad24351387ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec93f645a1e5e29b697ad24351387ca0">&#9670;&#160;</a></span>thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t LokiSystem::thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le thread de traitement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00284">284</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="libloki-system_8c_source.html">libloki-system.c</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

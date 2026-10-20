@@ -1,0 +1,4 @@
+<map id="LokiSensors_stop_streaming" name="LokiSensors_stop_streaming">
+<area shape="rect" id="node1" title="Arrêter l&#39;acquisition." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="244,5,356,32"/>
+</map>

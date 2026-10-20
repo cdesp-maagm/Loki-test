@@ -1,0 +1,41 @@
+\doxysection{Référence du fichier libloki-\/rls.c}
+\hypertarget{libloki-rls_8c}{}\label{libloki-rls_8c}\index{libloki-\/rls.c@{libloki-\/rls.c}}
+{\ttfamily \+\#include "{}libloki-\/rls.\+h"{}}\newline
+{\ttfamily \+\#include "{}libloki-\/ellipse.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/rls.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre RLS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785}{Loki\+RLS\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 2]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre RLS. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59}{Loki\+RLS\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre RLS. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1}{Loki\+RLS\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7}{Loki\+RLS\+\_\+work}} (\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c}{Loki\+RLS\+\_\+del}} (\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre RLS. \end{DoxyCompactList}\item 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(params\+\_\+length, 2) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRLS}{Loki\+RLS}}, del))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-rls_8c_source}{libloki-\/rls.\+c}}.
+

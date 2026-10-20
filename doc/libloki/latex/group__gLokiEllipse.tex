@@ -1,0 +1,183 @@
+\doxysubsection{Représentation et manipulation d\textquotesingle{}ellipses }
+\hypertarget{group__gLokiEllipse}{}\label{group__gLokiEllipse}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+
+
+Type de donnée et fonctions permettant de manipuler des ellipses sous différentes représentations.  
+
+
+Graphe de collaboration de Représentation et manipulation d\textquotesingle{}ellipses:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-ellipse_8h}{libloki-\/ellipse.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}}
+\begin{DoxyCompactList}\small\item\em Structure de données représentant une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}}\+[5]
+\begin{DoxyCompactList}\small\item\em Tableau des coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse en coordonnées cartésiennes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group__gLokiEllipse_ga6c07dc7246a56661060f219512071d9e}{Loki\+Ellipse\+\_\+set\+\_\+from\+\_\+coeffs}} (\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, const \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}} coeffs)
+\begin{DoxyCompactList}\small\item\em Affecter les paramètres d\textquotesingle{}une ellipse en fonction des coefficients de son équation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipse_ga6a9d8dee572f56889695bb96a2835844}{Loki\+Ellipse\+\_\+get\+\_\+coeffs}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}} coeffs)
+\begin{DoxyCompactList}\small\item\em Calculer les coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipse_ga70aa22f2b32427cb365981412de7daf5}{Loki\+Ellipse\+\_\+get\+\_\+point}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, float theta, float \texorpdfstring{$\ast$}{*}x, float \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Calculer les coordonnées d\textquotesingle{}un point d\textquotesingle{}une ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEllipse_ga35d3ff1907a5e87a070466b4c3204ec9}{Loki\+Ellipse\+\_\+get\+\_\+angle}} (const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}self, float x, float y, float \texorpdfstring{$\ast$}{*}x\+\_\+norm, float \texorpdfstring{$\ast$}{*}y\+\_\+norm)
+\begin{DoxyCompactList}\small\item\em Calculer l\textquotesingle{}angle correspondant à un point d\textquotesingle{}une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Type de donnée et fonctions permettant de manipuler des ellipses sous différentes représentations. 
+
+
+
+\label{group__gLokiEllipse_doc-typedef-members}
+\Hypertarget{group__gLokiEllipse_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipseEquation@{LokiEllipseEquation}}
+\index{LokiEllipseEquation@{LokiEllipseEquation}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipseEquation}{LokiEllipseEquation}}
+{\footnotesize\ttfamily \label{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163} 
+typedef float Loki\+Ellipse\+Equation\+[5]}
+
+
+
+Tableau des coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse en coordonnées cartésiennes. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8h_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8h_source}{libloki-\/ellipse.\+h}}.
+
+
+
+\label{group__gLokiEllipse_doc-func-members}
+\Hypertarget{group__gLokiEllipse_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiEllipse_ga35d3ff1907a5e87a070466b4c3204ec9}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}}
+\index{LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_angle()}{LokiEllipse\_get\_angle()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipse_ga35d3ff1907a5e87a070466b4c3204ec9} 
+float Loki\+Ellipse\+\_\+get\+\_\+angle (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{x\+\_\+norm}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{y\+\_\+norm}{}\end{DoxyParamCaption})}
+
+
+
+Calculer l\textquotesingle{}angle correspondant à un point d\textquotesingle{}une ellipse. 
+
+Cette fonction calcule également les coordonées d\textquotesingle{}un point du cercle unité correspondant au point de l\textquotesingle{}ellipse passé en argument.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em x} & La coordonnée X d\textquotesingle{}un point de l\textquotesingle{}ellipse. \\
+\hline
+{\em y} & La coordonnée Y d\textquotesingle{}un point de l\textquotesingle{}ellipse. \\
+\hline
+{\em x\+\_\+norm} & Un pointeur vers l\textquotesingle{}emplacement où écrire la coordonnée X du point ramené sur le cercle unité. \\
+\hline
+{\em y\+\_\+norm} & Un pointeur vers l\textquotesingle{}emplacement où écrire la coordonnée Y du point ramené sur le cercle unité. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}angle. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00068}{68}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiEllipse_ga6a9d8dee572f56889695bb96a2835844}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}}
+\index{LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_coeffs()}{LokiEllipse\_get\_coeffs()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipse_ga6a9d8dee572f56889695bb96a2835844} 
+void Loki\+Ellipse\+\_\+get\+\_\+coeffs (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}}}]{coeffs}{}\end{DoxyParamCaption})}
+
+
+
+Calculer les coefficients de l\textquotesingle{}équation d\textquotesingle{}une ellipse. 
+
+Les coefficients sont normalisés de telle sorte que \$a + c = 1\$. Le résultat ne contient que les coefficients (a, b, d, e, f).
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em coeffs} & Le tableau de destination. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00042}{42}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiEllipse_ga70aa22f2b32427cb365981412de7daf5}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_point@{LokiEllipse\_get\_point}}
+\index{LokiEllipse\_get\_point@{LokiEllipse\_get\_point}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_get\_point()}{LokiEllipse\_get\_point()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipse_ga70aa22f2b32427cb365981412de7daf5} 
+void Loki\+Ellipse\+\_\+get\+\_\+point (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{theta}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Calculer les coordonnées d\textquotesingle{}un point d\textquotesingle{}une ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse de référence. \\
+\hline
+{\em theta} & La coordonnée du point sur l\textquotesingle{}ellipse, en radians. \\
+\hline
+{\em x} & Un pointeur vers la coordonnée X calculée pour ce point. \\
+\hline
+{\em y} & Un pointeur vers la coordonnée Y calculée pour ce point. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiEllipse_ga6c07dc7246a56661060f219512071d9e}\index{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}}
+\index{LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}}
+\doxysubsubsubsection{\texorpdfstring{LokiEllipse\_set\_from\_coeffs()}{LokiEllipse\_set\_from\_coeffs()}}
+{\footnotesize\ttfamily \label{group__gLokiEllipse_ga6c07dc7246a56661060f219512071d9e} 
+void Loki\+Ellipse\+\_\+set\+\_\+from\+\_\+coeffs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{Loki\+Ellipse\+Equation}}}]{coeffs}{}\end{DoxyParamCaption})}
+
+
+
+Affecter les paramètres d\textquotesingle{}une ellipse en fonction des coefficients de son équation. 
+
+L\textquotesingle{}équation de l\textquotesingle{}ellipse est considérée comme normalisée avec \$a + c = 1\$.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}ellipse à calculer. \\
+\hline
+{\em coeffs} & Les coefficients (a, b, d, e, f) de l\textquotesingle{}équation. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-ellipse_8c_source_l00010}{10}} du fichier \doxymbox{\hyperlink{libloki-ellipse_8c_source}{libloki-\/ellipse.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8

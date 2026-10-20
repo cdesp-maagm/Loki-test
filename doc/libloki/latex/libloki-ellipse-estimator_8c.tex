@@ -1,0 +1,40 @@
+\doxysection{Référence du fichier libloki-\/ellipse-\/estimator.c}
+\hypertarget{libloki-ellipse-estimator_8c}{}\label{libloki-ellipse-estimator_8c}\index{libloki-\/ellipse-\/estimator.c@{libloki-\/ellipse-\/estimator.c}}
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include "{}libloki-\/ellipse-\/estimator.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/ellipse-\/estimator.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre d\textquotesingle{}estimation des paramètres d\textquotesingle{}une ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga1e625c5268fb3d3430d741de55c44bc0}{Loki\+Ellipse\+Estimator\+\_\+new}} (float initial\+\_\+radius, const float params\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Construire un estimateur. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga77e0d9338c0eddbf5f3d79374f8a77fa}{Loki\+Ellipse\+Estimator\+\_\+new\+\_\+with\+\_\+implementation}} (const Loki\+Ellipse\+Estimator\+Interface \texorpdfstring{$\ast$}{*}impl, float initial\+\_\+radius, const float params\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em Construire un estimateur avec une implémentation donnée. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga8913e5508a4b3cac1c5552f1d404a9b2}{Loki\+Ellipse\+Estimator\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un estimateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga136afdab868b56c531d462ed5e587cf5}{Loki\+Ellipse\+Estimator\+\_\+work}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga3bf89eb128ef2dfcbdf1921060467898}{Loki\+Ellipse\+Estimator\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant de l\textquotesingle{}estimateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga96a80f684b2cf60d831ad7207f21d298}{Loki\+Ellipse\+Estimator\+\_\+del}} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un estimateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-ellipse-estimator_8c_source}{libloki-\/ellipse-\/estimator.\+c}}.
+

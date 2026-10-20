@@ -1,0 +1,11 @@
+<map id="LokiSystem" name="LokiSystem">
+<area shape="rect" id="node1" title="Représentation d&#39;un système d&#39;acquisition et de traitement." alt="" coords="177,288,276,313"/>
+<area shape="rect" id="node2" href="$structLokiSystemConfig.html" title="Les paramètres de configuration d&#39;un système d&#39;acquisition et de traitement." alt="" coords="5,198,144,223"/>
+<area shape="rect" id="node3" href="$structLokiModem.html" title="Représentation des périphériques modulateur et démodulateur." alt="" coords="237,198,336,223"/>
+<area shape="rect" id="node4" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="153,108,231,133"/>
+<area shape="rect" id="node5" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="130,5,254,31"/>
+<area shape="rect" id="node6" href="$structLokiDisplacement.html" title="Représentation d&#39;un calculateur de déplacement." alt="" coords="371,198,509,223"/>
+<area shape="rect" id="node7" href="$structLokiEllipse.html" title="Structure de données représentant une ellipse." alt="" coords="255,108,347,133"/>
+<area shape="rect" id="node8" href="$structLokiEllipseEstimator.html" title="Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse." alt="" coords="372,108,527,133"/>
+<area shape="rect" id="node9" href="$structLokiFIRFilter.html" title="Représentation d&#39;un filtre FIR." alt="" coords="551,108,654,133"/>
+</map>

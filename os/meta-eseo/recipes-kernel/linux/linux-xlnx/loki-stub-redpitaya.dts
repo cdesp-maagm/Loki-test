@@ -1,0 +1,4 @@
+
+#include "zynq-redpitaya.dts"
+#include "loki-common.dtsi"
+#include "loki-stub.dtsi"

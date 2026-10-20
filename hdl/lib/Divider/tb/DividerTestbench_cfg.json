@@ -1,0 +1,11 @@
+{
+    "package_name" : "DividerTestbench_cfg",
+    "declarations" : {
+        "TB_CLK_PERIOD"                : {"type" : "time",    "value" : "10 ns"},
+        "TB_DIVIDEND_INTEGER_WIDTH"    : {"type" : "integer", "value" : 8},
+        "TB_DIVIDEND_FRACTIONAL_WIDTH" : {"type" : "integer", "value" : 4},
+        "TB_DIVISOR_INTEGER_WIDTH"     : {"type" : "integer", "value" : 3},
+        "TB_DIVISOR_FRACTIONAL_WIDTH"  : {"type" : "integer", "value" : 3},
+        "TB_TEST_DATA_LENGTH"          : {"type" : "integer", "value" : 100}
+    }
+}

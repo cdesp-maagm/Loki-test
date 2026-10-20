@@ -1,0 +1,10 @@
+<map id="LokiModem_scale_xy" name="LokiModem_scale_xy">
+<area shape="rect" id="node1" title="Mettre à l&#39;échelle une composante X (I) ou Y (Q) d&#39;un échantillon démodulé." alt="" coords="963,55,1125,80"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="743,5,875,31"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="718,55,899,80"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#gae9b930ac28562e09e072ce107c59db0c" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur." alt="" coords="703,104,915,129"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="520,5,652,31"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,104,655,129"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,104,469,129"/>
+<area shape="rect" id="node8" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,104,213,129"/>
+</map>

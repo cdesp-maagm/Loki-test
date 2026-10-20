@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-raw.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-raw.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-raw_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="libloki_8h.html">libloki.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structLokiRaw.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group__gLokiRaw.html#ga11394b9444c573a8c98a37491c188d74">   20</a></span><a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> *<a class="code hl_function" href="group__gLokiRaw.html#ga11394b9444c573a8c98a37491c188d74">LokiRaw_new</a>(<span class="keywordtype">void</span> *config) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// L&#39;objet config est ignoré</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>));</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> = -1;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="group__gLokiRaw.html#gacfce93c6c5932d70a60fb659a775d53d">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRaw.html#gacfce93c6c5932d70a60fb659a775d53d">LokiRaw_work</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> *self, <span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_typedef" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, <span class="keywordtype">bool</span> file_change, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> length, <span class="keywordtype">size_t</span> max_channels, int32_t channels, <span class="keywordtype">size_t</span> sample_size, <span class="keywordtype">float</span> sampling_frequency) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (file_change) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> &gt;= 0) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            close(self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> = open(filename, O_CREAT | O_WRONLY, 0644);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> &lt; 0) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            fprintf(stderr, <span class="stringliteral">&quot;LokiRaw_work: failed to create file %s (%s)\n&quot;</span>, filename, strerror(errno));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> &lt; 0) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">size_t</span> count = sample_size * length;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (write(self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a>, data, count) != count) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        fprintf(stderr, <span class="stringliteral">&quot;LokiRaw_work: write error (%s)\n&quot;</span>, strerror(errno));</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__gLokiRaw.html#gaa38e5099d8c9467d2a8b112c67d8be0b">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRaw.html#gaa38e5099d8c9467d2a8b112c67d8be0b">LokiRaw_close</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> *self) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> &gt;= 0) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        close(self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        self-&gt;<a class="code hl_variable" href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">out</a> = -1;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__gLokiRaw.html#ga6b2790a504e7c8ce2403a1f0e778b98c">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRaw.html#ga6b2790a504e7c8ce2403a1f0e778b98c">LokiRaw_del</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a> *self) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="group__gLokiRaw.html#gaa38e5099d8c9467d2a8b112c67d8be0b">LokiRaw_close</a>(self);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    free(self);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_define" href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, <a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>, <span class="keyword">new</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>, work)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>, close)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiRaw.html">LokiRaw</a>, del)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga6da5df82ee2afb9112000c287919133f"><div class="ttname"><a href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a></div><div class="ttdeci">#define LokiClass_define_method(prefix, name)</div><div class="ttdoc">Dans une implémentation, associe une fonction à une méthode.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00167">libloki-class.h:167</a></div></div>
+<div class="ttc" id="agroup__gLokiClass_html_gaa8e41e7a9fd0583e6314d14c757d26ff"><div class="ttname"><a href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a></div><div class="ttdeci">#define LokiClass_implementation(superclass, prefix, impls)</div><div class="ttdoc">Définit le contenu d&#39;une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00149">libloki-class.h:149</a></div></div>
+<div class="ttc" id="agroup__gLokiRaw_html_ga11394b9444c573a8c98a37491c188d74"><div class="ttname"><a href="group__gLokiRaw.html#ga11394b9444c573a8c98a37491c188d74">LokiRaw_new</a></div><div class="ttdeci">LokiRaw * LokiRaw_new(void *config)</div><div class="ttdoc">Construire un formateur de données brutes.</div><div class="ttdef"><b>Définition</b> <a href="#l00020">libloki-raw.c:20</a></div></div>
+<div class="ttc" id="agroup__gLokiRaw_html_ga6b2790a504e7c8ce2403a1f0e778b98c"><div class="ttname"><a href="group__gLokiRaw.html#ga6b2790a504e7c8ce2403a1f0e778b98c">LokiRaw_del</a></div><div class="ttdeci">void LokiRaw_del(LokiRaw *self)</div><div class="ttdoc">Détruire un formateur de données brutes.</div><div class="ttdef"><b>Définition</b> <a href="#l00055">libloki-raw.c:55</a></div></div>
+<div class="ttc" id="agroup__gLokiRaw_html_gaa38e5099d8c9467d2a8b112c67d8be0b"><div class="ttname"><a href="group__gLokiRaw.html#gaa38e5099d8c9467d2a8b112c67d8be0b">LokiRaw_close</a></div><div class="ttdeci">void LokiRaw_close(LokiRaw *self)</div><div class="ttdoc">Fermer un formateur de données brutes.</div><div class="ttdef"><b>Définition</b> <a href="#l00048">libloki-raw.c:48</a></div></div>
+<div class="ttc" id="agroup__gLokiRaw_html_gacfce93c6c5932d70a60fb659a775d53d"><div class="ttname"><a href="group__gLokiRaw.html#gacfce93c6c5932d70a60fb659a775d53d">LokiRaw_work</a></div><div class="ttdeci">void LokiRaw_work(LokiRaw *self, const char *filename, LokiTimestamp timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</div><div class="ttdoc">Enregistrer un paquet de données.</div><div class="ttdef"><b>Définition</b> <a href="#l00027">libloki-raw.c:27</a></div></div>
+<div class="ttc" id="agroup__gLokiTime_html_ga775c6dbda9586caf849a80cad5b5b0bc"><div class="ttname"><a href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></div><div class="ttdeci">uint64_t LokiTimestamp</div><div class="ttdoc">Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.</div><div class="ttdef"><b>Définition</b> <a href="libloki-time_8h_source.html#l00017">libloki-time.h:17</a></div></div>
+<div class="ttc" id="alibloki_8h_html"><div class="ttname"><a href="libloki_8h.html">libloki.h</a></div></div>
+<div class="ttc" id="astructLokiFormatter_html"><div class="ttname"><a href="structLokiFormatter.html">LokiFormatter</a></div><div class="ttdoc">Représentation d&#39;un formateur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00011">libloki-formatter.c:11</a></div></div>
+<div class="ttc" id="astructLokiRaw_html"><div class="ttname"><a href="structLokiRaw.html">LokiRaw</a></div><div class="ttdoc">Représentation d&#39;un formateur de données brutes.</div><div class="ttdef"><b>Définition</b> <a href="#l00015">libloki-raw.c:15</a></div></div>
+<div class="ttc" id="astructLokiRaw_html_a7569e9a49ebe56abd714ac39aa4f2002"><div class="ttname"><a href="structLokiRaw.html#a7569e9a49ebe56abd714ac39aa4f2002">LokiRaw::out</a></div><div class="ttdeci">int out</div><div class="ttdoc">Le numéro du fichier de destination.</div><div class="ttdef"><b>Définition</b> <a href="#l00017">libloki-raw.c:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

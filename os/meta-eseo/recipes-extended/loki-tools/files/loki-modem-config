@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+import argparse
+from eseo.loki.native import *
+from eseo.loki.util import *
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("-s", "--mod-sampling-frequency",
+    type=float, default=argparse.SUPPRESS,
+    help="Sampling frequency of the modulator output (Hz)")
+parser.add_argument("-w", "--mod-osc1-wave-frequency",
+    type=float, default=argparse.SUPPRESS,
+    help="Frequency of the sine wave produced by oscillator 1 in the modulator (Hz)")
+parser.add_argument("-g", "--mod-osc1-gain",
+    type=float, default=argparse.SUPPRESS,
+    help="Amplitude of the sine wave produced by oscillator 1 in the modulator")
+parser.add_argument("-W", "--mod-osc2-wave-frequency",
+    type=float, default=argparse.SUPPRESS,
+    help="Frequency of the sine wave produced by oscillator 2 in the modulator (Hz)")
+parser.add_argument("-G", "--mod-osc2-gain",
+    type=float, default=argparse.SUPPRESS,
+    help="Amplitude of the sine wave produced by oscillator 2 in the modulator")
+parser.add_argument("-o", "--mod-offset",
+    type=float, default=argparse.SUPPRESS,
+    help="Offset of the AC component of the laser diode current")
+parser.add_argument("-d", "--mod-dc-value",
+    type=float, default=argparse.SUPPRESS,
+    help="DC component of the laser diode current")
+parser.add_argument("-a", "--mod-pga-gain",
+    type=int, default=argparse.SUPPRESS,
+    help="PGA gain")
+parser.add_argument("-S", "--demod-sampling-frequency",
+    type=float, default=argparse.SUPPRESS,
+    help="Sampling frequency of the demodulator input (Hz)")
+parser.add_argument("-p", "--demod-packet-length",
+    type=int, default=argparse.SUPPRESS,
+    help="Number of samples per channel from the demodulator in a DMA transaction")
+parser.add_argument("-b", "--demod-bypass-enable",
+    dest="demod_bypass", action="store_true", default=argparse.SUPPRESS,
+    help="Bypass the demodulator and record samples from the analog-to-digital converter")
+parser.add_argument("-B", "--demod-bypass-disable",
+    dest="demod_bypass", action="store_false", default=argparse.SUPPRESS,
+    help="Disable the bypass mode. Record samples from the demodulator")
+parser.add_argument("-t", "--test-mode-enable",
+    dest="test_mode", action="store_true", default=argparse.SUPPRESS,
+    help="Set the modem in test mode")
+parser.add_argument("-T", "--test-mode-disable",
+    dest="test_mode", action="store_false", default=argparse.SUPPRESS,
+    help="Set the modem in normal operation mode")
+parser.add_argument("--save",
+    type=str, default=argparse.SUPPRESS,
+    help="Save modem configuration to file")
+parser.add_argument("--load",
+    type=str, default=argparse.SUPPRESS,
+    help="Load modem configuration from file")
+
+args = parser.parse_args()
+
+modem = LokiModem()
+
+if hasattr(args, "load"):
+    load_modem_config(modem, args.load)
+
+for key, value in vars(args).items():
+    method = getattr(modem, "set_" + key, None)
+    if method is not None:
+        method(value)
+
+modem.print_config()
+
+if hasattr(args, "save"):
+    save_modem_config(modem, args.save)

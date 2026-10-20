@@ -1,0 +1,9 @@
+
+from os.path import dirname, abspath, join
+from FIRFilter.src.FIRFilter import generate_coefficients_package
+from scripts.common import read_config
+
+dir = dirname(abspath(__file__))
+cfg = read_config(join(dir, "LokiModem_cfg.json"))
+
+generate_coefficients_package("LokiModem_Mixerless_bandpassY_pkg", cfg, "DEMOD_MIXERLESS_BANDPASS_Y")

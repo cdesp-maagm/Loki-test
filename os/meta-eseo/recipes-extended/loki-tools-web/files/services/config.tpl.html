@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+
+<title>Loki web configurator</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../main.css">
+
+<form method="post" novalidate>
+    <header>
+        <nav>
+            <ul class="breadcrumbs">
+                <li><a href="../index.html">Loki</a></li>
+                <li><a href="">Configuration</a></li>
+            </ul>
+            <ul class="buttons">
+                <li>
+                    <input id="file-input" type="file" accept=".json" style="display:none">
+                    <button id="load-button" type="button">Load
+                        <i class="material-icons right">file_upload</i>
+                    </button>
+                </li>
+                <li>
+                    <button id="export-button" type="button">Export
+                        <i class="material-icons right">file_download</i>
+                    </button>
+                </li>
+                <li>
+                    <button type="submit">Apply
+                        <i class="material-icons right">send</i>
+                    </button>
+                </li>
+                <li>
+                    <button id="start-stop-button" type="button" disabled>Start
+                        <i class="material-icons right">play_arrow</i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="tabs">
+                <li><a href="#general-tab">General</a></li>
+                <li><a href="#modem-tab">Modem</a></li>
+                <li><a href="#measure-tab">Measurement</a></li>
+                <li><a href="#record-tab">Recording</a></li>
+                <li><a href="#storage-tab">Storage and sync</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        {messages}
+        <div class="tabs">
+            <div id="general-tab" class="row">
+                <div class="column s1">
+                    <h2>Network</h2>
+                    <div class="input-field">
+                        <label for="hostname">Host name</label>
+                        <input name="hostname" type="text" value="&mdash;" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label for="mac_address">MAC address</label>
+                        <input name="mac_address" type="text" value="&mdash;" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label>IP addresses</label>
+                        <table id="ip_addresses">
+                        </table>
+                    </div>
+                    <h2>Status</h2>
+                    <div class="input-field">
+                        <label for="active">Activity</label>
+                        <input name="active" type="text" value="On" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label for="ntp_status">NTP status</label>
+                        <input name="ntp_status" type="text" value="&mdash;" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label for="datetime">Date and time [YYYY-MM-DD, hh:mm:ss] (UTC)</label>
+                        <input name="datetime" type="text" value="&mdash;">
+                    </div>
+                    <div class="input-field">
+                        <label for="clkmon_ppm">Clock accuracy (ppm)</label>
+                        <input name="clkmon_ppm" type="text" value="&mdash;" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label for="uptime">Uptime</label>
+                        <input name="uptime" type="text" value="&mdash;" readonly>
+                    </div>
+                    <div class="input-field">
+                        <label for="disk_usage">Storage space available</label>
+                        <input name="disk_usage" type="text" value="&mdash;" readonly>
+                    </div>
+                </div>
+                <div class="column s2">
+                    <h2>Sensors</h2>
+                    <div class="row">
+                        <div class="column s1">
+                            <div class="input-field">
+                                <label for="hwmon_temp$0">HW monitor 0 / Ethernet (&deg;C)</label>
+                                <input name="hwmon_temp$0" type="text" value="&mdash;" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="hwmon_temp$1">HW monitor 1 / Temp. Sensor (&deg;C)</label>
+                                <input name="hwmon_temp$1" type="text" value="&mdash;" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="xadc_value$0">XADC Temp (&deg;C)</label>
+                                <input name="xadc_value$0" type="text" value="&mdash;" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="xadc_value$1">XADC 0 (V)</label>
+                                <input name="xadc_value$1" type="text" value="&mdash;" readonly>
+                            </div>
+                            <div class="input-field">
+                                <label for="xadc_value$2">XADC 1 (A)</label>
+                                <input name="xadc_value$2" type="text" value="&mdash;" readonly>
+                            </div>
+                        </div>
+                        <div class="column s1">
+                            {env_sensors_table}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modem-tab" class="row">
+                <div class="column s1">
+                    <h2>Common</h2>
+                    {modem_table}
+                    <h2>Modulator</h2>
+                    {mod_table}
+                </div>
+                <div class="column s2">
+                    <h2>Demodulator</h2>
+                    <div class="row">
+                        <div class="column s1">
+                            {demod_table}
+                        </div>
+                        <div class="column s1">
+                            {demod_channel_cfg_table}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="measure-tab" class="row">
+                <div class="column s1">
+                    <h2>Ellipse estimator</h2>
+                    {ellipse_table}
+                </div>
+                <div class="column s1">
+                    <h2>Low-pass filter</h2>
+                    {filter_table}
+                    <h2>Displacement</h2>
+                    <button id="disp-reset-button" type="button">Reset
+                        <i class="material-icons right">restart_alt</i>
+                    </button>
+                </div>
+            </div>
+            <div id="record-tab" class="row">
+                <div class="column s1">
+                    <h2>Recording</h2>
+                    {rec_table}
+                    <h3>Displacement</h3>
+                    {disp_rec_table}
+                    <h3>Sensors</h3>
+                    {env_sensors_rec_table}
+                </div>
+                <div class="column s1">
+                    <h2>MiniSEED</h2>
+                    {mseed_table}
+                </div>
+            </div>
+            <div id="storage-tab" class="row">
+                <div class="column s1">
+                    <h2>Storage</h2>
+                    {storage_table}
+                </div>
+                <div class="column s1">
+                    <h2>Status reporting</h2>
+                    {status_table}
+                    <h2>File synchronization</h2>
+                    {rsync_table}
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="timestamp" value="{timestamp}">
+    <input type="hidden" name="dirty" value="">
+    <input type="hidden" name="foldables" value="{foldables}">
+</form>
+
+<script>
+    const demod_mixerless  = {demod_mixerless};
+    const demod_decimation = {demod_decimation};
+</script>
+
+<script src="../config.js"></script>
+
+</html>

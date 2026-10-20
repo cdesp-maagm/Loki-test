@@ -1,0 +1,12 @@
+<map id="Calcul de déplacement" name="Calcul de déplacement">
+<area shape="rect" id="node1" href="$group__gLokiDefaults.html" title="Constantes utilisées pour la configuration d&#39;un LokiSystem." alt="" coords="368,5,541,60"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html" title="Un calculateur de déplacement est composé d&#39;un filtre adaptatif d&#39;estimation des paramètres d&#39;une ell..." alt="" coords="369,84,540,109"/>
+<area shape="rect" id="node3" href="$group__gLokiEllipse.html" title="Type de donnée et fonctions permettant de manipuler des ellipses sous différentes représentations." alt="" coords="365,134,544,174"/>
+<area shape="rect" id="node4" href="$group__gLokiEllipseEstimator.html" title="Définition des méthodes communes pour estimer les paramètres d&#39;une ellipse au cours de la réception d..." alt="" coords="369,198,541,267"/>
+<area shape="rect" id="node5" href="$group__gLokiFIRFilter.html" title="Implémentation polyphase d&#39;un filtre à réponse impulsionnelle finie." alt="" coords="415,292,495,317"/>
+<area shape="rect" id="node6" href="$group__gLokiKalman.html" title="Estimation des paramètres d&#39;une ellipse par filtrage de Kalman." alt="" coords="390,341,519,367"/>
+<area shape="rect" id="node7" href="$group__gLokiNLMS.html" title="Estimation des paramètres d&#39;une ellipse par filtrage Normalized Least Mean Squares." alt="" coords="407,391,503,416"/>
+<area shape="rect" id="node8" href="$group__gLokiRLS.html" title="Estimation des paramètres d&#39;une ellipse par filtrage Recursive Least Squares." alt="" coords="413,440,496,465"/>
+<area shape="rect" id="node9" href="$group__gLokiSystem.html" title="Un système rassemble un modem et un calculateur de déplacement." alt="" coords="349,490,560,530"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,317,176,343"/>
+</map>

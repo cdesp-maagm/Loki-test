@@ -1,0 +1,7 @@
+<map id="LokiSensors_get_packet_length" name="LokiSensors_get_packet_length">
+<area shape="rect" id="node1" title="Lire la longueur courante d&#39;un paquet DMA pour une voie." alt="" coords="640,35,805,76"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga4de58974236aecf5c5f9f8f306173f15" title="Lire la longueur courante d&#39;un transfert DMA." alt="" coords="421,5,592,47"/>
+<area shape="rect" id="node5" href="$group__gLokiSensors.html#ga4b0b67185ef9acde1a519f4379c2fee7" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="444,71,569,98"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,13,373,39"/>
+<area shape="rect" id="node4" href="$group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,13,196,39"/>
+</map>

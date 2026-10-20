@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Structure de données FIFO</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Structure de données FIFO <div class="ingroups"><a class="el" href="group__ggLokiInterconnect.html">Échange de données entre modules d'acquisition, de traitement et d'enregistrement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>File d'attente multi-consommateur pour communication entre threads.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Structure de données FIFO:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO.png" border="0" usemap="#agroup____gLokiFIFO" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiFIFO" id="agroup____gLokiFIFO">
+<area shape="rect" title="File d&#39;attente multi&#45;consommateur pour communication entre threads." alt="" coords="301,20,496,45"/>
+<area shape="rect" href="group__ggLokiInterconnect.html" title=" " alt="" coords="5,5,253,60"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-fifo_2Ec" id="r_libloki-fifo_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-fifo_8c.html">libloki-fifo.c</a></td></tr>
+<tr class="memitem:libloki-fifo_2Eh" id="r_libloki-fifo_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-fifo_8h.html">libloki-fifo.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiFIFO" id="r_LokiFIFO"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiFIFO.html">LokiFIFO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'une FIFO.  <a href="structLokiFIFO.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiFIFORecord" id="r_LokiFIFORecord"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiFIFORecord.html">LokiFIFORecord</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un enregistrement dans une FIFO.  <a href="structLokiFIFORecord.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga3253055266904680cb4d74fe3093c508" id="r_ga3253055266904680cb4d74fe3093c508"><td class="memItemLeft">typedef struct LokiFIFORecord&#160;</td><td class="memItemRight"><a class="el" href="#ga3253055266904680cb4d74fe3093c508">LokiFIFORecord</a></td></tr>
+<tr class="memdesc:ga3253055266904680cb4d74fe3093c508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un enregistrement dans une FIFO.  <br /></td></tr>
+<tr class="memitem:ga9809c8ea8fd596bac8faed62a50d615d" id="r_ga9809c8ea8fd596bac8faed62a50d615d"><td class="memItemLeft">typedef struct LokiFIFO&#160;</td><td class="memItemRight"><a class="el" href="#ga9809c8ea8fd596bac8faed62a50d615d">LokiFIFO</a></td></tr>
+<tr class="memdesc:ga9809c8ea8fd596bac8faed62a50d615d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'une FIFO.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga6772f40ab458b60abd3e8b87bca259b1" id="r_ga6772f40ab458b60abd3e8b87bca259b1"><td class="memItemLeft"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga6772f40ab458b60abd3e8b87bca259b1">LokiFIFO_new</a> (size_t item_size, size_t length, size_t consumers)</td></tr>
+<tr class="memdesc:ga6772f40ab458b60abd3e8b87bca259b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer une FIFO.  <br /></td></tr>
+<tr class="memitem:ga53fadc179b294d35e3ed7f7d55671f3a" id="r_ga53fadc179b294d35e3ed7f7d55671f3a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga53fadc179b294d35e3ed7f7d55671f3a">LokiFIFO_del</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self)</td></tr>
+<tr class="memdesc:ga53fadc179b294d35e3ed7f7d55671f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire une FIFO.  <br /></td></tr>
+<tr class="memitem:gaa57901e87eacff515a67b913d69e5229" id="r_gaa57901e87eacff515a67b913d69e5229"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#gaa57901e87eacff515a67b913d69e5229">LokiFIFO_get_item_size</a> (const <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self)</td></tr>
+<tr class="memdesc:gaa57901e87eacff515a67b913d69e5229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtenir la taille d'un élément de la FIFO, en octets.  <br /></td></tr>
+<tr class="memitem:gac4ae3143767c6ead1aaae6b0bdb3e463" id="r_gac4ae3143767c6ead1aaae6b0bdb3e463"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self)</td></tr>
+<tr class="memdesc:gac4ae3143767c6ead1aaae6b0bdb3e463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtenir une référence vers l'élément courant en écriture.  <br /></td></tr>
+<tr class="memitem:ga9d21708a76ac74826125a8fbf5a5efaf" id="r_ga9d21708a76ac74826125a8fbf5a5efaf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self)</td></tr>
+<tr class="memdesc:ga9d21708a76ac74826125a8fbf5a5efaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valider l'élément courant en écriture.  <br /></td></tr>
+<tr class="memitem:ga64953835cd85d15393a6b14030a845c5" id="r_ga64953835cd85d15393a6b14030a845c5"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self, size_t cid)</td></tr>
+<tr class="memdesc:ga64953835cd85d15393a6b14030a845c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtenir une référence vers l'élément courant en lecture.  <br /></td></tr>
+<tr class="memitem:ga4e8cda4ed922ac5128c716735c0724c8" id="r_ga4e8cda4ed922ac5128c716735c0724c8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self, size_t cid)</td></tr>
+<tr class="memdesc:ga4e8cda4ed922ac5128c716735c0724c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libérer l'élément courant en lecture.  <br /></td></tr>
+<tr class="memitem:gaaff05dfee1870a70b14718028d830f21" id="r_gaaff05dfee1870a70b14718028d830f21"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a> (<a class="el" href="structLokiFIFO.html">LokiFIFO</a> *self)</td></tr>
+<tr class="memdesc:gaaff05dfee1870a70b14718028d830f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminer les attentes en cours.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>File d'attente multi-consommateur pour communication entre threads. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga9809c8ea8fd596bac8faed62a50d615d" name="ga9809c8ea8fd596bac8faed62a50d615d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9809c8ea8fd596bac8faed62a50d615d">&#9670;&#160;</a></span>LokiFIFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiFIFO LokiFIFO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'une FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8h_source.html#l00020">20</a> du fichier <a class="el" href="libloki-fifo_8h_source.html">libloki-fifo.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3253055266904680cb4d74fe3093c508" name="ga3253055266904680cb4d74fe3093c508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3253055266904680cb4d74fe3093c508">&#9670;&#160;</a></span>LokiFIFORecord</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiFIFORecord LokiFIFORecord</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un enregistrement dans une FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00011">11</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gaaff05dfee1870a70b14718028d830f21" name="gaaff05dfee1870a70b14718028d830f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaff05dfee1870a70b14718028d830f21">&#9670;&#160;</a></span>LokiFIFO_abort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIFO_abort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Terminer les attentes en cours. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à interrompre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00180">180</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_icgraph" id="agroup__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21_icgraph">
+<area shape="rect" title="Terminer les attentes en cours." alt="" coords="717,145,837,171"/>
+<area shape="rect" href="group__gLokiConsumer.html#ga3596ff29c7812a18f78bc33c73755c63" title="Arrêter un consommateur." alt="" coords="491,5,641,31"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga25d2fc754531818073da17164ca9db6a" title="Arrêter l&#39;acquisition." alt="" coords="487,55,645,95"/>
+<area shape="rect" href="group__gLokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649" title="Arrêter l&#39;acquisition." alt="" coords="463,120,669,145"/>
+<area shape="rect" href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="495,169,637,195"/>
+<area shape="rect" href="group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23" title="Arrêter un serveur." alt="" coords="481,219,651,244"/>
+<area shape="rect" href="group__gLokiSystem.html#ga5b0a59178eb774740066325c1b178397" title="Arrêter l&#39;acquisition et le traitement." alt="" coords="463,268,669,293"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="269,116,407,141"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,116,213,141"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8" title="Gestionnaire d&#39;événements." alt="" coords="261,166,415,206"/>
+<area shape="rect" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement." alt="" coords="38,173,181,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga53fadc179b294d35e3ed7f7d55671f3a" name="ga53fadc179b294d35e3ed7f7d55671f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53fadc179b294d35e3ed7f7d55671f3a">&#9670;&#160;</a></span>LokiFIFO_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIFO_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire une FIFO. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00095">95</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ga64953835cd85d15393a6b14030a845c5" name="ga64953835cd85d15393a6b14030a845c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64953835cd85d15393a6b14030a845c5">&#9670;&#160;</a></span>LokiFIFO_get_consumer_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiFIFO_get_consumer_item </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtenir une référence vers l'élément courant en lecture. </p>
+<p>Cette fonction retourne un pointeur sur un élément disponible en lecture dans la FIFO. Le consommateur peut traiter cet élément et appeler LokiFIFO_pull lorsque le traitement est terminé.</p>
+<p>Cette fonction bloque le producteur tant que la FIFO est vide.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à interroger. </td></tr>
+    <tr><td class="paramname">cid</td><td>L'identifiant du consommateur courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une référence vers un élément disponible en lecture. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00142">142</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_icgraph" id="agroup__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5_icgraph">
+<area shape="rect" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="499,80,713,105"/>
+<area shape="rect" href="group__gLokiConsumer.html#gac44de59993950d0183ecd089f65091d1" title="Lire les données de la FIFO." alt="" coords="279,5,433,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="283,55,429,80"/>
+<area shape="rect" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02" title="Recevoir les données d&#39;entrée." alt="" coords="261,104,451,129"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="287,153,425,179"/>
+<area shape="rect" href="group__gLokiConsumer.html#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur." alt="" coords="33,5,185,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="37,55,181,80"/>
+<area shape="rect" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241" title="Démarrer un serveur." alt="" coords="24,104,195,129"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,153,213,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa57901e87eacff515a67b913d69e5229" name="gaa57901e87eacff515a67b913d69e5229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa57901e87eacff515a67b913d69e5229">&#9670;&#160;</a></span>LokiFIFO_get_item_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiFIFO_get_item_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtenir la taille d'un élément de la FIFO, en octets. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La taille d'un élément, en octets. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00102">102</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_icgraph" id="agroup__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229_icgraph">
+<area shape="rect" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="969,119,1147,145"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="755,119,921,145"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="531,17,693,42"/>
+<area shape="rect" href="group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="543,70,681,95"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="539,119,685,145"/>
+<area shape="rect" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02" title="Recevoir les données d&#39;entrée." alt="" coords="517,169,707,194"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="297,218,434,243"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="285,5,446,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,70,469,95"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,145,213,170"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="293,119,437,145"/>
+<area shape="rect" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241" title="Démarrer un serveur." alt="" coords="280,169,451,194"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gac4ae3143767c6ead1aaae6b0bdb3e463" name="gac4ae3143767c6ead1aaae6b0bdb3e463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4ae3143767c6ead1aaae6b0bdb3e463">&#9670;&#160;</a></span>LokiFIFO_get_producer_item()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiFIFO_get_producer_item </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtenir une référence vers l'élément courant en écriture. </p>
+<p>Cette fonction retourne un pointeur sur un élément disponible en écriture dans la FIFO. Le producteur peut modifier cet élément et appeler LokiFIFO_push pour valider les modifications.</p>
+<p>Cette fonction bloque le producteur tant que la FIFO est pleine.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une référence vers un élément disponible en écriture. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00106">106</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_icgraph" id="agroup__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463_icgraph">
+<area shape="rect" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="728,69,936,94"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,17,680,42"/>
+<area shape="rect" href="group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="530,69,667,94"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="297,119,434,145"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="285,5,446,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,70,469,95"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,95,213,121"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga6772f40ab458b60abd3e8b87bca259b1" name="ga6772f40ab458b60abd3e8b87bca259b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6772f40ab458b60abd3e8b87bca259b1">&#9670;&#160;</a></span>LokiFIFO_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> * LokiFIFO_new </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>item_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>consumers</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer une FIFO. </p>
+<p>Cette fonction alloue l'espace nécessaire pour enregistrer des buffers de données.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item_size</td><td>La taille d'un élément, en octets. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre d'éléments. </td></tr>
+    <tr><td class="paramname">consumers</td><td>Le nombre de consommateurs. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une nouvelle FIFO. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ga4e8cda4ed922ac5128c716735c0724c8" name="ga4e8cda4ed922ac5128c716735c0724c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e8cda4ed922ac5128c716735c0724c8">&#9670;&#160;</a></span>LokiFIFO_pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIFO_pull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libérer l'élément courant en lecture. </p>
+<p>Avant d'appeler cette fonction, le producteur doit obtenir une référence vers l'élément à lire en appelant LokiFIFO_get_consumer_item. Cette fonction décrémente le niveau courant de la FIFO.</p>
+<p>Cette fonction bloque le consommateur jusqu'à ce que l'élément courant ait été consommé par tous les consommateurs.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à modifier. </td></tr>
+    <tr><td class="paramname">cid</td><td>L'identifiant du consommateur courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00160">160</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_icgraph" id="agroup__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8_icgraph">
+<area shape="rect" title="Libérer l&#39;élément courant en lecture." alt="" coords="499,80,609,105"/>
+<area shape="rect" href="group__gLokiConsumer.html#gac44de59993950d0183ecd089f65091d1" title="Lire les données de la FIFO." alt="" coords="279,5,433,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="283,55,429,80"/>
+<area shape="rect" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02" title="Recevoir les données d&#39;entrée." alt="" coords="261,104,451,129"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="287,153,425,179"/>
+<area shape="rect" href="group__gLokiConsumer.html#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur." alt="" coords="33,5,185,31"/>
+<area shape="rect" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="37,55,181,80"/>
+<area shape="rect" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241" title="Démarrer un serveur." alt="" coords="24,104,195,129"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,153,213,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga9d21708a76ac74826125a8fbf5a5efaf" name="ga9d21708a76ac74826125a8fbf5a5efaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d21708a76ac74826125a8fbf5a5efaf">&#9670;&#160;</a></span>LokiFIFO_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIFO_push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valider l'élément courant en écriture. </p>
+<p>Avant d'appeler cette fonction, le producteur doit obtenir une référence vers l'élément à écrire en appelant LokiFIFO_get_producer_item. Cette fonction incrémente le niveau courant de la FIFO.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La FIFO à modifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fifo_8c_source.html#l00123">123</a> du fichier <a class="el" href="libloki-fifo_8c_source.html">libloki-fifo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_cgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_icgraph.png" border="0" usemap="#agroup__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_icgraph" id="agroup__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf_icgraph">
+<area shape="rect" title="Valider l&#39;élément courant en écriture." alt="" coords="728,69,845,94"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,17,680,42"/>
+<area shape="rect" href="group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="530,69,667,94"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="297,119,434,145"/>
+<area shape="rect" href="group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="285,5,446,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,70,469,95"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,95,213,121"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

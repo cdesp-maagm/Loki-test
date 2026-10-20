@@ -1,0 +1,5 @@
+<map id="LokiModem_get_demod_osc_wave_frequency_max" name="LokiModem_get_demod_osc_wave_frequency_max">
+<area shape="rect" id="node1" title="Lire la fréquence maximale supportée pour le signal en sortie de l&#39;oscillateur du démodulateur (Fm2)." alt="" coords="5,5,207,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="255,5,433,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="481,13,636,38"/>
+</map>

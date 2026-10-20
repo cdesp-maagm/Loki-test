@@ -1,0 +1,4 @@
+<map id="LokiModem_get_mod_osc2_wave_frequency_max" name="LokiModem_get_mod_osc2_wave_frequency_max">
+<area shape="rect" id="node1" title="Lire la fréquence maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm..." alt="" coords="235,5,433,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="5,13,187,38"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LokiSensors_dma_start" name="LokiSensors_dma_start">
+<area shape="rect" id="node1" title="Demander au circuit d&#39;acquisition de démarrer les transferts DMA." alt="" coords="421,5,580,32"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="244,5,373,32"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,5,196,32"/>
+</map>

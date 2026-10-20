@@ -1,0 +1,6 @@
+<map id="LokiModem_set_demod_phase_x" name="LokiModem_set_demod_phase_x">
+<area shape="rect" id="node1" title="Affecter un déphasage à la composante X (I) du signal démodulé pour une voie." alt="" coords="5,37,183,77"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga90cd71479d70dfc9e25eacec2c083c79" title="Lire le retard maximal applicable à la composante X (I) du signal démodulé pour une voie." alt="" coords="231,5,409,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga3dae87fc80640dfcdb311ff910eb1629" title="Affecter un retard à la composante X (I) du signal démodulé pour une voie." alt="" coords="231,69,409,109"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="457,77,611,102"/>
+</map>

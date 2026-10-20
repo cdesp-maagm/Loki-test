@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ENABLE=$(loki-record-config rsync_enable)
+
+if [ "$ENABLE" == True ] && [ "$(pidof rsync)" == "" ]; then
+    SRC=$(loki-record-config path)
+    DEST=$(loki-record-config rsync_dest)
+    USER=$(loki-record-config rsync_user)
+    HOST=$(loki-record-config rsync_host)
+
+    SSH_CMD="ssh -y -i /media/data/config/id_rsa"
+
+    FILES=$(find $SRC -mindepth 1 -maxdepth 1 -mmin +60)
+
+    logger -t loki-sync "Sending data files to server"
+    nice rsync -e "$SSH_CMD" -az $FILES $USER@$HOST:$DEST 2>&1 | logger -t loki-sync
+fi

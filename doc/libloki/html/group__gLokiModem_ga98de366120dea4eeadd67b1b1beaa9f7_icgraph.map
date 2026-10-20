@@ -1,0 +1,5 @@
+<map id="LokiModem_get_mod_osc2_wave_frequency" name="LokiModem_get_mod_osc2_wave_frequency">
+<area shape="rect" id="node1" title="Lire la fréquence du signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="281,27,480,67"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="29,5,210,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gaa40ad8ef296c7038b6f747f5407108d0" title="Affecter une fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="5,55,233,95"/>
+</map>

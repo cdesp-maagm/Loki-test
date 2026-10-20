@@ -1,0 +1,2394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Gestion des acquisitions et du calcul de déplacement</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Gestion des acquisitions et du calcul de déplacement <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Un système rassemble un <a class="el" href="group__gLokiModem.html" title="Pilotage des composants modulateur et démodulateur">modem</a> et un <a class="el" href="group__gLokiDisplacement.html" title="Calcul de déplacement">calculateur de déplacement</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Gestion des acquisitions et du calcul de déplacement:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem.png" border="0" usemap="#agroup____gLokiSystem" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiSystem" id="agroup____gLokiSystem">
+<area shape="rect" title="Un système rassemble un modem et un calculateur de déplacement." alt="" coords="5,5,216,45"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="389,13,560,38"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-system_2Ec" id="r_libloki-system_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-system_8c.html">libloki-system.c</a></td></tr>
+<tr class="memitem:libloki-system_2Eh" id="r_libloki-system_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-system_8h.html">libloki-system.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiSystemConfig" id="r_LokiSystemConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les paramètres de configuration d'un système d'acquisition et de traitement.  <a href="structLokiSystemConfig.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiSystem" id="r_LokiSystem"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiSystem.html">LokiSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un système d'acquisition et de traitement.  <a href="structLokiSystem.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:LokiSystemSample" id="r_LokiSystemSample"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiSystemSample.html">LokiSystemSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un échantillon en sortie d'une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>.  <a href="structLokiSystemSample.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaaa7e01df6c0f16dd011132c131436414" id="r_gaaa7e01df6c0f16dd011132c131436414"><td class="memItemLeft">typedef struct LokiSystemConfig&#160;</td><td class="memItemRight"><a class="el" href="#gaaa7e01df6c0f16dd011132c131436414">LokiSystemConfig</a></td></tr>
+<tr class="memdesc:gaaa7e01df6c0f16dd011132c131436414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paramètres de configuration d'une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>.  <br /></td></tr>
+<tr class="memitem:ga9d2558c9006381cbcd39a82afa901d77" id="r_ga9d2558c9006381cbcd39a82afa901d77"><td class="memItemLeft">typedef struct LokiSystem&#160;</td><td class="memItemRight"><a class="el" href="#ga9d2558c9006381cbcd39a82afa901d77">LokiSystem</a></td></tr>
+<tr class="memdesc:ga9d2558c9006381cbcd39a82afa901d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un système d'acquisition et de calcul de déplacement.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga3d2bff594ea0d200940e256e773c7997" id="r_ga3d2bff594ea0d200940e256e773c7997"><td class="memItemLeft"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga3d2bff594ea0d200940e256e773c7997">LokiSystemConfig_new</a> (void)</td></tr>
+<tr class="memdesc:ga3d2bff594ea0d200940e256e773c7997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire une configuration pour une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>.  <br /></td></tr>
+<tr class="memitem:ga2dca93ca28ef0e45201d2dbc1c80008b" id="r_ga2dca93ca28ef0e45201d2dbc1c80008b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2dca93ca28ef0e45201d2dbc1c80008b">LokiSystemConfig_del</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga2dca93ca28ef0e45201d2dbc1c80008b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire une configuration pour une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>.  <br /></td></tr>
+<tr class="memitem:ga407cecd8cdb13b82c183d2261afa6841" id="r_ga407cecd8cdb13b82c183d2261afa6841"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga407cecd8cdb13b82c183d2261afa6841">LokiSystemConfig_get_skip</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga407cecd8cdb13b82c183d2261afa6841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le temps d'attente au démarrage.  <br /></td></tr>
+<tr class="memitem:ga43eb663bd85c190094eefd2472ab55c5" id="r_ga43eb663bd85c190094eefd2472ab55c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga43eb663bd85c190094eefd2472ab55c5">LokiSystemConfig_set_skip</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:ga43eb663bd85c190094eefd2472ab55c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un temps d'attente au démarrage.  <br /></td></tr>
+<tr class="memitem:ga9034c8dd18b4ac086fa7114310fc2ed0" id="r_ga9034c8dd18b4ac086fa7114310fc2ed0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga9034c8dd18b4ac086fa7114310fc2ed0">LokiSystemConfig_get_simulate</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga9034c8dd18b4ac086fa7114310fc2ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état d'activation de la simulation des capteurs de déplacement.  <br /></td></tr>
+<tr class="memitem:gae520a184f3a388ee6097e0979f8ef3fe" id="r_gae520a184f3a388ee6097e0979f8ef3fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gae520a184f3a388ee6097e0979f8ef3fe">LokiSystemConfig_set_simulate</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, bool value)</td></tr>
+<tr class="memdesc:gae520a184f3a388ee6097e0979f8ef3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activer ou désactiver la simulation des capteurs de déplacement.  <br /></td></tr>
+<tr class="memitem:ga30372de63105c78b1a00a2048ed5f62a" id="r_ga30372de63105c78b1a00a2048ed5f62a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga30372de63105c78b1a00a2048ed5f62a">LokiSystemConfig_get_scale</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga30372de63105c78b1a00a2048ed5f62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le facteur d'échelle de déplacement.  <br /></td></tr>
+<tr class="memitem:gac8a7bf74f2c5566ca316459a2eed863e" id="r_gac8a7bf74f2c5566ca316459a2eed863e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#gac8a7bf74f2c5566ca316459a2eed863e">LokiSystemConfig_get_wavelength</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gac8a7bf74f2c5566ca316459a2eed863e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur d'onde de la diode laser.  <br /></td></tr>
+<tr class="memitem:ga65dc7bbdf3f140b4b78aa8a9126526a3" id="r_ga65dc7bbdf3f140b4b78aa8a9126526a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga65dc7bbdf3f140b4b78aa8a9126526a3">LokiSystemConfig_set_wavelength</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:ga65dc7bbdf3f140b4b78aa8a9126526a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrire la longueur d'onde de la diode laser.  <br /></td></tr>
+<tr class="memitem:gaf2a77eda3c08dadba7c1491b368782cb" id="r_gaf2a77eda3c08dadba7c1491b368782cb"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#gaf2a77eda3c08dadba7c1491b368782cb">LokiSystemConfig_get_reflections</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gaf2a77eda3c08dadba7c1491b368782cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de réflexions supposé.  <br /></td></tr>
+<tr class="memitem:ga3dbad0a94c65d92c90941d73b1fa696f" id="r_ga3dbad0a94c65d92c90941d73b1fa696f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3dbad0a94c65d92c90941d73b1fa696f">LokiSystemConfig_set_reflections</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, unsigned value)</td></tr>
+<tr class="memdesc:ga3dbad0a94c65d92c90941d73b1fa696f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrire le nombre de réflexions supposé.  <br /></td></tr>
+<tr class="memitem:ga530e80ea2d00e00e8aad456b2fa81a6b" id="r_ga530e80ea2d00e00e8aad456b2fa81a6b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga530e80ea2d00e00e8aad456b2fa81a6b">LokiSystemConfig_get_cavity_index</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga530e80ea2d00e00e8aad456b2fa81a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'indice de la cavité de Fabry-Pérot.  <br /></td></tr>
+<tr class="memitem:gab04647c634e62c7452730d95d525af43" id="r_gab04647c634e62c7452730d95d525af43"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab04647c634e62c7452730d95d525af43">LokiSystemConfig_set_cavity_index</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:gab04647c634e62c7452730d95d525af43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrire l'indice de la cavité de Fabry-Pérot.  <br /></td></tr>
+<tr class="memitem:ga7248fe35fa7907125b340fb438e22c46" id="r_ga7248fe35fa7907125b340fb438e22c46"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#ga7248fe35fa7907125b340fb438e22c46">LokiSystemConfig_get_distance_unit</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga7248fe35fa7907125b340fb438e22c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'unité du déplacement calculé.  <br /></td></tr>
+<tr class="memitem:ga1605dee67c453d6bdd7bfdfdd98ff700" id="r_ga1605dee67c453d6bdd7bfdfdd98ff700"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga1605dee67c453d6bdd7bfdfdd98ff700">LokiSystemConfig_set_distance_unit</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, char value)</td></tr>
+<tr class="memdesc:ga1605dee67c453d6bdd7bfdfdd98ff700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrire l'unité du déplacement calculé.  <br /></td></tr>
+<tr class="memitem:gada0540089bb3af061badae98523ed1d5" id="r_gada0540089bb3af061badae98523ed1d5"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#gada0540089bb3af061badae98523ed1d5">LokiSystemConfig_get_time_constants</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gada0540089bb3af061badae98523ed1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le tableau de constantes de temps pour le filtrage des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga4c2ec59c273bbe74d31a6802f97c81cb" id="r_ga4c2ec59c273bbe74d31a6802f97c81cb"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ga4c2ec59c273bbe74d31a6802f97c81cb">LokiSystemConfig_get_time_constants_length</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga4c2ec59c273bbe74d31a6802f97c81cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga12fc80784aea471f95577e4b34f15e1a" id="r_ga12fc80784aea471f95577e4b34f15e1a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga12fc80784aea471f95577e4b34f15e1a">LokiSystemConfig_set_time_constants</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, const float *value)</td></tr>
+<tr class="memdesc:ga12fc80784aea471f95577e4b34f15e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un tableau de constantes de temps pour le filtrage des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga0b00cee5bd3aedc44a56a576c82447bb" id="r_ga0b00cee5bd3aedc44a56a576c82447bb"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga0b00cee5bd3aedc44a56a576c82447bb">LokiSystemConfig_get_estimator_name</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga0b00cee5bd3aedc44a56a576c82447bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nom de l'estimateur de paramètres d'ellipse.  <br /></td></tr>
+<tr class="memitem:ga990eea68733aca82e0fd03ab761d15af" id="r_ga990eea68733aca82e0fd03ab761d15af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga990eea68733aca82e0fd03ab761d15af">LokiSystemConfig_set_estimator_name</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, const char *name)</td></tr>
+<tr class="memdesc:ga990eea68733aca82e0fd03ab761d15af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un nom de l'estimateur de paramètres d'ellipse.  <br /></td></tr>
+<tr class="memitem:gad89804c4e91841078432a3347f53e2a2" id="r_gad89804c4e91841078432a3347f53e2a2"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#gad89804c4e91841078432a3347f53e2a2">LokiSystemConfig_get_estimator_throttle</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memitem:ga1af5f8b5405e2f299c0b1e6fdf394614" id="r_ga1af5f8b5405e2f299c0b1e6fdf394614"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga1af5f8b5405e2f299c0b1e6fdf394614">LokiSystemConfig_set_estimator_throttle</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, unsigned value)</td></tr>
+<tr class="memitem:ga40f788600dda29882f223cfa9fe1b957" id="r_ga40f788600dda29882f223cfa9fe1b957"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga40f788600dda29882f223cfa9fe1b957">LokiSystemConfig_get_estimator_initial_radius</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga40f788600dda29882f223cfa9fe1b957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le rayon initial à utiliser lors de l'estimation des paramètres d'ellipse.  <br /></td></tr>
+<tr class="memitem:gaedbeea2702ffda640e50c59761749d87" id="r_gaedbeea2702ffda640e50c59761749d87"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaedbeea2702ffda640e50c59761749d87">LokiSystemConfig_set_estimator_initial_radius</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:gaedbeea2702ffda640e50c59761749d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un rayon initial à utiliser lors de l'estimation des paramètres d'ellipse.  <br /></td></tr>
+<tr class="memitem:ga205120cbb843744980b6aa6c52723cf0" id="r_ga205120cbb843744980b6aa6c52723cf0"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#ga205120cbb843744980b6aa6c52723cf0">LokiSystemConfig_get_estimator_params</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga205120cbb843744980b6aa6c52723cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire les paramètres du filtre d'estimation des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:gad93375fc1cad85c4c1aac74270adc8b8" id="r_gad93375fc1cad85c4c1aac74270adc8b8"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#gad93375fc1cad85c4c1aac74270adc8b8">LokiSystemConfig_get_estimator_params_length</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gad93375fc1cad85c4c1aac74270adc8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de paramètres du filtre d'estimation des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga0af8a5b202c7523c9aff41b33fb8cece" id="r_ga0af8a5b202c7523c9aff41b33fb8cece"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga0af8a5b202c7523c9aff41b33fb8cece">LokiSystemConfig_set_estimator_params</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, const float *value)</td></tr>
+<tr class="memdesc:ga0af8a5b202c7523c9aff41b33fb8cece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter des paramètres pour le filtre d'estimation des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga49068f6da977f5aecf4a87bae3f1597e" id="r_ga49068f6da977f5aecf4a87bae3f1597e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga49068f6da977f5aecf4a87bae3f1597e">LokiSystemConfig_get_filter_bandwidth</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga49068f6da977f5aecf4a87bae3f1597e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la bande passante du filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:gaf1571ee8a8994eaea9ba804c3bbd515a" id="r_gaf1571ee8a8994eaea9ba804c3bbd515a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaf1571ee8a8994eaea9ba804c3bbd515a">LokiSystemConfig_set_filter_bandwidth</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:gaf1571ee8a8994eaea9ba804c3bbd515a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un bande passante pour le filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:ga7ae78631a32b123f794af98974c3aac7" id="r_ga7ae78631a32b123f794af98974c3aac7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ga7ae78631a32b123f794af98974c3aac7">LokiSystemConfig_get_filter_attenuation</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:ga7ae78631a32b123f794af98974c3aac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'atténuation du filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:ga6b815fe2832fc0485c1458344f1ecf01" id="r_ga6b815fe2832fc0485c1458344f1ecf01"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga6b815fe2832fc0485c1458344f1ecf01">LokiSystemConfig_set_filter_attenuation</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, float value)</td></tr>
+<tr class="memdesc:ga6b815fe2832fc0485c1458344f1ecf01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une atténuation pour le filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:gaec4afc9c50b994d7a693f96c4dbf0187" id="r_gaec4afc9c50b994d7a693f96c4dbf0187"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#gaec4afc9c50b994d7a693f96c4dbf0187">LokiSystemConfig_get_filter_length</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gaec4afc9c50b994d7a693f96c4dbf0187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur du filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:gadf8bdd8ddd10ddf12cfae087745727bf" id="r_gadf8bdd8ddd10ddf12cfae087745727bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gadf8bdd8ddd10ddf12cfae087745727bf">LokiSystemConfig_set_filter_length</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, size_t value)</td></tr>
+<tr class="memdesc:gadf8bdd8ddd10ddf12cfae087745727bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une longueur au filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:gaabf95e7685531e248f75a74173fcca98" id="r_gaabf95e7685531e248f75a74173fcca98"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#gaabf95e7685531e248f75a74173fcca98">LokiSystemConfig_get_filter_decimation</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self)</td></tr>
+<tr class="memdesc:gaabf95e7685531e248f75a74173fcca98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le facteur de décimation du filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:ga3e0ff251046e6eee8eef84f07350b31a" id="r_ga3e0ff251046e6eee8eef84f07350b31a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3e0ff251046e6eee8eef84f07350b31a">LokiSystemConfig_set_filter_decimation</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *self, size_t value)</td></tr>
+<tr class="memdesc:ga3e0ff251046e6eee8eef84f07350b31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un facteur de décimation au filtre d'élimination du déplacement fictif.  <br /></td></tr>
+<tr class="memitem:ga84434fa604921c7470b81c375921807f" id="r_ga84434fa604921c7470b81c375921807f"><td class="memItemLeft"><a class="el" href="structLokiSystem.html">LokiSystem</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga84434fa604921c7470b81c375921807f">LokiSystem_new</a> (<a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *config, <a class="el" href="structLokiModem.html">LokiModem</a> *modem)</td></tr>
+<tr class="memdesc:ga84434fa604921c7470b81c375921807f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau système.  <br /></td></tr>
+<tr class="memitem:gadfce0cbb0923a14092b07fa15eab9e3b" id="r_gadfce0cbb0923a14092b07fa15eab9e3b"><td class="memItemLeft"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gadfce0cbb0923a14092b07fa15eab9e3b">LokiSystem_get_config</a> (const <a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:gadfce0cbb0923a14092b07fa15eab9e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la configuration d'un système.  <br /></td></tr>
+<tr class="memitem:ga32bf76313ba92afb364c00940b1f2783" id="r_ga32bf76313ba92afb364c00940b1f2783"><td class="memItemLeft"><a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga32bf76313ba92afb364c00940b1f2783">LokiSystem_get_modem</a> (const <a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:ga32bf76313ba92afb364c00940b1f2783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le modem utilisé par ce système.  <br /></td></tr>
+<tr class="memitem:gaab6533e9d6b9bfa464a9a30e242133a8" id="r_gaab6533e9d6b9bfa464a9a30e242133a8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#gaab6533e9d6b9bfa464a9a30e242133a8">LokiSystem_get_sampling_frequency</a> (const <a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:gaab6533e9d6b9bfa464a9a30e242133a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'échantillonnage en sortie de ce système.  <br /></td></tr>
+<tr class="memitem:gab9bbe589511d2d9ba0a0571d4c5a3c3f" id="r_gab9bbe589511d2d9ba0a0571d4c5a3c3f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab9bbe589511d2d9ba0a0571d4c5a3c3f">LokiSystem_displacement_reset</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:gab9bbe589511d2d9ba0a0571d4c5a3c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à zéro le déplacement calculé.  <br /></td></tr>
+<tr class="memitem:gad239747d22dd513e4bab292592f7807e" id="r_gad239747d22dd513e4bab292592f7807e"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="#gad239747d22dd513e4bab292592f7807e">LokiSystem_work</a> (void *ptr)</td></tr>
+<tr class="memdesc:gad239747d22dd513e4bab292592f7807e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le déplacement à partir des données démodulées.  <br /></td></tr>
+<tr class="memitem:ga04a5c88f3de5a3f48b4d73bfdfd31568" id="r_ga04a5c88f3de5a3f48b4d73bfdfd31568"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga04a5c88f3de5a3f48b4d73bfdfd31568">LokiSystem_start_streaming</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self, int32_t channels, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *modem_out, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *disp_out, size_t cid)</td></tr>
+<tr class="memdesc:ga04a5c88f3de5a3f48b4d73bfdfd31568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'acquisition et le traitement.  <br /></td></tr>
+<tr class="memitem:ga5b0a59178eb774740066325c1b178397" id="r_ga5b0a59178eb774740066325c1b178397"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga5b0a59178eb774740066325c1b178397">LokiSystem_stop_streaming</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:ga5b0a59178eb774740066325c1b178397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition et le traitement.  <br /></td></tr>
+<tr class="memitem:gaa5cdd311ea731e8f21ea13dc5a6b6600" id="r_gaa5cdd311ea731e8f21ea13dc5a6b6600"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gaa5cdd311ea731e8f21ea13dc5a6b6600">LokiSystem_is_streaming</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:gaa5cdd311ea731e8f21ea13dc5a6b6600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état de l'acquisition.  <br /></td></tr>
+<tr class="memitem:ga062604dae489b0b761e40a063bb3fdf8" id="r_ga062604dae489b0b761e40a063bb3fdf8"><td class="memItemLeft"><a class="el" href="structLokiEllipse.html">LokiEllipse</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga062604dae489b0b761e40a063bb3fdf8">LokiSystem_get_ellipse</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self, size_t channel)</td></tr>
+<tr class="memdesc:ga062604dae489b0b761e40a063bb3fdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la dernière ellipse estimée.  <br /></td></tr>
+<tr class="memitem:ga2245a65df417d1ffb8e5d7c3b805ec8f" id="r_ga2245a65df417d1ffb8e5d7c3b805ec8f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2245a65df417d1ffb8e5d7c3b805ec8f">LokiSystem_del</a> (<a class="el" href="structLokiSystem.html">LokiSystem</a> *self)</td></tr>
+<tr class="memdesc:ga2245a65df417d1ffb8e5d7c3b805ec8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un système.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga945192da5448f10d0763b4e7ab91ba43" id="r_ga945192da5448f10d0763b4e7ab91ba43"><td class="memItemLeft">static const char *const&#160;</td><td class="memItemRight"><a class="el" href="#ga945192da5448f10d0763b4e7ab91ba43">LokiSystemConfig_estimator_names</a> []</td></tr>
+<tr class="memdesc:ga945192da5448f10d0763b4e7ab91ba43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les noms des filtres adaptatifs supportés pour l'estimation des paramètres de l'ellipse.  <br /></td></tr>
+<tr class="memitem:ga9a389709411b7a060893570bc2d0337b" id="r_ga9a389709411b7a060893570bc2d0337b"><td class="memItemLeft">static const LokiEllipseEstimatorInterface *const&#160;</td><td class="memItemRight"><a class="el" href="#ga9a389709411b7a060893570bc2d0337b">LokiSystemConfig_estimator_impls</a> []</td></tr>
+<tr class="memdesc:ga9a389709411b7a060893570bc2d0337b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les implémentations des filtres adaptatifs supportés pour l'estimation des paramètres de l'ellipse.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Un système rassemble un <a class="el" href="group__gLokiModem.html" title="Pilotage des composants modulateur et démodulateur">modem</a> et un <a class="el" href="group__gLokiDisplacement.html" title="Calcul de déplacement">calculateur de déplacement</a>. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga9d2558c9006381cbcd39a82afa901d77" name="ga9d2558c9006381cbcd39a82afa901d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d2558c9006381cbcd39a82afa901d77">&#9670;&#160;</a></span>LokiSystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiSystem LokiSystem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un système d'acquisition et de calcul de déplacement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8h_source.html#l00293">293</a> du fichier <a class="el" href="libloki-system_8h_source.html">libloki-system.h</a>.</p>
+
+</div>
+</div>
+<a id="gaaa7e01df6c0f16dd011132c131436414" name="gaaa7e01df6c0f16dd011132c131436414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa7e01df6c0f16dd011132c131436414">&#9670;&#160;</a></span>LokiSystemConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiSystemConfig LokiSystemConfig</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Paramètres de configuration d'une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8h_source.html#l00033">33</a> du fichier <a class="el" href="libloki-system_8h_source.html">libloki-system.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga2245a65df417d1ffb8e5d7c3b805ec8f" name="ga2245a65df417d1ffb8e5d7c3b805ec8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2245a65df417d1ffb8e5d7c3b805ec8f">&#9670;&#160;</a></span>LokiSystem_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystem_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un système. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00573">573</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_cgraph" id="agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_cgraph">
+<area shape="rect" title="Détruire un système." alt="" coords="5,55,131,80"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="179,29,345,55"/>
+<area shape="rect" href="group__gLokiModem.html#gab9ed507b906c70b34d5b5135c34c92d1" title="Détruire un modem." alt="" coords="199,79,325,104"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="393,5,576,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="419,55,550,80"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_icgraph" id="agroup__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f_icgraph">
+<area shape="rect" title="Détruire un système." alt="" coords="185,5,311,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gab9bbe589511d2d9ba0a0571d4c5a3c3f" name="gab9bbe589511d2d9ba0a0571d4c5a3c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab9bbe589511d2d9ba0a0571d4c5a3c3f">&#9670;&#160;</a></span>LokiSystem_displacement_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystem_displacement_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mettre à zéro le déplacement calculé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à modifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement.">LokiDisplacement_reset</a> </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00363">363</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_cgraph" id="agroup__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_cgraph">
+<area shape="rect" title="Mettre à zéro le déplacement calculé." alt="" coords="5,5,199,45"/>
+<area shape="rect" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement." alt="" coords="247,13,425,38"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384" title="Réinitialiser un filtre FIR." alt="" coords="473,13,616,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+
+</div>
+</div>
+<a id="gadfce0cbb0923a14092b07fa15eab9e3b" name="gadfce0cbb0923a14092b07fa15eab9e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfce0cbb0923a14092b07fa15eab9e3b">&#9670;&#160;</a></span>LokiSystem_get_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> * LokiSystem_get_config </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la configuration d'un système. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La configuration attachée à ce système. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00351">351</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="ga062604dae489b0b761e40a063bb3fdf8" name="ga062604dae489b0b761e40a063bb3fdf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga062604dae489b0b761e40a063bb3fdf8">&#9670;&#160;</a></span>LokiSystem_get_ellipse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiEllipse.html">LokiEllipse</a> * LokiSystem_get_ellipse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la dernière ellipse estimée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à interroger. </td></tr>
+    <tr><td class="paramname">channel</td><td>La voie à observer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La dernière ellipse estimée pour cette voie. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00569">569</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_cgraph" id="agroup__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_cgraph">
+<area shape="rect" title="Lire la dernière ellipse estimée." alt="" coords="5,13,181,38"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga8ea969c9065e9f3ebf9d91932e94bfe5" title="Retourner la dernière ellipse calculée par cette instance." alt="" coords="229,5,396,45"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ga32bf76313ba92afb364c00940b1f2783" name="ga32bf76313ba92afb364c00940b1f2783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32bf76313ba92afb364c00940b1f2783">&#9670;&#160;</a></span>LokiSystem_get_modem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiModem.html">LokiModem</a> * LokiSystem_get_modem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le modem utilisé par ce système. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le modem attaché à ce système. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00355">355</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="gaab6533e9d6b9bfa464a9a30e242133a8" name="gaab6533e9d6b9bfa464a9a30e242133a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab6533e9d6b9bfa464a9a30e242133a8">&#9670;&#160;</a></span>LokiSystem_get_sampling_frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystem_get_sampling_frequency </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la fréquence d'échantillonnage en sortie de ce système. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La fréquence d'échantillonnage du signal de déplacement. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00359">359</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_cgraph" id="agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_cgraph">
+<area shape="rect" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="5,5,199,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="247,5,431,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="479,5,657,45"/>
+<area shape="rect" href="group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="705,13,860,38"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_icgraph" id="agroup__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8_icgraph">
+<area shape="rect" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="447,5,640,45"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,13,399,38"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,13,213,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa5cdd311ea731e8f21ea13dc5a6b6600" name="gaa5cdd311ea731e8f21ea13dc5a6b6600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5cdd311ea731e8f21ea13dc5a6b6600">&#9670;&#160;</a></span>LokiSystem_is_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiSystem_is_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'état de l'acquisition. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si l'acquisition est en cours. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00565">565</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ga84434fa604921c7470b81c375921807f" name="ga84434fa604921c7470b81c375921807f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84434fa604921c7470b81c375921807f">&#9670;&#160;</a></span>LokiSystem_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiSystem.html">LokiSystem</a> * LokiSystem_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiModem.html">LokiModem</a> *</td>          <td class="paramname"><span class="paramname"><em>modem</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau système. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>La configuration à utiliser. </td></tr>
+    <tr><td class="paramname">modem</td><td>Le modem à utliser, <span class="tt">NULL</span> pour en instancier un nouveau. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Une nouvelle instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00295">295</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga84434fa604921c7470b81c375921807f_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga84434fa604921c7470b81c375921807f_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga84434fa604921c7470b81c375921807f_cgraph" id="agroup__gLokiSystem_ga84434fa604921c7470b81c375921807f_cgraph">
+<area shape="rect" title="Construire un nouveau système." alt="" coords="5,448,137,473"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="196,187,377,212"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga90238dff306b584c82bb86b24fdbdf39" title="Construire un calculateur de déplacement." alt="" coords="200,533,373,559"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa" title="Construire un estimateur avec une implémentation donnée." alt="" coords="185,262,388,302"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="195,47,378,87"/>
+<area shape="rect" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="227,608,346,633"/>
+<area shape="rect" href="group__gLokiModem.html#gaca03c8a1744b1f83281cc3691bd9be08" title="Lire le nombre de voies du démodulateur." alt="" coords="197,658,376,698"/>
+<area shape="rect" href="group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="195,469,379,509"/>
+<area shape="rect" href="group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5" title="Construire un nouveau modem." alt="" coords="221,419,353,444"/>
+<area shape="rect" href="group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="224,327,349,352"/>
+<area shape="rect" href="group__gLokiSystem.html#ga30372de63105c78b1a00a2048ed5f62a" title="Lire le facteur d&#39;échelle de déplacement." alt="" coords="203,722,370,762"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="446,219,613,244"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2" title="Construire un clone d&#39;un estimateur." alt="" coords="452,154,607,194"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="457,104,602,129"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298" title="Détruire un estimateur." alt="" coords="671,219,853,244"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="697,112,827,137"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="681,47,843,87"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga6bd97fc900b540c361ff74bc5323025d" title="Function de Bessel de première espèce, d&#39;ordre 0." alt="" coords="493,5,565,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2" title="Construire un filtre FIR." alt="" coords="461,55,598,80"/>
+<area shape="rect" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="459,633,600,659"/>
+<area shape="rect" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="1079,684,1207,709"/>
+<area shape="rect" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="695,633,829,659"/>
+<area shape="rect" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="1072,608,1215,633"/>
+<area shape="rect" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="901,633,1024,659"/>
+<area shape="rect" href="group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="440,569,619,609"/>
+<area shape="rect" href="group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="685,525,839,551"/>
+<area shape="rect" href="group__gLokiModem.html#gab9ed507b906c70b34d5b5135c34c92d1" title="Détruire un modem." alt="" coords="467,320,592,345"/>
+<area shape="rect" href="group__gLokiModem.html#gae78f99b97520da389fc0162c2026a49a" title="Mettre à l&#39;échelle une valeur d&#39;entrée du démodulateur." alt="" coords="436,468,623,493"/>
+<area shape="rect" href="group__gLokiModem.html#ga27f4f0afdf1b651dd85f485bbbff196a" title="Mettre à l&#39;échelle une composante X (I) ou Y (Q) d&#39;un échantillon démodulé." alt="" coords="448,369,611,395"/>
+<area shape="rect" href="group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="453,419,606,444"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga84434fa604921c7470b81c375921807f_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga84434fa604921c7470b81c375921807f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="ga04a5c88f3de5a3f48b4d73bfdfd31568" name="ga04a5c88f3de5a3f48b4d73bfdfd31568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04a5c88f3de5a3f48b4d73bfdfd31568">&#9670;&#160;</a></span>LokiSystem_start_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiSystem_start_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>modem_out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *</td>          <td class="paramname"><span class="paramname"><em>disp_out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarrer l'acquisition et le traitement. </p>
+<p>Cette fonction est non bloquante. Elle crée un nouveau thread pour le traitement des données en provenance du modem et démarre celui-ci.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à démarrer. </td></tr>
+    <tr><td class="paramname">channels</td><td>Un masque indiquant les voies à traiter, -1 pour toutes les voies. </td></tr>
+    <tr><td class="paramname">modem_out</td><td>La FIFO qui recevra les données de sortie du démodulateur. </td></tr>
+    <tr><td class="paramname">disp_out</td><td>La FIFO qui recevra les valeurs de déplacement. </td></tr>
+    <tr><td class="paramname">cid</td><td>Le numéro de consommateur de ce système pour la FIFO <span class="tt">modem_out</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le code d'erreur retourné par <a class="el" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés.">LokiModem_start_streaming</a> </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00527">527</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_cgraph" id="agroup__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_cgraph">
+<area shape="rect" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,360,213,385"/>
+<area shape="rect" href="group__gLokiModem.html#gabaa67fb5b5e0b8faf9cc91c184f88223" title="Redémarrer le modem." alt="" coords="291,56,439,81"/>
+<area shape="rect" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,360,469,385"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="561,779,699,804"/>
+<area shape="rect" href="group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="1617,388,1772,413"/>
+<area shape="rect" href="group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="553,5,707,31"/>
+<area shape="rect" href="group__gLokiModem.html#ga1a3bec25b7f9818c130c317e79b3bca2" title="Lire l&#39;état des transferts DMA." alt="" coords="517,335,743,360"/>
+<area shape="rect" href="group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="561,384,699,409"/>
+<area shape="rect" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="811,572,1019,597"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="857,671,974,696"/>
+<area shape="rect" href="group__gLokiModem.html#ga784b97f18bd232111254e1c5fcac3e0c" title="Lire la date du dernier transfert DMA." alt="" coords="791,257,1040,283"/>
+<area shape="rect" href="group__gLokiModem.html#ga5e4ca0d31754d984b07e7298028eeefc" title="Demander au circuit de modulation/démodulation de démarrer les transferts DMA." alt="" coords="830,307,1001,332"/>
+<area shape="rect" href="group__gLokiModem.html#ga04636b25da663b516cf8634b3470ca52" title="Demander au circuit de modulation/démodulation d&#39;arrêter les transferts DMA." alt="" coords="831,356,1000,381"/>
+<area shape="rect" href="group__gLokiModem.html#ga8fedd820f507eeb1043d3a7dd26e169f" title="Lire la longueur d&#39;un paquet de données en sortie du démodulateur." alt="" coords="1363,243,1541,283"/>
+<area shape="rect" href="group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="1095,621,1279,661"/>
+<area shape="rect" href="group__gLokiModem.html#ga92acfc36c0c6e365213c0898661d4834" title="Lire un numéro de paquet dans un échantillon DMA brut." alt="" coords="827,406,1003,446"/>
+<area shape="rect" href="group__gLokiModem.html#gae9b930ac28562e09e072ce107c59db0c" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur." alt="" coords="809,156,1021,181"/>
+<area shape="rect" href="group__gLokiModem.html#gac7ad56144a69fcdc52eac5dd41e944d7" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="798,471,1033,496"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="832,621,999,647"/>
+<area shape="rect" href="group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077" title="Convertir une date en timestamp." alt="" coords="825,107,1005,132"/>
+<area shape="rect" href="group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="1363,569,1541,609"/>
+<area shape="rect" href="group__gLokiModem.html#ga27f4f0afdf1b651dd85f485bbbff196a" title="Mettre à l&#39;échelle une composante X (I) ou Y (Q) d&#39;un échantillon démodulé." alt="" coords="1106,156,1269,181"/>
+<area shape="rect" href="group__gLokiModem.html#gae81b1c2702720959857d0a6e33db86ac" title="Lire l&#39;amplitude du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="1335,469,1569,495"/>
+<area shape="rect" href="group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef" title="Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="1088,406,1287,446"/>
+<area shape="rect" href="group__gLokiModem.html#ga23886c6a62d90b718d3069b8fe4ab328" title="Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)..." alt="" coords="1353,351,1551,391"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="1099,571,1276,596"/>
+<area shape="rect" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement." alt="" coords="826,1067,1005,1092"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="826,935,1005,960"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="808,836,1023,861"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="860,885,971,911"/>
+<area shape="rect" href="group__gLokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649" title="Arrêter l&#39;acquisition." alt="" coords="812,1017,1019,1043"/>
+<area shape="rect" href="group__gLokiSystem.html#gaab6533e9d6b9bfa464a9a30e242133a8" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="819,771,1012,811"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384" title="Réinitialiser un filtre FIR." alt="" coords="1116,1099,1259,1124"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9" title="Calculer l&#39;angle correspondant à un point d&#39;une ellipse." alt="" coords="1106,935,1269,960"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e" title="Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation." alt="" coords="1109,985,1266,1025"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="1110,771,1265,811"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5" title="Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées." alt="" coords="1090,836,1285,861"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="1116,885,1259,911"/>
+<area shape="rect" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="1411,1033,1493,1059"/>
+<area shape="rect" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="1395,737,1509,763"/>
+<area shape="rect" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="1395,787,1509,812"/>
+<area shape="rect" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="1397,836,1507,861"/>
+<area shape="rect" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="1409,885,1495,911"/>
+<area shape="rect" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="1407,935,1497,960"/>
+<area shape="rect" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="1397,984,1507,1009"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="1127,1049,1247,1075"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+<a id="ga5b0a59178eb774740066325c1b178397" name="ga5b0a59178eb774740066325c1b178397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b0a59178eb774740066325c1b178397">&#9670;&#160;</a></span>LokiSystem_stop_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystem_stop_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystem.html">LokiSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter l'acquisition et le traitement. </p>
+<p>Interrompt l'exécution du thread lancé par la fonction <a class="el" href="#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement.">LokiSystem_start_streaming</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le système à arrêter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00550">550</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga5b0a59178eb774740066325c1b178397_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga5b0a59178eb774740066325c1b178397_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga5b0a59178eb774740066325c1b178397_cgraph" id="agroup__gLokiSystem_ga5b0a59178eb774740066325c1b178397_cgraph">
+<area shape="rect" title="Arrêter l&#39;acquisition et le traitement." alt="" coords="5,5,212,31"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="260,5,380,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga5b0a59178eb774740066325c1b178397_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga5b0a59178eb774740066325c1b178397_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="gad239747d22dd513e4bab292592f7807e" name="gad239747d22dd513e4bab292592f7807e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad239747d22dd513e4bab292592f7807e">&#9670;&#160;</a></span>LokiSystem_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * LokiSystem_work </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculer le déplacement à partir des données démodulées. </p>
+<p>Cette fonction est exécutée dans un thread démarré par <a class="el" href="#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement.">LokiSystem_start_streaming</a>. Elle consomme les données de la FIFO d'entrée et alimente la FIFO de sortie, jusqu'à la demande d'arrêt par <a class="el" href="group__gLokiConsumer.html#ga3596ff29c7812a18f78bc33c73755c63" title="Arrêter un consommateur.">LokiConsumer_stop</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Le système courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00380">380</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gad239747d22dd513e4bab292592f7807e_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_cgraph" id="agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_cgraph">
+<area shape="rect" title="Calculer le déplacement à partir des données démodulées." alt="" coords="5,349,143,375"/>
+<area shape="rect" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement." alt="" coords="209,65,387,91"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="209,176,387,201"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="191,225,405,251"/>
+<area shape="rect" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="194,275,402,300"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="243,324,353,349"/>
+<area shape="rect" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="239,373,357,399"/>
+<area shape="rect" href="group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="459,474,643,514"/>
+<area shape="rect" href="group__gLokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649" title="Arrêter l&#39;acquisition." alt="" coords="195,539,401,564"/>
+<area shape="rect" href="group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="215,588,381,613"/>
+<area shape="rect" href="group__gLokiSystem.html#gaab6533e9d6b9bfa464a9a30e242133a8" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="201,474,395,514"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384" title="Réinitialiser un filtre FIR." alt="" coords="479,5,622,31"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9" title="Calculer l&#39;angle correspondant à un point d&#39;une ellipse." alt="" coords="469,55,632,80"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e" title="Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation." alt="" coords="472,105,629,145"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="473,169,628,209"/>
+<area shape="rect" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5" title="Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées." alt="" coords="453,233,648,259"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="479,283,622,308"/>
+<area shape="rect" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="744,131,827,156"/>
+<area shape="rect" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="728,180,843,205"/>
+<area shape="rect" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="728,229,843,255"/>
+<area shape="rect" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="731,279,840,304"/>
+<area shape="rect" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="742,328,829,353"/>
+<area shape="rect" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="740,377,831,403"/>
+<area shape="rect" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="730,427,841,452"/>
+<area shape="rect" href="group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="696,477,875,517"/>
+<area shape="rect" href="group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="923,484,1077,509"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="491,539,611,564"/>
+<area shape="rect" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="462,588,639,613"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gad239747d22dd513e4bab292592f7807e_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_icgraph" id="agroup__gLokiSystem_gad239747d22dd513e4bab292592f7807e_icgraph">
+<area shape="rect" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,5,399,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,213,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga2dca93ca28ef0e45201d2dbc1c80008b" name="ga2dca93ca28ef0e45201d2dbc1c80008b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2dca93ca28ef0e45201d2dbc1c80008b">&#9670;&#160;</a></span>LokiSystemConfig_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire une configuration pour une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>L'instance de <a class="el" href="structLokiSystemConfig.html" title="Les paramètres de configuration d&#39;un système d&#39;acquisition et de traitement.">LokiSystemConfig</a> à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00102">102</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_icgraph" id="agroup__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b_icgraph">
+<area shape="rect" title="Détruire une configuration pour une instance de LokiSystem." alt="" coords="227,5,393,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga3d2bff594ea0d200940e256e773c7997" title="Construire une configuration pour une instance de LokiSystem." alt="" coords="5,5,179,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga530e80ea2d00e00e8aad456b2fa81a6b" name="ga530e80ea2d00e00e8aad456b2fa81a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga530e80ea2d00e00e8aad456b2fa81a6b">&#9670;&#160;</a></span>LokiSystemConfig_get_cavity_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_cavity_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'indice de la cavité de Fabry-Pérot. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de réflexions. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00152">152</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 12 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 13 -->
+</div>
+
+</div>
+</div>
+<a id="ga7248fe35fa7907125b340fb438e22c46" name="ga7248fe35fa7907125b340fb438e22c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7248fe35fa7907125b340fb438e22c46">&#9670;&#160;</a></span>LokiSystemConfig_get_distance_unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char LokiSystemConfig_get_distance_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'unité du déplacement calculé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le préfixe de l'unité de déplacement ('p', 'n' 'u', 'm'). </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00160">160</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 14 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 15 -->
+</div>
+
+</div>
+</div>
+<a id="ga40f788600dda29882f223cfa9fe1b957" name="ga40f788600dda29882f223cfa9fe1b957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40f788600dda29882f223cfa9fe1b957">&#9670;&#160;</a></span>LokiSystemConfig_get_estimator_initial_radius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_estimator_initial_radius </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le rayon initial à utiliser lors de l'estimation des paramètres d'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le rayon initial. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00209">209</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 16 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 17 -->
+</div>
+
+</div>
+</div>
+<a id="ga0b00cee5bd3aedc44a56a576c82447bb" name="ga0b00cee5bd3aedc44a56a576c82447bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b00cee5bd3aedc44a56a576c82447bb">&#9670;&#160;</a></span>LokiSystemConfig_get_estimator_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * LokiSystemConfig_get_estimator_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nom de l'estimateur de paramètres d'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nom du filtre d'estimation. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00182">182</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 18 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 19 -->
+</div>
+
+</div>
+</div>
+<a id="ga205120cbb843744980b6aa6c52723cf0" name="ga205120cbb843744980b6aa6c52723cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga205120cbb843744980b6aa6c52723cf0">&#9670;&#160;</a></span>LokiSystemConfig_get_estimator_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiSystemConfig_get_estimator_params </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire les paramètres du filtre d'estimation des paramètres de l'ellipse. </p>
+<p>Les paramètres se présentent sous la forme d'un tableau dont la longueur est accessible à l'aide de la fonction <a class="el" href="#gad93375fc1cad85c4c1aac74270adc8b8" title="Lire le nombre de paramètres du filtre d&#39;estimation des paramètres de l&#39;ellipse.">LokiSystemConfig_get_estimator_params_length</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un tableau de paramètres. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00217">217</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 20 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 21 -->
+</div>
+
+</div>
+</div>
+<a id="gad93375fc1cad85c4c1aac74270adc8b8" name="gad93375fc1cad85c4c1aac74270adc8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad93375fc1cad85c4c1aac74270adc8b8">&#9670;&#160;</a></span>LokiSystemConfig_get_estimator_params_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystemConfig_get_estimator_params_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nombre de paramètres du filtre d'estimation des paramètres de l'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de paramètres. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00221">221</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 22 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 23 -->
+</div>
+
+</div>
+</div>
+<a id="gad89804c4e91841078432a3347f53e2a2" name="gad89804c4e91841078432a3347f53e2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad89804c4e91841078432a3347f53e2a2">&#9670;&#160;</a></span>LokiSystemConfig_get_estimator_throttle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned LokiSystemConfig_get_estimator_throttle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00201">201</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="ga7ae78631a32b123f794af98974c3aac7" name="ga7ae78631a32b123f794af98974c3aac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ae78631a32b123f794af98974c3aac7">&#9670;&#160;</a></span>LokiSystemConfig_get_filter_attenuation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_filter_attenuation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'atténuation du filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'atténuation, en dB. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00243">243</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 24 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 25 -->
+</div>
+
+</div>
+</div>
+<a id="ga49068f6da977f5aecf4a87bae3f1597e" name="ga49068f6da977f5aecf4a87bae3f1597e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49068f6da977f5aecf4a87bae3f1597e">&#9670;&#160;</a></span>LokiSystemConfig_get_filter_bandwidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_filter_bandwidth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la bande passante du filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La bande passante du filtre, en Hz. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00235">235</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 26 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 27 -->
+</div>
+
+</div>
+</div>
+<a id="gaabf95e7685531e248f75a74173fcca98" name="gaabf95e7685531e248f75a74173fcca98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabf95e7685531e248f75a74173fcca98">&#9670;&#160;</a></span>LokiSystemConfig_get_filter_decimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystemConfig_get_filter_decimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le facteur de décimation du filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le facteur de décimation du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00259">259</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaabf95e7685531e248f75a74173fcca98_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 28 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaabf95e7685531e248f75a74173fcca98_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 29 -->
+</div>
+
+</div>
+</div>
+<a id="gaec4afc9c50b994d7a693f96c4dbf0187" name="gaec4afc9c50b994d7a693f96c4dbf0187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec4afc9c50b994d7a693f96c4dbf0187">&#9670;&#160;</a></span>LokiSystemConfig_get_filter_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystemConfig_get_filter_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur du filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de coefficients du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00251">251</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 30 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 31 -->
+</div>
+
+</div>
+</div>
+<a id="gaf2a77eda3c08dadba7c1491b368782cb" name="gaf2a77eda3c08dadba7c1491b368782cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2a77eda3c08dadba7c1491b368782cb">&#9670;&#160;</a></span>LokiSystemConfig_get_reflections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned LokiSystemConfig_get_reflections </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le nombre de réflexions supposé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de réflexions. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00144">144</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 32 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 33 -->
+</div>
+
+</div>
+</div>
+<a id="ga30372de63105c78b1a00a2048ed5f62a" name="ga30372de63105c78b1a00a2048ed5f62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30372de63105c78b1a00a2048ed5f62a">&#9670;&#160;</a></span>LokiSystemConfig_get_scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le facteur d'échelle de déplacement. </p>
+<p>Le résultat est calculé en fonction des paramètres de longueur d'onde, nombre de réflexions, indice de la cavité, unité de distance.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du facteur d'échelle de déplacement. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00125">125</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 34 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_icgraph" id="agroup__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a_icgraph">
+<area shape="rect" title="Lire le facteur d&#39;échelle de déplacement." alt="" coords="185,5,352,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga9034c8dd18b4ac086fa7114310fc2ed0" name="ga9034c8dd18b4ac086fa7114310fc2ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9034c8dd18b4ac086fa7114310fc2ed0">&#9670;&#160;</a></span>LokiSystemConfig_get_simulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiSystemConfig_get_simulate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire l'état d'activation de la simulation des capteurs de déplacement. </p>
+<p>Le paramètre <span class="tt">simulate</span> active un mode de simulation des capteurs de déplacement dans le système à configurer.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la configuration prévoit une simulation des capteurs de déplacement. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00117">117</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 35 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 36 -->
+</div>
+
+</div>
+</div>
+<a id="ga407cecd8cdb13b82c183d2261afa6841" name="ga407cecd8cdb13b82c183d2261afa6841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga407cecd8cdb13b82c183d2261afa6841">&#9670;&#160;</a></span>LokiSystemConfig_get_skip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_skip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le temps d'attente au démarrage. </p>
+<p>Le paramètre <span class="tt">skip</span> définit le nombre de secondes d'attente avant de commencer à remplir la FIFO des données de déplacement.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le temps d'attente, en secondes. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00109">109</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 37 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 38 -->
+</div>
+
+</div>
+</div>
+<a id="gada0540089bb3af061badae98523ed1d5" name="gada0540089bb3af061badae98523ed1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada0540089bb3af061badae98523ed1d5">&#9670;&#160;</a></span>LokiSystemConfig_get_time_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiSystemConfig_get_time_constants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire le tableau de constantes de temps pour le filtrage des paramètres de l'ellipse. </p>
+<p>La longueur de ce tableau peut être connue en appelant la fonction <a class="el" href="#ga4c2ec59c273bbe74d31a6802f97c81cb" title="Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l&#39;ellipse.">LokiSystemConfig_get_time_constants_length</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le tableau de constantes de temps. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00168">168</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gada0540089bb3af061badae98523ed1d5_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gada0540089bb3af061badae98523ed1d5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 39 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gada0540089bb3af061badae98523ed1d5_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gada0540089bb3af061badae98523ed1d5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 40 -->
+</div>
+
+</div>
+</div>
+<a id="ga4c2ec59c273bbe74d31a6802f97c81cb" name="ga4c2ec59c273bbe74d31a6802f97c81cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c2ec59c273bbe74d31a6802f97c81cb">&#9670;&#160;</a></span>LokiSystemConfig_get_time_constants_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiSystemConfig_get_time_constants_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de constantes de temps. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00172">172</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 41 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 42 -->
+</div>
+
+</div>
+</div>
+<a id="gac8a7bf74f2c5566ca316459a2eed863e" name="gac8a7bf74f2c5566ca316459a2eed863e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8a7bf74f2c5566ca316459a2eed863e">&#9670;&#160;</a></span>LokiSystemConfig_get_wavelength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiSystemConfig_get_wavelength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur d'onde de la diode laser. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La longueur d'onde de la diode laser, en nm. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00136">136</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 43 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 44 -->
+</div>
+
+</div>
+</div>
+<a id="ga3d2bff594ea0d200940e256e773c7997" name="ga3d2bff594ea0d200940e256e773c7997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d2bff594ea0d200940e256e773c7997">&#9670;&#160;</a></span>LokiSystemConfig_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> * LokiSystemConfig_new </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire une configuration pour une instance de <a class="el" href="structLokiSystem.html" title="Représentation d&#39;un système d&#39;acquisition et de traitement.">LokiSystem</a>. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Une instance de <a class="el" href="structLokiSystemConfig.html" title="Les paramètres de configuration d&#39;un système d&#39;acquisition et de traitement.">LokiSystemConfig</a>. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00065">65</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_cgraph" id="agroup__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_cgraph">
+<area shape="rect" title="Construire une configuration pour une instance de LokiSystem." alt="" coords="5,5,179,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga2dca93ca28ef0e45201d2dbc1c80008b" title="Détruire une configuration pour une instance de LokiSystem." alt="" coords="227,5,393,31"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 45 -->
+</div>
+
+</div>
+</div>
+<a id="gab04647c634e62c7452730d95d525af43" name="gab04647c634e62c7452730d95d525af43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab04647c634e62c7452730d95d525af43">&#9670;&#160;</a></span>LokiSystemConfig_set_cavity_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_cavity_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrire l'indice de la cavité de Fabry-Pérot. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nouvel indice de la cavité de Fabry-Pérot. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00156">156</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gab04647c634e62c7452730d95d525af43_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gab04647c634e62c7452730d95d525af43_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 46 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gab04647c634e62c7452730d95d525af43_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gab04647c634e62c7452730d95d525af43_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 47 -->
+</div>
+
+</div>
+</div>
+<a id="ga1605dee67c453d6bdd7bfdfdd98ff700" name="ga1605dee67c453d6bdd7bfdfdd98ff700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1605dee67c453d6bdd7bfdfdd98ff700">&#9670;&#160;</a></span>LokiSystemConfig_set_distance_unit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_distance_unit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrire l'unité du déplacement calculé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nouveau préfixe de l'unité de déplacement ('p', 'n' 'u', 'm'). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00164">164</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 48 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 49 -->
+</div>
+
+</div>
+</div>
+<a id="gaedbeea2702ffda640e50c59761749d87" name="gaedbeea2702ffda640e50c59761749d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedbeea2702ffda640e50c59761749d87">&#9670;&#160;</a></span>LokiSystemConfig_set_estimator_initial_radius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_estimator_initial_radius </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un rayon initial à utiliser lors de l'estimation des paramètres d'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le rayon initial. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00213">213</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaedbeea2702ffda640e50c59761749d87_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 50 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaedbeea2702ffda640e50c59761749d87_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 51 -->
+</div>
+
+</div>
+</div>
+<a id="ga990eea68733aca82e0fd03ab761d15af" name="ga990eea68733aca82e0fd03ab761d15af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga990eea68733aca82e0fd03ab761d15af">&#9670;&#160;</a></span>LokiSystemConfig_set_estimator_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_estimator_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un nom de l'estimateur de paramètres d'ellipse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">name</td><td>Le nom du filtre d'estimation à utiliser. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00191">191</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 52 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 53 -->
+</div>
+
+</div>
+</div>
+<a id="ga0af8a5b202c7523c9aff41b33fb8cece" name="ga0af8a5b202c7523c9aff41b33fb8cece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0af8a5b202c7523c9aff41b33fb8cece">&#9670;&#160;</a></span>LokiSystemConfig_set_estimator_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_estimator_params </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter des paramètres pour le filtre d'estimation des paramètres de l'ellipse. </p>
+<p>Les paramètres se présentent sous la forme d'un tableau dont la longueur doit être égale à la valeur retournée par la fonction <a class="el" href="#gad93375fc1cad85c4c1aac74270adc8b8" title="Lire le nombre de paramètres du filtre d&#39;estimation des paramètres de l&#39;ellipse.">LokiSystemConfig_get_estimator_params_length</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Un tableau de paramètres. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00225">225</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 54 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 55 -->
+</div>
+
+</div>
+</div>
+<a id="ga1af5f8b5405e2f299c0b1e6fdf394614" name="ga1af5f8b5405e2f299c0b1e6fdf394614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1af5f8b5405e2f299c0b1e6fdf394614">&#9670;&#160;</a></span>LokiSystemConfig_set_estimator_throttle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_estimator_throttle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00205">205</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="ga6b815fe2832fc0485c1458344f1ecf01" name="ga6b815fe2832fc0485c1458344f1ecf01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b815fe2832fc0485c1458344f1ecf01">&#9670;&#160;</a></span>LokiSystemConfig_set_filter_attenuation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_filter_attenuation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter une atténuation pour le filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>L'atténuation, en dB. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00247">247</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 56 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 57 -->
+</div>
+
+</div>
+</div>
+<a id="gaf1571ee8a8994eaea9ba804c3bbd515a" name="gaf1571ee8a8994eaea9ba804c3bbd515a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1571ee8a8994eaea9ba804c3bbd515a">&#9670;&#160;</a></span>LokiSystemConfig_set_filter_bandwidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_filter_bandwidth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un bande passante pour le filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>La bande passante du filtre, en Hz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00239">239</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 58 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 59 -->
+</div>
+
+</div>
+</div>
+<a id="ga3e0ff251046e6eee8eef84f07350b31a" name="ga3e0ff251046e6eee8eef84f07350b31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e0ff251046e6eee8eef84f07350b31a">&#9670;&#160;</a></span>LokiSystemConfig_set_filter_decimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_filter_decimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un facteur de décimation au filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le facteur de décimation du filtre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00263">263</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 60 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 61 -->
+</div>
+
+</div>
+</div>
+<a id="gadf8bdd8ddd10ddf12cfae087745727bf" name="gadf8bdd8ddd10ddf12cfae087745727bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf8bdd8ddd10ddf12cfae087745727bf">&#9670;&#160;</a></span>LokiSystemConfig_set_filter_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_filter_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter une longueur au filtre d'élimination du déplacement fictif. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nombre de coefficients du filtre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00255">255</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 62 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 63 -->
+</div>
+
+</div>
+</div>
+<a id="ga3dbad0a94c65d92c90941d73b1fa696f" name="ga3dbad0a94c65d92c90941d73b1fa696f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3dbad0a94c65d92c90941d73b1fa696f">&#9670;&#160;</a></span>LokiSystemConfig_set_reflections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_reflections </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrire le nombre de réflexions supposé. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nouveau nombre de réflexions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00148">148</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 64 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 65 -->
+</div>
+
+</div>
+</div>
+<a id="gae520a184f3a388ee6097e0979f8ef3fe" name="gae520a184f3a388ee6097e0979f8ef3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae520a184f3a388ee6097e0979f8ef3fe">&#9670;&#160;</a></span>LokiSystemConfig_set_simulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_simulate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activer ou désactiver la simulation des capteurs de déplacement. </p>
+<p>Le paramètre <span class="tt">simulate</span> active un mode de simulation des capteurs de déplacement dans le système à configurer.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>true pour indiquer qu'il faut simuler les capteurs de déplacement. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00121">121</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe_cgraph.png" border="0" usemap="#agroup__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 66 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe_icgraph.png" border="0" usemap="#agroup__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 67 -->
+</div>
+
+</div>
+</div>
+<a id="ga43eb663bd85c190094eefd2472ab55c5" name="ga43eb663bd85c190094eefd2472ab55c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43eb663bd85c190094eefd2472ab55c5">&#9670;&#160;</a></span>LokiSystemConfig_set_skip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_skip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un temps d'attente au démarrage. </p>
+<p>Le paramètre <span class="tt">skip</span> définit le nombre de secondes d'attente avant de commencer à remplir la FIFO des données de déplacement.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Une configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nouveau temps d'attente, en secondes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00113">113</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 68 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 69 -->
+</div>
+
+</div>
+</div>
+<a id="ga12fc80784aea471f95577e4b34f15e1a" name="ga12fc80784aea471f95577e4b34f15e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12fc80784aea471f95577e4b34f15e1a">&#9670;&#160;</a></span>LokiSystemConfig_set_time_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_time_constants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affecter un tableau de constantes de temps pour le filtrage des paramètres de l'ellipse. </p>
+<p>La longueur de ce tableau doit être égale à la valeur retournée par la fonction <a class="el" href="#ga4c2ec59c273bbe74d31a6802f97c81cb" title="Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l&#39;ellipse.">LokiSystemConfig_get_time_constants_length</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à interroger. </td></tr>
+    <tr><td class="paramname">value</td><td>Le nombre de constantes de temps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00176">176</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 70 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 71 -->
+</div>
+
+</div>
+</div>
+<a id="ga65dc7bbdf3f140b4b78aa8a9126526a3" name="ga65dc7bbdf3f140b4b78aa8a9126526a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65dc7bbdf3f140b4b78aa8a9126526a3">&#9670;&#160;</a></span>LokiSystemConfig_set_wavelength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiSystemConfig_set_wavelength </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiSystemConfig.html">LokiSystemConfig</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrire la longueur d'onde de la diode laser. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>La configuration à modifier. </td></tr>
+    <tr><td class="paramname">value</td><td>La nouvelle longueur d'onde de la diode laser, en nm. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00140">140</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3_cgraph.png" border="0" usemap="#agroup__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 72 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3_icgraph.png" border="0" usemap="#agroup__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 73 -->
+</div>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentation des variables</h2>
+<a id="ga9a389709411b7a060893570bc2d0337b" name="ga9a389709411b7a060893570bc2d0337b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a389709411b7a060893570bc2d0337b">&#9670;&#160;</a></span>LokiSystemConfig_estimator_impls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const LokiEllipseEstimatorInterface* const LokiSystemConfig_estimator_impls[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                                                  = {</div>
+<div class="line">    &amp;LokiRLSClass, &amp;LokiNLMSClass, &amp;LokiKalmanClass</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Les implémentations des filtres adaptatifs supportés pour l'estimation des paramètres de l'ellipse. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00061">61</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+<a id="ga945192da5448f10d0763b4e7ab91ba43" name="ga945192da5448f10d0763b4e7ab91ba43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga945192da5448f10d0763b4e7ab91ba43">&#9670;&#160;</a></span>LokiSystemConfig_estimator_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const LokiSystemConfig_estimator_names[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">                                                         = {</div>
+<div class="line">    <span class="stringliteral">&quot;rls&quot;</span>, <span class="stringliteral">&quot;nlms&quot;</span>, <span class="stringliteral">&quot;kalman&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Les noms des filtres adaptatifs supportés pour l'estimation des paramètres de l'ellipse. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-system_8c_source.html#l00056">56</a> du fichier <a class="el" href="libloki-system_8c_source.html">libloki-system.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

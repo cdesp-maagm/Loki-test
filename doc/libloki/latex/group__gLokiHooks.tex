@@ -1,0 +1,210 @@
+\doxysubsection{Instrumentation des fonctions malloc et free }
+\hypertarget{group__gLokiHooks}{}\label{group__gLokiHooks}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+
+
+Ce module peut être utilisées en phase de mise au point pour identifier l\textquotesingle{}origine de fuites mémoire ou de double désallocation.  
+
+
+Graphe de collaboration de Instrumentation des fonctions malloc et free:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-hooks_8c}{libloki-\/hooks.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-hooks_8h}{libloki-\/hooks.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3}{Loki\+Hooks\+\_\+malloc}} (size\+\_\+t size, const void \texorpdfstring{$\ast$}{*}caller)
+\begin{DoxyCompactList}\small\item\em Une version instrumentée du hook de la fonction {\ttfamily malloc}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f}{Loki\+Hooks\+\_\+free}} (void \texorpdfstring{$\ast$}{*}ptr, const void \texorpdfstring{$\ast$}{*}caller)
+\begin{DoxyCompactList}\small\item\em Une version instrumentée du hook de la fonction {\ttfamily free}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2}{Loki\+Hooks\+\_\+setup}} (void)
+\begin{DoxyCompactList}\small\item\em Affecter les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141}{Loki\+Hooks\+\_\+save}} (void)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae}{Loki\+Hooks\+\_\+restore}} (void)
+\begin{DoxyCompactList}\small\item\em Restaurer les hooks d\textquotesingle{}origine pour l\textquotesingle{}allocation/\+désallocation de mémoire. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592}{Loki\+Hooks\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}utilisation des hooks instrumentés pour l\textquotesingle{}allocation/\+désallocation de mémoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group__gLokiHooks_gaa645859efa9eecf1d6279f922cf25147}{Loki\+Hooks\+\_\+saved\+\_\+malloc}} (size\+\_\+t, const void \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Pointeur vers le hook qui exécute la fonction {\ttfamily malloc} d\textquotesingle{}origine. \end{DoxyCompactList}\item 
+static void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group__gLokiHooks_ga2d338f0f660cf9d8d44cbc22e134b003}{Loki\+Hooks\+\_\+saved\+\_\+free}} (void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Pointeur vers le hook qui exécute la fonction {\ttfamily free} d\textquotesingle{}origine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module peut être utilisées en phase de mise au point pour identifier l\textquotesingle{}origine de fuites mémoire ou de double désallocation. 
+
+
+
+\label{group__gLokiHooks_doc-func-members}
+\Hypertarget{group__gLokiHooks_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_free@{LokiHooks\_free}}
+\index{LokiHooks\_free@{LokiHooks\_free}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_free()}{LokiHooks\_free()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f} 
+void Loki\+Hooks\+\_\+free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{caller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Une version instrumentée du hook de la fonction {\ttfamily free}. 
+
+Cette fonction libère une région de la mémoire en utilisant la fonction {\ttfamily free} d\textquotesingle{}origine, puis elle affiche des informations sur la sortie d\textquotesingle{}erreur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ptr} & Un pointeur vers la région de mémoire à libérer. \\
+\hline
+{\em caller} & Un pointeur vers la fonction appelante. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00080}{80}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_init@{LokiHooks\_init}}
+\index{LokiHooks\_init@{LokiHooks\_init}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_init()}{LokiHooks\_init()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592} 
+void Loki\+Hooks\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initialiser l\textquotesingle{}utilisation des hooks instrumentés pour l\textquotesingle{}allocation/\+désallocation de mémoire. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_malloc@{LokiHooks\_malloc}}
+\index{LokiHooks\_malloc@{LokiHooks\_malloc}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_malloc()}{LokiHooks\_malloc()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3} 
+void \texorpdfstring{$\ast$}{*} Loki\+Hooks\+\_\+malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{caller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Une version instrumentée du hook de la fonction {\ttfamily malloc}. 
+
+Cette fonction alloue une région de la mémoire en utilisant la fonction {\ttfamily malloc} d\textquotesingle{}origine, puis elle affiche des informations sur la sortie d\textquotesingle{}erreur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em size} & La taille de la région de mémoire à allouer. \\
+\hline
+{\em caller} & Un pointeur vers la fonction appelante. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la région de mémoire allouée. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_restore@{LokiHooks\_restore}}
+\index{LokiHooks\_restore@{LokiHooks\_restore}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_restore()}{LokiHooks\_restore()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae} 
+void Loki\+Hooks\+\_\+restore (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Restaurer les hooks d\textquotesingle{}origine pour l\textquotesingle{}allocation/\+désallocation de mémoire. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00034}{34}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_save@{LokiHooks\_save}}
+\index{LokiHooks\_save@{LokiHooks\_save}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_save()}{LokiHooks\_save()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141} 
+void Loki\+Hooks\+\_\+save (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sauvegarder les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_setup@{LokiHooks\_setup}}
+\index{LokiHooks\_setup@{LokiHooks\_setup}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_setup()}{LokiHooks\_setup()}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2} 
+void Loki\+Hooks\+\_\+setup (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Affecter les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+
+
+\label{group__gLokiHooks_doc-var-members}
+\Hypertarget{group__gLokiHooks_doc-var-members}
+\doxysubsubsection{Documentation des variables}
+\Hypertarget{group__gLokiHooks_ga2d338f0f660cf9d8d44cbc22e134b003}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_saved\_free@{LokiHooks\_saved\_free}}
+\index{LokiHooks\_saved\_free@{LokiHooks\_saved\_free}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_saved\_free}{LokiHooks\_saved\_free}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_ga2d338f0f660cf9d8d44cbc22e134b003} 
+void(\texorpdfstring{$\ast$}{*}) Loki\+Hooks\+\_\+saved\+\_\+free(void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*}) (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pointeur vers le hook qui exécute la fonction {\ttfamily free} d\textquotesingle{}origine. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00016}{16}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+\Hypertarget{group__gLokiHooks_gaa645859efa9eecf1d6279f922cf25147}\index{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_saved\_malloc@{LokiHooks\_saved\_malloc}}
+\index{LokiHooks\_saved\_malloc@{LokiHooks\_saved\_malloc}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}}
+\doxysubsubsubsection{\texorpdfstring{LokiHooks\_saved\_malloc}{LokiHooks\_saved\_malloc}}
+{\footnotesize\ttfamily \label{group__gLokiHooks_gaa645859efa9eecf1d6279f922cf25147} 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*}) Loki\+Hooks\+\_\+saved\+\_\+malloc(size\+\_\+t, const void \texorpdfstring{$\ast$}{*}) (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pointeur vers le hook qui exécute la fonction {\ttfamily malloc} d\textquotesingle{}origine. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00013}{13}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+

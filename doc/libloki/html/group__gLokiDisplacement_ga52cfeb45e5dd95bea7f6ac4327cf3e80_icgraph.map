@@ -1,0 +1,6 @@
+<map id="LokiDisplacement_del" name="LokiDisplacement_del">
+<area shape="rect" id="node1" title="Détruire une instance de LokiDisplacement." alt="" coords="415,31,581,56"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="185,5,367,31"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="213,55,339,80"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,31,137,56"/>
+</map>

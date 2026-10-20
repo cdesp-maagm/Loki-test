@@ -1,0 +1,9 @@
+<map id="LokiSocketServer_start" name="LokiSocketServer_start">
+<area shape="rect" id="node1" title="Démarrer un serveur." alt="" coords="5,80,176,105"/>
+<area shape="rect" id="node2" href="$group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02" title="Recevoir les données d&#39;entrée." alt="" coords="224,55,413,80"/>
+<area shape="rect" id="node7" href="$group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf" title="Gérer les connexions et transmettre les données aux clients." alt="" coords="230,104,407,129"/>
+<area shape="rect" id="node3" href="$group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="461,5,676,31"/>
+<area shape="rect" id="node4" href="$group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="513,55,624,80"/>
+<area shape="rect" id="node5" href="$group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="485,104,652,129"/>
+<area shape="rect" id="node6" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="724,104,901,129"/>
+</map>

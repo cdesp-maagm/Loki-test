@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+from eseo.loki.native import *
+from time import sleep
+
+modem = LokiModem()
+
+channels = modem.get_demod_channels()
+
+adc_low_threshold  = 0.1
+adc_high_threshold = 0.9
+
+led_groups     = 4
+leds_per_group = 3
+leds_count     = led_groups * leds_per_group
+
+# multi-led-0: led0, led1 , led2
+# multi-led-1: led3,      ,
+# multi-led-2:     ,      , led8
+# multi-led-3: led9, led10, led11
+dma_streaming_index = 8
+
+delay_sec = 0.5
+
+# Lire la luminosité max de chaque groupe de LED
+# et affecter la luminosité courante.
+max_brightness = [0] * leds_count
+for group_index in range(led_groups):
+    with open("/sys/class/leds/multi-led-{}/max_brightness".format(group_index), "r") as src, \
+         open("/sys/class/leds/multi-led-{}/brightness".format(group_index),     "w") as dest:
+        mb = src.read()
+        dest.write(mb)
+    led_index = group_index * leds_per_group
+    max_brightness[led_index:led_index + leds_per_group] = [int(mb)] * leds_per_group
+
+led_state = [0] * leds_count
+
+def update_leds():
+    for group_index in range(led_groups):
+        led_index = group_index * leds_per_group
+        v = led_state[led_index:led_index + leds_per_group]
+        with open("/sys/class/leds/multi-led-{}/multi_intensity".format(group_index), "w") as f:
+            f.write(" ".join(map(str, v)))
+
+while True:
+    # Indiquer l'état des voies d'entrée.
+    for c in range(channels):
+        adc_min = modem.get_demod_adc_min_ratio(c)
+        adc_max = modem.get_demod_adc_max_ratio(c)
+        adc_amp = max(abs(adc_min), abs(adc_max))
+        if adc_amp < adc_low_threshold:
+            led_state[c] = 0
+        elif adc_amp <= adc_high_threshold:
+            led_state[c] = max_brightness[c]
+        else:
+            led_state[c] = max_brightness[c] - led_state[c]
+
+    # TODO Indiquer l'état de la sortie.
+
+    # Indiquer l'état du modem.
+    with open("/sys/class/loki/loki-modem/dma_is_streaming") as src:
+        led_state[dma_streaming_index] = int(src.read()) * max_brightness[dma_streaming_index];
+
+    # Clignotant.
+    led_state[-1] = max_brightness[-1] - led_state[-1]
+
+    update_leds()
+    sleep(delay_sec)

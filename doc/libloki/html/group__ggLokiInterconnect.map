@@ -1,0 +1,7 @@
+<map id="Échange de données entre modules d&apos;acquisition, de traitement et d&apos;enregistrement" name="Échange de données entre modules d&apos;acquisition, de traitement et d&apos;enregistrement">
+<area shape="rect" id="node1" href="$group__gLokiConsumer.html" title="Ce module fournit une implémentation de référence d&#39;un consommateur qui lit les données dans une FIFO..." alt="" coords="303,5,503,31"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html" title="File d&#39;attente multi&#45;consommateur pour communication entre threads." alt="" coords="305,55,500,80"/>
+<area shape="rect" id="node3" href="$group__gLokiPacket.html" title="Type de données pour la communication de paquets d&#39;échantillons datés entre threads." alt="" coords="301,104,504,129"/>
+<area shape="rect" id="node4" href="$group__gLokiTime.html" title="Définition de types timestamp et intervalle de temps, et de fonctions de conversion d&#39;unités de temps..." alt="" coords="323,154,482,194"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,65,253,120"/>
+</map>

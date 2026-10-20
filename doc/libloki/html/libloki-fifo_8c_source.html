@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-fifo.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-fifo.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-fifo_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-fifo_8h.html">libloki-fifo.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga3253055266904680cb4d74fe3093c508">   11</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structLokiFIFO.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">   22</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">item_size</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">all_read</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">   26</a></span>    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">   28</a></span>    pthread_mutex_t <a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">   30</a></span>    pthread_cond_t <a class="code hl_variable" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">pushed</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">   32</a></span>    pthread_cond_t <a class="code hl_variable" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">pulled</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">   34</a></span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">   39</a></span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a>[0];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Ne rien ajouter ici.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structLokiFIFORecord.html">   47</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">   49</a></span>    <span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">   51</a></span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *<a class="code hl_variable" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">next</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structLokiFIFORecord.html#a7c3e3817b82b5e8d1ffa72466dd17e04">   56</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structLokiFIFORecord.html#a7c3e3817b82b5e8d1ffa72466dd17e04">item</a>[0];</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Ne rien ajouter ici.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1">   60</a></span><a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *<a class="code hl_function" href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1">LokiFIFO_new</a>(<span class="keywordtype">size_t</span> item_size, <span class="keywordtype">size_t</span> length, <span class="keywordtype">size_t</span> consumers) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">size_t</span> record_size = <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a>) + item_size;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a>) + length * record_size + consumers * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a>*));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *first_record = (<a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a>*)(self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a> + consumers);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a>           = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">item_size</a>       = item_size;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">all_read</a>        = (1 &lt;&lt; consumers) - 1;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a> = first_record;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> c = 0; c &lt; consumers; c ++) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a>[c] = first_record;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Initialiser les records comme une liste chaînée circulaire.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// Marquer tous les éléments comme lus par tous les consommateurs.</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *rec = first_record;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; i ++) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a> = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">all_read</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">next</a>   = i == length - 1 ?</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        first_record :</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                        (<a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a>*)((<span class="keywordtype">char</span>*)rec + record_size);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        rec = rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">next</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    pthread_mutex_init(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>, NULL);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    pthread_cond_init(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">pushed</a>, NULL);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    pthread_cond_init(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">pulled</a>, NULL);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga53fadc179b294d35e3ed7f7d55671f3a">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga53fadc179b294d35e3ed7f7d55671f3a">LokiFIFO_del</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    free(self);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229">  102</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229">LokiFIFO_get_item_size</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">item_size</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">  106</a></span><span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// Bloquer tant que l&#39;élément courant n&#39;a pas été lu par tous les consommateurs.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *rec = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">while</span> (!self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a> &amp;&amp; rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a> != self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">all_read</a>) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        pthread_cond_wait(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">pulled</a>, &amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="comment">// Retourner NULL en cas d&#39;annulation.</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> *item = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a> ? NULL : rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a7c3e3817b82b5e8d1ffa72466dd17e04">item</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> item;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">  123</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a>) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// Marquer l&#39;élément courant comme non lu.</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a>-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a> = 0;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// Signaler la présence d&#39;un nouvel élément à tous les consommateurs en attente.</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    pthread_cond_broadcast(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">pushed</a>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// Passer à l&#39;élément suivant.</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a> = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">producer_record</a>-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">next</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">  142</a></span><span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self, <span class="keywordtype">size_t</span> cid) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// Bloquer tant que l&#39;élément courant est marqué comme lu par ce consommateur.</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">int</span> mask = 1 &lt;&lt; cid;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *rec = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a>[cid];</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">while</span> (!self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a> &amp;&amp; (rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a> &amp; mask)) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        pthread_cond_wait(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">pushed</a>, &amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">// Retourner NULL en cas d&#39;annulation.</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> *item = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a> ? NULL : rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a7c3e3817b82b5e8d1ffa72466dd17e04">item</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> item;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">  160</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self, <span class="keywordtype">size_t</span> cid) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a>) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// Marquer l&#39;élément courant comme lu par ce consommateur.</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_struct" href="structLokiFIFORecord.html">LokiFIFORecord</a> *rec = self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a>[cid];</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">status</a> |= 1 &lt;&lt; cid;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment">// Signaler qu&#39;une lecture vient d&#39;avoir lieu.</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    pthread_cond_signal(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">pulled</a>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// Passer à l&#39;élément suivant.</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">consumer_records</a>[cid] = rec-&gt;<a class="code hl_variable" href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">next</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">  180</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a>(<a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *self) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    pthread_mutex_lock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">abort</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    pthread_cond_signal(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">pulled</a>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    pthread_cond_broadcast(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">pushed</a>);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    pthread_mutex_unlock(&amp;self-&gt;<a class="code hl_variable" href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">mutex</a>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga4e8cda4ed922ac5128c716735c0724c8"><div class="ttname"><a href="group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8">LokiFIFO_pull</a></div><div class="ttdeci">void LokiFIFO_pull(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Libérer l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="#l00160">libloki-fifo.c:160</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga53fadc179b294d35e3ed7f7d55671f3a"><div class="ttname"><a href="group__gLokiFIFO.html#ga53fadc179b294d35e3ed7f7d55671f3a">LokiFIFO_del</a></div><div class="ttdeci">void LokiFIFO_del(LokiFIFO *self)</div><div class="ttdoc">Détruire une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00095">libloki-fifo.c:95</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga64953835cd85d15393a6b14030a845c5"><div class="ttname"><a href="group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5">LokiFIFO_get_consumer_item</a></div><div class="ttdeci">void * LokiFIFO_get_consumer_item(LokiFIFO *self, size_t cid)</div><div class="ttdoc">Obtenir une référence vers l&#39;élément courant en lecture.</div><div class="ttdef"><b>Définition</b> <a href="#l00142">libloki-fifo.c:142</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga6772f40ab458b60abd3e8b87bca259b1"><div class="ttname"><a href="group__gLokiFIFO.html#ga6772f40ab458b60abd3e8b87bca259b1">LokiFIFO_new</a></div><div class="ttdeci">LokiFIFO * LokiFIFO_new(size_t item_size, size_t length, size_t consumers)</div><div class="ttdoc">Créer une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00060">libloki-fifo.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_ga9d21708a76ac74826125a8fbf5a5efaf"><div class="ttname"><a href="group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf">LokiFIFO_push</a></div><div class="ttdeci">void LokiFIFO_push(LokiFIFO *self)</div><div class="ttdoc">Valider l&#39;élément courant en écriture.</div><div class="ttdef"><b>Définition</b> <a href="#l00123">libloki-fifo.c:123</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaa57901e87eacff515a67b913d69e5229"><div class="ttname"><a href="group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229">LokiFIFO_get_item_size</a></div><div class="ttdeci">size_t LokiFIFO_get_item_size(const LokiFIFO *self)</div><div class="ttdoc">Obtenir la taille d&#39;un élément de la FIFO, en octets.</div><div class="ttdef"><b>Définition</b> <a href="#l00102">libloki-fifo.c:102</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gaaff05dfee1870a70b14718028d830f21"><div class="ttname"><a href="group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21">LokiFIFO_abort</a></div><div class="ttdeci">void LokiFIFO_abort(LokiFIFO *self)</div><div class="ttdoc">Terminer les attentes en cours.</div><div class="ttdef"><b>Définition</b> <a href="#l00180">libloki-fifo.c:180</a></div></div>
+<div class="ttc" id="agroup__gLokiFIFO_html_gac4ae3143767c6ead1aaae6b0bdb3e463"><div class="ttname"><a href="group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463">LokiFIFO_get_producer_item</a></div><div class="ttdeci">void * LokiFIFO_get_producer_item(LokiFIFO *self)</div><div class="ttdoc">Obtenir une référence vers l&#39;élément courant en écriture.</div><div class="ttdef"><b>Définition</b> <a href="#l00106">libloki-fifo.c:106</a></div></div>
+<div class="ttc" id="alibloki-fifo_8h_html"><div class="ttname"><a href="libloki-fifo_8h.html">libloki-fifo.h</a></div></div>
+<div class="ttc" id="astructLokiFIFORecord_html"><div class="ttname"><a href="structLokiFIFORecord.html">LokiFIFORecord</a></div><div class="ttdoc">Représentation d&#39;un enregistrement dans une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00047">libloki-fifo.c:47</a></div></div>
+<div class="ttc" id="astructLokiFIFORecord_html_a2d6b2e1c1429c0c56dff95ca8546b8e3"><div class="ttname"><a href="structLokiFIFORecord.html#a2d6b2e1c1429c0c56dff95ca8546b8e3">LokiFIFORecord::next</a></div><div class="ttdeci">LokiFIFORecord * next</div><div class="ttdoc">Un pointeur vers le prochain enregistrement dans la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00051">libloki-fifo.c:51</a></div></div>
+<div class="ttc" id="astructLokiFIFORecord_html_a7c3e3817b82b5e8d1ffa72466dd17e04"><div class="ttname"><a href="structLokiFIFORecord.html#a7c3e3817b82b5e8d1ffa72466dd17e04">LokiFIFORecord::item</a></div><div class="ttdeci">char item[0]</div><div class="ttdoc">Les données logées dans cet enregistrement.</div><div class="ttdef"><b>Définition</b> <a href="#l00056">libloki-fifo.c:56</a></div></div>
+<div class="ttc" id="astructLokiFIFORecord_html_abdcaa96af3efd1344144567bff3be2dd"><div class="ttname"><a href="structLokiFIFORecord.html#abdcaa96af3efd1344144567bff3be2dd">LokiFIFORecord::status</a></div><div class="ttdeci">volatile int status</div><div class="ttdoc">Le masque indiquant l&#39;état de lecture de cet enregistrement par les consommateurs de la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00049">libloki-fifo.c:49</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d&#39;une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_a0b8567cedd77bd8962713393a7a1d2ab"><div class="ttname"><a href="structLokiFIFO.html#a0b8567cedd77bd8962713393a7a1d2ab">LokiFIFO::consumer_records</a></div><div class="ttdeci">LokiFIFORecord * consumer_records[0]</div><div class="ttdoc">Pointeurs vers les records courants en lecture pour chaque consommateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00039">libloki-fifo.c:39</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_a318ce7f7b2fc67583e2d6babd043920f"><div class="ttname"><a href="structLokiFIFO.html#a318ce7f7b2fc67583e2d6babd043920f">LokiFIFO::producer_record</a></div><div class="ttdeci">LokiFIFORecord * producer_record</div><div class="ttdoc">Un pointeur vers le record courant en écriture.</div><div class="ttdef"><b>Définition</b> <a href="#l00034">libloki-fifo.c:34</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_a70f3e2a889af770d607375a207896157"><div class="ttname"><a href="structLokiFIFO.html#a70f3e2a889af770d607375a207896157">LokiFIFO::pulled</a></div><div class="ttdeci">pthread_cond_t pulled</div><div class="ttdoc">Variable conditionnelle indiquant qu&#39;un élément vient d&#39;être retiré de la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00032">libloki-fifo.c:32</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_a77c20935df935fb3f071889db55240a2"><div class="ttname"><a href="structLokiFIFO.html#a77c20935df935fb3f071889db55240a2">LokiFIFO::all_read</a></div><div class="ttdeci">int all_read</div><div class="ttdoc">Le masque binaire indiquant que tous les consommateurs ont lu le dernier élément.</div><div class="ttdef"><b>Définition</b> <a href="#l00024">libloki-fifo.c:24</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_a9e9b80f18213060cadad39858606f03f"><div class="ttname"><a href="structLokiFIFO.html#a9e9b80f18213060cadad39858606f03f">LokiFIFO::mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdoc">Un mutex pour protéger les accès concurrents à la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00028">libloki-fifo.c:28</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_ab6cdec00d1b328885bec58dd109632a1"><div class="ttname"><a href="structLokiFIFO.html#ab6cdec00d1b328885bec58dd109632a1">LokiFIFO::pushed</a></div><div class="ttdeci">pthread_cond_t pushed</div><div class="ttdoc">Variable conditionnelle indiquant qu&#39;un élément vient d&#39;être ajouté à la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="#l00030">libloki-fifo.c:30</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_af0bcda30be22f45d41b446144967fc32"><div class="ttname"><a href="structLokiFIFO.html#af0bcda30be22f45d41b446144967fc32">LokiFIFO::item_size</a></div><div class="ttdeci">size_t item_size</div><div class="ttdoc">La taille d&#39;un élément, en octets.</div><div class="ttdef"><b>Définition</b> <a href="#l00022">libloki-fifo.c:22</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html_af65fe20699fa1ec6d776c41834b8a959"><div class="ttname"><a href="structLokiFIFO.html#af65fe20699fa1ec6d776c41834b8a959">LokiFIFO::abort</a></div><div class="ttdeci">volatile bool abort</div><div class="ttdoc">Faut-il interrompre l&#39;opération en cours.</div><div class="ttdef"><b>Définition</b> <a href="#l00026">libloki-fifo.c:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

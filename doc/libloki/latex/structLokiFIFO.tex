@@ -1,0 +1,161 @@
+\doxysection{Référence de la structure Loki\+FIFO}
+\hypertarget{structLokiFIFO}{}\label{structLokiFIFO}\index{LokiFIFO@{LokiFIFO}}
+
+
+Représentation d\textquotesingle{}une FIFO.  
+
+
+
+
+Graphe de collaboration de Loki\+FIFO:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{item\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em La taille d\textquotesingle{}un élément, en octets. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{all\+\_\+read}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire indiquant que tous les consommateurs ont lu le dernier élément. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}
+\begin{DoxyCompactList}\small\item\em Faut-\/il interrompre l\textquotesingle{}opération en cours. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}}
+\begin{DoxyCompactList}\small\item\em Un mutex pour protéger les accès concurrents à la FIFO. \end{DoxyCompactList}\item 
+pthread\+\_\+cond\+\_\+t \doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}}
+\begin{DoxyCompactList}\small\item\em Variable conditionnelle indiquant qu\textquotesingle{}un élément vient d\textquotesingle{}être ajouté à la FIFO. \end{DoxyCompactList}\item 
+pthread\+\_\+cond\+\_\+t \doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}}
+\begin{DoxyCompactList}\small\item\em Variable conditionnelle indiquant qu\textquotesingle{}un élément vient d\textquotesingle{}être retiré de la FIFO. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\+\_\+record}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers le record courant en écriture. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\+\_\+records}} \+[0]
+\begin{DoxyCompactList}\small\item\em Pointeurs vers les records courants en lecture pour chaque consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}une FIFO. 
+
+Le contenu de la FIFO est construit comme une liste cirulaire dont les maillons sont de type \doxylink{structLokiFIFORecord}{Loki\+FIFORecord}. Cette liste circulaire n\textquotesingle{}est pas représentée explicitement dans la structure \doxylink{structLokiFIFO}{Loki\+FIFO}. Elle est allouée à la suite du tableau {\ttfamily \doxylink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\+\_\+records}}. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+
+
+\label{structLokiFIFO_doc-variable-members}
+\Hypertarget{structLokiFIFO_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}\index{LokiFIFO@{LokiFIFO}!abort@{abort}}
+\index{abort@{abort}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{abort}{abort}}
+{\footnotesize\ttfamily \label{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959} 
+volatile bool Loki\+FIFO::\+abort}
+
+
+
+Faut-\/il interrompre l\textquotesingle{}opération en cours. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_a77c20935df935fb3f071889db55240a2}\index{LokiFIFO@{LokiFIFO}!all\_read@{all\_read}}
+\index{all\_read@{all\_read}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{all\_read}{all\_read}}
+{\footnotesize\ttfamily \label{structLokiFIFO_a77c20935df935fb3f071889db55240a2} 
+int Loki\+FIFO::\+all\+\_\+read}
+
+
+
+Le masque binaire indiquant que tous les consommateurs ont lu le dernier élément. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}\index{LokiFIFO@{LokiFIFO}!consumer\_records@{consumer\_records}}
+\index{consumer\_records@{consumer\_records}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{consumer\_records}{consumer\_records}}
+{\footnotesize\ttfamily \label{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab} 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}}\texorpdfstring{$\ast$}{*} Loki\+FIFO::\+consumer\+\_\+records\+[0]}
+
+
+
+Pointeurs vers les records courants en lecture pour chaque consommateur. 
+
+Ce tableau est alloué dans \doxylink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{Loki\+FIFO\+\_\+new} selon le nombre de consommateurs. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}\index{LokiFIFO@{LokiFIFO}!item\_size@{item\_size}}
+\index{item\_size@{item\_size}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{item\_size}{item\_size}}
+{\footnotesize\ttfamily \label{structLokiFIFO_af0bcda30be22f45d41b446144967fc32} 
+size\+\_\+t Loki\+FIFO::\+item\+\_\+size}
+
+
+
+La taille d\textquotesingle{}un élément, en octets. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}\index{LokiFIFO@{LokiFIFO}!mutex@{mutex}}
+\index{mutex@{mutex}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \label{structLokiFIFO_a9e9b80f18213060cadad39858606f03f} 
+pthread\+\_\+mutex\+\_\+t Loki\+FIFO::\+mutex}
+
+
+
+Un mutex pour protéger les accès concurrents à la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00028}{28}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}\index{LokiFIFO@{LokiFIFO}!producer\_record@{producer\_record}}
+\index{producer\_record@{producer\_record}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{producer\_record}{producer\_record}}
+{\footnotesize\ttfamily \label{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f} 
+\doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}}\texorpdfstring{$\ast$}{*} Loki\+FIFO::\+producer\+\_\+record}
+
+
+
+Un pointeur vers le record courant en écriture. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00034}{34}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_a70f3e2a889af770d607375a207896157}\index{LokiFIFO@{LokiFIFO}!pulled@{pulled}}
+\index{pulled@{pulled}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{pulled}{pulled}}
+{\footnotesize\ttfamily \label{structLokiFIFO_a70f3e2a889af770d607375a207896157} 
+pthread\+\_\+cond\+\_\+t Loki\+FIFO::\+pulled}
+
+
+
+Variable conditionnelle indiquant qu\textquotesingle{}un élément vient d\textquotesingle{}être retiré de la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+\Hypertarget{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}\index{LokiFIFO@{LokiFIFO}!pushed@{pushed}}
+\index{pushed@{pushed}!LokiFIFO@{LokiFIFO}}
+\doxysubsubsection{\texorpdfstring{pushed}{pushed}}
+{\footnotesize\ttfamily \label{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1} 
+pthread\+\_\+cond\+\_\+t Loki\+FIFO::\+pushed}
+
+
+
+Variable conditionnelle indiquant qu\textquotesingle{}un élément vient d\textquotesingle{}être ajouté à la FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00030}{30}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-fifo_8c}{libloki-\/fifo.\+c}}\end{DoxyCompactItemize}

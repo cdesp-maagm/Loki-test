@@ -1,0 +1,4 @@
+<map id="LokiModem_get_demod_channels" name="LokiModem_get_demod_channels">
+<area shape="rect" id="node1" title="Lire le nombre de voies du démodulateur." alt="" coords="185,5,364,45"/>
+<area shape="rect" id="node2" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>

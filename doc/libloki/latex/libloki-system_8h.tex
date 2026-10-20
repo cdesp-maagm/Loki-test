@@ -1,0 +1,123 @@
+\doxysection{Référence du fichier libloki-\/system.h}
+\hypertarget{libloki-system_8h}{}\label{libloki-system_8h}\index{libloki-\/system.h@{libloki-\/system.h}}
+{\ttfamily \+\#include "{}libloki-\/modem.\+h"{}}\newline
+{\ttfamily \+\#include "{}libloki-\/fifo.\+h"{}}\newline
+{\ttfamily \+\#include "{}libloki-\/ellipse-\/estimator.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/system.h:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 1
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiSystemSample}{Loki\+System\+Sample}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un échantillon en sortie d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+System\+Config \doxymbox{\hyperlink{group__gLokiSystem_gaaa7e01df6c0f16dd011132c131436414}{Loki\+System\+Config}}
+\begin{DoxyCompactList}\small\item\em Paramètres de configuration d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+typedef struct Loki\+System \doxymbox{\hyperlink{group__gLokiSystem_ga9d2558c9006381cbcd39a82afa901d77}{Loki\+System}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de calcul de déplacement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997}{Loki\+System\+Config\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b}{Loki\+System\+Config\+\_\+del}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0}{Loki\+System\+Config\+\_\+get\+\_\+simulate}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état d\textquotesingle{}activation de la simulation des capteurs de déplacement. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe}{Loki\+System\+Config\+\_\+set\+\_\+simulate}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, bool value)
+\begin{DoxyCompactList}\small\item\em Activer ou désactiver la simulation des capteurs de déplacement. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841}{Loki\+System\+Config\+\_\+get\+\_\+skip}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le temps d\textquotesingle{}attente au démarrage. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5}{Loki\+System\+Config\+\_\+set\+\_\+skip}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un temps d\textquotesingle{}attente au démarrage. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a}{Loki\+System\+Config\+\_\+get\+\_\+scale}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le facteur d\textquotesingle{}échelle de déplacement. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e}{Loki\+System\+Config\+\_\+get\+\_\+wavelength}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur d\textquotesingle{}onde de la diode laser. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3}{Loki\+System\+Config\+\_\+set\+\_\+wavelength}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Écrire la longueur d\textquotesingle{}onde de la diode laser. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb}{Loki\+System\+Config\+\_\+get\+\_\+reflections}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de réflexions supposé. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f}{Loki\+System\+Config\+\_\+set\+\_\+reflections}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, unsigned value)
+\begin{DoxyCompactList}\small\item\em Écrire le nombre de réflexions supposé. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b}{Loki\+System\+Config\+\_\+get\+\_\+cavity\+\_\+index}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gab04647c634e62c7452730d95d525af43}{Loki\+System\+Config\+\_\+set\+\_\+cavity\+\_\+index}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Écrire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46}{Loki\+System\+Config\+\_\+get\+\_\+distance\+\_\+unit}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}unité du déplacement calculé. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700}{Loki\+System\+Config\+\_\+set\+\_\+distance\+\_\+unit}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, char value)
+\begin{DoxyCompactList}\small\item\em Écrire l\textquotesingle{}unité du déplacement calculé. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+name}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+name}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Affecter un nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+initial\+\_\+radius}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+initial\+\_\+radius}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire les paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+params}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const float \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Affecter des paramètres pour le filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+bandwidth}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la bande passante du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+bandwidth}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un bande passante pour le filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+attenuation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}atténuation du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+attenuation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter une atténuation pour le filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter une longueur au filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+decimation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le facteur de décimation du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+decimation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter un facteur de décimation au filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_gada0540089bb3af061badae98523ed1d5}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a}{Loki\+System\+Config\+\_\+set\+\_\+time\+\_\+constants}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const float \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Affecter un tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga84434fa604921c7470b81c375921807f}{Loki\+System\+\_\+new}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}config, \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}modem)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau système. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f}{Loki\+System\+\_\+del}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un système. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b}{Loki\+System\+\_\+get\+\_\+config}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la configuration d\textquotesingle{}un système. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783}{Loki\+System\+\_\+get\+\_\+modem}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le modem utilisé par ce système. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8}{Loki\+System\+\_\+get\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage en sortie de ce système. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f}{Loki\+System\+\_\+displacement\+\_\+reset}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Mettre à zéro le déplacement calculé. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}{Loki\+System\+\_\+start\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self, int32\+\_\+t channels, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}modem\+\_\+out, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}disp\+\_\+out, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer l\textquotesingle{}acquisition et le traitement. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga5b0a59178eb774740066325c1b178397}{Loki\+System\+\_\+stop\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition et le traitement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600}{Loki\+System\+\_\+is\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8}{Loki\+System\+\_\+get\+\_\+ellipse}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la dernière ellipse estimée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-system_8h_source}{libloki-\/system.\+h}}.
+

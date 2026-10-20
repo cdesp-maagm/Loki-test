@@ -1,0 +1,6 @@
+<map id="LokiRecorder" name="LokiRecorder">
+<area shape="rect" id="node1" title="Représentation d&#39;un enregistreur de séries temporelles." alt="" coords="62,196,169,221"/>
+<area shape="rect" id="node2" href="$structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles." alt="" coords="5,108,119,133"/>
+<area shape="rect" id="node3" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="143,108,221,133"/>
+<area shape="rect" id="node4" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="120,5,244,31"/>
+</map>

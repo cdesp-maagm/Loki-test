@@ -1,0 +1,4 @@
+<map id="LokiMSeedConfig_del" name="LokiMSeedConfig_del">
+<area shape="rect" id="node1" title="Détruire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="221,5,383,31"/>
+<area shape="rect" id="node2" href="$group__gLokiMSeed.html#ga440adb8f5fed77f82de38c980222dc53" title="Construire une configuration d&#39;enregistrement de données au format miniSEED." alt="" coords="5,5,173,31"/>
+</map>

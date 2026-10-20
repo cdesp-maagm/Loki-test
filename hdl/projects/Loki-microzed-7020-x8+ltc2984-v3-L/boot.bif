@@ -1,0 +1,6 @@
+
+image : {
+    [bootloader]build/sdk/fsbl/Release/fsbl.elf
+    build/system.bit
+    ../../../os/build/microzed/tmp/deploy/images/microzed/u-boot.elf
+}

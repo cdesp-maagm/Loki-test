@@ -1,0 +1,11 @@
+<map id="LokiRecorder_work" name="LokiRecorder_work">
+<area shape="rect" id="node1" title="Enregistrer les données." alt="" coords="5,153,152,179"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="200,5,415,31"/>
+<area shape="rect" id="node3" href="$group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="252,55,363,80"/>
+<area shape="rect" id="node4" href="$group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c" title="Fermer un formateur de séries temporelles." alt="" coords="230,104,385,129"/>
+<area shape="rect" id="node5" href="$group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3" title="Enregistrer un paquet de données." alt="" coords="231,153,383,179"/>
+<area shape="rect" id="node6" href="$group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="224,203,391,228"/>
+<area shape="rect" id="node8" href="$group__gLokiTime.html#gaf9184c3ae04d720de377b3f7ad426976" title="Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp." alt="" coords="222,252,393,277"/>
+<area shape="rect" id="node9" href="$group__gLokiTime.html#gaab40a41437974e36b8ed59281177b32a" title="Calculer le nombre total de secondes dans un timestamp." alt="" coords="236,301,379,327"/>
+<area shape="rect" id="node7" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="463,203,640,228"/>
+</map>

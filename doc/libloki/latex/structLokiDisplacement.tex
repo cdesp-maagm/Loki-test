@@ -1,0 +1,255 @@
+\doxysection{Référence de la structure Loki\+Displacement}
+\hypertarget{structLokiDisplacement}{}\label{structLokiDisplacement}\index{LokiDisplacement@{LokiDisplacement}}
+
+
+Représentation d\textquotesingle{}un calculateur de déplacement.  
+
+
+
+
+Graphe de collaboration de Loki\+Displacement:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \doxymbox{\hyperlink{structLokiDisplacement_a5292874efb04d0f9272bc2946b40580f}{ellipse}}
+\begin{DoxyCompactList}\small\item\em La dernière ellipse calculée, après lissage. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiDisplacement_a076979b0a8bcef0a2cacb8499bd51d80}{estimator}}
+\begin{DoxyCompactList}\small\item\em Le filtre adaptatif d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiDisplacement_adc250198fb11d039a244246c9e9a54c8}{filter}}
+\begin{DoxyCompactList}\small\item\em Le filtre passe-\/bas de suppression du déplacement fictif. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{structLokiDisplacement_a6eca33cee0df8e9d8a5a1c024a78157c}{estimator\+\_\+throttle}}
+\begin{DoxyCompactList}\small\item\em Périodicité du calcul des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{structLokiDisplacement_ad5665d09bf93fd28627d0e6211885912}{estimator\+\_\+cnt}}
+\begin{DoxyCompactList}\small\item\em Compteur pour l\textquotesingle{}activation du calcul des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a1f22d38dd5646b7f19e6e228942e7734}{phi\+\_\+prev}}
+\begin{DoxyCompactList}\small\item\em La phase précédente, pour le déroulage de phase. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_aaf9119625b611c1cff8c4716d65cbca7}{phi\+\_\+filt}}
+\begin{DoxyCompactList}\small\item\em La phase après filtrage du déplacement fictif. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a954e15c139fc2a1813e18a2a2b3b8fe1}{phi\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em La phase de référence correspondant à un déplacement nul. \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{structLokiDisplacement_ab84e6c174dcbd89069611395b35491cd}{phi\+\_\+turns}}
+\begin{DoxyCompactList}\small\item\em Le nombre de tours effectués lors du déroulage de phase. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a55d07c368ae3072d9f64d3851aa1d64f}{alpha\+\_\+prev}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}angle précédent de l\textquotesingle{}ellipse, pour détecter les sauts de pi/\+2. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a72cd5368238e215ae275dd357aa4cf04}{alpha\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}angle de référence pour corriger l\textquotesingle{}angle de l\textquotesingle{}ellipse en cas de saut. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a0d9ffacda9d2cd3d8ae1d4d45ba8c503}{scale}}
+\begin{DoxyCompactList}\small\item\em Le facteur de conversion d\textquotesingle{}angle en distance. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a8fe5bb1ccabd95d526b29eb63f7296a6}{iir\+\_\+a}} \+[3]
+\begin{DoxyCompactList}\small\item\em Les coefficients a des filtres de lissage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiDisplacement_a0510ea283dd03af6e4cc810a5a1521c7}{iir\+\_\+b}} \+[3]
+\begin{DoxyCompactList}\small\item\em Les coefficients b des filtres de lissage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un calculateur de déplacement. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00012}{12}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+
+
+\label{structLokiDisplacement_doc-variable-members}
+\Hypertarget{structLokiDisplacement_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiDisplacement_a55d07c368ae3072d9f64d3851aa1d64f}\index{LokiDisplacement@{LokiDisplacement}!alpha\_prev@{alpha\_prev}}
+\index{alpha\_prev@{alpha\_prev}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{alpha\_prev}{alpha\_prev}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a55d07c368ae3072d9f64d3851aa1d64f} 
+float Loki\+Displacement::\+alpha\+\_\+prev}
+
+
+
+L\textquotesingle{}angle précédent de l\textquotesingle{}ellipse, pour détecter les sauts de pi/\+2. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a72cd5368238e215ae275dd357aa4cf04}\index{LokiDisplacement@{LokiDisplacement}!alpha\_ref@{alpha\_ref}}
+\index{alpha\_ref@{alpha\_ref}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{alpha\_ref}{alpha\_ref}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a72cd5368238e215ae275dd357aa4cf04} 
+float Loki\+Displacement::\+alpha\+\_\+ref}
+
+
+
+L\textquotesingle{}angle de référence pour corriger l\textquotesingle{}angle de l\textquotesingle{}ellipse en cas de saut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00034}{34}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a5292874efb04d0f9272bc2946b40580f}\index{LokiDisplacement@{LokiDisplacement}!ellipse@{ellipse}}
+\index{ellipse@{ellipse}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{ellipse}{ellipse}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a5292874efb04d0f9272bc2946b40580f} 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} Loki\+Displacement::\+ellipse}
+
+
+
+La dernière ellipse calculée, après lissage. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00014}{14}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a076979b0a8bcef0a2cacb8499bd51d80}\index{LokiDisplacement@{LokiDisplacement}!estimator@{estimator}}
+\index{estimator@{estimator}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{estimator}{estimator}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a076979b0a8bcef0a2cacb8499bd51d80} 
+\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}\texorpdfstring{$\ast$}{*} Loki\+Displacement::\+estimator}
+
+
+
+Le filtre adaptatif d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00016}{16}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_ad5665d09bf93fd28627d0e6211885912}\index{LokiDisplacement@{LokiDisplacement}!estimator\_cnt@{estimator\_cnt}}
+\index{estimator\_cnt@{estimator\_cnt}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{estimator\_cnt}{estimator\_cnt}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_ad5665d09bf93fd28627d0e6211885912} 
+unsigned Loki\+Displacement::\+estimator\+\_\+cnt}
+
+
+
+Compteur pour l\textquotesingle{}activation du calcul des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a6eca33cee0df8e9d8a5a1c024a78157c}\index{LokiDisplacement@{LokiDisplacement}!estimator\_throttle@{estimator\_throttle}}
+\index{estimator\_throttle@{estimator\_throttle}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{estimator\_throttle}{estimator\_throttle}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a6eca33cee0df8e9d8a5a1c024a78157c} 
+unsigned Loki\+Displacement::\+estimator\+\_\+throttle}
+
+
+
+Périodicité du calcul des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_adc250198fb11d039a244246c9e9a54c8}\index{LokiDisplacement@{LokiDisplacement}!filter@{filter}}
+\index{filter@{filter}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{filter}{filter}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_adc250198fb11d039a244246c9e9a54c8} 
+\doxymbox{\hyperlink{structLokiFIRFilter}{Loki\+FIRFilter}}\texorpdfstring{$\ast$}{*} Loki\+Displacement::\+filter}
+
+
+
+Le filtre passe-\/bas de suppression du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00018}{18}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a8fe5bb1ccabd95d526b29eb63f7296a6}\index{LokiDisplacement@{LokiDisplacement}!iir\_a@{iir\_a}}
+\index{iir\_a@{iir\_a}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{iir\_a}{iir\_a}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a8fe5bb1ccabd95d526b29eb63f7296a6} 
+float Loki\+Displacement::\+iir\+\_\+a\+[3]}
+
+
+
+Les coefficients a des filtres de lissage des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00038}{38}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a0510ea283dd03af6e4cc810a5a1521c7}\index{LokiDisplacement@{LokiDisplacement}!iir\_b@{iir\_b}}
+\index{iir\_b@{iir\_b}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{iir\_b}{iir\_b}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a0510ea283dd03af6e4cc810a5a1521c7} 
+float Loki\+Displacement::\+iir\+\_\+b\+[3]}
+
+
+
+Les coefficients b des filtres de lissage des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00040}{40}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_aaf9119625b611c1cff8c4716d65cbca7}\index{LokiDisplacement@{LokiDisplacement}!phi\_filt@{phi\_filt}}
+\index{phi\_filt@{phi\_filt}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{phi\_filt}{phi\_filt}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_aaf9119625b611c1cff8c4716d65cbca7} 
+float Loki\+Displacement::\+phi\+\_\+filt}
+
+
+
+La phase après filtrage du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a1f22d38dd5646b7f19e6e228942e7734}\index{LokiDisplacement@{LokiDisplacement}!phi\_prev@{phi\_prev}}
+\index{phi\_prev@{phi\_prev}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{phi\_prev}{phi\_prev}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a1f22d38dd5646b7f19e6e228942e7734} 
+float Loki\+Displacement::\+phi\+\_\+prev}
+
+
+
+La phase précédente, pour le déroulage de phase. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a954e15c139fc2a1813e18a2a2b3b8fe1}\index{LokiDisplacement@{LokiDisplacement}!phi\_ref@{phi\_ref}}
+\index{phi\_ref@{phi\_ref}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{phi\_ref}{phi\_ref}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a954e15c139fc2a1813e18a2a2b3b8fe1} 
+float Loki\+Displacement::\+phi\+\_\+ref}
+
+
+
+La phase de référence correspondant à un déplacement nul. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00028}{28}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_ab84e6c174dcbd89069611395b35491cd}\index{LokiDisplacement@{LokiDisplacement}!phi\_turns@{phi\_turns}}
+\index{phi\_turns@{phi\_turns}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{phi\_turns}{phi\_turns}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_ab84e6c174dcbd89069611395b35491cd} 
+int32\+\_\+t Loki\+Displacement::\+phi\+\_\+turns}
+
+
+
+Le nombre de tours effectués lors du déroulage de phase. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00030}{30}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+\Hypertarget{structLokiDisplacement_a0d9ffacda9d2cd3d8ae1d4d45ba8c503}\index{LokiDisplacement@{LokiDisplacement}!scale@{scale}}
+\index{scale@{scale}!LokiDisplacement@{LokiDisplacement}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily \label{structLokiDisplacement_a0d9ffacda9d2cd3d8ae1d4d45ba8c503} 
+float Loki\+Displacement::\+scale}
+
+
+
+Le facteur de conversion d\textquotesingle{}angle en distance. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-displacement_8c_source_l00036}{36}} du fichier \doxymbox{\hyperlink{libloki-displacement_8c_source}{libloki-\/displacement.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-displacement_8c}{libloki-\/displacement.\+c}}\end{DoxyCompactItemize}

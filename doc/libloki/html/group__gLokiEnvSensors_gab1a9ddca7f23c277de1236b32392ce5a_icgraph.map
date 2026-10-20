@@ -1,0 +1,5 @@
+<map id="LokiEnvSensors_set_reg" name="LokiEnvSensors_set_reg">
+<area shape="rect" id="node1" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="215,35,393,60"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga96d2d529c200e14e2056cb6a07221b51" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="7,5,165,31"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga5aeffec7e9fcf6f043d089e3ad157308" title="Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition." alt="" coords="5,55,167,95"/>
+</map>

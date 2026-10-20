@@ -1,0 +1,15 @@
+<map id="LokiDisplacement_work" name="LokiDisplacement_work">
+<area shape="rect" id="node1" title="Calculer le déplacement courant." alt="" coords="5,127,184,152"/>
+<area shape="rect" id="node2" href="$group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9" title="Calculer l&#39;angle correspondant à un point d&#39;une ellipse." alt="" coords="248,5,411,31"/>
+<area shape="rect" id="node3" href="$group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e" title="Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation." alt="" coords="251,55,408,95"/>
+<area shape="rect" id="node4" href="$group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="252,119,407,159"/>
+<area shape="rect" id="node5" href="$group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5" title="Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées." alt="" coords="232,184,427,209"/>
+<area shape="rect" id="node6" href="$group__gLokiFIRFilter.html#ga59635f9d90959a326458c670354d088b" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="258,233,401,259"/>
+<area shape="rect" id="node7" href="$group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="491,85,573,111"/>
+<area shape="rect" id="node8" href="$group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="475,135,589,160"/>
+<area shape="rect" id="node9" href="$group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="475,184,589,209"/>
+<area shape="rect" id="node10" href="$group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="477,233,587,259"/>
+<area shape="rect" id="node11" href="$group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="489,283,575,308"/>
+<area shape="rect" id="node12" href="$group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="487,332,577,357"/>
+<area shape="rect" id="node13" href="$group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="477,381,587,407"/>
+</map>

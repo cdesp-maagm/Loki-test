@@ -1,0 +1,68 @@
+\doxysection{Référence du fichier libloki-\/consumer.c}
+\hypertarget{libloki-consumer_8c}{}\label{libloki-consumer_8c}\index{libloki-\/consumer.c@{libloki-\/consumer.c}}
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$pthread.\+h$>$}\newline
+{\ttfamily \+\#include $<$signal.\+h$>$}\newline
+{\ttfamily \+\#include $<$inttypes.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/consumer.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}}
+\begin{DoxyCompactList}\small\item\em Définition d\textquotesingle{}un consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{libloki-consumer_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\begin{DoxyCompactList}\small\item\em Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}{Loki\+Consumer\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire un consommateur. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}{Loki\+Consumer\+\_\+work}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Lire les données de la FIFO. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}in, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer un consommateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{Loki\+Consumer\+\_\+stop}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter un consommateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319}{Loki\+Consumer\+\_\+del}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+
+
+\label{libloki-consumer_8c_doc-define-members}
+\Hypertarget{libloki-consumer_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{libloki-consumer_8c_a369266c24eacffb87046522897a570d5}\index{libloki-\/consumer.c@{libloki-\/consumer.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/consumer.c@{libloki-\/consumer.c}}
+\doxysubsubsection{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \label{libloki-consumer_8c_a369266c24eacffb87046522897a570d5} 
+\+\#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+
+
+Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00003}{3}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+

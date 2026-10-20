@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-ellipse-estimator.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-ellipse-estimator.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-ellipse-estimator_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structLokiEllipseEstimator.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">   13</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">   19</a></span>    LokiEllipseEstimatorInterface <a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga1e625c5268fb3d3430d741de55c44bc0">   22</a></span><a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *<a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga1e625c5268fb3d3430d741de55c44bc0">LokiEllipseEstimator_new</a>(<span class="keywordtype">float</span> initial_radius, <span class="keyword">const</span> <span class="keywordtype">float</span> params[]) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa">   26</a></span><a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *<a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa">LokiEllipseEstimator_new_with_implementation</a>(<span class="keyword">const</span> LokiEllipseEstimatorInterface *impl, <span class="keywordtype">float</span> initial_radius, <span class="keyword">const</span> <span class="keywordtype">float</span> params[]) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>));</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a> = impl-&gt;new(initial_radius, params);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a>(self);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    memcpy(&amp;self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>, impl, <span class="keyword">sizeof</span>(LokiEllipseEstimatorInterface));</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2">   43</a></span><a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *<a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2">LokiEllipseEstimator_clone</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *other) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>));</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    memcpy(self, other, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a> = self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>.clone(other-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span> (!self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a>(self);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5">LokiEllipseEstimator_work</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>.work(self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>, x, y);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898">   64</a></span><span class="keywordtype">float</span> *<a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898">LokiEllipseEstimator_get_state</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>.get_state(self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">   68</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">impl</a>.del(self-&gt;<a class="code hl_variable" href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">instance</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    free(self);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga136afdab868b56c531d462ed5e587cf5"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5">LokiEllipseEstimator_work</a></div><div class="ttdeci">void LokiEllipseEstimator_work(LokiEllipseEstimator *self, float x, float y)</div><div class="ttdoc">Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées.</div><div class="ttdef"><b>Définition</b> <a href="#l00060">libloki-ellipse-estimator.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga1e625c5268fb3d3430d741de55c44bc0"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga1e625c5268fb3d3430d741de55c44bc0">LokiEllipseEstimator_new</a></div><div class="ttdeci">LokiEllipseEstimator * LokiEllipseEstimator_new(float initial_radius, const float params[])</div><div class="ttdoc">Construire un estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00022">libloki-ellipse-estimator.c:22</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga3bf89eb128ef2dfcbdf1921060467898"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898">LokiEllipseEstimator_get_state</a></div><div class="ttdeci">float * LokiEllipseEstimator_get_state(LokiEllipseEstimator *self)</div><div class="ttdoc">Retourner l&#39;état courant de l&#39;estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00064">libloki-ellipse-estimator.c:64</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga77e0d9338c0eddbf5f3d79374f8a77fa"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa">LokiEllipseEstimator_new_with_implementation</a></div><div class="ttdeci">LokiEllipseEstimator * LokiEllipseEstimator_new_with_implementation(const LokiEllipseEstimatorInterface *impl, float initial_radius, const float params[])</div><div class="ttdoc">Construire un estimateur avec une implémentation donnée.</div><div class="ttdef"><b>Définition</b> <a href="#l00026">libloki-ellipse-estimator.c:26</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga8913e5508a4b3cac1c5552f1d404a9b2"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2">LokiEllipseEstimator_clone</a></div><div class="ttdeci">LokiEllipseEstimator * LokiEllipseEstimator_clone(const LokiEllipseEstimator *other)</div><div class="ttdoc">Construire un clone d&#39;un estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00043">libloki-ellipse-estimator.c:43</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga96a80f684b2cf60d831ad7207f21d298"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a></div><div class="ttdeci">void LokiEllipseEstimator_del(LokiEllipseEstimator *self)</div><div class="ttdoc">Détruire un estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00068">libloki-ellipse-estimator.c:68</a></div></div>
+<div class="ttc" id="alibloki-ellipse-estimator_8h_html"><div class="ttname"><a href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html"><div class="ttname"><a href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a></div><div class="ttdoc">Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="#l00011">libloki-ellipse-estimator.c:11</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html_a3e708973d2e6312f6ff2e7a221e610d0"><div class="ttname"><a href="structLokiEllipseEstimator.html#a3e708973d2e6312f6ff2e7a221e610d0">LokiEllipseEstimator::instance</a></div><div class="ttdeci">void * instance</div><div class="ttdoc">Les données spécifiques à l&#39;implémentation de l&#39;estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00013">libloki-ellipse-estimator.c:13</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html_a52453ed736ee4cbcac1fdd498d161858"><div class="ttname"><a href="structLokiEllipseEstimator.html#a52453ed736ee4cbcac1fdd498d161858">LokiEllipseEstimator::impl</a></div><div class="ttdeci">LokiEllipseEstimatorInterface impl</div><div class="ttdoc">L&#39;implémentation des méthodes de cet estimateur.</div><div class="ttdef"><b>Définition</b> <a href="#l00019">libloki-ellipse-estimator.c:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

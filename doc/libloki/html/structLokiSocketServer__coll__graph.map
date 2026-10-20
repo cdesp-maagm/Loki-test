@@ -1,0 +1,5 @@
+<map id="LokiSocketServer" name="LokiSocketServer">
+<area shape="rect" id="node1" title="Représentation d&#39;un serveur de données." alt="" coords="5,196,140,221"/>
+<area shape="rect" id="node2" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="33,108,112,133"/>
+<area shape="rect" id="node3" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="11,5,135,31"/>
+</map>

@@ -1,0 +1,41 @@
+\doxysection{libloki-\/time.h}
+\hypertarget{libloki-time_8h_source}{}\label{libloki-time_8h_source}\index{libloki-\/time.h@{libloki-\/time.h}}
+\doxymbox{\hyperlink{libloki-time_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_TIME\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ LIBLOKI\_TIME\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00017}\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{00017}}\ \textcolor{keyword}{typedef}\ uint64\_t\ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}};}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00020}\doxymbox{\hyperlink{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4}{00020}}\ \textcolor{keyword}{typedef}\ int64\_t\ \ \doxymbox{\hyperlink{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4}{LokiTimeDelta}};}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00023}\doxymbox{\hyperlink{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}{00023}}\ \textcolor{preprocessor}{\#define\ TIMESTAMP\_SEC\ 1000000000}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00026}\doxymbox{\hyperlink{group__gLokiTime_ga991afc2a69e3e5ff2475202bcaa5a284}{00026}}\ \textcolor{preprocessor}{\#define\ TIMESTAMP\_MS\ \ 1000000}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00033}\doxymbox{\hyperlink{group__gLokiTime_ga8ca611d70fff98658ab83c2e6ad29077}{00033}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ \doxymbox{\hyperlink{group__gLokiTime_ga8ca611d70fff98658ab83c2e6ad29077}{LokiTime\_to\_timestamp}}(\textcolor{keyword}{struct}\ timespec\ ts)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}})ts.tv\_sec\ *\ \doxymbox{\hyperlink{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}{TIMESTAMP\_SEC}}\ +\ (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}})ts.tv\_nsec;}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00042}\doxymbox{\hyperlink{group__gLokiTime_gaab40a41437974e36b8ed59281177b32a}{00042}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ time\_t\ \doxymbox{\hyperlink{group__gLokiTime_gaab40a41437974e36b8ed59281177b32a}{LokiTime\_seconds}}(\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ timestamp)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ timestamp\ /\ \doxymbox{\hyperlink{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}{TIMESTAMP\_SEC}};}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00051}\doxymbox{\hyperlink{group__gLokiTime_gaf9184c3ae04d720de377b3f7ad426976}{00051}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ time\_t\ \doxymbox{\hyperlink{group__gLokiTime_gaf9184c3ae04d720de377b3f7ad426976}{LokiTime\_milliseconds}}(\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ timestamp)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ (timestamp\ /\ \doxymbox{\hyperlink{group__gLokiTime_ga991afc2a69e3e5ff2475202bcaa5a284}{TIMESTAMP\_MS}})\ \%\ 1000;}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00062}\doxymbox{\hyperlink{group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96}{00062}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ \doxymbox{\hyperlink{group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96}{LokiTime\_update}}(\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ ref,\ \textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keywordtype}{float}\ frequency)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ ref\ +\ (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}})\doxymbox{\hyperlink{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}{TIMESTAMP\_SEC}}\ *\ index\ /\ frequency;}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00066}00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-time_8h_source_l00067}00067\ }
+
+\end{DoxyCode}

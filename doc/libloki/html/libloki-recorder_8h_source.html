@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-recorder.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-recorder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-recorder_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef LIBLOKI_RECORDER_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define LIBLOKI_RECORDER_H_</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-fifo_8h.html">libloki-fifo.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="group__gLokiRecorder.html#gade9192ee45215b240cb01c74c83d5128">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> <a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *<a class="code hl_function" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae">LokiRecorder_new</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiRecorder.html#a9fc80d1dbce59b5ec31e57548b00a1b3">filename</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structLokiRecorder.html#a1d6bca3a226f84ec37f82339bd10dc4e">filetype</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiRecorder.html#afd00b906ebc7b3e5951bbc0fe21166c8">max_channels</a>, int32_t <a class="code hl_variable" href="structLokiRecorder.html#aa1f2fad80e1728976bf7cc1300111805">channels</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiRecorder.html#abc75d5f39bafdac8a0c3de5dfc646c85">sample_size</a>, <span class="keywordtype">float</span> <a class="code hl_variable" href="structLokiRecorder.html#ac3e59b5fd45b119b6b83b48581d45156">sampling_frequency</a>, <span class="keywordtype">float</span> duration, <span class="keywordtype">float</span> duration_per_file, <span class="keywordtype">void</span> *config);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">char</span> *<a class="code hl_function" href="group__gLokiRecorder.html#gab0cf8ecbf4d7485f468a54f4f19ac9bb">LokiRecorder_get_filename</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__gLokiRecorder.html#ga4c4c75b9e574887bea2605e78df3a4aa">LokiRecorder_get_channel_count</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e">LokiRecorder_start</a>(<a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self, <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *<a class="code hl_variable" href="structLokiRecorder.html#aa467b2260da34bd08b7b0a1e226ae5f0">in</a>, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structLokiRecorder.html#a89d4667439b403fe453795d90c6456c2">cid</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__gLokiRecorder.html#gaa45a1fc3757fe0ff2226e05661ea49a4">LokiRecorder_is_recording</a>(<a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9">LokiRecorder_wait</a>(<a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de">LokiRecorder_stop</a>(<a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550">LokiRecorder_del</a>(<a class="code hl_struct" href="structLokiRecorder.html">LokiRecorder</a> *self);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_ga2065789d6a43516492fd3540ed9f251e"><div class="ttname"><a href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e">LokiRecorder_start</a></div><div class="ttdeci">int LokiRecorder_start(LokiRecorder *self, LokiFIFO *in, size_t cid)</div><div class="ttdoc">Démarrer l&#39;enregistrement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00231">libloki-recorder.c:231</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_ga4c4c75b9e574887bea2605e78df3a4aa"><div class="ttname"><a href="group__gLokiRecorder.html#ga4c4c75b9e574887bea2605e78df3a4aa">LokiRecorder_get_channel_count</a></div><div class="ttdeci">size_t LokiRecorder_get_channel_count(const LokiRecorder *self)</div><div class="ttdoc">Lire le nombre de voies gérées par un enregistreur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00144">libloki-recorder.c:144</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_ga8b7109b9e203e0f4e51346dcf6f36550"><div class="ttname"><a href="group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550">LokiRecorder_del</a></div><div class="ttdeci">void LokiRecorder_del(LokiRecorder *self)</div><div class="ttdoc">Détruire un enregistreur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00284">libloki-recorder.c:284</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_gaa45a1fc3757fe0ff2226e05661ea49a4"><div class="ttname"><a href="group__gLokiRecorder.html#gaa45a1fc3757fe0ff2226e05661ea49a4">LokiRecorder_is_recording</a></div><div class="ttdeci">bool LokiRecorder_is_recording(LokiRecorder *self)</div><div class="ttdoc">Lire l&#39;état d&#39;un enregistreur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00239">libloki-recorder.c:239</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_gab0cf8ecbf4d7485f468a54f4f19ac9bb"><div class="ttname"><a href="group__gLokiRecorder.html#gab0cf8ecbf4d7485f468a54f4f19ac9bb">LokiRecorder_get_filename</a></div><div class="ttdeci">char * LokiRecorder_get_filename(const LokiRecorder *self)</div><div class="ttdoc">Lire le nom des fichiers gérés par un enregistreur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00140">libloki-recorder.c:140</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_gad51a013ed81570ffef5517d88b8f30de"><div class="ttname"><a href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de">LokiRecorder_stop</a></div><div class="ttdeci">void LokiRecorder_stop(LokiRecorder *self)</div><div class="ttdoc">Arrêter l&#39;enregistrement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00275">libloki-recorder.c:275</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_gae6fec426bf7eeb871c675c6c7749feae"><div class="ttname"><a href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae">LokiRecorder_new</a></div><div class="ttdeci">LokiRecorder * LokiRecorder_new(const char *filename, const char *filetype, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency, float duration, float duration_per_file, void *config)</div><div class="ttdoc">Construire un enregistreur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00098">libloki-recorder.c:98</a></div></div>
+<div class="ttc" id="agroup__gLokiRecorder_html_gafd4447bb457336f3bd5d2a61e2d02be9"><div class="ttname"><a href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9">LokiRecorder_wait</a></div><div class="ttdeci">void LokiRecorder_wait(LokiRecorder *self)</div><div class="ttdoc">Attendre la fin de l&#39;enregistrement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00262">libloki-recorder.c:262</a></div></div>
+<div class="ttc" id="alibloki-fifo_8h_html"><div class="ttname"><a href="libloki-fifo_8h.html">libloki-fifo.h</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d&#39;une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html"><div class="ttname"><a href="structLokiRecorder.html">LokiRecorder</a></div><div class="ttdoc">Représentation d&#39;un enregistreur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00020">libloki-recorder.c:20</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_a1d6bca3a226f84ec37f82339bd10dc4e"><div class="ttname"><a href="structLokiRecorder.html#a1d6bca3a226f84ec37f82339bd10dc4e">LokiRecorder::filetype</a></div><div class="ttdeci">char * filetype</div><div class="ttdoc">Le format des fichiers de destination (&quot;raw&quot; ou &quot;mseed&quot;).</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00024">libloki-recorder.c:24</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_a89d4667439b403fe453795d90c6456c2"><div class="ttname"><a href="structLokiRecorder.html#a89d4667439b403fe453795d90c6456c2">LokiRecorder::cid</a></div><div class="ttdeci">size_t cid</div><div class="ttdoc">Le numéro de consommateur de cette instance dans la FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00046">libloki-recorder.c:46</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_a9fc80d1dbce59b5ec31e57548b00a1b3"><div class="ttname"><a href="structLokiRecorder.html#a9fc80d1dbce59b5ec31e57548b00a1b3">LokiRecorder::filename</a></div><div class="ttdeci">char * filename</div><div class="ttdoc">Le nom de base des fichiers de destination (sans extension).</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00022">libloki-recorder.c:22</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_aa1f2fad80e1728976bf7cc1300111805"><div class="ttname"><a href="structLokiRecorder.html#aa1f2fad80e1728976bf7cc1300111805">LokiRecorder::channels</a></div><div class="ttdeci">int32_t channels</div><div class="ttdoc">Un masque indiquant quelles voies enregistrer.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00030">libloki-recorder.c:30</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_aa467b2260da34bd08b7b0a1e226ae5f0"><div class="ttname"><a href="structLokiRecorder.html#aa467b2260da34bd08b7b0a1e226ae5f0">LokiRecorder::in</a></div><div class="ttdeci">LokiFIFO * in</div><div class="ttdoc">La FIFO contenant les données à enregistrer.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00044">libloki-recorder.c:44</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_abc75d5f39bafdac8a0c3de5dfc646c85"><div class="ttname"><a href="structLokiRecorder.html#abc75d5f39bafdac8a0c3de5dfc646c85">LokiRecorder::sample_size</a></div><div class="ttdeci">size_t sample_size</div><div class="ttdoc">La taille d&#39;un échantillon, en octets.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00036">libloki-recorder.c:36</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_ac3e59b5fd45b119b6b83b48581d45156"><div class="ttname"><a href="structLokiRecorder.html#ac3e59b5fd45b119b6b83b48581d45156">LokiRecorder::sampling_frequency</a></div><div class="ttdeci">float sampling_frequency</div><div class="ttdoc">La fréquence d&#39;échantillonnage, en Hz.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00034">libloki-recorder.c:34</a></div></div>
+<div class="ttc" id="astructLokiRecorder_html_afd00b906ebc7b3e5951bbc0fe21166c8"><div class="ttname"><a href="structLokiRecorder.html#afd00b906ebc7b3e5951bbc0fe21166c8">LokiRecorder::max_channels</a></div><div class="ttdeci">size_t max_channels</div><div class="ttdoc">Le nombre maximal de voies que cet enregistreur peut traiter.</div><div class="ttdef"><b>Définition</b> <a href="libloki-recorder_8c_source.html#l00028">libloki-recorder.c:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

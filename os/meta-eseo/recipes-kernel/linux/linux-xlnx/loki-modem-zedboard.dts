@@ -1,0 +1,4 @@
+
+#include "zynq-zed.dts"
+#include "loki-common.dtsi"
+#include "loki-modem.dtsi"

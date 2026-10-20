@@ -1,0 +1,67 @@
+\doxysection{Référence du fichier libloki-\/env-\/sensors.h}
+\hypertarget{libloki-env-sensors_8h}{}\label{libloki-env-sensors_8h}\index{libloki-\/env-\/sensors.h@{libloki-\/env-\/sensors.h}}
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+types.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/env-\/sensors.h:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 1
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiEnvSensorsSample}{Loki\+Env\+Sensors\+Sample}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un échantillon en provenance des capteurs auxiliaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Env\+Sensors \doxymbox{\hyperlink{group__gLokiEnvSensors_ga14689417d7c68408edf52758c9f387e2}{Loki\+Env\+Sensors}}
+\begin{DoxyCompactList}\small\item\em Représentation des capteurs auxiliaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEnvSensors_ga96d2d529c200e14e2056cb6a07221b51}{Loki\+Env\+Sensors\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire un module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gab4a1dc32803805865b0b76fb8ba9f6e9}{Loki\+Env\+Sensors\+\_\+del}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gadda8b640c1f17b5d096896d73e2df06d}{Loki\+Env\+Sensors\+\_\+restart}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Redémarrer le module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_ga30cb4552b6b9b6921e108e3daca8749a}{Loki\+Env\+Sensors\+\_\+get\+\_\+clk\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}horloge du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_ga600792997301c4bed3dbbae28c397e79}{Loki\+Env\+Sensors\+\_\+get\+\_\+channels}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de voies du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_gae7e8ce5a5470bb0d7271e623d45a20fc}{Loki\+Env\+Sensors\+\_\+get\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga5aeffec7e9fcf6f043d089e3ad157308}{Loki\+Env\+Sensors\+\_\+set\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence d\textquotesingle{}échantillonnage au circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gadf0e53d8c7a5580dbeebb2f24216d2f6}{Loki\+Env\+Sensors\+\_\+get\+\_\+packet\+\_\+length\+\_\+max}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur maximale des paquets DMA. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gae4fc28946ee8a1e02238df371861a901}{Loki\+Env\+Sensors\+\_\+get\+\_\+packet\+\_\+length}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur courante d\textquotesingle{}un paquet DMA. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_ga176acbc5974ccb760b50c01f30bf2f26}{Loki\+Env\+Sensors\+\_\+get\+\_\+scaling\+\_\+factor}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le facteur de mise à l\textquotesingle{}échelle des échantillons d\textquotesingle{}une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gae08bb0f35070b8ff5d9d68dda74002d4}{Loki\+Env\+Sensors\+\_\+set\+\_\+scaling\+\_\+factor}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel, float scale)
+\begin{DoxyCompactList}\small\item\em Affecter un facteur de mise à l\textquotesingle{}échelle des échantillons d\textquotesingle{}une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_ga0ec5f0af8af44aed10903abb24ae7ef6}{Loki\+Env\+Sensors\+\_\+get\+\_\+last\+\_\+data}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la valeur du dernier échantillon acquis sur une voie. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiEnvSensors_ga73bc770ef666badd820b39d8519c2835}{Loki\+Env\+Sensors\+\_\+start\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, int32\+\_\+t channels, bool raw, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Démarrer l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga25d2fc754531818073da17164ca9db6a}{Loki\+Env\+Sensors\+\_\+stop\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gab19c1189c6764d5e8762043a96afb377}{Loki\+Env\+Sensors\+\_\+force\+\_\+stop}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition immédiatement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiEnvSensors_gabde1553662bb4376eb15ed7b9c4ec2fe}{Loki\+Env\+Sensors\+\_\+is\+\_\+streaming}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-env-sensors_8h_source}{libloki-\/env-\/sensors.\+h}}.
+

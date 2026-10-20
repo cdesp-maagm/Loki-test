@@ -1,0 +1,274 @@
+\doxysubsection{Support des fonctions intrinsics ARM NEON }
+\hypertarget{group__gLokiNeon}{}\label{group__gLokiNeon}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+
+
+Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l\textquotesingle{}en-\/tête {\ttfamily arm\+\_\+neon.\+h} officiel.  
+
+
+Graphe de collaboration de Support des fonctions intrinsics ARM NEON:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-neon_8h}{libloki-\/neon.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Vecteur de deux nombres flottants 32 bits. \end{DoxyCompactList}\item 
+union \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Vecteur de quatre nombres flottants 32 bits. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____}{float32x4\+\_\+t::\+\+[struct]\+.\+\_\+\+\_\+unnamed0\+\_\+\_}}
+\begin{DoxyCompactList}\small\item\em Décomposition d\textquotesingle{}un vecteur en deux moitiés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57}{vadd\+\_\+f32}} (\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} a, \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} b)
+\begin{DoxyCompactList}\small\item\em Additionner deux vecteurs. \end{DoxyCompactList}\item 
+static float \doxymbox{\hyperlink{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0}{vget\+\_\+lane\+\_\+f32}} (\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} a, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Lire un élément d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67}{vmovq\+\_\+n\+\_\+f32}} (float a)
+\begin{DoxyCompactList}\small\item\em Construire un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd}{vld1q\+\_\+f32}} (const float \texorpdfstring{$\ast$}{*}a)
+\begin{DoxyCompactList}\small\item\em Lire un vecteur en mémoire. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d}{vget\+\_\+low\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a)
+\begin{DoxyCompactList}\small\item\em Lire la première moitié d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2}{vget\+\_\+high\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a)
+\begin{DoxyCompactList}\small\item\em Lire la seconde moitié d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f}{vld1q\+\_\+lane\+\_\+f32}} (const float \texorpdfstring{$\ast$}{*}a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b, size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Remplacer un élément d\textquotesingle{}un vecteur avec une valeur lue en mémoire. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1}{vmulq\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b)
+\begin{DoxyCompactList}\small\item\em Multiplier deux vecteurs terme à terme. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} \doxymbox{\hyperlink{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf}{vmlaq\+\_\+f32}} (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} a, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} b, \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} c)
+\begin{DoxyCompactList}\small\item\em Calculer le résultat d\textquotesingle{}une multiplication-\/accumulation sur des vecteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l\textquotesingle{}en-\/tête {\ttfamily arm\+\_\+neon.\+h} officiel. 
+
+Pour les autres architectures, ce fichier fournit des implémentations en C standard de quelques fonctions intrinsics pour les types flottants 32 bits. Cela permet, par exemple, de tester sur PC une fonction destinée à un processeur ARM. 
+
+\label{group__gLokiNeon_doc-func-members}
+\Hypertarget{group__gLokiNeon_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vadd\_f32@{vadd\_f32}}
+\index{vadd\_f32@{vadd\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vadd\_f32()}{vadd\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57} 
+\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} vadd\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}}}]{a}{, }\item[{\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Additionner deux vecteurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le premier opérande. \\
+\hline
+{\em b} & Le second opérande. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur obtenu en additionnant {\ttfamily a} et {\ttfamily b} terme à terme. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_high\_f32@{vget\_high\_f32}}
+\index{vget\_high\_f32@{vget\_high\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vget\_high\_f32()}{vget\_high\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2} 
+\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} vget\+\_\+high\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lire la seconde moitié d\textquotesingle{}un vecteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le vecteur à décomposer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant la seconde moitié de {\ttfamily a}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00100}{100}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_lane\_f32@{vget\_lane\_f32}}
+\index{vget\_lane\_f32@{vget\_lane\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vget\_lane\_f32()}{vget\_lane\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0} 
+float vget\+\_\+lane\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}}}]{a}{, }\item[{size\+\_\+t}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lire un élément d\textquotesingle{}un vecteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le vecteur à inspecter. \\
+\hline
+{\em i} & L\textquotesingle{}indice de l\textquotesingle{}élément à lire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}élément d\textquotesingle{}indice {\ttfamily i} dans {\ttfamily a}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00062}{62}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_low\_f32@{vget\_low\_f32}}
+\index{vget\_low\_f32@{vget\_low\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vget\_low\_f32()}{vget\_low\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d} 
+\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\+\_\+t}} vget\+\_\+low\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lire la première moitié d\textquotesingle{}un vecteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le vecteur à décomposer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant la première moitié de {\ttfamily a}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00091}{91}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vld1q\_f32@{vld1q\_f32}}
+\index{vld1q\_f32@{vld1q\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vld1q\_f32()}{vld1q\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd} 
+\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} vld1q\+\_\+f32 (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lire un vecteur en mémoire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Un pointeur vers la région à lire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur des éléments pointés par {\ttfamily a}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00082}{82}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vld1q\_lane\_f32@{vld1q\_lane\_f32}}
+\index{vld1q\_lane\_f32@{vld1q\_lane\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vld1q\_lane\_f32()}{vld1q\_lane\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f} 
+\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} vld1q\+\_\+lane\+\_\+f32 (\begin{DoxyParamCaption}\item[{const float \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{b}{, }\item[{size\+\_\+t}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Remplacer un élément d\textquotesingle{}un vecteur avec une valeur lue en mémoire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Un pointeur vers la valeur à lire. \\
+\hline
+{\em b} & Le vecteur à modifier. \\
+\hline
+{\em i} & L\textquotesingle{}indice de l\textquotesingle{}élément à remplacer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une copie de {\ttfamily b} dont un élément a été modifié. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00111}{111}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmlaq\_f32@{vmlaq\_f32}}
+\index{vmlaq\_f32@{vmlaq\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vmlaq\_f32()}{vmlaq\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf} 
+\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} vmlaq\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{a}{, }\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{b}{, }\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculer le résultat d\textquotesingle{}une multiplication-\/accumulation sur des vecteurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & La valeur courante de l\textquotesingle{}accumulateur. \\
+\hline
+{\em b} & Le premier opérande de la multiplication. \\
+\hline
+{\em c} & Le second opérande de la multiplication. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La nouvelle valeur de l\textquotesingle{}accumulateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00136}{136}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmovq\_n\_f32@{vmovq\_n\_f32}}
+\index{vmovq\_n\_f32@{vmovq\_n\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vmovq\_n\_f32()}{vmovq\_n\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67} 
+\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} vmovq\+\_\+n\+\_\+f32 (\begin{DoxyParamCaption}\item[{float}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Construire un vecteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & La valeur des éléments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur dont tous les éléments sont égaux à {\ttfamily a}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00071}{71}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+\Hypertarget{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1}\index{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmulq\_f32@{vmulq\_f32}}
+\index{vmulq\_f32@{vmulq\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}}
+\doxysubsubsubsection{\texorpdfstring{vmulq\_f32()}{vmulq\_f32()}}
+{\footnotesize\ttfamily \label{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1} 
+\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}} vmulq\+\_\+f32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{a}{, }\item[{\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\+\_\+t}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Multiplier deux vecteurs terme à terme. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & Le premier opérande. \\
+\hline
+{\em b} & Le second opérande. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur obtenu en calculant le produit de {\ttfamily a} et {\ttfamily b} terme à terme. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-neon_8h_source_l00122}{122}} du fichier \doxymbox{\hyperlink{libloki-neon_8h_source}{libloki-\/neon.\+h}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4

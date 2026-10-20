@@ -1,0 +1,32 @@
+\doxysection{libloki-\/ellipse.h}
+\hypertarget{libloki-ellipse_8h_source}{}\label{libloki-ellipse_8h_source}\index{libloki-\/ellipse.h@{libloki-\/ellipse.h}}
+\doxymbox{\hyperlink{libloki-ellipse_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_ELLIPSE\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ LIBLOKI\_ELLIPSE\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00015}\doxymbox{\hyperlink{structLokiEllipse}{00015}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00017}\doxymbox{\hyperlink{structLokiEllipse_a5a8982951b010dc44e6ea3ebb6bc2c21}{00017}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiEllipse_a5a8982951b010dc44e6ea3ebb6bc2c21}{A}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00019}\doxymbox{\hyperlink{structLokiEllipse_a930435f6900244ecb119889335c97b50}{00019}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiEllipse_a930435f6900244ecb119889335c97b50}{B}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00021}\doxymbox{\hyperlink{structLokiEllipse_a598acadc87ccfa799461d975867b7ff4}{00021}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiEllipse_a598acadc87ccfa799461d975867b7ff4}{xc}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00023}\doxymbox{\hyperlink{structLokiEllipse_a2d2b439f9d8126fc49d616dff4490474}{00023}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiEllipse_a2d2b439f9d8126fc49d616dff4490474}{yc}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00025}\doxymbox{\hyperlink{structLokiEllipse_a510e5419d6ca09dd022085798c285c99}{00025}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiEllipse_a510e5419d6ca09dd022085798c285c99}{alpha}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00026}00026\ \}\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}};}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00029}\doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{00029}}\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{LokiEllipseEquation}}[5];}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga6c07dc7246a56661060f219512071d9e}{LokiEllipse\_set\_from\_coeffs}}(\doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *self,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{LokiEllipseEquation}}\ coeffs);}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00048}00048\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga6a9d8dee572f56889695bb96a2835844}{LokiEllipse\_get\_coeffs}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *self,\ \doxymbox{\hyperlink{group__gLokiEllipse_ga63c0457561f0e91f4c8a10dbc92c3163}{LokiEllipseEquation}}\ coeffs);}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00057}00057\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga70aa22f2b32427cb365981412de7daf5}{LokiEllipse\_get\_point}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *self,\ \textcolor{keywordtype}{float}\ theta,\ \textcolor{keywordtype}{float}\ *x,\ \textcolor{keywordtype}{float}\ *y);}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00071}00071\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiEllipseEstimator_ga35d3ff1907a5e87a070466b4c3204ec9}{LokiEllipse\_get\_angle}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *self,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ *x\_norm,\ \textcolor{keywordtype}{float}\ *y\_norm);}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-ellipse_8h_source_l00074}00074\ }
+
+\end{DoxyCode}

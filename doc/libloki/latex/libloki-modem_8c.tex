@@ -1,0 +1,284 @@
+\doxysection{Référence du fichier libloki-\/modem.c}
+\hypertarget{libloki-modem_8c}{}\label{libloki-modem_8c}\index{libloki-\/modem.c@{libloki-\/modem.c}}
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$pthread.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+ioctl.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+mman.\+h$>$}\newline
+{\ttfamily \+\#include $<$loki-\/modem-\/regs.\+h$>$}\newline
+{\ttfamily \+\#include $<$loki-\/device-\/ioctl.\+h$>$}\newline
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/modem.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}}
+\begin{DoxyCompactList}\small\item\em Représentation des périphériques modulateur et démodulateur. \end{DoxyCompactList}\item 
+union \doxymbox{\hyperlink{unionAD8370ControlWord}{AD8370\+Control\+Word}}
+\begin{DoxyCompactList}\small\item\em Représentation du mot de contrôle du gain pour l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{libloki-modem_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\begin{DoxyCompactList}\small\item\em Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_gafe9f03d58c0514bad0fe3eb215e06605}{AD8370\+\_\+\+VERNIER}}~0.\+055744
+\begin{DoxyCompactList}\small\item\em Le paramètre {\itshape Vernier} pour le réglage du gain de l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_gaa090987afa6c718a00f7935b03d3e92c}{AD8370\+\_\+\+PREGAIN}}~7.\+079458
+\begin{DoxyCompactList}\small\item\em Le paramètre {\itshape Pre\+Gain} pour le réglage du gain de l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga11b8bd1290fccb0b319ec3ddcf163630}{AD8370\+\_\+\+HIGH\+\_\+\+GAIN\+\_\+\+FACTOR}}~(\doxymbox{\hyperlink{group__gLokiModem_gafe9f03d58c0514bad0fe3eb215e06605}{AD8370\+\_\+\+VERNIER}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiModem_gaa090987afa6c718a00f7935b03d3e92c}{AD8370\+\_\+\+PREGAIN}})
+\begin{DoxyCompactList}\small\item\em Le facteur appliqué au code de gain dans le mode {\itshape High Gain} de l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_gaa3d385c4d758bd43f884382cd34878af}{AD8370\+\_\+\+GAIN\+\_\+\+CODE\+\_\+\+SIZE}}~7
+\begin{DoxyCompactList}\small\item\em Le nombre de bits du code de gain de l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_gaf0e4506f0536eb0c07e09109fbe2efe0}{AD8370\+\_\+\+GAIN\+\_\+\+CODE\+\_\+\+MAX}}~((1 $<$$<$ \doxymbox{\hyperlink{group__gLokiModem_gaa3d385c4d758bd43f884382cd34878af}{AD8370\+\_\+\+GAIN\+\_\+\+CODE\+\_\+\+SIZE}}) -\/ 1)
+\begin{DoxyCompactList}\small\item\em La valeur maximale du code de gain de l\textquotesingle{}amplificateur AD8370. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga1310224697289c3414523ac5593ac24f}{AD8370\+\_\+\+LOW\+\_\+\+GAIN\+\_\+\+MAX}}~(\doxymbox{\hyperlink{group__gLokiModem_gaf0e4506f0536eb0c07e09109fbe2efe0}{AD8370\+\_\+\+GAIN\+\_\+\+CODE\+\_\+\+MAX}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiModem_gafe9f03d58c0514bad0fe3eb215e06605}{AD8370\+\_\+\+VERNIER}})
+\begin{DoxyCompactList}\small\item\em Le gain maximal de l\textquotesingle{}amplificateur AD8370 en mode {\itshape Low Gain}. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga8d0ae3934f893570043e83d0ca205621}{AD8370\+\_\+\+HIGH\+\_\+\+GAIN\+\_\+\+MAX}}~(\doxymbox{\hyperlink{group__gLokiModem_gaf0e4506f0536eb0c07e09109fbe2efe0}{AD8370\+\_\+\+GAIN\+\_\+\+CODE\+\_\+\+MAX}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiModem_ga11b8bd1290fccb0b319ec3ddcf163630}{AD8370\+\_\+\+HIGH\+\_\+\+GAIN\+\_\+\+FACTOR}})
+\begin{DoxyCompactList}\small\item\em Le gain maximal de l\textquotesingle{}amplificateur AD8370 en mode {\itshape High Gain}. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga5a74f615f5f516955b30dcb58a0d543f}{SIMULATED\+\_\+\+DISP\+\_\+\+WAVE\+\_\+\+FREQUENCY}}~0.\+2
+\begin{DoxyCompactList}\small\item\em La fréquence du déplacement en mode simulation de capteurs, en Hz. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga93e9b145ddd65e5e0507743b1c3a57da}{SIMULATED\+\_\+\+DISP\+\_\+\+AMPLITUDE}}~(M\+\_\+\+PI /\+ 10)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}amplitude du déplacement en mode simulation de capteurs, en radians. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga0d9bd29a6006f8a8e2f187e65a1ad47b}{SIMULATED\+\_\+\+ELLIPSE\+\_\+A}}~0.\+1
+\begin{DoxyCompactList}\small\item\em Le demi-\/grand axe de l\textquotesingle{}ellipse en mode simulation de capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga6416f3474794f5ab87b03cf403842624}{SIMULATED\+\_\+\+ELLIPSE\+\_\+B}}~0.\+15
+\begin{DoxyCompactList}\small\item\em Le demi-\/petit axe de l\textquotesingle{}ellipse en mode simulation de capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga2419b32b6c2eeddf7fc7786bd9ef46ec}{SIMULATED\+\_\+\+ELLIPSE\+\_\+\+ANGLE}}~(M\+\_\+\+PI /\+ 6)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}angle de rotation de l\textquotesingle{}ellipse en mode simulation de capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga90a200fd47d295864ecc891a44bf9f3d}{SIMULATED\+\_\+\+ELLIPSE\+\_\+\+XC}}~0.\+01
+\begin{DoxyCompactList}\small\item\em La coordonnée X du centre de l\textquotesingle{}ellipse en mode simulation de capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_ga78c3be5b632db9cd3fb00250f862d227}{SIMULATED\+\_\+\+ELLIPSE\+\_\+\+YC}}~0.\+02
+\begin{DoxyCompactList}\small\item\em La coordonnée Y du centre de l\textquotesingle{}ellipse en mode simulation de capteurs. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiModem_gac65edfa5d1dbb5f1b560b4383a72555f}{USE\+\_\+\+MMAP}}
+\begin{DoxyCompactList}\small\item\em Utiliser la fonction {\ttfamily mmap} pour accéder aux données DMA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gac11ada7ec17dc89095e83bd867d822e1}{Loki\+DMASample}}
+\begin{DoxyCompactList}\small\item\em Le type brut d\textquotesingle{}un échantillon démodulé transféré par DMA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga31ef33621073ec3f693ff586270240f5}{Loki\+Modem\+\_\+get\+\_\+reg}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, Loki\+Modem\+Register reg)
+\begin{DoxyCompactList}\small\item\em Lire un registre du circuit de modulation/\+démodulation. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_gad2d61f968fc4e72968be42685a916377}{Loki\+Modem\+\_\+set\+\_\+reg}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, Loki\+Modem\+Register reg, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter un registre du circuit de modulation/\+démodulation. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_ga5e4ca0d31754d984b07e7298028eeefc}{Loki\+Modem\+\_\+dma\+\_\+start}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Demander au circuit de modulation/\+démodulation de démarrer les transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_ga04636b25da663b516cf8634b3470ca52}{Loki\+Modem\+\_\+dma\+\_\+stop}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Demander au circuit de modulation/\+démodulation d\textquotesingle{}arrêter les transferts DMA. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{group__gLokiModem_ga1a3bec25b7f9818c130c317e79b3bca2}{Loki\+Modem\+\_\+dma\+\_\+is\+\_\+streaming}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état des transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_gab1c72b07b72a58ff1d2a481e3868d5b2}{Loki\+Modem\+\_\+dma\+\_\+get\+\_\+start\+\_\+time}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, struct timespec \texorpdfstring{$\ast$}{*}res)
+\begin{DoxyCompactList}\small\item\em Lire la date de démarrage des transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_ga784b97f18bd232111254e1c5fcac3e0c}{Loki\+Modem\+\_\+dma\+\_\+get\+\_\+packet\+\_\+time}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, struct timespec \texorpdfstring{$\ast$}{*}res)
+\begin{DoxyCompactList}\small\item\em Lire la date du dernier transfert DMA. \end{DoxyCompactList}\item 
+static unsigned \doxymbox{\hyperlink{group__gLokiModem_gae80d100cb35cff72b1742cf19a132e66}{Loki\+Modem\+\_\+dma\+\_\+get\+\_\+dropped\+\_\+packets}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de paquets DMA perdus. \end{DoxyCompactList}\item 
+static float \doxymbox{\hyperlink{group__gLokiModem_ga27f4f0afdf1b651dd85f485bbbff196a}{Loki\+Modem\+\_\+scale\+\_\+xy}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float xy)
+\begin{DoxyCompactList}\small\item\em Mettre à l\textquotesingle{}échelle une composante X (I) ou Y (Q) d\textquotesingle{}un échantillon démodulé. \end{DoxyCompactList}\item 
+static float \doxymbox{\hyperlink{group__gLokiModem_gae78f99b97520da389fc0162c2026a49a}{Loki\+Modem\+\_\+scale\+\_\+power}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float p)
+\begin{DoxyCompactList}\small\item\em Mettre à l\textquotesingle{}échelle une valeur d\textquotesingle{}entrée du démodulateur. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiModem_ga4b56ccfe31748f4e1d3ceb6a30f6dff5}{Loki\+Modem\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau modem. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gab9ed507b906c70b34d5b5135c34c92d1}{Loki\+Modem\+\_\+del}} (\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un modem. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gacb6b16f52e6e28106f9cb62ca99c8d51}{Loki\+Modem\+\_\+get\+\_\+clk\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}horloge du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gab2274a451855d116253c0a5b4a05695a}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage en sortie du modulateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gaa40ad8ef296c7038b6f747f5407108d0}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence d\textquotesingle{}échantillonnage en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga23886c6a62d90b718d3069b8fe4ab328}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+wave\+\_\+frequency\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gae382d9332816e9351061e345a8443b44}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+wave\+\_\+frequency\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence maximale supportée pour le signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gaa37cced8e7800971de36cc98f8cac1ef}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga3644d43b3d196126fcc4e7cae35586ef}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+osc1\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence au signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga80f102400e905c1072776fc68132dea2}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+gain\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de l\textquotesingle{}amplitude du signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gaeb783d9f9a1977826ff01fe0ea6be752}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+gain\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}amplitude maximale supportée pour le signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gae81b1c2702720959857d0a6e33db86ac}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc1\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}amplitude du signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga13ea309bfb24d266143fa5b423cb214e}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+osc1\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float gain)
+\begin{DoxyCompactList}\small\item\em Affecter une amplitude au signal en sortie du premier oscillateur du modulateur (Fm1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gae06c4e0ee00827f70f989a343ca5b89a}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+wave\+\_\+frequency\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de la fréquence du signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga7ff64c2772b51e83a1da4a94676babec}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+wave\+\_\+frequency\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga98de366120dea4eeadd67b1b1beaa9f7}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence du signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gad722211a6ab8be9034460eeaee2e120e}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+osc2\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence au signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga840fde76fdb7bff658f5f96c44e9c16b}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+gain\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de l\textquotesingle{}amplitude du signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga51dbb5e4248ba349527893a946d58d41}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+gain\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}amplitude maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga63d4727c91cfc62fd3e560962748d5c0}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+osc2\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}amplitude du signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gaf407427ac9c86260ef17e64ed085cc8d}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+osc2\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float gain)
+\begin{DoxyCompactList}\small\item\em Affecter une amplitude au signal en sortie du second oscillateur du modulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gaf4bda53977ea345053fe5287aabd7ae5}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+osc\+\_\+wave\+\_\+frequency\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de la fréquence du signal en sortie de l\textquotesingle{}oscillateur du démodulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga584a9ea31a6fcf590a3ccdd683d73d6f}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+osc\+\_\+wave\+\_\+frequency\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence maximale supportée pour le signal en sortie de l\textquotesingle{}oscillateur du démodulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gad7f609df03c12f9062c37fd9862e6757}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+osc\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence du signal en sortie de l\textquotesingle{}oscillateur du démodulateur (Fm2). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga915c87d5c51e251962e73f877877191e}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+osc\+\_\+wave\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence au signal en sortie de l\textquotesingle{}oscillateur du démodulateur (Fm2). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga2e45da7179d07e6e82593454899a2380}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+offset\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage de l\textquotesingle{}offset en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga42d423d77d6de590fbb783f7fa030070}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+offset\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}offset maximal supporté en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gabfa0c1aa8cefcbe803d65220c089d631}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+offset}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}offset en sortie du modulateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga145b497260f02412a57b080ce54ce887}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+offset}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float offset)
+\begin{DoxyCompactList}\small\item\em Affecter un offset en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga60e4fd43a5051d1222e9ad5d52585c7f}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+dc\+\_\+value\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage du courant moyen de commande de la diode laser. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gac4338f5f7ff7f8db91eb928328ede467}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+dc\+\_\+value\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le courant moyen maximal supporté pour la commande de la diode laser. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga70138c572af288cfbb87792af68a2812}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+dc\+\_\+value}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le courant moyen de commande de la diode laser. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga576ca4b34004e2abc8fc56676ae94d5c}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+dc\+\_\+value}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float dc\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Affecter un courant moyen de commande de la diode laser. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga8d384017cde50d5acf14bdad5fcc6b32}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+pga\+\_\+gain\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le gain maximal de l\textquotesingle{}amplificateur de sortie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gab83551290b046fbd41cfc6ba7f9bb1a6}{Loki\+Modem\+\_\+get\+\_\+mod\+\_\+pga\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le gain de l\textquotesingle{}amplificateur de sortie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga364f35ace5bfa66da9afd5814a4cf1e8}{Loki\+Modem\+\_\+set\+\_\+mod\+\_\+pga\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t gain)
+\begin{DoxyCompactList}\small\item\em Affecter un gain à l\textquotesingle{}amplificateur de sortie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gaca03c8a1744b1f83281cc3691bd9be08}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+channels}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de voies du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gae0a674685e343b3eec5a5a0937c46324}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+decimation}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le facteur de décimation des filtres du démodulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gaba38d007f5e98a51b34b10323e0c4999}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+bandwidth}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la bande passante des filtres du démodulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga0ed707637e1b3cf02f37d9caad319a7f}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage en entrée du démodulateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga004a61e3be64e2baaa34b8d8972e6a14}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence d\textquotesingle{}échantillonnage en entrée du démodulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga82eebd6d10e869bbbbc3410594d6f80c}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+xy\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage en sortie du démodulateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga817eb7cc3b696dfd0d6937eee51468bd}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+xy\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence d\textquotesingle{}échantillonnage en sortie du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga90cd71479d70dfc9e25eacec2c083c79}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+delay\+\_\+x\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le retard maximal applicable à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga0ddcff3affce533824513e84ed8b2f13}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+x\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le déphasage maximal applicable à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gac1229a4a631f3504978ac78369a812bf}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+x\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage du déphasage applicable à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga77b11e6c22d6cc88f30876b8ae75d4a6}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+delay\+\_\+x}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le retard appliqué à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gac60900447f60f45adfb7ed4867902f8e}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+x}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le déphasage appliqué à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga3dae87fc80640dfcdb311ff910eb1629}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+delay\+\_\+x}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel, uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Affecter un retard à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gaf0714c10db4b9dd9af015706532fab6a}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+phase\+\_\+x}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel, float phase)
+\begin{DoxyCompactList}\small\item\em Affecter un déphasage à la composante X (I) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga7aa023bd043cc34a645084d7c25441a0}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+delay\+\_\+y\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le retard maximal applicable à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga5bbcdf3b215ea5fb8ba6541548fb40a2}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+y\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le déphasage maximal applicable à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga9d96ae9d0855c3717fd1ffe0a3fbaedd}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+y\+\_\+res}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le pas de réglage du déphasage applicable à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gae907d24468e9b494675e19b4c4898873}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+delay\+\_\+y}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le retard appliqué à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gaccf6eda66a54b5e7de7326a8e7e842d9}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+phase\+\_\+y}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le déphasage appliqué à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gad371ab9c535880040f2c2edd940214a7}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+delay\+\_\+y}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel, uint32\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Affecter un retard à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gab3cc855369372902491bf46d42aa072a}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+phase\+\_\+y}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel, float phase)
+\begin{DoxyCompactList}\small\item\em Affecter un déphasage à la composante Y (Q) du signal démodulé pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga01dbc40d331e177e487873ecdde51b4d}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+pga\+\_\+gain\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le gain maximal de l\textquotesingle{}amplificateur en entrée du démodulateur pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gab6c033fe843f6e1eec7b06b15020588c}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+pga\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le gain de l\textquotesingle{}amplificateur en entrée du démodulateur pour une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga54d3f84ff16f8151a1bce5cc260319f8}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+pga\+\_\+gain}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel, float gain)
+\begin{DoxyCompactList}\small\item\em Affecter un gain à l\textquotesingle{}amplificateur en entrée du démodulateur pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_gac5cab6b74363ef5928a67130ed07af67}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+adc\+\_\+min\+\_\+ratio}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la valeur minimale du signal en entrée du démodulateur pour une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiModem_ga5221dd8bb49fde3275dd7b34b890d9dc}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+adc\+\_\+max\+\_\+ratio}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la valeur maximale du signal en entrée du démodulateur pour une voie. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga934084ea45d8de46a6c212f5ce04fa3f}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+packet\+\_\+length\+\_\+max}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur maximale d\textquotesingle{}un paquet de données en sortie du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga8fedd820f507eeb1043d3a7dd26e169f}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+packet\+\_\+length}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur d\textquotesingle{}un paquet de données en sortie du démodulateur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiModem_ga642442ed153de85457d1c9d81116d80a}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+mixerless}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Identifier le type de démodulateur implanté dans le FPGA. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiModem_gadbc2f078e0d4f3b3c7e3851be29f5599}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+bypass}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état d\textquotesingle{}activation du démodulateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga6db2465578c86756f1add7b181ba5fcf}{Loki\+Modem\+\_\+set\+\_\+demod\+\_\+bypass}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, bool bypass)
+\begin{DoxyCompactList}\small\item\em Activer ou désactiver le démodulateur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiModem_ga2993d22cca497c7b1f6870d93f1a4433}{Loki\+Modem\+\_\+get\+\_\+test\+\_\+mode}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état d\textquotesingle{}activation du mode de test. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gae39a7a556f2691d8674fc690bdb6a238}{Loki\+Modem\+\_\+set\+\_\+test\+\_\+mode}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, bool test\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Activer ou désactiver le mode de test. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_gabaa67fb5b5e0b8faf9cc91c184f88223}{Loki\+Modem\+\_\+restart}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Redémarrer le modem. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga7140a37abbf2df3543963d32b7e7368d}{Loki\+Modem\+\_\+get\+\_\+adc\+\_\+sample\+\_\+count}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre d\textquotesingle{}échantillons reçus sur une voie ADC en entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_gabe6911d97dac58896dc5500be98deb39}{Loki\+Modem\+\_\+get\+\_\+dac\+\_\+sample\+\_\+count}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre d\textquotesingle{}échantillons envoyés sur la sortie DAC du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga278f36f46fd36277f28b64b2b706d916}{Loki\+Modem\+\_\+get\+\_\+demod\+\_\+sample\+\_\+count}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre d\textquotesingle{}échantillons produits sur une voie en sortie du démodulateur. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiModem_ga92acfc36c0c6e365213c0898661d4834}{Loki\+Modem\+\_\+get\+\_\+packet\+\_\+index}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{group__gLokiEnvSensors_gaddedaed69cd104ec1095687841046fc8}{Loki\+DMASample}} raw\+\_\+item)
+\begin{DoxyCompactList}\small\item\em Lire un numéro de paquet dans un échantillon DMA brut. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_gae9b930ac28562e09e072ce107c59db0c}{Loki\+Modem\+\_\+set\+\_\+packet\+\_\+item}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiModemSample}{Loki\+Modem\+Sample}} \texorpdfstring{$\ast$}{*}item, \doxymbox{\hyperlink{group__gLokiEnvSensors_gaddedaed69cd104ec1095687841046fc8}{Loki\+DMASample}} raw\+\_\+item)
+\begin{DoxyCompactList}\small\item\em Affecter les champs d\textquotesingle{}un échantillon de sortie du démodulateur. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiModem_gac7ad56144a69fcdc52eac5dd41e944d7}{Loki\+Modem\+\_\+set\+\_\+simulated\+\_\+item}} (\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiModemSample}{Loki\+Modem\+Sample}} \texorpdfstring{$\ast$}{*}item)
+\begin{DoxyCompactList}\small\item\em Affecter les champs d\textquotesingle{}un échantillon de sortie du démodulateur en mode simulation de capteurs. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiModem_gac6d4163ef7524bf1d59a202f19db6fa5}{Loki\+Modem\+\_\+work}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Traiter un tableau d\textquotesingle{}échantillons issu d\textquotesingle{}un transfert DMA. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiModem_ga6cf7d6738460b7362a7bab87ff323efa}{Loki\+Modem\+\_\+start\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self, int32\+\_\+t channels, bool simulate, bool raw, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Démarrer l\textquotesingle{}acquisition et le traitement des échantillons démodulés. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga5d39acc88d3ff94a9312882d0bc1f649}{Loki\+Modem\+\_\+stop\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga67df2ec5e65c1887e895f4a73e8865a3}{Loki\+Modem\+\_\+force\+\_\+stop}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition immédiatement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiModem_gaa8107034eec97425e51e80dc3a04811a}{Loki\+Modem\+\_\+is\+\_\+streaming}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{group__gLokiModem_ga58c6e4e02a5a61aa980a764405f2bea4}{Loki\+Modem\+\_\+get\+\_\+dropped\+\_\+packets}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de paquets perdus depuis le début de l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiModem_ga7e173717a8ef2324dd74cd624041e87e}{Loki\+Modem\+\_\+print\+\_\+config}} (const \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Afficher la configuration d\textquotesingle{}un modem sur la sortie standard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+
+
+\label{libloki-modem_8c_doc-define-members}
+\Hypertarget{libloki-modem_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{libloki-modem_8c_a369266c24eacffb87046522897a570d5}\index{libloki-\/modem.c@{libloki-\/modem.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/modem.c@{libloki-\/modem.c}}
+\doxysubsubsection{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \label{libloki-modem_8c_a369266c24eacffb87046522897a570d5} 
+\+\#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+
+
+Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00003}{3}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+

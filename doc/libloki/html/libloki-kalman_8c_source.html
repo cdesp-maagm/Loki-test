@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-kalman.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-kalman.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-kalman_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-kalman_8h.html">libloki-kalman.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-ellipse_8h.html">libloki-ellipse.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structLokiKalman.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structLokiKalman.html#a9ebf30d7624cec58f116cbc8f88867bd">   15</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structLokiKalman.html#a9ebf30d7624cec58f116cbc8f88867bd">rv</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structLokiKalman.html#a24146c9d3a28d0ab8a6525b986a38ceb">   17</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structLokiKalman.html#a24146c9d3a28d0ab8a6525b986a38ceb">rw</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structLokiKalman.html#a987f323bffb8504fd4daffdb58224c44">   19</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structLokiKalman.html#a987f323bffb8504fd4daffdb58224c44">P</a>[5][5];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">   21</a></span>    <a class="code hl_typedef" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> <a class="code hl_variable" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">state</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">   24</a></span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *<a class="code hl_function" href="group__gLokiKalman.html#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">LokiKalman_new</a>(<span class="keywordtype">float</span> initial_radius, <span class="keyword">const</span> <span class="keywordtype">float</span> params[<span class="keyword">static</span> 3]) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> * self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    fprintf(stderr, <span class="stringliteral">&quot;LokiKalman_new: creating Kalman filter with Rv=%f Rw=%f P=%f\n&quot;</span>, params[0], params[1], params[2]);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9ebf30d7624cec58f116cbc8f88867bd">rv</a> = params[0];</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a24146c9d3a28d0ab8a6525b986a38ceb">rw</a> = params[1];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">state</a>[0] = 0.5f;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">state</a>[4] = -initial_radius * initial_radius / 2;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a987f323bffb8504fd4daffdb58224c44">P</a>[i][i] = params[2];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#gae1de220a46ec966f9d7fc30fff678ce6">   45</a></span><a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *<a class="code hl_function" href="group__gLokiKalman.html#gae1de220a46ec966f9d7fc30fff678ce6">LokiKalman_clone</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *other) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> * self = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    memcpy(self, other, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> self;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#ga9dd2d0bf56568b60cd21fb1f5fae4054">   56</a></span><span class="keywordtype">float</span> *<a class="code hl_function" href="group__gLokiKalman.html#ga9dd2d0bf56568b60cd21fb1f5fae4054">LokiKalman_get_state</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">state</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#ga2ec7d2bcf42b57753cf4c1135cc63ef6">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiKalman.html#ga2ec7d2bcf42b57753cf4c1135cc63ef6">LokiKalman_work</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> out  = -y * y;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> in[] = {x * x + out, x * y, x, y, 1.0f};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Copies locales de l&#39;état du filtre.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    float (* <span class="keyword">const</span> P)[5] = self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a987f323bffb8504fd4daffdb58224c44">P</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">float</span> *<span class="keyword">const</span> state   = self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">state</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">float</span> rw             = self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a24146c9d3a28d0ab8a6525b986a38ceb">rw</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Dans les calculs suivants, on tient compte du fait que in[4] = 1</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// Calcul de l&#39;erreur courante :</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// epsilon = out - in * state</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">float</span> epsilon = out - state[4];</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i ++) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        epsilon -= in[i] * state[i];</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// Calcul du produits L = P * in&#39;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">float</span> L[5];</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        L[i] = P[i][4];</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; 4; j ++) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            L[i] += P[i][j] * in[j];</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// Calcul du dénominateur K = Rv + in * P * in&#39;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">float</span> K = self-&gt;<a class="code hl_variable" href="structLokiKalman.html#a9ebf30d7624cec58f116cbc8f88867bd">rv</a> + L[4];</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i ++) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        K += in[i] * L[i];</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// Normalisation du vecteur L et mise à jour de l&#39;état.</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">float</span> K_inv = 1.0f / K;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        L[i] *= K_inv;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        state[i] += epsilon * L[i];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// Calcul de J = I - L * in</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">float</span> J[5][5];</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        J[i][i] = 1.0f - L[i] * in[i];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; 5; j ++) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            J[i][j] = -L[i] * in[j];</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            J[j][i] = -L[j] * in[i];</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// Mise à jour de la matrice P_next = J * P + Rw</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">float</span> P_next[5][5];</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; 5; j ++) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            P_next[i][j] = J[i][0] * P[0][j];</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> k = 1; k &lt; 5; k ++) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                P_next[i][j] += J[i][k] * P[k][j];</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        P_next[i][i] += rw;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// Cette boucle est plus rapide que memcpy(P, P_next, sizeof(P_next)).</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// Il est possible que le compilateur optimise le graphe flot de données</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// sans passer par l&#39;allocation du tableau P_next.</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 5; i ++) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; 5; j ++) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            P[i][j] = P_next[i][j];</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="group__gLokiKalman.html#gad1eafbecc1476c32df47cb901ea44ce5">  132</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiKalman.html#gad1eafbecc1476c32df47cb901ea44ce5">LokiKalman_del</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a> *self) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (!self) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    free(self);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><a class="code hl_define" href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_define" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(params_length, 3)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>, <span class="keyword">new</span>)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>, clone)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>, work)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>, get_state)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_define" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="code hl_struct" href="structLokiKalman.html">LokiKalman</a>, del)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga6da5df82ee2afb9112000c287919133f"><div class="ttname"><a href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a></div><div class="ttdeci">#define LokiClass_define_method(prefix, name)</div><div class="ttdoc">Dans une implémentation, associe une fonction à une méthode.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00167">libloki-class.h:167</a></div></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga8ba32abc96ab47c9211d12fa57c3ba3f"><div class="ttname"><a href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a></div><div class="ttdeci">#define LokiClass_set_attribute(name, value)</div><div class="ttdoc">Dans une implémentation, affecte une valeur à un attribut.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00159">libloki-class.h:159</a></div></div>
+<div class="ttc" id="agroup__gLokiClass_html_gaa8e41e7a9fd0583e6314d14c757d26ff"><div class="ttname"><a href="group__gLokiClass.html#gaa8e41e7a9fd0583e6314d14c757d26ff">LokiClass_implementation</a></div><div class="ttdeci">#define LokiClass_implementation(superclass, prefix, impls)</div><div class="ttdoc">Définit le contenu d&#39;une classe qui implémente une interface donnée.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00149">libloki-class.h:149</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipse_html_ga63c0457561f0e91f4c8a10dbc92c3163"><div class="ttname"><a href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a></div><div class="ttdeci">float LokiEllipseEquation[5]</div><div class="ttdoc">Tableau des coefficients de l&#39;équation d&#39;une ellipse en coordonnées cartésiennes.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00029">libloki-ellipse.h:29</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga0d9b7cc8859c8b18f9ccc2fac47b4d23"><div class="ttname"><a href="group__gLokiKalman.html#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">LokiKalman_new</a></div><div class="ttdeci">LokiKalman * LokiKalman_new(float initial_radius, const float params[static 3])</div><div class="ttdoc">Construire un nouveau filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="#l00024">libloki-kalman.c:24</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga2ec7d2bcf42b57753cf4c1135cc63ef6"><div class="ttname"><a href="group__gLokiKalman.html#ga2ec7d2bcf42b57753cf4c1135cc63ef6">LokiKalman_work</a></div><div class="ttdeci">void LokiKalman_work(LokiKalman *self, float x, float y)</div><div class="ttdoc">Mettre à jour les paramètres de l&#39;ellipse pour une nouvelle paire de coordonnées.</div><div class="ttdef"><b>Définition</b> <a href="#l00060">libloki-kalman.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_ga9dd2d0bf56568b60cd21fb1f5fae4054"><div class="ttname"><a href="group__gLokiKalman.html#ga9dd2d0bf56568b60cd21fb1f5fae4054">LokiKalman_get_state</a></div><div class="ttdeci">float * LokiKalman_get_state(LokiKalman *self)</div><div class="ttdoc">Retourner l&#39;état courant du filtre.</div><div class="ttdef"><b>Définition</b> <a href="#l00056">libloki-kalman.c:56</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_gad1eafbecc1476c32df47cb901ea44ce5"><div class="ttname"><a href="group__gLokiKalman.html#gad1eafbecc1476c32df47cb901ea44ce5">LokiKalman_del</a></div><div class="ttdeci">void LokiKalman_del(LokiKalman *self)</div><div class="ttdoc">Détruire un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="#l00132">libloki-kalman.c:132</a></div></div>
+<div class="ttc" id="agroup__gLokiKalman_html_gae1de220a46ec966f9d7fc30fff678ce6"><div class="ttname"><a href="group__gLokiKalman.html#gae1de220a46ec966f9d7fc30fff678ce6">LokiKalman_clone</a></div><div class="ttdeci">LokiKalman * LokiKalman_clone(const LokiKalman *other)</div><div class="ttdoc">Construire un clone d&#39;un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="#l00045">libloki-kalman.c:45</a></div></div>
+<div class="ttc" id="alibloki-ellipse_8h_html"><div class="ttname"><a href="libloki-ellipse_8h.html">libloki-ellipse.h</a></div></div>
+<div class="ttc" id="alibloki-kalman_8h_html"><div class="ttname"><a href="libloki-kalman_8h.html">libloki-kalman.h</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html"><div class="ttname"><a href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a></div><div class="ttdoc">Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse-estimator_8c_source.html#l00011">libloki-ellipse-estimator.c:11</a></div></div>
+<div class="ttc" id="astructLokiKalman_html"><div class="ttname"><a href="structLokiKalman.html">LokiKalman</a></div><div class="ttdoc">Représentation d&#39;un filtre de Kalman.</div><div class="ttdef"><b>Définition</b> <a href="#l00013">libloki-kalman.c:13</a></div></div>
+<div class="ttc" id="astructLokiKalman_html_a24146c9d3a28d0ab8a6525b986a38ceb"><div class="ttname"><a href="structLokiKalman.html#a24146c9d3a28d0ab8a6525b986a38ceb">LokiKalman::rw</a></div><div class="ttdeci">float rw</div><div class="ttdoc">La puissance du bruit d&#39;état du filtre.</div><div class="ttdef"><b>Définition</b> <a href="#l00017">libloki-kalman.c:17</a></div></div>
+<div class="ttc" id="astructLokiKalman_html_a987f323bffb8504fd4daffdb58224c44"><div class="ttname"><a href="structLokiKalman.html#a987f323bffb8504fd4daffdb58224c44">LokiKalman::P</a></div><div class="ttdeci">float P[5][5]</div><div class="ttdoc">La matrice de covariance de l&#39;erreur d&#39;estimation.</div><div class="ttdef"><b>Définition</b> <a href="#l00019">libloki-kalman.c:19</a></div></div>
+<div class="ttc" id="astructLokiKalman_html_a9a67c4ba68b9df6825ef7d6b21936f5f"><div class="ttname"><a href="structLokiKalman.html#a9a67c4ba68b9df6825ef7d6b21936f5f">LokiKalman::state</a></div><div class="ttdeci">LokiEllipseEquation state</div><div class="ttdoc">Les coefficients de l&#39;équation de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="#l00021">libloki-kalman.c:21</a></div></div>
+<div class="ttc" id="astructLokiKalman_html_a9ebf30d7624cec58f116cbc8f88867bd"><div class="ttname"><a href="structLokiKalman.html#a9ebf30d7624cec58f116cbc8f88867bd">LokiKalman::rv</a></div><div class="ttdeci">float rv</div><div class="ttdoc">La puissance du bruit de sortie du filtre.</div><div class="ttdef"><b>Définition</b> <a href="#l00015">libloki-kalman.c:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

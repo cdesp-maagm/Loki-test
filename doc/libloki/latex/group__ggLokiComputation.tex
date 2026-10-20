@@ -1,0 +1,42 @@
+\doxysection{Calcul de déplacement }
+\hypertarget{group__ggLokiComputation}{}\label{group__ggLokiComputation}\index{Calcul de déplacement@{Calcul de déplacement}}
+Graphe de collaboration de Calcul de déplacement:
+% FIG 0
+\doxysubsubsection*{Sujets}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__gLokiDisplacement}{Calcul de déplacement}}
+\begin{DoxyCompactList}\small\item\em Un calculateur de déplacement est composé d\textquotesingle{}un \doxylink{group__gLokiEllipseEstimator}{filtre adaptatif d\textquotesingle{}estimation des paramètres d\textquotesingle{}une ellipse} et d\textquotesingle{}un \doxylink{group__gLokiFIRFilter}{filtre passe-\/bas} pour éliminer le déplacement fictif. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiEllipseEstimator}{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}}
+\begin{DoxyCompactList}\small\item\em Définition des méthodes communes pour estimer les paramètres d\textquotesingle{}une ellipse au cours de la réception d\textquotesingle{}une série de points. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiEllipse}{Représentation et manipulation d\textquotesingle{}ellipses}}
+\begin{DoxyCompactList}\small\item\em Type de donnée et fonctions permettant de manipuler des ellipses sous différentes représentations. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiFIRFilter}{Filtre FIR}}
+\begin{DoxyCompactList}\small\item\em Implémentation polyphase d\textquotesingle{}un filtre à réponse impulsionnelle finie. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiKalman}{Filtre de Kalman}}
+\begin{DoxyCompactList}\small\item\em Estimation des paramètres d\textquotesingle{}une ellipse par filtrage de Kalman. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiNLMS}{Filtre NLMS}}
+\begin{DoxyCompactList}\small\item\em Estimation des paramètres d\textquotesingle{}une ellipse par filtrage {\itshape Normalized Least Mean Squares}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiRLS}{Filtre RLS}}
+\begin{DoxyCompactList}\small\item\em Estimation des paramètres d\textquotesingle{}une ellipse par filtrage {\itshape Recursive Least Squares}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiDefaults}{Valeurs par défaut des paramètres de calcul de déplacement}}
+\begin{DoxyCompactList}\small\item\em Constantes utilisées pour la configuration d\textquotesingle{}un \doxylink{group__gLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiSystem}{Gestion des acquisitions et du calcul de déplacement}}
+\begin{DoxyCompactList}\small\item\em Un système rassemble un \doxylink{group__gLokiModem}{modem} et un \doxylink{group__gLokiDisplacement}{calculateur de déplacement}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiSystemSample}{Loki\+System\+Sample}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un échantillon en sortie d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\input{group__gLokiDisplacement}
+\input{group__gLokiEllipseEstimator}
+\input{group__gLokiEllipse}
+\input{group__gLokiFIRFilter}
+\input{group__gLokiKalman}
+\input{group__gLokiNLMS}
+\input{group__gLokiRLS}
+\input{group__gLokiDefaults}
+\input{group__gLokiSystem}

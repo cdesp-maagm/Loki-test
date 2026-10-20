@@ -1,0 +1,85 @@
+
+#ifndef LOKI_MODEM_REGS_H_
+#define LOKI_MODEM_REGS_H_
+
+typedef enum {
+    LOKI_MODEM_REG_CLK_FREQUENCY,                // Constant, en lecture seule
+    LOKI_MODEM_REG_CONTROL,                      // Bit 0 avec remise à zéro automatique
+    LOKI_MODEM_REG_DAC_SAMPLE_COUNT,             // Variable, en lecture seule
+    LOKI_MODEM_REG_ADC_SAMPLE_COUNT,             // Variable, en lecture seule
+    LOKI_MODEM_REG_CLKMON_SECONDS,
+    LOKI_MODEM_REG_CLKMON_DELTA,
+    LOKI_MODEM_REG_GPIO,
+
+    LOKI_MODEM_REG_MOD_SAMPLE_FREQUENCY_REF,     // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_CYCLES_PER_SAMPLE_MAX,    // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_OSC1_WAVE_FREQUENCY_MIN,  // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_OSC2_WAVE_FREQUENCY_MIN,  // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_GAIN_INTEGER_WIDTH,       // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_GAIN_FRACTIONAL_WIDTH,    // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_PHASE_AMPLITUDE_MAX,      // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_PHASE_INTEGER_WIDTH,      // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_PHASE_FRACTIONAL_WIDTH,   // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_CYCLES_PER_SAMPLE,
+    LOKI_MODEM_REG_MOD_OSC1_STEP,
+    LOKI_MODEM_REG_MOD_OSC1_GAIN,
+    LOKI_MODEM_REG_MOD_OSC2_STEP,
+    LOKI_MODEM_REG_MOD_OSC2_GAIN,
+    LOKI_MODEM_REG_MOD_OFFSET,
+    LOKI_MODEM_REG_MOD_DC_VALUE_MAX,             // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_DC_VALUE_WIDTH,           // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_DC_VALUE,
+    LOKI_MODEM_REG_MOD_PGA_GAIN_WIDTH,           // Constant, en lecture seule
+    LOKI_MODEM_REG_MOD_PGA_GAIN,
+
+    LOKI_MODEM_REG_DEMOD_CHANNELS,               // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_CHANNEL_OUTPUT_WIDTH,   // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_POWER_INTEGER_WIDTH,    // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_POWER_FRACTIONAL_WIDTH, // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_SAMPLE_FREQUENCY_REF,   // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_CYCLES_PER_SAMPLE_MAX,  // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_OSC_WAVE_FREQUENCY_MIN, // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR1_DECIMATION,        // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR1_LENGTH,            // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR1_BANDWIDTH,         // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR2_DECIMATION,        // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR2_LENGTH,            // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_FIR2_BANDWIDTH,         // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_XY_INTEGER_WIDTH,       // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_XY_FRACTIONAL_WIDTH,    // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_PACKET_LENGTH_MAX,      // Constant, en lecture seule
+    LOKI_MODEM_REG_DEMOD_SAMPLE_COUNT,           // Variable, en lecture seule
+    LOKI_MODEM_REG_DEMOD_CYCLES_PER_SAMPLE,
+    LOKI_MODEM_REG_DEMOD_OSC_STEP,
+    LOKI_MODEM_REG_DEMOD_PACKET_LENGTH,
+    LOKI_MODEM_REG_DEMOD_CHANNEL_CFG             //  Quatre registres par voie
+} LokiModemRegister;
+
+typedef enum {
+    LOKI_MODEM_REG_DEMOD_DELAY_LOWPASS_X,
+    LOKI_MODEM_REG_DEMOD_DELAY_LOWPASS_Y,
+    LOKI_MODEM_REG_DEMOD_DELAY_BANDPASS_X,
+    LOKI_MODEM_REG_DEMOD_DELAY_BANDPASS_Y,
+    LOKI_MODEM_REG_DEMOD_PGA_GAIN,
+    LOKI_MODEM_REG_DEMOD_ADC_MIN,
+    LOKI_MODEM_REG_DEMOD_ADC_MAX,
+    LOKI_MODEM_REG_DEMOD_CHANNEL_CFG_COUNT
+} LokiModemDelayRegister;
+
+#define LOKI_MODEM_REG_CONTROL_RESTART_SHIFT 0
+#define LOKI_MODEM_REG_CONTROL_RESTART_MASK  1
+#define LOKI_MODEM_REG_CONTROL_RESTART_SHIFTED_MASK (LOKI_MODEM_REG_CONTROL_RESTART_MASK << LOKI_MODEM_REG_CONTROL_RESTART_SHIFT)
+
+#define LOKI_MODEM_REG_CONTROL_BYPASS_SHIFT 1
+#define LOKI_MODEM_REG_CONTROL_BYPASS_MASK  1
+#define LOKI_MODEM_REG_CONTROL_BYPASS_SHIFTED_MASK (LOKI_MODEM_REG_CONTROL_BYPASS_MASK << LOKI_MODEM_REG_CONTROL_BYPASS_SHIFT)
+
+#define LOKI_MODEM_REG_CONTROL_MIXERLESS_SHIFT 2
+#define LOKI_MODEM_REG_CONTROL_MIXERLESS_MASK  1
+#define LOKI_MODEM_REG_CONTROL_MIXERLESS_SHIFTED_MASK (LOKI_MODEM_REG_CONTROL_MIXERLESS_MASK << LOKI_MODEM_REG_CONTROL_MIXERLESS_SHIFT)
+
+#define LOKI_MODEM_REG_CONTROL_TEST_MODE_SHIFT 3
+#define LOKI_MODEM_REG_CONTROL_TEST_MODE_MASK  1
+#define LOKI_MODEM_REG_CONTROL_TEST_MODE_SHIFTED_MASK (LOKI_MODEM_REG_CONTROL_TEST_MODE_MASK << LOKI_MODEM_REG_CONTROL_TEST_MODE_SHIFT)
+
+#endif

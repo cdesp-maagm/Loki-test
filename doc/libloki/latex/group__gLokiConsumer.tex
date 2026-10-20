@@ -1,0 +1,198 @@
+\doxysubsection{Exemple de consommateur }
+\hypertarget{group__gLokiConsumer}{}\label{group__gLokiConsumer}\index{Exemple de consommateur@{Exemple de consommateur}}
+
+
+Ce module fournit une implémentation de référence d\textquotesingle{}un consommateur qui lit les données dans une \doxylink{group__gLokiFIFO}{FIFO} et qui ne les utilise pas.  
+
+
+Graphe de collaboration de Exemple de consommateur:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-consumer_8c}{libloki-\/consumer.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-consumer_8h}{libloki-\/consumer.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}}
+\begin{DoxyCompactList}\small\item\em Définition d\textquotesingle{}un consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Consumer \doxymbox{\hyperlink{group__gLokiConsumer_gaea7f489db0b26a3757469944359828e1}{Loki\+Consumer}}
+\begin{DoxyCompactList}\small\item\em Le type consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}{Loki\+Consumer\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire un consommateur. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}{Loki\+Consumer\+\_\+work}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Lire les données de la FIFO. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}in, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer un consommateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{Loki\+Consumer\+\_\+stop}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter un consommateur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319}{Loki\+Consumer\+\_\+del}} (\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un consommateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module fournit une implémentation de référence d\textquotesingle{}un consommateur qui lit les données dans une \doxylink{group__gLokiFIFO}{FIFO} et qui ne les utilise pas. 
+
+Il peut être utilisé comme {\itshape bouchon} en sortie d\textquotesingle{}une FIFO dont les données ne sont pas utilisées.
+
+Il peut aussi servir d\textquotesingle{}exemple de référence pour construire d\textquotesingle{}autres consommateurs 
+
+\label{group__gLokiConsumer_doc-typedef-members}
+\Hypertarget{group__gLokiConsumer_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiConsumer_gaea7f489db0b26a3757469944359828e1}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer@{LokiConsumer}}
+\index{LokiConsumer@{LokiConsumer}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer}{LokiConsumer}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_gaea7f489db0b26a3757469944359828e1} 
+typedef struct Loki\+Consumer Loki\+Consumer}
+
+
+
+Le type consommateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8h_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-consumer_8h_source}{libloki-\/consumer.\+h}}.
+
+
+
+\label{group__gLokiConsumer_doc-func-members}
+\Hypertarget{group__gLokiConsumer_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_del@{LokiConsumer\_del}}
+\index{LokiConsumer\_del@{LokiConsumer\_del}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer\_del()}{LokiConsumer\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319} 
+void Loki\+Consumer\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un consommateur. 
+
+Désallouer la mémoire allouée par \doxylink{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}{Loki\+Consumer\+\_\+new}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le consommateur à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00076}{76}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_new@{LokiConsumer\_new}}
+\index{LokiConsumer\_new@{LokiConsumer\_new}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer\_new()}{LokiConsumer\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7} 
+\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*} Loki\+Consumer\+\_\+new (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Construire un consommateur. 
+
+\begin{DoxyReturn}{Renvoie}
+Un nouveau consommateur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_start@{LokiConsumer\_start}}
+\index{LokiConsumer\_start@{LokiConsumer\_start}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer\_start()}{LokiConsumer\_start()}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d} 
+int Loki\+Consumer\+\_\+start (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{in}{, }\item[{size\+\_\+t}]{cid}{}\end{DoxyParamCaption})}
+
+
+
+Démarrer un consommateur. 
+
+Cette fonction est non bloquante. Elle crée un nouveau thread qui consomme les données d\textquotesingle{}une FIFO.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le consommateur à démarrer. \\
+\hline
+{\em in} & La FIFO à lire. \\
+\hline
+{\em cid} & Le numéro de consommateur pour la FIFO. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le code d\textquotesingle{}erreur retourné par {\ttfamily pthread\+\_\+create}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_stop@{LokiConsumer\_stop}}
+\index{LokiConsumer\_stop@{LokiConsumer\_stop}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer\_stop()}{LokiConsumer\_stop()}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63} 
+void Loki\+Consumer\+\_\+stop (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiConsumer}{Loki\+Consumer}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Arrêter un consommateur. 
+
+Cette fonction arrête le thread démarré par \doxylink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start} pour le même consommateur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le consommateur à arrêter. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00067}{67}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}\index{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_work@{LokiConsumer\_work}}
+\index{LokiConsumer\_work@{LokiConsumer\_work}!Exemple de consommateur@{Exemple de consommateur}}
+\doxysubsubsubsection{\texorpdfstring{LokiConsumer\_work()}{LokiConsumer\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1} 
+void \texorpdfstring{$\ast$}{*} Loki\+Consumer\+\_\+work (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lire les données de la FIFO. 
+
+Cette fonction est exécutée dans un thread démarré par \doxylink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{Loki\+Consumer\+\_\+start}. Elle consomme les données de la FIFO jusqu\textquotesingle{}à la demande d\textquotesingle{}arrêt par \doxylink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{Loki\+Consumer\+\_\+stop}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ptr} & Le consommateur courant. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-consumer_8c_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-consumer_8c_source}{libloki-\/consumer.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10

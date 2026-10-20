@@ -1,0 +1,206 @@
+\doxysubsection{Filtre de Kalman }
+\hypertarget{group__gLokiKalman}{}\label{group__gLokiKalman}\index{Filtre de Kalman@{Filtre de Kalman}}
+
+
+Estimation des paramètres d\textquotesingle{}une ellipse par filtrage de Kalman.  
+
+
+Graphe de collaboration de Filtre de Kalman:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-kalman_8c}{libloki-\/kalman.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-kalman_8h}{libloki-\/kalman.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Kalman \doxymbox{\hyperlink{group__gLokiKalman_ga5d595bfc88e801f22e05add7e6572739}{Loki\+Kalman}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23}{Loki\+Kalman\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 3]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre de Kalman. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6}{Loki\+Kalman\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054}{Loki\+Kalman\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6}{Loki\+Kalman\+\_\+work}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5}{Loki\+Kalman\+\_\+del}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre de Kalman. \end{DoxyCompactList}\item 
+\Hypertarget{group__gLokiKalman_ga6808449e72b96d1e2d926a1a6240e76b}\label{group__gLokiKalman_ga6808449e72b96d1e2d926a1a6240e76b} 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(params\+\_\+length, 3) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, del))
+\item 
+\Hypertarget{group__gLokiKalman_gae0202da7f824e4f4a178abd3b8977704}\label{group__gLokiKalman_gae0202da7f824e4f4a178abd3b8977704} 
+{\bfseries Loki\+Class\+\_\+declare\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Estimation des paramètres d\textquotesingle{}une ellipse par filtrage de Kalman. 
+
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}. 
+
+\label{group__gLokiKalman_doc-typedef-members}
+\Hypertarget{group__gLokiKalman_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiKalman_ga5d595bfc88e801f22e05add7e6572739}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman@{LokiKalman}}
+\index{LokiKalman@{LokiKalman}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman}{LokiKalman}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_ga5d595bfc88e801f22e05add7e6572739} 
+typedef struct Loki\+Kalman Loki\+Kalman}
+
+
+
+Représentation d\textquotesingle{}un filtre de Kalman. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-kalman_8h_source}{libloki-\/kalman.\+h}}.
+
+
+
+\label{group__gLokiKalman_doc-func-members}
+\Hypertarget{group__gLokiKalman_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_clone@{LokiKalman\_clone}}
+\index{LokiKalman\_clone@{LokiKalman\_clone}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman\_clone()}{LokiKalman\_clone()}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6} 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} Loki\+Kalman\+\_\+clone (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Construire un clone d\textquotesingle{}un filtre de Kalman. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em other} & Le filtre de Kalman à cloner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre de Kalman. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8c_source_l00045}{45}} du fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_del@{LokiKalman\_del}}
+\index{LokiKalman\_del@{LokiKalman\_del}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman\_del()}{LokiKalman\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5} 
+void Loki\+Kalman\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un filtre de Kalman. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8c_source_l00132}{132}} du fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_get\_state@{LokiKalman\_get\_state}}
+\index{LokiKalman\_get\_state@{LokiKalman\_get\_state}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman\_get\_state()}{LokiKalman\_get\_state()}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054} 
+float \texorpdfstring{$\ast$}{*} Loki\+Kalman\+\_\+get\+\_\+state (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Retourner l\textquotesingle{}état courant du filtre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Un filtre de Kalman. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le vecteur d\textquotesingle{}état du filtre. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_new@{LokiKalman\_new}}
+\index{LokiKalman\_new@{LokiKalman\_new}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman\_new()}{LokiKalman\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23} 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} Loki\+Kalman\+\_\+new (\begin{DoxyParamCaption}\item[{float}]{initial\+\_\+radius}{, }\item[{const float}]{params}{\+[static 3]}\end{DoxyParamCaption})}
+
+
+
+Construire un nouveau filtre de Kalman. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em initial\+\_\+radius} & Le rayon initial de l\textquotesingle{}ellipse estimée. \\
+\hline
+{\em params} & Les puissances de bruit Rv et Rw, et la valeur initiale à affecter dans la matrice P. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau filtre de Kalman. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6}\index{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_work@{LokiKalman\_work}}
+\index{LokiKalman\_work@{LokiKalman\_work}!Filtre de Kalman@{Filtre de Kalman}}
+\doxysubsubsubsection{\texorpdfstring{LokiKalman\_work()}{LokiKalman\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6} 
+void Loki\+Kalman\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. 
+
+Cette fonction met à jour l\textquotesingle{}état interne du filtre et les paramètres de l\textquotesingle{}ellipse de destination.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le filtre de Kalman à exécuter. \\
+\hline
+{\em x} & La coordonnée X du point courant. \\
+\hline
+{\em y} & La coordonnée Y du point courant. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-kalman_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10

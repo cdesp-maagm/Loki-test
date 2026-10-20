@@ -1,0 +1,347 @@
+\doxysubsection{Enregistrement de séries temporelles au format mini\+SEED }
+\hypertarget{group__gLokiMSeed}{}\label{group__gLokiMSeed}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+
+
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiFormatter}{Loki\+Formatter}.  
+
+
+Graphe de collaboration de Enregistrement de séries temporelles au format mini\+SEED:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-mseed_8c}{libloki-\/mseed.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-mseed_8h}{libloki-\/mseed.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}}
+\begin{DoxyCompactList}\small\item\em Configuration d\textquotesingle{}un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structLokiMSeedInputSample}{Loki\+MSeed\+Input\+Sample}}
+\begin{DoxyCompactList}\small\item\em Type des échantillons attendus par \doxylink{group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b}{Loki\+MSeed\+\_\+work}. \end{DoxyCompactList}\item 
+union \doxymbox{\hyperlink{unionLokiMSeedInputSample_1_1_0funion_0e_8____unnamed0____}{Loki\+MSeed\+Input\+Sample::\+\+[union]\+.\+\_\+\+\_\+unnamed0\+\_\+\_}}
+\begin{DoxyCompactList}\small\item\em La valeur de l\textquotesingle{}échantillon. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+union \doxymbox{\hyperlink{unionLokiMSeedOutputSample}{Loki\+MSeed\+Output\+Sample}}
+\begin{DoxyCompactList}\small\item\em Type des échantillons passés à la bibliothèque {\ttfamily libmseed}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiMSeed_ga2f37cc76e8b3cdaf2ba22de5e314e651}{CHANNEL\+\_\+\+NAME\+\_\+\+LEN}}~4
+\begin{DoxyCompactList}\small\item\em Le nombre maximal de caractères représentant le nom de la voie. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiMSeed_gae35423396dc4d9d76efe24f7cd5d0f44}{MSEED\+\_\+\+FILENAME\+\_\+\+SUFFIX\+\_\+\+LEN}}~(\doxymbox{\hyperlink{group__gLokiMSeed_ga2f37cc76e8b3cdaf2ba22de5e314e651}{CHANNEL\+\_\+\+NAME\+\_\+\+LEN}} + 7)
+\begin{DoxyCompactList}\small\item\em Le format du suffixe du nom de fichier: "{}\+\_\+\{n°de voie\}.\+mseed"{}. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiMSeed_gae18b59e922e6992a4642f749ce2c08f6}{MSEED\+\_\+\+RECLEN}}~512
+\begin{DoxyCompactList}\small\item\em La longueur d\textquotesingle{}un record mini\+SEED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+MSeed\+Config \doxymbox{\hyperlink{group__gLokiMSeed_ga1abf2faddffba06494e5cd6df5b62b71}{Loki\+MSeed\+Config}}
+\begin{DoxyCompactList}\small\item\em Configuration d\textquotesingle{}un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+typedef struct Loki\+MSeed \doxymbox{\hyperlink{group__gLokiMSeed_gad28337b6ee0e6eefa9e5055208839f1d}{Loki\+MSeed}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53}{Loki\+MSeed\+Config\+\_\+new}} (bool separate\+\_\+channels, const char \texorpdfstring{$\ast$}{*}station, const char \texorpdfstring{$\ast$}{*}location, const char \texorpdfstring{$\ast$}{*}network, bool raw, bool steim2, const char \texorpdfstring{$\ast$}{*}channel\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Construire une configuration d\textquotesingle{}enregistrement de données au format mini\+SEED. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b}{Loki\+MSeed\+Config\+\_\+del}} (\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une configuration d\textquotesingle{}enregistrement de données au format mini\+SEED. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8}{Loki\+MSeed\+\_\+new}} (\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Construire un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b}{Loki\+MSeed\+\_\+work}} (\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}filename, \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp, bool file\+\_\+change, void \texorpdfstring{$\ast$}{*}data, size\+\_\+t length, size\+\_\+t max\+\_\+channels, int32\+\_\+t channels, size\+\_\+t sample\+\_\+size, float sampling\+\_\+frequency)
+\begin{DoxyCompactList}\small\item\em Enregistrer un paquet de données au format mini\+SEED. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702}{Loki\+MSeed\+\_\+close}} (\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Fermer un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d}{Loki\+MSeed\+\_\+del}} (\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un formateur de séries temporelles mini\+SEED. \end{DoxyCompactList}\item 
+\Hypertarget{group__gLokiMSeed_gab2336a8d017373a81f0c9ae111a247a2}\label{group__gLokiMSeed_gab2336a8d017373a81f0c9ae111a247a2} 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}, \doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}, \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}, close) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}}, del))
+\item 
+\Hypertarget{group__gLokiMSeed_gac6c9592172dd8f7c2a47854438c7c970}\label{group__gLokiMSeed_gac6c9592172dd8f7c2a47854438c7c970} 
+{\bfseries Loki\+Class\+\_\+declare\+\_\+implementation} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}, \doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiFormatter}{Loki\+Formatter}. 
+
+Il s\textquotesingle{}appuie sur la bibliothèque {\ttfamily libmseed} de l\textquotesingle{}IRIS. 
+
+\label{group__gLokiMSeed_doc-define-members}
+\Hypertarget{group__gLokiMSeed_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiMSeed_ga2f37cc76e8b3cdaf2ba22de5e314e651}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!CHANNEL\_NAME\_LEN@{CHANNEL\_NAME\_LEN}}
+\index{CHANNEL\_NAME\_LEN@{CHANNEL\_NAME\_LEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{CHANNEL\_NAME\_LEN}{CHANNEL\_NAME\_LEN}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga2f37cc76e8b3cdaf2ba22de5e314e651} 
+\+\#define CHANNEL\+\_\+\+NAME\+\_\+\+LEN~4}
+
+
+
+Le nombre maximal de caractères représentant le nom de la voie. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00133}{133}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+\Hypertarget{group__gLokiMSeed_gae35423396dc4d9d76efe24f7cd5d0f44}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!MSEED\_FILENAME\_SUFFIX\_LEN@{MSEED\_FILENAME\_SUFFIX\_LEN}}
+\index{MSEED\_FILENAME\_SUFFIX\_LEN@{MSEED\_FILENAME\_SUFFIX\_LEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{MSEED\_FILENAME\_SUFFIX\_LEN}{MSEED\_FILENAME\_SUFFIX\_LEN}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_gae35423396dc4d9d76efe24f7cd5d0f44} 
+\+\#define MSEED\+\_\+\+FILENAME\+\_\+\+SUFFIX\+\_\+\+LEN~(\doxymbox{\hyperlink{group__gLokiMSeed_ga2f37cc76e8b3cdaf2ba22de5e314e651}{CHANNEL\+\_\+\+NAME\+\_\+\+LEN}} + 7)}
+
+
+
+Le format du suffixe du nom de fichier: "{}\+\_\+\{n°de voie\}.\+mseed"{}. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00136}{136}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+\Hypertarget{group__gLokiMSeed_gae18b59e922e6992a4642f749ce2c08f6}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!MSEED\_RECLEN@{MSEED\_RECLEN}}
+\index{MSEED\_RECLEN@{MSEED\_RECLEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{MSEED\_RECLEN}{MSEED\_RECLEN}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_gae18b59e922e6992a4642f749ce2c08f6} 
+\+\#define MSEED\+\_\+\+RECLEN~512}
+
+
+
+La longueur d\textquotesingle{}un record mini\+SEED. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00139}{139}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+
+
+\label{group__gLokiMSeed_doc-typedef-members}
+\Hypertarget{group__gLokiMSeed_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiMSeed_gad28337b6ee0e6eefa9e5055208839f1d}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed@{LokiMSeed}}
+\index{LokiMSeed@{LokiMSeed}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeed}{LokiMSeed}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_gad28337b6ee0e6eefa9e5055208839f1d} 
+typedef struct Loki\+MSeed Loki\+MSeed}
+
+
+
+Représentation d\textquotesingle{}un formateur de séries temporelles mini\+SEED. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8h_source_l00038}{38}} du fichier \doxymbox{\hyperlink{libloki-mseed_8h_source}{libloki-\/mseed.\+h}}.
+
+\Hypertarget{group__gLokiMSeed_ga1abf2faddffba06494e5cd6df5b62b71}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig@{LokiMSeedConfig}}
+\index{LokiMSeedConfig@{LokiMSeedConfig}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeedConfig}{LokiMSeedConfig}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga1abf2faddffba06494e5cd6df5b62b71} 
+typedef struct Loki\+MSeed\+Config Loki\+MSeed\+Config}
+
+
+
+Configuration d\textquotesingle{}un formateur de séries temporelles mini\+SEED. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8h_source_l00016}{16}} du fichier \doxymbox{\hyperlink{libloki-mseed_8h_source}{libloki-\/mseed.\+h}}.
+
+
+
+\label{group__gLokiMSeed_doc-func-members}
+\Hypertarget{group__gLokiMSeed_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_close@{LokiMSeed\_close}}
+\index{LokiMSeed\_close@{LokiMSeed\_close}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeed\_close()}{LokiMSeed\_close()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702} 
+void Loki\+MSeed\+\_\+close (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Fermer un formateur de séries temporelles mini\+SEED. 
+
+Cette fonction ferme le dernier fichier ouvert. Elle doit être appelée à la fin de l\textquotesingle{}enregistrement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur à fermer. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00216}{216}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_del@{LokiMSeed\_del}}
+\index{LokiMSeed\_del@{LokiMSeed\_del}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeed\_del()}{LokiMSeed\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d} 
+void Loki\+MSeed\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un formateur de séries temporelles mini\+SEED. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00223}{223}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_new@{LokiMSeed\_new}}
+\index{LokiMSeed\_new@{LokiMSeed\_new}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeed\_new()}{LokiMSeed\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8} 
+\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*} Loki\+MSeed\+\_\+new (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Construire un formateur de séries temporelles mini\+SEED. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em config} & La configuration à appliquer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau formateur de séries temporelles mini\+SEED. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00112}{112}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_work@{LokiMSeed\_work}}
+\index{LokiMSeed\_work@{LokiMSeed\_work}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeed\_work()}{LokiMSeed\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b} 
+void Loki\+MSeed\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiMSeed}{Loki\+MSeed}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}]{timestamp}{, }\item[{bool}]{file\+\_\+change}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{, }\item[{size\+\_\+t}]{max\+\_\+channels}{, }\item[{int32\+\_\+t}]{channels}{, }\item[{size\+\_\+t}]{sample\+\_\+size}{, }\item[{float}]{sampling\+\_\+frequency}{}\end{DoxyParamCaption})}
+
+
+
+Enregistrer un paquet de données au format mini\+SEED. 
+
+Cette fonction attend un tableau d\textquotesingle{}échantillons dont les éléments ont un type de la forme :
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }Sample\ \{}
+\DoxyCodeLine{\ \ \ \ uint32\_t\ channel;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ value;}
+\DoxyCodeLine{\ \ \ \ ...\ \textcolor{comment}{//\ Autres\ données\ spécifiques}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+On doit avoir {\ttfamily sample\+\_\+size == sizeof(struct Sample)}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur de séries temporelles mini\+SEED. \\
+\hline
+{\em filename} & Le nom du fichier de destination. \\
+\hline
+{\em timestamp} & La date du paquet de données (inutilisée pour ce format). \\
+\hline
+{\em file\+\_\+change} & Faut-\/il ouvrir un nouveau fichier de destination ou poursuivre le fichier précédent ? \\
+\hline
+{\em data} & Les données à écrire. \\
+\hline
+{\em length} & Le nombre d\textquotesingle{}échantillons à écrire. \\
+\hline
+{\em max\+\_\+channels} & Le nombre maximal de voies que ce formateur peut traiter. \\
+\hline
+{\em channels} & Un masque indiquant les voies à traiter. \\
+\hline
+{\em sample\+\_\+size} & La taille d\textquotesingle{}un échantillon, en octets. \\
+\hline
+{\em sampling\+\_\+frequency} & La fréquence d\textquotesingle{}échantillonage (inutilisée pour ce format). \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00141}{141}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig\_del@{LokiMSeedConfig\_del}}
+\index{LokiMSeedConfig\_del@{LokiMSeedConfig\_del}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeedConfig\_del()}{LokiMSeedConfig\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b} 
+void Loki\+MSeed\+Config\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire une configuration d\textquotesingle{}enregistrement de données au format mini\+SEED. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00058}{58}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53}\index{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig\_new@{LokiMSeedConfig\_new}}
+\index{LokiMSeedConfig\_new@{LokiMSeedConfig\_new}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}}
+\doxysubsubsubsection{\texorpdfstring{LokiMSeedConfig\_new()}{LokiMSeedConfig\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53} 
+\doxymbox{\hyperlink{structLokiMSeedConfig}{Loki\+MSeed\+Config}} \texorpdfstring{$\ast$}{*} Loki\+MSeed\+Config\+\_\+new (\begin{DoxyParamCaption}\item[{bool}]{separate\+\_\+channels}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{station}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{location}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{network}{, }\item[{bool}]{raw}{, }\item[{bool}]{steim2}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{channel\+\_\+names}{}\end{DoxyParamCaption})}
+
+
+
+Construire une configuration d\textquotesingle{}enregistrement de données au format mini\+SEED. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em separate\+\_\+channels} & Faut-\/il enregistrer chaque voie dans un fichier séparé ? \\
+\hline
+{\em station} & L\textquotesingle{}identifiant de station de l\textquotesingle{}interrogateur. \\
+\hline
+{\em location} & L\textquotesingle{}identifiant de localisation de l\textquotesingle{}interrogateur. \\
+\hline
+{\em network} & L\textquotesingle{}identifiant de réseau de l\textquotesingle{}interrogateur. \\
+\hline
+{\em raw} & Faut-\/il utiliser les valeurs brutes des échantillons ? \\
+\hline
+{\em steim2} & Faut-\/il utiliser l\textquotesingle{}algorithme de compression STEIM2 ? \\
+\hline
+{\em channel\+\_\+names} & Un tableau de nom de voies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une nouvelle configuration d\textquotesingle{}enregistrement au format mini\+SEED. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-mseed_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-mseed_8c_source}{libloki-\/mseed.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12

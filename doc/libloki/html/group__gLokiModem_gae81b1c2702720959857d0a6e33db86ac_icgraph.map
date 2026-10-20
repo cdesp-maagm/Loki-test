@@ -1,0 +1,8 @@
+<map id="LokiModem_get_mod_osc1_gain" name="LokiModem_get_mod_osc1_gain">
+<area shape="rect" id="node1" title="Lire l&#39;amplitude du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="985,31,1220,56"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="729,5,911,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gac7ad56144a69fcdc52eac5dd41e944d7" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="703,55,937,80"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,55,655,80"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,55,469,80"/>
+<area shape="rect" id="node6" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,55,213,80"/>
+</map>

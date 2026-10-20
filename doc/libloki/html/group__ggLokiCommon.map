@@ -1,0 +1,7 @@
+<map id="Définitions communes" name="Définitions communes">
+<area shape="rect" id="node1" href="$group__gLokiClass.html" title="Ce module fournit des macros facilitant la définition d&#39;interfaces et de classes." alt="" coords="221,5,468,45"/>
+<area shape="rect" id="node2" href="$group__gLokiCommon.html" title=" " alt="" coords="288,70,401,95"/>
+<area shape="rect" id="node3" href="$group__gLokiHooks.html" title="Ce module peut être utilisées en phase de mise au point pour identifier l&#39;origine de fuites mémoire o..." alt="" coords="254,120,435,160"/>
+<area shape="rect" id="node4" href="$group__gLokiNeon.html" title="Sur les architectures ARM qui supportent les instructions SIMD NEON, ce fichier inclut directement l&#39;..." alt="" coords="263,184,426,224"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,99,173,125"/>
+</map>

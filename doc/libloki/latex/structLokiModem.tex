@@ -1,0 +1,847 @@
+\doxysection{Référence de la structure Loki\+Modem}
+\hypertarget{structLokiModem}{}\label{structLokiModem}\index{LokiModem@{LokiModem}}
+
+
+Représentation des périphériques modulateur et démodulateur.  
+
+
+
+
+Graphe de collaboration de Loki\+Modem:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiModem_a9ec03b6c1b70c560d85fe273a6f496b9}{file}}
+\begin{DoxyCompactList}\small\item\em Le fichier représentant le périphérique qui gère le modem. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structLokiModem_a33e0848e406aa834cb6608806fe7c5f2}{fileno}}
+\begin{DoxyCompactList}\small\item\em Le numéro du fichier représentant le périphérique qui gère le modem. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiModem_af16cb116b1081bc7d5c89ee0662f82a6}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiModem_a7ac40b0fd810c236374624ce5d04c6d1}{out}}
+\begin{DoxyCompactList}\small\item\em La FIFO de sortie des données démodulées. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiModem_a830eda648e8d962ae06c3a8cfdfc4ddc}{raw}}
+\begin{DoxyCompactList}\small\item\em Conserver les données démodulées brutes (entiers sans mise à l\textquotesingle{}échelle). \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a6441378ffc113893328fb22fbf6754a9}{stream\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Un masque indiquant les voies à traiter, -\/1 pour toutes les voies. \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiModem_a6ebdf5883cb7f7bc56f398e40cab55e9}{thread}}
+\begin{DoxyCompactList}\small\item\em Le thread démarré par Loki\+Modem\+\_\+start\+\_\+streaming. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiModem_a8304b27819945fa7bdbe93b97a0a78dc}{simulate}}
+\begin{DoxyCompactList}\small\item\em Faut-\/il simuler les capteurs logiciellement ? \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a936b8b9655011a0bd8c789cd51f456f4}{sim\+\_\+channel}}
+\begin{DoxyCompactList}\small\item\em Le numéro de la voie courante pendant une simulation logicielle des capteurs. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a01405300feccb0f2fbeb08c2ced51f58}{sim\+\_\+osc1\+\_\+phase}}
+\begin{DoxyCompactList}\small\item\em La phase courante du déplacement fictif pendant une simulation logicielle des capteurs. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a8fdc7370ab410eede4f05a4c619c8599}{sim\+\_\+disp\+\_\+phase}}
+\begin{DoxyCompactList}\small\item\em La phase courante correspondant au déplacement réel pendant une simulation logicielle des capteurs. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a8c85ba6f240600b896d7b62b41d6c54d}{clk\+\_\+frequency}}
+\begin{DoxyCompactList}\small\item\em La fréquence d\textquotesingle{}horloge du circuit modem. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a5285059c28e92d4ebcd48ed8242918e2}{mod\+\_\+sample\+\_\+frequency\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em La fréquence d\textquotesingle{}échantillonnage de référence en sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_af9ca150a8527d58bd876489b58a3bc5b}{mod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Le nombre maximal de périodes d\textquotesingle{}horloge par échantillon en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a66e2d337f49a90f6a338c4838c421cf8}{mod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em Le nombre de périodes d\textquotesingle{}horloge de référence par échantillon en sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a62e07bbea25151c18a05287b3e580ea8}{mod\+\_\+osc1\+\_\+wave\+\_\+frequency\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em La fréquence minimale du premier oscillateur du modulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a132b981bb473bb0c4463e57fa38da3a2}{mod\+\_\+osc2\+\_\+wave\+\_\+frequency\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em La fréquence minimale du second oscillateur du modulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_aaecb28095a48e7d7616462e0f2e63a8b}{mod\+\_\+gain\+\_\+integer\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie entière de l\textquotesingle{}amplitude de sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a03b7b50769eb99dc37b78c775c81ed5b}{mod\+\_\+gain\+\_\+fractional\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie fractionnaire de l\textquotesingle{}amplitude de sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a3a49c14c17434da4b6a7799d4a440a0a}{mod\+\_\+gain\+\_\+res}}
+\begin{DoxyCompactList}\small\item\em La résolution du réglage d\textquotesingle{}amplitude en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a8ec0e31b992f973a03b56268cfee72d9}{mod\+\_\+phase\+\_\+amplitude\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}amplitude maximale de sortie du modulateur, en mA. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_aadf77dab8c2bce9bd10735c7c81a3194}{mod\+\_\+phase\+\_\+integer\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie entière de la valeur de sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_aef64d7f592dac273f3f95e0f4278ff6e}{mod\+\_\+phase\+\_\+fractional\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie fractionnaire de la valeur de sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a65c3b44073a7d26e7f51f72ad3f3905d}{mod\+\_\+offset\+\_\+res}}
+\begin{DoxyCompactList}\small\item\em La résolution du réglage d\textquotesingle{}offset en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_ad8bc6f04aca1d7dd20952044e5f02ac5}{mod\+\_\+dc\+\_\+value\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Le courant moyen maximal applicable en sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a7156b14c912c713f4951fc9b84794312}{mod\+\_\+dc\+\_\+value\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits pour représenter le courant moyen en sortie du modulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a859375ddb31cc497c1ef695da2669f5c}{mod\+\_\+dc\+\_\+value\+\_\+res}}
+\begin{DoxyCompactList}\small\item\em La résolution du réglage du courant moyen en sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a5754b9847c2675b63f4fdb3191b50237}{mod\+\_\+pga\+\_\+gain\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits pour représenter le gain de l\textquotesingle{}amplificateur de sortie du modulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a26e3a83462ce6413eee54cb0019f0325}{mod\+\_\+pga\+\_\+gain\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Le gain maximal de l\textquotesingle{}amplificateur en sortie du modulateur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiModem_a46cf054254a35cf9e9a8b0adfb39810b}{demod\+\_\+mixerless}}
+\begin{DoxyCompactList}\small\item\em Le démodulateur fonctionne-\/t-\/il par décimation ? \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a42b99594788f2b76357ec2352f8a15ae}{demod\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Le nombre de voies d\textquotesingle{}entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a1669b788ca1d62d20c25cf04b210d4e5}{demod\+\_\+channel\+\_\+output\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits pour représenter le numéro de voie dans un échantillon brut produit par le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a81a29155b727d029adae1881b461e57a}{demod\+\_\+channel\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire pour lire le numéro de voie dans un échantillon démodulé. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a1683df555988bcd3c07aa848dc23dcd3}{demod\+\_\+power\+\_\+integer\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie entière des échantillons en entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_ade847efd4cd09416e7e2af12e3f172a7}{demod\+\_\+power\+\_\+fractional\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie fractionnaire des échantillons en entrée du démodulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a1967c90ace20e4b5cfcf0b26c8ac9874}{demod\+\_\+power\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em La valeur maximale des échantillons en entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a6cbf7ee6c94a273cce43345834c1d289}{demod\+\_\+sample\+\_\+frequency\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em La fréquence d\textquotesingle{}échantillonnage de référence en entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_af106b51bf8658b1774792533d3ef9bfc}{demod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Le nombre maximal de périodes d\textquotesingle{}horloge par échantillon en entrée du démodulateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_a0861daa5fdafd18e46fc3db8656268ab}{demod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em Le nombre de périodes d\textquotesingle{}horloge de référence par échantillon en entrée du démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_adbebc3cfcbbd7f1e90fbc087d73709b1}{demod\+\_\+osc\+\_\+wave\+\_\+frequency\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em La fréquence minimale de l\textquotesingle{}oscillateur du démodulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_ac9f1fe2d1563a2b85b5f399001d66f61}{demod\+\_\+fir1\+\_\+decimation}}
+\begin{DoxyCompactList}\small\item\em Le facteur de décimation du premier étage de filtrage dans le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_af2433940a4569da79817b24303d5c4ac}{demod\+\_\+fir1\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients du premier étage de filtrage dans le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a4b898cc31c707fd9867dc3b6c1b3d07f}{demod\+\_\+fir2\+\_\+decimation}}
+\begin{DoxyCompactList}\small\item\em Le facteur de décimation du second étage de filtrage dans le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_abec3e3e4c27e6c9afd620f71c5a7a999}{demod\+\_\+fir2\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients du second étage de filtrage dans le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_adbdd3ce866a392159bf2a3e7b1ed3697}{demod\+\_\+fir2\+\_\+bandwidth}}
+\begin{DoxyCompactList}\small\item\em La bande passante de sortie du second étage de filtrage dans le démodulateur. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a3b3b6642c8399c55315ab2818729c81c}{demod\+\_\+xy\+\_\+integer\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie entière des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a0f5d473e029e1e4593ae2056d6a1c722}{demod\+\_\+xy\+\_\+fractional\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de la partie fractionnaire des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a4ae8eee8c480f933d9f297ed2205913a}{demod\+\_\+xy\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre total de bits d\textquotesingle{}un échantillon de chaque composante X (I) ou Y (Q) du signal démodulé. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_af8aed7faabc1d46b4fc04790b3204a6c}{demod\+\_\+xy\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire pour lire une composante X (I) ou Y (Q) d\textquotesingle{}un échantillon du signal démodulé. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiModem_a2f41fc3a5e0923e415777381e1c23ce0}{demod\+\_\+xy\+\_\+sign\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire pour lire le bit de signe d\textquotesingle{}une composante X (I) ou Y (Q) d\textquotesingle{}un échantillon du signal démodulé. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiModem_ad345196b85b0a6b09f31ebc3a0fde052}{demod\+\_\+xy\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em La valeur maximale d\textquotesingle{}un échantillon pour une composante X (I) ou Y (Q) du signal démodulé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation des périphériques modulateur et démodulateur. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+
+
+\label{structLokiModem_doc-variable-members}
+\Hypertarget{structLokiModem_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiModem_a8c85ba6f240600b896d7b62b41d6c54d}\index{LokiModem@{LokiModem}!clk\_frequency@{clk\_frequency}}
+\index{clk\_frequency@{clk\_frequency}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{clk\_frequency}{clk\_frequency}}
+{\footnotesize\ttfamily \label{structLokiModem_a8c85ba6f240600b896d7b62b41d6c54d} 
+uint32\+\_\+t Loki\+Modem::\+clk\+\_\+frequency}
+
+
+
+La fréquence d\textquotesingle{}horloge du circuit modem. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a81a29155b727d029adae1881b461e57a}\index{LokiModem@{LokiModem}!demod\_channel\_mask@{demod\_channel\_mask}}
+\index{demod\_channel\_mask@{demod\_channel\_mask}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_channel\_mask}{demod\_channel\_mask}}
+{\footnotesize\ttfamily \label{structLokiModem_a81a29155b727d029adae1881b461e57a} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+channel\+\_\+mask}
+
+
+
+Le masque binaire pour lire le numéro de voie dans un échantillon démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00089}{89}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a1669b788ca1d62d20c25cf04b210d4e5}\index{LokiModem@{LokiModem}!demod\_channel\_output\_width@{demod\_channel\_output\_width}}
+\index{demod\_channel\_output\_width@{demod\_channel\_output\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_channel\_output\_width}{demod\_channel\_output\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a1669b788ca1d62d20c25cf04b210d4e5} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+channel\+\_\+output\+\_\+width}
+
+
+
+Le nombre de bits pour représenter le numéro de voie dans un échantillon brut produit par le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00087}{87}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a42b99594788f2b76357ec2352f8a15ae}\index{LokiModem@{LokiModem}!demod\_channels@{demod\_channels}}
+\index{demod\_channels@{demod\_channels}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_channels}{demod\_channels}}
+{\footnotesize\ttfamily \label{structLokiModem_a42b99594788f2b76357ec2352f8a15ae} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+channels}
+
+
+
+Le nombre de voies d\textquotesingle{}entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00085}{85}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_af106b51bf8658b1774792533d3ef9bfc}\index{LokiModem@{LokiModem}!demod\_cycles\_per\_sample\_max@{demod\_cycles\_per\_sample\_max}}
+\index{demod\_cycles\_per\_sample\_max@{demod\_cycles\_per\_sample\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_cycles\_per\_sample\_max}{demod\_cycles\_per\_sample\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_af106b51bf8658b1774792533d3ef9bfc} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+max}
+
+
+
+Le nombre maximal de périodes d\textquotesingle{}horloge par échantillon en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00099}{99}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a0861daa5fdafd18e46fc3db8656268ab}\index{LokiModem@{LokiModem}!demod\_cycles\_per\_sample\_ref@{demod\_cycles\_per\_sample\_ref}}
+\index{demod\_cycles\_per\_sample\_ref@{demod\_cycles\_per\_sample\_ref}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_cycles\_per\_sample\_ref}{demod\_cycles\_per\_sample\_ref}}
+{\footnotesize\ttfamily \label{structLokiModem_a0861daa5fdafd18e46fc3db8656268ab} 
+float Loki\+Modem::\+demod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+ref}
+
+
+
+Le nombre de périodes d\textquotesingle{}horloge de référence par échantillon en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00101}{101}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_ac9f1fe2d1563a2b85b5f399001d66f61}\index{LokiModem@{LokiModem}!demod\_fir1\_decimation@{demod\_fir1\_decimation}}
+\index{demod\_fir1\_decimation@{demod\_fir1\_decimation}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_fir1\_decimation}{demod\_fir1\_decimation}}
+{\footnotesize\ttfamily \label{structLokiModem_ac9f1fe2d1563a2b85b5f399001d66f61} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+fir1\+\_\+decimation}
+
+
+
+Le facteur de décimation du premier étage de filtrage dans le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00105}{105}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_af2433940a4569da79817b24303d5c4ac}\index{LokiModem@{LokiModem}!demod\_fir1\_length@{demod\_fir1\_length}}
+\index{demod\_fir1\_length@{demod\_fir1\_length}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_fir1\_length}{demod\_fir1\_length}}
+{\footnotesize\ttfamily \label{structLokiModem_af2433940a4569da79817b24303d5c4ac} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+fir1\+\_\+length}
+
+
+
+Le nombre de coefficients du premier étage de filtrage dans le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00107}{107}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_adbdd3ce866a392159bf2a3e7b1ed3697}\index{LokiModem@{LokiModem}!demod\_fir2\_bandwidth@{demod\_fir2\_bandwidth}}
+\index{demod\_fir2\_bandwidth@{demod\_fir2\_bandwidth}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_fir2\_bandwidth}{demod\_fir2\_bandwidth}}
+{\footnotesize\ttfamily \label{structLokiModem_adbdd3ce866a392159bf2a3e7b1ed3697} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+fir2\+\_\+bandwidth}
+
+
+
+La bande passante de sortie du second étage de filtrage dans le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00113}{113}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a4b898cc31c707fd9867dc3b6c1b3d07f}\index{LokiModem@{LokiModem}!demod\_fir2\_decimation@{demod\_fir2\_decimation}}
+\index{demod\_fir2\_decimation@{demod\_fir2\_decimation}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_fir2\_decimation}{demod\_fir2\_decimation}}
+{\footnotesize\ttfamily \label{structLokiModem_a4b898cc31c707fd9867dc3b6c1b3d07f} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+fir2\+\_\+decimation}
+
+
+
+Le facteur de décimation du second étage de filtrage dans le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00109}{109}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_abec3e3e4c27e6c9afd620f71c5a7a999}\index{LokiModem@{LokiModem}!demod\_fir2\_length@{demod\_fir2\_length}}
+\index{demod\_fir2\_length@{demod\_fir2\_length}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_fir2\_length}{demod\_fir2\_length}}
+{\footnotesize\ttfamily \label{structLokiModem_abec3e3e4c27e6c9afd620f71c5a7a999} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+fir2\+\_\+length}
+
+
+
+Le nombre de coefficients du second étage de filtrage dans le démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00111}{111}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a46cf054254a35cf9e9a8b0adfb39810b}\index{LokiModem@{LokiModem}!demod\_mixerless@{demod\_mixerless}}
+\index{demod\_mixerless@{demod\_mixerless}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_mixerless}{demod\_mixerless}}
+{\footnotesize\ttfamily \label{structLokiModem_a46cf054254a35cf9e9a8b0adfb39810b} 
+bool Loki\+Modem::\+demod\+\_\+mixerless}
+
+
+
+Le démodulateur fonctionne-\/t-\/il par décimation ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00083}{83}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_adbebc3cfcbbd7f1e90fbc087d73709b1}\index{LokiModem@{LokiModem}!demod\_osc\_wave\_frequency\_min@{demod\_osc\_wave\_frequency\_min}}
+\index{demod\_osc\_wave\_frequency\_min@{demod\_osc\_wave\_frequency\_min}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_osc\_wave\_frequency\_min}{demod\_osc\_wave\_frequency\_min}}
+{\footnotesize\ttfamily \label{structLokiModem_adbebc3cfcbbd7f1e90fbc087d73709b1} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+osc\+\_\+wave\+\_\+frequency\+\_\+min}
+
+
+
+La fréquence minimale de l\textquotesingle{}oscillateur du démodulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00103}{103}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_ade847efd4cd09416e7e2af12e3f172a7}\index{LokiModem@{LokiModem}!demod\_power\_fractional\_width@{demod\_power\_fractional\_width}}
+\index{demod\_power\_fractional\_width@{demod\_power\_fractional\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_power\_fractional\_width}{demod\_power\_fractional\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_ade847efd4cd09416e7e2af12e3f172a7} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+power\+\_\+fractional\+\_\+width}
+
+
+
+Le nombre de bits de la partie fractionnaire des échantillons en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00093}{93}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a1683df555988bcd3c07aa848dc23dcd3}\index{LokiModem@{LokiModem}!demod\_power\_integer\_width@{demod\_power\_integer\_width}}
+\index{demod\_power\_integer\_width@{demod\_power\_integer\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_power\_integer\_width}{demod\_power\_integer\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a1683df555988bcd3c07aa848dc23dcd3} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+power\+\_\+integer\+\_\+width}
+
+
+
+Le nombre de bits de la partie entière des échantillons en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00091}{91}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a1967c90ace20e4b5cfcf0b26c8ac9874}\index{LokiModem@{LokiModem}!demod\_power\_max@{demod\_power\_max}}
+\index{demod\_power\_max@{demod\_power\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_power\_max}{demod\_power\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_a1967c90ace20e4b5cfcf0b26c8ac9874} 
+float Loki\+Modem::\+demod\+\_\+power\+\_\+max}
+
+
+
+La valeur maximale des échantillons en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00095}{95}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a6cbf7ee6c94a273cce43345834c1d289}\index{LokiModem@{LokiModem}!demod\_sample\_frequency\_ref@{demod\_sample\_frequency\_ref}}
+\index{demod\_sample\_frequency\_ref@{demod\_sample\_frequency\_ref}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_sample\_frequency\_ref}{demod\_sample\_frequency\_ref}}
+{\footnotesize\ttfamily \label{structLokiModem_a6cbf7ee6c94a273cce43345834c1d289} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+sample\+\_\+frequency\+\_\+ref}
+
+
+
+La fréquence d\textquotesingle{}échantillonnage de référence en entrée du démodulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00097}{97}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a0f5d473e029e1e4593ae2056d6a1c722}\index{LokiModem@{LokiModem}!demod\_xy\_fractional\_width@{demod\_xy\_fractional\_width}}
+\index{demod\_xy\_fractional\_width@{demod\_xy\_fractional\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_fractional\_width}{demod\_xy\_fractional\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a0f5d473e029e1e4593ae2056d6a1c722} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+xy\+\_\+fractional\+\_\+width}
+
+
+
+Le nombre de bits de la partie fractionnaire des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00117}{117}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a3b3b6642c8399c55315ab2818729c81c}\index{LokiModem@{LokiModem}!demod\_xy\_integer\_width@{demod\_xy\_integer\_width}}
+\index{demod\_xy\_integer\_width@{demod\_xy\_integer\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_integer\_width}{demod\_xy\_integer\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a3b3b6642c8399c55315ab2818729c81c} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+xy\+\_\+integer\+\_\+width}
+
+
+
+Le nombre de bits de la partie entière des échantillons de chaque composante X (I) ou Y (Q) du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00115}{115}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_af8aed7faabc1d46b4fc04790b3204a6c}\index{LokiModem@{LokiModem}!demod\_xy\_mask@{demod\_xy\_mask}}
+\index{demod\_xy\_mask@{demod\_xy\_mask}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_mask}{demod\_xy\_mask}}
+{\footnotesize\ttfamily \label{structLokiModem_af8aed7faabc1d46b4fc04790b3204a6c} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+xy\+\_\+mask}
+
+
+
+Le masque binaire pour lire une composante X (I) ou Y (Q) d\textquotesingle{}un échantillon du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00121}{121}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_ad345196b85b0a6b09f31ebc3a0fde052}\index{LokiModem@{LokiModem}!demod\_xy\_max@{demod\_xy\_max}}
+\index{demod\_xy\_max@{demod\_xy\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_max}{demod\_xy\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_ad345196b85b0a6b09f31ebc3a0fde052} 
+float Loki\+Modem::\+demod\+\_\+xy\+\_\+max}
+
+
+
+La valeur maximale d\textquotesingle{}un échantillon pour une composante X (I) ou Y (Q) du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00125}{125}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a2f41fc3a5e0923e415777381e1c23ce0}\index{LokiModem@{LokiModem}!demod\_xy\_sign\_mask@{demod\_xy\_sign\_mask}}
+\index{demod\_xy\_sign\_mask@{demod\_xy\_sign\_mask}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_sign\_mask}{demod\_xy\_sign\_mask}}
+{\footnotesize\ttfamily \label{structLokiModem_a2f41fc3a5e0923e415777381e1c23ce0} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+xy\+\_\+sign\+\_\+mask}
+
+
+
+Le masque binaire pour lire le bit de signe d\textquotesingle{}une composante X (I) ou Y (Q) d\textquotesingle{}un échantillon du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00123}{123}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a4ae8eee8c480f933d9f297ed2205913a}\index{LokiModem@{LokiModem}!demod\_xy\_width@{demod\_xy\_width}}
+\index{demod\_xy\_width@{demod\_xy\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{demod\_xy\_width}{demod\_xy\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a4ae8eee8c480f933d9f297ed2205913a} 
+uint32\+\_\+t Loki\+Modem::\+demod\+\_\+xy\+\_\+width}
+
+
+
+Le nombre total de bits d\textquotesingle{}un échantillon de chaque composante X (I) ou Y (Q) du signal démodulé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00119}{119}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a9ec03b6c1b70c560d85fe273a6f496b9}\index{LokiModem@{LokiModem}!file@{file}}
+\index{file@{file}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \label{structLokiModem_a9ec03b6c1b70c560d85fe273a6f496b9} 
+FILE\texorpdfstring{$\ast$}{*} Loki\+Modem::\+file}
+
+
+
+Le fichier représentant le périphérique qui gère le modem. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00025}{25}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a33e0848e406aa834cb6608806fe7c5f2}\index{LokiModem@{LokiModem}!fileno@{fileno}}
+\index{fileno@{fileno}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{fileno}{fileno}}
+{\footnotesize\ttfamily \label{structLokiModem_a33e0848e406aa834cb6608806fe7c5f2} 
+int Loki\+Modem::\+fileno}
+
+
+
+Le numéro du fichier représentant le périphérique qui gère le modem. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00027}{27}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_af9ca150a8527d58bd876489b58a3bc5b}\index{LokiModem@{LokiModem}!mod\_cycles\_per\_sample\_max@{mod\_cycles\_per\_sample\_max}}
+\index{mod\_cycles\_per\_sample\_max@{mod\_cycles\_per\_sample\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_cycles\_per\_sample\_max}{mod\_cycles\_per\_sample\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_af9ca150a8527d58bd876489b58a3bc5b} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+max}
+
+
+
+Le nombre maximal de périodes d\textquotesingle{}horloge par échantillon en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00051}{51}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a66e2d337f49a90f6a338c4838c421cf8}\index{LokiModem@{LokiModem}!mod\_cycles\_per\_sample\_ref@{mod\_cycles\_per\_sample\_ref}}
+\index{mod\_cycles\_per\_sample\_ref@{mod\_cycles\_per\_sample\_ref}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_cycles\_per\_sample\_ref}{mod\_cycles\_per\_sample\_ref}}
+{\footnotesize\ttfamily \label{structLokiModem_a66e2d337f49a90f6a338c4838c421cf8} 
+float Loki\+Modem::\+mod\+\_\+cycles\+\_\+per\+\_\+sample\+\_\+ref}
+
+
+
+Le nombre de périodes d\textquotesingle{}horloge de référence par échantillon en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00053}{53}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_ad8bc6f04aca1d7dd20952044e5f02ac5}\index{LokiModem@{LokiModem}!mod\_dc\_value\_max@{mod\_dc\_value\_max}}
+\index{mod\_dc\_value\_max@{mod\_dc\_value\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_dc\_value\_max}{mod\_dc\_value\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_ad8bc6f04aca1d7dd20952044e5f02ac5} 
+float Loki\+Modem::\+mod\+\_\+dc\+\_\+value\+\_\+max}
+
+
+
+Le courant moyen maximal applicable en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00073}{73}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a859375ddb31cc497c1ef695da2669f5c}\index{LokiModem@{LokiModem}!mod\_dc\_value\_res@{mod\_dc\_value\_res}}
+\index{mod\_dc\_value\_res@{mod\_dc\_value\_res}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_dc\_value\_res}{mod\_dc\_value\_res}}
+{\footnotesize\ttfamily \label{structLokiModem_a859375ddb31cc497c1ef695da2669f5c} 
+float Loki\+Modem::\+mod\+\_\+dc\+\_\+value\+\_\+res}
+
+
+
+La résolution du réglage du courant moyen en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00077}{77}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a7156b14c912c713f4951fc9b84794312}\index{LokiModem@{LokiModem}!mod\_dc\_value\_width@{mod\_dc\_value\_width}}
+\index{mod\_dc\_value\_width@{mod\_dc\_value\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_dc\_value\_width}{mod\_dc\_value\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a7156b14c912c713f4951fc9b84794312} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+dc\+\_\+value\+\_\+width}
+
+
+
+Le nombre de bits pour représenter le courant moyen en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00075}{75}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a03b7b50769eb99dc37b78c775c81ed5b}\index{LokiModem@{LokiModem}!mod\_gain\_fractional\_width@{mod\_gain\_fractional\_width}}
+\index{mod\_gain\_fractional\_width@{mod\_gain\_fractional\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_gain\_fractional\_width}{mod\_gain\_fractional\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a03b7b50769eb99dc37b78c775c81ed5b} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+gain\+\_\+fractional\+\_\+width}
+
+
+
+Le nombre de bits de la partie fractionnaire de l\textquotesingle{}amplitude de sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00061}{61}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_aaecb28095a48e7d7616462e0f2e63a8b}\index{LokiModem@{LokiModem}!mod\_gain\_integer\_width@{mod\_gain\_integer\_width}}
+\index{mod\_gain\_integer\_width@{mod\_gain\_integer\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_gain\_integer\_width}{mod\_gain\_integer\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_aaecb28095a48e7d7616462e0f2e63a8b} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+gain\+\_\+integer\+\_\+width}
+
+
+
+Le nombre de bits de la partie entière de l\textquotesingle{}amplitude de sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00059}{59}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a3a49c14c17434da4b6a7799d4a440a0a}\index{LokiModem@{LokiModem}!mod\_gain\_res@{mod\_gain\_res}}
+\index{mod\_gain\_res@{mod\_gain\_res}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_gain\_res}{mod\_gain\_res}}
+{\footnotesize\ttfamily \label{structLokiModem_a3a49c14c17434da4b6a7799d4a440a0a} 
+float Loki\+Modem::\+mod\+\_\+gain\+\_\+res}
+
+
+
+La résolution du réglage d\textquotesingle{}amplitude en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00063}{63}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a65c3b44073a7d26e7f51f72ad3f3905d}\index{LokiModem@{LokiModem}!mod\_offset\_res@{mod\_offset\_res}}
+\index{mod\_offset\_res@{mod\_offset\_res}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_offset\_res}{mod\_offset\_res}}
+{\footnotesize\ttfamily \label{structLokiModem_a65c3b44073a7d26e7f51f72ad3f3905d} 
+float Loki\+Modem::\+mod\+\_\+offset\+\_\+res}
+
+
+
+La résolution du réglage d\textquotesingle{}offset en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00071}{71}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a62e07bbea25151c18a05287b3e580ea8}\index{LokiModem@{LokiModem}!mod\_osc1\_wave\_frequency\_min@{mod\_osc1\_wave\_frequency\_min}}
+\index{mod\_osc1\_wave\_frequency\_min@{mod\_osc1\_wave\_frequency\_min}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_osc1\_wave\_frequency\_min}{mod\_osc1\_wave\_frequency\_min}}
+{\footnotesize\ttfamily \label{structLokiModem_a62e07bbea25151c18a05287b3e580ea8} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+osc1\+\_\+wave\+\_\+frequency\+\_\+min}
+
+
+
+La fréquence minimale du premier oscillateur du modulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00055}{55}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a132b981bb473bb0c4463e57fa38da3a2}\index{LokiModem@{LokiModem}!mod\_osc2\_wave\_frequency\_min@{mod\_osc2\_wave\_frequency\_min}}
+\index{mod\_osc2\_wave\_frequency\_min@{mod\_osc2\_wave\_frequency\_min}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_osc2\_wave\_frequency\_min}{mod\_osc2\_wave\_frequency\_min}}
+{\footnotesize\ttfamily \label{structLokiModem_a132b981bb473bb0c4463e57fa38da3a2} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+osc2\+\_\+wave\+\_\+frequency\+\_\+min}
+
+
+
+La fréquence minimale du second oscillateur du modulateur pour la fréquence d\textquotesingle{}échantillonnage de référence, en Hz. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00057}{57}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a26e3a83462ce6413eee54cb0019f0325}\index{LokiModem@{LokiModem}!mod\_pga\_gain\_max@{mod\_pga\_gain\_max}}
+\index{mod\_pga\_gain\_max@{mod\_pga\_gain\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_pga\_gain\_max}{mod\_pga\_gain\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_a26e3a83462ce6413eee54cb0019f0325} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+pga\+\_\+gain\+\_\+max}
+
+
+
+Le gain maximal de l\textquotesingle{}amplificateur en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00081}{81}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a5754b9847c2675b63f4fdb3191b50237}\index{LokiModem@{LokiModem}!mod\_pga\_gain\_width@{mod\_pga\_gain\_width}}
+\index{mod\_pga\_gain\_width@{mod\_pga\_gain\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_pga\_gain\_width}{mod\_pga\_gain\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_a5754b9847c2675b63f4fdb3191b50237} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+pga\+\_\+gain\+\_\+width}
+
+
+
+Le nombre de bits pour représenter le gain de l\textquotesingle{}amplificateur de sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00079}{79}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a8ec0e31b992f973a03b56268cfee72d9}\index{LokiModem@{LokiModem}!mod\_phase\_amplitude\_max@{mod\_phase\_amplitude\_max}}
+\index{mod\_phase\_amplitude\_max@{mod\_phase\_amplitude\_max}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_phase\_amplitude\_max}{mod\_phase\_amplitude\_max}}
+{\footnotesize\ttfamily \label{structLokiModem_a8ec0e31b992f973a03b56268cfee72d9} 
+float Loki\+Modem::\+mod\+\_\+phase\+\_\+amplitude\+\_\+max}
+
+
+
+L\textquotesingle{}amplitude maximale de sortie du modulateur, en mA. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00065}{65}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_aef64d7f592dac273f3f95e0f4278ff6e}\index{LokiModem@{LokiModem}!mod\_phase\_fractional\_width@{mod\_phase\_fractional\_width}}
+\index{mod\_phase\_fractional\_width@{mod\_phase\_fractional\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_phase\_fractional\_width}{mod\_phase\_fractional\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_aef64d7f592dac273f3f95e0f4278ff6e} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+phase\+\_\+fractional\+\_\+width}
+
+
+
+Le nombre de bits de la partie fractionnaire de la valeur de sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00069}{69}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_aadf77dab8c2bce9bd10735c7c81a3194}\index{LokiModem@{LokiModem}!mod\_phase\_integer\_width@{mod\_phase\_integer\_width}}
+\index{mod\_phase\_integer\_width@{mod\_phase\_integer\_width}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_phase\_integer\_width}{mod\_phase\_integer\_width}}
+{\footnotesize\ttfamily \label{structLokiModem_aadf77dab8c2bce9bd10735c7c81a3194} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+phase\+\_\+integer\+\_\+width}
+
+
+
+Le nombre de bits de la partie entière de la valeur de sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00067}{67}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a5285059c28e92d4ebcd48ed8242918e2}\index{LokiModem@{LokiModem}!mod\_sample\_frequency\_ref@{mod\_sample\_frequency\_ref}}
+\index{mod\_sample\_frequency\_ref@{mod\_sample\_frequency\_ref}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{mod\_sample\_frequency\_ref}{mod\_sample\_frequency\_ref}}
+{\footnotesize\ttfamily \label{structLokiModem_a5285059c28e92d4ebcd48ed8242918e2} 
+uint32\+\_\+t Loki\+Modem::\+mod\+\_\+sample\+\_\+frequency\+\_\+ref}
+
+
+
+La fréquence d\textquotesingle{}échantillonnage de référence en sortie du modulateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00049}{49}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a7ac40b0fd810c236374624ce5d04c6d1}\index{LokiModem@{LokiModem}!out@{out}}
+\index{out@{out}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily \label{structLokiModem_a7ac40b0fd810c236374624ce5d04c6d1} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+Modem::\+out}
+
+
+
+La FIFO de sortie des données démodulées. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a830eda648e8d962ae06c3a8cfdfc4ddc}\index{LokiModem@{LokiModem}!raw@{raw}}
+\index{raw@{raw}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily \label{structLokiModem_a830eda648e8d962ae06c3a8cfdfc4ddc} 
+bool Loki\+Modem::\+raw}
+
+
+
+Conserver les données démodulées brutes (entiers sans mise à l\textquotesingle{}échelle). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a936b8b9655011a0bd8c789cd51f456f4}\index{LokiModem@{LokiModem}!sim\_channel@{sim\_channel}}
+\index{sim\_channel@{sim\_channel}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{sim\_channel}{sim\_channel}}
+{\footnotesize\ttfamily \label{structLokiModem_a936b8b9655011a0bd8c789cd51f456f4} 
+uint32\+\_\+t Loki\+Modem::\+sim\+\_\+channel}
+
+
+
+Le numéro de la voie courante pendant une simulation logicielle des capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a8fdc7370ab410eede4f05a4c619c8599}\index{LokiModem@{LokiModem}!sim\_disp\_phase@{sim\_disp\_phase}}
+\index{sim\_disp\_phase@{sim\_disp\_phase}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{sim\_disp\_phase}{sim\_disp\_phase}}
+{\footnotesize\ttfamily \label{structLokiModem_a8fdc7370ab410eede4f05a4c619c8599} 
+float Loki\+Modem::\+sim\+\_\+disp\+\_\+phase}
+
+
+
+La phase courante correspondant au déplacement réel pendant une simulation logicielle des capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00045}{45}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a01405300feccb0f2fbeb08c2ced51f58}\index{LokiModem@{LokiModem}!sim\_osc1\_phase@{sim\_osc1\_phase}}
+\index{sim\_osc1\_phase@{sim\_osc1\_phase}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{sim\_osc1\_phase}{sim\_osc1\_phase}}
+{\footnotesize\ttfamily \label{structLokiModem_a01405300feccb0f2fbeb08c2ced51f58} 
+float Loki\+Modem::\+sim\+\_\+osc1\+\_\+phase}
+
+
+
+La phase courante du déplacement fictif pendant une simulation logicielle des capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00043}{43}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a8304b27819945fa7bdbe93b97a0a78dc}\index{LokiModem@{LokiModem}!simulate@{simulate}}
+\index{simulate@{simulate}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{simulate}{simulate}}
+{\footnotesize\ttfamily \label{structLokiModem_a8304b27819945fa7bdbe93b97a0a78dc} 
+bool Loki\+Modem::\+simulate}
+
+
+
+Faut-\/il simuler les capteurs logiciellement ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_af16cb116b1081bc7d5c89ee0662f82a6}\index{LokiModem@{LokiModem}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiModem_af16cb116b1081bc7d5c89ee0662f82a6} 
+volatile bool Loki\+Modem::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt d\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a6441378ffc113893328fb22fbf6754a9}\index{LokiModem@{LokiModem}!stream\_channels@{stream\_channels}}
+\index{stream\_channels@{stream\_channels}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{stream\_channels}{stream\_channels}}
+{\footnotesize\ttfamily \label{structLokiModem_a6441378ffc113893328fb22fbf6754a9} 
+int32\+\_\+t Loki\+Modem::\+stream\+\_\+channels}
+
+
+
+Un masque indiquant les voies à traiter, -\/1 pour toutes les voies. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00035}{35}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+\Hypertarget{structLokiModem_a6ebdf5883cb7f7bc56f398e40cab55e9}\index{LokiModem@{LokiModem}!thread@{thread}}
+\index{thread@{thread}!LokiModem@{LokiModem}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \label{structLokiModem_a6ebdf5883cb7f7bc56f398e40cab55e9} 
+pthread\+\_\+t Loki\+Modem::\+thread}
+
+
+
+Le thread démarré par Loki\+Modem\+\_\+start\+\_\+streaming. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-modem_8c_source_l00037}{37}} du fichier \doxymbox{\hyperlink{libloki-modem_8c_source}{libloki-\/modem.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-modem_8c}{libloki-\/modem.\+c}}\end{DoxyCompactItemize}

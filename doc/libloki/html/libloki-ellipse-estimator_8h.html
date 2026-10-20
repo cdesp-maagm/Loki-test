@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-ellipse-estimator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-ellipse-estimator.h<div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a> &raquo; <a class="el" href="group__gLokiEllipseEstimator.html">Interface d'un filtre adaptatif pour estimer les paramètres d'une ellipse</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki-class_8h_source.html">libloki-class.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-ellipse-estimator.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-ellipse-estimator_8h__incl.png" border="0" usemap="#alibloki-ellipse-estimator_8h" loading="lazy" alt=""/></div>
+<map name="alibloki-ellipse-estimator_8h" id="alibloki-ellipse-estimator_8h">
+<area shape="rect" title=" " alt="" coords="37,5,227,31"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="17,79,129,104"/>
+<area shape="rect" title=" " alt="" coords="153,79,228,104"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="5,152,141,177"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-ellipse-estimator_8h__dep__incl.png" border="0" usemap="#alibloki-ellipse-estimator_8hdep" loading="lazy" alt=""/></div>
+<map name="alibloki-ellipse-estimator_8hdep" id="alibloki-ellipse-estimator_8hdep">
+<area shape="rect" title=" " alt="" coords="816,5,1005,31"/>
+<area shape="rect" href="libloki-displacement_8h.html" title=" " alt="" coords="657,79,823,104"/>
+<area shape="rect" href="libloki_8h.html" title=" " alt="" coords="788,152,863,177"/>
+<area shape="rect" href="libloki-ellipse-estimator_8c.html" title=" " alt="" coords="1251,79,1439,104"/>
+<area shape="rect" href="libloki-kalman_8h.html" title=" " alt="" coords="454,79,581,104"/>
+<area shape="rect" href="libloki-nlms_8h.html" title=" " alt="" coords="998,79,1109,104"/>
+<area shape="rect" href="libloki-rls_8h.html" title=" " alt="" coords="1133,79,1227,104"/>
+<area shape="rect" href="libloki-system_8h.html" title=" " alt="" coords="847,79,974,104"/>
+<area shape="rect" href="libloki-consumer_8c.html" title=" " alt="" coords="5,225,147,251"/>
+<area shape="rect" href="libloki-displacement_8c.html" title=" " alt="" coords="171,225,338,251"/>
+<area shape="rect" href="libloki-env-sensors_8c.html" title=" " alt="" coords="363,225,520,251"/>
+<area shape="rect" href="libloki-modem_8c.html" title=" " alt="" coords="544,225,672,251"/>
+<area shape="rect" href="libloki-mseed_8c.html" title=" " alt="" coords="696,225,819,251"/>
+<area shape="rect" href="libloki-raw_8c.html" title=" " alt="" coords="843,225,944,251"/>
+<area shape="rect" href="libloki-recorder_8c.html" title=" " alt="" coords="968,225,1099,251"/>
+<area shape="rect" href="libloki-socket-server_8c.html" title=" " alt="" coords="1123,225,1288,251"/>
+<area shape="rect" href="libloki-system-defaults_8h.html" title=" " alt="" coords="1363,225,1549,251"/>
+<area shape="rect" href="libloki-system_8c.html" title=" " alt="" coords="1327,299,1454,324"/>
+<area shape="rect" href="libloki-kalman_8c.html" title=" " alt="" coords="454,152,581,177"/>
+<area shape="rect" href="libloki-nlms_8c.html" title=" " alt="" coords="998,152,1109,177"/>
+<area shape="rect" href="libloki-rls_8c.html" title=" " alt="" coords="1133,152,1227,177"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-ellipse-estimator_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaa57cdc8d5f80ec0a91eaf30b9f76c718" id="r_gaa57cdc8d5f80ec0a91eaf30b9f76c718"><td class="memItemLeft">typedef struct LokiEllipseEstimator&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#gaa57cdc8d5f80ec0a91eaf30b9f76c718">LokiEllipseEstimator</a></td></tr>
+<tr class="memdesc:gaa57cdc8d5f80ec0a91eaf30b9f76c718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre d'estimation des paramètres d'une ellipse.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga1e625c5268fb3d3430d741de55c44bc0" id="r_ga1e625c5268fb3d3430d741de55c44bc0"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga1e625c5268fb3d3430d741de55c44bc0">LokiEllipseEstimator_new</a> (float initial_radius, const float params[])</td></tr>
+<tr class="memdesc:ga1e625c5268fb3d3430d741de55c44bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un estimateur.  <br /></td></tr>
+<tr class="memitem:ga8913e5508a4b3cac1c5552f1d404a9b2" id="r_ga8913e5508a4b3cac1c5552f1d404a9b2"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga8913e5508a4b3cac1c5552f1d404a9b2">LokiEllipseEstimator_clone</a> (const <a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *other)</td></tr>
+<tr class="memdesc:ga8913e5508a4b3cac1c5552f1d404a9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un estimateur.  <br /></td></tr>
+<tr class="memitem:ga136afdab868b56c531d462ed5e587cf5" id="r_ga136afdab868b56c531d462ed5e587cf5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga136afdab868b56c531d462ed5e587cf5">LokiEllipseEstimator_work</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:ga136afdab868b56c531d462ed5e587cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:ga3bf89eb128ef2dfcbdf1921060467898" id="r_ga3bf89eb128ef2dfcbdf1921060467898"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga3bf89eb128ef2dfcbdf1921060467898">LokiEllipseEstimator_get_state</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self)</td></tr>
+<tr class="memdesc:ga3bf89eb128ef2dfcbdf1921060467898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant de l'estimateur.  <br /></td></tr>
+<tr class="memitem:ga96a80f684b2cf60d831ad7207f21d298" id="r_ga96a80f684b2cf60d831ad7207f21d298"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga96a80f684b2cf60d831ad7207f21d298">LokiEllipseEstimator_del</a> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *self)</td></tr>
+<tr class="memdesc:ga96a80f684b2cf60d831ad7207f21d298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un estimateur.  <br /></td></tr>
+<tr class="memitem:gadebb7f654257ff34ceac276fdcf73ee5" id="r_gadebb7f654257ff34ceac276fdcf73ee5"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>LokiClass_interface</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="group__gLokiClass.html#ga73dc50ecb993ab72efa7f10803140240">LokiClass_attribute</a>(size_t params_length) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, new) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, clone) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, work) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, get_state) <a class="el" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, del))</td></tr>
+<tr class="memitem:ga77e0d9338c0eddbf5f3d79374f8a77fa" id="r_ga77e0d9338c0eddbf5f3d79374f8a77fa"><td class="memItemLeft"><a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiEllipseEstimator.html#ga77e0d9338c0eddbf5f3d79374f8a77fa">LokiEllipseEstimator_new_with_implementation</a> (const LokiEllipseEstimatorInterface *impl, float initial_radius, const float params[])</td></tr>
+<tr class="memdesc:ga77e0d9338c0eddbf5f3d79374f8a77fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un estimateur avec une implémentation donnée.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-ellipse-estimator_8h_source.html">libloki-ellipse-estimator.h</a>.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<meta charset="utf-8">
+<title>Loki file access</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../main.css">
+
+<header>
+    <nav>
+        <ul class="breadcrumbs">
+            <li><a href="../index.html">Loki</a></li>
+            <li><a href="">Files</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="input-field">
+        <label for="path">Path</label>
+        <input name="path" type="text" value="&mdash;" readonly>
+    </div>
+    <div class="input-field">
+        <label for="filename">Base file name</label>
+        <input name="filename" type="text" value="&mdash;" readonly>
+    </div>
+    <table id="file-list">
+        <thead><tr><th>&nbsp;</th><th>Data type</th><th>Date/time</th><th>Channel</th><th>Format</th><th>Size (bytes)</th></tr></thead>
+        <tbody><tr><td>(empty)</td></tr></tbody>
+    </table>
+</div>
+
+<script src="files.js"></script>

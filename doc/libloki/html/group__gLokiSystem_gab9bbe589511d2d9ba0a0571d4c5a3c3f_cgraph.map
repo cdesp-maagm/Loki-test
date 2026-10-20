@@ -1,0 +1,5 @@
+<map id="LokiSystem_displacement_reset" name="LokiSystem_displacement_reset">
+<area shape="rect" id="node1" title="Mettre à zéro le déplacement calculé." alt="" coords="5,5,199,45"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement." alt="" coords="247,13,425,38"/>
+<area shape="rect" id="node3" href="$group__gLokiFIRFilter.html#gab1dc8db60b04feb37955487102cfb384" title="Réinitialiser un filtre FIR." alt="" coords="473,13,616,38"/>
+</map>

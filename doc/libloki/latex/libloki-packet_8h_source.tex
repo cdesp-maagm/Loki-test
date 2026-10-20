@@ -1,0 +1,30 @@
+\doxysection{libloki-\/packet.h}
+\hypertarget{libloki-packet_8h_source}{}\label{libloki-packet_8h_source}\index{libloki-\/packet.h@{libloki-\/packet.h}}
+\doxymbox{\hyperlink{libloki-packet_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_PACKET\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ LIBLOKI\_PACKET\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00016}\doxymbox{\hyperlink{structLokiPacket}{00016}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00018}\doxymbox{\hyperlink{structLokiPacket_acea64d7ebf465201bb26d9c33c275af1}{00018}}\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ \doxymbox{\hyperlink{structLokiPacket_acea64d7ebf465201bb26d9c33c275af1}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00020}\doxymbox{\hyperlink{structLokiPacket_afbb0c3d44760e9d9dab41578f6863105}{00020}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structLokiPacket_afbb0c3d44760e9d9dab41578f6863105}{buffer}}[0];}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ Ne\ rien\ ajouter\ ici}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00022}00022\ \}\ \doxymbox{\hyperlink{structLokiPacket}{LokiPacket}};}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00031}\doxymbox{\hyperlink{group__gLokiPacket_ga91d3ac839aebdf27cd0a1764a633b963}{00031}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiPacket_ga91d3ac839aebdf27cd0a1764a633b963}{LokiPacket\_get\_fifo\_item\_size}}(\textcolor{keywordtype}{size\_t}\ packet\_length,\ \textcolor{keywordtype}{size\_t}\ sample\_size)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{return}\ packet\_length\ *\ sample\_size\ +\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiPacket}{LokiPacket}});}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00041}\doxymbox{\hyperlink{group__gLokiPacket_gae0204abb3e85eacc5e915eb170245555}{00041}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiPacket_gae0204abb3e85eacc5e915eb170245555}{LokiPacket\_get\_length}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *fifo,\ \textcolor{keywordtype}{size\_t}\ sample\_size)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{LokiFIFO\_get\_item\_size}}(fifo)\ -\/\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiPacket}{LokiPacket}}))\ /\ sample\_size;}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-packet_8h_source_l00046}00046\ }
+
+\end{DoxyCode}

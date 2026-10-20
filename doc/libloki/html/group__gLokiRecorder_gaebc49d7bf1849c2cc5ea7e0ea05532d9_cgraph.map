@@ -1,0 +1,5 @@
+<map id="LokiRecorder_set_formatter" name="LokiRecorder_set_formatter">
+<area shape="rect" id="node1" title="Affecter un formateur à un enregistreur." alt="" coords="5,13,208,38"/>
+<area shape="rect" id="node2" href="$group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36" title="Construire un nouveau formateur de séries temporelles avec une implémentation donnée." alt="" coords="256,5,439,45"/>
+<area shape="rect" id="node3" href="$group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8" title="Détruire de mise en forme de séries temporelles." alt="" coords="487,13,627,38"/>
+</map>

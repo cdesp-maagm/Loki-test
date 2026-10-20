@@ -1,0 +1,47 @@
+\doxysection{libloki-\/class.h}
+\hypertarget{libloki-class_8h_source}{}\label{libloki-class_8h_source}\index{libloki-\/class.h@{libloki-\/class.h}}
+\doxymbox{\hyperlink{libloki-class_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00068}00068\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_CLASS\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ LIBLOKI\_CLASS\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00071}00071\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-common_8h}{libloki-\/common.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00082}\doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{00082}}\ \textcolor{preprocessor}{\#define\ LokiClass\_interface\_name(prefix)\ CAT(prefix,\ Interface)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00093}\doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{00093}}\ \textcolor{preprocessor}{\#define\ LokiClass\_class\_name(prefix)\ CAT(prefix,\ Class)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00105}\doxymbox{\hyperlink{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}{00105}}\ \textcolor{preprocessor}{\#define\ LokiClass\_function\_name(prefix,\ name)\ CAT3(prefix,\ \_,\ name)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00112}\doxymbox{\hyperlink{group__gLokiClass_gad71e11b51da42268464af1bb6e7656e8}{00112}}\ \textcolor{preprocessor}{\#define\ LokiClass\_interface(prefix,\ methods)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00113}00113\ \textcolor{preprocessor}{\ \ \ \ typedef\ struct\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00114}00114\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ methods\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00115}00115\ \textcolor{preprocessor}{\ \ \ \ \}\ LokiClass\_interface\_name(prefix)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00124}\doxymbox{\hyperlink{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240}{00124}}\ \textcolor{preprocessor}{\#define\ LokiClass\_attribute(decl)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00125}00125\ \textcolor{preprocessor}{\ \ \ \ decl;}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00132}\doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{00132}}\ \textcolor{preprocessor}{\#define\ LokiClass\_method(prefix,\ name)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00133}00133\ \textcolor{preprocessor}{\ \ \ \ typeof(LokiClass\_function\_name(prefix,\ name))\ *name;}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00140}\doxymbox{\hyperlink{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad}{00140}}\ \textcolor{preprocessor}{\#define\ LokiClass\_declare\_implementation(superclass,\ prefix)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00141}00141\ \textcolor{preprocessor}{\ \ \ \ extern\ LokiClass\_interface\_name(superclass)\ LokiClass\_class\_name(prefix)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00149}\doxymbox{\hyperlink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{00149}}\ \textcolor{preprocessor}{\#define\ LokiClass\_implementation(superclass,\ prefix,\ impls)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00150}00150\ \textcolor{preprocessor}{\ \ \ \ LokiClass\_interface\_name(superclass)\ LokiClass\_class\_name(prefix)\ =\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00151}00151\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ impls\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00152}00152\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00159}\doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{00159}}\ \textcolor{preprocessor}{\#define\ LokiClass\_set\_attribute(name,\ value)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00160}00160\ \textcolor{preprocessor}{\ \ \ \ .name\ =\ value,}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00167}\doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{00167}}\ \textcolor{preprocessor}{\#define\ LokiClass\_define\_method(prefix,\ name)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00168}00168\ \textcolor{preprocessor}{\ \ \ \ .name\ =\ (typeof(LokiClass\_class\_name(prefix).name))LokiClass\_function\_name(prefix,\ name),}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00170}00170\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-class_8h_source_l00171}00171\ }
+
+\end{DoxyCode}

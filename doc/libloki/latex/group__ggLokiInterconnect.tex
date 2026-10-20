@@ -1,0 +1,22 @@
+\doxysection{Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement }
+\hypertarget{group__ggLokiInterconnect}{}\label{group__ggLokiInterconnect}\index{Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement@{Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement}}
+Graphe de collaboration de Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement:
+% FIG 0
+\doxysubsubsection*{Sujets}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__gLokiConsumer}{Exemple de consommateur}}
+\begin{DoxyCompactList}\small\item\em Ce module fournit une implémentation de référence d\textquotesingle{}un consommateur qui lit les données dans une \doxylink{group__gLokiFIFO}{FIFO} et qui ne les utilise pas. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiFIFO}{Structure de données FIFO}}
+\begin{DoxyCompactList}\small\item\em File d\textquotesingle{}attente multi-\/consommateur pour communication entre threads. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiPacket}{Type paquets d\textquotesingle{}échantillons}}
+\begin{DoxyCompactList}\small\item\em Type de données pour la communication de paquets d\textquotesingle{}échantillons datés entre threads. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__gLokiTime}{Types et fonctions de gestion du temps}}
+\begin{DoxyCompactList}\small\item\em Définition de types {\itshape timestamp} et intervalle de temps, et de fonctions de conversion d\textquotesingle{}unités de temps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\input{group__gLokiConsumer}
+\input{group__gLokiFIFO}
+\input{group__gLokiPacket}
+\input{group__gLokiTime}

@@ -1,0 +1,7 @@
+<map id="LokiHooks_free" name="LokiHooks_free">
+<area shape="rect" id="node1" title="Une version instrumentée du hook de la fonction free." alt="" coords="5,29,128,55"/>
+<area shape="rect" id="node2" href="$group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae" title="Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire." alt="" coords="547,5,689,31"/>
+<area shape="rect" id="node3" href="$group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141" title="Sauvegarder les hooks des fonctions malloc et free." alt="" coords="554,55,682,80"/>
+<area shape="rect" id="node4" href="$group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2" title="Affecter les hooks des fonctions malloc et free." alt="" coords="176,29,309,55"/>
+<area shape="rect" id="node5" href="$group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="357,29,499,55"/>
+</map>

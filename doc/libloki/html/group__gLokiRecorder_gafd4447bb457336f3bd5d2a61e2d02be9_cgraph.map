@@ -1,0 +1,6 @@
+<map id="LokiRecorder_wait" name="LokiRecorder_wait">
+<area shape="rect" id="node1" title="Attendre la fin de l&#39;enregistrement." alt="" coords="5,13,148,38"/>
+<area shape="rect" id="node2" href="$group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8" title="Gestionnaire d&#39;événements." alt="" coords="196,5,349,45"/>
+<area shape="rect" id="node3" href="$group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="397,13,540,38"/>
+<area shape="rect" id="node4" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="588,13,708,38"/>
+</map>

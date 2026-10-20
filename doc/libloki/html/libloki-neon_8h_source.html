@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-neon.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-neon.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-neon_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef LIBLOKI_NEON_H_</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define LIBLOKI_NEON_H_</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifdef __ARM_NEON</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;arm_neon.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structfloat32x2__t.html">   26</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">   28</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[2];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a>;</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="unionfloat32x4__t.html">   32</a></span><span class="keyword">typedef</span> <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">   34</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[4];</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html">   36</a></span>    <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> <a class="code hl_variable" href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html#ab5d7fd181a190df8eb6e6b4a5d48426e">low</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> <a class="code hl_variable" href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html#a5237c4309ab33bacfe9276fbc5fd72cb">high</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a>;</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57">   50</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> <a class="code hl_function" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57">vadd_f32</a>(<a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> a, <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> b) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    a.<a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[0] += b.<a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[0];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    a.<a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[1] += b.<a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[1];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0">   62</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0">vget_lane_f32</a>(<a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> a, <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> a.<a class="code hl_variable" href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">val</a>[i];</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67">   71</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67">vmovq_n_f32</a>(<span class="keywordtype">float</span> a) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> (<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a>) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        .val = {a, a, a, a}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd">   82</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd">vld1q_f32</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> *a) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> *(<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a>*)a;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d">   91</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> <a class="code hl_function" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d">vget_low_f32</a>(<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> a) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> a.low;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2">  100</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_struct" href="structfloat32x2__t.html">float32x2_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2">vget_high_f32</a>(<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> a) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> a.high;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga4850b6090cca948746e81838676bcc8f">  111</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga4850b6090cca948746e81838676bcc8f">vld1q_lane_f32</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> *a, <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> b, <span class="keywordtype">size_t</span> i) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    b.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i] = *a;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> b;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga7e2b584d069001335fd779fbfa3aa8b1">  122</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga7e2b584d069001335fd779fbfa3aa8b1">vmulq_f32</a>(<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> a, <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> b) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i ++) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        a.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i] *= b.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf">  136</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> <a class="code hl_function" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf">vmlaq_f32</a>(<a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> a, <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> b, <a class="code hl_union" href="unionfloat32x4__t.html">float32x4_t</a> c) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i ++) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        a.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i] += b.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i] * c.<a class="code hl_variable" href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">val</a>[i];</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga0a8ed8e46776dc54632b64f4a45550d2"><div class="ttname"><a href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2">vget_high_f32</a></div><div class="ttdeci">static float32x2_t vget_high_f32(float32x4_t a)</div><div class="ttdoc">Lire la seconde moitié d&#39;un vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00100">libloki-neon.h:100</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga1984dad8a1957ac5e5c7f2429d82a5cf"><div class="ttname"><a href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf">vmlaq_f32</a></div><div class="ttdeci">static float32x4_t vmlaq_f32(float32x4_t a, float32x4_t b, float32x4_t c)</div><div class="ttdoc">Calculer le résultat d&#39;une multiplication-accumulation sur des vecteurs.</div><div class="ttdef"><b>Définition</b> <a href="#l00136">libloki-neon.h:136</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga43644674ee0d3be5ad07d70f5514e4dd"><div class="ttname"><a href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd">vld1q_f32</a></div><div class="ttdeci">static float32x4_t vld1q_f32(const float *a)</div><div class="ttdoc">Lire un vecteur en mémoire.</div><div class="ttdef"><b>Définition</b> <a href="#l00082">libloki-neon.h:82</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga4850b6090cca948746e81838676bcc8f"><div class="ttname"><a href="group__gLokiNeon.html#ga4850b6090cca948746e81838676bcc8f">vld1q_lane_f32</a></div><div class="ttdeci">static float32x4_t vld1q_lane_f32(const float *a, float32x4_t b, size_t i)</div><div class="ttdoc">Remplacer un élément d&#39;un vecteur avec une valeur lue en mémoire.</div><div class="ttdef"><b>Définition</b> <a href="#l00111">libloki-neon.h:111</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga596baa99e028d163e0c5677c7df63a67"><div class="ttname"><a href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67">vmovq_n_f32</a></div><div class="ttdeci">static float32x4_t vmovq_n_f32(float a)</div><div class="ttdoc">Construire un vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00071">libloki-neon.h:71</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga5d641bccda9d8e8f640b8143d0e665e0"><div class="ttname"><a href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0">vget_lane_f32</a></div><div class="ttdeci">static float vget_lane_f32(float32x2_t a, size_t i)</div><div class="ttdoc">Lire un élément d&#39;un vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00062">libloki-neon.h:62</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_ga7e2b584d069001335fd779fbfa3aa8b1"><div class="ttname"><a href="group__gLokiNeon.html#ga7e2b584d069001335fd779fbfa3aa8b1">vmulq_f32</a></div><div class="ttdeci">static float32x4_t vmulq_f32(float32x4_t a, float32x4_t b)</div><div class="ttdoc">Multiplier deux vecteurs terme à terme.</div><div class="ttdef"><b>Définition</b> <a href="#l00122">libloki-neon.h:122</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_gaba27536d26fcbc97a15f400f73972e57"><div class="ttname"><a href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57">vadd_f32</a></div><div class="ttdeci">static float32x2_t vadd_f32(float32x2_t a, float32x2_t b)</div><div class="ttdoc">Additionner deux vecteurs.</div><div class="ttdef"><b>Définition</b> <a href="#l00050">libloki-neon.h:50</a></div></div>
+<div class="ttc" id="agroup__gLokiNeon_html_gabbf872ea2fc8ef09526511ff3b92768d"><div class="ttname"><a href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d">vget_low_f32</a></div><div class="ttdeci">static float32x2_t vget_low_f32(float32x4_t a)</div><div class="ttdoc">Lire la première moitié d&#39;un vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00091">libloki-neon.h:91</a></div></div>
+<div class="ttc" id="astructfloat32x2__t_html"><div class="ttname"><a href="structfloat32x2__t.html">float32x2_t</a></div><div class="ttdoc">Vecteur de deux nombres flottants 32 bits.</div><div class="ttdef"><b>Définition</b> <a href="#l00026">libloki-neon.h:26</a></div></div>
+<div class="ttc" id="astructfloat32x2__t_html_a55861b73436a6e1ee64ecdf0fe7a2581"><div class="ttname"><a href="structfloat32x2__t.html#a55861b73436a6e1ee64ecdf0fe7a2581">float32x2_t::val</a></div><div class="ttdeci">float val[2]</div><div class="ttdoc">Les éléments de ce vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00028">libloki-neon.h:28</a></div></div>
+<div class="ttc" id="astructfloat32x4__t_1_1_0fstruct_0e_8____unnamed0_____html_a5237c4309ab33bacfe9276fbc5fd72cb"><div class="ttname"><a href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html#a5237c4309ab33bacfe9276fbc5fd72cb">float32x4_t::[struct].__unnamed0__::high</a></div><div class="ttdeci">float32x2_t high</div><div class="ttdoc">Un vecteur contenant les deux derniers éléments de ce vecteur.</div></div>
+<div class="ttc" id="astructfloat32x4__t_1_1_0fstruct_0e_8____unnamed0_____html_ab5d7fd181a190df8eb6e6b4a5d48426e"><div class="ttname"><a href="structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____.html#ab5d7fd181a190df8eb6e6b4a5d48426e">float32x4_t::[struct].__unnamed0__::low</a></div><div class="ttdeci">float32x2_t low</div><div class="ttdoc">Un vecteur contenant les deux premiers éléments de ce vecteur.</div></div>
+<div class="ttc" id="aunionfloat32x4__t_html"><div class="ttname"><a href="unionfloat32x4__t.html">float32x4_t</a></div><div class="ttdoc">Vecteur de quatre nombres flottants 32 bits.</div><div class="ttdef"><b>Définition</b> <a href="#l00032">libloki-neon.h:32</a></div></div>
+<div class="ttc" id="aunionfloat32x4__t_html_ae48b6a89cf2525d33a4279dd427dfb45"><div class="ttname"><a href="unionfloat32x4__t.html#ae48b6a89cf2525d33a4279dd427dfb45">float32x4_t::val</a></div><div class="ttdeci">float val[4]</div><div class="ttdoc">Les éléments de ce vecteur.</div><div class="ttdef"><b>Définition</b> <a href="#l00034">libloki-neon.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="LokiModem_get_mod_sampling_frequency" name="LokiModem_get_mod_sampling_frequency">
+<area shape="rect" id="node1" title="Lire la fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="481,63,711,103"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gae382d9332816e9351061e345a8443b44" title="Lire la fréquence maximale supportée pour le signal en sortie du premier oscillateur du modulateur (F..." alt="" coords="235,5,433,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="5,70,187,95"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga7ff64c2772b51e83a1da4a94676babec" title="Lire la fréquence maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm..." alt="" coords="235,120,433,160"/>
+</map>

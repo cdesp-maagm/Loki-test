@@ -1,0 +1,22 @@
+<map id="LokiModem_work" name="LokiModem_work">
+<area shape="rect" id="node1" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="5,279,143,304"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="211,5,419,31"/>
+<area shape="rect" id="node3" href="$group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="257,55,374,80"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga784b97f18bd232111254e1c5fcac3e0c" title="Lire la date du dernier transfert DMA." alt="" coords="191,104,440,129"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#ga5e4ca0d31754d984b07e7298028eeefc" title="Demander au circuit de modulation/démodulation de démarrer les transferts DMA." alt="" coords="230,153,401,179"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#ga04636b25da663b516cf8634b3470ca52" title="Demander au circuit de modulation/démodulation d&#39;arrêter les transferts DMA." alt="" coords="231,203,400,228"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga8fedd820f507eeb1043d3a7dd26e169f" title="Lire la longueur d&#39;un paquet de données en sortie du démodulateur." alt="" coords="763,281,941,321"/>
+<area shape="rect" id="node9" href="$group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="495,379,679,419"/>
+<area shape="rect" id="node11" href="$group__gLokiModem.html#ga92acfc36c0c6e365213c0898661d4834" title="Lire un numéro de paquet dans un échantillon DMA brut." alt="" coords="227,354,403,394"/>
+<area shape="rect" id="node12" href="$group__gLokiModem.html#gae9b930ac28562e09e072ce107c59db0c" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur." alt="" coords="209,304,421,329"/>
+<area shape="rect" id="node14" href="$group__gLokiModem.html#gac7ad56144a69fcdc52eac5dd41e944d7" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="198,469,433,495"/>
+<area shape="rect" id="node18" href="$group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="232,519,399,544"/>
+<area shape="rect" id="node20" href="$group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077" title="Convertir une date en timestamp." alt="" coords="225,568,405,593"/>
+<area shape="rect" id="node8" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="1017,444,1172,469"/>
+<area shape="rect" id="node10" href="$group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="763,379,941,419"/>
+<area shape="rect" id="node13" href="$group__gLokiModem.html#ga27f4f0afdf1b651dd85f485bbbff196a" title="Mettre à l&#39;échelle une composante X (I) ou Y (Q) d&#39;un échantillon démodulé." alt="" coords="506,304,669,329"/>
+<area shape="rect" id="node15" href="$group__gLokiModem.html#gae81b1c2702720959857d0a6e33db86ac" title="Lire l&#39;amplitude du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="735,444,969,469"/>
+<area shape="rect" id="node16" href="$group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef" title="Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="488,494,687,534"/>
+<area shape="rect" id="node17" href="$group__gLokiModem.html#ga23886c6a62d90b718d3069b8fe4ab328" title="Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)..." alt="" coords="753,494,951,534"/>
+<area shape="rect" id="node19" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="499,559,676,584"/>
+</map>

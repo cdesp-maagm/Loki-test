@@ -1,0 +1,4 @@
+<map id="LokiModem_set_demod_delay_x" name="LokiModem_set_demod_delay_x">
+<area shape="rect" id="node1" title="Affecter un retard à la composante X (I) du signal démodulé pour une voie." alt="" coords="5,5,183,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="231,13,384,38"/>
+</map>

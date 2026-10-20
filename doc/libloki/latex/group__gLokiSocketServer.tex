@@ -1,0 +1,284 @@
+\doxysubsection{Serveur de données sur socket Unix }
+\hypertarget{group__gLokiSocketServer}{}\label{group__gLokiSocketServer}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+
+
+Ce module est utilisé dans la communication des données de déplacement par Web\+Sockets.  
+
+
+Graphe de collaboration de Serveur de données sur socket Unix:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-socket-server_8c}{libloki-\/socket-\/server.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-socket-server_8h}{libloki-\/socket-\/server.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un serveur de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}{LIBLOKI\+\_\+\+SOCKET\+\_\+\+SERVER\+\_\+\+CONNECTIONS}}~3
+\begin{DoxyCompactList}\small\item\em Le nombre maximum de connexions simultanées acceptées par un serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Socket\+Server \doxymbox{\hyperlink{group__gLokiSocketServer_ga0b38d945e001c61fa2e6038ddee35fc7}{Loki\+Socket\+Server}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un serveur de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}{Loki\+Socket\+Server\+\_\+new}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Construire un serveur de données. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}{Loki\+Socket\+Server\+\_\+receive}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Recevoir les données d\textquotesingle{}entrée. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}{Loki\+Socket\+Server\+\_\+serve}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Gérer les connexions et transmettre les données aux clients. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}in, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer un serveur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}{Loki\+Socket\+Server\+\_\+is\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état du serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{Loki\+Socket\+Server\+\_\+stop}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter un serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{Loki\+Socket\+Server\+\_\+del}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module est utilisé dans la communication des données de déplacement par Web\+Sockets. 
+
+
+
+\label{group__gLokiSocketServer_doc-define-members}
+\Hypertarget{group__gLokiSocketServer_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS@{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}}
+\index{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS@{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_ga35e148de562749531db09ba2c41ccdc0} 
+\+\#define LIBLOKI\+\_\+\+SOCKET\+\_\+\+SERVER\+\_\+\+CONNECTIONS~3}
+
+
+
+Le nombre maximum de connexions simultanées acceptées par un serveur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8h_source_l00016}{16}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8h_source}{libloki-\/socket-\/server.\+h}}.
+
+
+
+\label{group__gLokiSocketServer_doc-typedef-members}
+\Hypertarget{group__gLokiSocketServer_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiSocketServer_ga0b38d945e001c61fa2e6038ddee35fc7}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer@{LokiSocketServer}}
+\index{LokiSocketServer@{LokiSocketServer}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer}{LokiSocketServer}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_ga0b38d945e001c61fa2e6038ddee35fc7} 
+typedef struct Loki\+Socket\+Server Loki\+Socket\+Server}
+
+
+
+Représentation d\textquotesingle{}un serveur de données. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8h_source_l00019}{19}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8h_source}{libloki-\/socket-\/server.\+h}}.
+
+
+
+\label{group__gLokiSocketServer_doc-func-members}
+\Hypertarget{group__gLokiSocketServer_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_del@{LokiSocketServer\_del}}
+\index{LokiSocketServer\_del@{LokiSocketServer\_del}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_del()}{LokiSocketServer\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107} 
+void Loki\+Socket\+Server\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un serveur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le serveur à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00246}{246}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_is\_streaming@{LokiSocketServer\_is\_streaming}}
+\index{LokiSocketServer\_is\_streaming@{LokiSocketServer\_is\_streaming}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_is\_streaming()}{LokiSocketServer\_is\_streaming()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9} 
+bool Loki\+Socket\+Server\+\_\+is\+\_\+streaming (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}état du serveur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le serveur à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le serveur est démarré. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00223}{223}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_new@{LokiSocketServer\_new}}
+\index{LokiSocketServer\_new@{LokiSocketServer\_new}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_new()}{LokiSocketServer\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3} 
+\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*} Loki\+Socket\+Server\+\_\+new (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Construire un serveur de données. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & Le nom de fichier à utiliser pour représenter la socket Unix dans le système de fichiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau serveur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_receive@{LokiSocketServer\_receive}}
+\index{LokiSocketServer\_receive@{LokiSocketServer\_receive}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_receive()}{LokiSocketServer\_receive()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02} 
+void \texorpdfstring{$\ast$}{*} Loki\+Socket\+Server\+\_\+receive (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Recevoir les données d\textquotesingle{}entrée. 
+
+Cette fonction est exécutée dans un thread démarré par \doxylink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}. Elle consomme les données de la FIFO d\textquotesingle{}entrée jusqu\textquotesingle{}à la demande d\textquotesingle{}arrêt par \doxylink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{Loki\+Socket\+Server\+\_\+stop}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ptr} & Le serveur courant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00077}{77}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_serve@{LokiSocketServer\_serve}}
+\index{LokiSocketServer\_serve@{LokiSocketServer\_serve}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_serve()}{LokiSocketServer\_serve()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf} 
+void \texorpdfstring{$\ast$}{*} Loki\+Socket\+Server\+\_\+serve (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gérer les connexions et transmettre les données aux clients. 
+
+Cette fonction est exécutée dans un thread démarré par \doxylink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}. Elle crée une socket Unix et transmet les données reçues jusqu\textquotesingle{}à la demande d\textquotesingle{}arrêt par \doxylink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{Loki\+Socket\+Server\+\_\+stop}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ptr} & Le serveur courant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00114}{114}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_start@{LokiSocketServer\_start}}
+\index{LokiSocketServer\_start@{LokiSocketServer\_start}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_start()}{LokiSocketServer\_start()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241} 
+int Loki\+Socket\+Server\+\_\+start (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{in}{, }\item[{size\+\_\+t}]{cid}{}\end{DoxyParamCaption})}
+
+
+
+Démarrer un serveur. 
+
+Cette fonction est non bloquante. Elle démarre deux threads: un pour traiter les paquets de données d\textquotesingle{}entrée, l\textquotesingle{}autre pour gérer les connexions des clients et leur transmettre les données aux clients.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le serveur à démarrer. \\
+\hline
+{\em in} & La FIFO contenant les données à transmettre. \\
+\hline
+{\em cid} & Le numéro de consommateur de ce serveur dans sa FIFO d\textquotesingle{}entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le code d\textquotesingle{}erreur retournée par {\ttfamily pthread\+\_\+create}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00211}{211}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+\Hypertarget{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}\index{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_stop@{LokiSocketServer\_stop}}
+\index{LokiSocketServer\_stop@{LokiSocketServer\_stop}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}}
+\doxysubsubsubsection{\texorpdfstring{LokiSocketServer\_stop()}{LokiSocketServer\_stop()}}
+{\footnotesize\ttfamily \label{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23} 
+void Loki\+Socket\+Server\+\_\+stop (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Arrêter un serveur. 
+
+Interrompt l\textquotesingle{}exécution des threads démarrés par la fonction \doxylink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le serveur à arrêter. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00227}{227}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 13
+Voici le graphe des appelants de cette fonction :
+% FIG 14

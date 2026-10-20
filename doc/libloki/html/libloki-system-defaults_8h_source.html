@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-system-defaults.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-system-defaults.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-system-defaults_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef LIBLOKI_SYSTEM_DEFAULTS_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define LIBLOKI_SYSTEM_DEFAULTS_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="libloki_8h.html">libloki.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga5058dc2b31b01c32a987811ff71622b6">   17</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_SIMULATE                 false</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga1ab35478c037f059399902753922072b">   20</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_SKIP                     0</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga3df3e861670a02c3442257ef363232b8">   23</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_WAVELENGTH               1310</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga2cd0643a5bbb4e6fd427b1582bcbe9ba">   26</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_REFLECTIONS              1</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga7479ffd42dcfdf57e0ce90e4ef87a6ce">   29</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_CAVITY_INDEX             1.0f</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga07a7e748c7ffdce1145be7d1d4e6169a">   32</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_DISTANCE_UNIT            &#39;p&#39;;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga1b0ac4dd3b39811061a7a1f4821df521">   35</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_IMPL_RLS       LokiRLSClass</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga0328898b77f9abfa95fdbf57b8f7256d">   38</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_PARAMS_RLS     {0.999f, 0.1f}</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga52781867dbbd4bf4e6efb6675a8d6a48">   41</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_IMPL_KALMAN    LokiKalmanClass</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga99d66d15bb453fb606c4572480e43407">   44</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_PARAMS_KALMAN  {0.999f, 0.0f, 0.1f}</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga7b0c8854efe953840980984cf5f9167b">   47</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_IMPL           LOKI_SYSTEM_DEFAULT_ESTIMATOR_IMPL_KALMAN</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga81af0dca091947ef0759423d356f127b">   50</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_PARAMS         LOKI_SYSTEM_DEFAULT_ESTIMATOR_PARAMS_KALMAN</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga8c0ecd943b380475264a317b2025b6f3">   53</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_THROTTLE       1</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga06071ebaec444a511b61e2872a22ca4b">   56</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_ESTIMATOR_INITIAL_RADIUS 1e-3</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga782e6db13fd280c3d75a606f7f2b6ec7">   59</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_FILTER_BANDWIDTH         250.0f</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#gac74995da6157f9a7c0d4b0b7dc15d87f">   62</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_FILTER_ATTENUATION       60.0f</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga9929a67904c9c4c477e4a395a806f37c">   65</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_FILTER_LENGTH            1000</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#gab8841fcc648c5ff5fcb4f8009404d49c">   68</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_FILTER_DECIMATION        50</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__gLokiDefaults.html#ga7f161e2fd2c68e9cc38fb74f3415b6ce">   71</a></span><span class="preprocessor">#define LOKI_SYSTEM_DEFAULT_IIR_TAU                  1.0f</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="ttc" id="alibloki_8h_html"><div class="ttname"><a href="libloki_8h.html">libloki.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

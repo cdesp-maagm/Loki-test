@@ -1,0 +1,4 @@
+<map id="LokiSensors_get_last_data" name="LokiSensors_get_last_data">
+<area shape="rect" id="node1" title="Lire la valeur du dernier échantillon acquis sur une voie." alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#gacf8b4b66fef82cc02ed212ebe2f171cd" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="232,5,376,32"/>
+</map>

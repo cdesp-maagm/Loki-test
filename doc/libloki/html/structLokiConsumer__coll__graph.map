@@ -1,0 +1,5 @@
+<map id="LokiConsumer" name="LokiConsumer">
+<area shape="rect" id="node1" title="Définition d&#39;un consommateur." alt="" coords="10,196,125,221"/>
+<area shape="rect" id="node2" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="28,108,107,133"/>
+<area shape="rect" id="node3" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,129,31"/>
+</map>

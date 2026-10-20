@@ -1,0 +1,4 @@
+<map id="LokiModem_get_dropped_packets" name="LokiModem_get_dropped_packets">
+<area shape="rect" id="node1" title="Lire le nombre de paquets perdus depuis le début de l&#39;acquisition." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gae80d100cb35cff72b1742cf19a132e66" title="Lire le nombre de paquets DMA perdus." alt="" coords="240,5,463,45"/>
+</map>

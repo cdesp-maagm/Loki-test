@@ -1,0 +1,267 @@
+\doxysection{Référence de la structure Loki\+System\+Config}
+\hypertarget{structLokiSystemConfig}{}\label{structLokiSystemConfig}\index{LokiSystemConfig@{LokiSystemConfig}}
+
+
+Les paramètres de configuration d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement.  
+
+
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{structLokiSystemConfig_a4b608957465688bef473e2bdb127f591}{simulate}}
+\begin{DoxyCompactList}\small\item\em Faut-\/il simuler les capteurs de déplacement ? \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a40bee4508db7780d960c0f63fbd364e3}{skip}}
+\begin{DoxyCompactList}\small\item\em Le délai d\textquotesingle{}attente avant d\textquotesingle{}alimenter la FIFO de sortie, en secondes. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a39d3f754ba36ad629f7d69fdd116b9c7}{wavelength}}
+\begin{DoxyCompactList}\small\item\em La longueur d\textquotesingle{}onde de la diode laser, en nm. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{structLokiSystemConfig_a229a6536add19a3622cdde9f99dfce50}{reflections}}
+\begin{DoxyCompactList}\small\item\em Le nombre de réflexions supposé. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a341e115d5aea8105ce3f83338d7708e8}{cavity\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}indice optique de la cavité. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{structLokiSystemConfig_a408cd1eec07641120dc515d65b20f99a}{distance\+\_\+unit}}
+\begin{DoxyCompactList}\small\item\em Unité de distance. \end{DoxyCompactList}\item 
+Loki\+Ellipse\+Estimator\+Interface \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystemConfig_a4123f542dfc475aa2e64359b5000d8e0}{estimator\+\_\+impl}}
+\begin{DoxyCompactList}\small\item\em Le filtre adaptatif pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{structLokiSystemConfig_ab02b8153dfc9e338f4397b1260dd9052}{estimator\+\_\+throttle}}
+\begin{DoxyCompactList}\small\item\em La périodicité de mise à jour des paramètres de l\textquotesingle{}ellipse, en échantillons. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a013f5f312278a3212474eae9b1c62ef8}{estimator\+\_\+initial\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em Le rayon initial à utiliser dans le filtre d\textquotesingle{}estimation. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystemConfig_a7f5b74c022387499dc1892add617b0cf}{estimator\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em Le tableau des paramètres de l\textquotesingle{}estimateur. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a96a6e4826246f3e93c96c350db1542a7}{filter\+\_\+bandwidth}}
+\begin{DoxyCompactList}\small\item\em La bande passante du filtre d\textquotesingle{}élimination du déplacement fictif, en Hz. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_a026b0d83369552ed97d46f9c01f559c7}{filter\+\_\+attenuation}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}atténuation du filtre d\textquotesingle{}élimination du déplacement fictif, en dB. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSystemConfig_aa6c8d4a52f1920dbe7b719982cbc34a1}{filter\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSystemConfig_addcc8151099436774d4cdf548b94739e}{filter\+\_\+decimation}}
+\begin{DoxyCompactList}\small\item\em Le facteur de décimation du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiSystemConfig_ae30c5a3384f7397e18191efec5d2a63f}{time\+\_\+constants}} \+[3]
+\begin{DoxyCompactList}\small\item\em Les constantes de temps des filtres de lissage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Les paramètres de configuration d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00022}{22}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+
+
+\label{structLokiSystemConfig_doc-variable-members}
+\Hypertarget{structLokiSystemConfig_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiSystemConfig_a341e115d5aea8105ce3f83338d7708e8}\index{LokiSystemConfig@{LokiSystemConfig}!cavity\_index@{cavity\_index}}
+\index{cavity\_index@{cavity\_index}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{cavity\_index}{cavity\_index}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a341e115d5aea8105ce3f83338d7708e8} 
+float Loki\+System\+Config::\+cavity\+\_\+index}
+
+
+
+L\textquotesingle{}indice optique de la cavité. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00032}{32}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a408cd1eec07641120dc515d65b20f99a}\index{LokiSystemConfig@{LokiSystemConfig}!distance\_unit@{distance\_unit}}
+\index{distance\_unit@{distance\_unit}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{distance\_unit}{distance\_unit}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a408cd1eec07641120dc515d65b20f99a} 
+char Loki\+System\+Config::\+distance\+\_\+unit}
+
+
+
+Unité de distance. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00034}{34}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a4123f542dfc475aa2e64359b5000d8e0}\index{LokiSystemConfig@{LokiSystemConfig}!estimator\_impl@{estimator\_impl}}
+\index{estimator\_impl@{estimator\_impl}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{estimator\_impl}{estimator\_impl}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a4123f542dfc475aa2e64359b5000d8e0} 
+Loki\+Ellipse\+Estimator\+Interface\texorpdfstring{$\ast$}{*} Loki\+System\+Config::\+estimator\+\_\+impl}
+
+
+
+Le filtre adaptatif pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00036}{36}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a013f5f312278a3212474eae9b1c62ef8}\index{LokiSystemConfig@{LokiSystemConfig}!estimator\_initial\_radius@{estimator\_initial\_radius}}
+\index{estimator\_initial\_radius@{estimator\_initial\_radius}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{estimator\_initial\_radius}{estimator\_initial\_radius}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a013f5f312278a3212474eae9b1c62ef8} 
+float Loki\+System\+Config::\+estimator\+\_\+initial\+\_\+radius}
+
+
+
+Le rayon initial à utiliser dans le filtre d\textquotesingle{}estimation. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00040}{40}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a7f5b74c022387499dc1892add617b0cf}\index{LokiSystemConfig@{LokiSystemConfig}!estimator\_params@{estimator\_params}}
+\index{estimator\_params@{estimator\_params}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{estimator\_params}{estimator\_params}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a7f5b74c022387499dc1892add617b0cf} 
+float\texorpdfstring{$\ast$}{*} Loki\+System\+Config::\+estimator\+\_\+params}
+
+
+
+Le tableau des paramètres de l\textquotesingle{}estimateur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00042}{42}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_ab02b8153dfc9e338f4397b1260dd9052}\index{LokiSystemConfig@{LokiSystemConfig}!estimator\_throttle@{estimator\_throttle}}
+\index{estimator\_throttle@{estimator\_throttle}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{estimator\_throttle}{estimator\_throttle}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_ab02b8153dfc9e338f4397b1260dd9052} 
+unsigned Loki\+System\+Config::\+estimator\+\_\+throttle}
+
+
+
+La périodicité de mise à jour des paramètres de l\textquotesingle{}ellipse, en échantillons. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00038}{38}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a026b0d83369552ed97d46f9c01f559c7}\index{LokiSystemConfig@{LokiSystemConfig}!filter\_attenuation@{filter\_attenuation}}
+\index{filter\_attenuation@{filter\_attenuation}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{filter\_attenuation}{filter\_attenuation}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a026b0d83369552ed97d46f9c01f559c7} 
+float Loki\+System\+Config::\+filter\+\_\+attenuation}
+
+
+
+L\textquotesingle{}atténuation du filtre d\textquotesingle{}élimination du déplacement fictif, en dB. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00046}{46}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a96a6e4826246f3e93c96c350db1542a7}\index{LokiSystemConfig@{LokiSystemConfig}!filter\_bandwidth@{filter\_bandwidth}}
+\index{filter\_bandwidth@{filter\_bandwidth}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{filter\_bandwidth}{filter\_bandwidth}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a96a6e4826246f3e93c96c350db1542a7} 
+float Loki\+System\+Config::\+filter\+\_\+bandwidth}
+
+
+
+La bande passante du filtre d\textquotesingle{}élimination du déplacement fictif, en Hz. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00044}{44}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_addcc8151099436774d4cdf548b94739e}\index{LokiSystemConfig@{LokiSystemConfig}!filter\_decimation@{filter\_decimation}}
+\index{filter\_decimation@{filter\_decimation}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{filter\_decimation}{filter\_decimation}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_addcc8151099436774d4cdf548b94739e} 
+size\+\_\+t Loki\+System\+Config::\+filter\+\_\+decimation}
+
+
+
+Le facteur de décimation du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00050}{50}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_aa6c8d4a52f1920dbe7b719982cbc34a1}\index{LokiSystemConfig@{LokiSystemConfig}!filter\_length@{filter\_length}}
+\index{filter\_length@{filter\_length}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{filter\_length}{filter\_length}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_aa6c8d4a52f1920dbe7b719982cbc34a1} 
+size\+\_\+t Loki\+System\+Config::\+filter\+\_\+length}
+
+
+
+Le nombre de coefficients du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00048}{48}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a229a6536add19a3622cdde9f99dfce50}\index{LokiSystemConfig@{LokiSystemConfig}!reflections@{reflections}}
+\index{reflections@{reflections}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{reflections}{reflections}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a229a6536add19a3622cdde9f99dfce50} 
+unsigned Loki\+System\+Config::\+reflections}
+
+
+
+Le nombre de réflexions supposé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00030}{30}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a4b608957465688bef473e2bdb127f591}\index{LokiSystemConfig@{LokiSystemConfig}!simulate@{simulate}}
+\index{simulate@{simulate}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{simulate}{simulate}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a4b608957465688bef473e2bdb127f591} 
+bool Loki\+System\+Config::\+simulate}
+
+
+
+Faut-\/il simuler les capteurs de déplacement ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00024}{24}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a40bee4508db7780d960c0f63fbd364e3}\index{LokiSystemConfig@{LokiSystemConfig}!skip@{skip}}
+\index{skip@{skip}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{skip}{skip}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a40bee4508db7780d960c0f63fbd364e3} 
+float Loki\+System\+Config::\+skip}
+
+
+
+Le délai d\textquotesingle{}attente avant d\textquotesingle{}alimenter la FIFO de sortie, en secondes. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_ae30c5a3384f7397e18191efec5d2a63f}\index{LokiSystemConfig@{LokiSystemConfig}!time\_constants@{time\_constants}}
+\index{time\_constants@{time\_constants}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{time\_constants}{time\_constants}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_ae30c5a3384f7397e18191efec5d2a63f} 
+float Loki\+System\+Config::\+time\+\_\+constants\+[3]}
+
+
+
+Les constantes de temps des filtres de lissage des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00052}{52}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystemConfig_a39d3f754ba36ad629f7d69fdd116b9c7}\index{LokiSystemConfig@{LokiSystemConfig}!wavelength@{wavelength}}
+\index{wavelength@{wavelength}!LokiSystemConfig@{LokiSystemConfig}}
+\doxysubsubsection{\texorpdfstring{wavelength}{wavelength}}
+{\footnotesize\ttfamily \label{structLokiSystemConfig_a39d3f754ba36ad629f7d69fdd116b9c7} 
+float Loki\+System\+Config::\+wavelength}
+
+
+
+La longueur d\textquotesingle{}onde de la diode laser, en nm. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00028}{28}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-system_8c}{libloki-\/system.\+c}}\end{DoxyCompactItemize}

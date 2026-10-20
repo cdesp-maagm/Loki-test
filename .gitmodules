@@ -1,0 +1,15 @@
+[submodule "os/poky"]
+	path = os/poky
+	url = git://git.yoctoproject.org/poky
+	branch = thud
+[submodule "os/meta-xilinx"]
+	path = os/meta-xilinx
+	url = https://github.com/Xilinx/meta-xilinx.git
+	branch = rel-v2019.1
+[submodule "hdl/device-tree-xlnx"]
+	path = hdl/device-tree-xlnx
+	url = https://github.com/Xilinx/device-tree-xlnx
+[submodule "os/meta-openembedded"]
+	path = os/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
+	branch = thud

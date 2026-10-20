@@ -1,0 +1,7 @@
+<map id="LokiSocketServer_receive" name="LokiSocketServer_receive">
+<area shape="rect" id="node1" title="Recevoir les données d&#39;entrée." alt="" coords="5,56,180,83"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="228,5,425,32"/>
+<area shape="rect" id="node3" href="$group__gLokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="275,56,378,83"/>
+<area shape="rect" id="node4" href="$group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="249,107,404,133"/>
+<area shape="rect" id="node5" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="473,107,637,133"/>
+</map>

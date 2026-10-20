@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Filtre RLS</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Filtre RLS <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estimation des paramètres d'une ellipse par filtrage <em>Recursive Least Squares</em>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Filtre RLS:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS.png" border="0" usemap="#agroup____gLokiRLS" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiRLS" id="agroup____gLokiRLS">
+<area shape="rect" title="Estimation des paramètres d&#39;une ellipse par filtrage Recursive Least Squares." alt="" coords="224,5,307,31"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,5,176,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-rls_2Ec" id="r_libloki-rls_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-rls_8c.html">libloki-rls.c</a></td></tr>
+<tr class="memitem:libloki-rls_2Eh" id="r_libloki-rls_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-rls_8h.html">libloki-rls.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiRLS" id="r_LokiRLS"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiRLS.html">LokiRLS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre RLS.  <a href="structLokiRLS.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga0bb74b67ff4982e8ef7e9ca688e5764c" id="r_ga0bb74b67ff4982e8ef7e9ca688e5764c"><td class="memItemLeft">typedef struct LokiRLS&#160;</td><td class="memItemRight"><a class="el" href="#ga0bb74b67ff4982e8ef7e9ca688e5764c">LokiRLS</a></td></tr>
+<tr class="memdesc:ga0bb74b67ff4982e8ef7e9ca688e5764c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre RLS.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga37e9e5ff035026e7adffe4f6f9ace785" id="r_ga37e9e5ff035026e7adffe4f6f9ace785"><td class="memItemLeft"><a class="el" href="structLokiRLS.html">LokiRLS</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga37e9e5ff035026e7adffe4f6f9ace785">LokiRLS_new</a> (float initial_radius, const float params[static 2])</td></tr>
+<tr class="memdesc:ga37e9e5ff035026e7adffe4f6f9ace785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau filtre RLS.  <br /></td></tr>
+<tr class="memitem:ga7ff6449a3e3955a227a669b210b2ef59" id="r_ga7ff6449a3e3955a227a669b210b2ef59"><td class="memItemLeft"><a class="el" href="structLokiRLS.html">LokiRLS</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga7ff6449a3e3955a227a669b210b2ef59">LokiRLS_clone</a> (const <a class="el" href="structLokiRLS.html">LokiRLS</a> *other)</td></tr>
+<tr class="memdesc:ga7ff6449a3e3955a227a669b210b2ef59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un filtre RLS.  <br /></td></tr>
+<tr class="memitem:gaa9da60e33b713cdb4928de597df53df1" id="r_gaa9da60e33b713cdb4928de597df53df1"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#gaa9da60e33b713cdb4928de597df53df1">LokiRLS_get_state</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self)</td></tr>
+<tr class="memdesc:gaa9da60e33b713cdb4928de597df53df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant du filtre.  <br /></td></tr>
+<tr class="memitem:ga4947c27c78fc0f68641d9774ff4cf2e7" id="r_ga4947c27c78fc0f68641d9774ff4cf2e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga4947c27c78fc0f68641d9774ff4cf2e7">LokiRLS_work</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:ga4947c27c78fc0f68641d9774ff4cf2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c" id="r_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c">LokiRLS_del</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self)</td></tr>
+<tr class="memdesc:ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un filtre RLS.  <br /></td></tr>
+<tr class="memitem:ga09dd42e9fdc0892b21d304b70645c033" id="r_ga09dd42e9fdc0892b21d304b70645c033"><td class="memItemLeft"><a id="ga09dd42e9fdc0892b21d304b70645c033" name="ga09dd42e9fdc0892b21d304b70645c033"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiRLS.html">LokiRLS</a>, <a class="el" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(params_length, 2) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, clone) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, get_state) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, del))</td></tr>
+<tr class="memitem:gaaf583292168e8212d46492b43dde5b7b" id="r_gaaf583292168e8212d46492b43dde5b7b"><td class="memItemLeft"><a id="gaaf583292168e8212d46492b43dde5b7b" name="gaaf583292168e8212d46492b43dde5b7b"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_declare_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiRLS.html">LokiRLS</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Estimation des paramètres d'une ellipse par filtrage <em>Recursive Least Squares</em>. </p>
+<p>Ce module implémente l'interface <a class="el" href="group__gLokiEllipseEstimator.html" title="Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse">LokiEllipseEstimator</a>. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga0bb74b67ff4982e8ef7e9ca688e5764c" name="ga0bb74b67ff4982e8ef7e9ca688e5764c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0bb74b67ff4982e8ef7e9ca688e5764c">&#9670;&#160;</a></span>LokiRLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiRLS LokiRLS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un filtre RLS. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8h_source.html#l00017">17</a> du fichier <a class="el" href="libloki-rls_8h_source.html">libloki-rls.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga7ff6449a3e3955a227a669b210b2ef59" name="ga7ff6449a3e3955a227a669b210b2ef59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ff6449a3e3955a227a669b210b2ef59">&#9670;&#160;</a></span>LokiRLS_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiRLS.html">LokiRLS</a> * LokiRLS_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiRLS.html">LokiRLS</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un clone d'un filtre RLS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Le filtre RLS à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre RLS. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00042">42</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59_cgraph.png" border="0" usemap="#agroup__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59_icgraph.png" border="0" usemap="#agroup__gLokiRLS_ga7ff6449a3e3955a227a669b210b2ef59_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c" name="ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c">&#9670;&#160;</a></span>LokiRLS_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRLS_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRLS.html">LokiRLS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un filtre RLS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00129">129</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c_cgraph.png" border="0" usemap="#agroup__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c_icgraph.png" border="0" usemap="#agroup__gLokiRLS_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="gaa9da60e33b713cdb4928de597df53df1" name="gaa9da60e33b713cdb4928de597df53df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9da60e33b713cdb4928de597df53df1">&#9670;&#160;</a></span>LokiRLS_get_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiRLS_get_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRLS.html">LokiRLS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourner l'état courant du filtre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Un filtre RLS. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le vecteur d'état du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00053">53</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1_cgraph.png" border="0" usemap="#agroup__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1_icgraph.png" border="0" usemap="#agroup__gLokiRLS_gaa9da60e33b713cdb4928de597df53df1_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ga37e9e5ff035026e7adffe4f6f9ace785" name="ga37e9e5ff035026e7adffe4f6f9ace785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37e9e5ff035026e7adffe4f6f9ace785">&#9670;&#160;</a></span>LokiRLS_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiRLS.html">LokiRLS</a> * LokiRLS_new </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>initial_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>params</em></span>[static 2]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau filtre RLS. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_radius</td><td>Le rayon initial de l'ellipse estimée. </td></tr>
+    <tr><td class="paramname">params</td><td>Le facteur d'oubli du filtre et la valeur initiale à affecter dans la matrice P. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre RLS. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00023">23</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785_cgraph.png" border="0" usemap="#agroup__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785_icgraph.png" border="0" usemap="#agroup__gLokiRLS_ga37e9e5ff035026e7adffe4f6f9ace785_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ga4947c27c78fc0f68641d9774ff4cf2e7" name="ga4947c27c78fc0f68641d9774ff4cf2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4947c27c78fc0f68641d9774ff4cf2e7">&#9670;&#160;</a></span>LokiRLS_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiRLS_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiRLS.html">LokiRLS</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées. </p>
+<p>Cette fonction met à jour l'état interne du filtre et les paramètre de l'ellipse de destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre RLS à exécuter. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X du point courant. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y du point courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-rls_8c_source.html#l00057">57</a> du fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7_cgraph.png" border="0" usemap="#agroup__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7_icgraph.png" border="0" usemap="#agroup__gLokiRLS_ga4947c27c78fc0f68641d9774ff4cf2e7_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

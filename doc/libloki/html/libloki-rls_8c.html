@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-rls.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-rls.c<div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a> &raquo; <a class="el" href="group__gLokiRLS.html">Filtre RLS</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki-rls_8h_source.html">libloki-rls.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="libloki-ellipse_8h_source.html">libloki-ellipse.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-rls.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-rls_8c__incl.png" border="0" usemap="#alibloki-rls_8c" loading="lazy" alt=""/></div>
+<map name="alibloki-rls_8c" id="alibloki-rls_8c">
+<area shape="rect" title=" " alt="" coords="278,5,373,31"/>
+<area shape="rect" href="libloki-rls_8h.html" title=" " alt="" coords="85,79,179,104"/>
+<area shape="rect" href="libloki-ellipse_8h.html" title=" " alt="" coords="204,79,327,104"/>
+<area shape="rect" title=" " alt="" coords="351,79,422,104"/>
+<area shape="rect" title=" " alt="" coords="446,79,517,104"/>
+<area shape="rect" href="libloki-ellipse-estimator_8h.html" title=" " alt="" coords="37,152,227,177"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="17,225,129,251"/>
+<area shape="rect" title=" " alt="" coords="153,225,228,251"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="5,299,141,324"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-rls_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiRLS" id="r_LokiRLS"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiRLS.html">LokiRLS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre RLS.  <a href="structLokiRLS.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga37e9e5ff035026e7adffe4f6f9ace785" id="r_ga37e9e5ff035026e7adffe4f6f9ace785"><td class="memItemLeft"><a class="el" href="structLokiRLS.html">LokiRLS</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRLS.html#ga37e9e5ff035026e7adffe4f6f9ace785">LokiRLS_new</a> (float initial_radius, const float params[static 2])</td></tr>
+<tr class="memdesc:ga37e9e5ff035026e7adffe4f6f9ace785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau filtre RLS.  <br /></td></tr>
+<tr class="memitem:ga7ff6449a3e3955a227a669b210b2ef59" id="r_ga7ff6449a3e3955a227a669b210b2ef59"><td class="memItemLeft"><a class="el" href="structLokiRLS.html">LokiRLS</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRLS.html#ga7ff6449a3e3955a227a669b210b2ef59">LokiRLS_clone</a> (const <a class="el" href="structLokiRLS.html">LokiRLS</a> *other)</td></tr>
+<tr class="memdesc:ga7ff6449a3e3955a227a669b210b2ef59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un filtre RLS.  <br /></td></tr>
+<tr class="memitem:gaa9da60e33b713cdb4928de597df53df1" id="r_gaa9da60e33b713cdb4928de597df53df1"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRLS.html#gaa9da60e33b713cdb4928de597df53df1">LokiRLS_get_state</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self)</td></tr>
+<tr class="memdesc:gaa9da60e33b713cdb4928de597df53df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant du filtre.  <br /></td></tr>
+<tr class="memitem:ga4947c27c78fc0f68641d9774ff4cf2e7" id="r_ga4947c27c78fc0f68641d9774ff4cf2e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRLS.html#ga4947c27c78fc0f68641d9774ff4cf2e7">LokiRLS_work</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:ga4947c27c78fc0f68641d9774ff4cf2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c" id="r_ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRLS.html#ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c">LokiRLS_del</a> (<a class="el" href="structLokiRLS.html">LokiRLS</a> *self)</td></tr>
+<tr class="memdesc:ga04e4f7b5d68c3cd2b8bb61a5cd81ae8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un filtre RLS.  <br /></td></tr>
+<tr class="memitem:ga09dd42e9fdc0892b21d304b70645c033" id="r_ga09dd42e9fdc0892b21d304b70645c033"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiRLS.html">LokiRLS</a>, <a class="el" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(params_length, 2) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, clone) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, get_state) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRLS.html">LokiRLS</a>, del))</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-rls_8c_source.html">libloki-rls.c</a>.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

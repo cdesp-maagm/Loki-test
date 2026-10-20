@@ -1,0 +1,130 @@
+/dts-v1/;
+/include/ "zynq-7000.dtsi"
+
+/ {
+    model = "Red Pitaya";
+    compatible = "xlnx,zynq-7000";
+
+    aliases {
+    		ethernet0 = &gem0;
+    		serial0 = &uart0;
+    };
+
+    memory {
+    		device_type = "memory";
+    		reg = <0x0 0x20000000>;
+    };
+
+    chosen {
+		bootargs = "console=ttyPS0,115200 root=/dev/ram rw earlyprintk";
+		stdout-path = &uart0;
+    };
+
+    gpio-leds {
+		compatible = "gpio-leds";
+		led-0-yellow {
+			label = "led0";
+			gpios = <&gpio0 54 0>;
+			default-state = "off";
+		};
+		led-1-yellow {
+			label = "led1";
+			gpios = <&gpio0 55 0>;
+			default-state = "off";
+		};
+		led-2-yellow {
+			label = "led2";
+			gpios = <&gpio0 56 0>;
+			default-state = "off";
+		};
+		led-3-yellow {
+			label = "led3";
+			gpios = <&gpio0 57 0>;
+			default-state = "off";
+		};
+		led-4-yellow {
+			label = "led4";
+			gpios = <&gpio0 58 0>;
+			default-state = "off";
+		};
+		led-5-yellow {
+			label = "led5";
+			gpios = <&gpio0 59 0>;
+			default-state = "off";
+		};
+		led-6-yellow {
+			label = "led6";
+			gpios = <&gpio0 60 0>;
+			default-state = "off";
+		};
+		led-7-yellow {
+			label = "led7";
+			gpios = <&gpio0 61 0>;
+			default-state = "off";
+		};
+        led-8-yellow {
+			label = "led8";
+			gpios = <&gpio0 0 0>;
+			default-state = "off";
+			linux,default-trigger = "mmc0";
+		};
+		led-9-red {
+			label = "led9";
+			gpios = <&gpio0 7 0>;
+			default-state = "off";
+			linux,default-trigger = "heartbeat";
+		};
+    };
+
+    usb_phy0: phy0 {
+		compatible = "ulpi-phy";
+		#phy-cells = <0>;
+		reg = <0xe0002000 0x1000>;
+		view-port = <0x0170>;
+		drv-vbus;
+	};
+};
+
+&clkc {
+	ps-clk-frequency = <33333333>;
+};
+
+&sdhci0 {
+	status = "okay";
+};
+
+&gem0 {
+    phy-handle = <&ethernet_0_mdio>;
+    status = "okay";
+
+	ethernet_0_mdio: ethernet_0_mdio@1 {
+		reg = <1>;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+	eeprom@50 {
+		compatible = "24c64";
+		reg = <0x50>;
+		pagesize = <32>;
+	};
+};
+
+&spi1 {
+	spidev@0 {
+		compatible = "spidev";
+		reg = <0>; //chipselect 0
+		spi-max-frequency = <50000000>;
+	};
+};
+
+&usb0 {
+    dr_mode = "host";
+	usb-phy = <&usb_phy0>;
+    status = "okay";
+};
+
+&uart0 {
+    status = "okay";
+};

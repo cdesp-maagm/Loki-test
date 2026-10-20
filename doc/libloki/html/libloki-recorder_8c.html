@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-recorder.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-recorder.c<div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a> &raquo; <a class="el" href="group__gLokiRecorder.html">Enregistrement de séries temporelles</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki_8h_source.html">libloki.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;inttypes.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-recorder.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-recorder_8c__incl.png" border="0" usemap="#alibloki-recorder_8c" loading="lazy" alt=""/></div>
+<map name="alibloki-recorder_8c" id="alibloki-recorder_8c">
+<area shape="rect" title=" " alt="" coords="2566,5,2697,31"/>
+<area shape="rect" href="libloki_8h.html" title=" " alt="" coords="1377,79,1451,104"/>
+<area shape="rect" title=" " alt="" coords="465,372,547,397"/>
+<area shape="rect" title=" " alt="" coords="2303,372,2389,397"/>
+<area shape="rect" title=" " alt="" coords="2504,79,2572,104"/>
+<area shape="rect" title=" " alt="" coords="2596,79,2667,104"/>
+<area shape="rect" title=" " alt="" coords="2691,79,2758,104"/>
+<area shape="rect" title=" " alt="" coords="2783,79,2853,104"/>
+<area shape="rect" title=" " alt="" coords="2877,79,2961,104"/>
+<area shape="rect" title=" " alt="" coords="2985,79,3059,104"/>
+<area shape="rect" href="libloki-hooks_8h.html" title=" " alt="" coords="1553,152,1672,177"/>
+<area shape="rect" href="libloki-fifo_8h.html" title=" " alt="" coords="660,299,760,324"/>
+<area shape="rect" href="libloki-time_8h.html" title=" " alt="" coords="2170,299,2279,324"/>
+<area shape="rect" href="libloki-packet_8h.html" title=" " alt="" coords="2306,225,2429,251"/>
+<area shape="rect" href="libloki-env-sensors_8h.html" title=" " alt="" coords="5,225,164,251"/>
+<area shape="rect" href="libloki-modem_8h.html" title=" " alt="" coords="188,225,317,251"/>
+<area shape="rect" href="libloki-ellipse_8h.html" title=" " alt="" coords="2157,152,2279,177"/>
+<area shape="rect" href="libloki-ellipse-estimator_8h.html" title=" " alt="" coords="1285,225,1474,251"/>
+<area shape="rect" href="libloki-nlms_8h.html" title=" " alt="" coords="1696,152,1807,177"/>
+<area shape="rect" href="libloki-rls_8h.html" title=" " alt="" coords="1232,152,1327,177"/>
+<area shape="rect" href="libloki-kalman_8h.html" title=" " alt="" coords="1351,152,1477,177"/>
+<area shape="rect" href="libloki-fir_8h.html" title=" " alt="" coords="1006,299,1097,324"/>
+<area shape="rect" href="libloki-displacement_8h.html" title=" " alt="" coords="1041,152,1208,177"/>
+<area shape="rect" href="libloki-system_8h.html" title=" " alt="" coords="839,152,965,177"/>
+<area shape="rect" href="libloki-formatter_8h.html" title=" " alt="" coords="1892,225,2032,251"/>
+<area shape="rect" href="libloki-mseed_8h.html" title=" " alt="" coords="1831,152,1954,177"/>
+<area shape="rect" href="libloki-raw_8h.html" title=" " alt="" coords="1979,152,2081,177"/>
+<area shape="rect" href="libloki-recorder_8h.html" title=" " alt="" coords="803,225,935,251"/>
+<area shape="rect" href="libloki-socket-server_8h.html" title=" " alt="" coords="393,225,560,251"/>
+<area shape="rect" href="libloki-consumer_8h.html" title=" " alt="" coords="584,225,727,251"/>
+<area shape="rect" title=" " alt="" coords="1161,372,1235,397"/>
+<area shape="rect" title=" " alt="" coords="2193,372,2257,397"/>
+<area shape="rect" title=" " alt="" coords="196,299,267,324"/>
+<area shape="rect" title=" " alt="" coords="75,299,171,324"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="1670,299,1782,324"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="1658,372,1794,397"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-recorder_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiRecorder" id="r_LokiRecorder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiRecorder.html">LokiRecorder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un enregistreur de séries temporelles.  <a href="structLokiRecorder.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a369266c24eacffb87046522897a570d5" id="r_a369266c24eacffb87046522897a570d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a369266c24eacffb87046522897a570d5">_GNU_SOURCE</a></td></tr>
+<tr class="memdesc:a369266c24eacffb87046522897a570d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permettre l'utilisation de la fonction <span class="tt">pthread_setname_np</span> pour modifier le nom d'un thread.  <br /></td></tr>
+<tr class="memitem:ga4d144d1f6a265a12770457592de62399" id="r_ga4d144d1f6a265a12770457592de62399"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga4d144d1f6a265a12770457592de62399">FILENAME_SUFFIX_DATE_LEN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:ga4d144d1f6a265a12770457592de62399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme la date et l'heure d'un fichier ("_YYYYmmddTHHMMSS").  <br /></td></tr>
+<tr class="memitem:ga0a317df8e1ff90b9a17a08876f9822af" id="r_ga0a317df8e1ff90b9a17a08876f9822af"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga0a317df8e1ff90b9a17a08876f9822af">FILENAME_SUFFIX_MSEC_LEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:ga0a317df8e1ff90b9a17a08876f9822af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme le nombre de millisecondes de la date d'un fichier (".mmmZ.").  <br /></td></tr>
+<tr class="memitem:ga2c939b997916c872f0e2ca2983a2ff46" id="r_ga2c939b997916c872f0e2ca2983a2ff46"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga2c939b997916c872f0e2ca2983a2ff46">FILENAME_SUFFIX_LEN</a>&#160;&#160;&#160;(<a class="el" href="group__gLokiRecorder.html#ga4d144d1f6a265a12770457592de62399">FILENAME_SUFFIX_DATE_LEN</a> + <a class="el" href="group__gLokiRecorder.html#ga0a317df8e1ff90b9a17a08876f9822af">FILENAME_SUFFIX_MSEC_LEN</a>)</td></tr>
+<tr class="memdesc:ga2c939b997916c872f0e2ca2983a2ff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longueur de chaîne à allouer pour mettre en forme la date complète d'un fichier.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaebc49d7bf1849c2cc5ea7e0ea05532d9" id="r_gaebc49d7bf1849c2cc5ea7e0ea05532d9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gaebc49d7bf1849c2cc5ea7e0ea05532d9">LokiRecorder_set_formatter</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self, void *config)</td></tr>
+<tr class="memdesc:gaebc49d7bf1849c2cc5ea7e0ea05532d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un formateur à un enregistreur.  <br /></td></tr>
+<tr class="memitem:gae6fec426bf7eeb871c675c6c7749feae" id="r_gae6fec426bf7eeb871c675c6c7749feae"><td class="memItemLeft"><a class="el" href="structLokiRecorder.html">LokiRecorder</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gae6fec426bf7eeb871c675c6c7749feae">LokiRecorder_new</a> (const char *filename, const char *filetype, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency, float duration, float duration_per_file, void *config)</td></tr>
+<tr class="memdesc:gae6fec426bf7eeb871c675c6c7749feae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un enregistreur de séries temporelles.  <br /></td></tr>
+<tr class="memitem:gab0cf8ecbf4d7485f468a54f4f19ac9bb" id="r_gab0cf8ecbf4d7485f468a54f4f19ac9bb"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gab0cf8ecbf4d7485f468a54f4f19ac9bb">LokiRecorder_get_filename</a> (const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gab0cf8ecbf4d7485f468a54f4f19ac9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nom des fichiers gérés par un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga4c4c75b9e574887bea2605e78df3a4aa" id="r_ga4c4c75b9e574887bea2605e78df3a4aa"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga4c4c75b9e574887bea2605e78df3a4aa">LokiRecorder_get_channel_count</a> (const <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:ga4c4c75b9e574887bea2605e78df3a4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de voies gérées par un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga537585a8b069b651a6eaeb26a421eaf1" id="r_ga537585a8b069b651a6eaeb26a421eaf1"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1">LokiRecorder_work</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga537585a8b069b651a6eaeb26a421eaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer les données.  <br /></td></tr>
+<tr class="memitem:ga2065789d6a43516492fd3540ed9f251e" id="r_ga2065789d6a43516492fd3540ed9f251e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e">LokiRecorder_start</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *in, size_t cid)</td></tr>
+<tr class="memdesc:ga2065789d6a43516492fd3540ed9f251e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'enregistrement.  <br /></td></tr>
+<tr class="memitem:gaa45a1fc3757fe0ff2226e05661ea49a4" id="r_gaa45a1fc3757fe0ff2226e05661ea49a4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gaa45a1fc3757fe0ff2226e05661ea49a4">LokiRecorder_is_recording</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gaa45a1fc3757fe0ff2226e05661ea49a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état d'un enregistreur.  <br /></td></tr>
+<tr class="memitem:ga0eccd8310e416110c4b8d38b35bc97f8" id="r_ga0eccd8310e416110c4b8d38b35bc97f8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8">LokiRecorder_signal_handler</a> (int signum)</td></tr>
+<tr class="memdesc:ga0eccd8310e416110c4b8d38b35bc97f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionnaire d'événements.  <br /></td></tr>
+<tr class="memitem:gafd4447bb457336f3bd5d2a61e2d02be9" id="r_gafd4447bb457336f3bd5d2a61e2d02be9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9">LokiRecorder_wait</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gafd4447bb457336f3bd5d2a61e2d02be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attendre la fin de l'enregistrement.  <br /></td></tr>
+<tr class="memitem:gad51a013ed81570ffef5517d88b8f30de" id="r_gad51a013ed81570ffef5517d88b8f30de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de">LokiRecorder_stop</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:gad51a013ed81570ffef5517d88b8f30de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'enregistrement.  <br /></td></tr>
+<tr class="memitem:ga8b7109b9e203e0f4e51346dcf6f36550" id="r_ga8b7109b9e203e0f4e51346dcf6f36550"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga8b7109b9e203e0f4e51346dcf6f36550">LokiRecorder_del</a> (<a class="el" href="structLokiRecorder.html">LokiRecorder</a> *self)</td></tr>
+<tr class="memdesc:ga8b7109b9e203e0f4e51346dcf6f36550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un enregistreur.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gae4eb8ea77d0d671bfa4b50bafc73fcc4" id="r_gae4eb8ea77d0d671bfa4b50bafc73fcc4"><td class="memItemLeft">static const char *const&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#gae4eb8ea77d0d671bfa4b50bafc73fcc4">LokiRecorder_formatter_names</a> []</td></tr>
+<tr class="memdesc:gae4eb8ea77d0d671bfa4b50bafc73fcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des noms de formateurs supportés.  <br /></td></tr>
+<tr class="memitem:ga52fb440ccc44cbcb8f76b2782b283ab9" id="r_ga52fb440ccc44cbcb8f76b2782b283ab9"><td class="memItemLeft">static const LokiFormatterInterface *const&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga52fb440ccc44cbcb8f76b2782b283ab9">LokiRecorder_formatter_impls</a> []</td></tr>
+<tr class="memdesc:ga52fb440ccc44cbcb8f76b2782b283ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">La liste des implémentations de formateurs supportées.  <br /></td></tr>
+<tr class="memitem:ga3915e335db719f91979c5323b3d8ff3b" id="r_ga3915e335db719f91979c5323b3d8ff3b"><td class="memItemLeft">static <a class="el" href="structLokiRecorder.html">LokiRecorder</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRecorder.html#ga3915e335db719f91979c5323b3d8ff3b">LokiRecorder_waiting_instance</a></td></tr>
+<tr class="memdesc:ga3915e335db719f91979c5323b3d8ff3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'instance de <a class="el" href="structLokiRecorder.html" title="Représentation d&#39;un enregistreur de séries temporelles.">LokiRecorder</a> qui fait l'objet d'une attente par la fonction <a class="el" href="group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement.">LokiRecorder_wait</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a369266c24eacffb87046522897a570d5" name="a369266c24eacffb87046522897a570d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369266c24eacffb87046522897a570d5">&#9670;&#160;</a></span>_GNU_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _GNU_SOURCE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permettre l'utilisation de la fonction <span class="tt">pthread_setname_np</span> pour modifier le nom d'un thread. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00003">3</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

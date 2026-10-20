@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SRC=$(loki-record-config path)
+DAYS=$(loki-record-config keep_for_days)
+
+find $SRC -mtime +$DAYS -exec rm {} \;

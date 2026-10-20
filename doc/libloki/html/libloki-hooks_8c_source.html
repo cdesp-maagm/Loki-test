@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-hooks.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-hooks.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-hooks_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="libloki-hooks_8c.html#a369266c24eacffb87046522897a570d5">    3</a></span><span class="preprocessor">#define _GNU_SOURCE</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;dlfcn.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;malloc.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#gaa645859efa9eecf1d6279f922cf25147">   13</a></span><span class="keyword">static</span> <span class="keywordtype">void</span>* (*LokiHooks_saved_malloc)(size_t, <span class="keyword">const</span> <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#ga2d338f0f660cf9d8d44cbc22e134b003">   16</a></span><span class="keyword">static</span> void (*<a class="code hl_variable" href="group__gLokiHooks.html#ga2d338f0f660cf9d8d44cbc22e134b003">LokiHooks_saved_free</a>)(<span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a>(<span class="keywordtype">size_t</span>, <span class="keyword">const</span> <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f">LokiHooks_free</a>(<span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">   23</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    __malloc_hook = <a class="code hl_function" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    __free_hook   = <a class="code hl_function" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f">LokiHooks_free</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">   29</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="group__gLokiHooks.html#gaa645859efa9eecf1d6279f922cf25147">LokiHooks_saved_malloc</a> = __malloc_hook;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="group__gLokiHooks.html#ga2d338f0f660cf9d8d44cbc22e134b003">LokiHooks_saved_free</a>   = __free_hook;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae">LokiHooks_restore</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    __malloc_hook = <a class="code hl_variable" href="group__gLokiHooks.html#gaa645859efa9eecf1d6279f922cf25147">LokiHooks_saved_malloc</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    __free_hook   = <a class="code hl_variable" href="group__gLokiHooks.html#ga2d338f0f660cf9d8d44cbc22e134b003">LokiHooks_saved_free</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592">LokiHooks_init</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (__malloc_hook == <a class="code hl_function" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a>) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">   56</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a>(<span class="keywordtype">size_t</span> size, <span class="keyword">const</span> <span class="keywordtype">void</span> *caller) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae">LokiHooks_restore</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> *result = malloc(size);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    Dl_info info;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    dladdr(caller, &amp;info);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// fprintf utilise peut-être malloc.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Ne pas restaurer les hooks avant cet appel.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    fprintf(stderr, <span class="stringliteral">&quot;LokiHooks_malloc: %p (allocated %zu bytes), called by %s\n&quot;</span>, result, size, info.dli_sname);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f">   80</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f">LokiHooks_free</a>(<span class="keywordtype">void</span> *ptr, <span class="keyword">const</span> <span class="keywordtype">void</span> *caller) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae">LokiHooks_restore</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    free(ptr);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    Dl_info info;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    dladdr(caller, &amp;info);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// fprintf utilise peut-être malloc.</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Ne pas restaurer les hooks avant cet appel.</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    fprintf (stderr, <span class="stringliteral">&quot;LokiHooks_free: %p, called by %s\n&quot;</span>, ptr, info.dli_sname);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="ttc" id="agroup__gLokiHooks_html_ga2d338f0f660cf9d8d44cbc22e134b003"><div class="ttname"><a href="group__gLokiHooks.html#ga2d338f0f660cf9d8d44cbc22e134b003">LokiHooks_saved_free</a></div><div class="ttdeci">static void(*) LokiHooks_saved_free(void *, const void *)</div><div class="ttdoc">Pointeur vers le hook qui exécute la fonction free d&#39;origine.</div><div class="ttdef"><b>Définition</b> <a href="#l00016">libloki-hooks.c:16</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_ga4175410f57244d03a197a9ca698d7fa3"><div class="ttname"><a href="group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3">LokiHooks_malloc</a></div><div class="ttdeci">static void * LokiHooks_malloc(size_t, const void *)</div><div class="ttdoc">Une version instrumentée du hook de la fonction malloc.</div><div class="ttdef"><b>Définition</b> <a href="#l00056">libloki-hooks.c:56</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_ga754ec741c3c59c815440fa4b8bc5bda2"><div class="ttname"><a href="group__gLokiHooks.html#ga754ec741c3c59c815440fa4b8bc5bda2">LokiHooks_setup</a></div><div class="ttdeci">static void LokiHooks_setup(void)</div><div class="ttdoc">Affecter les hooks des fonctions malloc et free.</div><div class="ttdef"><b>Définition</b> <a href="#l00023">libloki-hooks.c:23</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_ga8452f9f1793e6d1091ac294f15406592"><div class="ttname"><a href="group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592">LokiHooks_init</a></div><div class="ttdeci">void LokiHooks_init(void)</div><div class="ttdoc">Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire.</div><div class="ttdef"><b>Définition</b> <a href="#l00039">libloki-hooks.c:39</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_gaa645859efa9eecf1d6279f922cf25147"><div class="ttname"><a href="group__gLokiHooks.html#gaa645859efa9eecf1d6279f922cf25147">LokiHooks_saved_malloc</a></div><div class="ttdeci">static void *(*) LokiHooks_saved_malloc(size_t, const void *)</div><div class="ttdoc">Pointeur vers le hook qui exécute la fonction malloc d&#39;origine.</div><div class="ttdef"><b>Définition</b> <a href="#l00013">libloki-hooks.c:13</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_gaa7d235f5db9c92d3af4c3e816983f4ae"><div class="ttname"><a href="group__gLokiHooks.html#gaa7d235f5db9c92d3af4c3e816983f4ae">LokiHooks_restore</a></div><div class="ttdeci">void LokiHooks_restore(void)</div><div class="ttdoc">Restaurer les hooks d&#39;origine pour l&#39;allocation/désallocation de mémoire.</div><div class="ttdef"><b>Définition</b> <a href="#l00034">libloki-hooks.c:34</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_gadc8f630bfbfcb249ae0e14722f9e3141"><div class="ttname"><a href="group__gLokiHooks.html#gadc8f630bfbfcb249ae0e14722f9e3141">LokiHooks_save</a></div><div class="ttdeci">static void LokiHooks_save(void)</div><div class="ttdoc">Sauvegarder les hooks des fonctions malloc et free.</div><div class="ttdef"><b>Définition</b> <a href="#l00029">libloki-hooks.c:29</a></div></div>
+<div class="ttc" id="agroup__gLokiHooks_html_gaf60068237975d6170328c5dd9fcb875f"><div class="ttname"><a href="group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f">LokiHooks_free</a></div><div class="ttdeci">static void LokiHooks_free(void *, const void *)</div><div class="ttdoc">Une version instrumentée du hook de la fonction free.</div><div class="ttdef"><b>Définition</b> <a href="#l00080">libloki-hooks.c:80</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="LokiModem_get_demod_adc_max_ratio" name="LokiModem_get_demod_adc_max_ratio">
+<area shape="rect" id="node1" title="Lire la valeur maximale du signal en entrée du démodulateur pour une voie." alt="" coords="5,23,184,63"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="248,5,403,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gae78f99b97520da389fc0162c2026a49a" title="Mettre à l&#39;échelle une valeur d&#39;entrée du démodulateur." alt="" coords="232,55,419,80"/>
+</map>

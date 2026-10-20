@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Filtre de Kalman</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Filtre de Kalman <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estimation des paramètres d'une ellipse par filtrage de Kalman.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Filtre de Kalman:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman.png" border="0" usemap="#agroup____gLokiKalman" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiKalman" id="agroup____gLokiKalman">
+<area shape="rect" title="Estimation des paramètres d&#39;une ellipse par filtrage de Kalman." alt="" coords="224,5,353,31"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,5,176,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-kalman_2Ec" id="r_libloki-kalman_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-kalman_8c.html">libloki-kalman.c</a></td></tr>
+<tr class="memitem:libloki-kalman_2Eh" id="r_libloki-kalman_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-kalman_8h.html">libloki-kalman.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiKalman" id="r_LokiKalman"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiKalman.html">LokiKalman</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre de Kalman.  <a href="structLokiKalman.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga5d595bfc88e801f22e05add7e6572739" id="r_ga5d595bfc88e801f22e05add7e6572739"><td class="memItemLeft">typedef struct LokiKalman&#160;</td><td class="memItemRight"><a class="el" href="#ga5d595bfc88e801f22e05add7e6572739">LokiKalman</a></td></tr>
+<tr class="memdesc:ga5d595bfc88e801f22e05add7e6572739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre de Kalman.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga0d9b7cc8859c8b18f9ccc2fac47b4d23" id="r_ga0d9b7cc8859c8b18f9ccc2fac47b4d23"><td class="memItemLeft"><a class="el" href="structLokiKalman.html">LokiKalman</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">LokiKalman_new</a> (float initial_radius, const float params[static 3])</td></tr>
+<tr class="memdesc:ga0d9b7cc8859c8b18f9ccc2fac47b4d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau filtre de Kalman.  <br /></td></tr>
+<tr class="memitem:gae1de220a46ec966f9d7fc30fff678ce6" id="r_gae1de220a46ec966f9d7fc30fff678ce6"><td class="memItemLeft"><a class="el" href="structLokiKalman.html">LokiKalman</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gae1de220a46ec966f9d7fc30fff678ce6">LokiKalman_clone</a> (const <a class="el" href="structLokiKalman.html">LokiKalman</a> *other)</td></tr>
+<tr class="memdesc:gae1de220a46ec966f9d7fc30fff678ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un filtre de Kalman.  <br /></td></tr>
+<tr class="memitem:ga9dd2d0bf56568b60cd21fb1f5fae4054" id="r_ga9dd2d0bf56568b60cd21fb1f5fae4054"><td class="memItemLeft">float *&#160;</td><td class="memItemRight"><a class="el" href="#ga9dd2d0bf56568b60cd21fb1f5fae4054">LokiKalman_get_state</a> (<a class="el" href="structLokiKalman.html">LokiKalman</a> *self)</td></tr>
+<tr class="memdesc:ga9dd2d0bf56568b60cd21fb1f5fae4054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourner l'état courant du filtre.  <br /></td></tr>
+<tr class="memitem:ga2ec7d2bcf42b57753cf4c1135cc63ef6" id="r_ga2ec7d2bcf42b57753cf4c1135cc63ef6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2ec7d2bcf42b57753cf4c1135cc63ef6">LokiKalman_work</a> (<a class="el" href="structLokiKalman.html">LokiKalman</a> *self, float x, float y)</td></tr>
+<tr class="memdesc:ga2ec7d2bcf42b57753cf4c1135cc63ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées.  <br /></td></tr>
+<tr class="memitem:gad1eafbecc1476c32df47cb901ea44ce5" id="r_gad1eafbecc1476c32df47cb901ea44ce5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gad1eafbecc1476c32df47cb901ea44ce5">LokiKalman_del</a> (<a class="el" href="structLokiKalman.html">LokiKalman</a> *self)</td></tr>
+<tr class="memdesc:gad1eafbecc1476c32df47cb901ea44ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un filtre de Kalman.  <br /></td></tr>
+<tr class="memitem:ga6808449e72b96d1e2d926a1a6240e76b" id="r_ga6808449e72b96d1e2d926a1a6240e76b"><td class="memItemLeft"><a id="ga6808449e72b96d1e2d926a1a6240e76b" name="ga6808449e72b96d1e2d926a1a6240e76b"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiKalman.html">LokiKalman</a>, <a class="el" href="group__gLokiClass.html#ga8ba32abc96ab47c9211d12fa57c3ba3f">LokiClass_set_attribute</a>(params_length, 3) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiKalman.html">LokiKalman</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiKalman.html">LokiKalman</a>, clone) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiKalman.html">LokiKalman</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiKalman.html">LokiKalman</a>, get_state) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiKalman.html">LokiKalman</a>, del))</td></tr>
+<tr class="memitem:gae0202da7f824e4f4a178abd3b8977704" id="r_gae0202da7f824e4f4a178abd3b8977704"><td class="memItemLeft"><a id="gae0202da7f824e4f4a178abd3b8977704" name="gae0202da7f824e4f4a178abd3b8977704"></a>
+&#160;</td><td class="memItemRight"><b>LokiClass_declare_implementation</b> (<a class="el" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a>, <a class="el" href="structLokiKalman.html">LokiKalman</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Estimation des paramètres d'une ellipse par filtrage de Kalman. </p>
+<p>Ce module implémente l'interface <a class="el" href="group__gLokiEllipseEstimator.html" title="Interface d&#39;un filtre adaptatif pour estimer les paramètres d&#39;une ellipse">LokiEllipseEstimator</a>. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga5d595bfc88e801f22e05add7e6572739" name="ga5d595bfc88e801f22e05add7e6572739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d595bfc88e801f22e05add7e6572739">&#9670;&#160;</a></span>LokiKalman</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiKalman LokiKalman</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un filtre de Kalman. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8h_source.html#l00017">17</a> du fichier <a class="el" href="libloki-kalman_8h_source.html">libloki-kalman.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gae1de220a46ec966f9d7fc30fff678ce6" name="gae1de220a46ec966f9d7fc30fff678ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1de220a46ec966f9d7fc30fff678ce6">&#9670;&#160;</a></span>LokiKalman_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiKalman.html">LokiKalman</a> * LokiKalman_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiKalman.html">LokiKalman</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un clone d'un filtre de Kalman. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Le filtre de Kalman à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre de Kalman. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8c_source.html#l00045">45</a> du fichier <a class="el" href="libloki-kalman_8c_source.html">libloki-kalman.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6_cgraph.png" border="0" usemap="#agroup__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6_icgraph.png" border="0" usemap="#agroup__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="gad1eafbecc1476c32df47cb901ea44ce5" name="gad1eafbecc1476c32df47cb901ea44ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1eafbecc1476c32df47cb901ea44ce5">&#9670;&#160;</a></span>LokiKalman_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiKalman_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiKalman.html">LokiKalman</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un filtre de Kalman. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8c_source.html#l00132">132</a> du fichier <a class="el" href="libloki-kalman_8c_source.html">libloki-kalman.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5_cgraph.png" border="0" usemap="#agroup__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5_icgraph.png" border="0" usemap="#agroup__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="ga9dd2d0bf56568b60cd21fb1f5fae4054" name="ga9dd2d0bf56568b60cd21fb1f5fae4054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9dd2d0bf56568b60cd21fb1f5fae4054">&#9670;&#160;</a></span>LokiKalman_get_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LokiKalman_get_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiKalman.html">LokiKalman</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourner l'état courant du filtre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Un filtre de Kalman. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le vecteur d'état du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8c_source.html#l00056">56</a> du fichier <a class="el" href="libloki-kalman_8c_source.html">libloki-kalman.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054_cgraph.png" border="0" usemap="#agroup__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054_icgraph.png" border="0" usemap="#agroup__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="ga0d9b7cc8859c8b18f9ccc2fac47b4d23" name="ga0d9b7cc8859c8b18f9ccc2fac47b4d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d9b7cc8859c8b18f9ccc2fac47b4d23">&#9670;&#160;</a></span>LokiKalman_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiKalman.html">LokiKalman</a> * LokiKalman_new </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>initial_radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>params</em></span>[static 3]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un nouveau filtre de Kalman. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_radius</td><td>Le rayon initial de l'ellipse estimée. </td></tr>
+    <tr><td class="paramname">params</td><td>Les puissances de bruit Rv et Rw, et la valeur initiale à affecter dans la matrice P. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre de Kalman. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8c_source.html#l00024">24</a> du fichier <a class="el" href="libloki-kalman_8c_source.html">libloki-kalman.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23_cgraph.png" border="0" usemap="#agroup__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23_icgraph.png" border="0" usemap="#agroup__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="ga2ec7d2bcf42b57753cf4c1135cc63ef6" name="ga2ec7d2bcf42b57753cf4c1135cc63ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ec7d2bcf42b57753cf4c1135cc63ef6">&#9670;&#160;</a></span>LokiKalman_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiKalman_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiKalman.html">LokiKalman</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mettre à jour les paramètres de l'ellipse pour une nouvelle paire de coordonnées. </p>
+<p>Cette fonction met à jour l'état interne du filtre et les paramètres de l'ellipse de destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre de Kalman à exécuter. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée X du point courant. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée Y du point courant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-kalman_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-kalman_8c_source.html">libloki-kalman.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6_cgraph.png" border="0" usemap="#agroup__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6_icgraph.png" border="0" usemap="#agroup__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,162 @@
+\doxysection{libloki-\/fifo.c}
+\hypertarget{libloki-fifo_8c_source}{}\label{libloki-fifo_8c_source}\index{libloki-\/fifo.c@{libloki-\/fifo.c}}
+\doxymbox{\hyperlink{libloki-fifo_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-fifo_8h}{libloki-\/fifo.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00011}\doxymbox{\hyperlink{group__gLokiFIFO_ga3253055266904680cb4d74fe3093c508}{00011}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00020}\doxymbox{\hyperlink{structLokiFIFO}{00020}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00022}\doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{00022}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{item\_size}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00024}\doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{00024}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{all\_read}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00026}\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{00026}}\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00028}\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{00028}}\ \ \ \ \ pthread\_mutex\_t\ \doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00030}\doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{00030}}\ \ \ \ \ pthread\_cond\_t\ \doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00032}\doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{00032}}\ \ \ \ \ pthread\_cond\_t\ \doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00034}\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{00034}}\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00039}\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{00039}}\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}[0];}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Ne\ rien\ ajouter\ ici.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00041}00041\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00047}\doxymbox{\hyperlink{structLokiFIFORecord}{00047}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00049}\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{00049}}\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00051}\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{00051}}\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00056}\doxymbox{\hyperlink{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}{00056}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}{item}}[0];}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Ne\ rien\ ajouter\ ici.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00058}00058\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00060}\doxymbox{\hyperlink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{00060}}\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *\doxymbox{\hyperlink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{LokiFIFO\_new}}(\textcolor{keywordtype}{size\_t}\ item\_size,\ \textcolor{keywordtype}{size\_t}\ length,\ \textcolor{keywordtype}{size\_t}\ consumers)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ record\_size\ =\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}})\ +\ item\_size;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00062}00062\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}})\ +\ length\ *\ record\_size\ +\ consumers\ *\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}*));}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00067}00067\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *first\_record\ =\ (\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}*)(self-\/>\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}\ +\ consumers);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00069}00069\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00070}00070\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{item\_size}}\ \ \ \ \ \ \ =\ item\_size;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00071}00071\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{all\_read}}\ \ \ \ \ \ \ \ =\ (1\ <<\ consumers)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00072}00072\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}}\ =\ first\_record;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ c\ =\ 0;\ c\ <\ consumers;\ c\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}[c]\ =\ first\_record;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Initialiser\ les\ records\ comme\ une\ liste\ chaînée\ circulaire.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Marquer\ tous\ les\ éléments\ comme\ lus\ par\ tous\ les\ consommateurs.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00079}00079\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *rec\ =\ first\_record;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ length;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{all\_read}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}}\ \ \ =\ i\ ==\ length\ -\/\ 1\ ?}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ first\_record\ :}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}*)((\textcolor{keywordtype}{char}*)rec\ +\ record\_size);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ rec\ =\ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00088}00088\ \ \ \ \ pthread\_mutex\_init(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00089}00089\ \ \ \ \ pthread\_cond\_init(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00090}00090\ \ \ \ \ pthread\_cond\_init(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00095}\doxymbox{\hyperlink{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}{00095}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}{LokiFIFO\_del}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00099}00099\ \ \ \ \ free(self);}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00102}\doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{00102}}\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{LokiFIFO\_get\_item\_size}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{return}\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af0bcda30be22f45d41b446144967fc32}{item\_size}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00106}\doxymbox{\hyperlink{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}{00106}}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}{LokiFIFO\_get\_producer\_item}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00107}00107\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//\ Bloquer\ tant\ que\ l'élément\ courant\ n'a\ pas\ été\ lu\ par\ tous\ les\ consommateurs.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00110}00110\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *rec\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{while}\ (!self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ \&\&\ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}\ !=\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a77c20935df935fb3f071889db55240a2}{all\_read}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ pthread\_cond\_wait(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}},\ \&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ Retourner\ NULL\ en\ cas\ d'annulation.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{void}\ *item\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ ?\ NULL\ :\ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}{item}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00118}00118\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{return}\ item;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00121}00121\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00123}\doxymbox{\hyperlink{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}{00123}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}{LokiFIFO\_push}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00128}00128\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//\ Marquer\ l'élément\ courant\ comme\ non\ lu.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00131}00131\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}}-\/>\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ Signaler\ la\ présence\ d'un\ nouvel\ élément\ à\ tous\ les\ consommateurs\ en\ attente.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00134}00134\ \ \ \ \ pthread\_cond\_broadcast(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//\ Passer\ à\ l'élément\ suivant.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00137}00137\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}}\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a318ce7f7b2fc67583e2d6babd043920f}{producer\_record}}-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00139}00139\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00140}00140\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00142}\doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{00142}}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{LokiFIFO\_get\_consumer\_item}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self,\ \textcolor{keywordtype}{size\_t}\ cid)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00143}00143\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00145}00145\ \ \ \ \ \textcolor{comment}{//\ Bloquer\ tant\ que\ l'élément\ courant\ est\ marqué\ comme\ lu\ par\ ce\ consommateur.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00146}00146\ \ \ \ \ \textcolor{keywordtype}{int}\ mask\ =\ 1\ <<\ cid;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00147}00147\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *rec\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}[cid];}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00148}00148\ \ \ \ \ \textcolor{keywordflow}{while}\ (!self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ \&\&\ (rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}\ \&\ mask))\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ pthread\_cond\_wait(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}},\ \&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00152}00152\ \ \ \ \ \textcolor{comment}{//\ Retourner\ NULL\ en\ cas\ d'annulation.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00153}00153\ \ \ \ \ \textcolor{keywordtype}{void}\ *item\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ ?\ NULL\ :\ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a7c3e3817b82b5e8d1ffa72466dd17e04}{item}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00155}00155\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{return}\ item;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00158}00158\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00160}\doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{00160}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{LokiFIFO\_pull}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self,\ \textcolor{keywordtype}{size\_t}\ cid)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00161}00161\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00163}00163\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00165}00165\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ Marquer\ l'élément\ courant\ comme\ lu\ par\ ce\ consommateur.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00168}00168\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFORecord}{LokiFIFORecord}}\ *rec\ =\ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}[cid];}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00169}00169\ \ \ \ \ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_abdcaa96af3efd1344144567bff3be2dd}{status}}\ |=\ 1\ <<\ cid;}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00171}00171\ \ \ \ \ \textcolor{comment}{//\ Signaler\ qu'une\ lecture\ vient\ d'avoir\ lieu.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00172}00172\ \ \ \ \ pthread\_cond\_signal(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00174}00174\ \ \ \ \ \textcolor{comment}{//\ Passer\ à\ l'élément\ suivant.}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00175}00175\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_a0b8567cedd77bd8962713393a7a1d2ab}{consumer\_records}}[cid]\ =\ rec-\/>\doxymbox{\hyperlink{structLokiFIFORecord_a2d6b2e1c1429c0c56dff95ca8546b8e3}{next}};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00177}00177\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00178}00178\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00180}\doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{00180}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{LokiFIFO\_abort}}(\doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00181}00181\ \ \ \ \ pthread\_mutex\_lock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00182}00182\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiFIFO_af65fe20699fa1ec6d776c41834b8a959}{abort}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00183}00183\ \ \ \ \ pthread\_cond\_signal(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a70f3e2a889af770d607375a207896157}{pulled}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00184}00184\ \ \ \ \ pthread\_cond\_broadcast(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_ab6cdec00d1b328885bec58dd109632a1}{pushed}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00185}00185\ \ \ \ \ pthread\_mutex\_unlock(\&self-\/>\doxymbox{\hyperlink{structLokiFIFO_a9e9b80f18213060cadad39858606f03f}{mutex}});}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00186}00186\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-fifo_8c_source_l00187}00187\ }
+
+\end{DoxyCode}

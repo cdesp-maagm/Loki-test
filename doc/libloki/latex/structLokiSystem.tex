@@ -1,0 +1,223 @@
+\doxysection{Référence de la structure Loki\+System}
+\hypertarget{structLokiSystem}{}\label{structLokiSystem}\index{LokiSystem@{LokiSystem}}
+
+
+Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement.  
+
+
+
+
+Graphe de collaboration de Loki\+System:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystem_aa93697e44722331cef44c62044e7a664}{config}}
+\begin{DoxyCompactList}\small\item\em La configuration de ce système. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSystem_ad04afaf0be4bc92bad662ad779e80946}{channels}}
+\begin{DoxyCompactList}\small\item\em Le nombre de voies prises en charge par ce système. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiSystem_a319605da6e9605073b2ad12a115cdf11}{has\+\_\+own\+\_\+modem}}
+\begin{DoxyCompactList}\small\item\em Ce système a-\/t-\/il construit sa propre instance de \doxylink{structLokiModem}{Loki\+Modem} ? \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystem_ab9b7636739d69c315bde9cda3a9388bb}{modem}}
+\begin{DoxyCompactList}\small\item\em Le modem utilisé par ce système. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystem_a78386f190240787b697089f7a2aa642f}{disp}}
+\begin{DoxyCompactList}\small\item\em Un tableau de calculateurs de déplacement. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiSystem_a53f9ad56b3160ec9b631150701a7d69d}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt de l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiSystem_a5810c839e226b631489b21e257708958}{is\+\_\+streaming}}
+\begin{DoxyCompactList}\small\item\em Une acquisition est-\/elle en cours ? \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiSystem_aec93f645a1e5e29b697ad24351387ca0}{thread}}
+\begin{DoxyCompactList}\small\item\em Le thread de traitement. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystem_afe59d7d81070b39a6472f4c05ed8e277}{in}}
+\begin{DoxyCompactList}\small\item\em La FIFO des données démodulées (alimentée par le modem). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiSystem_a12cfb647be7088113fb568e675145e4a}{out}}
+\begin{DoxyCompactList}\small\item\em La FIFO des déplacements (alimentée par ce système). \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiSystem_a3d52ba2735183fc2800f36656c46c7bc}{cid}}
+\begin{DoxyCompactList}\small\item\em Le numéro de consommateur de ce système pour la FIFO des données démodulées. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \doxymbox{\hyperlink{structLokiSystem_a402ef0c43f6c3cda7010bc14ced6c762}{mutex}}
+\begin{DoxyCompactList}\small\item\em Un mutex pour gérer les accès concurrents au calculateur du déplacement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00268}{268}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+
+
+\label{structLokiSystem_doc-variable-members}
+\Hypertarget{structLokiSystem_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiSystem_ad04afaf0be4bc92bad662ad779e80946}\index{LokiSystem@{LokiSystem}!channels@{channels}}
+\index{channels@{channels}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \label{structLokiSystem_ad04afaf0be4bc92bad662ad779e80946} 
+size\+\_\+t Loki\+System::\+channels}
+
+
+
+Le nombre de voies prises en charge par ce système. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00272}{272}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a3d52ba2735183fc2800f36656c46c7bc}\index{LokiSystem@{LokiSystem}!cid@{cid}}
+\index{cid@{cid}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{cid}{cid}}
+{\footnotesize\ttfamily \label{structLokiSystem_a3d52ba2735183fc2800f36656c46c7bc} 
+size\+\_\+t Loki\+System::\+cid}
+
+
+
+Le numéro de consommateur de ce système pour la FIFO des données démodulées. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00290}{290}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_aa93697e44722331cef44c62044e7a664}\index{LokiSystem@{LokiSystem}!config@{config}}
+\index{config@{config}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily \label{structLokiSystem_aa93697e44722331cef44c62044e7a664} 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}}\texorpdfstring{$\ast$}{*} Loki\+System::\+config}
+
+
+
+La configuration de ce système. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00270}{270}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a78386f190240787b697089f7a2aa642f}\index{LokiSystem@{LokiSystem}!disp@{disp}}
+\index{disp@{disp}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{disp}{disp}}
+{\footnotesize\ttfamily \label{structLokiSystem_a78386f190240787b697089f7a2aa642f} 
+\doxymbox{\hyperlink{structLokiDisplacement}{Loki\+Displacement}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Loki\+System::\+disp}
+
+
+
+Un tableau de calculateurs de déplacement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00278}{278}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a319605da6e9605073b2ad12a115cdf11}\index{LokiSystem@{LokiSystem}!has\_own\_modem@{has\_own\_modem}}
+\index{has\_own\_modem@{has\_own\_modem}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{has\_own\_modem}{has\_own\_modem}}
+{\footnotesize\ttfamily \label{structLokiSystem_a319605da6e9605073b2ad12a115cdf11} 
+bool Loki\+System::\+has\+\_\+own\+\_\+modem}
+
+
+
+Ce système a-\/t-\/il construit sa propre instance de \doxylink{structLokiModem}{Loki\+Modem} ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00274}{274}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_afe59d7d81070b39a6472f4c05ed8e277}\index{LokiSystem@{LokiSystem}!in@{in}}
+\index{in@{in}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily \label{structLokiSystem_afe59d7d81070b39a6472f4c05ed8e277} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+System::\+in}
+
+
+
+La FIFO des données démodulées (alimentée par le modem). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00286}{286}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a5810c839e226b631489b21e257708958}\index{LokiSystem@{LokiSystem}!is\_streaming@{is\_streaming}}
+\index{is\_streaming@{is\_streaming}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{is\_streaming}{is\_streaming}}
+{\footnotesize\ttfamily \label{structLokiSystem_a5810c839e226b631489b21e257708958} 
+bool Loki\+System::\+is\+\_\+streaming}
+
+
+
+Une acquisition est-\/elle en cours ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00282}{282}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_ab9b7636739d69c315bde9cda3a9388bb}\index{LokiSystem@{LokiSystem}!modem@{modem}}
+\index{modem@{modem}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{modem}{modem}}
+{\footnotesize\ttfamily \label{structLokiSystem_ab9b7636739d69c315bde9cda3a9388bb} 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}}\texorpdfstring{$\ast$}{*} Loki\+System::\+modem}
+
+
+
+Le modem utilisé par ce système. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00276}{276}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a402ef0c43f6c3cda7010bc14ced6c762}\index{LokiSystem@{LokiSystem}!mutex@{mutex}}
+\index{mutex@{mutex}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \label{structLokiSystem_a402ef0c43f6c3cda7010bc14ced6c762} 
+pthread\+\_\+mutex\+\_\+t Loki\+System::\+mutex}
+
+
+
+Un mutex pour gérer les accès concurrents au calculateur du déplacement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00292}{292}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a12cfb647be7088113fb568e675145e4a}\index{LokiSystem@{LokiSystem}!out@{out}}
+\index{out@{out}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily \label{structLokiSystem_a12cfb647be7088113fb568e675145e4a} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+System::\+out}
+
+
+
+La FIFO des déplacements (alimentée par ce système). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00288}{288}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_a53f9ad56b3160ec9b631150701a7d69d}\index{LokiSystem@{LokiSystem}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiSystem_a53f9ad56b3160ec9b631150701a7d69d} 
+volatile bool Loki\+System::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt de l\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00280}{280}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{structLokiSystem_aec93f645a1e5e29b697ad24351387ca0}\index{LokiSystem@{LokiSystem}!thread@{thread}}
+\index{thread@{thread}!LokiSystem@{LokiSystem}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \label{structLokiSystem_aec93f645a1e5e29b697ad24351387ca0} 
+pthread\+\_\+t Loki\+System::\+thread}
+
+
+
+Le thread de traitement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00284}{284}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-system_8c}{libloki-\/system.\+c}}\end{DoxyCompactItemize}

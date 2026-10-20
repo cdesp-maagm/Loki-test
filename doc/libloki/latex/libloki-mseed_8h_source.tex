@@ -1,0 +1,34 @@
+\doxysection{libloki-\/mseed.h}
+\hypertarget{libloki-mseed_8h_source}{}\label{libloki-mseed_8h_source}\index{libloki-\/mseed.h@{libloki-\/mseed.h}}
+\doxymbox{\hyperlink{libloki-mseed_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_MSEED\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ LIBLOKI\_MSEED\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-formatter_8h}{libloki-\/formatter.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00016}\doxymbox{\hyperlink{group__gLokiMSeed_ga1abf2faddffba06494e5cd6df5b62b71}{00016}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiMSeedConfig}{LokiMSeedConfig}}\ \doxymbox{\hyperlink{structLokiMSeedConfig}{LokiMSeedConfig}};}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00029}00029\ \doxymbox{\hyperlink{structLokiMSeedConfig}{LokiMSeedConfig}}\ *\doxymbox{\hyperlink{group__gLokiMSeed_ga440adb8f5fed77f82de38c980222dc53}{LokiMSeedConfig\_new}}(\textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiMSeedConfig_a88b34a18cdf1e67427a2d53d5407435b}{separate\_channels}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiMSeedConfig_afe172ada58d7c149e86d1750c1a77be9}{station}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiMSeedConfig_a31abfb817880fd2ea67e6d5a71dd4bf0}{location}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiMSeedConfig_ae1a9ee5e2775909af386c9a146724d66}{network}},\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiMSeedConfig_abd145f1afff2c227d0c2eb9711632d9b}{raw}},\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiMSeedConfig_ab80069cd73db984ee54ca29b52e94b3f}{steim2}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structLokiMSeedConfig_a0803689925688ed4df64928ce9b9e26a}{channel\_names}});}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00035}00035\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiMSeed_ga8987eac779b7ca81e375eed8bf1df39b}{LokiMSeedConfig\_del}}(\doxymbox{\hyperlink{structLokiMSeedConfig}{LokiMSeedConfig}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00038}\doxymbox{\hyperlink{group__gLokiMSeed_gad28337b6ee0e6eefa9e5055208839f1d}{00038}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}}\ \doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}};}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00045}00045\ \doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}}\ *\doxymbox{\hyperlink{group__gLokiMSeed_ga221c91d70be47fc5d37f8adb3befc3f8}{LokiMSeed\_new}}(\doxymbox{\hyperlink{structLokiMSeedConfig}{LokiMSeedConfig}}\ *\doxymbox{\hyperlink{structLokiMSeed_ade9110e1ee6905e04bf593d806b22843}{config}});}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00073}00073\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiMSeed_gabbb34da41c5e60aa871bf96f875eb82b}{LokiMSeed\_work}}(\doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ timestamp,\ \textcolor{keywordtype}{bool}\ file\_change,\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ length,\ \textcolor{keywordtype}{size\_t}\ max\_channels,\ int32\_t\ channels,\ \textcolor{keywordtype}{size\_t}\ sample\_size,\ \textcolor{keywordtype}{float}\ sampling\_frequency);}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiMSeed_ga5595492db02f9142435569f7f5be7702}{LokiMSeed\_close}}(\doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00088}00088\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiMSeed_ga48e4baaa7bf097b70867237f57fd335d}{LokiMSeed\_del}}(\doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00090}00090\ \doxymbox{\hyperlink{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad}{LokiClass\_declare\_implementation}}(\doxymbox{\hyperlink{structLokiFormatter}{LokiFormatter}},\ \doxymbox{\hyperlink{structLokiMSeed}{LokiMSeed}});}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00092}00092\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-mseed_8h_source_l00093}00093\ }
+
+\end{DoxyCode}

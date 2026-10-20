@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Instrumentation des fonctions malloc et free pour le debug des allocations mémoire.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Instrumentation des fonctions malloc et free pour le debug des allocations mémoire.</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ces fonctions peuvent être utilisées en phase de mise au point pour identifier l'origine de fuites mémoire ou de double désallocation.  
+<a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga54a2285c18c7a11d85385e04b24b40c7"><td class="memItemLeft" align="right" valign="top"><a id="ga54a2285c18c7a11d85385e04b24b40c7"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_malloc</b> (size_t, const void *)</td></tr>
+<tr class="separator:ga54a2285c18c7a11d85385e04b24b40c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf91281fa5d83e30b40a5623092d7c039"><td class="memItemLeft" align="right" valign="top"><a id="gaf91281fa5d83e30b40a5623092d7c039"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_free</b> (void *, const void *)</td></tr>
+<tr class="separator:gaf91281fa5d83e30b40a5623092d7c039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga754ec741c3c59c815440fa4b8bc5bda2"><td class="memItemLeft" align="right" valign="top"><a id="ga754ec741c3c59c815440fa4b8bc5bda2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_setup</b> (void)</td></tr>
+<tr class="separator:ga754ec741c3c59c815440fa4b8bc5bda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc8f630bfbfcb249ae0e14722f9e3141"><td class="memItemLeft" align="right" valign="top"><a id="gadc8f630bfbfcb249ae0e14722f9e3141"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_save</b> (void)</td></tr>
+<tr class="separator:gadc8f630bfbfcb249ae0e14722f9e3141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7d235f5db9c92d3af4c3e816983f4ae"><td class="memItemLeft" align="right" valign="top"><a id="gaa7d235f5db9c92d3af4c3e816983f4ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_restore</b> (void)</td></tr>
+<tr class="separator:gaa7d235f5db9c92d3af4c3e816983f4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8452f9f1793e6d1091ac294f15406592"><td class="memItemLeft" align="right" valign="top"><a id="ga8452f9f1793e6d1091ac294f15406592"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_init</b> (void)</td></tr>
+<tr class="separator:ga8452f9f1793e6d1091ac294f15406592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga9bc243b2208d9e7a4f24ce6c0e27f7c5"><td class="memItemLeft" align="right" valign="top"><a id="ga9bc243b2208d9e7a4f24ce6c0e27f7c5"></a>
+static void *(*&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_saved_malloc</b> )(size_t, const void *)</td></tr>
+<tr class="separator:ga9bc243b2208d9e7a4f24ce6c0e27f7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ebfa6eb76c2de158391d6a2b504f0f5"><td class="memItemLeft" align="right" valign="top"><a id="ga3ebfa6eb76c2de158391d6a2b504f0f5"></a>
+static void(*&#160;</td><td class="memItemRight" valign="bottom"><b>LokiHooks_saved_free</b> )(void *, const void *)</td></tr>
+<tr class="separator:ga3ebfa6eb76c2de158391d6a2b504f0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<p>Ces fonctions peuvent être utilisées en phase de mise au point pour identifier l'origine de fuites mémoire ou de double désallocation. </p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

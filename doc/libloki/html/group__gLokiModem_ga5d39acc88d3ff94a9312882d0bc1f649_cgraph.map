@@ -1,0 +1,4 @@
+<map id="LokiModem_stop_streaming" name="LokiModem_stop_streaming">
+<area shape="rect" id="node1" title="Arrêter l&#39;acquisition." alt="" coords="5,5,212,31"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="260,5,380,31"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LokiMSeed" name="LokiMSeed">
+<area shape="rect" id="node1" title="Représentation d&#39;un formateur de séries temporelles miniSEED." alt="" coords="118,93,211,119"/>
+<area shape="rect" id="node2" href="$structLokiMSeedConfig.html" title="Configuration d&#39;un formateur de séries temporelles miniSEED." alt="" coords="5,5,140,31"/>
+<area shape="rect" id="node3" href="$unionLokiMSeedOutputSample.html" title="Type des échantillons passés à la bibliothèque libmseed." alt="" coords="165,5,351,31"/>
+</map>

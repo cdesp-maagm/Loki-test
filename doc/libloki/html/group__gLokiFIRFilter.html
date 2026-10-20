@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Filtre FIR</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Filtre FIR <div class="ingroups"><a class="el" href="group__ggLokiComputation.html">Calcul de déplacement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentation polyphase d'un filtre à réponse impulsionnelle finie.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Filtre FIR:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter.png" border="0" usemap="#agroup____gLokiFIRFilter" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiFIRFilter" id="agroup____gLokiFIRFilter">
+<area shape="rect" title="Implémentation polyphase d&#39;un filtre à réponse impulsionnelle finie." alt="" coords="224,5,304,31"/>
+<area shape="rect" href="group__ggLokiComputation.html" title=" " alt="" coords="5,5,176,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-fir_2Ec" id="r_libloki-fir_2Ec"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-fir_8c.html">libloki-fir.c</a></td></tr>
+<tr class="memitem:libloki-fir_2Eh" id="r_libloki-fir_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-fir_8h.html">libloki-fir.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiFIRFilter" id="r_LokiFIRFilter"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre FIR.  <a href="structLokiFIRFilter.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga87ea977cff213fcd36220315045756ce" id="r_ga87ea977cff213fcd36220315045756ce"><td class="memItemLeft">typedef struct LokiFIRFilter&#160;</td><td class="memItemRight"><a class="el" href="#ga87ea977cff213fcd36220315045756ce">LokiFIRFilter</a></td></tr>
+<tr class="memdesc:ga87ea977cff213fcd36220315045756ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un filtre FIR.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gae36acdc0f8fdaf46db6322e5176393c4" id="r_gae36acdc0f8fdaf46db6322e5176393c4"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#gae36acdc0f8fdaf46db6322e5176393c4">LokiFIRFilter_allocate_samples</a> (<a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self)</td></tr>
+<tr class="memdesc:gae36acdc0f8fdaf46db6322e5176393c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allouer le tableau des échantillons mémorisés par un filtre FIR.  <br /></td></tr>
+<tr class="memitem:gae36c56835eb19d1db8aa1552d53e41b2" id="r_gae36c56835eb19d1db8aa1552d53e41b2"><td class="memItemLeft"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gae36c56835eb19d1db8aa1552d53e41b2">LokiFIRFilter_new</a> (const float *coeffs, size_t length, size_t decimation)</td></tr>
+<tr class="memdesc:gae36c56835eb19d1db8aa1552d53e41b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un filtre FIR.  <br /></td></tr>
+<tr class="memitem:ga55fd82df12ca5fa1121dd8660bea9615" id="r_ga55fd82df12ca5fa1121dd8660bea9615"><td class="memItemLeft"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga55fd82df12ca5fa1121dd8660bea9615">LokiFIRFilter_clone</a> (const <a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *other)</td></tr>
+<tr class="memdesc:ga55fd82df12ca5fa1121dd8660bea9615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un clone d'un filtre FIR.  <br /></td></tr>
+<tr class="memitem:ga6bd97fc900b540c361ff74bc5323025d" id="r_ga6bd97fc900b540c361ff74bc5323025d"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ga6bd97fc900b540c361ff74bc5323025d">bessel0</a> (float x)</td></tr>
+<tr class="memdesc:ga6bd97fc900b540c361ff74bc5323025d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function de Bessel de première espèce, d'ordre 0.  <br /></td></tr>
+<tr class="memitem:ga706ef2fc38b1e2f8b59a5574b5b25d37" id="r_ga706ef2fc38b1e2f8b59a5574b5b25d37"><td class="memItemLeft"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga706ef2fc38b1e2f8b59a5574b5b25d37">LokiFIRFilter_new_kaiser_bessel</a> (float fs, float fa, float fb, float att, size_t length, size_t decimation)</td></tr>
+<tr class="memdesc:ga706ef2fc38b1e2f8b59a5574b5b25d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un filtre FIR en utilisant une fenêtre de Kaiser-Bessel.  <br /></td></tr>
+<tr class="memitem:gaf94ba76272ee9b71a6288fe8f0b8ba6c" id="r_gaf94ba76272ee9b71a6288fe8f0b8ba6c"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#gaf94ba76272ee9b71a6288fe8f0b8ba6c">LokiFIRFilter_get_actual_length</a> (<a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self)</td></tr>
+<tr class="memdesc:gaf94ba76272ee9b71a6288fe8f0b8ba6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur effective d'un filtre FIR.  <br /></td></tr>
+<tr class="memitem:ga59635f9d90959a326458c670354d088b" id="r_ga59635f9d90959a326458c670354d088b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga59635f9d90959a326458c670354d088b">LokiFIRFilter_work</a> (<a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self, float in, float *out)</td></tr>
+<tr class="memdesc:ga59635f9d90959a326458c670354d088b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exécuter un pas de calcul d'un fitre FIR.  <br /></td></tr>
+<tr class="memitem:gab1dc8db60b04feb37955487102cfb384" id="r_gab1dc8db60b04feb37955487102cfb384"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gab1dc8db60b04feb37955487102cfb384">LokiFIRFilter_reset</a> (<a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self)</td></tr>
+<tr class="memdesc:gab1dc8db60b04feb37955487102cfb384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialiser un filtre FIR.  <br /></td></tr>
+<tr class="memitem:ga1e35f12c031afb576a345201e67dc196" id="r_ga1e35f12c031afb576a345201e67dc196"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga1e35f12c031afb576a345201e67dc196">LokiFIRFilter_del</a> (<a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *self)</td></tr>
+<tr class="memdesc:ga1e35f12c031afb576a345201e67dc196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un filtre FIR.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation polyphase d'un filtre à réponse impulsionnelle finie. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga87ea977cff213fcd36220315045756ce" name="ga87ea977cff213fcd36220315045756ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87ea977cff213fcd36220315045756ce">&#9670;&#160;</a></span>LokiFIRFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct LokiFIRFilter LokiFIRFilter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un filtre FIR. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8h_source.html#l00017">17</a> du fichier <a class="el" href="libloki-fir_8h_source.html">libloki-fir.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="ga6bd97fc900b540c361ff74bc5323025d" name="ga6bd97fc900b540c361ff74bc5323025d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bd97fc900b540c361ff74bc5323025d">&#9670;&#160;</a></span>bessel0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float bessel0 </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function de Bessel de première espèce, d'ordre 0. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00125">125</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_icgraph" id="agroup__gLokiFIRFilter_ga6bd97fc900b540c361ff74bc5323025d_icgraph">
+<area shape="rect" title="Function de Bessel de première espèce, d&#39;ordre 0." alt="" coords="416,13,488,38"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,5,368,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gae36acdc0f8fdaf46db6322e5176393c4" name="gae36acdc0f8fdaf46db6322e5176393c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae36acdc0f8fdaf46db6322e5176393c4">&#9670;&#160;</a></span>LokiFIRFilter_allocate_samples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIRFilter_allocate_samples </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allouer le tableau des échantillons mémorisés par un filtre FIR. </p>
+<p>Cette fonction alloue le tableau <span class="tt">samples</span> du filtre passé en paramètre.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à allouer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00050">50</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_icgraph" id="agroup__gLokiFIRFilter_gae36acdc0f8fdaf46db6322e5176393c4_icgraph">
+<area shape="rect" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="609,27,772,67"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="416,8,561,33"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2" title="Construire un filtre FIR." alt="" coords="420,59,557,84"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="186,5,367,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,35,137,60"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,55,368,95"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga55fd82df12ca5fa1121dd8660bea9615" name="ga55fd82df12ca5fa1121dd8660bea9615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55fd82df12ca5fa1121dd8660bea9615">&#9670;&#160;</a></span>LokiFIRFilter_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> * LokiFIRFilter_clone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un clone d'un filtre FIR. </p>
+<p>Le nouveau filtre possédera les mêmes coefficients et le même facteur de décimation que celui passé en paramètre.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Le filtre à cloner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre FIR. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00106">106</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_cgraph" id="agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_cgraph">
+<area shape="rect" title="Construire un clone d&#39;un filtre FIR." alt="" coords="5,42,151,67"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="199,5,361,45"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="215,70,345,95"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_icgraph" id="agroup__gLokiFIRFilter_ga55fd82df12ca5fa1121dd8660bea9615_icgraph">
+<area shape="rect" title="Construire un clone d&#39;un filtre FIR." alt="" coords="415,5,560,31"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="185,5,367,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,5,137,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga1e35f12c031afb576a345201e67dc196" name="ga1e35f12c031afb576a345201e67dc196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e35f12c031afb576a345201e67dc196">&#9670;&#160;</a></span>LokiFIRFilter_del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIRFilter_del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détruire un filtre FIR. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à détruire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00297">297</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_icgraph" id="agroup__gLokiFIRFilter_ga1e35f12c031afb576a345201e67dc196_icgraph">
+<area shape="rect" title="Détruire un filtre FIR." alt="" coords="631,55,761,80"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80" title="Détruire une instance de LokiDisplacement." alt="" coords="416,55,583,80"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga55fd82df12ca5fa1121dd8660bea9615" title="Construire un clone d&#39;un filtre FIR." alt="" coords="427,5,572,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2" title="Construire un filtre FIR." alt="" coords="431,108,568,133"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396" title="Cloner une instance de LokiDisplacement." alt="" coords="186,5,367,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga2245a65df417d1ffb8e5d7c3b805ec8f" title="Détruire un système." alt="" coords="214,55,339,80"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,55,137,80"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,105,368,145"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaf94ba76272ee9b71a6288fe8f0b8ba6c" name="gaf94ba76272ee9b71a6288fe8f0b8ba6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf94ba76272ee9b71a6288fe8f0b8ba6c">&#9670;&#160;</a></span>LokiFIRFilter_get_actual_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiFIRFilter_get_actual_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lire la longueur effective d'un filtre FIR. </p>
+<p>La longueur effective est toujours multiple du facteur de décimation. Elle peut également avoir été ajustée pour satisfaire les contraintes d'une méthode de synthèse de filtre. Pour ces raisons, elle peut différer de la valeur du paramètre <span class="tt">length</span> fourni à la construction.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à interroger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La longueur du filtre. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00171">171</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gaf94ba76272ee9b71a6288fe8f0b8ba6c_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="gae36c56835eb19d1db8aa1552d53e41b2" name="gae36c56835eb19d1db8aa1552d53e41b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae36c56835eb19d1db8aa1552d53e41b2">&#9670;&#160;</a></span>LokiFIRFilter_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> * LokiFIRFilter_new </td>
+          <td>(</td>
+          <td class="paramtype">const float *</td>          <td class="paramname"><span class="paramname"><em>coeffs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>decimation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un filtre FIR. </p>
+<p>Le paramètre <span class="tt">length</span> indique la longueur souhaitée. Elle peut être augmentée pour que la longueur effective soit multiple du facteur de décimation et de la taille de vecteur utilisée par les instructions SIMD du processeur. Dans ce cas, le tableau de coefficients est complété avec des zéros.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coeffs</td><td>Les coefficients du filtre. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre de coefficients. </td></tr>
+    <tr><td class="paramname">decimation</td><td>Le facteur de décimation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre FIR. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00060">60</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_cgraph" id="agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_cgraph">
+<area shape="rect" title="Construire un filtre FIR." alt="" coords="5,42,143,67"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="191,5,353,45"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="207,70,337,95"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_icgraph" id="agroup__gLokiFIRFilter_gae36c56835eb19d1db8aa1552d53e41b2_icgraph">
+<area shape="rect" title="Construire un filtre FIR." alt="" coords="416,13,553,38"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga706ef2fc38b1e2f8b59a5574b5b25d37" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,5,368,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga706ef2fc38b1e2f8b59a5574b5b25d37" name="ga706ef2fc38b1e2f8b59a5574b5b25d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga706ef2fc38b1e2f8b59a5574b5b25d37">&#9670;&#160;</a></span>LokiFIRFilter_new_kaiser_bessel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> * LokiFIRFilter_new_kaiser_bessel </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fa</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>att</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>decimation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construire un filtre FIR en utilisant une fenêtre de Kaiser-Bessel. </p>
+<p>La méthode de synthèse du filtre est détaillée dans l'article <a href="http://www.arc.id.au/FilterDesign.html">Window method of FIR filter design</a>.</p>
+<p>Le paramètre <span class="tt">length</span> indique la longueur souhaitée. Elle peut être augmentée pour satisfaire les contraintes de la méthode de synthèse utilisée, et pour que la longueur effective soit multiple du facteur de décimation et de la taille de vecteur utilisée par les instructions SIMD du processeur. Dans ce cas, le tableau de coefficients est complété avec des zéros.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>La fréquence d'échantillonnage. </td></tr>
+    <tr><td class="paramname">fa</td><td>La fréquence de coupure basse (0 pour un filtre passe-bas). </td></tr>
+    <tr><td class="paramname">fb</td><td>La fréquence de coupure haute. </td></tr>
+    <tr><td class="paramname">att</td><td>L'atténuation, en dB. </td></tr>
+    <tr><td class="paramname">length</td><td>Le nombre de coefficients. </td></tr>
+    <tr><td class="paramname">decimation</td><td>Le facteur de décimation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un nouveau filtre FIR. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00136">136</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_cgraph" id="agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_cgraph">
+<area shape="rect" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="5,23,188,63"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga6bd97fc900b540c361ff74bc5323025d" title="Function de Bessel de première espèce, d&#39;ordre 0." alt="" coords="269,5,341,31"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36c56835eb19d1db8aa1552d53e41b2" title="Construire un filtre FIR." alt="" coords="236,55,373,80"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#gae36acdc0f8fdaf46db6322e5176393c4" title="Allouer le tableau des échantillons mémorisés par un filtre FIR." alt="" coords="421,18,584,58"/>
+<area shape="rect" href="group__gLokiFIRFilter.html#ga1e35f12c031afb576a345201e67dc196" title="Détruire un filtre FIR." alt="" coords="437,83,568,108"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_icgraph" id="agroup__gLokiFIRFilter_ga706ef2fc38b1e2f8b59a5574b5b25d37_icgraph">
+<area shape="rect" title="Construire un filtre FIR en utilisant une fenêtre de Kaiser&#45;Bessel." alt="" coords="185,5,368,45"/>
+<area shape="rect" href="group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,13,137,38"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gab1dc8db60b04feb37955487102cfb384" name="gab1dc8db60b04feb37955487102cfb384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1dc8db60b04feb37955487102cfb384">&#9670;&#160;</a></span>LokiFIRFilter_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiFIRFilter_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Réinitialiser un filtre FIR. </p>
+<p>Cette fonction remet à zéro l'état du filtre.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à réinitialiser. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00293">293</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_icgraph" id="agroup__gLokiFIRFilter_gab1dc8db60b04feb37955487102cfb384_icgraph">
+<area shape="rect" title="Réinitialiser un filtre FIR." alt="" coords="729,42,872,67"/>
+<area shape="rect" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b" title="Remettre à zéro le déplacement." alt="" coords="503,42,681,67"/>
+<area shape="rect" href="group__gLokiSystem.html#gab9bbe589511d2d9ba0a0571d4c5a3c3f" title="Mettre à zéro le déplacement calculé." alt="" coords="261,5,455,45"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="289,70,427,95"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,70,213,95"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga59635f9d90959a326458c670354d088b" name="ga59635f9d90959a326458c670354d088b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59635f9d90959a326458c670354d088b">&#9670;&#160;</a></span>LokiFIRFilter_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiFIRFilter_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiFIRFilter.html">LokiFIRFilter</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exécuter un pas de calcul d'un fitre FIR. </p>
+<p>Le filtre consomme un échantillon d'entrée, indique si un échantillon de sortie est disponible et le range à l'emplacement indiqué. Si le facteur de décimation de ce filtre est N, il produira un échantillon de sortie tous les N appels.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Le filtre à exécuter. </td></tr>
+    <tr><td class="paramname">in</td><td>L'échantillon d'entrée. </td></tr>
+    <tr><td class="paramname">out</td><td>Un pointeur vers l'emplacement où ranger l'échantillon de sortie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si l'échantillon de sortie est valide. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-fir_8c_source.html#l00175">175</a> du fichier <a class="el" href="libloki-fir_8c_source.html">libloki-fir.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_cgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_cgraph" id="agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_cgraph">
+<area shape="rect" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="5,153,148,179"/>
+<area shape="rect" href="group__gLokiNeon.html#gaba27536d26fcbc97a15f400f73972e57" title="Additionner deux vecteurs." alt="" coords="212,5,295,31"/>
+<area shape="rect" href="group__gLokiNeon.html#ga0a8ed8e46776dc54632b64f4a45550d2" title="Lire la seconde moitié d&#39;un vecteur." alt="" coords="196,55,311,80"/>
+<area shape="rect" href="group__gLokiNeon.html#ga5d641bccda9d8e8f640b8143d0e665e0" title="Lire un élément d&#39;un vecteur." alt="" coords="196,104,311,129"/>
+<area shape="rect" href="group__gLokiNeon.html#gabbf872ea2fc8ef09526511ff3b92768d" title="Lire la première moitié d&#39;un vecteur." alt="" coords="199,153,308,179"/>
+<area shape="rect" href="group__gLokiNeon.html#ga43644674ee0d3be5ad07d70f5514e4dd" title="Lire un vecteur en mémoire." alt="" coords="210,203,297,228"/>
+<area shape="rect" href="group__gLokiNeon.html#ga1984dad8a1957ac5e5c7f2429d82a5cf" title="Calculer le résultat d&#39;une multiplication&#45;accumulation sur des vecteurs." alt="" coords="208,252,299,277"/>
+<area shape="rect" href="group__gLokiNeon.html#ga596baa99e028d163e0c5677c7df63a67" title="Construire un vecteur." alt="" coords="198,301,309,327"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_icgraph.png" border="0" usemap="#agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_icgraph" id="agroup__gLokiFIRFilter_ga59635f9d90959a326458c670354d088b_icgraph">
+<area shape="rect" title="Exécuter un pas de calcul d&#39;un fitre FIR." alt="" coords="673,5,816,31"/>
+<area shape="rect" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,5,625,31"/>
+<area shape="rect" href="group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,5,399,31"/>
+<area shape="rect" href="group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,213,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

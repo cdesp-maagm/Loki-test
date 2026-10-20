@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-modem.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-modem.h<div class="ingroups"><a class="el" href="group__ggLokiAcquisition.html">Acquisition</a> &raquo; <a class="el" href="group__gLokiModem.html">Pilotage des composants modulateur et démodulateur</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki-fifo_8h_source.html">libloki-fifo.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-modem.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-modem_8h__incl.png" border="0" usemap="#alibloki-modem_8h" loading="lazy" alt=""/></div>
+<map name="alibloki-modem_8h" id="alibloki-modem_8h">
+<area shape="rect" title=" " alt="" coords="117,5,246,31"/>
+<area shape="rect" href="libloki-fifo_8h.html" title=" " alt="" coords="7,79,107,104"/>
+<area shape="rect" title=" " alt="" coords="104,152,187,177"/>
+<area shape="rect" title=" " alt="" coords="183,79,254,104"/>
+<area shape="rect" title=" " alt="" coords="279,79,375,104"/>
+<area shape="rect" title=" " alt="" coords="5,152,80,177"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-modem_8h__dep__incl.png" border="0" usemap="#alibloki-modem_8hdep" loading="lazy" alt=""/></div>
+<map name="alibloki-modem_8hdep" id="alibloki-modem_8hdep">
+<area shape="rect" title=" " alt="" coords="761,5,890,31"/>
+<area shape="rect" href="libloki-system_8h.html" title=" " alt="" coords="711,79,838,104"/>
+<area shape="rect" href="libloki_8h.html" title=" " alt="" coords="788,152,863,177"/>
+<area shape="rect" href="libloki-consumer_8c.html" title=" " alt="" coords="5,225,147,251"/>
+<area shape="rect" href="libloki-displacement_8c.html" title=" " alt="" coords="171,225,338,251"/>
+<area shape="rect" href="libloki-env-sensors_8c.html" title=" " alt="" coords="363,225,520,251"/>
+<area shape="rect" href="libloki-modem_8c.html" title=" " alt="" coords="544,225,672,251"/>
+<area shape="rect" href="libloki-mseed_8c.html" title=" " alt="" coords="696,225,819,251"/>
+<area shape="rect" href="libloki-raw_8c.html" title=" " alt="" coords="843,225,944,251"/>
+<area shape="rect" href="libloki-recorder_8c.html" title=" " alt="" coords="968,225,1099,251"/>
+<area shape="rect" href="libloki-socket-server_8c.html" title=" " alt="" coords="1123,225,1288,251"/>
+<area shape="rect" href="libloki-system-defaults_8h.html" title=" " alt="" coords="1313,225,1498,251"/>
+<area shape="rect" href="libloki-system_8c.html" title=" " alt="" coords="1407,299,1534,324"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-modem_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiModemSample" id="r_LokiModemSample"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiModemSample.html">LokiModemSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Données retournées par le démodulateur pour un échantillon.  <a href="structLokiModemSample.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gac1b160f725800c275335569970f455d1" id="r_gac1b160f725800c275335569970f455d1"><td class="memItemLeft">typedef struct LokiModem&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gac1b160f725800c275335569970f455d1">LokiModem</a></td></tr>
+<tr class="memdesc:gac1b160f725800c275335569970f455d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation des périphériques modulateur et démodulateur.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga4b56ccfe31748f4e1d3ceb6a30f6dff5" id="r_ga4b56ccfe31748f4e1d3ceb6a30f6dff5"><td class="memItemLeft"><a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga4b56ccfe31748f4e1d3ceb6a30f6dff5">LokiModem_new</a> (void)</td></tr>
+<tr class="memdesc:ga4b56ccfe31748f4e1d3ceb6a30f6dff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un nouveau modem.  <br /></td></tr>
+<tr class="memitem:gab9ed507b906c70b34d5b5135c34c92d1" id="r_gab9ed507b906c70b34d5b5135c34c92d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gab9ed507b906c70b34d5b5135c34c92d1">LokiModem_del</a> (<a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gab9ed507b906c70b34d5b5135c34c92d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un modem.  <br /></td></tr>
+<tr class="memitem:gacb6b16f52e6e28106f9cb62ca99c8d51" id="r_gacb6b16f52e6e28106f9cb62ca99c8d51"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gacb6b16f52e6e28106f9cb62ca99c8d51">LokiModem_get_clk_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gacb6b16f52e6e28106f9cb62ca99c8d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'horloge du circuit d'acquisition.  <br /></td></tr>
+<tr class="memitem:gab2274a451855d116253c0a5b4a05695a" id="r_gab2274a451855d116253c0a5b4a05695a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gab2274a451855d116253c0a5b4a05695a">LokiModem_get_mod_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gab2274a451855d116253c0a5b4a05695a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'échantillonnage en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:gaa40ad8ef296c7038b6f747f5407108d0" id="r_gaa40ad8ef296c7038b6f747f5407108d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaa40ad8ef296c7038b6f747f5407108d0">LokiModem_set_mod_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:gaa40ad8ef296c7038b6f747f5407108d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence d'échantillonnage en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:ga23886c6a62d90b718d3069b8fe4ab328" id="r_ga23886c6a62d90b718d3069b8fe4ab328"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga23886c6a62d90b718d3069b8fe4ab328">LokiModem_get_mod_osc1_wave_frequency_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga23886c6a62d90b718d3069b8fe4ab328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:gae382d9332816e9351061e345a8443b44" id="r_gae382d9332816e9351061e345a8443b44"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae382d9332816e9351061e345a8443b44">LokiModem_get_mod_osc1_wave_frequency_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gae382d9332816e9351061e345a8443b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence maximale supportée pour le signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:gaa37cced8e7800971de36cc98f8cac1ef" id="r_gaa37cced8e7800971de36cc98f8cac1ef"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef">LokiModem_get_mod_osc1_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaa37cced8e7800971de36cc98f8cac1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:ga3644d43b3d196126fcc4e7cae35586ef" id="r_ga3644d43b3d196126fcc4e7cae35586ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga3644d43b3d196126fcc4e7cae35586ef">LokiModem_set_mod_osc1_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:ga3644d43b3d196126fcc4e7cae35586ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence au signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:ga80f102400e905c1072776fc68132dea2" id="r_ga80f102400e905c1072776fc68132dea2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga80f102400e905c1072776fc68132dea2">LokiModem_get_mod_osc1_gain_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga80f102400e905c1072776fc68132dea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de l'amplitude du signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:gaeb783d9f9a1977826ff01fe0ea6be752" id="r_gaeb783d9f9a1977826ff01fe0ea6be752"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaeb783d9f9a1977826ff01fe0ea6be752">LokiModem_get_mod_osc1_gain_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaeb783d9f9a1977826ff01fe0ea6be752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'amplitude maximale supportée pour le signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:gae81b1c2702720959857d0a6e33db86ac" id="r_gae81b1c2702720959857d0a6e33db86ac"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae81b1c2702720959857d0a6e33db86ac">LokiModem_get_mod_osc1_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gae81b1c2702720959857d0a6e33db86ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'amplitude du signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:ga13ea309bfb24d266143fa5b423cb214e" id="r_ga13ea309bfb24d266143fa5b423cb214e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga13ea309bfb24d266143fa5b423cb214e">LokiModem_set_mod_osc1_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float gain)</td></tr>
+<tr class="memdesc:ga13ea309bfb24d266143fa5b423cb214e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une amplitude au signal en sortie du premier oscillateur du modulateur (Fm1).  <br /></td></tr>
+<tr class="memitem:gae06c4e0ee00827f70f989a343ca5b89a" id="r_gae06c4e0ee00827f70f989a343ca5b89a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae06c4e0ee00827f70f989a343ca5b89a">LokiModem_get_mod_osc2_wave_frequency_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gae06c4e0ee00827f70f989a343ca5b89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de la fréquence du signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga7ff64c2772b51e83a1da4a94676babec" id="r_ga7ff64c2772b51e83a1da4a94676babec"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga7ff64c2772b51e83a1da4a94676babec">LokiModem_get_mod_osc2_wave_frequency_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga7ff64c2772b51e83a1da4a94676babec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga98de366120dea4eeadd67b1b1beaa9f7" id="r_ga98de366120dea4eeadd67b1b1beaa9f7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga98de366120dea4eeadd67b1b1beaa9f7">LokiModem_get_mod_osc2_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga98de366120dea4eeadd67b1b1beaa9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence du signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:gad722211a6ab8be9034460eeaee2e120e" id="r_gad722211a6ab8be9034460eeaee2e120e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gad722211a6ab8be9034460eeaee2e120e">LokiModem_set_mod_osc2_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:gad722211a6ab8be9034460eeaee2e120e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence au signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga840fde76fdb7bff658f5f96c44e9c16b" id="r_ga840fde76fdb7bff658f5f96c44e9c16b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga840fde76fdb7bff658f5f96c44e9c16b">LokiModem_get_mod_osc2_gain_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga840fde76fdb7bff658f5f96c44e9c16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de l'amplitude du signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga51dbb5e4248ba349527893a946d58d41" id="r_ga51dbb5e4248ba349527893a946d58d41"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga51dbb5e4248ba349527893a946d58d41">LokiModem_get_mod_osc2_gain_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga51dbb5e4248ba349527893a946d58d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'amplitude maximale supportée pour le signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga63d4727c91cfc62fd3e560962748d5c0" id="r_ga63d4727c91cfc62fd3e560962748d5c0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga63d4727c91cfc62fd3e560962748d5c0">LokiModem_get_mod_osc2_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga63d4727c91cfc62fd3e560962748d5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'amplitude du signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:gaf407427ac9c86260ef17e64ed085cc8d" id="r_gaf407427ac9c86260ef17e64ed085cc8d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaf407427ac9c86260ef17e64ed085cc8d">LokiModem_set_mod_osc2_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float gain)</td></tr>
+<tr class="memdesc:gaf407427ac9c86260ef17e64ed085cc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une amplitude au signal en sortie du second oscillateur du modulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:gaf4bda53977ea345053fe5287aabd7ae5" id="r_gaf4bda53977ea345053fe5287aabd7ae5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaf4bda53977ea345053fe5287aabd7ae5">LokiModem_get_demod_osc_wave_frequency_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaf4bda53977ea345053fe5287aabd7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de la fréquence du signal en sortie de l'oscillateur du démodulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga584a9ea31a6fcf590a3ccdd683d73d6f" id="r_ga584a9ea31a6fcf590a3ccdd683d73d6f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga584a9ea31a6fcf590a3ccdd683d73d6f">LokiModem_get_demod_osc_wave_frequency_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga584a9ea31a6fcf590a3ccdd683d73d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence maximale supportée pour le signal en sortie de l'oscillateur du démodulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:gad7f609df03c12f9062c37fd9862e6757" id="r_gad7f609df03c12f9062c37fd9862e6757"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gad7f609df03c12f9062c37fd9862e6757">LokiModem_get_demod_osc_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gad7f609df03c12f9062c37fd9862e6757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence du signal en sortie de l'oscillateur du démodulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga915c87d5c51e251962e73f877877191e" id="r_ga915c87d5c51e251962e73f877877191e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga915c87d5c51e251962e73f877877191e">LokiModem_set_demod_osc_wave_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:ga915c87d5c51e251962e73f877877191e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence au signal en sortie de l'oscillateur du démodulateur (Fm2).  <br /></td></tr>
+<tr class="memitem:ga2e45da7179d07e6e82593454899a2380" id="r_ga2e45da7179d07e6e82593454899a2380"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga2e45da7179d07e6e82593454899a2380">LokiModem_get_mod_offset_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga2e45da7179d07e6e82593454899a2380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage de l'offset en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:ga42d423d77d6de590fbb783f7fa030070" id="r_ga42d423d77d6de590fbb783f7fa030070"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga42d423d77d6de590fbb783f7fa030070">LokiModem_get_mod_offset_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga42d423d77d6de590fbb783f7fa030070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'offset maximal supporté en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:gabfa0c1aa8cefcbe803d65220c089d631" id="r_gabfa0c1aa8cefcbe803d65220c089d631"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gabfa0c1aa8cefcbe803d65220c089d631">LokiModem_get_mod_offset</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gabfa0c1aa8cefcbe803d65220c089d631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'offset en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:ga145b497260f02412a57b080ce54ce887" id="r_ga145b497260f02412a57b080ce54ce887"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga145b497260f02412a57b080ce54ce887">LokiModem_set_mod_offset</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float offset)</td></tr>
+<tr class="memdesc:ga145b497260f02412a57b080ce54ce887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un offset en sortie du modulateur.  <br /></td></tr>
+<tr class="memitem:ga60e4fd43a5051d1222e9ad5d52585c7f" id="r_ga60e4fd43a5051d1222e9ad5d52585c7f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga60e4fd43a5051d1222e9ad5d52585c7f">LokiModem_get_mod_dc_value_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga60e4fd43a5051d1222e9ad5d52585c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage du courant moyen de commande de la diode laser.  <br /></td></tr>
+<tr class="memitem:gac4338f5f7ff7f8db91eb928328ede467" id="r_gac4338f5f7ff7f8db91eb928328ede467"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gac4338f5f7ff7f8db91eb928328ede467">LokiModem_get_mod_dc_value_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gac4338f5f7ff7f8db91eb928328ede467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le courant moyen maximal supporté pour la commande de la diode laser.  <br /></td></tr>
+<tr class="memitem:ga70138c572af288cfbb87792af68a2812" id="r_ga70138c572af288cfbb87792af68a2812"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga70138c572af288cfbb87792af68a2812">LokiModem_get_mod_dc_value</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga70138c572af288cfbb87792af68a2812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le courant moyen de commande de la diode laser.  <br /></td></tr>
+<tr class="memitem:ga576ca4b34004e2abc8fc56676ae94d5c" id="r_ga576ca4b34004e2abc8fc56676ae94d5c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga576ca4b34004e2abc8fc56676ae94d5c">LokiModem_set_mod_dc_value</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float dc_value)</td></tr>
+<tr class="memdesc:ga576ca4b34004e2abc8fc56676ae94d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un courant moyen de commande de la diode laser.  <br /></td></tr>
+<tr class="memitem:ga8d384017cde50d5acf14bdad5fcc6b32" id="r_ga8d384017cde50d5acf14bdad5fcc6b32"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga8d384017cde50d5acf14bdad5fcc6b32">LokiModem_get_mod_pga_gain_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga8d384017cde50d5acf14bdad5fcc6b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le gain maximal de l'amplificateur de sortie.  <br /></td></tr>
+<tr class="memitem:gab83551290b046fbd41cfc6ba7f9bb1a6" id="r_gab83551290b046fbd41cfc6ba7f9bb1a6"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gab83551290b046fbd41cfc6ba7f9bb1a6">LokiModem_get_mod_pga_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gab83551290b046fbd41cfc6ba7f9bb1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le gain de l'amplificateur de sortie.  <br /></td></tr>
+<tr class="memitem:ga364f35ace5bfa66da9afd5814a4cf1e8" id="r_ga364f35ace5bfa66da9afd5814a4cf1e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga364f35ace5bfa66da9afd5814a4cf1e8">LokiModem_set_mod_pga_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t gain)</td></tr>
+<tr class="memdesc:ga364f35ace5bfa66da9afd5814a4cf1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un gain à l'amplificateur de sortie.  <br /></td></tr>
+<tr class="memitem:gaca03c8a1744b1f83281cc3691bd9be08" id="r_gaca03c8a1744b1f83281cc3691bd9be08"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaca03c8a1744b1f83281cc3691bd9be08">LokiModem_get_demod_channels</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaca03c8a1744b1f83281cc3691bd9be08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de voies du démodulateur.  <br /></td></tr>
+<tr class="memitem:gae0a674685e343b3eec5a5a0937c46324" id="r_gae0a674685e343b3eec5a5a0937c46324"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae0a674685e343b3eec5a5a0937c46324">LokiModem_get_demod_decimation</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gae0a674685e343b3eec5a5a0937c46324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le facteur de décimation des filtres du démodulateur.  <br /></td></tr>
+<tr class="memitem:gaba38d007f5e98a51b34b10323e0c4999" id="r_gaba38d007f5e98a51b34b10323e0c4999"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaba38d007f5e98a51b34b10323e0c4999">LokiModem_get_demod_bandwidth</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaba38d007f5e98a51b34b10323e0c4999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la bande passante des filtres du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga0ed707637e1b3cf02f37d9caad319a7f" id="r_ga0ed707637e1b3cf02f37d9caad319a7f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f">LokiModem_get_demod_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga0ed707637e1b3cf02f37d9caad319a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'échantillonnage en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga004a61e3be64e2baaa34b8d8972e6a14" id="r_ga004a61e3be64e2baaa34b8d8972e6a14"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga004a61e3be64e2baaa34b8d8972e6a14">LokiModem_set_demod_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:ga004a61e3be64e2baaa34b8d8972e6a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence d'échantillonnage en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga82eebd6d10e869bbbbc3410594d6f80c" id="r_ga82eebd6d10e869bbbbc3410594d6f80c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c">LokiModem_get_demod_xy_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga82eebd6d10e869bbbbc3410594d6f80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la fréquence d'échantillonnage en sortie du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga817eb7cc3b696dfd0d6937eee51468bd" id="r_ga817eb7cc3b696dfd0d6937eee51468bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga817eb7cc3b696dfd0d6937eee51468bd">LokiModem_set_demod_xy_sampling_frequency</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="memdesc:ga817eb7cc3b696dfd0d6937eee51468bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter une fréquence d'échantillonnage en sortie du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga90cd71479d70dfc9e25eacec2c083c79" id="r_ga90cd71479d70dfc9e25eacec2c083c79"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga90cd71479d70dfc9e25eacec2c083c79">LokiModem_get_demod_delay_x_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga90cd71479d70dfc9e25eacec2c083c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le retard maximal applicable à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga0ddcff3affce533824513e84ed8b2f13" id="r_ga0ddcff3affce533824513e84ed8b2f13"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga0ddcff3affce533824513e84ed8b2f13">LokiModem_get_demod_phase_x_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga0ddcff3affce533824513e84ed8b2f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le déphasage maximal applicable à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gac1229a4a631f3504978ac78369a812bf" id="r_gac1229a4a631f3504978ac78369a812bf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gac1229a4a631f3504978ac78369a812bf">LokiModem_get_demod_phase_x_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gac1229a4a631f3504978ac78369a812bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage du déphasage applicable à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga77b11e6c22d6cc88f30876b8ae75d4a6" id="r_ga77b11e6c22d6cc88f30876b8ae75d4a6"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga77b11e6c22d6cc88f30876b8ae75d4a6">LokiModem_get_demod_delay_x</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga77b11e6c22d6cc88f30876b8ae75d4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le retard appliqué à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gac60900447f60f45adfb7ed4867902f8e" id="r_gac60900447f60f45adfb7ed4867902f8e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gac60900447f60f45adfb7ed4867902f8e">LokiModem_get_demod_phase_x</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gac60900447f60f45adfb7ed4867902f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le déphasage appliqué à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga3dae87fc80640dfcdb311ff910eb1629" id="r_ga3dae87fc80640dfcdb311ff910eb1629"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga3dae87fc80640dfcdb311ff910eb1629">LokiModem_set_demod_delay_x</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, uint32_t delay)</td></tr>
+<tr class="memdesc:ga3dae87fc80640dfcdb311ff910eb1629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un retard à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gaf0714c10db4b9dd9af015706532fab6a" id="r_gaf0714c10db4b9dd9af015706532fab6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaf0714c10db4b9dd9af015706532fab6a">LokiModem_set_demod_phase_x</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, float phase)</td></tr>
+<tr class="memdesc:gaf0714c10db4b9dd9af015706532fab6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un déphasage à la composante X (I) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga7aa023bd043cc34a645084d7c25441a0" id="r_ga7aa023bd043cc34a645084d7c25441a0"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga7aa023bd043cc34a645084d7c25441a0">LokiModem_get_demod_delay_y_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga7aa023bd043cc34a645084d7c25441a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le retard maximal applicable à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga5bbcdf3b215ea5fb8ba6541548fb40a2" id="r_ga5bbcdf3b215ea5fb8ba6541548fb40a2"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga5bbcdf3b215ea5fb8ba6541548fb40a2">LokiModem_get_demod_phase_y_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga5bbcdf3b215ea5fb8ba6541548fb40a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le déphasage maximal applicable à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga9d96ae9d0855c3717fd1ffe0a3fbaedd" id="r_ga9d96ae9d0855c3717fd1ffe0a3fbaedd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga9d96ae9d0855c3717fd1ffe0a3fbaedd">LokiModem_get_demod_phase_y_res</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga9d96ae9d0855c3717fd1ffe0a3fbaedd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le pas de réglage du déphasage applicable à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gae907d24468e9b494675e19b4c4898873" id="r_gae907d24468e9b494675e19b4c4898873"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae907d24468e9b494675e19b4c4898873">LokiModem_get_demod_delay_y</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gae907d24468e9b494675e19b4c4898873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le retard appliqué à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gaccf6eda66a54b5e7de7326a8e7e842d9" id="r_gaccf6eda66a54b5e7de7326a8e7e842d9"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaccf6eda66a54b5e7de7326a8e7e842d9">LokiModem_get_demod_phase_y</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gaccf6eda66a54b5e7de7326a8e7e842d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le déphasage appliqué à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gad371ab9c535880040f2c2edd940214a7" id="r_gad371ab9c535880040f2c2edd940214a7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gad371ab9c535880040f2c2edd940214a7">LokiModem_set_demod_delay_y</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, uint32_t delay)</td></tr>
+<tr class="memdesc:gad371ab9c535880040f2c2edd940214a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un retard à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:gab3cc855369372902491bf46d42aa072a" id="r_gab3cc855369372902491bf46d42aa072a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gab3cc855369372902491bf46d42aa072a">LokiModem_set_demod_phase_y</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, float phase)</td></tr>
+<tr class="memdesc:gab3cc855369372902491bf46d42aa072a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un déphasage à la composante Y (Q) du signal démodulé pour une voie.  <br /></td></tr>
+<tr class="memitem:ga01dbc40d331e177e487873ecdde51b4d" id="r_ga01dbc40d331e177e487873ecdde51b4d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga01dbc40d331e177e487873ecdde51b4d">LokiModem_get_demod_pga_gain_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga01dbc40d331e177e487873ecdde51b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le gain maximal de l'amplificateur en entrée du démodulateur pour une voie.  <br /></td></tr>
+<tr class="memitem:gab6c033fe843f6e1eec7b06b15020588c" id="r_gab6c033fe843f6e1eec7b06b15020588c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gab6c033fe843f6e1eec7b06b15020588c">LokiModem_get_demod_pga_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gab6c033fe843f6e1eec7b06b15020588c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le gain de l'amplificateur en entrée du démodulateur pour une voie.  <br /></td></tr>
+<tr class="memitem:ga54d3f84ff16f8151a1bce5cc260319f8" id="r_ga54d3f84ff16f8151a1bce5cc260319f8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga54d3f84ff16f8151a1bce5cc260319f8">LokiModem_set_demod_pga_gain</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, float gain)</td></tr>
+<tr class="memdesc:ga54d3f84ff16f8151a1bce5cc260319f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affecter un gain à l'amplificateur en entrée du démodulateur pour une voie.  <br /></td></tr>
+<tr class="memitem:gac5cab6b74363ef5928a67130ed07af67" id="r_gac5cab6b74363ef5928a67130ed07af67"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gac5cab6b74363ef5928a67130ed07af67">LokiModem_get_demod_adc_min_ratio</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:gac5cab6b74363ef5928a67130ed07af67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la valeur minimale du signal en entrée du démodulateur pour une voie.  <br /></td></tr>
+<tr class="memitem:ga5221dd8bb49fde3275dd7b34b890d9dc" id="r_ga5221dd8bb49fde3275dd7b34b890d9dc"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga5221dd8bb49fde3275dd7b34b890d9dc">LokiModem_get_demod_adc_max_ratio</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="memdesc:ga5221dd8bb49fde3275dd7b34b890d9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la valeur maximale du signal en entrée du démodulateur pour une voie.  <br /></td></tr>
+<tr class="memitem:ga934084ea45d8de46a6c212f5ce04fa3f" id="r_ga934084ea45d8de46a6c212f5ce04fa3f"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga934084ea45d8de46a6c212f5ce04fa3f">LokiModem_get_demod_packet_length_max</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga934084ea45d8de46a6c212f5ce04fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur maximale d'un paquet de données en sortie du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga8fedd820f507eeb1043d3a7dd26e169f" id="r_ga8fedd820f507eeb1043d3a7dd26e169f"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga8fedd820f507eeb1043d3a7dd26e169f">LokiModem_get_demod_packet_length</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga8fedd820f507eeb1043d3a7dd26e169f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire la longueur d'un paquet de données en sortie du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga642442ed153de85457d1c9d81116d80a" id="r_ga642442ed153de85457d1c9d81116d80a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga642442ed153de85457d1c9d81116d80a">LokiModem_get_demod_mixerless</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga642442ed153de85457d1c9d81116d80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier le type de démodulateur implanté dans le FPGA.  <br /></td></tr>
+<tr class="memitem:gadbc2f078e0d4f3b3c7e3851be29f5599" id="r_gadbc2f078e0d4f3b3c7e3851be29f5599"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gadbc2f078e0d4f3b3c7e3851be29f5599">LokiModem_get_demod_bypass</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gadbc2f078e0d4f3b3c7e3851be29f5599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état d'activation du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga6db2465578c86756f1add7b181ba5fcf" id="r_ga6db2465578c86756f1add7b181ba5fcf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga6db2465578c86756f1add7b181ba5fcf">LokiModem_set_demod_bypass</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, bool bypass)</td></tr>
+<tr class="memdesc:ga6db2465578c86756f1add7b181ba5fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activer ou désactiver le démodulateur.  <br /></td></tr>
+<tr class="memitem:ga2993d22cca497c7b1f6870d93f1a4433" id="r_ga2993d22cca497c7b1f6870d93f1a4433"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga2993d22cca497c7b1f6870d93f1a4433">LokiModem_get_test_mode</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga2993d22cca497c7b1f6870d93f1a4433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état d'activation du mode de test.  <br /></td></tr>
+<tr class="memitem:gae39a7a556f2691d8674fc690bdb6a238" id="r_gae39a7a556f2691d8674fc690bdb6a238"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gae39a7a556f2691d8674fc690bdb6a238">LokiModem_set_test_mode</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, bool test_mode)</td></tr>
+<tr class="memdesc:gae39a7a556f2691d8674fc690bdb6a238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activer ou désactiver le mode de test.  <br /></td></tr>
+<tr class="memitem:gabaa67fb5b5e0b8faf9cc91c184f88223" id="r_gabaa67fb5b5e0b8faf9cc91c184f88223"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gabaa67fb5b5e0b8faf9cc91c184f88223">LokiModem_restart</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gabaa67fb5b5e0b8faf9cc91c184f88223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redémarrer le modem.  <br /></td></tr>
+<tr class="memitem:ga7140a37abbf2df3543963d32b7e7368d" id="r_ga7140a37abbf2df3543963d32b7e7368d"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga7140a37abbf2df3543963d32b7e7368d">LokiModem_get_adc_sample_count</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga7140a37abbf2df3543963d32b7e7368d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre d'échantillons reçus sur une voie ADC en entrée du démodulateur.  <br /></td></tr>
+<tr class="memitem:gabe6911d97dac58896dc5500be98deb39" id="r_gabe6911d97dac58896dc5500be98deb39"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gabe6911d97dac58896dc5500be98deb39">LokiModem_get_dac_sample_count</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gabe6911d97dac58896dc5500be98deb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre d'échantillons envoyés sur la sortie DAC du modulateur.  <br /></td></tr>
+<tr class="memitem:ga278f36f46fd36277f28b64b2b706d916" id="r_ga278f36f46fd36277f28b64b2b706d916"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga278f36f46fd36277f28b64b2b706d916">LokiModem_get_demod_sample_count</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga278f36f46fd36277f28b64b2b706d916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre d'échantillons produits sur une voie en sortie du démodulateur.  <br /></td></tr>
+<tr class="memitem:ga6cf7d6738460b7362a7bab87ff323efa" id="r_ga6cf7d6738460b7362a7bab87ff323efa"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa">LokiModem_start_streaming</a> (<a class="el" href="structLokiModem.html">LokiModem</a> *self, int32_t channels, bool simulate, bool raw, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *out)</td></tr>
+<tr class="memdesc:ga6cf7d6738460b7362a7bab87ff323efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'acquisition et le traitement des échantillons démodulés.  <br /></td></tr>
+<tr class="memitem:ga5d39acc88d3ff94a9312882d0bc1f649" id="r_ga5d39acc88d3ff94a9312882d0bc1f649"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649">LokiModem_stop_streaming</a> (<a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga5d39acc88d3ff94a9312882d0bc1f649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition.  <br /></td></tr>
+<tr class="memitem:ga67df2ec5e65c1887e895f4a73e8865a3" id="r_ga67df2ec5e65c1887e895f4a73e8865a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga67df2ec5e65c1887e895f4a73e8865a3">LokiModem_force_stop</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga67df2ec5e65c1887e895f4a73e8865a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition immédiatement.  <br /></td></tr>
+<tr class="memitem:gaa8107034eec97425e51e80dc3a04811a" id="r_gaa8107034eec97425e51e80dc3a04811a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#gaa8107034eec97425e51e80dc3a04811a">LokiModem_is_streaming</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:gaa8107034eec97425e51e80dc3a04811a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état de l'acquisition.  <br /></td></tr>
+<tr class="memitem:ga58c6e4e02a5a61aa980a764405f2bea4" id="r_ga58c6e4e02a5a61aa980a764405f2bea4"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga58c6e4e02a5a61aa980a764405f2bea4">LokiModem_get_dropped_packets</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga58c6e4e02a5a61aa980a764405f2bea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire le nombre de paquets perdus depuis le début de l'acquisition.  <br /></td></tr>
+<tr class="memitem:ga7e173717a8ef2324dd74cd624041e87e" id="r_ga7e173717a8ef2324dd74cd624041e87e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e">LokiModem_print_config</a> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga7e173717a8ef2324dd74cd624041e87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher la configuration d'un modem sur la sortie standard.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-modem_8h_source.html">libloki-modem.h</a>.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

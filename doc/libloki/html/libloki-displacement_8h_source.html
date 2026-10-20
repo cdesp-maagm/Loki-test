@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-displacement.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-displacement.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-displacement_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef LIBLOKI_DISPLACEMENT_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define LIBLOKI_DISPLACEMENT_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-fir_8h.html">libloki-fir.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="group__gLokiDisplacement.html#ga0b3ee7ce8410d418822184fa420a565d">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> <a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *<a class="code hl_function" href="group__gLokiDisplacement.html#gaf7841c05f1bb0499f67baf6148b86351">LokiDisplacement_new</a>(<a class="code hl_struct" href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a> *<a class="code hl_variable" href="structLokiDisplacement.html#a076979b0a8bcef0a2cacb8499bd51d80">estimator</a>, <a class="code hl_struct" href="structLokiFIRFilter.html">LokiFIRFilter</a> *<a class="code hl_variable" href="structLokiDisplacement.html#adc250198fb11d039a244246c9e9a54c8">filter</a>, <span class="keywordtype">unsigned</span> throttle, <span class="keywordtype">float</span> <a class="code hl_variable" href="structLokiDisplacement.html#a0d9ffacda9d2cd3d8ae1d4d45ba8c503">scale</a>, <span class="keywordtype">float</span> tau[<span class="keyword">static</span> 3], <span class="keywordtype">float</span> sampling_frequency);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *<a class="code hl_function" href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396">LokiDisplacement_clone</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *other);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1">LokiDisplacement_work</a>(<a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *self, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> *x_norm, <span class="keywordtype">float</span> *y_norm, <span class="keywordtype">float</span> *out);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b">LokiDisplacement_reset</a>(<a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *self);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_struct" href="structLokiEllipse.html">LokiEllipse</a> *<a class="code hl_function" href="group__gLokiDisplacement.html#ga8ea969c9065e9f3ebf9d91932e94bfe5">LokiDisplacement_get_ellipse</a>(<a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *self);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80">LokiDisplacement_del</a>(<a class="code hl_struct" href="structLokiDisplacement.html">LokiDisplacement</a> *self);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_ga0e2aeab5fc6812642102197bd75c26c1"><div class="ttname"><a href="group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1">LokiDisplacement_work</a></div><div class="ttdeci">bool LokiDisplacement_work(LokiDisplacement *self, float x, float y, float *x_norm, float *y_norm, float *out)</div><div class="ttdoc">Calculer le déplacement courant.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00082">libloki-displacement.c:82</a></div></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_ga36dea76243bf4820fd30bc6f98855396"><div class="ttname"><a href="group__gLokiDisplacement.html#ga36dea76243bf4820fd30bc6f98855396">LokiDisplacement_clone</a></div><div class="ttdeci">LokiDisplacement * LokiDisplacement_clone(const LokiDisplacement *other)</div><div class="ttdoc">Cloner une instance de LokiDisplacement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00064">libloki-displacement.c:64</a></div></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_ga52cfeb45e5dd95bea7f6ac4327cf3e80"><div class="ttname"><a href="group__gLokiDisplacement.html#ga52cfeb45e5dd95bea7f6ac4327cf3e80">LokiDisplacement_del</a></div><div class="ttdeci">void LokiDisplacement_del(LokiDisplacement *self)</div><div class="ttdoc">Détruire une instance de LokiDisplacement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00151">libloki-displacement.c:151</a></div></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_ga8ea969c9065e9f3ebf9d91932e94bfe5"><div class="ttname"><a href="group__gLokiDisplacement.html#ga8ea969c9065e9f3ebf9d91932e94bfe5">LokiDisplacement_get_ellipse</a></div><div class="ttdeci">LokiEllipse * LokiDisplacement_get_ellipse(LokiDisplacement *self)</div><div class="ttdoc">Retourner la dernière ellipse calculée par cette instance.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00147">libloki-displacement.c:147</a></div></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_gaf7841c05f1bb0499f67baf6148b86351"><div class="ttname"><a href="group__gLokiDisplacement.html#gaf7841c05f1bb0499f67baf6148b86351">LokiDisplacement_new</a></div><div class="ttdeci">LokiDisplacement * LokiDisplacement_new(LokiEllipseEstimator *estimator, LokiFIRFilter *filter, unsigned throttle, float scale, float tau[static 3], float sampling_frequency)</div><div class="ttdoc">Construire un calculateur de déplacement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00043">libloki-displacement.c:43</a></div></div>
+<div class="ttc" id="agroup__gLokiDisplacement_html_gafd60b0ca41d52718bc816e84eea79a7b"><div class="ttname"><a href="group__gLokiDisplacement.html#gafd60b0ca41d52718bc816e84eea79a7b">LokiDisplacement_reset</a></div><div class="ttdeci">void LokiDisplacement_reset(LokiDisplacement *self)</div><div class="ttdoc">Remettre à zéro le déplacement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00141">libloki-displacement.c:141</a></div></div>
+<div class="ttc" id="alibloki-ellipse-estimator_8h_html"><div class="ttname"><a href="libloki-ellipse-estimator_8h.html">libloki-ellipse-estimator.h</a></div></div>
+<div class="ttc" id="alibloki-fir_8h_html"><div class="ttname"><a href="libloki-fir_8h.html">libloki-fir.h</a></div></div>
+<div class="ttc" id="astructLokiDisplacement_html"><div class="ttname"><a href="structLokiDisplacement.html">LokiDisplacement</a></div><div class="ttdoc">Représentation d&#39;un calculateur de déplacement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00012">libloki-displacement.c:12</a></div></div>
+<div class="ttc" id="astructLokiDisplacement_html_a076979b0a8bcef0a2cacb8499bd51d80"><div class="ttname"><a href="structLokiDisplacement.html#a076979b0a8bcef0a2cacb8499bd51d80">LokiDisplacement::estimator</a></div><div class="ttdeci">LokiEllipseEstimator * estimator</div><div class="ttdoc">Le filtre adaptatif d&#39;estimation des paramètres de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00016">libloki-displacement.c:16</a></div></div>
+<div class="ttc" id="astructLokiDisplacement_html_a0d9ffacda9d2cd3d8ae1d4d45ba8c503"><div class="ttname"><a href="structLokiDisplacement.html#a0d9ffacda9d2cd3d8ae1d4d45ba8c503">LokiDisplacement::scale</a></div><div class="ttdeci">float scale</div><div class="ttdoc">Le facteur de conversion d&#39;angle en distance.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00036">libloki-displacement.c:36</a></div></div>
+<div class="ttc" id="astructLokiDisplacement_html_adc250198fb11d039a244246c9e9a54c8"><div class="ttname"><a href="structLokiDisplacement.html#adc250198fb11d039a244246c9e9a54c8">LokiDisplacement::filter</a></div><div class="ttdeci">LokiFIRFilter * filter</div><div class="ttdoc">Le filtre passe-bas de suppression du déplacement fictif.</div><div class="ttdef"><b>Définition</b> <a href="libloki-displacement_8c_source.html#l00018">libloki-displacement.c:18</a></div></div>
+<div class="ttc" id="astructLokiEllipseEstimator_html"><div class="ttname"><a href="structLokiEllipseEstimator.html">LokiEllipseEstimator</a></div><div class="ttdoc">Représentation d&#39;un filtre d&#39;estimation des paramètres d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse-estimator_8c_source.html#l00011">libloki-ellipse-estimator.c:11</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html"><div class="ttname"><a href="structLokiEllipse.html">LokiEllipse</a></div><div class="ttdoc">Structure de données représentant une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00015">libloki-ellipse.h:15</a></div></div>
+<div class="ttc" id="astructLokiFIRFilter_html"><div class="ttname"><a href="structLokiFIRFilter.html">LokiFIRFilter</a></div><div class="ttdoc">Représentation d&#39;un filtre FIR.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fir_8c_source.html#l00017">libloki-fir.c:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

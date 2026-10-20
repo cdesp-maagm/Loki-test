@@ -1,0 +1,4 @@
+<map id="LokiEnvSensors_set_packet_length" name="LokiEnvSensors_set_packet_length">
+<area shape="rect" id="node1" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="201,5,344,47"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga96d2d529c200e14e2056cb6a07221b51" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="5,13,153,39"/>
+</map>

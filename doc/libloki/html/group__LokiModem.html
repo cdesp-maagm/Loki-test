@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Bloc de pilotage des composants modulateur et démodulateur.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Bloc de pilotage des composants modulateur et démodulateur.</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce module fournit une API en espace utilisateur pour accéder aux composants modulateur et démodulateur du FPGA.  
+<a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiModem.html">LokiModem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionAD8370ControlWord.html">AD8370ControlWord</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiModemSample.html">LokiModemSample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Données retournées par le démodulateur pour un échantillon.  <a href="structLokiModemSample.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga369266c24eacffb87046522897a570d5"><td class="memItemLeft" align="right" valign="top"><a id="ga369266c24eacffb87046522897a570d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_GNU_SOURCE</b></td></tr>
+<tr class="separator:ga369266c24eacffb87046522897a570d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe9f03d58c0514bad0fe3eb215e06605"><td class="memItemLeft" align="right" valign="top"><a id="gafe9f03d58c0514bad0fe3eb215e06605"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_VERNIER</b>&#160;&#160;&#160;0.055744</td></tr>
+<tr class="separator:gafe9f03d58c0514bad0fe3eb215e06605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa090987afa6c718a00f7935b03d3e92c"><td class="memItemLeft" align="right" valign="top"><a id="gaa090987afa6c718a00f7935b03d3e92c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_PREGAIN</b>&#160;&#160;&#160;7.079458</td></tr>
+<tr class="separator:gaa090987afa6c718a00f7935b03d3e92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11b8bd1290fccb0b319ec3ddcf163630"><td class="memItemLeft" align="right" valign="top"><a id="ga11b8bd1290fccb0b319ec3ddcf163630"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_HIGH_GAIN_FACTOR</b>&#160;&#160;&#160;(AD8370_VERNIER * AD8370_PREGAIN)</td></tr>
+<tr class="separator:ga11b8bd1290fccb0b319ec3ddcf163630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3d385c4d758bd43f884382cd34878af"><td class="memItemLeft" align="right" valign="top"><a id="gaa3d385c4d758bd43f884382cd34878af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_GAIN_CODE_SIZE</b>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:gaa3d385c4d758bd43f884382cd34878af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0e4506f0536eb0c07e09109fbe2efe0"><td class="memItemLeft" align="right" valign="top"><a id="gaf0e4506f0536eb0c07e09109fbe2efe0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_GAIN_CODE_MAX</b>&#160;&#160;&#160;((1 &lt;&lt; AD8370_GAIN_CODE_SIZE) - 1)</td></tr>
+<tr class="separator:gaf0e4506f0536eb0c07e09109fbe2efe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1310224697289c3414523ac5593ac24f"><td class="memItemLeft" align="right" valign="top"><a id="ga1310224697289c3414523ac5593ac24f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_LOW_GAIN_MAX</b>&#160;&#160;&#160;(AD8370_GAIN_CODE_MAX * AD8370_VERNIER)</td></tr>
+<tr class="separator:ga1310224697289c3414523ac5593ac24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d0ae3934f893570043e83d0ca205621"><td class="memItemLeft" align="right" valign="top"><a id="ga8d0ae3934f893570043e83d0ca205621"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AD8370_HIGH_GAIN_MAX</b>&#160;&#160;&#160;(AD8370_GAIN_CODE_MAX * AD8370_HIGH_GAIN_FACTOR)</td></tr>
+<tr class="separator:ga8d0ae3934f893570043e83d0ca205621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a74f615f5f516955b30dcb58a0d543f"><td class="memItemLeft" align="right" valign="top"><a id="ga5a74f615f5f516955b30dcb58a0d543f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_DISP_WAVE_FREQUENCY</b>&#160;&#160;&#160;0.2</td></tr>
+<tr class="separator:ga5a74f615f5f516955b30dcb58a0d543f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93e9b145ddd65e5e0507743b1c3a57da"><td class="memItemLeft" align="right" valign="top"><a id="ga93e9b145ddd65e5e0507743b1c3a57da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_DISP_AMPLITUDE</b>&#160;&#160;&#160;(M_PI / 10)</td></tr>
+<tr class="separator:ga93e9b145ddd65e5e0507743b1c3a57da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d9bd29a6006f8a8e2f187e65a1ad47b"><td class="memItemLeft" align="right" valign="top"><a id="ga0d9bd29a6006f8a8e2f187e65a1ad47b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_ELLIPSE_A</b>&#160;&#160;&#160;0.1</td></tr>
+<tr class="separator:ga0d9bd29a6006f8a8e2f187e65a1ad47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6416f3474794f5ab87b03cf403842624"><td class="memItemLeft" align="right" valign="top"><a id="ga6416f3474794f5ab87b03cf403842624"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_ELLIPSE_B</b>&#160;&#160;&#160;0.15</td></tr>
+<tr class="separator:ga6416f3474794f5ab87b03cf403842624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2419b32b6c2eeddf7fc7786bd9ef46ec"><td class="memItemLeft" align="right" valign="top"><a id="ga2419b32b6c2eeddf7fc7786bd9ef46ec"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_ELLIPSE_ANGLE</b>&#160;&#160;&#160;(M_PI / 6)</td></tr>
+<tr class="separator:ga2419b32b6c2eeddf7fc7786bd9ef46ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90a200fd47d295864ecc891a44bf9f3d"><td class="memItemLeft" align="right" valign="top"><a id="ga90a200fd47d295864ecc891a44bf9f3d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_ELLIPSE_XC</b>&#160;&#160;&#160;0.01</td></tr>
+<tr class="separator:ga90a200fd47d295864ecc891a44bf9f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78c3be5b632db9cd3fb00250f862d227"><td class="memItemLeft" align="right" valign="top"><a id="ga78c3be5b632db9cd3fb00250f862d227"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIMULATED_ELLIPSE_YC</b>&#160;&#160;&#160;0.02</td></tr>
+<tr class="separator:ga78c3be5b632db9cd3fb00250f862d227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac65edfa5d1dbb5f1b560b4383a72555f"><td class="memItemLeft" align="right" valign="top"><a id="gac65edfa5d1dbb5f1b560b4383a72555f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>USE_MMAP</b></td></tr>
+<tr class="separator:gac65edfa5d1dbb5f1b560b4383a72555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gac11ada7ec17dc89095e83bd867d822e1"><td class="memItemLeft" align="right" valign="top"><a id="gac11ada7ec17dc89095e83bd867d822e1"></a>
+typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiDMASample</b></td></tr>
+<tr class="separator:gac11ada7ec17dc89095e83bd867d822e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1b160f725800c275335569970f455d1"><td class="memItemLeft" align="right" valign="top"><a id="gac1b160f725800c275335569970f455d1"></a>
+typedef struct <a class="el" href="structLokiModem.html">LokiModem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiModem.html#gac1b160f725800c275335569970f455d1">LokiModem</a></td></tr>
+<tr class="memdesc:gac1b160f725800c275335569970f455d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données représentant le matériel de modulation-démodulation. <br /></td></tr>
+<tr class="separator:gac1b160f725800c275335569970f455d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga31ef33621073ec3f693ff586270240f5"><td class="memItemLeft" align="right" valign="top"><a id="ga31ef33621073ec3f693ff586270240f5"></a>
+static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_reg</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, LokiModemRegister reg)</td></tr>
+<tr class="separator:ga31ef33621073ec3f693ff586270240f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2d61f968fc4e72968be42685a916377"><td class="memItemLeft" align="right" valign="top"><a id="gad2d61f968fc4e72968be42685a916377"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_reg</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, LokiModemRegister reg, uint32_t value)</td></tr>
+<tr class="separator:gad2d61f968fc4e72968be42685a916377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e4ca0d31754d984b07e7298028eeefc"><td class="memItemLeft" align="right" valign="top"><a id="ga5e4ca0d31754d984b07e7298028eeefc"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_start</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga5e4ca0d31754d984b07e7298028eeefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04636b25da663b516cf8634b3470ca52"><td class="memItemLeft" align="right" valign="top"><a id="ga04636b25da663b516cf8634b3470ca52"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_stop</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga04636b25da663b516cf8634b3470ca52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a3bec25b7f9818c130c317e79b3bca2"><td class="memItemLeft" align="right" valign="top"><a id="ga1a3bec25b7f9818c130c317e79b3bca2"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_is_streaming</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga1a3bec25b7f9818c130c317e79b3bca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1c72b07b72a58ff1d2a481e3868d5b2"><td class="memItemLeft" align="right" valign="top"><a id="gab1c72b07b72a58ff1d2a481e3868d5b2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_get_start_time</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, struct timespec *res)</td></tr>
+<tr class="separator:gab1c72b07b72a58ff1d2a481e3868d5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga784b97f18bd232111254e1c5fcac3e0c"><td class="memItemLeft" align="right" valign="top"><a id="ga784b97f18bd232111254e1c5fcac3e0c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_get_packet_time</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, struct timespec *res)</td></tr>
+<tr class="separator:ga784b97f18bd232111254e1c5fcac3e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae80d100cb35cff72b1742cf19a132e66"><td class="memItemLeft" align="right" valign="top"><a id="gae80d100cb35cff72b1742cf19a132e66"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_dma_get_dropped_packets</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gae80d100cb35cff72b1742cf19a132e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27f4f0afdf1b651dd85f485bbbff196a"><td class="memItemLeft" align="right" valign="top"><a id="ga27f4f0afdf1b651dd85f485bbbff196a"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_scale_xy</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float xy)</td></tr>
+<tr class="separator:ga27f4f0afdf1b651dd85f485bbbff196a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae78f99b97520da389fc0162c2026a49a"><td class="memItemLeft" align="right" valign="top"><a id="gae78f99b97520da389fc0162c2026a49a"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_scale_power</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float p)</td></tr>
+<tr class="separator:gae78f99b97520da389fc0162c2026a49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b56ccfe31748f4e1d3ceb6a30f6dff5"><td class="memItemLeft" align="right" valign="top"><a id="ga4b56ccfe31748f4e1d3ceb6a30f6dff5"></a>
+<a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_new</b> (void)</td></tr>
+<tr class="separator:ga4b56ccfe31748f4e1d3ceb6a30f6dff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9ed507b906c70b34d5b5135c34c92d1"><td class="memItemLeft" align="right" valign="top"><a id="gab9ed507b906c70b34d5b5135c34c92d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_del</b> (<a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gab9ed507b906c70b34d5b5135c34c92d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb6b16f52e6e28106f9cb62ca99c8d51"><td class="memItemLeft" align="right" valign="top"><a id="gacb6b16f52e6e28106f9cb62ca99c8d51"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_clk_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gacb6b16f52e6e28106f9cb62ca99c8d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2274a451855d116253c0a5b4a05695a"><td class="memItemLeft" align="right" valign="top"><a id="gab2274a451855d116253c0a5b4a05695a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gab2274a451855d116253c0a5b4a05695a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa40ad8ef296c7038b6f747f5407108d0"><td class="memItemLeft" align="right" valign="top"><a id="gaa40ad8ef296c7038b6f747f5407108d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:gaa40ad8ef296c7038b6f747f5407108d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23886c6a62d90b718d3069b8fe4ab328"><td class="memItemLeft" align="right" valign="top"><a id="ga23886c6a62d90b718d3069b8fe4ab328"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_wave_frequency_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga23886c6a62d90b718d3069b8fe4ab328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae382d9332816e9351061e345a8443b44"><td class="memItemLeft" align="right" valign="top"><a id="gae382d9332816e9351061e345a8443b44"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_wave_frequency_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gae382d9332816e9351061e345a8443b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa37cced8e7800971de36cc98f8cac1ef"><td class="memItemLeft" align="right" valign="top"><a id="gaa37cced8e7800971de36cc98f8cac1ef"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaa37cced8e7800971de36cc98f8cac1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3644d43b3d196126fcc4e7cae35586ef"><td class="memItemLeft" align="right" valign="top"><a id="ga3644d43b3d196126fcc4e7cae35586ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_osc1_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:ga3644d43b3d196126fcc4e7cae35586ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80f102400e905c1072776fc68132dea2"><td class="memItemLeft" align="right" valign="top"><a id="ga80f102400e905c1072776fc68132dea2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_gain_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga80f102400e905c1072776fc68132dea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb783d9f9a1977826ff01fe0ea6be752"><td class="memItemLeft" align="right" valign="top"><a id="gaeb783d9f9a1977826ff01fe0ea6be752"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_gain_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaeb783d9f9a1977826ff01fe0ea6be752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae81b1c2702720959857d0a6e33db86ac"><td class="memItemLeft" align="right" valign="top"><a id="gae81b1c2702720959857d0a6e33db86ac"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc1_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gae81b1c2702720959857d0a6e33db86ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13ea309bfb24d266143fa5b423cb214e"><td class="memItemLeft" align="right" valign="top"><a id="ga13ea309bfb24d266143fa5b423cb214e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_osc1_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float gain)</td></tr>
+<tr class="separator:ga13ea309bfb24d266143fa5b423cb214e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae06c4e0ee00827f70f989a343ca5b89a"><td class="memItemLeft" align="right" valign="top"><a id="gae06c4e0ee00827f70f989a343ca5b89a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_wave_frequency_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gae06c4e0ee00827f70f989a343ca5b89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ff64c2772b51e83a1da4a94676babec"><td class="memItemLeft" align="right" valign="top"><a id="ga7ff64c2772b51e83a1da4a94676babec"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_wave_frequency_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga7ff64c2772b51e83a1da4a94676babec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98de366120dea4eeadd67b1b1beaa9f7"><td class="memItemLeft" align="right" valign="top"><a id="ga98de366120dea4eeadd67b1b1beaa9f7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga98de366120dea4eeadd67b1b1beaa9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad722211a6ab8be9034460eeaee2e120e"><td class="memItemLeft" align="right" valign="top"><a id="gad722211a6ab8be9034460eeaee2e120e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_osc2_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:gad722211a6ab8be9034460eeaee2e120e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga840fde76fdb7bff658f5f96c44e9c16b"><td class="memItemLeft" align="right" valign="top"><a id="ga840fde76fdb7bff658f5f96c44e9c16b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_gain_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga840fde76fdb7bff658f5f96c44e9c16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51dbb5e4248ba349527893a946d58d41"><td class="memItemLeft" align="right" valign="top"><a id="ga51dbb5e4248ba349527893a946d58d41"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_gain_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga51dbb5e4248ba349527893a946d58d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63d4727c91cfc62fd3e560962748d5c0"><td class="memItemLeft" align="right" valign="top"><a id="ga63d4727c91cfc62fd3e560962748d5c0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_osc2_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga63d4727c91cfc62fd3e560962748d5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf407427ac9c86260ef17e64ed085cc8d"><td class="memItemLeft" align="right" valign="top"><a id="gaf407427ac9c86260ef17e64ed085cc8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_osc2_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float gain)</td></tr>
+<tr class="separator:gaf407427ac9c86260ef17e64ed085cc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4bda53977ea345053fe5287aabd7ae5"><td class="memItemLeft" align="right" valign="top"><a id="gaf4bda53977ea345053fe5287aabd7ae5"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_osc_wave_frequency_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaf4bda53977ea345053fe5287aabd7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga584a9ea31a6fcf590a3ccdd683d73d6f"><td class="memItemLeft" align="right" valign="top"><a id="ga584a9ea31a6fcf590a3ccdd683d73d6f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_osc_wave_frequency_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga584a9ea31a6fcf590a3ccdd683d73d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f609df03c12f9062c37fd9862e6757"><td class="memItemLeft" align="right" valign="top"><a id="gad7f609df03c12f9062c37fd9862e6757"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_osc_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gad7f609df03c12f9062c37fd9862e6757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga915c87d5c51e251962e73f877877191e"><td class="memItemLeft" align="right" valign="top"><a id="ga915c87d5c51e251962e73f877877191e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_osc_wave_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:ga915c87d5c51e251962e73f877877191e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e45da7179d07e6e82593454899a2380"><td class="memItemLeft" align="right" valign="top"><a id="ga2e45da7179d07e6e82593454899a2380"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_offset_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga2e45da7179d07e6e82593454899a2380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42d423d77d6de590fbb783f7fa030070"><td class="memItemLeft" align="right" valign="top"><a id="ga42d423d77d6de590fbb783f7fa030070"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_offset_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga42d423d77d6de590fbb783f7fa030070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfa0c1aa8cefcbe803d65220c089d631"><td class="memItemLeft" align="right" valign="top"><a id="gabfa0c1aa8cefcbe803d65220c089d631"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_offset</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gabfa0c1aa8cefcbe803d65220c089d631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga145b497260f02412a57b080ce54ce887"><td class="memItemLeft" align="right" valign="top"><a id="ga145b497260f02412a57b080ce54ce887"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_offset</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float offset)</td></tr>
+<tr class="separator:ga145b497260f02412a57b080ce54ce887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60e4fd43a5051d1222e9ad5d52585c7f"><td class="memItemLeft" align="right" valign="top"><a id="ga60e4fd43a5051d1222e9ad5d52585c7f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_dc_value_res</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga60e4fd43a5051d1222e9ad5d52585c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4338f5f7ff7f8db91eb928328ede467"><td class="memItemLeft" align="right" valign="top"><a id="gac4338f5f7ff7f8db91eb928328ede467"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_dc_value_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gac4338f5f7ff7f8db91eb928328ede467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70138c572af288cfbb87792af68a2812"><td class="memItemLeft" align="right" valign="top"><a id="ga70138c572af288cfbb87792af68a2812"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_dc_value</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga70138c572af288cfbb87792af68a2812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga576ca4b34004e2abc8fc56676ae94d5c"><td class="memItemLeft" align="right" valign="top"><a id="ga576ca4b34004e2abc8fc56676ae94d5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_dc_value</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float dc_value)</td></tr>
+<tr class="separator:ga576ca4b34004e2abc8fc56676ae94d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d384017cde50d5acf14bdad5fcc6b32"><td class="memItemLeft" align="right" valign="top"><a id="ga8d384017cde50d5acf14bdad5fcc6b32"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_pga_gain_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga8d384017cde50d5acf14bdad5fcc6b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab83551290b046fbd41cfc6ba7f9bb1a6"><td class="memItemLeft" align="right" valign="top"><a id="gab83551290b046fbd41cfc6ba7f9bb1a6"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_mod_pga_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gab83551290b046fbd41cfc6ba7f9bb1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga364f35ace5bfa66da9afd5814a4cf1e8"><td class="memItemLeft" align="right" valign="top"><a id="ga364f35ace5bfa66da9afd5814a4cf1e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_mod_pga_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t gain)</td></tr>
+<tr class="separator:ga364f35ace5bfa66da9afd5814a4cf1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca03c8a1744b1f83281cc3691bd9be08"><td class="memItemLeft" align="right" valign="top"><a id="gaca03c8a1744b1f83281cc3691bd9be08"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_channels</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaca03c8a1744b1f83281cc3691bd9be08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0a674685e343b3eec5a5a0937c46324"><td class="memItemLeft" align="right" valign="top"><a id="gae0a674685e343b3eec5a5a0937c46324"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_decimation</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gae0a674685e343b3eec5a5a0937c46324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba38d007f5e98a51b34b10323e0c4999"><td class="memItemLeft" align="right" valign="top"><a id="gaba38d007f5e98a51b34b10323e0c4999"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_bandwidth</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaba38d007f5e98a51b34b10323e0c4999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ed707637e1b3cf02f37d9caad319a7f"><td class="memItemLeft" align="right" valign="top"><a id="ga0ed707637e1b3cf02f37d9caad319a7f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga0ed707637e1b3cf02f37d9caad319a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga004a61e3be64e2baaa34b8d8972e6a14"><td class="memItemLeft" align="right" valign="top"><a id="ga004a61e3be64e2baaa34b8d8972e6a14"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:ga004a61e3be64e2baaa34b8d8972e6a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82eebd6d10e869bbbbc3410594d6f80c"><td class="memItemLeft" align="right" valign="top"><a id="ga82eebd6d10e869bbbbc3410594d6f80c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_xy_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga82eebd6d10e869bbbbc3410594d6f80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga817eb7cc3b696dfd0d6937eee51468bd"><td class="memItemLeft" align="right" valign="top"><a id="ga817eb7cc3b696dfd0d6937eee51468bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_xy_sampling_frequency</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, float freq)</td></tr>
+<tr class="separator:ga817eb7cc3b696dfd0d6937eee51468bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90cd71479d70dfc9e25eacec2c083c79"><td class="memItemLeft" align="right" valign="top"><a id="ga90cd71479d70dfc9e25eacec2c083c79"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_delay_x_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:ga90cd71479d70dfc9e25eacec2c083c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77b11e6c22d6cc88f30876b8ae75d4a6"><td class="memItemLeft" align="right" valign="top"><a id="ga77b11e6c22d6cc88f30876b8ae75d4a6"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_delay_x</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:ga77b11e6c22d6cc88f30876b8ae75d4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dae87fc80640dfcdb311ff910eb1629"><td class="memItemLeft" align="right" valign="top"><a id="ga3dae87fc80640dfcdb311ff910eb1629"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_delay_x</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, uint32_t delay)</td></tr>
+<tr class="separator:ga3dae87fc80640dfcdb311ff910eb1629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aa023bd043cc34a645084d7c25441a0"><td class="memItemLeft" align="right" valign="top"><a id="ga7aa023bd043cc34a645084d7c25441a0"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_delay_y_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:ga7aa023bd043cc34a645084d7c25441a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae907d24468e9b494675e19b4c4898873"><td class="memItemLeft" align="right" valign="top"><a id="gae907d24468e9b494675e19b4c4898873"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_delay_y</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:gae907d24468e9b494675e19b4c4898873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad371ab9c535880040f2c2edd940214a7"><td class="memItemLeft" align="right" valign="top"><a id="gad371ab9c535880040f2c2edd940214a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_delay_y</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, uint32_t delay)</td></tr>
+<tr class="separator:gad371ab9c535880040f2c2edd940214a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01dbc40d331e177e487873ecdde51b4d"><td class="memItemLeft" align="right" valign="top"><a id="ga01dbc40d331e177e487873ecdde51b4d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_pga_gain_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:ga01dbc40d331e177e487873ecdde51b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6c033fe843f6e1eec7b06b15020588c"><td class="memItemLeft" align="right" valign="top"><a id="gab6c033fe843f6e1eec7b06b15020588c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_pga_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:gab6c033fe843f6e1eec7b06b15020588c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54d3f84ff16f8151a1bce5cc260319f8"><td class="memItemLeft" align="right" valign="top"><a id="ga54d3f84ff16f8151a1bce5cc260319f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_pga_gain</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel, float gain)</td></tr>
+<tr class="separator:ga54d3f84ff16f8151a1bce5cc260319f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5cab6b74363ef5928a67130ed07af67"><td class="memItemLeft" align="right" valign="top"><a id="gac5cab6b74363ef5928a67130ed07af67"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_adc_min_ratio</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:gac5cab6b74363ef5928a67130ed07af67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5221dd8bb49fde3275dd7b34b890d9dc"><td class="memItemLeft" align="right" valign="top"><a id="ga5221dd8bb49fde3275dd7b34b890d9dc"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_adc_max_ratio</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t channel)</td></tr>
+<tr class="separator:ga5221dd8bb49fde3275dd7b34b890d9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga934084ea45d8de46a6c212f5ce04fa3f"><td class="memItemLeft" align="right" valign="top"><a id="ga934084ea45d8de46a6c212f5ce04fa3f"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_packet_length_max</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga934084ea45d8de46a6c212f5ce04fa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fedd820f507eeb1043d3a7dd26e169f"><td class="memItemLeft" align="right" valign="top"><a id="ga8fedd820f507eeb1043d3a7dd26e169f"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_packet_length</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga8fedd820f507eeb1043d3a7dd26e169f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fcd54e61da1ae5bea040366aea69d98"><td class="memItemLeft" align="right" valign="top"><a id="ga3fcd54e61da1ae5bea040366aea69d98"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_transfer_length</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga3fcd54e61da1ae5bea040366aea69d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga928d601418ea5c797851d2c9efe0956d"><td class="memItemLeft" align="right" valign="top"><a id="ga928d601418ea5c797851d2c9efe0956d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_packet_length</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, uint32_t length)</td></tr>
+<tr class="separator:ga928d601418ea5c797851d2c9efe0956d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga642442ed153de85457d1c9d81116d80a"><td class="memItemLeft" align="right" valign="top"><a id="ga642442ed153de85457d1c9d81116d80a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_mixerless</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga642442ed153de85457d1c9d81116d80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbc2f078e0d4f3b3c7e3851be29f5599"><td class="memItemLeft" align="right" valign="top"><a id="gadbc2f078e0d4f3b3c7e3851be29f5599"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_bypass</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gadbc2f078e0d4f3b3c7e3851be29f5599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6db2465578c86756f1add7b181ba5fcf"><td class="memItemLeft" align="right" valign="top"><a id="ga6db2465578c86756f1add7b181ba5fcf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_demod_bypass</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, bool bypass)</td></tr>
+<tr class="separator:ga6db2465578c86756f1add7b181ba5fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2993d22cca497c7b1f6870d93f1a4433"><td class="memItemLeft" align="right" valign="top"><a id="ga2993d22cca497c7b1f6870d93f1a4433"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_test_mode</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga2993d22cca497c7b1f6870d93f1a4433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae39a7a556f2691d8674fc690bdb6a238"><td class="memItemLeft" align="right" valign="top"><a id="gae39a7a556f2691d8674fc690bdb6a238"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_test_mode</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, bool test_mode)</td></tr>
+<tr class="separator:gae39a7a556f2691d8674fc690bdb6a238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaa67fb5b5e0b8faf9cc91c184f88223"><td class="memItemLeft" align="right" valign="top"><a id="gabaa67fb5b5e0b8faf9cc91c184f88223"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_restart</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gabaa67fb5b5e0b8faf9cc91c184f88223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7140a37abbf2df3543963d32b7e7368d"><td class="memItemLeft" align="right" valign="top"><a id="ga7140a37abbf2df3543963d32b7e7368d"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_adc_sample_count</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga7140a37abbf2df3543963d32b7e7368d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe6911d97dac58896dc5500be98deb39"><td class="memItemLeft" align="right" valign="top"><a id="gabe6911d97dac58896dc5500be98deb39"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_dac_sample_count</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gabe6911d97dac58896dc5500be98deb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga278f36f46fd36277f28b64b2b706d916"><td class="memItemLeft" align="right" valign="top"><a id="ga278f36f46fd36277f28b64b2b706d916"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_demod_sample_count</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga278f36f46fd36277f28b64b2b706d916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92acfc36c0c6e365213c0898661d4834"><td class="memItemLeft" align="right" valign="top"><a id="ga92acfc36c0c6e365213c0898661d4834"></a>
+static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_packet_index</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, LokiDMASample raw_item)</td></tr>
+<tr class="separator:ga92acfc36c0c6e365213c0898661d4834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca3155d0bbaa87a84eb4e17e6ed4cefb"><td class="memItemLeft" align="right" valign="top"><a id="gaca3155d0bbaa87a84eb4e17e6ed4cefb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_packet_item</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self, <a class="el" href="structLokiModemSample.html">LokiModemSample</a> *item, LokiDMASample raw_item, bool raw)</td></tr>
+<tr class="separator:gaca3155d0bbaa87a84eb4e17e6ed4cefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7ad56144a69fcdc52eac5dd41e944d7"><td class="memItemLeft" align="right" valign="top"><a id="gac7ad56144a69fcdc52eac5dd41e944d7"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_set_simulated_item</b> (<a class="el" href="structLokiModem.html">LokiModem</a> *self, <a class="el" href="structLokiModemSample.html">LokiModemSample</a> *item)</td></tr>
+<tr class="separator:gac7ad56144a69fcdc52eac5dd41e944d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fce7ed2b2c9970e15db1ac8e989c429"><td class="memItemLeft" align="right" valign="top"><a id="ga3fce7ed2b2c9970e15db1ac8e989c429"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_work</b> (void *ptr)</td></tr>
+<tr class="separator:ga3fce7ed2b2c9970e15db1ac8e989c429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga403c6ba2dd08c836d4e4713ca13eb989"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiModem.html#ga403c6ba2dd08c836d4e4713ca13eb989">LokiModem_start_streaming</a> (<a class="el" href="structLokiModem.html">LokiModem</a> *self, ssize_t channel, bool simulate, bool raw, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *out)</td></tr>
+<tr class="memdesc:ga403c6ba2dd08c836d4e4713ca13eb989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer l'acquisition et le traitement des échantillons démodulés.  <a href="group__LokiModem.html#ga403c6ba2dd08c836d4e4713ca13eb989">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga403c6ba2dd08c836d4e4713ca13eb989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d39acc88d3ff94a9312882d0bc1f649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649">LokiModem_stop_streaming</a> (<a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="memdesc:ga5d39acc88d3ff94a9312882d0bc1f649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter l'acquisition et le traitement.  <a href="group__LokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga5d39acc88d3ff94a9312882d0bc1f649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67df2ec5e65c1887e895f4a73e8865a3"><td class="memItemLeft" align="right" valign="top"><a id="ga67df2ec5e65c1887e895f4a73e8865a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_force_stop</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga67df2ec5e65c1887e895f4a73e8865a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8107034eec97425e51e80dc3a04811a"><td class="memItemLeft" align="right" valign="top"><a id="gaa8107034eec97425e51e80dc3a04811a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_is_streaming</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:gaa8107034eec97425e51e80dc3a04811a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58c6e4e02a5a61aa980a764405f2bea4"><td class="memItemLeft" align="right" valign="top"><a id="ga58c6e4e02a5a61aa980a764405f2bea4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_get_dropped_packets</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga58c6e4e02a5a61aa980a764405f2bea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e173717a8ef2324dd74cd624041e87e"><td class="memItemLeft" align="right" valign="top"><a id="ga7e173717a8ef2324dd74cd624041e87e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiModem_print_config</b> (const <a class="el" href="structLokiModem.html">LokiModem</a> *self)</td></tr>
+<tr class="separator:ga7e173717a8ef2324dd74cd624041e87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga2514fcd706197a4a72cf705d24743bfa"><td class="memItemLeft" align="right" valign="top"><a id="ga2514fcd706197a4a72cf705d24743bfa"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiModem.html#ga2514fcd706197a4a72cf705d24743bfa">LokiModemSample::channel</a></td></tr>
+<tr class="memdesc:ga2514fcd706197a4a72cf705d24743bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">La voie d'entrée sur lequel l'échantillon a été reçu. <br /></td></tr>
+<tr class="separator:ga2514fcd706197a4a72cf705d24743bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="memItemLeft" >
+float&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga93823ac9ab661f6783b972a662f66341">LokiModemSample::x</a></td></tr>
+<tr class="memdesc:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante X de l'échantillon, en virgule flottante. <br /></td></tr>
+<tr class="separator:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7425df2343cbfe0d36582cfacea10485"><td class="memItemLeft" >
+int32_t&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#gaae0d91ea6a339d3a9797f3178fdcb98d">LokiModemSample::x_raw</a></td></tr>
+<tr class="memdesc:ga7425df2343cbfe0d36582cfacea10485"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante X de l'échantillon, en virgule fixe. <br /></td></tr>
+<tr class="separator:ga7425df2343cbfe0d36582cfacea10485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ea4718f0736d8dbda7def68b0558882"><td class="memItemLeft" ><a id="ga5ea4718f0736d8dbda7def68b0558882"></a>
+union {</td></tr>
+<tr class="memitem:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="memItemLeft" >
+&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga93823ac9ab661f6783b972a662f66341">LokiModemSample::x</a></td></tr>
+<tr class="memdesc:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante X de l'échantillon, en virgule flottante. <br /></td></tr>
+<tr class="separator:ga82522fc8f46b99b5b5d3891a9ff0b6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7425df2343cbfe0d36582cfacea10485"><td class="memItemLeft" >
+&#160;&#160;&#160;int32_t&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#gaae0d91ea6a339d3a9797f3178fdcb98d">LokiModemSample::x_raw</a></td></tr>
+<tr class="memdesc:ga7425df2343cbfe0d36582cfacea10485"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante X de l'échantillon, en virgule fixe. <br /></td></tr>
+<tr class="separator:ga7425df2343cbfe0d36582cfacea10485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ea4718f0736d8dbda7def68b0558882"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga5ea4718f0736d8dbda7def68b0558882"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante X de l'échantillon. <br /></td></tr>
+<tr class="separator:ga5ea4718f0736d8dbda7def68b0558882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="memItemLeft" >
+float&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga97fbbd297f4435947fad6b1458d1122b">LokiModemSample::y</a></td></tr>
+<tr class="memdesc:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante Y de l'échantillon, en virgule flottante. <br /></td></tr>
+<tr class="separator:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19bbc423b3698b2208ee5f70093c6a11"><td class="memItemLeft" >
+int32_t&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga43697f0d5850d33bd23681a5c4eb6c6c">LokiModemSample::y_raw</a></td></tr>
+<tr class="memdesc:ga19bbc423b3698b2208ee5f70093c6a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante Y de l'échantillon, en virgule fixe. <br /></td></tr>
+<tr class="separator:ga19bbc423b3698b2208ee5f70093c6a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae65c5f2c217f104bcdb6b9a07aa4f5e1"><td class="memItemLeft" ><a id="gae65c5f2c217f104bcdb6b9a07aa4f5e1"></a>
+union {</td></tr>
+<tr class="memitem:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="memItemLeft" >
+&#160;&#160;&#160;float&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga97fbbd297f4435947fad6b1458d1122b">LokiModemSample::y</a></td></tr>
+<tr class="memdesc:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante Y de l'échantillon, en virgule flottante. <br /></td></tr>
+<tr class="separator:ga4efdb5fae9557a1f6ce2c601a0599107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19bbc423b3698b2208ee5f70093c6a11"><td class="memItemLeft" >
+&#160;&#160;&#160;int32_t&#160;&#160;&#160;<a class="el" href="group__LokiModem.html#ga43697f0d5850d33bd23681a5c4eb6c6c">LokiModemSample::y_raw</a></td></tr>
+<tr class="memdesc:ga19bbc423b3698b2208ee5f70093c6a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante Y de l'échantillon, en virgule fixe. <br /></td></tr>
+<tr class="separator:ga19bbc423b3698b2208ee5f70093c6a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae65c5f2c217f104bcdb6b9a07aa4f5e1"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gae65c5f2c217f104bcdb6b9a07aa4f5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La composante Y de l'échantillon. <br /></td></tr>
+<tr class="separator:gae65c5f2c217f104bcdb6b9a07aa4f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<p>Ce module fournit une API en espace utilisateur pour accéder aux composants modulateur et démodulateur du FPGA. </p>
+<p>Il s'appuie sur un module noyay Linux à travers les interfaces IOCTL et MMAP. Ce module noyau implémente les mécanismes de plus bas niveau pour l'accès au matériel (registres, DMA). </p>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ga403c6ba2dd08c836d4e4713ca13eb989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga403c6ba2dd08c836d4e4713ca13eb989">&#9670;&nbsp;</a></span>LokiModem_start_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LokiModem_start_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ssize_t&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>simulate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>raw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Démarrer l'acquisition et le traitement des échantillons démodulés. </p>
+<p>Cette fonction démarre les transferts par DMA depuis le démodulateur. À chaque fois qu'un transfert DMA est terminé, elle copie les données dans la FIFO de sortie.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Les données du modem. </td></tr>
+    <tr><td class="paramname">channel</td><td>Le numéro de la voie, -1 pour acquérir toutes les voies. </td></tr>
+    <tr><td class="paramname">simulate</td><td>Faut-il simuler un capteur logiciellement ? </td></tr>
+    <tr><td class="paramname">raw</td><td>Faut-il conserver les valeurs d'échantillons en virgule fixe ? </td></tr>
+    <tr><td class="paramname">out</td><td>La FIFO où enregistrer les échantillons. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Un code d'erreur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00862">862</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+
+</div>
+</div>
+<a id="ga5d39acc88d3ff94a9312882d0bc1f649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d39acc88d3ff94a9312882d0bc1f649">&#9670;&nbsp;</a></span>LokiModem_stop_streaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiModem_stop_streaming </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiModem.html">LokiModem</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arrêter l'acquisition et le traitement. </p>
+<p>Interrompt l'exécution de la fonction LokiModem_start_streaming.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Les données du modem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-modem_8c_source.html#l00877">877</a> du fichier <a class="el" href="libloki-modem_8c_source.html">libloki-modem.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__LokiModem_ga5d39acc88d3ff94a9312882d0bc1f649_cgraph.png" border="0" usemap="#group__LokiModem_ga5d39acc88d3ff94a9312882d0bc1f649_cgraph" alt=""/></div>
+<map name="group__LokiModem_ga5d39acc88d3ff94a9312882d0bc1f649_cgraph" id="group__LokiModem_ga5d39acc88d3ff94a9312882d0bc1f649_cgraph">
+<area shape="rect" title="Arrêter l&#39;acquisition et le traitement." alt="" coords="5,5,191,32"/>
+<area shape="rect" href="group__LokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="239,5,351,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

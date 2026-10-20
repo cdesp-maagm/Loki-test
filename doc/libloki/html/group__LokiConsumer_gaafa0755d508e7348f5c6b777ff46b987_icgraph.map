@@ -1,0 +1,4 @@
+<map id="LokiConsumer_work" name="LokiConsumer_work">
+<area shape="rect" id="node1" title="Lire les données de la FIFO." alt="" coords="192,5,333,32"/>
+<area shape="rect" id="node2" href="$group__LokiConsumer.html#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur." alt="" coords="5,5,144,32"/>
+</map>

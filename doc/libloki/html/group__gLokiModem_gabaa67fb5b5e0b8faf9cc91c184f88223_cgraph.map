@@ -1,0 +1,5 @@
+<map id="LokiModem_restart" name="LokiModem_restart">
+<area shape="rect" id="node1" title="Redémarrer le modem." alt="" coords="5,31,153,56"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="201,5,356,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="202,55,355,80"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="LokiFIFO_abort" name="LokiFIFO_abort">
+<area shape="rect" id="node1" title="Terminer les attentes en cours." alt="" coords="717,145,837,171"/>
+<area shape="rect" id="node2" href="$group__gLokiConsumer.html#ga3596ff29c7812a18f78bc33c73755c63" title="Arrêter un consommateur." alt="" coords="491,5,641,31"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga25d2fc754531818073da17164ca9db6a" title="Arrêter l&#39;acquisition." alt="" coords="487,55,645,95"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga5d39acc88d3ff94a9312882d0bc1f649" title="Arrêter l&#39;acquisition." alt="" coords="463,120,669,145"/>
+<area shape="rect" id="node7" href="$group__gLokiRecorder.html#gad51a013ed81570ffef5517d88b8f30de" title="Arrêter l&#39;enregistrement." alt="" coords="495,169,637,195"/>
+<area shape="rect" id="node10" href="$group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23" title="Arrêter un serveur." alt="" coords="481,219,651,244"/>
+<area shape="rect" id="node11" href="$group__gLokiSystem.html#ga5b0a59178eb774740066325c1b178397" title="Arrêter l&#39;acquisition et le traitement." alt="" coords="463,268,669,293"/>
+<area shape="rect" id="node5" href="$group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="269,116,407,141"/>
+<area shape="rect" id="node6" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,116,213,141"/>
+<area shape="rect" id="node8" href="$group__gLokiRecorder.html#ga0eccd8310e416110c4b8d38b35bc97f8" title="Gestionnaire d&#39;événements." alt="" coords="261,166,415,206"/>
+<area shape="rect" id="node9" href="$group__gLokiRecorder.html#gafd4447bb457336f3bd5d2a61e2d02be9" title="Attendre la fin de l&#39;enregistrement." alt="" coords="38,173,181,199"/>
+</map>

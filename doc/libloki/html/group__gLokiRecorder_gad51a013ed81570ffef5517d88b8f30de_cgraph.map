@@ -1,0 +1,4 @@
+<map id="LokiRecorder_stop" name="LokiRecorder_stop">
+<area shape="rect" id="node1" title="Arrêter l&#39;enregistrement." alt="" coords="5,5,148,31"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="196,5,316,31"/>
+</map>

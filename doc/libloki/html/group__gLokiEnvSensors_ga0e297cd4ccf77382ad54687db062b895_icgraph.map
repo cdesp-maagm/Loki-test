@@ -1,0 +1,10 @@
+<map id="LokiEnvSensors_get_reg" name="LokiEnvSensors_get_reg">
+<area shape="rect" id="node1" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="635,141,815,166"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga0ec5f0af8af44aed10903abb24ae7ef6" title="Lire la valeur du dernier échantillon acquis sur une voie." alt="" coords="430,5,582,45"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#gae4fc28946ee8a1e02238df371861a901" title="Lire la longueur courante d&#39;un paquet DMA." alt="" coords="430,69,582,109"/>
+<area shape="rect" id="node6" href="$group__gLokiEnvSensors.html#gadf0e53d8c7a5580dbeebb2f24216d2f6" title="Lire la longueur maximale des paquets DMA." alt="" coords="428,133,584,173"/>
+<area shape="rect" id="node7" href="$group__gLokiEnvSensors.html#gae7e8ce5a5470bb0d7271e623d45a20fc" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="425,197,587,237"/>
+<area shape="rect" id="node8" href="$group__gLokiEnvSensors.html#ga96d2d529c200e14e2056cb6a07221b51" title="Construire un module d&#39;acquisition pour les capteurs auxiliaires." alt="" coords="427,262,585,287"/>
+<area shape="rect" id="node4" href="$group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="215,141,377,166"/>
+<area shape="rect" id="node5" href="$group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="5,133,167,173"/>
+</map>

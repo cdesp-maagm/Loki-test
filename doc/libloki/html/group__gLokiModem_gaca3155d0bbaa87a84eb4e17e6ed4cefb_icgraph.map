@@ -1,0 +1,6 @@
+<map id="LokiModem_set_packet_item" name="LokiModem_set_packet_item">
+<area shape="rect" id="node1" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur." alt="" coords="648,5,840,32"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga3fce7ed2b2c9970e15db1ac8e989c429" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="476,5,600,32"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga403c6ba2dd08c836d4e4713ca13eb989" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="241,5,428,32"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga2f82517e62826896d344b39748c4a175" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,5,193,32"/>
+</map>

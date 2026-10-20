@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-raw.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-raw.c<div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a> &raquo; <a class="el" href="group__gLokiRaw.html">Enregistrement de séries temporelles brutes</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki_8h_source.html">libloki.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-raw.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-raw_8c__incl.png" border="0" usemap="#alibloki-raw_8c" loading="lazy" alt=""/></div>
+<map name="alibloki-raw_8c" id="alibloki-raw_8c">
+<area shape="rect" title=" " alt="" coords="1242,5,1343,31"/>
+<area shape="rect" href="libloki_8h.html" title=" " alt="" coords="970,79,1045,104"/>
+<area shape="rect" title=" " alt="" coords="1069,79,1140,104"/>
+<area shape="rect" title=" " alt="" coords="1165,79,1231,104"/>
+<area shape="rect" title=" " alt="" coords="1255,79,1330,104"/>
+<area shape="rect" title=" " alt="" coords="1355,79,1417,104"/>
+<area shape="rect" title=" " alt="" coords="1441,79,1512,104"/>
+<area shape="rect" title=" " alt="" coords="1536,79,1604,104"/>
+<area shape="rect" href="libloki-hooks_8h.html" title=" " alt="" coords="213,152,332,177"/>
+<area shape="rect" href="libloki-fifo_8h.html" title=" " alt="" coords="576,299,676,324"/>
+<area shape="rect" href="libloki-time_8h.html" title=" " alt="" coords="1774,299,1883,324"/>
+<area shape="rect" href="libloki-packet_8h.html" title=" " alt="" coords="1698,225,1821,251"/>
+<area shape="rect" href="libloki-env-sensors_8h.html" title=" " alt="" coords="5,225,164,251"/>
+<area shape="rect" href="libloki-modem_8h.html" title=" " alt="" coords="188,225,317,251"/>
+<area shape="rect" href="libloki-ellipse_8h.html" title=" " alt="" coords="1937,152,2059,177"/>
+<area shape="rect" href="libloki-ellipse-estimator_8h.html" title=" " alt="" coords="1063,225,1253,251"/>
+<area shape="rect" href="libloki-nlms_8h.html" title=" " alt="" coords="1107,152,1217,177"/>
+<area shape="rect" href="libloki-rls_8h.html" title=" " alt="" coords="1241,152,1336,177"/>
+<area shape="rect" href="libloki-kalman_8h.html" title=" " alt="" coords="1360,152,1487,177"/>
+<area shape="rect" href="libloki-fir_8h.html" title=" " alt="" coords="941,299,1031,324"/>
+<area shape="rect" href="libloki-displacement_8h.html" title=" " alt="" coords="864,152,1031,177"/>
+<area shape="rect" href="libloki-system_8h.html" title=" " alt="" coords="661,152,788,177"/>
+<area shape="rect" href="libloki-formatter_8h.html" title=" " alt="" coords="1512,225,1652,251"/>
+<area shape="rect" href="libloki-mseed_8h.html" title=" " alt="" coords="1689,152,1811,177"/>
+<area shape="rect" href="libloki-raw_8h.html" title=" " alt="" coords="1511,152,1613,177"/>
+<area shape="rect" href="libloki-recorder_8h.html" title=" " alt="" coords="560,225,692,251"/>
+<area shape="rect" href="libloki-socket-server_8h.html" title=" " alt="" coords="716,225,883,251"/>
+<area shape="rect" href="libloki-consumer_8h.html" title=" " alt="" coords="341,225,484,251"/>
+<area shape="rect" title=" " alt="" coords="1029,372,1103,397"/>
+<area shape="rect" title=" " alt="" coords="585,372,667,397"/>
+<area shape="rect" title=" " alt="" coords="1687,372,1773,397"/>
+<area shape="rect" title=" " alt="" coords="1798,372,1862,397"/>
+<area shape="rect" title=" " alt="" coords="231,299,301,324"/>
+<area shape="rect" title=" " alt="" coords="110,299,206,324"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="1385,299,1497,324"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="1373,372,1509,397"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-raw_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiRaw" id="r_LokiRaw"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiRaw.html">LokiRaw</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un formateur de données brutes.  <a href="structLokiRaw.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga11394b9444c573a8c98a37491c188d74" id="r_ga11394b9444c573a8c98a37491c188d74"><td class="memItemLeft"><a class="el" href="structLokiRaw.html">LokiRaw</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRaw.html#ga11394b9444c573a8c98a37491c188d74">LokiRaw_new</a> (void *config)</td></tr>
+<tr class="memdesc:ga11394b9444c573a8c98a37491c188d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un formateur de données brutes.  <br /></td></tr>
+<tr class="memitem:gacfce93c6c5932d70a60fb659a775d53d" id="r_gacfce93c6c5932d70a60fb659a775d53d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRaw.html#gacfce93c6c5932d70a60fb659a775d53d">LokiRaw_work</a> (<a class="el" href="structLokiRaw.html">LokiRaw</a> *self, const char *filename, <a class="el" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</td></tr>
+<tr class="memdesc:gacfce93c6c5932d70a60fb659a775d53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer un paquet de données.  <br /></td></tr>
+<tr class="memitem:gaa38e5099d8c9467d2a8b112c67d8be0b" id="r_gaa38e5099d8c9467d2a8b112c67d8be0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRaw.html#gaa38e5099d8c9467d2a8b112c67d8be0b">LokiRaw_close</a> (<a class="el" href="structLokiRaw.html">LokiRaw</a> *self)</td></tr>
+<tr class="memdesc:gaa38e5099d8c9467d2a8b112c67d8be0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fermer un formateur de données brutes.  <br /></td></tr>
+<tr class="memitem:ga6b2790a504e7c8ce2403a1f0e778b98c" id="r_ga6b2790a504e7c8ce2403a1f0e778b98c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiRaw.html#ga6b2790a504e7c8ce2403a1f0e778b98c">LokiRaw_del</a> (<a class="el" href="structLokiRaw.html">LokiRaw</a> *self)</td></tr>
+<tr class="memdesc:ga6b2790a504e7c8ce2403a1f0e778b98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un formateur de données brutes.  <br /></td></tr>
+<tr class="memitem:ga3fb22bde7cf7aa2f832e0a6a8d12ec68" id="r_ga3fb22bde7cf7aa2f832e0a6a8d12ec68"><td class="memItemLeft">
+&#160;</td><td class="memItemRight"><b>LokiClass_implementation</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="structLokiRaw.html">LokiRaw</a>, <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRaw.html">LokiRaw</a>, new) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRaw.html">LokiRaw</a>, work) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRaw.html">LokiRaw</a>, close) <a class="el" href="group__gLokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiRaw.html">LokiRaw</a>, del))</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-raw_8c_source.html">libloki-raw.c</a>.</p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

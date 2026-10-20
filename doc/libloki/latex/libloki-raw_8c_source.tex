@@ -1,0 +1,74 @@
+\doxysection{libloki-\/raw.c}
+\hypertarget{libloki-raw_8c_source}{}\label{libloki-raw_8c_source}\index{libloki-\/raw.c@{libloki-\/raw.c}}
+\doxymbox{\hyperlink{libloki-raw_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki_8h}{libloki.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00015}\doxymbox{\hyperlink{structLokiRaw}{00015}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00017}\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{00017}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}};}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00018}00018\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00020}\doxymbox{\hyperlink{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74}{00020}}\ \doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ *\doxymbox{\hyperlink{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74}{LokiRaw\_new}}(\textcolor{keywordtype}{void}\ *config)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ L'objet\ config\ est\ ignoré}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00022}00022\ \ \ \ \ \doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}));}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00023}00023\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00027}\doxymbox{\hyperlink{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d}{00027}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d}{LokiRaw\_work}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{LokiTimestamp}}\ timestamp,\ \textcolor{keywordtype}{bool}\ file\_change,\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ length,\ \textcolor{keywordtype}{size\_t}\ max\_channels,\ int32\_t\ channels,\ \textcolor{keywordtype}{size\_t}\ sample\_size,\ \textcolor{keywordtype}{float}\ sampling\_frequency)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_change)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ close(self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}});}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ =\ open(filename,\ O\_CREAT\ |\ O\_WRONLY,\ 0644);}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiRaw\_work:\ failed\ to\ create\ file\ \%s\ (\%s)\(\backslash\)n"{}},\ filename,\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ count\ =\ sample\_size\ *\ length;}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (write(self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}},\ data,\ count)\ !=\ count)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}LokiRaw\_work:\ write\ error\ (\%s)\(\backslash\)n"{}},\ strerror(errno));}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00048}\doxymbox{\hyperlink{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}{00048}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}{LokiRaw\_close}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ close(self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}});}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiRaw_a7569e9a49ebe56abd714ac39aa4f2002}{out}}\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00055}\doxymbox{\hyperlink{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c}{00055}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c}{LokiRaw\_del}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00060}00060\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}{LokiRaw\_close}}(self);}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00063}00063\ \ \ \ \ free(self);}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00066}00066\ \doxymbox{\hyperlink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{LokiClass\_implementation}}(\doxymbox{\hyperlink{structLokiFormatter}{LokiFormatter}},\ \doxymbox{\hyperlink{structLokiRaw}{LokiRaw}},}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00067}00067\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}},\ \textcolor{keyword}{new})}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00068}00068\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}},\ work)}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00069}00069\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}},\ close)}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00070}00070\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(\doxymbox{\hyperlink{structLokiRaw}{LokiRaw}},\ del)}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00071}00071\ );}
+\DoxyCodeLine{\Hypertarget{libloki-raw_8c_source_l00072}00072\ }
+
+\end{DoxyCode}

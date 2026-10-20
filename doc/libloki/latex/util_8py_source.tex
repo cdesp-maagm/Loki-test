@@ -1,0 +1,150 @@
+\doxysection{util.\+py}
+\hypertarget{util_8py_source}{}\label{util_8py_source}\index{util.py@{util.py}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00002}00002\ \textcolor{keyword}{import}\ json}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00004}00004\ modem\_channel\_config\_properties\ =\ [}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00005}00005\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_phase\_x"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00006}00006\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_phase\_y"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00007}00007\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_pga\_gain"{}}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00008}00008\ ]}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00010}00010\ \textcolor{comment}{\#\ L'ordre\ des\ noms\ de\ propriétés\ est\ important\ :}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00011}00011\ \textcolor{comment}{\#\ les\ fréquences\ d'échantillonnage\ doivent\ être\ réglées\ en\ premier}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00012}00012\ \textcolor{comment}{\#\ car\ elles\ conditionnent\ la\ résolution\ des\ fréquence\ des\ oscillateurs.}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00013}00013\ modem\_config\_properties\ =\ [}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00014}00014\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_sampling\_frequency"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00015}00015\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_osc1\_wave\_frequency"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00016}00016\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_osc1\_gain"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00017}00017\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_osc2\_wave\_frequency"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00018}00018\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_osc2\_gain"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00019}00019\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_offset"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00020}00020\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_dc\_value"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00021}00021\ \ \ \ \ \textcolor{stringliteral}{"{}mod\_pga\_gain"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00022}00022\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_bypass"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00023}00023\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_sampling\_frequency"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00024}00024\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_osc\_wave\_frequency"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00025}00025\ \ \ \ \ \textcolor{stringliteral}{"{}demod\_xy\_sampling\_frequency"{}}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00026}00026\ ]}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00028}00028\ \textcolor{keyword}{def\ }read\_json(filename):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(filename)\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ json.load(f)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{except}\ FileNotFoundError:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Warning\ -\/\ File\ not\ found:\ '\{\}'.\ Using\ default\ settings."{}}.format(filename))}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{except}\ json.JSONDecodeError:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Warning\ -\/\ Invalid\ JSON\ file:\ '\{\}'.\ Using\ default\ settings."{}}.format(filename))}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{None}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00038}00038\ \textcolor{keyword}{def\ }load\_modem\_config(modem,\ filename):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00039}00039\ \ \ \ \ cfgdict\ =\ read\_json(filename)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ cfgdict\ \textcolor{keywordflow}{is}\ \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00043}00043\ \ \ \ \ \textcolor{comment}{\#\ Traiter\ les\ propriétés\ dans\ l'ordre\ fixé\ par\ modem\_config\_properties.}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ modem\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ name\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ getattr(modem,\ \textcolor{stringliteral}{"{}set\_"{}}\ +\ name)(cfgdict[name])}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{"{}channels\_config"{}}\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ c,\ channel\_cfg\ \textcolor{keywordflow}{in}\ enumerate(cfgdict[\textcolor{stringliteral}{"{}channels\_config"{}}]):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ modem\_channel\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ name\ \textcolor{keywordflow}{in}\ channel\_cfg:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getattr(modem,\ \textcolor{stringliteral}{"{}set\_"{}}\ +\ name)(c,\ channel\_cfg[name])}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00055}00055\ \textcolor{keyword}{def\ }save\_modem\_config(modem,\ filename):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00056}00056\ \ \ \ \ cfgdict\ =\ \{}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}channels\_config"{}}:\ []}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ modem\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ cfgdict[name]\ =\ getattr(modem,\ \textcolor{stringliteral}{"{}get\_"{}}\ +\ name)()}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{for}\ c\ \textcolor{keywordflow}{in}\ range(modem.get\_demod\_channels()):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ channel\_cfg\ =\ \{\}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ modem\_channel\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ channel\_cfg[name]\ =\ getattr(modem,\ \textcolor{stringliteral}{"{}get\_"{}}\ +\ name)(c)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ cfgdict[\textcolor{stringliteral}{"{}channels\_config"{}}].append(channel\_cfg)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{with}\ open(filename,\ \textcolor{stringliteral}{"{}w"{}})\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ json.dump(cfgdict,\ f,\ sort\_keys=\textcolor{keyword}{True},\ indent=4)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00073}00073\ system\_config\_properties\ =\ \{}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00074}00074\ \ \ \ \ \textcolor{stringliteral}{"{}simulate"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00075}00075\ \ \ \ \ \textcolor{stringliteral}{"{}skip"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00076}00076\ \ \ \ \ \textcolor{stringliteral}{"{}wavelength"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00077}00077\ \ \ \ \ \textcolor{stringliteral}{"{}reflections"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00078}00078\ \ \ \ \ \textcolor{stringliteral}{"{}cavity\_index"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00079}00079\ \ \ \ \ \textcolor{stringliteral}{"{}distance\_unit"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00080}00080\ \ \ \ \ \textcolor{stringliteral}{"{}estimator\_name"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00081}00081\ \ \ \ \ \textcolor{stringliteral}{"{}estimator\_throttle"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00082}00082\ \ \ \ \ \textcolor{stringliteral}{"{}estimator\_initial\_radius"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00083}00083\ \ \ \ \ \textcolor{stringliteral}{"{}filter\_bandwidth"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00084}00084\ \ \ \ \ \textcolor{stringliteral}{"{}filter\_attenuation"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00085}00085\ \ \ \ \ \textcolor{stringliteral}{"{}filter\_length"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00086}00086\ \ \ \ \ \textcolor{stringliteral}{"{}filter\_decimation"{}},}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00087}00087\ \ \ \ \ \textcolor{comment}{\#\ Managed\ separately:}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00088}00088\ \ \ \ \ \textcolor{comment}{\#\ "{}time\_constants"{},}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00089}00089\ \ \ \ \ \textcolor{comment}{\#\ "{}estimator\_params"{},}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00090}00090\ \ \ \ \ \textcolor{comment}{\#\ "{}sensors\_scaling\_factors"{}}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00093}00093\ \textcolor{keyword}{def\ }load\_system\_config(syscfg,\ reccfg,\ env\_sensors,\ filename):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00094}00094\ \ \ \ \ cfgdict\ =\ read\_json(filename)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{if}\ cfgdict\ \textcolor{keywordflow}{is}\ \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ reccfg.keys():}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ name\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ reccfg[name]\ =\ cfgdict[name]}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ system\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ name\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ getattr(syscfg,\ \textcolor{stringliteral}{"{}set\_"{}}\ +\ name)(cfgdict[name])}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{"{}estimator\_params"{}}\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i,\ v\ \textcolor{keywordflow}{in}\ enumerate(cfgdict[\textcolor{stringliteral}{"{}estimator\_params"{}}]):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ syscfg.set\_estimator\_param(i,\ v)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{"{}time\_constants"{}}\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i,\ v\ \textcolor{keywordflow}{in}\ enumerate(cfgdict[\textcolor{stringliteral}{"{}time\_constants"{}}]):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ syscfg.set\_time\_constant(i,\ v)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{if}\ env\_sensors\ \textcolor{keywordflow}{is}\ \textcolor{keywordflow}{not}\ \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ c\ =\ env\_sensors.get\_channels()}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{stringliteral}{"{}sensors\_scaling\_factors"{}}\ \textcolor{keywordflow}{in}\ cfgdict:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i,\ v\ \textcolor{keywordflow}{in}\ enumerate(cfgdict[\textcolor{stringliteral}{"{}sensors\_scaling\_factors"{}}]):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ i\ <\ c:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ env\_sensors.set\_scaling\_factor(i,\ v)}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00122}00122\ \textcolor{keyword}{def\ }save\_system\_config(syscfg,\ reccfg,\ env\_sensors,\ filename):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00123}00123\ \ \ \ \ cfgdict\ =\ \{}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ **reccfg,}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}estimator\_params"{}}:\ [],}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}time\_constants"{}}:\ [],}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}sensors\_scaling\_factors"{}}:\ []}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00128}00128\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{for}\ name\ \textcolor{keywordflow}{in}\ system\_config\_properties:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00131}00131\ \ \ \ \ \ \ \ \ cfgdict[name]\ =\ getattr(syscfg,\ \textcolor{stringliteral}{"{}get\_"{}}\ +\ name)()}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00133}00133\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(syscfg.get\_estimator\_params\_length()):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ cfgdict[\textcolor{stringliteral}{"{}estimator\_params"{}}].append(syscfg.get\_estimator\_param(i))}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(syscfg.get\_time\_constants\_length()):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ cfgdict[\textcolor{stringliteral}{"{}time\_constants"{}}].append(syscfg.get\_time\_constant(i))}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{if}\ env\_sensors\ \textcolor{keywordflow}{is}\ \textcolor{keywordflow}{not}\ \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(env\_sensors.get\_channels()):}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ cfgdict[\textcolor{stringliteral}{"{}sensors\_scaling\_factors"{}}].append(env\_sensors.get\_scaling\_factor(i))}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00143}00143\ \ \ \ \ \textcolor{keyword}{with}\ open(filename,\ \textcolor{stringliteral}{"{}w"{}})\ \textcolor{keyword}{as}\ f:}
+\DoxyCodeLine{\Hypertarget{util_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ json.dump(cfgdict,\ f,\ sort\_keys=\textcolor{keyword}{True},\ indent=4)}
+
+\end{DoxyCode}

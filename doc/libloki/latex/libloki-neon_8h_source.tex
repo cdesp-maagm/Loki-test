@@ -1,0 +1,81 @@
+\doxysection{libloki-\/neon.h}
+\hypertarget{libloki-neon_8h_source}{}\label{libloki-neon_8h_source}\index{libloki-\/neon.h@{libloki-\/neon.h}}
+\doxymbox{\hyperlink{libloki-neon_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00016}00016\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_NEON\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ LIBLOKI\_NEON\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00019}00019\ \textcolor{preprocessor}{\#ifdef\ \_\_ARM\_NEON}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <arm\_neon.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00023}00023\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00026}\doxymbox{\hyperlink{structfloat32x2__t}{00026}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00028}\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{00028}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[2];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00029}00029\ \}\ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00032}\doxymbox{\hyperlink{unionfloat32x4__t}{00032}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00034}\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{00034}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[4];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00036}\doxymbox{\hyperlink{structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0____}{00036}}\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ \doxymbox{\hyperlink{structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0_____ab5d7fd181a190df8eb6e6b4a5d48426e}{low}};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ \doxymbox{\hyperlink{structfloat32x4__t_1_1_0fstruct_0e_8____unnamed0_____a5237c4309ab33bacfe9276fbc5fd72cb}{high}};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00041}00041\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00042}00042\ \}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00050}\doxymbox{\hyperlink{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57}{00050}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_gaba27536d26fcbc97a15f400f73972e57}{vadd\_f32}}(\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ a,\ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00051}00051\ \ \ \ \ a.\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[0]\ +=\ b.\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[0];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00052}00052\ \ \ \ \ a.\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[1]\ +=\ b.\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[1];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00062}\doxymbox{\hyperlink{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0}{00062}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{group__gLokiNeon_ga5d641bccda9d8e8f640b8143d0e665e0}{vget\_lane\_f32}}(\doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ a,\ \textcolor{keywordtype}{size\_t}\ i)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{return}\ a.\doxymbox{\hyperlink{structfloat32x2__t_a55861b73436a6e1ee64ecdf0fe7a2581}{val}}[i];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00071}\doxymbox{\hyperlink{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67}{00071}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga596baa99e028d163e0c5677c7df63a67}{vmovq\_n\_f32}}(\textcolor{keywordtype}{float}\ a)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ (\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ .val\ =\ \{a,\ a,\ a,\ a\}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00074}00074\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00082}\doxymbox{\hyperlink{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd}{00082}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga43644674ee0d3be5ad07d70f5514e4dd}{vld1q\_f32}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *a)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{return}\ *(\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}*)a;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00091}\doxymbox{\hyperlink{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d}{00091}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_gabbf872ea2fc8ef09526511ff3b92768d}{vget\_low\_f32}}(\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ a)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ a.low;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00100}\doxymbox{\hyperlink{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2}{00100}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{structfloat32x2__t}{float32x2\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga0a8ed8e46776dc54632b64f4a45550d2}{vget\_high\_f32}}(\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ a)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{return}\ a.high;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00111}\doxymbox{\hyperlink{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f}{00111}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga4850b6090cca948746e81838676bcc8f}{vld1q\_lane\_f32}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *a,\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ b,\ \textcolor{keywordtype}{size\_t}\ i)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00112}00112\ \ \ \ \ b.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i]\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{return}\ b;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00122}\doxymbox{\hyperlink{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1}{00122}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga7e2b584d069001335fd779fbfa3aa8b1}{vmulq\_f32}}(\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ a,\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 4;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ a.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i]\ *=\ b.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00127}00127\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00136}\doxymbox{\hyperlink{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf}{00136}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ \doxymbox{\hyperlink{group__gLokiNeon_ga1984dad8a1957ac5e5c7f2429d82a5cf}{vmlaq\_f32}}(\doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ a,\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ b,\ \doxymbox{\hyperlink{unionfloat32x4__t}{float32x4\_t}}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ 4;\ i\ ++)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00138}00138\ \ \ \ \ \ \ \ \ a.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i]\ +=\ b.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i]\ *\ c.\doxymbox{\hyperlink{unionfloat32x4__t_ae48b6a89cf2525d33a4279dd427dfb45}{val}}[i];}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00139}00139\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00140}00140\ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00141}00141\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00143}00143\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00145}00145\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-neon_8h_source_l00146}00146\ }
+
+\end{DoxyCode}

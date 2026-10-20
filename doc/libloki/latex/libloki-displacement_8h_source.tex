@@ -1,0 +1,31 @@
+\doxysection{libloki-\/displacement.h}
+\hypertarget{libloki-displacement_8h_source}{}\label{libloki-displacement_8h_source}\index{libloki-\/displacement.h@{libloki-\/displacement.h}}
+\doxymbox{\hyperlink{libloki-displacement_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00012}00012\ \textcolor{preprocessor}{\#ifndef\ LIBLOKI\_DISPLACEMENT\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ LIBLOKI\_DISPLACEMENT\_H\_}}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-fir_8h}{libloki-\/fir.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki-ellipse-estimator_8h}{libloki-\/ellipse-\/estimator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00019}\doxymbox{\hyperlink{group__gLokiDisplacement_ga0b3ee7ce8410d418822184fa420a565d}{00019}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ \doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}};}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00037}00037\ \doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *\doxymbox{\hyperlink{group__gLokiDisplacement_gaf7841c05f1bb0499f67baf6148b86351}{LokiDisplacement\_new}}(\doxymbox{\hyperlink{structLokiEllipseEstimator}{LokiEllipseEstimator}}\ *\doxymbox{\hyperlink{structLokiDisplacement_a076979b0a8bcef0a2cacb8499bd51d80}{estimator}},\ \doxymbox{\hyperlink{structLokiFIRFilter}{LokiFIRFilter}}\ *\doxymbox{\hyperlink{structLokiDisplacement_adc250198fb11d039a244246c9e9a54c8}{filter}},\ \textcolor{keywordtype}{unsigned}\ throttle,\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structLokiDisplacement_a0d9ffacda9d2cd3d8ae1d4d45ba8c503}{scale}},\ \textcolor{keywordtype}{float}\ tau[\textcolor{keyword}{static}\ 3],\ \textcolor{keywordtype}{float}\ sampling\_frequency);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00044}00044\ \doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *\doxymbox{\hyperlink{group__gLokiDisplacement_ga36dea76243bf4820fd30bc6f98855396}{LokiDisplacement\_clone}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *other);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00059}00059\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gLokiDisplacement_ga0e2aeab5fc6812642102197bd75c26c1}{LokiDisplacement\_work}}(\doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *self,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ *x\_norm,\ \textcolor{keywordtype}{float}\ *y\_norm,\ \textcolor{keywordtype}{float}\ *out);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b}{LokiDisplacement\_reset}}(\doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00072}00072\ \doxymbox{\hyperlink{structLokiEllipse}{LokiEllipse}}\ *\doxymbox{\hyperlink{group__gLokiDisplacement_ga8ea969c9065e9f3ebf9d91932e94bfe5}{LokiDisplacement\_get\_ellipse}}(\doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00078}00078\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiDisplacement_ga52cfeb45e5dd95bea7f6ac4327cf3e80}{LokiDisplacement\_del}}(\doxymbox{\hyperlink{structLokiDisplacement}{LokiDisplacement}}\ *self);}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00080}00080\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{libloki-displacement_8h_source_l00081}00081\ }
+
+\end{DoxyCode}

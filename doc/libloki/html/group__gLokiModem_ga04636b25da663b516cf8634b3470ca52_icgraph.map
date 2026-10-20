@@ -1,0 +1,7 @@
+<map id="LokiModem_dma_stop" name="LokiModem_dma_stop">
+<area shape="rect" id="node1" title="Demander au circuit de modulation/démodulation d&#39;arrêter les transferts DMA." alt="" coords="739,31,908,56"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga67df2ec5e65c1887e895f4a73e8865a3" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="517,5,691,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="535,55,673,80"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,55,469,80"/>
+<area shape="rect" id="node5" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,55,213,80"/>
+</map>

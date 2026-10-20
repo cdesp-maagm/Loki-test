@@ -1,0 +1,7 @@
+<map id="LokiModem_get_demod_delay_x_max" name="LokiModem_get_demod_delay_x_max">
+<area shape="rect" id="node1" title="Lire le retard maximal applicable à la composante X (I) du signal démodulé pour une voie." alt="" coords="232,101,411,141"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gac60900447f60f45adfb7ed4867902f8e" title="Lire le déphasage appliqué à la composante X (I) du signal démodulé pour une voie." alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga0ddcff3affce533824513e84ed8b2f13" title="Lire le déphasage maximal applicable à la composante X (I) du signal démodulé pour une voie." alt="" coords="5,69,184,109"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gac1229a4a631f3504978ac78369a812bf" title="Lire le pas de réglage du déphasage applicable à la composante X (I) du signal démodulé pour une voie..." alt="" coords="5,133,184,173"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#gaf0714c10db4b9dd9af015706532fab6a" title="Affecter un déphasage à la composante X (I) du signal démodulé pour une voie." alt="" coords="6,197,183,237"/>
+</map>

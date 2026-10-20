@@ -1,0 +1,46 @@
+\doxysection{Référence du fichier libloki-\/nlms.c}
+\hypertarget{libloki-nlms_8c}{}\label{libloki-nlms_8c}\index{libloki-\/nlms.c@{libloki-\/nlms.c}}
+{\ttfamily \+\#include "{}libloki-\/nlms.\+h"{}}\newline
+{\ttfamily \+\#include "{}libloki-\/ellipse.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/nlms.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}
+\begin{DoxyCompactList}\small\item\em Représentattion d\textquotesingle{}un filtre NLMS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiNLMS_ga27520f191041dfb5256574ddf3012916}{NLMS\+\_\+\+NU}}~1.\+0e-\/30f
+\begin{DoxyCompactList}\small\item\em Correction des poids du filtre pour éviter une division par zéro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga223f503319f72940e4a72e35603688d1}{Loki\+NLMS\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 2]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre NLMS. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga53265a2ce95e05007398c56b172a6581}{Loki\+NLMS\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre NLMS. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiNLMS_ga3a15a3fd08cb442d5ca0653259c36655}{Loki\+NLMS\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiNLMS_gac85c1545cbecebc3991e12e35c69e4b4}{Loki\+NLMS\+\_\+work}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiNLMS_ga7c3da7c54b9cead5e36c5be832d04a1f}{Loki\+NLMS\+\_\+del}} (\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre NLMS. \end{DoxyCompactList}\item 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(params\+\_\+length, 2) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiNLMS}{Loki\+NLMS}}, del))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-nlms_8c_source}{libloki-\/nlms.\+c}}.
+

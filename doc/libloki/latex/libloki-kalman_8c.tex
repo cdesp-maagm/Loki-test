@@ -1,0 +1,42 @@
+\doxysection{Référence du fichier libloki-\/kalman.c}
+\hypertarget{libloki-kalman_8c}{}\label{libloki-kalman_8c}\index{libloki-\/kalman.c@{libloki-\/kalman.c}}
+{\ttfamily \+\#include "{}libloki-\/kalman.\+h"{}}\newline
+{\ttfamily \+\#include "{}libloki-\/ellipse.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/kalman.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23}{Loki\+Kalman\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 3]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre de Kalman. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6}{Loki\+Kalman\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054}{Loki\+Kalman\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6}{Loki\+Kalman\+\_\+work}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5}{Loki\+Kalman\+\_\+del}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre de Kalman. \end{DoxyCompactList}\item 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(params\+\_\+length, 3) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, clone) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, get\+\_\+state) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}}, del))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-kalman_8c_source}{libloki-\/kalman.\+c}}.
+

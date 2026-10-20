@@ -1,0 +1,40 @@
+\doxysection{Référence du fichier libloki-\/kalman.h}
+\hypertarget{libloki-kalman_8h}{}\label{libloki-kalman_8h}\index{libloki-\/kalman.h@{libloki-\/kalman.h}}
+{\ttfamily \+\#include "{}libloki-\/ellipse-\/estimator.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/kalman.h:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :
+% FIG 1
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Kalman \doxymbox{\hyperlink{group__gLokiKalman_ga5d595bfc88e801f22e05add7e6572739}{Loki\+Kalman}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga0d9b7cc8859c8b18f9ccc2fac47b4d23}{Loki\+Kalman\+\_\+new}} (float initial\+\_\+radius, const float params\+[static 3]\+)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau filtre de Kalman. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_gae1de220a46ec966f9d7fc30fff678ce6}{Loki\+Kalman\+\_\+clone}} (const \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}other)
+\begin{DoxyCompactList}\small\item\em Construire un clone d\textquotesingle{}un filtre de Kalman. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_ga2ec7d2bcf42b57753cf4c1135cc63ef6}{Loki\+Kalman\+\_\+work}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self, float x, float y)
+\begin{DoxyCompactList}\small\item\em Mettre à jour les paramètres de l\textquotesingle{}ellipse pour une nouvelle paire de coordonnées. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiKalman_ga9dd2d0bf56568b60cd21fb1f5fae4054}{Loki\+Kalman\+\_\+get\+\_\+state}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Retourner l\textquotesingle{}état courant du filtre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiKalman_gad1eafbecc1476c32df47cb901ea44ce5}{Loki\+Kalman\+\_\+del}} (\doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un filtre de Kalman. \end{DoxyCompactList}\item 
+{\bfseries Loki\+Class\+\_\+declare\+\_\+implementation} (\doxymbox{\hyperlink{structLokiEllipseEstimator}{Loki\+Ellipse\+Estimator}}, \doxymbox{\hyperlink{structLokiKalman}{Loki\+Kalman}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-kalman_8h_source}{libloki-\/kalman.\+h}}.
+

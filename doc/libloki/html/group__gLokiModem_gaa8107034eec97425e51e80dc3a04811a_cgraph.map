@@ -1,0 +1,4 @@
+<map id="LokiModem_is_streaming" name="LokiModem_is_streaming">
+<area shape="rect" id="node1" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="5,5,195,31"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga1a3bec25b7f9818c130c317e79b3bca2" title="Lire l&#39;état des transferts DMA." alt="" coords="243,5,468,31"/>
+</map>

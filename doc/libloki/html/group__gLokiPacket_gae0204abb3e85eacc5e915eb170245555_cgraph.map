@@ -1,0 +1,4 @@
+<map id="LokiPacket_get_length" name="LokiPacket_get_length">
+<area shape="rect" id="node1" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="5,5,172,31"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="220,5,397,31"/>
+</map>

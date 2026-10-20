@@ -1,0 +1,1396 @@
+\doxysubsection{Gestion des acquisitions et du calcul de déplacement }
+\hypertarget{group__gLokiSystem}{}\label{group__gLokiSystem}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+
+
+Un système rassemble un \doxylink{group__gLokiModem}{modem} et un \doxylink{group__gLokiDisplacement}{calculateur de déplacement}.  
+
+
+Graphe de collaboration de Gestion des acquisitions et du calcul de déplacement:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-system_8c}{libloki-\/system.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-system_8h}{libloki-\/system.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}}
+\begin{DoxyCompactList}\small\item\em Les paramètres de configuration d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de traitement. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structLokiSystemSample}{Loki\+System\+Sample}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un échantillon en sortie d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+System\+Config \doxymbox{\hyperlink{group__gLokiSystem_gaaa7e01df6c0f16dd011132c131436414}{Loki\+System\+Config}}
+\begin{DoxyCompactList}\small\item\em Paramètres de configuration d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+typedef struct Loki\+System \doxymbox{\hyperlink{group__gLokiSystem_ga9d2558c9006381cbcd39a82afa901d77}{Loki\+System}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de calcul de déplacement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997}{Loki\+System\+Config\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b}{Loki\+System\+Config\+\_\+del}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841}{Loki\+System\+Config\+\_\+get\+\_\+skip}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le temps d\textquotesingle{}attente au démarrage. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5}{Loki\+System\+Config\+\_\+set\+\_\+skip}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un temps d\textquotesingle{}attente au démarrage. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0}{Loki\+System\+Config\+\_\+get\+\_\+simulate}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état d\textquotesingle{}activation de la simulation des capteurs de déplacement. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe}{Loki\+System\+Config\+\_\+set\+\_\+simulate}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, bool value)
+\begin{DoxyCompactList}\small\item\em Activer ou désactiver la simulation des capteurs de déplacement. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a}{Loki\+System\+Config\+\_\+get\+\_\+scale}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le facteur d\textquotesingle{}échelle de déplacement. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e}{Loki\+System\+Config\+\_\+get\+\_\+wavelength}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur d\textquotesingle{}onde de la diode laser. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3}{Loki\+System\+Config\+\_\+set\+\_\+wavelength}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Écrire la longueur d\textquotesingle{}onde de la diode laser. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb}{Loki\+System\+Config\+\_\+get\+\_\+reflections}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de réflexions supposé. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f}{Loki\+System\+Config\+\_\+set\+\_\+reflections}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, unsigned value)
+\begin{DoxyCompactList}\small\item\em Écrire le nombre de réflexions supposé. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b}{Loki\+System\+Config\+\_\+get\+\_\+cavity\+\_\+index}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gab04647c634e62c7452730d95d525af43}{Loki\+System\+Config\+\_\+set\+\_\+cavity\+\_\+index}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Écrire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46}{Loki\+System\+Config\+\_\+get\+\_\+distance\+\_\+unit}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}unité du déplacement calculé. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700}{Loki\+System\+Config\+\_\+set\+\_\+distance\+\_\+unit}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, char value)
+\begin{DoxyCompactList}\small\item\em Écrire l\textquotesingle{}unité du déplacement calculé. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_gada0540089bb3af061badae98523ed1d5}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a}{Loki\+System\+Config\+\_\+set\+\_\+time\+\_\+constants}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const float \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Affecter un tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+name}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+name}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Affecter un nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{group__gLokiSystem_gad89804c4e91841078432a3347f53e2a2}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+throttle}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga1af5f8b5405e2f299c0b1e6fdf394614}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+throttle}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, unsigned value)
+\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+initial\+\_\+radius}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+initial\+\_\+radius}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire les paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece}{Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+params}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, const float \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Affecter des paramètres pour le filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+bandwidth}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la bande passante du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+bandwidth}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter un bande passante pour le filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+attenuation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}atténuation du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+attenuation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, float value)
+\begin{DoxyCompactList}\small\item\em Affecter une atténuation pour le filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+length}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter une longueur au filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98}{Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+decimation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le facteur de décimation du filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a}{Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+decimation}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter un facteur de décimation au filtre d\textquotesingle{}élimination du déplacement fictif. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga84434fa604921c7470b81c375921807f}{Loki\+System\+\_\+new}} (\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}config, \doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}modem)
+\begin{DoxyCompactList}\small\item\em Construire un nouveau système. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b}{Loki\+System\+\_\+get\+\_\+config}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la configuration d\textquotesingle{}un système. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783}{Loki\+System\+\_\+get\+\_\+modem}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le modem utilisé par ce système. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8}{Loki\+System\+\_\+get\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage en sortie de ce système. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f}{Loki\+System\+\_\+displacement\+\_\+reset}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Mettre à zéro le déplacement calculé. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_gad239747d22dd513e4bab292592f7807e}{Loki\+System\+\_\+work}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Calculer le déplacement à partir des données démodulées. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}{Loki\+System\+\_\+start\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self, int32\+\_\+t channels, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}modem\+\_\+out, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}disp\+\_\+out, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer l\textquotesingle{}acquisition et le traitement. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga5b0a59178eb774740066325c1b178397}{Loki\+System\+\_\+stop\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition et le traitement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600}{Loki\+System\+\_\+is\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8}{Loki\+System\+\_\+get\+\_\+ellipse}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la dernière ellipse estimée. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f}{Loki\+System\+\_\+del}} (\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un système. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*}const \doxymbox{\hyperlink{group__gLokiSystem_ga945192da5448f10d0763b4e7ab91ba43}{Loki\+System\+Config\+\_\+estimator\+\_\+names}} \+[$\,$]
+\begin{DoxyCompactList}\small\item\em Les noms des filtres adaptatifs supportés pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\item 
+static const Loki\+Ellipse\+Estimator\+Interface \texorpdfstring{$\ast$}{*}const \doxymbox{\hyperlink{group__gLokiSystem_ga9a389709411b7a060893570bc2d0337b}{Loki\+System\+Config\+\_\+estimator\+\_\+impls}} \+[$\,$]
+\begin{DoxyCompactList}\small\item\em Les implémentations des filtres adaptatifs supportés pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Un système rassemble un \doxylink{group__gLokiModem}{modem} et un \doxylink{group__gLokiDisplacement}{calculateur de déplacement}. 
+
+
+
+\label{group__gLokiSystem_doc-typedef-members}
+\Hypertarget{group__gLokiSystem_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiSystem_ga9d2558c9006381cbcd39a82afa901d77}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem@{LokiSystem}}
+\index{LokiSystem@{LokiSystem}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem}{LokiSystem}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga9d2558c9006381cbcd39a82afa901d77} 
+typedef struct Loki\+System Loki\+System}
+
+
+
+Représentation d\textquotesingle{}un système d\textquotesingle{}acquisition et de calcul de déplacement. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8h_source_l00293}{293}} du fichier \doxymbox{\hyperlink{libloki-system_8h_source}{libloki-\/system.\+h}}.
+
+\Hypertarget{group__gLokiSystem_gaaa7e01df6c0f16dd011132c131436414}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig@{LokiSystemConfig}}
+\index{LokiSystemConfig@{LokiSystemConfig}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig}{LokiSystemConfig}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaaa7e01df6c0f16dd011132c131436414} 
+typedef struct Loki\+System\+Config Loki\+System\+Config}
+
+
+
+Paramètres de configuration d\textquotesingle{}une instance de \doxylink{structLokiSystem}{Loki\+System}. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8h_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-system_8h_source}{libloki-\/system.\+h}}.
+
+
+
+\label{group__gLokiSystem_doc-func-members}
+\Hypertarget{group__gLokiSystem_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_del@{LokiSystem\_del}}
+\index{LokiSystem\_del@{LokiSystem\_del}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_del()}{LokiSystem\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga2245a65df417d1ffb8e5d7c3b805ec8f} 
+void Loki\+System\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un système. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00573}{573}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_displacement\_reset@{LokiSystem\_displacement\_reset}}
+\index{LokiSystem\_displacement\_reset@{LokiSystem\_displacement\_reset}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_displacement\_reset()}{LokiSystem\_displacement\_reset()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gab9bbe589511d2d9ba0a0571d4c5a3c3f} 
+void Loki\+System\+\_\+displacement\+\_\+reset (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Mettre à zéro le déplacement calculé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à modifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Voir également}
+\doxylink{group__gLokiDisplacement_gafd60b0ca41d52718bc816e84eea79a7b}{Loki\+Displacement\+\_\+reset} 
+\end{DoxySeeAlso}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00363}{363}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_config@{LokiSystem\_get\_config}}
+\index{LokiSystem\_get\_config@{LokiSystem\_get\_config}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_get\_config()}{LokiSystem\_get\_config()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gadfce0cbb0923a14092b07fa15eab9e3b} 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} Loki\+System\+\_\+get\+\_\+config (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la configuration d\textquotesingle{}un système. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La configuration attachée à ce système. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00351}{351}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_ellipse@{LokiSystem\_get\_ellipse}}
+\index{LokiSystem\_get\_ellipse@{LokiSystem\_get\_ellipse}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_get\_ellipse()}{LokiSystem\_get\_ellipse()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga062604dae489b0b761e40a063bb3fdf8} 
+\doxymbox{\hyperlink{structLokiEllipse}{Loki\+Ellipse}} \texorpdfstring{$\ast$}{*} Loki\+System\+\_\+get\+\_\+ellipse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{size\+\_\+t}]{channel}{}\end{DoxyParamCaption})}
+
+
+
+Lire la dernière ellipse estimée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à interroger. \\
+\hline
+{\em channel} & La voie à observer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La dernière ellipse estimée pour cette voie. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00569}{569}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_modem@{LokiSystem\_get\_modem}}
+\index{LokiSystem\_get\_modem@{LokiSystem\_get\_modem}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_get\_modem()}{LokiSystem\_get\_modem()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga32bf76313ba92afb364c00940b1f2783} 
+\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*} Loki\+System\+\_\+get\+\_\+modem (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le modem utilisé par ce système. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le modem attaché à ce système. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00355}{355}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_sampling\_frequency@{LokiSystem\_get\_sampling\_frequency}}
+\index{LokiSystem\_get\_sampling\_frequency@{LokiSystem\_get\_sampling\_frequency}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_get\_sampling\_frequency()}{LokiSystem\_get\_sampling\_frequency()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaab6533e9d6b9bfa464a9a30e242133a8} 
+float Loki\+System\+\_\+get\+\_\+sampling\+\_\+frequency (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la fréquence d\textquotesingle{}échantillonnage en sortie de ce système. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La fréquence d\textquotesingle{}échantillonnage du signal de déplacement. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00359}{359}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+\Hypertarget{group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_is\_streaming@{LokiSystem\_is\_streaming}}
+\index{LokiSystem\_is\_streaming@{LokiSystem\_is\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_is\_streaming()}{LokiSystem\_is\_streaming()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaa5cdd311ea731e8f21ea13dc5a6b6600} 
+bool Loki\+System\+\_\+is\+\_\+streaming (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}acquisition est en cours. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00565}{565}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 13
+Voici le graphe des appelants de cette fonction :
+% FIG 14
+\Hypertarget{group__gLokiSystem_ga84434fa604921c7470b81c375921807f}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_new@{LokiSystem\_new}}
+\index{LokiSystem\_new@{LokiSystem\_new}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_new()}{LokiSystem\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga84434fa604921c7470b81c375921807f} 
+\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*} Loki\+System\+\_\+new (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{config}{, }\item[{\doxymbox{\hyperlink{structLokiModem}{Loki\+Modem}} \texorpdfstring{$\ast$}{*}}]{modem}{}\end{DoxyParamCaption})}
+
+
+
+Construire un nouveau système. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em config} & La configuration à utiliser. \\
+\hline
+{\em modem} & Le modem à utliser, {\ttfamily NULL} pour en instancier un nouveau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une nouvelle instance de \doxylink{structLokiSystem}{Loki\+System}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00295}{295}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 15
+Voici le graphe des appelants de cette fonction :
+% FIG 16
+\Hypertarget{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_start\_streaming@{LokiSystem\_start\_streaming}}
+\index{LokiSystem\_start\_streaming@{LokiSystem\_start\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_start\_streaming()}{LokiSystem\_start\_streaming()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568} 
+int Loki\+System\+\_\+start\+\_\+streaming (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{int32\+\_\+t}]{channels}{, }\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{modem\+\_\+out}{, }\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{disp\+\_\+out}{, }\item[{size\+\_\+t}]{cid}{}\end{DoxyParamCaption})}
+
+
+
+Démarrer l\textquotesingle{}acquisition et le traitement. 
+
+Cette fonction est non bloquante. Elle crée un nouveau thread pour le traitement des données en provenance du modem et démarre celui-\/ci.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à démarrer. \\
+\hline
+{\em channels} & Un masque indiquant les voies à traiter, -\/1 pour toutes les voies. \\
+\hline
+{\em modem\+\_\+out} & La FIFO qui recevra les données de sortie du démodulateur. \\
+\hline
+{\em disp\+\_\+out} & La FIFO qui recevra les valeurs de déplacement. \\
+\hline
+{\em cid} & Le numéro de consommateur de ce système pour la FIFO {\ttfamily modem\+\_\+out}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le code d\textquotesingle{}erreur retourné par \doxylink{group__gLokiModem_ga6cf7d6738460b7362a7bab87ff323efa}{Loki\+Modem\+\_\+start\+\_\+streaming} 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00527}{527}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 17
+Voici le graphe des appelants de cette fonction :
+% FIG 18
+\Hypertarget{group__gLokiSystem_ga5b0a59178eb774740066325c1b178397}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_stop\_streaming@{LokiSystem\_stop\_streaming}}
+\index{LokiSystem\_stop\_streaming@{LokiSystem\_stop\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_stop\_streaming()}{LokiSystem\_stop\_streaming()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga5b0a59178eb774740066325c1b178397} 
+void Loki\+System\+\_\+stop\+\_\+streaming (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystem}{Loki\+System}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Arrêter l\textquotesingle{}acquisition et le traitement. 
+
+Interrompt l\textquotesingle{}exécution du thread lancé par la fonction \doxylink{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}{Loki\+System\+\_\+start\+\_\+streaming}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le système à arrêter. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00550}{550}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 19
+Voici le graphe des appelants de cette fonction :
+% FIG 20
+\Hypertarget{group__gLokiSystem_gad239747d22dd513e4bab292592f7807e}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_work@{LokiSystem\_work}}
+\index{LokiSystem\_work@{LokiSystem\_work}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystem\_work()}{LokiSystem\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gad239747d22dd513e4bab292592f7807e} 
+void \texorpdfstring{$\ast$}{*} Loki\+System\+\_\+work (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculer le déplacement à partir des données démodulées. 
+
+Cette fonction est exécutée dans un thread démarré par \doxylink{group__gLokiSystem_ga04a5c88f3de5a3f48b4d73bfdfd31568}{Loki\+System\+\_\+start\+\_\+streaming}. Elle consomme les données de la FIFO d\textquotesingle{}entrée et alimente la FIFO de sortie, jusqu\textquotesingle{}à la demande d\textquotesingle{}arrêt par \doxylink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{Loki\+Consumer\+\_\+stop}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ptr} & Le système courant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00380}{380}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 21
+Voici le graphe des appelants de cette fonction :
+% FIG 22
+\Hypertarget{group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_del@{LokiSystemConfig\_del}}
+\index{LokiSystemConfig\_del@{LokiSystemConfig\_del}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_del()}{LokiSystemConfig\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga2dca93ca28ef0e45201d2dbc1c80008b} 
+void Loki\+System\+Config\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & L\textquotesingle{}instance de \doxylink{structLokiSystemConfig}{Loki\+System\+Config} à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00102}{102}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 23
+Voici le graphe des appelants de cette fonction :
+% FIG 24
+\Hypertarget{group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_cavity\_index@{LokiSystemConfig\_get\_cavity\_index}}
+\index{LokiSystemConfig\_get\_cavity\_index@{LokiSystemConfig\_get\_cavity\_index}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_cavity\_index()}{LokiSystemConfig\_get\_cavity\_index()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga530e80ea2d00e00e8aad456b2fa81a6b} 
+float Loki\+System\+Config\+\_\+get\+\_\+cavity\+\_\+index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de réflexions. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00152}{152}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 25
+Voici le graphe des appelants de cette fonction :
+% FIG 26
+\Hypertarget{group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_distance\_unit@{LokiSystemConfig\_get\_distance\_unit}}
+\index{LokiSystemConfig\_get\_distance\_unit@{LokiSystemConfig\_get\_distance\_unit}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_distance\_unit()}{LokiSystemConfig\_get\_distance\_unit()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga7248fe35fa7907125b340fb438e22c46} 
+char Loki\+System\+Config\+\_\+get\+\_\+distance\+\_\+unit (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}unité du déplacement calculé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le préfixe de l\textquotesingle{}unité de déplacement (\textquotesingle{}p\textquotesingle{}, \textquotesingle{}n\textquotesingle{} \textquotesingle{}u\textquotesingle{}, \textquotesingle{}m\textquotesingle{}). 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00160}{160}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 27
+Voici le graphe des appelants de cette fonction :
+% FIG 28
+\Hypertarget{group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_initial\_radius@{LokiSystemConfig\_get\_estimator\_initial\_radius}}
+\index{LokiSystemConfig\_get\_estimator\_initial\_radius@{LokiSystemConfig\_get\_estimator\_initial\_radius}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_estimator\_initial\_radius()}{LokiSystemConfig\_get\_estimator\_initial\_radius()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga40f788600dda29882f223cfa9fe1b957} 
+float Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+initial\+\_\+radius (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le rayon initial. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00209}{209}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 29
+Voici le graphe des appelants de cette fonction :
+% FIG 30
+\Hypertarget{group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_name@{LokiSystemConfig\_get\_estimator\_name}}
+\index{LokiSystemConfig\_get\_estimator\_name@{LokiSystemConfig\_get\_estimator\_name}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_estimator\_name()}{LokiSystemConfig\_get\_estimator\_name()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga0b00cee5bd3aedc44a56a576c82447bb} 
+const char \texorpdfstring{$\ast$}{*} Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nom du filtre d\textquotesingle{}estimation. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00182}{182}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 31
+Voici le graphe des appelants de cette fonction :
+% FIG 32
+\Hypertarget{group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_params@{LokiSystemConfig\_get\_estimator\_params}}
+\index{LokiSystemConfig\_get\_estimator\_params@{LokiSystemConfig\_get\_estimator\_params}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_estimator\_params()}{LokiSystemConfig\_get\_estimator\_params()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga205120cbb843744980b6aa6c52723cf0} 
+float \texorpdfstring{$\ast$}{*} Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire les paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+Les paramètres se présentent sous la forme d\textquotesingle{}un tableau dont la longueur est accessible à l\textquotesingle{}aide de la fonction \doxylink{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params\+\_\+length}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un tableau de paramètres. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00217}{217}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 33
+Voici le graphe des appelants de cette fonction :
+% FIG 34
+\Hypertarget{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_params\_length@{LokiSystemConfig\_get\_estimator\_params\_length}}
+\index{LokiSystemConfig\_get\_estimator\_params\_length@{LokiSystemConfig\_get\_estimator\_params\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_estimator\_params\_length()}{LokiSystemConfig\_get\_estimator\_params\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8} 
+size\+\_\+t Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le nombre de paramètres du filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de paramètres. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00221}{221}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 35
+Voici le graphe des appelants de cette fonction :
+% FIG 36
+\Hypertarget{group__gLokiSystem_gad89804c4e91841078432a3347f53e2a2}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_throttle@{LokiSystemConfig\_get\_estimator\_throttle}}
+\index{LokiSystemConfig\_get\_estimator\_throttle@{LokiSystemConfig\_get\_estimator\_throttle}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_estimator\_throttle()}{LokiSystemConfig\_get\_estimator\_throttle()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gad89804c4e91841078432a3347f53e2a2} 
+unsigned Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+throttle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00201}{201}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_attenuation@{LokiSystemConfig\_get\_filter\_attenuation}}
+\index{LokiSystemConfig\_get\_filter\_attenuation@{LokiSystemConfig\_get\_filter\_attenuation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_filter\_attenuation()}{LokiSystemConfig\_get\_filter\_attenuation()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga7ae78631a32b123f794af98974c3aac7} 
+float Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+attenuation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}atténuation du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}atténuation, en dB. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00243}{243}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 37
+Voici le graphe des appelants de cette fonction :
+% FIG 38
+\Hypertarget{group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_bandwidth@{LokiSystemConfig\_get\_filter\_bandwidth}}
+\index{LokiSystemConfig\_get\_filter\_bandwidth@{LokiSystemConfig\_get\_filter\_bandwidth}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_filter\_bandwidth()}{LokiSystemConfig\_get\_filter\_bandwidth()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga49068f6da977f5aecf4a87bae3f1597e} 
+float Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+bandwidth (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la bande passante du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La bande passante du filtre, en Hz. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00235}{235}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 39
+Voici le graphe des appelants de cette fonction :
+% FIG 40
+\Hypertarget{group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_decimation@{LokiSystemConfig\_get\_filter\_decimation}}
+\index{LokiSystemConfig\_get\_filter\_decimation@{LokiSystemConfig\_get\_filter\_decimation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_filter\_decimation()}{LokiSystemConfig\_get\_filter\_decimation()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaabf95e7685531e248f75a74173fcca98} 
+size\+\_\+t Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+decimation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le facteur de décimation du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le facteur de décimation du filtre. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00259}{259}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 41
+Voici le graphe des appelants de cette fonction :
+% FIG 42
+\Hypertarget{group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_length@{LokiSystemConfig\_get\_filter\_length}}
+\index{LokiSystemConfig\_get\_filter\_length@{LokiSystemConfig\_get\_filter\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_filter\_length()}{LokiSystemConfig\_get\_filter\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaec4afc9c50b994d7a693f96c4dbf0187} 
+size\+\_\+t Loki\+System\+Config\+\_\+get\+\_\+filter\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la longueur du filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de coefficients du filtre. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00251}{251}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 43
+Voici le graphe des appelants de cette fonction :
+% FIG 44
+\Hypertarget{group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_reflections@{LokiSystemConfig\_get\_reflections}}
+\index{LokiSystemConfig\_get\_reflections@{LokiSystemConfig\_get\_reflections}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_reflections()}{LokiSystemConfig\_get\_reflections()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaf2a77eda3c08dadba7c1491b368782cb} 
+unsigned Loki\+System\+Config\+\_\+get\+\_\+reflections (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le nombre de réflexions supposé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de réflexions. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00144}{144}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 45
+Voici le graphe des appelants de cette fonction :
+% FIG 46
+\Hypertarget{group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_scale@{LokiSystemConfig\_get\_scale}}
+\index{LokiSystemConfig\_get\_scale@{LokiSystemConfig\_get\_scale}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_scale()}{LokiSystemConfig\_get\_scale()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga30372de63105c78b1a00a2048ed5f62a} 
+float Loki\+System\+Config\+\_\+get\+\_\+scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le facteur d\textquotesingle{}échelle de déplacement. 
+
+Le résultat est calculé en fonction des paramètres de longueur d\textquotesingle{}onde, nombre de réflexions, indice de la cavité, unité de distance.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La valeur du facteur d\textquotesingle{}échelle de déplacement. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00125}{125}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 47
+Voici le graphe des appelants de cette fonction :
+% FIG 48
+\Hypertarget{group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_simulate@{LokiSystemConfig\_get\_simulate}}
+\index{LokiSystemConfig\_get\_simulate@{LokiSystemConfig\_get\_simulate}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_simulate()}{LokiSystemConfig\_get\_simulate()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga9034c8dd18b4ac086fa7114310fc2ed0} 
+bool Loki\+System\+Config\+\_\+get\+\_\+simulate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire l\textquotesingle{}état d\textquotesingle{}activation de la simulation des capteurs de déplacement. 
+
+Le paramètre {\ttfamily simulate} active un mode de simulation des capteurs de déplacement dans le système à configurer.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Une configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la configuration prévoit une simulation des capteurs de déplacement. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00117}{117}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 49
+Voici le graphe des appelants de cette fonction :
+% FIG 50
+\Hypertarget{group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_skip@{LokiSystemConfig\_get\_skip}}
+\index{LokiSystemConfig\_get\_skip@{LokiSystemConfig\_get\_skip}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_skip()}{LokiSystemConfig\_get\_skip()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga407cecd8cdb13b82c183d2261afa6841} 
+float Loki\+System\+Config\+\_\+get\+\_\+skip (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le temps d\textquotesingle{}attente au démarrage. 
+
+Le paramètre {\ttfamily skip} définit le nombre de secondes d\textquotesingle{}attente avant de commencer à remplir la FIFO des données de déplacement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Une configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le temps d\textquotesingle{}attente, en secondes. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00109}{109}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 51
+Voici le graphe des appelants de cette fonction :
+% FIG 52
+\Hypertarget{group__gLokiSystem_gada0540089bb3af061badae98523ed1d5}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_time\_constants@{LokiSystemConfig\_get\_time\_constants}}
+\index{LokiSystemConfig\_get\_time\_constants@{LokiSystemConfig\_get\_time\_constants}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_time\_constants()}{LokiSystemConfig\_get\_time\_constants()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gada0540089bb3af061badae98523ed1d5} 
+float \texorpdfstring{$\ast$}{*} Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire le tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. 
+
+La longueur de ce tableau peut être connue en appelant la fonction \doxylink{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants\+\_\+length}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le tableau de constantes de temps. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00168}{168}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 53
+Voici le graphe des appelants de cette fonction :
+% FIG 54
+\Hypertarget{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_time\_constants\_length@{LokiSystemConfig\_get\_time\_constants\_length}}
+\index{LokiSystemConfig\_get\_time\_constants\_length@{LokiSystemConfig\_get\_time\_constants\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_time\_constants\_length()}{LokiSystemConfig\_get\_time\_constants\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb} 
+size\+\_\+t Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la longueur du tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de constantes de temps. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00172}{172}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 55
+Voici le graphe des appelants de cette fonction :
+% FIG 56
+\Hypertarget{group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_wavelength@{LokiSystemConfig\_get\_wavelength}}
+\index{LokiSystemConfig\_get\_wavelength@{LokiSystemConfig\_get\_wavelength}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_get\_wavelength()}{LokiSystemConfig\_get\_wavelength()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gac8a7bf74f2c5566ca316459a2eed863e} 
+float Loki\+System\+Config\+\_\+get\+\_\+wavelength (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Lire la longueur d\textquotesingle{}onde de la diode laser. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La longueur d\textquotesingle{}onde de la diode laser, en nm. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00136}{136}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 57
+Voici le graphe des appelants de cette fonction :
+% FIG 58
+\Hypertarget{group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_new@{LokiSystemConfig\_new}}
+\index{LokiSystemConfig\_new@{LokiSystemConfig\_new}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_new()}{LokiSystemConfig\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga3d2bff594ea0d200940e256e773c7997} 
+\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*} Loki\+System\+Config\+\_\+new (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Construire une configuration pour une instance de \doxylink{structLokiSystem}{Loki\+System}. 
+
+\begin{DoxyReturn}{Renvoie}
+Une instance de \doxylink{structLokiSystemConfig}{Loki\+System\+Config}. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00065}{65}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 59
+Voici le graphe des appelants de cette fonction :
+% FIG 60
+\Hypertarget{group__gLokiSystem_gab04647c634e62c7452730d95d525af43}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_cavity\_index@{LokiSystemConfig\_set\_cavity\_index}}
+\index{LokiSystemConfig\_set\_cavity\_index@{LokiSystemConfig\_set\_cavity\_index}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_cavity\_index()}{LokiSystemConfig\_set\_cavity\_index()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gab04647c634e62c7452730d95d525af43} 
+void Loki\+System\+Config\+\_\+set\+\_\+cavity\+\_\+index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Écrire l\textquotesingle{}indice de la cavité de Fabry-\/\+Pérot. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le nouvel indice de la cavité de Fabry-\/\+Pérot. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00156}{156}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 61
+Voici le graphe des appelants de cette fonction :
+% FIG 62
+\Hypertarget{group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_distance\_unit@{LokiSystemConfig\_set\_distance\_unit}}
+\index{LokiSystemConfig\_set\_distance\_unit@{LokiSystemConfig\_set\_distance\_unit}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_distance\_unit()}{LokiSystemConfig\_set\_distance\_unit()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga1605dee67c453d6bdd7bfdfdd98ff700} 
+void Loki\+System\+Config\+\_\+set\+\_\+distance\+\_\+unit (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{char}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Écrire l\textquotesingle{}unité du déplacement calculé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le nouveau préfixe de l\textquotesingle{}unité de déplacement (\textquotesingle{}p\textquotesingle{}, \textquotesingle{}n\textquotesingle{} \textquotesingle{}u\textquotesingle{}, \textquotesingle{}m\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00164}{164}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 63
+Voici le graphe des appelants de cette fonction :
+% FIG 64
+\Hypertarget{group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_initial\_radius@{LokiSystemConfig\_set\_estimator\_initial\_radius}}
+\index{LokiSystemConfig\_set\_estimator\_initial\_radius@{LokiSystemConfig\_set\_estimator\_initial\_radius}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_estimator\_initial\_radius()}{LokiSystemConfig\_set\_estimator\_initial\_radius()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaedbeea2702ffda640e50c59761749d87} 
+void Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+initial\+\_\+radius (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un rayon initial à utiliser lors de l\textquotesingle{}estimation des paramètres d\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le rayon initial. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00213}{213}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 65
+Voici le graphe des appelants de cette fonction :
+% FIG 66
+\Hypertarget{group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_name@{LokiSystemConfig\_set\_estimator\_name}}
+\index{LokiSystemConfig\_set\_estimator\_name@{LokiSystemConfig\_set\_estimator\_name}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_estimator\_name()}{LokiSystemConfig\_set\_estimator\_name()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga990eea68733aca82e0fd03ab761d15af} 
+void Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un nom de l\textquotesingle{}estimateur de paramètres d\textquotesingle{}ellipse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em name} & Le nom du filtre d\textquotesingle{}estimation à utiliser. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00191}{191}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 67
+Voici le graphe des appelants de cette fonction :
+% FIG 68
+\Hypertarget{group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_params@{LokiSystemConfig\_set\_estimator\_params}}
+\index{LokiSystemConfig\_set\_estimator\_params@{LokiSystemConfig\_set\_estimator\_params}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_estimator\_params()}{LokiSystemConfig\_set\_estimator\_params()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga0af8a5b202c7523c9aff41b33fb8cece} 
+void Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+params (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const float \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter des paramètres pour le filtre d\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+Les paramètres se présentent sous la forme d\textquotesingle{}un tableau dont la longueur doit être égale à la valeur retournée par la fonction \doxylink{group__gLokiSystem_gad93375fc1cad85c4c1aac74270adc8b8}{Loki\+System\+Config\+\_\+get\+\_\+estimator\+\_\+params\+\_\+length}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Un tableau de paramètres. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00225}{225}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 69
+Voici le graphe des appelants de cette fonction :
+% FIG 70
+\Hypertarget{group__gLokiSystem_ga1af5f8b5405e2f299c0b1e6fdf394614}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_throttle@{LokiSystemConfig\_set\_estimator\_throttle}}
+\index{LokiSystemConfig\_set\_estimator\_throttle@{LokiSystemConfig\_set\_estimator\_throttle}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_estimator\_throttle()}{LokiSystemConfig\_set\_estimator\_throttle()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga1af5f8b5405e2f299c0b1e6fdf394614} 
+void Loki\+System\+Config\+\_\+set\+\_\+estimator\+\_\+throttle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{unsigned}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00205}{205}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_attenuation@{LokiSystemConfig\_set\_filter\_attenuation}}
+\index{LokiSystemConfig\_set\_filter\_attenuation@{LokiSystemConfig\_set\_filter\_attenuation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_filter\_attenuation()}{LokiSystemConfig\_set\_filter\_attenuation()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga6b815fe2832fc0485c1458344f1ecf01} 
+void Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+attenuation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter une atténuation pour le filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & L\textquotesingle{}atténuation, en dB. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00247}{247}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 71
+Voici le graphe des appelants de cette fonction :
+% FIG 72
+\Hypertarget{group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_bandwidth@{LokiSystemConfig\_set\_filter\_bandwidth}}
+\index{LokiSystemConfig\_set\_filter\_bandwidth@{LokiSystemConfig\_set\_filter\_bandwidth}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_filter\_bandwidth()}{LokiSystemConfig\_set\_filter\_bandwidth()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gaf1571ee8a8994eaea9ba804c3bbd515a} 
+void Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+bandwidth (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un bande passante pour le filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & La bande passante du filtre, en Hz. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00239}{239}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 73
+Voici le graphe des appelants de cette fonction :
+% FIG 74
+\Hypertarget{group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_decimation@{LokiSystemConfig\_set\_filter\_decimation}}
+\index{LokiSystemConfig\_set\_filter\_decimation@{LokiSystemConfig\_set\_filter\_decimation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_filter\_decimation()}{LokiSystemConfig\_set\_filter\_decimation()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga3e0ff251046e6eee8eef84f07350b31a} 
+void Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+decimation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{size\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un facteur de décimation au filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le facteur de décimation du filtre. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00263}{263}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 75
+Voici le graphe des appelants de cette fonction :
+% FIG 76
+\Hypertarget{group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_length@{LokiSystemConfig\_set\_filter\_length}}
+\index{LokiSystemConfig\_set\_filter\_length@{LokiSystemConfig\_set\_filter\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_filter\_length()}{LokiSystemConfig\_set\_filter\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gadf8bdd8ddd10ddf12cfae087745727bf} 
+void Loki\+System\+Config\+\_\+set\+\_\+filter\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{size\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter une longueur au filtre d\textquotesingle{}élimination du déplacement fictif. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le nombre de coefficients du filtre. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00255}{255}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 77
+Voici le graphe des appelants de cette fonction :
+% FIG 78
+\Hypertarget{group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_reflections@{LokiSystemConfig\_set\_reflections}}
+\index{LokiSystemConfig\_set\_reflections@{LokiSystemConfig\_set\_reflections}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_reflections()}{LokiSystemConfig\_set\_reflections()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga3dbad0a94c65d92c90941d73b1fa696f} 
+void Loki\+System\+Config\+\_\+set\+\_\+reflections (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{unsigned}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Écrire le nombre de réflexions supposé. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & Le nouveau nombre de réflexions. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00148}{148}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 79
+Voici le graphe des appelants de cette fonction :
+% FIG 80
+\Hypertarget{group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_simulate@{LokiSystemConfig\_set\_simulate}}
+\index{LokiSystemConfig\_set\_simulate@{LokiSystemConfig\_set\_simulate}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_simulate()}{LokiSystemConfig\_set\_simulate()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_gae520a184f3a388ee6097e0979f8ef3fe} 
+void Loki\+System\+Config\+\_\+set\+\_\+simulate (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{bool}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Activer ou désactiver la simulation des capteurs de déplacement. 
+
+Le paramètre {\ttfamily simulate} active un mode de simulation des capteurs de déplacement dans le système à configurer.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Une configuration à modifier. \\
+\hline
+{\em value} & true pour indiquer qu\textquotesingle{}il faut simuler les capteurs de déplacement. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00121}{121}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 81
+Voici le graphe des appelants de cette fonction :
+% FIG 82
+\Hypertarget{group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_skip@{LokiSystemConfig\_set\_skip}}
+\index{LokiSystemConfig\_set\_skip@{LokiSystemConfig\_set\_skip}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_skip()}{LokiSystemConfig\_set\_skip()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga43eb663bd85c190094eefd2472ab55c5} 
+void Loki\+System\+Config\+\_\+set\+\_\+skip (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un temps d\textquotesingle{}attente au démarrage. 
+
+Le paramètre {\ttfamily skip} définit le nombre de secondes d\textquotesingle{}attente avant de commencer à remplir la FIFO des données de déplacement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Une configuration à modifier. \\
+\hline
+{\em value} & Le nouveau temps d\textquotesingle{}attente, en secondes. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00113}{113}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 83
+Voici le graphe des appelants de cette fonction :
+% FIG 84
+\Hypertarget{group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_time\_constants@{LokiSystemConfig\_set\_time\_constants}}
+\index{LokiSystemConfig\_set\_time\_constants@{LokiSystemConfig\_set\_time\_constants}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_time\_constants()}{LokiSystemConfig\_set\_time\_constants()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga12fc80784aea471f95577e4b34f15e1a} 
+void Loki\+System\+Config\+\_\+set\+\_\+time\+\_\+constants (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const float \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Affecter un tableau de constantes de temps pour le filtrage des paramètres de l\textquotesingle{}ellipse. 
+
+La longueur de ce tableau doit être égale à la valeur retournée par la fonction \doxylink{group__gLokiSystem_ga4c2ec59c273bbe74d31a6802f97c81cb}{Loki\+System\+Config\+\_\+get\+\_\+time\+\_\+constants\+\_\+length}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à interroger. \\
+\hline
+{\em value} & Le nombre de constantes de temps. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00176}{176}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 85
+Voici le graphe des appelants de cette fonction :
+% FIG 86
+\Hypertarget{group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_wavelength@{LokiSystemConfig\_set\_wavelength}}
+\index{LokiSystemConfig\_set\_wavelength@{LokiSystemConfig\_set\_wavelength}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_set\_wavelength()}{LokiSystemConfig\_set\_wavelength()}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga65dc7bbdf3f140b4b78aa8a9126526a3} 
+void Loki\+System\+Config\+\_\+set\+\_\+wavelength (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiSystemConfig}{Loki\+System\+Config}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Écrire la longueur d\textquotesingle{}onde de la diode laser. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La configuration à modifier. \\
+\hline
+{\em value} & La nouvelle longueur d\textquotesingle{}onde de la diode laser, en nm. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00140}{140}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 87
+Voici le graphe des appelants de cette fonction :
+% FIG 88
+
+
+\label{group__gLokiSystem_doc-var-members}
+\Hypertarget{group__gLokiSystem_doc-var-members}
+\doxysubsubsection{Documentation des variables}
+\Hypertarget{group__gLokiSystem_ga9a389709411b7a060893570bc2d0337b}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_estimator\_impls@{LokiSystemConfig\_estimator\_impls}}
+\index{LokiSystemConfig\_estimator\_impls@{LokiSystemConfig\_estimator\_impls}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_estimator\_impls}{LokiSystemConfig\_estimator\_impls}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga9a389709411b7a060893570bc2d0337b} 
+const Loki\+Ellipse\+Estimator\+Interface\texorpdfstring{$\ast$}{*} const Loki\+System\+Config\+\_\+estimator\+\_\+impls\+[$\,$]\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Valeur initiale :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \&LokiRLSClass,\ \&LokiNLMSClass,\ \&LokiKalmanClass}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Les implémentations des filtres adaptatifs supportés pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00061}{61}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+
+\Hypertarget{group__gLokiSystem_ga945192da5448f10d0763b4e7ab91ba43}\index{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_estimator\_names@{LokiSystemConfig\_estimator\_names}}
+\index{LokiSystemConfig\_estimator\_names@{LokiSystemConfig\_estimator\_names}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}}
+\doxysubsubsubsection{\texorpdfstring{LokiSystemConfig\_estimator\_names}{LokiSystemConfig\_estimator\_names}}
+{\footnotesize\ttfamily \label{group__gLokiSystem_ga945192da5448f10d0763b4e7ab91ba43} 
+const char\texorpdfstring{$\ast$}{*} const Loki\+System\+Config\+\_\+estimator\+\_\+names\+[$\,$]\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Valeur initiale :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}rls"{}},\ \textcolor{stringliteral}{"{}nlms"{}},\ \textcolor{stringliteral}{"{}kalman"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Les noms des filtres adaptatifs supportés pour l\textquotesingle{}estimation des paramètres de l\textquotesingle{}ellipse. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-system_8c_source_l00056}{56}} du fichier \doxymbox{\hyperlink{libloki-system_8c_source}{libloki-\/system.\+c}}.
+

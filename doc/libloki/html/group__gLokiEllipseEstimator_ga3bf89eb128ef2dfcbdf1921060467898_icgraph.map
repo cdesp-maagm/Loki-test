@@ -1,0 +1,6 @@
+<map id="LokiEllipseEstimator_get_state" name="LokiEllipseEstimator_get_state">
+<area shape="rect" id="node1" title="Retourner l&#39;état courant de l&#39;estimateur." alt="" coords="673,5,828,45"/>
+<area shape="rect" id="node2" href="$group__gLokiDisplacement.html#ga0e2aeab5fc6812642102197bd75c26c1" title="Calculer le déplacement courant." alt="" coords="447,13,625,38"/>
+<area shape="rect" id="node3" href="$group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="261,13,399,38"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,13,213,38"/>
+</map>

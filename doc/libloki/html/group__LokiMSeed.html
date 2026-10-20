@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Bloc d&#39;enregistrement de données au format miniSEED.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Bloc d'enregistrement de données au format miniSEED.</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce bloc implémente l'interface <a class="el" href="structLokiFormatter.html">LokiFormatter</a>. Il s'appuie sur la bibliothèque libmseed de l'IRIS.  
+<a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiMSeedInputSample.html">LokiMSeedInputSample</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionLokiMSeedOutputSample.html">LokiMSeedOutputSample</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLokiMSeed.html">LokiMSeed</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2f37cc76e8b3cdaf2ba22de5e314e651"><td class="memItemLeft" align="right" valign="top"><a id="ga2f37cc76e8b3cdaf2ba22de5e314e651"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHANNEL_NAME_LEN</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ga2f37cc76e8b3cdaf2ba22de5e314e651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae35423396dc4d9d76efe24f7cd5d0f44"><td class="memItemLeft" align="right" valign="top"><a id="gae35423396dc4d9d76efe24f7cd5d0f44"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MSEED_FILENAME_SUFFIX_LEN</b>&#160;&#160;&#160;(CHANNEL_NAME_LEN + 7)</td></tr>
+<tr class="separator:gae35423396dc4d9d76efe24f7cd5d0f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae18b59e922e6992a4642f749ce2c08f6"><td class="memItemLeft" align="right" valign="top"><a id="gae18b59e922e6992a4642f749ce2c08f6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MSEED_RECLEN</b>&#160;&#160;&#160;512</td></tr>
+<tr class="separator:gae18b59e922e6992a4642f749ce2c08f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga1abf2faddffba06494e5cd6df5b62b71"><td class="memItemLeft" align="right" valign="top"><a id="ga1abf2faddffba06494e5cd6df5b62b71"></a>
+typedef struct <a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeedConfig</b></td></tr>
+<tr class="separator:ga1abf2faddffba06494e5cd6df5b62b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad28337b6ee0e6eefa9e5055208839f1d"><td class="memItemLeft" align="right" valign="top"><a id="gad28337b6ee0e6eefa9e5055208839f1d"></a>
+typedef struct <a class="el" href="structLokiMSeed.html">LokiMSeed</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeed</b></td></tr>
+<tr class="separator:gad28337b6ee0e6eefa9e5055208839f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaccc491d08ba646fe33bc7dc50b5f34ce"><td class="memItemLeft" align="right" valign="top"><a id="gaccc491d08ba646fe33bc7dc50b5f34ce"></a>
+<a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeedConfig_new</b> (bool separate_channels, const char *station, const char *location, const char *network, bool steim2, const char *channel_names)</td></tr>
+<tr class="separator:gaccc491d08ba646fe33bc7dc50b5f34ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8987eac779b7ca81e375eed8bf1df39b"><td class="memItemLeft" align="right" valign="top"><a id="ga8987eac779b7ca81e375eed8bf1df39b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeedConfig_del</b> (<a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *self)</td></tr>
+<tr class="separator:ga8987eac779b7ca81e375eed8bf1df39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga221c91d70be47fc5d37f8adb3befc3f8"><td class="memItemLeft" align="right" valign="top"><a id="ga221c91d70be47fc5d37f8adb3befc3f8"></a>
+<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeed_new</b> (<a class="el" href="structLokiMSeedConfig.html">LokiMSeedConfig</a> *config)</td></tr>
+<tr class="separator:ga221c91d70be47fc5d37f8adb3befc3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ad680e30c188bdb3bab5253e0f3fa15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LokiMSeed.html#ga4ad680e30c188bdb3bab5253e0f3fa15">LokiMSeed_work</a> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self, const char *filename, LokiTimestamp timestamp, bool file_change, void *data, size_t length, size_t channels, size_t sample_size, float sampling_frequency)</td></tr>
+<tr class="memdesc:ga4ad680e30c188bdb3bab5253e0f3fa15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer un buffer de données au format miniSEED.  <a href="group__LokiMSeed.html#ga4ad680e30c188bdb3bab5253e0f3fa15">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ga4ad680e30c188bdb3bab5253e0f3fa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5595492db02f9142435569f7f5be7702"><td class="memItemLeft" align="right" valign="top"><a id="ga5595492db02f9142435569f7f5be7702"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeed_close</b> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self)</td></tr>
+<tr class="separator:ga5595492db02f9142435569f7f5be7702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48e4baaa7bf097b70867237f57fd335d"><td class="memItemLeft" align="right" valign="top"><a id="ga48e4baaa7bf097b70867237f57fd335d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LokiMSeed_del</b> (<a class="el" href="structLokiMSeed.html">LokiMSeed</a> *self)</td></tr>
+<tr class="separator:ga48e4baaa7bf097b70867237f57fd335d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2336a8d017373a81f0c9ae111a247a2"><td class="memItemLeft" align="right" valign="top"><a id="gab2336a8d017373a81f0c9ae111a247a2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LokiClass_implementation</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="structLokiMSeed.html">LokiMSeed</a>, <a class="el" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, new) <a class="el" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, work) <a class="el" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, close) <a class="el" href="group__LokiClass.html#ga6da5df82ee2afb9112000c287919133f">LokiClass_define_method</a>(<a class="el" href="structLokiMSeed.html">LokiMSeed</a>, del))</td></tr>
+<tr class="separator:gab2336a8d017373a81f0c9ae111a247a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6c9592172dd8f7c2a47854438c7c970"><td class="memItemLeft" align="right" valign="top"><a id="gac6c9592172dd8f7c2a47854438c7c970"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LokiClass_declare_implementation</b> (<a class="el" href="structLokiFormatter.html">LokiFormatter</a>, <a class="el" href="structLokiMSeed.html">LokiMSeed</a>)</td></tr>
+<tr class="separator:gac6c9592172dd8f7c2a47854438c7c970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<p>Ce bloc implémente l'interface <a class="el" href="structLokiFormatter.html">LokiFormatter</a>. Il s'appuie sur la bibliothèque libmseed de l'IRIS. </p>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ga4ad680e30c188bdb3bab5253e0f3fa15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ad680e30c188bdb3bab5253e0f3fa15">&#9670;&nbsp;</a></span>LokiMSeed_work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LokiMSeed_work </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLokiMSeed.html">LokiMSeed</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LokiTimestamp&#160;</td>
+          <td class="paramname"><em>timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>file_change</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>sample_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sampling_frequency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enregistrer un buffer de données au format miniSEED. </p>
+<p>Cette fonction attend un tableau d'échantillons dont les éléments ont un type de la forme :</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Sample {</div>
+<div class="line">    uint32_t channel;</div>
+<div class="line">    <span class="keywordtype">float</span> value;</div>
+<div class="line">    ... <span class="comment">// Autres données spécifiques</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>On doit avoir <code>sample_size == sizeof(struct Sample)</code> </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-mseed_8c_source.html#l00118">118</a> du fichier <a class="el" href="libloki-mseed_8c_source.html">libloki-mseed.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

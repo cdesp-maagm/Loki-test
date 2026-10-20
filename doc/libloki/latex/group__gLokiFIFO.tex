@@ -1,0 +1,312 @@
+\doxysubsection{Structure de données FIFO }
+\hypertarget{group__gLokiFIFO}{}\label{group__gLokiFIFO}\index{Structure de données FIFO@{Structure de données FIFO}}
+
+
+File d\textquotesingle{}attente multi-\/consommateur pour communication entre threads.  
+
+
+Graphe de collaboration de Structure de données FIFO:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-fifo_8c}{libloki-\/fifo.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-fifo_8h}{libloki-\/fifo.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}une FIFO. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structLokiFIFORecord}{Loki\+FIFORecord}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un enregistrement dans une FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+FIFORecord \doxymbox{\hyperlink{group__gLokiFIFO_ga3253055266904680cb4d74fe3093c508}{Loki\+FIFORecord}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un enregistrement dans une FIFO. \end{DoxyCompactList}\item 
+typedef struct Loki\+FIFO \doxymbox{\hyperlink{group__gLokiFIFO_ga9809c8ea8fd596bac8faed62a50d615d}{Loki\+FIFO}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}une FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}{Loki\+FIFO\+\_\+new}} (size\+\_\+t item\+\_\+size, size\+\_\+t length, size\+\_\+t consumers)
+\begin{DoxyCompactList}\small\item\em Créer une FIFO. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}{Loki\+FIFO\+\_\+del}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire une FIFO. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}{Loki\+FIFO\+\_\+get\+\_\+item\+\_\+size}} (const \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Obtenir la taille d\textquotesingle{}un élément de la FIFO, en octets. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}{Loki\+FIFO\+\_\+get\+\_\+producer\+\_\+item}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Obtenir une référence vers l\textquotesingle{}élément courant en écriture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}{Loki\+FIFO\+\_\+push}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Valider l\textquotesingle{}élément courant en écriture. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{Loki\+FIFO\+\_\+get\+\_\+consumer\+\_\+item}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Obtenir une référence vers l\textquotesingle{}élément courant en lecture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{Loki\+FIFO\+\_\+pull}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Libérer l\textquotesingle{}élément courant en lecture. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{Loki\+FIFO\+\_\+abort}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Terminer les attentes en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+File d\textquotesingle{}attente multi-\/consommateur pour communication entre threads. 
+
+
+
+\label{group__gLokiFIFO_doc-typedef-members}
+\Hypertarget{group__gLokiFIFO_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiFIFO_ga9809c8ea8fd596bac8faed62a50d615d}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO@{LokiFIFO}}
+\index{LokiFIFO@{LokiFIFO}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO}{LokiFIFO}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga9809c8ea8fd596bac8faed62a50d615d} 
+typedef struct Loki\+FIFO Loki\+FIFO}
+
+
+
+Représentation d\textquotesingle{}une FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8h_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-fifo_8h_source}{libloki-\/fifo.\+h}}.
+
+\Hypertarget{group__gLokiFIFO_ga3253055266904680cb4d74fe3093c508}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFORecord@{LokiFIFORecord}}
+\index{LokiFIFORecord@{LokiFIFORecord}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFORecord}{LokiFIFORecord}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga3253055266904680cb4d74fe3093c508} 
+typedef struct Loki\+FIFORecord Loki\+FIFORecord}
+
+
+
+Représentation d\textquotesingle{}un enregistrement dans une FIFO. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00011}{11}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+
+
+\label{group__gLokiFIFO_doc-func-members}
+\Hypertarget{group__gLokiFIFO_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_abort@{LokiFIFO\_abort}}
+\index{LokiFIFO\_abort@{LokiFIFO\_abort}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_abort()}{LokiFIFO\_abort()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21} 
+void Loki\+FIFO\+\_\+abort (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Terminer les attentes en cours. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à interrompre. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00180}{180}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_del@{LokiFIFO\_del}}
+\index{LokiFIFO\_del@{LokiFIFO\_del}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_del()}{LokiFIFO\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga53fadc179b294d35e3ed7f7d55671f3a} 
+void Loki\+FIFO\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire une FIFO. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00095}{95}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_consumer\_item@{LokiFIFO\_get\_consumer\_item}}
+\index{LokiFIFO\_get\_consumer\_item@{LokiFIFO\_get\_consumer\_item}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_get\_consumer\_item()}{LokiFIFO\_get\_consumer\_item()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5} 
+void \texorpdfstring{$\ast$}{*} Loki\+FIFO\+\_\+get\+\_\+consumer\+\_\+item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{size\+\_\+t}]{cid}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir une référence vers l\textquotesingle{}élément courant en lecture. 
+
+Cette fonction retourne un pointeur sur un élément disponible en lecture dans la FIFO. Le consommateur peut traiter cet élément et appeler Loki\+FIFO\+\_\+pull lorsque le traitement est terminé.
+
+Cette fonction bloque le producteur tant que la FIFO est vide.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à interroger. \\
+\hline
+{\em cid} & L\textquotesingle{}identifiant du consommateur courant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence vers un élément disponible en lecture. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00142}{142}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_item\_size@{LokiFIFO\_get\_item\_size}}
+\index{LokiFIFO\_get\_item\_size@{LokiFIFO\_get\_item\_size}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_get\_item\_size()}{LokiFIFO\_get\_item\_size()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_gaa57901e87eacff515a67b913d69e5229} 
+size\+\_\+t Loki\+FIFO\+\_\+get\+\_\+item\+\_\+size (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir la taille d\textquotesingle{}un élément de la FIFO, en octets. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La taille d\textquotesingle{}un élément, en octets. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00102}{102}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8
+\Hypertarget{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_producer\_item@{LokiFIFO\_get\_producer\_item}}
+\index{LokiFIFO\_get\_producer\_item@{LokiFIFO\_get\_producer\_item}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_get\_producer\_item()}{LokiFIFO\_get\_producer\_item()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_gac4ae3143767c6ead1aaae6b0bdb3e463} 
+void \texorpdfstring{$\ast$}{*} Loki\+FIFO\+\_\+get\+\_\+producer\+\_\+item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Obtenir une référence vers l\textquotesingle{}élément courant en écriture. 
+
+Cette fonction retourne un pointeur sur un élément disponible en écriture dans la FIFO. Le producteur peut modifier cet élément et appeler Loki\+FIFO\+\_\+push pour valider les modifications.
+
+Cette fonction bloque le producteur tant que la FIFO est pleine.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à interroger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence vers un élément disponible en écriture. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00106}{106}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 9
+Voici le graphe des appelants de cette fonction :
+% FIG 10
+\Hypertarget{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_new@{LokiFIFO\_new}}
+\index{LokiFIFO\_new@{LokiFIFO\_new}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_new()}{LokiFIFO\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga6772f40ab458b60abd3e8b87bca259b1} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} Loki\+FIFO\+\_\+new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{item\+\_\+size}{, }\item[{size\+\_\+t}]{length}{, }\item[{size\+\_\+t}]{consumers}{}\end{DoxyParamCaption})}
+
+
+
+Créer une FIFO. 
+
+Cette fonction alloue l\textquotesingle{}espace nécessaire pour enregistrer des buffers de données.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em item\+\_\+size} & La taille d\textquotesingle{}un élément, en octets. \\
+\hline
+{\em length} & Le nombre d\textquotesingle{}éléments. \\
+\hline
+{\em consumers} & Le nombre de consommateurs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une nouvelle FIFO. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00060}{60}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 11
+Voici le graphe des appelants de cette fonction :
+% FIG 12
+\Hypertarget{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_pull@{LokiFIFO\_pull}}
+\index{LokiFIFO\_pull@{LokiFIFO\_pull}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_pull()}{LokiFIFO\_pull()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8} 
+void Loki\+FIFO\+\_\+pull (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{size\+\_\+t}]{cid}{}\end{DoxyParamCaption})}
+
+
+
+Libérer l\textquotesingle{}élément courant en lecture. 
+
+Avant d\textquotesingle{}appeler cette fonction, le producteur doit obtenir une référence vers l\textquotesingle{}élément à lire en appelant Loki\+FIFO\+\_\+get\+\_\+consumer\+\_\+item. Cette fonction décrémente le niveau courant de la FIFO.
+
+Cette fonction bloque le consommateur jusqu\textquotesingle{}à ce que l\textquotesingle{}élément courant ait été consommé par tous les consommateurs.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à modifier. \\
+\hline
+{\em cid} & L\textquotesingle{}identifiant du consommateur courant. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00160}{160}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 13
+Voici le graphe des appelants de cette fonction :
+% FIG 14
+\Hypertarget{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf}\index{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_push@{LokiFIFO\_push}}
+\index{LokiFIFO\_push@{LokiFIFO\_push}!Structure de données FIFO@{Structure de données FIFO}}
+\doxysubsubsubsection{\texorpdfstring{LokiFIFO\_push()}{LokiFIFO\_push()}}
+{\footnotesize\ttfamily \label{group__gLokiFIFO_ga9d21708a76ac74826125a8fbf5a5efaf} 
+void Loki\+FIFO\+\_\+push (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Valider l\textquotesingle{}élément courant en écriture. 
+
+Avant d\textquotesingle{}appeler cette fonction, le producteur doit obtenir une référence vers l\textquotesingle{}élément à écrire en appelant Loki\+FIFO\+\_\+get\+\_\+producer\+\_\+item. Cette fonction incrémente le niveau courant de la FIFO.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & La FIFO à modifier. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fifo_8c_source_l00123}{123}} du fichier \doxymbox{\hyperlink{libloki-fifo_8c_source}{libloki-\/fifo.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 15
+Voici le graphe des appelants de cette fonction :
+% FIG 16

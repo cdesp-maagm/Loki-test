@@ -1,0 +1,4 @@
+<map id="LokiModem_get_mod_osc2_gain" name="LokiModem_get_mod_osc2_gain">
+<area shape="rect" id="node1" title="Lire l&#39;amplitude du signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="235,5,469,31"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="5,5,187,31"/>
+</map>

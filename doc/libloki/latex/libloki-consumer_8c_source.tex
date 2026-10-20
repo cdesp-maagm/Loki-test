@@ -1,0 +1,74 @@
+\doxysection{libloki-\/consumer.c}
+\hypertarget{libloki-consumer_8c_source}{}\label{libloki-consumer_8c_source}\index{libloki-\/consumer.c@{libloki-\/consumer.c}}
+\doxymbox{\hyperlink{libloki-consumer_8c}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00003}\doxymbox{\hyperlink{libloki-consumer_8c_a369266c24eacffb87046522897a570d5}{00003}}\ \textcolor{preprocessor}{\#define\ \_GNU\_SOURCE}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{libloki_8h}{libloki.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <pthread.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <signal.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00020}\doxymbox{\hyperlink{structLokiConsumer}{00020}}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00022}\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{00022}}\ \ \ \ \ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00024}\doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{00024}}\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{cid}};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00026}\doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{00026}}\ \ \ \ \ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\_request}};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00028}\doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{00028}}\ \ \ \ \ pthread\_t\ \doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{thread}};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00029}00029\ \};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00031}\doxymbox{\hyperlink{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}{00031}}\ \doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *\doxymbox{\hyperlink{group__gLokiConsumer_ga117feeff6c10a12d8d3ff5297c82dfc7}{LokiConsumer\_new}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00032}00032\ \ \ \ \ \doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}));}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00047}\doxymbox{\hyperlink{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}{00047}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}{LokiConsumer\_work}}(\textcolor{keywordtype}{void}\ *ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00048}00048\ \ \ \ \ \doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *self\ =\ ptr;}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00050}00050\ \ \ \ \ pthread\_setname\_np(self-\/>\doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{thread}},\ \textcolor{stringliteral}{"{}Consumer"{}});}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{while}\ (!self-\/>\doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{group__gLokiFIFO_ga64953835cd85d15393a6b14030a845c5}{LokiFIFO\_get\_consumer\_item}}(self-\/>\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}},\ self-\/>\doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{cid}}))\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__gLokiFIFO_ga4e8cda4ed922ac5128c716735c0724c8}{LokiFIFO\_pull}}(self-\/>\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}},\ self-\/>\doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{cid}});}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00060}\doxymbox{\hyperlink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{00060}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gLokiConsumer_ga365cf2545eef317565f4a35ac3ef1c4d}{LokiConsumer\_start}}(\doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *self,\ \doxymbox{\hyperlink{structLokiFIFO}{LokiFIFO}}\ *in,\ \textcolor{keywordtype}{size\_t}\ cid)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00061}00061\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}}\ =\ in;}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00062}00062\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiConsumer_add5f3e8a3ccc8dba4f5a7f74846eae75}{cid}}\ =\ cid;}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00063}00063\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\_request}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ pthread\_create(\&self-\/>\doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{thread}},\ NULL,\ \doxymbox{\hyperlink{group__gLokiConsumer_gac44de59993950d0183ecd089f65091d1}{LokiConsumer\_work}},\ self);}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00067}\doxymbox{\hyperlink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{00067}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiConsumer_ga3596ff29c7812a18f78bc33c73755c63}{LokiConsumer\_stop}}(\doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (self-\/>\doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\_request}})\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00071}00071\ \ \ \ \ self-\/>\doxymbox{\hyperlink{structLokiConsumer_a7b7bf194aca598cc6ba894a4af066bc4}{stop\_request}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00072}00072\ \ \ \ \ \doxymbox{\hyperlink{group__gLokiFIFO_gaaff05dfee1870a70b14718028d830f21}{LokiFIFO\_abort}}(self-\/>\doxymbox{\hyperlink{structLokiConsumer_a4b3e14e5e0c36ff5523b08d769099fbe}{in}});}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00073}00073\ \ \ \ \ pthread\_join(self-\/>\doxymbox{\hyperlink{structLokiConsumer_a644409f6fa2fc93c56a0b33f68b2f475}{thread}},\ NULL);}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00076}\doxymbox{\hyperlink{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319}{00076}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gLokiConsumer_gad453aa02e1aea8e9e1771b2a84f0b319}{LokiConsumer\_del}}(\doxymbox{\hyperlink{structLokiConsumer}{LokiConsumer}}\ *self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (!self)\ \{}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00081}00081\ \ \ \ \ free(self);}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{libloki-consumer_8c_source_l00083}00083\ }
+
+\end{DoxyCode}

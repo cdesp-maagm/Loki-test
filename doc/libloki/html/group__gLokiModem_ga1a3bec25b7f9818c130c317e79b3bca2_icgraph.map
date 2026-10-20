@@ -1,0 +1,6 @@
+<map id="LokiModem_dma_is_streaming" name="LokiModem_dma_is_streaming">
+<area shape="rect" id="node1" title="Lire l&#39;état des transferts DMA." alt="" coords="517,31,743,56"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gaa8107034eec97425e51e80dc3a04811a" title="Lire l&#39;état de l&#39;acquisition." alt="" coords="271,5,460,31"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,55,469,80"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,55,213,80"/>
+</map>

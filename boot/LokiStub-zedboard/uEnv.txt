@@ -1,0 +1,19 @@
+machine_name=zedboard-zynq7
+
+kernel_image=uImage
+kernel_addr=0x2080000
+
+devicetree_image=devicetree.dtb
+devicetree_addr=0x2000000
+
+rootfs_image=rootfs.cpio.gz
+rootfs_addr=0x2880000
+
+devicetree_cmd=fatload mmc 0 ${devicetree_addr} ${devicetree_image}
+kernel_cmd=fatload mmc 0 ${kernel_addr} ${kernel_image}
+rootfs_cmd=fatload mmc 0 ${rootfs_addr} ${rootfs_image}
+boot_cmd=run kernel_cmd && run devicetree_cmd && run rootfs_cmd && bootm ${kernel_addr} ${rootfs_addr} ${devicetree_addr}
+
+bootargs=earlyprintk console=ttyPS0,115200 root=/dev/ram rw
+
+uenvcmd=run boot_cmd

@@ -1,0 +1,31 @@
+{
+    "package_name" : "LokiModulatorTestbench_cfg",
+    "use" : ["ieee.math_real.all"],
+    "TB_OSC1_use" : "Oscillator_pkg",
+    "TB_OSC2_use" : "Oscillator_pkg",
+    "declarations" : {
+        "TB_CLK_FREQUENCY"             : {"type" : "integer", "value" : 50000000},
+        "TB_SAMPLE_FREQUENCY"          : {"type" : "integer", "value" : 2000000},
+        "OSC_SIN_COS_FRACTIONAL_WIDTH" : {"type" : "integer", "value" : 16},
+        "TB_OSC1_WAVE_FREQUENCY_MIN"   : {"type" : "integer", "value" : 50},
+        "TB_OSC1_WAVE_FREQUENCY"       : {"type" : "integer", "value" : 1000},
+        "TB_OSC1_GAIN"                 : {"type" : "real",    "value" : "MATH_PI"},
+        "TB_OSC1_SAMPLE_FREQUENCY"     : {"type" : "integer", "ref"   : "TB_SAMPLE_FREQUENCY"},
+        "TB_OSC1_PERIODS"              : {"type" : "integer", "value" : 100},
+        "TB_OSC2_WAVE_FREQUENCY_MIN"   : {"type" : "integer", "value" : 1000},
+        "TB_OSC2_WAVE_FREQUENCY"       : {"type" : "integer", "value" : 50000},
+        "TB_OSC2_GAIN"                 : {"type" : "real",    "value" : "TB_OSC1_GAIN * 10.0"},
+        "TB_OSC2_SAMPLE_FREQUENCY"     : {"type" : "integer", "ref"   : "TB_SAMPLE_FREQUENCY"},
+        "TB_PHASE_INTEGER_WIDTH"       : {"type" : "integer", "value" : 7},
+        "TB_PHASE_FRACTIONAL_WIDTH"    : {"type" : "integer", "value" : 9},
+        "TB_POWER_INTEGER_WIDTH"       : {"type" : "integer", "value" : 2},
+        "TB_POWER_FRACTIONAL_WIDTH"    : {"type" : "integer", "value" : 14},
+        "TB_SENSOR_DELAY"              : {"type" : "integer", "value" : 10},
+        "TB_SENSOR_DEPTH"              : {"type" : "integer", "value" : 1000000},
+        "TB_WAVELENGTH"                : {"type" : "real",    "value" : "1310.0e-9"},
+        "TB_DISPLACEMENT_FREQUENCY"    : {"type" : "real",    "value" : 20.0},
+        "TB_DISPLACEMENT_AMPLIUDE"     : {"type" : "real",    "value" : "20.0e-9"},
+        "TB_POWER_FACTOR"              : {"type" : "real",    "value" : 1.0},
+        "TB_POWER_CONTRAST"            : {"type" : "real",    "value" : 0.7}
+    }
+}

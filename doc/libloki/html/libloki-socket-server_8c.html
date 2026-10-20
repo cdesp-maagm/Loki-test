@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence du fichier libloki-socket-server.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier libloki-socket-server.c<div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a> &raquo; <a class="el" href="group__gLokiSocketServer.html">Serveur de données sur socket Unix</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="libloki_8h_source.html">libloki.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;sys/un.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de libloki-socket-server.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="libloki-socket-server_8c__incl.png" border="0" usemap="#alibloki-socket-server_8c" loading="lazy" alt=""/></div>
+<map name="alibloki-socket-server_8c" id="alibloki-socket-server_8c">
+<area shape="rect" title=" " alt="" coords="2131,5,2296,31"/>
+<area shape="rect" href="libloki_8h.html" title=" " alt="" coords="1043,79,1118,104"/>
+<area shape="rect" title=" " alt="" coords="1416,372,1499,397"/>
+<area shape="rect" title=" " alt="" coords="1458,299,1554,324"/>
+<area shape="rect" title=" " alt="" coords="1945,79,2013,104"/>
+<area shape="rect" title=" " alt="" coords="2037,79,2108,104"/>
+<area shape="rect" title=" " alt="" coords="2132,79,2202,104"/>
+<area shape="rect" title=" " alt="" coords="2227,79,2294,104"/>
+<area shape="rect" title=" " alt="" coords="2318,79,2402,104"/>
+<area shape="rect" title=" " alt="" coords="2426,79,2494,104"/>
+<area shape="rect" title=" " alt="" coords="2518,79,2621,104"/>
+<area shape="rect" title=" " alt="" coords="2645,79,2721,104"/>
+<area shape="rect" title=" " alt="" coords="2746,79,2820,104"/>
+<area shape="rect" href="libloki-hooks_8h.html" title=" " alt="" coords="924,152,1042,177"/>
+<area shape="rect" href="libloki-fifo_8h.html" title=" " alt="" coords="953,299,1053,324"/>
+<area shape="rect" href="libloki-time_8h.html" title=" " alt="" coords="1991,299,2100,324"/>
+<area shape="rect" href="libloki-packet_8h.html" title=" " alt="" coords="1888,225,2011,251"/>
+<area shape="rect" href="libloki-env-sensors_8h.html" title=" " alt="" coords="1440,225,1598,251"/>
+<area shape="rect" href="libloki-modem_8h.html" title=" " alt="" coords="1286,225,1416,251"/>
+<area shape="rect" href="libloki-ellipse_8h.html" title=" " alt="" coords="1168,152,1291,177"/>
+<area shape="rect" href="libloki-ellipse-estimator_8h.html" title=" " alt="" coords="286,225,475,251"/>
+<area shape="rect" href="libloki-nlms_8h.html" title=" " alt="" coords="174,152,285,177"/>
+<area shape="rect" href="libloki-rls_8h.html" title=" " alt="" coords="309,152,404,177"/>
+<area shape="rect" href="libloki-kalman_8h.html" title=" " alt="" coords="24,152,150,177"/>
+<area shape="rect" href="libloki-fir_8h.html" title=" " alt="" coords="799,299,890,324"/>
+<area shape="rect" href="libloki-displacement_8h.html" title=" " alt="" coords="428,152,594,177"/>
+<area shape="rect" href="libloki-system_8h.html" title=" " alt="" coords="670,152,797,177"/>
+<area shape="rect" href="libloki-formatter_8h.html" title=" " alt="" coords="1622,225,1762,251"/>
+<area shape="rect" href="libloki-mseed_8h.html" title=" " alt="" coords="1467,152,1590,177"/>
+<area shape="rect" href="libloki-raw_8h.html" title=" " alt="" coords="1614,152,1717,177"/>
+<area shape="rect" href="libloki-recorder_8h.html" title=" " alt="" coords="721,225,853,251"/>
+<area shape="rect" href="libloki-socket-server_8h.html" title=" " alt="" coords="1096,225,1262,251"/>
+<area shape="rect" href="libloki-consumer_8h.html" title=" " alt="" coords="877,225,1020,251"/>
+<area shape="rect" title=" " alt="" coords="887,372,962,397"/>
+<area shape="rect" title=" " alt="" coords="1905,372,1992,397"/>
+<area shape="rect" title=" " alt="" coords="2016,372,2080,397"/>
+<area shape="rect" title=" " alt="" coords="1362,299,1433,324"/>
+<area shape="rect" href="libloki-class_8h.html" title=" " alt="" coords="379,299,491,324"/>
+<area shape="rect" href="libloki-common_8h.html" title=" " alt="" coords="367,372,503,397"/>
+</map>
+</div>
+</div>
+<p><a href="libloki-socket-server_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:LokiSocketServer" id="r_LokiSocketServer"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structLokiSocketServer.html">LokiSocketServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un serveur de données.  <a href="structLokiSocketServer.html#details">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a369266c24eacffb87046522897a570d5" id="r_a369266c24eacffb87046522897a570d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a369266c24eacffb87046522897a570d5">_GNU_SOURCE</a></td></tr>
+<tr class="memdesc:a369266c24eacffb87046522897a570d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permettre l'utilisation de la fonction <span class="tt">pthread_setname_np</span> pour modifier le nom d'un thread.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gaf9a8245cd675157f3ab859b5b93ec3a3" id="r_gaf9a8245cd675157f3ab859b5b93ec3a3"><td class="memItemLeft"><a class="el" href="structLokiSocketServer.html">LokiSocketServer</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gaf9a8245cd675157f3ab859b5b93ec3a3">LokiSocketServer_new</a> (const char *filename)</td></tr>
+<tr class="memdesc:gaf9a8245cd675157f3ab859b5b93ec3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construire un serveur de données.  <br /></td></tr>
+<tr class="memitem:ga2812e3037b7580d56b3a3762ea1d2e02" id="r_ga2812e3037b7580d56b3a3762ea1d2e02"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02">LokiSocketServer_receive</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga2812e3037b7580d56b3a3762ea1d2e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recevoir les données d'entrée.  <br /></td></tr>
+<tr class="memitem:gad43863e67afcbce842c5d1d5ebd86ccf" id="r_gad43863e67afcbce842c5d1d5ebd86ccf"><td class="memItemLeft">static void *&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gad43863e67afcbce842c5d1d5ebd86ccf">LokiSocketServer_serve</a> (void *ptr)</td></tr>
+<tr class="memdesc:gad43863e67afcbce842c5d1d5ebd86ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gérer les connexions et transmettre les données aux clients.  <br /></td></tr>
+<tr class="memitem:gae93b5af5135cc58ce3e13229becc3241" id="r_gae93b5af5135cc58ce3e13229becc3241"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241">LokiSocketServer_start</a> (<a class="el" href="structLokiSocketServer.html">LokiSocketServer</a> *self, <a class="el" href="structLokiFIFO.html">LokiFIFO</a> *in, size_t cid)</td></tr>
+<tr class="memdesc:gae93b5af5135cc58ce3e13229becc3241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Démarrer un serveur.  <br /></td></tr>
+<tr class="memitem:gaedd8533779526c5febfacfa5238bc1f9" id="r_gaedd8533779526c5febfacfa5238bc1f9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gaedd8533779526c5febfacfa5238bc1f9">LokiSocketServer_is_streaming</a> (<a class="el" href="structLokiSocketServer.html">LokiSocketServer</a> *self)</td></tr>
+<tr class="memdesc:gaedd8533779526c5febfacfa5238bc1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lire l'état du serveur.  <br /></td></tr>
+<tr class="memitem:gaa92bff856b113d9609a5ffbe2acc8a23" id="r_gaa92bff856b113d9609a5ffbe2acc8a23"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gaa92bff856b113d9609a5ffbe2acc8a23">LokiSocketServer_stop</a> (<a class="el" href="structLokiSocketServer.html">LokiSocketServer</a> *self)</td></tr>
+<tr class="memdesc:gaa92bff856b113d9609a5ffbe2acc8a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrêter un serveur.  <br /></td></tr>
+<tr class="memitem:gaa39ef8dd070cc5b528bdfe6182501107" id="r_gaa39ef8dd070cc5b528bdfe6182501107"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__gLokiSocketServer.html#gaa39ef8dd070cc5b528bdfe6182501107">LokiSocketServer_del</a> (<a class="el" href="structLokiSocketServer.html">LokiSocketServer</a> *self)</td></tr>
+<tr class="memdesc:gaa39ef8dd070cc5b528bdfe6182501107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détruire un serveur.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><dl class="section author"><dt>Auteur</dt><dd>Guillaume Savaton </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>ESEO </dd></dl>
+
+<p class="definition">Définition dans le fichier <a class="el" href="libloki-socket-server_8c_source.html">libloki-socket-server.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="a369266c24eacffb87046522897a570d5" name="a369266c24eacffb87046522897a570d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369266c24eacffb87046522897a570d5">&#9670;&#160;</a></span>_GNU_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _GNU_SOURCE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permettre l'utilisation de la fonction <span class="tt">pthread_setname_np</span> pour modifier le nom d'un thread. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-socket-server_8c_source.html#l00003">3</a> du fichier <a class="el" href="libloki-socket-server_8c_source.html">libloki-socket-server.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

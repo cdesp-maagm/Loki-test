@@ -1,0 +1,4 @@
+<map id="LokiFIFO" name="LokiFIFO">
+<area shape="rect" id="node1" title="Représentation d&#39;une FIFO." alt="" coords="28,108,107,133"/>
+<area shape="rect" id="node2" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,129,31"/>
+</map>

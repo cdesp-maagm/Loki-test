@@ -1,0 +1,1323 @@
+\indexentry{Définitions communes@{Définitions communes}|hyperpage}{7}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{7}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_attribute@{LokiClass\_attribute}|hyperpage}{9}
+\indexentry{LokiClass\_attribute@{LokiClass\_attribute}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{9}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_class\_name@{LokiClass\_class\_name}|hyperpage}{9}
+\indexentry{LokiClass\_class\_name@{LokiClass\_class\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{9}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_declare\_implementation@{LokiClass\_declare\_implementation}|hyperpage}{10}
+\indexentry{LokiClass\_declare\_implementation@{LokiClass\_declare\_implementation}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{10}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_define\_method@{LokiClass\_define\_method}|hyperpage}{10}
+\indexentry{LokiClass\_define\_method@{LokiClass\_define\_method}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{10}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_function\_name@{LokiClass\_function\_name}|hyperpage}{11}
+\indexentry{LokiClass\_function\_name@{LokiClass\_function\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{11}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_implementation@{LokiClass\_implementation}|hyperpage}{11}
+\indexentry{LokiClass\_implementation@{LokiClass\_implementation}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{11}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_interface@{LokiClass\_interface}|hyperpage}{11}
+\indexentry{LokiClass\_interface@{LokiClass\_interface}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{11}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_interface\_name@{LokiClass\_interface\_name}|hyperpage}{12}
+\indexentry{LokiClass\_interface\_name@{LokiClass\_interface\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{12}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_method@{LokiClass\_method}|hyperpage}{12}
+\indexentry{LokiClass\_method@{LokiClass\_method}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{12}
+\indexentry{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_set\_attribute@{LokiClass\_set\_attribute}|hyperpage}{13}
+\indexentry{LokiClass\_set\_attribute@{LokiClass\_set\_attribute}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}|hyperpage}{13}
+\indexentry{Macros utiles.@{Macros utiles.}|hyperpage}{13}
+\indexentry{Macros utiles.@{Macros utiles.}!CAT@{CAT}|hyperpage}{14}
+\indexentry{CAT@{CAT}!Macros utiles.@{Macros utiles.}|hyperpage}{14}
+\indexentry{Macros utiles.@{Macros utiles.}!CAT3@{CAT3}|hyperpage}{14}
+\indexentry{CAT3@{CAT3}!Macros utiles.@{Macros utiles.}|hyperpage}{14}
+\indexentry{Macros utiles.@{Macros utiles.}!LEN@{LEN}|hyperpage}{14}
+\indexentry{LEN@{LEN}!Macros utiles.@{Macros utiles.}|hyperpage}{14}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{15}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_free@{LokiHooks\_free}|hyperpage}{16}
+\indexentry{LokiHooks\_free@{LokiHooks\_free}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{16}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_init@{LokiHooks\_init}|hyperpage}{16}
+\indexentry{LokiHooks\_init@{LokiHooks\_init}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{16}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_malloc@{LokiHooks\_malloc}|hyperpage}{16}
+\indexentry{LokiHooks\_malloc@{LokiHooks\_malloc}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{16}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_restore@{LokiHooks\_restore}|hyperpage}{17}
+\indexentry{LokiHooks\_restore@{LokiHooks\_restore}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{17}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_save@{LokiHooks\_save}|hyperpage}{17}
+\indexentry{LokiHooks\_save@{LokiHooks\_save}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{17}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_setup@{LokiHooks\_setup}|hyperpage}{17}
+\indexentry{LokiHooks\_setup@{LokiHooks\_setup}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{17}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_saved\_free@{LokiHooks\_saved\_free}|hyperpage}{18}
+\indexentry{LokiHooks\_saved\_free@{LokiHooks\_saved\_free}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{18}
+\indexentry{Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}!LokiHooks\_saved\_malloc@{LokiHooks\_saved\_malloc}|hyperpage}{18}
+\indexentry{LokiHooks\_saved\_malloc@{LokiHooks\_saved\_malloc}!Instrumentation des fonctions malloc et free@{Instrumentation des fonctions malloc et free}|hyperpage}{18}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{18}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vadd\_f32@{vadd\_f32}|hyperpage}{19}
+\indexentry{vadd\_f32@{vadd\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{19}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_high\_f32@{vget\_high\_f32}|hyperpage}{20}
+\indexentry{vget\_high\_f32@{vget\_high\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{20}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_lane\_f32@{vget\_lane\_f32}|hyperpage}{20}
+\indexentry{vget\_lane\_f32@{vget\_lane\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{20}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vget\_low\_f32@{vget\_low\_f32}|hyperpage}{20}
+\indexentry{vget\_low\_f32@{vget\_low\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{20}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vld1q\_f32@{vld1q\_f32}|hyperpage}{21}
+\indexentry{vld1q\_f32@{vld1q\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{21}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vld1q\_lane\_f32@{vld1q\_lane\_f32}|hyperpage}{21}
+\indexentry{vld1q\_lane\_f32@{vld1q\_lane\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{21}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmlaq\_f32@{vmlaq\_f32}|hyperpage}{21}
+\indexentry{vmlaq\_f32@{vmlaq\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{21}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmovq\_n\_f32@{vmovq\_n\_f32}|hyperpage}{22}
+\indexentry{vmovq\_n\_f32@{vmovq\_n\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{22}
+\indexentry{Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}!vmulq\_f32@{vmulq\_f32}|hyperpage}{22}
+\indexentry{vmulq\_f32@{vmulq\_f32}!Support des fonctions intrinsics ARM NEON@{Support des fonctions intrinsics ARM NEON}|hyperpage}{22}
+\indexentry{Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement@{Échange de données entre modules d\textquotesingle{}acquisition, de traitement et d\textquotesingle{}enregistrement}|hyperpage}{23}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}|hyperpage}{23}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer@{LokiConsumer}|hyperpage}{25}
+\indexentry{LokiConsumer@{LokiConsumer}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{25}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_del@{LokiConsumer\_del}|hyperpage}{25}
+\indexentry{LokiConsumer\_del@{LokiConsumer\_del}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{25}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_new@{LokiConsumer\_new}|hyperpage}{25}
+\indexentry{LokiConsumer\_new@{LokiConsumer\_new}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{25}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_start@{LokiConsumer\_start}|hyperpage}{25}
+\indexentry{LokiConsumer\_start@{LokiConsumer\_start}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{25}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_stop@{LokiConsumer\_stop}|hyperpage}{26}
+\indexentry{LokiConsumer\_stop@{LokiConsumer\_stop}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{26}
+\indexentry{Exemple de consommateur@{Exemple de consommateur}!LokiConsumer\_work@{LokiConsumer\_work}|hyperpage}{26}
+\indexentry{LokiConsumer\_work@{LokiConsumer\_work}!Exemple de consommateur@{Exemple de consommateur}|hyperpage}{26}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}|hyperpage}{27}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO@{LokiFIFO}|hyperpage}{28}
+\indexentry{LokiFIFO@{LokiFIFO}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{28}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFORecord@{LokiFIFORecord}|hyperpage}{28}
+\indexentry{LokiFIFORecord@{LokiFIFORecord}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{28}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_abort@{LokiFIFO\_abort}|hyperpage}{29}
+\indexentry{LokiFIFO\_abort@{LokiFIFO\_abort}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{29}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_del@{LokiFIFO\_del}|hyperpage}{29}
+\indexentry{LokiFIFO\_del@{LokiFIFO\_del}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{29}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_consumer\_item@{LokiFIFO\_get\_consumer\_item}|hyperpage}{29}
+\indexentry{LokiFIFO\_get\_consumer\_item@{LokiFIFO\_get\_consumer\_item}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{29}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_item\_size@{LokiFIFO\_get\_item\_size}|hyperpage}{29}
+\indexentry{LokiFIFO\_get\_item\_size@{LokiFIFO\_get\_item\_size}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{29}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_get\_producer\_item@{LokiFIFO\_get\_producer\_item}|hyperpage}{30}
+\indexentry{LokiFIFO\_get\_producer\_item@{LokiFIFO\_get\_producer\_item}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{30}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_new@{LokiFIFO\_new}|hyperpage}{30}
+\indexentry{LokiFIFO\_new@{LokiFIFO\_new}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{30}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_pull@{LokiFIFO\_pull}|hyperpage}{31}
+\indexentry{LokiFIFO\_pull@{LokiFIFO\_pull}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{31}
+\indexentry{Structure de données FIFO@{Structure de données FIFO}!LokiFIFO\_push@{LokiFIFO\_push}|hyperpage}{31}
+\indexentry{LokiFIFO\_push@{LokiFIFO\_push}!Structure de données FIFO@{Structure de données FIFO}|hyperpage}{31}
+\indexentry{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}|hyperpage}{32}
+\indexentry{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}!LokiPacket\_get\_fifo\_item\_size@{LokiPacket\_get\_fifo\_item\_size}|hyperpage}{33}
+\indexentry{LokiPacket\_get\_fifo\_item\_size@{LokiPacket\_get\_fifo\_item\_size}!Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}|hyperpage}{33}
+\indexentry{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}!LokiPacket\_get\_length@{LokiPacket\_get\_length}|hyperpage}{33}
+\indexentry{LokiPacket\_get\_length@{LokiPacket\_get\_length}!Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}|hyperpage}{33}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{33}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!TIMESTAMP\_MS@{TIMESTAMP\_MS}|hyperpage}{34}
+\indexentry{TIMESTAMP\_MS@{TIMESTAMP\_MS}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{34}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!TIMESTAMP\_SEC@{TIMESTAMP\_SEC}|hyperpage}{34}
+\indexentry{TIMESTAMP\_SEC@{TIMESTAMP\_SEC}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{34}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTimeDelta@{LokiTimeDelta}|hyperpage}{35}
+\indexentry{LokiTimeDelta@{LokiTimeDelta}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{35}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTimestamp@{LokiTimestamp}|hyperpage}{35}
+\indexentry{LokiTimestamp@{LokiTimestamp}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{35}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_milliseconds@{LokiTime\_milliseconds}|hyperpage}{35}
+\indexentry{LokiTime\_milliseconds@{LokiTime\_milliseconds}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{35}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_seconds@{LokiTime\_seconds}|hyperpage}{35}
+\indexentry{LokiTime\_seconds@{LokiTime\_seconds}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{35}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_to\_timestamp@{LokiTime\_to\_timestamp}|hyperpage}{36}
+\indexentry{LokiTime\_to\_timestamp@{LokiTime\_to\_timestamp}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{36}
+\indexentry{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_update@{LokiTime\_update}|hyperpage}{36}
+\indexentry{LokiTime\_update@{LokiTime\_update}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}|hyperpage}{36}
+\indexentry{Acquisition@{Acquisition}|hyperpage}{37}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{37}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!USE\_MMAP@{USE\_MMAP}|hyperpage}{40}
+\indexentry{USE\_MMAP@{USE\_MMAP}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{40}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiDMASample@{LokiDMASample}|hyperpage}{40}
+\indexentry{LokiDMASample@{LokiDMASample}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{40}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{40}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{40}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_bmp390\_compensate\_pressure@{LokiEnvSensors\_bmp390\_compensate\_pressure}|hyperpage}{40}
+\indexentry{LokiEnvSensors\_bmp390\_compensate\_pressure@{LokiEnvSensors\_bmp390\_compensate\_pressure}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{40}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_bmp390\_compensate\_temperature@{LokiEnvSensors\_bmp390\_compensate\_temperature}|hyperpage}{40}
+\indexentry{LokiEnvSensors\_bmp390\_compensate\_temperature@{LokiEnvSensors\_bmp390\_compensate\_temperature}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{40}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_del@{LokiEnvSensors\_del}|hyperpage}{41}
+\indexentry{LokiEnvSensors\_del@{LokiEnvSensors\_del}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{41}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_dma\_get\_packet\_time@{LokiEnvSensors\_dma\_get\_packet\_time}|hyperpage}{41}
+\indexentry{LokiEnvSensors\_dma\_get\_packet\_time@{LokiEnvSensors\_dma\_get\_packet\_time}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{41}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_dma\_get\_start\_time@{LokiEnvSensors\_dma\_get\_start\_time}|hyperpage}{41}
+\indexentry{LokiEnvSensors\_dma\_get\_start\_time@{LokiEnvSensors\_dma\_get\_start\_time}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{41}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_dma\_is\_streaming@{LokiEnvSensors\_dma\_is\_streaming}|hyperpage}{42}
+\indexentry{LokiEnvSensors\_dma\_is\_streaming@{LokiEnvSensors\_dma\_is\_streaming}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{42}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_dma\_start@{LokiEnvSensors\_dma\_start}|hyperpage}{42}
+\indexentry{LokiEnvSensors\_dma\_start@{LokiEnvSensors\_dma\_start}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{42}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_dma\_stop@{LokiEnvSensors\_dma\_stop}|hyperpage}{42}
+\indexentry{LokiEnvSensors\_dma\_stop@{LokiEnvSensors\_dma\_stop}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{42}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_force\_stop@{LokiEnvSensors\_force\_stop}|hyperpage}{43}
+\indexentry{LokiEnvSensors\_force\_stop@{LokiEnvSensors\_force\_stop}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{43}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_channels@{LokiEnvSensors\_get\_channels}|hyperpage}{43}
+\indexentry{LokiEnvSensors\_get\_channels@{LokiEnvSensors\_get\_channels}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{43}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_clk\_frequency@{LokiEnvSensors\_get\_clk\_frequency}|hyperpage}{43}
+\indexentry{LokiEnvSensors\_get\_clk\_frequency@{LokiEnvSensors\_get\_clk\_frequency}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{43}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_last\_data@{LokiEnvSensors\_get\_last\_data}|hyperpage}{44}
+\indexentry{LokiEnvSensors\_get\_last\_data@{LokiEnvSensors\_get\_last\_data}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{44}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_packet\_index@{LokiEnvSensors\_get\_packet\_index}|hyperpage}{44}
+\indexentry{LokiEnvSensors\_get\_packet\_index@{LokiEnvSensors\_get\_packet\_index}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{44}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_packet\_length@{LokiEnvSensors\_get\_packet\_length}|hyperpage}{45}
+\indexentry{LokiEnvSensors\_get\_packet\_length@{LokiEnvSensors\_get\_packet\_length}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{45}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_packet\_length\_max@{LokiEnvSensors\_get\_packet\_length\_max}|hyperpage}{45}
+\indexentry{LokiEnvSensors\_get\_packet\_length\_max@{LokiEnvSensors\_get\_packet\_length\_max}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{45}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_reg@{LokiEnvSensors\_get\_reg}|hyperpage}{46}
+\indexentry{LokiEnvSensors\_get\_reg@{LokiEnvSensors\_get\_reg}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{46}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_sampling\_frequency@{LokiEnvSensors\_get\_sampling\_frequency}|hyperpage}{46}
+\indexentry{LokiEnvSensors\_get\_sampling\_frequency@{LokiEnvSensors\_get\_sampling\_frequency}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{46}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_get\_scaling\_factor@{LokiEnvSensors\_get\_scaling\_factor}|hyperpage}{47}
+\indexentry{LokiEnvSensors\_get\_scaling\_factor@{LokiEnvSensors\_get\_scaling\_factor}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{47}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_is\_streaming@{LokiEnvSensors\_is\_streaming}|hyperpage}{47}
+\indexentry{LokiEnvSensors\_is\_streaming@{LokiEnvSensors\_is\_streaming}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{47}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_new@{LokiEnvSensors\_new}|hyperpage}{48}
+\indexentry{LokiEnvSensors\_new@{LokiEnvSensors\_new}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{48}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_restart@{LokiEnvSensors\_restart}|hyperpage}{48}
+\indexentry{LokiEnvSensors\_restart@{LokiEnvSensors\_restart}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{48}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_set\_packet\_item@{LokiEnvSensors\_set\_packet\_item}|hyperpage}{48}
+\indexentry{LokiEnvSensors\_set\_packet\_item@{LokiEnvSensors\_set\_packet\_item}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{48}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_set\_reg@{LokiEnvSensors\_set\_reg}|hyperpage}{49}
+\indexentry{LokiEnvSensors\_set\_reg@{LokiEnvSensors\_set\_reg}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{49}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_set\_sampling\_frequency@{LokiEnvSensors\_set\_sampling\_frequency}|hyperpage}{49}
+\indexentry{LokiEnvSensors\_set\_sampling\_frequency@{LokiEnvSensors\_set\_sampling\_frequency}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{49}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_set\_scaling\_factor@{LokiEnvSensors\_set\_scaling\_factor}|hyperpage}{50}
+\indexentry{LokiEnvSensors\_set\_scaling\_factor@{LokiEnvSensors\_set\_scaling\_factor}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{50}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_start\_streaming@{LokiEnvSensors\_start\_streaming}|hyperpage}{50}
+\indexentry{LokiEnvSensors\_start\_streaming@{LokiEnvSensors\_start\_streaming}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{50}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_stop\_streaming@{LokiEnvSensors\_stop\_streaming}|hyperpage}{51}
+\indexentry{LokiEnvSensors\_stop\_streaming@{LokiEnvSensors\_stop\_streaming}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{51}
+\indexentry{Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}!LokiEnvSensors\_work@{LokiEnvSensors\_work}|hyperpage}{51}
+\indexentry{LokiEnvSensors\_work@{LokiEnvSensors\_work}!Acquisition de données provenant des capteurs auxiliaires@{Acquisition de données provenant des capteurs auxiliaires}|hyperpage}{51}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{52}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_GAIN\_CODE\_MAX@{AD8370\_GAIN\_CODE\_MAX}|hyperpage}{60}
+\indexentry{AD8370\_GAIN\_CODE\_MAX@{AD8370\_GAIN\_CODE\_MAX}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{60}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_GAIN\_CODE\_SIZE@{AD8370\_GAIN\_CODE\_SIZE}|hyperpage}{60}
+\indexentry{AD8370\_GAIN\_CODE\_SIZE@{AD8370\_GAIN\_CODE\_SIZE}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{60}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_HIGH\_GAIN\_FACTOR@{AD8370\_HIGH\_GAIN\_FACTOR}|hyperpage}{60}
+\indexentry{AD8370\_HIGH\_GAIN\_FACTOR@{AD8370\_HIGH\_GAIN\_FACTOR}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{60}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_HIGH\_GAIN\_MAX@{AD8370\_HIGH\_GAIN\_MAX}|hyperpage}{60}
+\indexentry{AD8370\_HIGH\_GAIN\_MAX@{AD8370\_HIGH\_GAIN\_MAX}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{60}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_LOW\_GAIN\_MAX@{AD8370\_LOW\_GAIN\_MAX}|hyperpage}{61}
+\indexentry{AD8370\_LOW\_GAIN\_MAX@{AD8370\_LOW\_GAIN\_MAX}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_PREGAIN@{AD8370\_PREGAIN}|hyperpage}{61}
+\indexentry{AD8370\_PREGAIN@{AD8370\_PREGAIN}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!AD8370\_VERNIER@{AD8370\_VERNIER}|hyperpage}{61}
+\indexentry{AD8370\_VERNIER@{AD8370\_VERNIER}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_DISP\_AMPLITUDE@{SIMULATED\_DISP\_AMPLITUDE}|hyperpage}{61}
+\indexentry{SIMULATED\_DISP\_AMPLITUDE@{SIMULATED\_DISP\_AMPLITUDE}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_DISP\_WAVE\_FREQUENCY@{SIMULATED\_DISP\_WAVE\_FREQUENCY}|hyperpage}{61}
+\indexentry{SIMULATED\_DISP\_WAVE\_FREQUENCY@{SIMULATED\_DISP\_WAVE\_FREQUENCY}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_ELLIPSE\_A@{SIMULATED\_ELLIPSE\_A}|hyperpage}{61}
+\indexentry{SIMULATED\_ELLIPSE\_A@{SIMULATED\_ELLIPSE\_A}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{61}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_ELLIPSE\_ANGLE@{SIMULATED\_ELLIPSE\_ANGLE}|hyperpage}{62}
+\indexentry{SIMULATED\_ELLIPSE\_ANGLE@{SIMULATED\_ELLIPSE\_ANGLE}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{62}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_ELLIPSE\_B@{SIMULATED\_ELLIPSE\_B}|hyperpage}{62}
+\indexentry{SIMULATED\_ELLIPSE\_B@{SIMULATED\_ELLIPSE\_B}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{62}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_ELLIPSE\_XC@{SIMULATED\_ELLIPSE\_XC}|hyperpage}{62}
+\indexentry{SIMULATED\_ELLIPSE\_XC@{SIMULATED\_ELLIPSE\_XC}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{62}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!SIMULATED\_ELLIPSE\_YC@{SIMULATED\_ELLIPSE\_YC}|hyperpage}{62}
+\indexentry{SIMULATED\_ELLIPSE\_YC@{SIMULATED\_ELLIPSE\_YC}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{62}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!USE\_MMAP@{USE\_MMAP}|hyperpage}{62}
+\indexentry{USE\_MMAP@{USE\_MMAP}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{62}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiDMASample@{LokiDMASample}|hyperpage}{63}
+\indexentry{LokiDMASample@{LokiDMASample}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{63}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem@{LokiModem}|hyperpage}{63}
+\indexentry{LokiModem@{LokiModem}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{63}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_del@{LokiModem\_del}|hyperpage}{63}
+\indexentry{LokiModem\_del@{LokiModem\_del}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{63}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_get\_dropped\_packets@{LokiModem\_dma\_get\_dropped\_packets}|hyperpage}{63}
+\indexentry{LokiModem\_dma\_get\_dropped\_packets@{LokiModem\_dma\_get\_dropped\_packets}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{63}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_get\_packet\_time@{LokiModem\_dma\_get\_packet\_time}|hyperpage}{63}
+\indexentry{LokiModem\_dma\_get\_packet\_time@{LokiModem\_dma\_get\_packet\_time}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{63}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_get\_start\_time@{LokiModem\_dma\_get\_start\_time}|hyperpage}{64}
+\indexentry{LokiModem\_dma\_get\_start\_time@{LokiModem\_dma\_get\_start\_time}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{64}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_is\_streaming@{LokiModem\_dma\_is\_streaming}|hyperpage}{64}
+\indexentry{LokiModem\_dma\_is\_streaming@{LokiModem\_dma\_is\_streaming}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{64}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_start@{LokiModem\_dma\_start}|hyperpage}{65}
+\indexentry{LokiModem\_dma\_start@{LokiModem\_dma\_start}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{65}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_dma\_stop@{LokiModem\_dma\_stop}|hyperpage}{65}
+\indexentry{LokiModem\_dma\_stop@{LokiModem\_dma\_stop}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{65}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_force\_stop@{LokiModem\_force\_stop}|hyperpage}{65}
+\indexentry{LokiModem\_force\_stop@{LokiModem\_force\_stop}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{65}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_adc\_sample\_count@{LokiModem\_get\_adc\_sample\_count}|hyperpage}{66}
+\indexentry{LokiModem\_get\_adc\_sample\_count@{LokiModem\_get\_adc\_sample\_count}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{66}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_clk\_frequency@{LokiModem\_get\_clk\_frequency}|hyperpage}{66}
+\indexentry{LokiModem\_get\_clk\_frequency@{LokiModem\_get\_clk\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{66}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_dac\_sample\_count@{LokiModem\_get\_dac\_sample\_count}|hyperpage}{66}
+\indexentry{LokiModem\_get\_dac\_sample\_count@{LokiModem\_get\_dac\_sample\_count}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{66}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_adc\_max\_ratio@{LokiModem\_get\_demod\_adc\_max\_ratio}|hyperpage}{67}
+\indexentry{LokiModem\_get\_demod\_adc\_max\_ratio@{LokiModem\_get\_demod\_adc\_max\_ratio}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{67}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_adc\_min\_ratio@{LokiModem\_get\_demod\_adc\_min\_ratio}|hyperpage}{67}
+\indexentry{LokiModem\_get\_demod\_adc\_min\_ratio@{LokiModem\_get\_demod\_adc\_min\_ratio}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{67}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_bandwidth@{LokiModem\_get\_demod\_bandwidth}|hyperpage}{68}
+\indexentry{LokiModem\_get\_demod\_bandwidth@{LokiModem\_get\_demod\_bandwidth}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{68}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_bypass@{LokiModem\_get\_demod\_bypass}|hyperpage}{68}
+\indexentry{LokiModem\_get\_demod\_bypass@{LokiModem\_get\_demod\_bypass}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{68}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_channels@{LokiModem\_get\_demod\_channels}|hyperpage}{69}
+\indexentry{LokiModem\_get\_demod\_channels@{LokiModem\_get\_demod\_channels}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{69}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_decimation@{LokiModem\_get\_demod\_decimation}|hyperpage}{69}
+\indexentry{LokiModem\_get\_demod\_decimation@{LokiModem\_get\_demod\_decimation}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{69}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_delay\_x@{LokiModem\_get\_demod\_delay\_x}|hyperpage}{70}
+\indexentry{LokiModem\_get\_demod\_delay\_x@{LokiModem\_get\_demod\_delay\_x}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{70}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_delay\_x\_max@{LokiModem\_get\_demod\_delay\_x\_max}|hyperpage}{70}
+\indexentry{LokiModem\_get\_demod\_delay\_x\_max@{LokiModem\_get\_demod\_delay\_x\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{70}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_delay\_y@{LokiModem\_get\_demod\_delay\_y}|hyperpage}{71}
+\indexentry{LokiModem\_get\_demod\_delay\_y@{LokiModem\_get\_demod\_delay\_y}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{71}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_delay\_y\_max@{LokiModem\_get\_demod\_delay\_y\_max}|hyperpage}{71}
+\indexentry{LokiModem\_get\_demod\_delay\_y\_max@{LokiModem\_get\_demod\_delay\_y\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{71}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_mixerless@{LokiModem\_get\_demod\_mixerless}|hyperpage}{72}
+\indexentry{LokiModem\_get\_demod\_mixerless@{LokiModem\_get\_demod\_mixerless}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{72}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_osc\_wave\_frequency@{LokiModem\_get\_demod\_osc\_wave\_frequency}|hyperpage}{72}
+\indexentry{LokiModem\_get\_demod\_osc\_wave\_frequency@{LokiModem\_get\_demod\_osc\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{72}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_osc\_wave\_frequency\_max@{LokiModem\_get\_demod\_osc\_wave\_frequency\_max}|hyperpage}{73}
+\indexentry{LokiModem\_get\_demod\_osc\_wave\_frequency\_max@{LokiModem\_get\_demod\_osc\_wave\_frequency\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{73}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_osc\_wave\_frequency\_res@{LokiModem\_get\_demod\_osc\_wave\_frequency\_res}|hyperpage}{73}
+\indexentry{LokiModem\_get\_demod\_osc\_wave\_frequency\_res@{LokiModem\_get\_demod\_osc\_wave\_frequency\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{73}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_packet\_length@{LokiModem\_get\_demod\_packet\_length}|hyperpage}{74}
+\indexentry{LokiModem\_get\_demod\_packet\_length@{LokiModem\_get\_demod\_packet\_length}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{74}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_packet\_length\_max@{LokiModem\_get\_demod\_packet\_length\_max}|hyperpage}{74}
+\indexentry{LokiModem\_get\_demod\_packet\_length\_max@{LokiModem\_get\_demod\_packet\_length\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{74}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_pga\_gain@{LokiModem\_get\_demod\_pga\_gain}|hyperpage}{74}
+\indexentry{LokiModem\_get\_demod\_pga\_gain@{LokiModem\_get\_demod\_pga\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{74}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_pga\_gain\_max@{LokiModem\_get\_demod\_pga\_gain\_max}|hyperpage}{75}
+\indexentry{LokiModem\_get\_demod\_pga\_gain\_max@{LokiModem\_get\_demod\_pga\_gain\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{75}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_x@{LokiModem\_get\_demod\_phase\_x}|hyperpage}{75}
+\indexentry{LokiModem\_get\_demod\_phase\_x@{LokiModem\_get\_demod\_phase\_x}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{75}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_x\_max@{LokiModem\_get\_demod\_phase\_x\_max}|hyperpage}{76}
+\indexentry{LokiModem\_get\_demod\_phase\_x\_max@{LokiModem\_get\_demod\_phase\_x\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{76}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_x\_res@{LokiModem\_get\_demod\_phase\_x\_res}|hyperpage}{76}
+\indexentry{LokiModem\_get\_demod\_phase\_x\_res@{LokiModem\_get\_demod\_phase\_x\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{76}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_y@{LokiModem\_get\_demod\_phase\_y}|hyperpage}{77}
+\indexentry{LokiModem\_get\_demod\_phase\_y@{LokiModem\_get\_demod\_phase\_y}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{77}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_y\_max@{LokiModem\_get\_demod\_phase\_y\_max}|hyperpage}{77}
+\indexentry{LokiModem\_get\_demod\_phase\_y\_max@{LokiModem\_get\_demod\_phase\_y\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{77}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_phase\_y\_res@{LokiModem\_get\_demod\_phase\_y\_res}|hyperpage}{78}
+\indexentry{LokiModem\_get\_demod\_phase\_y\_res@{LokiModem\_get\_demod\_phase\_y\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{78}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_sample\_count@{LokiModem\_get\_demod\_sample\_count}|hyperpage}{78}
+\indexentry{LokiModem\_get\_demod\_sample\_count@{LokiModem\_get\_demod\_sample\_count}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{78}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_sampling\_frequency@{LokiModem\_get\_demod\_sampling\_frequency}|hyperpage}{79}
+\indexentry{LokiModem\_get\_demod\_sampling\_frequency@{LokiModem\_get\_demod\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{79}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_demod\_xy\_sampling\_frequency@{LokiModem\_get\_demod\_xy\_sampling\_frequency}|hyperpage}{79}
+\indexentry{LokiModem\_get\_demod\_xy\_sampling\_frequency@{LokiModem\_get\_demod\_xy\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{79}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_dropped\_packets@{LokiModem\_get\_dropped\_packets}|hyperpage}{80}
+\indexentry{LokiModem\_get\_dropped\_packets@{LokiModem\_get\_dropped\_packets}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{80}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_dc\_value@{LokiModem\_get\_mod\_dc\_value}|hyperpage}{80}
+\indexentry{LokiModem\_get\_mod\_dc\_value@{LokiModem\_get\_mod\_dc\_value}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{80}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_dc\_value\_max@{LokiModem\_get\_mod\_dc\_value\_max}|hyperpage}{81}
+\indexentry{LokiModem\_get\_mod\_dc\_value\_max@{LokiModem\_get\_mod\_dc\_value\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{81}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_dc\_value\_res@{LokiModem\_get\_mod\_dc\_value\_res}|hyperpage}{81}
+\indexentry{LokiModem\_get\_mod\_dc\_value\_res@{LokiModem\_get\_mod\_dc\_value\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{81}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_offset@{LokiModem\_get\_mod\_offset}|hyperpage}{81}
+\indexentry{LokiModem\_get\_mod\_offset@{LokiModem\_get\_mod\_offset}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{81}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_offset\_max@{LokiModem\_get\_mod\_offset\_max}|hyperpage}{82}
+\indexentry{LokiModem\_get\_mod\_offset\_max@{LokiModem\_get\_mod\_offset\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{82}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_offset\_res@{LokiModem\_get\_mod\_offset\_res}|hyperpage}{82}
+\indexentry{LokiModem\_get\_mod\_offset\_res@{LokiModem\_get\_mod\_offset\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{82}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_gain@{LokiModem\_get\_mod\_osc1\_gain}|hyperpage}{82}
+\indexentry{LokiModem\_get\_mod\_osc1\_gain@{LokiModem\_get\_mod\_osc1\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{82}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_gain\_max@{LokiModem\_get\_mod\_osc1\_gain\_max}|hyperpage}{83}
+\indexentry{LokiModem\_get\_mod\_osc1\_gain\_max@{LokiModem\_get\_mod\_osc1\_gain\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{83}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_gain\_res@{LokiModem\_get\_mod\_osc1\_gain\_res}|hyperpage}{83}
+\indexentry{LokiModem\_get\_mod\_osc1\_gain\_res@{LokiModem\_get\_mod\_osc1\_gain\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{83}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_wave\_frequency@{LokiModem\_get\_mod\_osc1\_wave\_frequency}|hyperpage}{84}
+\indexentry{LokiModem\_get\_mod\_osc1\_wave\_frequency@{LokiModem\_get\_mod\_osc1\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{84}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_wave\_frequency\_max@{LokiModem\_get\_mod\_osc1\_wave\_frequency\_max}|hyperpage}{84}
+\indexentry{LokiModem\_get\_mod\_osc1\_wave\_frequency\_max@{LokiModem\_get\_mod\_osc1\_wave\_frequency\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{84}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc1\_wave\_frequency\_res@{LokiModem\_get\_mod\_osc1\_wave\_frequency\_res}|hyperpage}{84}
+\indexentry{LokiModem\_get\_mod\_osc1\_wave\_frequency\_res@{LokiModem\_get\_mod\_osc1\_wave\_frequency\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{84}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_gain@{LokiModem\_get\_mod\_osc2\_gain}|hyperpage}{85}
+\indexentry{LokiModem\_get\_mod\_osc2\_gain@{LokiModem\_get\_mod\_osc2\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{85}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_gain\_max@{LokiModem\_get\_mod\_osc2\_gain\_max}|hyperpage}{85}
+\indexentry{LokiModem\_get\_mod\_osc2\_gain\_max@{LokiModem\_get\_mod\_osc2\_gain\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{85}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_gain\_res@{LokiModem\_get\_mod\_osc2\_gain\_res}|hyperpage}{86}
+\indexentry{LokiModem\_get\_mod\_osc2\_gain\_res@{LokiModem\_get\_mod\_osc2\_gain\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{86}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_wave\_frequency@{LokiModem\_get\_mod\_osc2\_wave\_frequency}|hyperpage}{86}
+\indexentry{LokiModem\_get\_mod\_osc2\_wave\_frequency@{LokiModem\_get\_mod\_osc2\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{86}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_wave\_frequency\_max@{LokiModem\_get\_mod\_osc2\_wave\_frequency\_max}|hyperpage}{87}
+\indexentry{LokiModem\_get\_mod\_osc2\_wave\_frequency\_max@{LokiModem\_get\_mod\_osc2\_wave\_frequency\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{87}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_osc2\_wave\_frequency\_res@{LokiModem\_get\_mod\_osc2\_wave\_frequency\_res}|hyperpage}{87}
+\indexentry{LokiModem\_get\_mod\_osc2\_wave\_frequency\_res@{LokiModem\_get\_mod\_osc2\_wave\_frequency\_res}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{87}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_pga\_gain@{LokiModem\_get\_mod\_pga\_gain}|hyperpage}{88}
+\indexentry{LokiModem\_get\_mod\_pga\_gain@{LokiModem\_get\_mod\_pga\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{88}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_pga\_gain\_max@{LokiModem\_get\_mod\_pga\_gain\_max}|hyperpage}{88}
+\indexentry{LokiModem\_get\_mod\_pga\_gain\_max@{LokiModem\_get\_mod\_pga\_gain\_max}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{88}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_mod\_sampling\_frequency@{LokiModem\_get\_mod\_sampling\_frequency}|hyperpage}{88}
+\indexentry{LokiModem\_get\_mod\_sampling\_frequency@{LokiModem\_get\_mod\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{88}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_packet\_index@{LokiModem\_get\_packet\_index}|hyperpage}{89}
+\indexentry{LokiModem\_get\_packet\_index@{LokiModem\_get\_packet\_index}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{89}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_reg@{LokiModem\_get\_reg}|hyperpage}{89}
+\indexentry{LokiModem\_get\_reg@{LokiModem\_get\_reg}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{89}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_get\_test\_mode@{LokiModem\_get\_test\_mode}|hyperpage}{90}
+\indexentry{LokiModem\_get\_test\_mode@{LokiModem\_get\_test\_mode}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{90}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_is\_streaming@{LokiModem\_is\_streaming}|hyperpage}{90}
+\indexentry{LokiModem\_is\_streaming@{LokiModem\_is\_streaming}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{90}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_new@{LokiModem\_new}|hyperpage}{91}
+\indexentry{LokiModem\_new@{LokiModem\_new}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{91}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_print\_config@{LokiModem\_print\_config}|hyperpage}{91}
+\indexentry{LokiModem\_print\_config@{LokiModem\_print\_config}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{91}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_restart@{LokiModem\_restart}|hyperpage}{91}
+\indexentry{LokiModem\_restart@{LokiModem\_restart}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{91}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_scale\_power@{LokiModem\_scale\_power}|hyperpage}{92}
+\indexentry{LokiModem\_scale\_power@{LokiModem\_scale\_power}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{92}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_scale\_xy@{LokiModem\_scale\_xy}|hyperpage}{92}
+\indexentry{LokiModem\_scale\_xy@{LokiModem\_scale\_xy}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{92}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_bypass@{LokiModem\_set\_demod\_bypass}|hyperpage}{93}
+\indexentry{LokiModem\_set\_demod\_bypass@{LokiModem\_set\_demod\_bypass}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{93}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_delay\_x@{LokiModem\_set\_demod\_delay\_x}|hyperpage}{93}
+\indexentry{LokiModem\_set\_demod\_delay\_x@{LokiModem\_set\_demod\_delay\_x}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{93}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_delay\_y@{LokiModem\_set\_demod\_delay\_y}|hyperpage}{93}
+\indexentry{LokiModem\_set\_demod\_delay\_y@{LokiModem\_set\_demod\_delay\_y}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{93}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_osc\_wave\_frequency@{LokiModem\_set\_demod\_osc\_wave\_frequency}|hyperpage}{94}
+\indexentry{LokiModem\_set\_demod\_osc\_wave\_frequency@{LokiModem\_set\_demod\_osc\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{94}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_pga\_gain@{LokiModem\_set\_demod\_pga\_gain}|hyperpage}{94}
+\indexentry{LokiModem\_set\_demod\_pga\_gain@{LokiModem\_set\_demod\_pga\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{94}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_phase\_x@{LokiModem\_set\_demod\_phase\_x}|hyperpage}{95}
+\indexentry{LokiModem\_set\_demod\_phase\_x@{LokiModem\_set\_demod\_phase\_x}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{95}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_phase\_y@{LokiModem\_set\_demod\_phase\_y}|hyperpage}{95}
+\indexentry{LokiModem\_set\_demod\_phase\_y@{LokiModem\_set\_demod\_phase\_y}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{95}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_sampling\_frequency@{LokiModem\_set\_demod\_sampling\_frequency}|hyperpage}{96}
+\indexentry{LokiModem\_set\_demod\_sampling\_frequency@{LokiModem\_set\_demod\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{96}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_demod\_xy\_sampling\_frequency@{LokiModem\_set\_demod\_xy\_sampling\_frequency}|hyperpage}{96}
+\indexentry{LokiModem\_set\_demod\_xy\_sampling\_frequency@{LokiModem\_set\_demod\_xy\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{96}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_dc\_value@{LokiModem\_set\_mod\_dc\_value}|hyperpage}{96}
+\indexentry{LokiModem\_set\_mod\_dc\_value@{LokiModem\_set\_mod\_dc\_value}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{96}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_offset@{LokiModem\_set\_mod\_offset}|hyperpage}{97}
+\indexentry{LokiModem\_set\_mod\_offset@{LokiModem\_set\_mod\_offset}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{97}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_osc1\_gain@{LokiModem\_set\_mod\_osc1\_gain}|hyperpage}{97}
+\indexentry{LokiModem\_set\_mod\_osc1\_gain@{LokiModem\_set\_mod\_osc1\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{97}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_osc1\_wave\_frequency@{LokiModem\_set\_mod\_osc1\_wave\_frequency}|hyperpage}{97}
+\indexentry{LokiModem\_set\_mod\_osc1\_wave\_frequency@{LokiModem\_set\_mod\_osc1\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{97}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_osc2\_gain@{LokiModem\_set\_mod\_osc2\_gain}|hyperpage}{98}
+\indexentry{LokiModem\_set\_mod\_osc2\_gain@{LokiModem\_set\_mod\_osc2\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{98}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_osc2\_wave\_frequency@{LokiModem\_set\_mod\_osc2\_wave\_frequency}|hyperpage}{98}
+\indexentry{LokiModem\_set\_mod\_osc2\_wave\_frequency@{LokiModem\_set\_mod\_osc2\_wave\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{98}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_pga\_gain@{LokiModem\_set\_mod\_pga\_gain}|hyperpage}{98}
+\indexentry{LokiModem\_set\_mod\_pga\_gain@{LokiModem\_set\_mod\_pga\_gain}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{98}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_mod\_sampling\_frequency@{LokiModem\_set\_mod\_sampling\_frequency}|hyperpage}{99}
+\indexentry{LokiModem\_set\_mod\_sampling\_frequency@{LokiModem\_set\_mod\_sampling\_frequency}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{99}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_packet\_item@{LokiModem\_set\_packet\_item}|hyperpage}{99}
+\indexentry{LokiModem\_set\_packet\_item@{LokiModem\_set\_packet\_item}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{99}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_reg@{LokiModem\_set\_reg}|hyperpage}{100}
+\indexentry{LokiModem\_set\_reg@{LokiModem\_set\_reg}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{100}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_simulated\_item@{LokiModem\_set\_simulated\_item}|hyperpage}{100}
+\indexentry{LokiModem\_set\_simulated\_item@{LokiModem\_set\_simulated\_item}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{100}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_set\_test\_mode@{LokiModem\_set\_test\_mode}|hyperpage}{100}
+\indexentry{LokiModem\_set\_test\_mode@{LokiModem\_set\_test\_mode}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{100}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_start\_streaming@{LokiModem\_start\_streaming}|hyperpage}{101}
+\indexentry{LokiModem\_start\_streaming@{LokiModem\_start\_streaming}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{101}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_stop\_streaming@{LokiModem\_stop\_streaming}|hyperpage}{101}
+\indexentry{LokiModem\_stop\_streaming@{LokiModem\_stop\_streaming}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{101}
+\indexentry{Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}!LokiModem\_work@{LokiModem\_work}|hyperpage}{102}
+\indexentry{LokiModem\_work@{LokiModem\_work}!Pilotage des composants modulateur et démodulateur@{Pilotage des composants modulateur et démodulateur}|hyperpage}{102}
+\indexentry{Enregistrement et transmission de données@{Enregistrement et transmission de données}|hyperpage}{102}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{103}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter@{LokiFormatter}|hyperpage}{104}
+\indexentry{LokiFormatter@{LokiFormatter}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{104}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter\_close@{LokiFormatter\_close}|hyperpage}{104}
+\indexentry{LokiFormatter\_close@{LokiFormatter\_close}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{104}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter\_del@{LokiFormatter\_del}|hyperpage}{105}
+\indexentry{LokiFormatter\_del@{LokiFormatter\_del}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{105}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter\_new@{LokiFormatter\_new}|hyperpage}{105}
+\indexentry{LokiFormatter\_new@{LokiFormatter\_new}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{105}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter\_new\_with\_implementation@{LokiFormatter\_new\_with\_implementation}|hyperpage}{105}
+\indexentry{LokiFormatter\_new\_with\_implementation@{LokiFormatter\_new\_with\_implementation}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{105}
+\indexentry{Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}!LokiFormatter\_work@{LokiFormatter\_work}|hyperpage}{106}
+\indexentry{LokiFormatter\_work@{LokiFormatter\_work}!Interface pour la mise en forme de séries temporelles@{Interface pour la mise en forme de séries temporelles}|hyperpage}{106}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{107}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!CHANNEL\_NAME\_LEN@{CHANNEL\_NAME\_LEN}|hyperpage}{109}
+\indexentry{CHANNEL\_NAME\_LEN@{CHANNEL\_NAME\_LEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{109}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!MSEED\_FILENAME\_SUFFIX\_LEN@{MSEED\_FILENAME\_SUFFIX\_LEN}|hyperpage}{109}
+\indexentry{MSEED\_FILENAME\_SUFFIX\_LEN@{MSEED\_FILENAME\_SUFFIX\_LEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{109}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!MSEED\_RECLEN@{MSEED\_RECLEN}|hyperpage}{109}
+\indexentry{MSEED\_RECLEN@{MSEED\_RECLEN}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{109}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed@{LokiMSeed}|hyperpage}{109}
+\indexentry{LokiMSeed@{LokiMSeed}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{109}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{109}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{109}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_close@{LokiMSeed\_close}|hyperpage}{110}
+\indexentry{LokiMSeed\_close@{LokiMSeed\_close}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{110}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_del@{LokiMSeed\_del}|hyperpage}{110}
+\indexentry{LokiMSeed\_del@{LokiMSeed\_del}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{110}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_new@{LokiMSeed\_new}|hyperpage}{110}
+\indexentry{LokiMSeed\_new@{LokiMSeed\_new}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{110}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeed\_work@{LokiMSeed\_work}|hyperpage}{110}
+\indexentry{LokiMSeed\_work@{LokiMSeed\_work}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{110}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig\_del@{LokiMSeedConfig\_del}|hyperpage}{111}
+\indexentry{LokiMSeedConfig\_del@{LokiMSeedConfig\_del}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{111}
+\indexentry{Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}!LokiMSeedConfig\_new@{LokiMSeedConfig\_new}|hyperpage}{112}
+\indexentry{LokiMSeedConfig\_new@{LokiMSeedConfig\_new}!Enregistrement de séries temporelles au format miniSEED@{Enregistrement de séries temporelles au format miniSEED}|hyperpage}{112}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{112}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw@{LokiRaw}|hyperpage}{113}
+\indexentry{LokiRaw@{LokiRaw}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{113}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_close@{LokiRaw\_close}|hyperpage}{114}
+\indexentry{LokiRaw\_close@{LokiRaw\_close}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{114}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_del@{LokiRaw\_del}|hyperpage}{114}
+\indexentry{LokiRaw\_del@{LokiRaw\_del}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{114}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_new@{LokiRaw\_new}|hyperpage}{114}
+\indexentry{LokiRaw\_new@{LokiRaw\_new}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{114}
+\indexentry{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_work@{LokiRaw\_work}|hyperpage}{114}
+\indexentry{LokiRaw\_work@{LokiRaw\_work}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}|hyperpage}{114}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{115}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!FILENAME\_SUFFIX\_DATE\_LEN@{FILENAME\_SUFFIX\_DATE\_LEN}|hyperpage}{117}
+\indexentry{FILENAME\_SUFFIX\_DATE\_LEN@{FILENAME\_SUFFIX\_DATE\_LEN}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{117}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!FILENAME\_SUFFIX\_LEN@{FILENAME\_SUFFIX\_LEN}|hyperpage}{117}
+\indexentry{FILENAME\_SUFFIX\_LEN@{FILENAME\_SUFFIX\_LEN}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{117}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!FILENAME\_SUFFIX\_MSEC\_LEN@{FILENAME\_SUFFIX\_MSEC\_LEN}|hyperpage}{117}
+\indexentry{FILENAME\_SUFFIX\_MSEC\_LEN@{FILENAME\_SUFFIX\_MSEC\_LEN}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{117}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder@{LokiRecorder}|hyperpage}{118}
+\indexentry{LokiRecorder@{LokiRecorder}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{118}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_del@{LokiRecorder\_del}|hyperpage}{118}
+\indexentry{LokiRecorder\_del@{LokiRecorder\_del}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{118}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_get\_channel\_count@{LokiRecorder\_get\_channel\_count}|hyperpage}{118}
+\indexentry{LokiRecorder\_get\_channel\_count@{LokiRecorder\_get\_channel\_count}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{118}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_get\_filename@{LokiRecorder\_get\_filename}|hyperpage}{118}
+\indexentry{LokiRecorder\_get\_filename@{LokiRecorder\_get\_filename}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{118}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_is\_recording@{LokiRecorder\_is\_recording}|hyperpage}{119}
+\indexentry{LokiRecorder\_is\_recording@{LokiRecorder\_is\_recording}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{119}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_new@{LokiRecorder\_new}|hyperpage}{119}
+\indexentry{LokiRecorder\_new@{LokiRecorder\_new}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{119}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_set\_formatter@{LokiRecorder\_set\_formatter}|hyperpage}{120}
+\indexentry{LokiRecorder\_set\_formatter@{LokiRecorder\_set\_formatter}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{120}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_signal\_handler@{LokiRecorder\_signal\_handler}|hyperpage}{120}
+\indexentry{LokiRecorder\_signal\_handler@{LokiRecorder\_signal\_handler}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{120}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_start@{LokiRecorder\_start}|hyperpage}{121}
+\indexentry{LokiRecorder\_start@{LokiRecorder\_start}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{121}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_stop@{LokiRecorder\_stop}|hyperpage}{121}
+\indexentry{LokiRecorder\_stop@{LokiRecorder\_stop}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{121}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_wait@{LokiRecorder\_wait}|hyperpage}{122}
+\indexentry{LokiRecorder\_wait@{LokiRecorder\_wait}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{122}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_work@{LokiRecorder\_work}|hyperpage}{122}
+\indexentry{LokiRecorder\_work@{LokiRecorder\_work}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{122}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_formatter\_impls@{LokiRecorder\_formatter\_impls}|hyperpage}{123}
+\indexentry{LokiRecorder\_formatter\_impls@{LokiRecorder\_formatter\_impls}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{123}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_formatter\_names@{LokiRecorder\_formatter\_names}|hyperpage}{123}
+\indexentry{LokiRecorder\_formatter\_names@{LokiRecorder\_formatter\_names}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{123}
+\indexentry{Enregistrement de séries temporelles@{Enregistrement de séries temporelles}!LokiRecorder\_waiting\_instance@{LokiRecorder\_waiting\_instance}|hyperpage}{123}
+\indexentry{LokiRecorder\_waiting\_instance@{LokiRecorder\_waiting\_instance}!Enregistrement de séries temporelles@{Enregistrement de séries temporelles}|hyperpage}{123}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{123}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS@{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}|hyperpage}{125}
+\indexentry{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS@{LIBLOKI\_SOCKET\_SERVER\_CONNECTIONS}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{125}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer@{LokiSocketServer}|hyperpage}{125}
+\indexentry{LokiSocketServer@{LokiSocketServer}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{125}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_del@{LokiSocketServer\_del}|hyperpage}{125}
+\indexentry{LokiSocketServer\_del@{LokiSocketServer\_del}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{125}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_is\_streaming@{LokiSocketServer\_is\_streaming}|hyperpage}{125}
+\indexentry{LokiSocketServer\_is\_streaming@{LokiSocketServer\_is\_streaming}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{125}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_new@{LokiSocketServer\_new}|hyperpage}{125}
+\indexentry{LokiSocketServer\_new@{LokiSocketServer\_new}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{125}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_receive@{LokiSocketServer\_receive}|hyperpage}{126}
+\indexentry{LokiSocketServer\_receive@{LokiSocketServer\_receive}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{126}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_serve@{LokiSocketServer\_serve}|hyperpage}{126}
+\indexentry{LokiSocketServer\_serve@{LokiSocketServer\_serve}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{126}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_start@{LokiSocketServer\_start}|hyperpage}{127}
+\indexentry{LokiSocketServer\_start@{LokiSocketServer\_start}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{127}
+\indexentry{Serveur de données sur socket Unix@{Serveur de données sur socket Unix}!LokiSocketServer\_stop@{LokiSocketServer\_stop}|hyperpage}{127}
+\indexentry{LokiSocketServer\_stop@{LokiSocketServer\_stop}!Serveur de données sur socket Unix@{Serveur de données sur socket Unix}|hyperpage}{127}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}|hyperpage}{128}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}|hyperpage}{129}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement@{LokiDisplacement}|hyperpage}{130}
+\indexentry{LokiDisplacement@{LokiDisplacement}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{130}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_clone@{LokiDisplacement\_clone}|hyperpage}{130}
+\indexentry{LokiDisplacement\_clone@{LokiDisplacement\_clone}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{130}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_del@{LokiDisplacement\_del}|hyperpage}{131}
+\indexentry{LokiDisplacement\_del@{LokiDisplacement\_del}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{131}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_get\_ellipse@{LokiDisplacement\_get\_ellipse}|hyperpage}{131}
+\indexentry{LokiDisplacement\_get\_ellipse@{LokiDisplacement\_get\_ellipse}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{131}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_new@{LokiDisplacement\_new}|hyperpage}{131}
+\indexentry{LokiDisplacement\_new@{LokiDisplacement\_new}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{131}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_reset@{LokiDisplacement\_reset}|hyperpage}{132}
+\indexentry{LokiDisplacement\_reset@{LokiDisplacement\_reset}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{132}
+\indexentry{Calcul de déplacement@{Calcul de déplacement}!LokiDisplacement\_work@{LokiDisplacement\_work}|hyperpage}{132}
+\indexentry{LokiDisplacement\_work@{LokiDisplacement\_work}!Calcul de déplacement@{Calcul de déplacement}|hyperpage}{132}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{133}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator@{LokiEllipseEstimator}|hyperpage}{135}
+\indexentry{LokiEllipseEstimator@{LokiEllipseEstimator}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{135}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}|hyperpage}{135}
+\indexentry{LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{135}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}|hyperpage}{135}
+\indexentry{LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{135}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_get\_point@{LokiEllipse\_get\_point}|hyperpage}{136}
+\indexentry{LokiEllipse\_get\_point@{LokiEllipse\_get\_point}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{136}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}|hyperpage}{136}
+\indexentry{LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{136}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_clone@{LokiEllipseEstimator\_clone}|hyperpage}{137}
+\indexentry{LokiEllipseEstimator\_clone@{LokiEllipseEstimator\_clone}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{137}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_del@{LokiEllipseEstimator\_del}|hyperpage}{137}
+\indexentry{LokiEllipseEstimator\_del@{LokiEllipseEstimator\_del}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{137}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_get\_state@{LokiEllipseEstimator\_get\_state}|hyperpage}{137}
+\indexentry{LokiEllipseEstimator\_get\_state@{LokiEllipseEstimator\_get\_state}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{137}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_new@{LokiEllipseEstimator\_new}|hyperpage}{138}
+\indexentry{LokiEllipseEstimator\_new@{LokiEllipseEstimator\_new}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{138}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_new\_with\_implementation@{LokiEllipseEstimator\_new\_with\_implementation}|hyperpage}{138}
+\indexentry{LokiEllipseEstimator\_new\_with\_implementation@{LokiEllipseEstimator\_new\_with\_implementation}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{138}
+\indexentry{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}!LokiEllipseEstimator\_work@{LokiEllipseEstimator\_work}|hyperpage}{139}
+\indexentry{LokiEllipseEstimator\_work@{LokiEllipseEstimator\_work}!Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse@{Interface d\textquotesingle{}un filtre adaptatif pour estimer les paramètres d\textquotesingle{}une ellipse}|hyperpage}{139}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{139}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipseEquation@{LokiEllipseEquation}|hyperpage}{140}
+\indexentry{LokiEllipseEquation@{LokiEllipseEquation}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{140}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}|hyperpage}{141}
+\indexentry{LokiEllipse\_get\_angle@{LokiEllipse\_get\_angle}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{141}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}|hyperpage}{141}
+\indexentry{LokiEllipse\_get\_coeffs@{LokiEllipse\_get\_coeffs}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{141}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_get\_point@{LokiEllipse\_get\_point}|hyperpage}{141}
+\indexentry{LokiEllipse\_get\_point@{LokiEllipse\_get\_point}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{141}
+\indexentry{Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}!LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}|hyperpage}{142}
+\indexentry{LokiEllipse\_set\_from\_coeffs@{LokiEllipse\_set\_from\_coeffs}!Représentation et manipulation d\textquotesingle{}ellipses@{Représentation et manipulation d\textquotesingle{}ellipses}|hyperpage}{142}
+\indexentry{Filtre FIR@{Filtre FIR}|hyperpage}{142}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{144}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!Filtre FIR@{Filtre FIR}|hyperpage}{144}
+\indexentry{Filtre FIR@{Filtre FIR}!bessel0@{bessel0}|hyperpage}{144}
+\indexentry{bessel0@{bessel0}!Filtre FIR@{Filtre FIR}|hyperpage}{144}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_allocate\_samples@{LokiFIRFilter\_allocate\_samples}|hyperpage}{144}
+\indexentry{LokiFIRFilter\_allocate\_samples@{LokiFIRFilter\_allocate\_samples}!Filtre FIR@{Filtre FIR}|hyperpage}{144}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_clone@{LokiFIRFilter\_clone}|hyperpage}{144}
+\indexentry{LokiFIRFilter\_clone@{LokiFIRFilter\_clone}!Filtre FIR@{Filtre FIR}|hyperpage}{144}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_del@{LokiFIRFilter\_del}|hyperpage}{145}
+\indexentry{LokiFIRFilter\_del@{LokiFIRFilter\_del}!Filtre FIR@{Filtre FIR}|hyperpage}{145}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_get\_actual\_length@{LokiFIRFilter\_get\_actual\_length}|hyperpage}{145}
+\indexentry{LokiFIRFilter\_get\_actual\_length@{LokiFIRFilter\_get\_actual\_length}!Filtre FIR@{Filtre FIR}|hyperpage}{145}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_new@{LokiFIRFilter\_new}|hyperpage}{145}
+\indexentry{LokiFIRFilter\_new@{LokiFIRFilter\_new}!Filtre FIR@{Filtre FIR}|hyperpage}{145}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_new\_kaiser\_bessel@{LokiFIRFilter\_new\_kaiser\_bessel}|hyperpage}{146}
+\indexentry{LokiFIRFilter\_new\_kaiser\_bessel@{LokiFIRFilter\_new\_kaiser\_bessel}!Filtre FIR@{Filtre FIR}|hyperpage}{146}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_reset@{LokiFIRFilter\_reset}|hyperpage}{147}
+\indexentry{LokiFIRFilter\_reset@{LokiFIRFilter\_reset}!Filtre FIR@{Filtre FIR}|hyperpage}{147}
+\indexentry{Filtre FIR@{Filtre FIR}!LokiFIRFilter\_work@{LokiFIRFilter\_work}|hyperpage}{147}
+\indexentry{LokiFIRFilter\_work@{LokiFIRFilter\_work}!Filtre FIR@{Filtre FIR}|hyperpage}{147}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}|hyperpage}{148}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman@{LokiKalman}|hyperpage}{149}
+\indexentry{LokiKalman@{LokiKalman}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{149}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_clone@{LokiKalman\_clone}|hyperpage}{149}
+\indexentry{LokiKalman\_clone@{LokiKalman\_clone}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{149}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_del@{LokiKalman\_del}|hyperpage}{149}
+\indexentry{LokiKalman\_del@{LokiKalman\_del}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{149}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_get\_state@{LokiKalman\_get\_state}|hyperpage}{149}
+\indexentry{LokiKalman\_get\_state@{LokiKalman\_get\_state}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{149}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_new@{LokiKalman\_new}|hyperpage}{150}
+\indexentry{LokiKalman\_new@{LokiKalman\_new}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{150}
+\indexentry{Filtre de Kalman@{Filtre de Kalman}!LokiKalman\_work@{LokiKalman\_work}|hyperpage}{150}
+\indexentry{LokiKalman\_work@{LokiKalman\_work}!Filtre de Kalman@{Filtre de Kalman}|hyperpage}{150}
+\indexentry{Filtre NLMS@{Filtre NLMS}|hyperpage}{151}
+\indexentry{Filtre NLMS@{Filtre NLMS}!NLMS\_NU@{NLMS\_NU}|hyperpage}{152}
+\indexentry{NLMS\_NU@{NLMS\_NU}!Filtre NLMS@{Filtre NLMS}|hyperpage}{152}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS@{LokiNLMS}|hyperpage}{152}
+\indexentry{LokiNLMS@{LokiNLMS}!Filtre NLMS@{Filtre NLMS}|hyperpage}{152}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_clone@{LokiNLMS\_clone}|hyperpage}{153}
+\indexentry{LokiNLMS\_clone@{LokiNLMS\_clone}!Filtre NLMS@{Filtre NLMS}|hyperpage}{153}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_del@{LokiNLMS\_del}|hyperpage}{153}
+\indexentry{LokiNLMS\_del@{LokiNLMS\_del}!Filtre NLMS@{Filtre NLMS}|hyperpage}{153}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_get\_state@{LokiNLMS\_get\_state}|hyperpage}{153}
+\indexentry{LokiNLMS\_get\_state@{LokiNLMS\_get\_state}!Filtre NLMS@{Filtre NLMS}|hyperpage}{153}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_new@{LokiNLMS\_new}|hyperpage}{153}
+\indexentry{LokiNLMS\_new@{LokiNLMS\_new}!Filtre NLMS@{Filtre NLMS}|hyperpage}{153}
+\indexentry{Filtre NLMS@{Filtre NLMS}!LokiNLMS\_work@{LokiNLMS\_work}|hyperpage}{154}
+\indexentry{LokiNLMS\_work@{LokiNLMS\_work}!Filtre NLMS@{Filtre NLMS}|hyperpage}{154}
+\indexentry{Filtre RLS@{Filtre RLS}|hyperpage}{154}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS@{LokiRLS}|hyperpage}{156}
+\indexentry{LokiRLS@{LokiRLS}!Filtre RLS@{Filtre RLS}|hyperpage}{156}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS\_clone@{LokiRLS\_clone}|hyperpage}{156}
+\indexentry{LokiRLS\_clone@{LokiRLS\_clone}!Filtre RLS@{Filtre RLS}|hyperpage}{156}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS\_del@{LokiRLS\_del}|hyperpage}{156}
+\indexentry{LokiRLS\_del@{LokiRLS\_del}!Filtre RLS@{Filtre RLS}|hyperpage}{156}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS\_get\_state@{LokiRLS\_get\_state}|hyperpage}{156}
+\indexentry{LokiRLS\_get\_state@{LokiRLS\_get\_state}!Filtre RLS@{Filtre RLS}|hyperpage}{156}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS\_new@{LokiRLS\_new}|hyperpage}{157}
+\indexentry{LokiRLS\_new@{LokiRLS\_new}!Filtre RLS@{Filtre RLS}|hyperpage}{157}
+\indexentry{Filtre RLS@{Filtre RLS}!LokiRLS\_work@{LokiRLS\_work}|hyperpage}{157}
+\indexentry{LokiRLS\_work@{LokiRLS\_work}!Filtre RLS@{Filtre RLS}|hyperpage}{157}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{158}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX@{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX@{LOKI\_SYSTEM\_DEFAULT\_CAVITY\_INDEX}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT@{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT@{LOKI\_SYSTEM\_DEFAULT\_DISTANCE\_UNIT}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_KALMAN}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_IMPL\_RLS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_INITIAL\_RADIUS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}|hyperpage}{160}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{160}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_KALMAN}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_PARAMS\_RLS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE@{LOKI\_SYSTEM\_DEFAULT\_ESTIMATOR\_THROTTLE}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_ATTENUATION}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_BANDWIDTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}|hyperpage}{161}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_DECIMATION}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{161}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH@{LOKI\_SYSTEM\_DEFAULT\_FILTER\_LENGTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU@{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU@{LOKI\_SYSTEM\_DEFAULT\_IIR\_TAU}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS@{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS@{LOKI\_SYSTEM\_DEFAULT\_REFLECTIONS}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_SIMULATE@{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_SIMULATE@{LOKI\_SYSTEM\_DEFAULT\_SIMULATE}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_SKIP@{LOKI\_SYSTEM\_DEFAULT\_SKIP}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_SKIP@{LOKI\_SYSTEM\_DEFAULT\_SKIP}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}!LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH@{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}|hyperpage}{162}
+\indexentry{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH@{LOKI\_SYSTEM\_DEFAULT\_WAVELENGTH}!Valeurs par défaut des paramètres de calcul de déplacement@{Valeurs par défaut des paramètres de calcul de déplacement}|hyperpage}{162}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{163}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem@{LokiSystem}|hyperpage}{167}
+\indexentry{LokiSystem@{LokiSystem}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{167}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{167}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{167}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_del@{LokiSystem\_del}|hyperpage}{167}
+\indexentry{LokiSystem\_del@{LokiSystem\_del}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{167}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_displacement\_reset@{LokiSystem\_displacement\_reset}|hyperpage}{167}
+\indexentry{LokiSystem\_displacement\_reset@{LokiSystem\_displacement\_reset}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{167}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_config@{LokiSystem\_get\_config}|hyperpage}{168}
+\indexentry{LokiSystem\_get\_config@{LokiSystem\_get\_config}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{168}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_ellipse@{LokiSystem\_get\_ellipse}|hyperpage}{168}
+\indexentry{LokiSystem\_get\_ellipse@{LokiSystem\_get\_ellipse}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{168}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_modem@{LokiSystem\_get\_modem}|hyperpage}{169}
+\indexentry{LokiSystem\_get\_modem@{LokiSystem\_get\_modem}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{169}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_get\_sampling\_frequency@{LokiSystem\_get\_sampling\_frequency}|hyperpage}{169}
+\indexentry{LokiSystem\_get\_sampling\_frequency@{LokiSystem\_get\_sampling\_frequency}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{169}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_is\_streaming@{LokiSystem\_is\_streaming}|hyperpage}{169}
+\indexentry{LokiSystem\_is\_streaming@{LokiSystem\_is\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{169}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_new@{LokiSystem\_new}|hyperpage}{170}
+\indexentry{LokiSystem\_new@{LokiSystem\_new}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{170}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_start\_streaming@{LokiSystem\_start\_streaming}|hyperpage}{170}
+\indexentry{LokiSystem\_start\_streaming@{LokiSystem\_start\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{170}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_stop\_streaming@{LokiSystem\_stop\_streaming}|hyperpage}{171}
+\indexentry{LokiSystem\_stop\_streaming@{LokiSystem\_stop\_streaming}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{171}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystem\_work@{LokiSystem\_work}|hyperpage}{171}
+\indexentry{LokiSystem\_work@{LokiSystem\_work}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{171}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_del@{LokiSystemConfig\_del}|hyperpage}{172}
+\indexentry{LokiSystemConfig\_del@{LokiSystemConfig\_del}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{172}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_cavity\_index@{LokiSystemConfig\_get\_cavity\_index}|hyperpage}{172}
+\indexentry{LokiSystemConfig\_get\_cavity\_index@{LokiSystemConfig\_get\_cavity\_index}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{172}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_distance\_unit@{LokiSystemConfig\_get\_distance\_unit}|hyperpage}{172}
+\indexentry{LokiSystemConfig\_get\_distance\_unit@{LokiSystemConfig\_get\_distance\_unit}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{172}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_initial\_radius@{LokiSystemConfig\_get\_estimator\_initial\_radius}|hyperpage}{173}
+\indexentry{LokiSystemConfig\_get\_estimator\_initial\_radius@{LokiSystemConfig\_get\_estimator\_initial\_radius}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{173}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_name@{LokiSystemConfig\_get\_estimator\_name}|hyperpage}{173}
+\indexentry{LokiSystemConfig\_get\_estimator\_name@{LokiSystemConfig\_get\_estimator\_name}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{173}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_params@{LokiSystemConfig\_get\_estimator\_params}|hyperpage}{173}
+\indexentry{LokiSystemConfig\_get\_estimator\_params@{LokiSystemConfig\_get\_estimator\_params}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{173}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_params\_length@{LokiSystemConfig\_get\_estimator\_params\_length}|hyperpage}{174}
+\indexentry{LokiSystemConfig\_get\_estimator\_params\_length@{LokiSystemConfig\_get\_estimator\_params\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{174}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_estimator\_throttle@{LokiSystemConfig\_get\_estimator\_throttle}|hyperpage}{174}
+\indexentry{LokiSystemConfig\_get\_estimator\_throttle@{LokiSystemConfig\_get\_estimator\_throttle}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{174}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_attenuation@{LokiSystemConfig\_get\_filter\_attenuation}|hyperpage}{174}
+\indexentry{LokiSystemConfig\_get\_filter\_attenuation@{LokiSystemConfig\_get\_filter\_attenuation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{174}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_bandwidth@{LokiSystemConfig\_get\_filter\_bandwidth}|hyperpage}{175}
+\indexentry{LokiSystemConfig\_get\_filter\_bandwidth@{LokiSystemConfig\_get\_filter\_bandwidth}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{175}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_decimation@{LokiSystemConfig\_get\_filter\_decimation}|hyperpage}{175}
+\indexentry{LokiSystemConfig\_get\_filter\_decimation@{LokiSystemConfig\_get\_filter\_decimation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{175}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_filter\_length@{LokiSystemConfig\_get\_filter\_length}|hyperpage}{175}
+\indexentry{LokiSystemConfig\_get\_filter\_length@{LokiSystemConfig\_get\_filter\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{175}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_reflections@{LokiSystemConfig\_get\_reflections}|hyperpage}{176}
+\indexentry{LokiSystemConfig\_get\_reflections@{LokiSystemConfig\_get\_reflections}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{176}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_scale@{LokiSystemConfig\_get\_scale}|hyperpage}{176}
+\indexentry{LokiSystemConfig\_get\_scale@{LokiSystemConfig\_get\_scale}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{176}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_simulate@{LokiSystemConfig\_get\_simulate}|hyperpage}{177}
+\indexentry{LokiSystemConfig\_get\_simulate@{LokiSystemConfig\_get\_simulate}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{177}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_skip@{LokiSystemConfig\_get\_skip}|hyperpage}{177}
+\indexentry{LokiSystemConfig\_get\_skip@{LokiSystemConfig\_get\_skip}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{177}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_time\_constants@{LokiSystemConfig\_get\_time\_constants}|hyperpage}{177}
+\indexentry{LokiSystemConfig\_get\_time\_constants@{LokiSystemConfig\_get\_time\_constants}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{177}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_time\_constants\_length@{LokiSystemConfig\_get\_time\_constants\_length}|hyperpage}{178}
+\indexentry{LokiSystemConfig\_get\_time\_constants\_length@{LokiSystemConfig\_get\_time\_constants\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{178}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_get\_wavelength@{LokiSystemConfig\_get\_wavelength}|hyperpage}{178}
+\indexentry{LokiSystemConfig\_get\_wavelength@{LokiSystemConfig\_get\_wavelength}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{178}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_new@{LokiSystemConfig\_new}|hyperpage}{179}
+\indexentry{LokiSystemConfig\_new@{LokiSystemConfig\_new}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{179}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_cavity\_index@{LokiSystemConfig\_set\_cavity\_index}|hyperpage}{179}
+\indexentry{LokiSystemConfig\_set\_cavity\_index@{LokiSystemConfig\_set\_cavity\_index}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{179}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_distance\_unit@{LokiSystemConfig\_set\_distance\_unit}|hyperpage}{179}
+\indexentry{LokiSystemConfig\_set\_distance\_unit@{LokiSystemConfig\_set\_distance\_unit}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{179}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_initial\_radius@{LokiSystemConfig\_set\_estimator\_initial\_radius}|hyperpage}{180}
+\indexentry{LokiSystemConfig\_set\_estimator\_initial\_radius@{LokiSystemConfig\_set\_estimator\_initial\_radius}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{180}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_name@{LokiSystemConfig\_set\_estimator\_name}|hyperpage}{180}
+\indexentry{LokiSystemConfig\_set\_estimator\_name@{LokiSystemConfig\_set\_estimator\_name}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{180}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_params@{LokiSystemConfig\_set\_estimator\_params}|hyperpage}{180}
+\indexentry{LokiSystemConfig\_set\_estimator\_params@{LokiSystemConfig\_set\_estimator\_params}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{180}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_estimator\_throttle@{LokiSystemConfig\_set\_estimator\_throttle}|hyperpage}{181}
+\indexentry{LokiSystemConfig\_set\_estimator\_throttle@{LokiSystemConfig\_set\_estimator\_throttle}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{181}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_attenuation@{LokiSystemConfig\_set\_filter\_attenuation}|hyperpage}{181}
+\indexentry{LokiSystemConfig\_set\_filter\_attenuation@{LokiSystemConfig\_set\_filter\_attenuation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{181}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_bandwidth@{LokiSystemConfig\_set\_filter\_bandwidth}|hyperpage}{181}
+\indexentry{LokiSystemConfig\_set\_filter\_bandwidth@{LokiSystemConfig\_set\_filter\_bandwidth}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{181}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_decimation@{LokiSystemConfig\_set\_filter\_decimation}|hyperpage}{182}
+\indexentry{LokiSystemConfig\_set\_filter\_decimation@{LokiSystemConfig\_set\_filter\_decimation}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{182}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_filter\_length@{LokiSystemConfig\_set\_filter\_length}|hyperpage}{182}
+\indexentry{LokiSystemConfig\_set\_filter\_length@{LokiSystemConfig\_set\_filter\_length}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{182}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_reflections@{LokiSystemConfig\_set\_reflections}|hyperpage}{182}
+\indexentry{LokiSystemConfig\_set\_reflections@{LokiSystemConfig\_set\_reflections}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{182}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_simulate@{LokiSystemConfig\_set\_simulate}|hyperpage}{183}
+\indexentry{LokiSystemConfig\_set\_simulate@{LokiSystemConfig\_set\_simulate}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{183}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_skip@{LokiSystemConfig\_set\_skip}|hyperpage}{183}
+\indexentry{LokiSystemConfig\_set\_skip@{LokiSystemConfig\_set\_skip}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{183}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_time\_constants@{LokiSystemConfig\_set\_time\_constants}|hyperpage}{184}
+\indexentry{LokiSystemConfig\_set\_time\_constants@{LokiSystemConfig\_set\_time\_constants}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{184}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_set\_wavelength@{LokiSystemConfig\_set\_wavelength}|hyperpage}{184}
+\indexentry{LokiSystemConfig\_set\_wavelength@{LokiSystemConfig\_set\_wavelength}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{184}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_estimator\_impls@{LokiSystemConfig\_estimator\_impls}|hyperpage}{184}
+\indexentry{LokiSystemConfig\_estimator\_impls@{LokiSystemConfig\_estimator\_impls}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{184}
+\indexentry{Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}!LokiSystemConfig\_estimator\_names@{LokiSystemConfig\_estimator\_names}|hyperpage}{184}
+\indexentry{LokiSystemConfig\_estimator\_names@{LokiSystemConfig\_estimator\_names}!Gestion des acquisitions et du calcul de déplacement@{Gestion des acquisitions et du calcul de déplacement}|hyperpage}{184}
+\indexentry{AD8370ControlWord::\+[struct]\+.\_\_unnamed0\_\_@{AD8370ControlWord::[struct].\_\_unnamed0\_\_}|hyperpage}{187}
+\indexentry{float32x4\_t::\+[struct]\+.\_\_unnamed0\_\_@{float32x4\_t::[struct].\_\_unnamed0\_\_}|hyperpage}{187}
+\indexentry{LokiEnvSensorsSample::\+[union]\+.\_\_unnamed0\_\_@{LokiEnvSensorsSample::[union].\_\_unnamed0\_\_}|hyperpage}{188}
+\indexentry{LokiModemSample::\+[union]\+.\_\_unnamed0\_\_@{LokiModemSample::[union].\_\_unnamed0\_\_}|hyperpage}{188}
+\indexentry{LokiMSeedInputSample::\+[union]\+.\_\_unnamed0\_\_@{LokiMSeedInputSample::[union].\_\_unnamed0\_\_}|hyperpage}{189}
+\indexentry{LokiModemSample::\+[union]\+.\_\_unnamed1\_\_@{LokiModemSample::[union].\_\_unnamed1\_\_}|hyperpage}{189}
+\indexentry{AD8370ControlWord@{AD8370ControlWord}|hyperpage}{190}
+\indexentry{AD8370ControlWord@{AD8370ControlWord}!raw@{raw}|hyperpage}{191}
+\indexentry{raw@{raw}!AD8370ControlWord@{AD8370ControlWord}|hyperpage}{191}
+\indexentry{float32x2\_t@{float32x2\_t}|hyperpage}{191}
+\indexentry{float32x2\_t@{float32x2\_t}!val@{val}|hyperpage}{191}
+\indexentry{val@{val}!float32x2\_t@{float32x2\_t}|hyperpage}{191}
+\indexentry{float32x4\_t@{float32x4\_t}|hyperpage}{192}
+\indexentry{float32x4\_t@{float32x4\_t}!val@{val}|hyperpage}{192}
+\indexentry{val@{val}!float32x4\_t@{float32x4\_t}|hyperpage}{192}
+\indexentry{LokiConsumer@{LokiConsumer}|hyperpage}{192}
+\indexentry{LokiConsumer@{LokiConsumer}!cid@{cid}|hyperpage}{193}
+\indexentry{cid@{cid}!LokiConsumer@{LokiConsumer}|hyperpage}{193}
+\indexentry{LokiConsumer@{LokiConsumer}!in@{in}|hyperpage}{193}
+\indexentry{in@{in}!LokiConsumer@{LokiConsumer}|hyperpage}{193}
+\indexentry{LokiConsumer@{LokiConsumer}!stop\_request@{stop\_request}|hyperpage}{193}
+\indexentry{stop\_request@{stop\_request}!LokiConsumer@{LokiConsumer}|hyperpage}{193}
+\indexentry{LokiConsumer@{LokiConsumer}!thread@{thread}|hyperpage}{193}
+\indexentry{thread@{thread}!LokiConsumer@{LokiConsumer}|hyperpage}{193}
+\indexentry{LokiDisplacement@{LokiDisplacement}|hyperpage}{194}
+\indexentry{LokiDisplacement@{LokiDisplacement}!alpha\_prev@{alpha\_prev}|hyperpage}{195}
+\indexentry{alpha\_prev@{alpha\_prev}!LokiDisplacement@{LokiDisplacement}|hyperpage}{195}
+\indexentry{LokiDisplacement@{LokiDisplacement}!alpha\_ref@{alpha\_ref}|hyperpage}{195}
+\indexentry{alpha\_ref@{alpha\_ref}!LokiDisplacement@{LokiDisplacement}|hyperpage}{195}
+\indexentry{LokiDisplacement@{LokiDisplacement}!ellipse@{ellipse}|hyperpage}{195}
+\indexentry{ellipse@{ellipse}!LokiDisplacement@{LokiDisplacement}|hyperpage}{195}
+\indexentry{LokiDisplacement@{LokiDisplacement}!estimator@{estimator}|hyperpage}{195}
+\indexentry{estimator@{estimator}!LokiDisplacement@{LokiDisplacement}|hyperpage}{195}
+\indexentry{LokiDisplacement@{LokiDisplacement}!estimator\_cnt@{estimator\_cnt}|hyperpage}{196}
+\indexentry{estimator\_cnt@{estimator\_cnt}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!estimator\_throttle@{estimator\_throttle}|hyperpage}{196}
+\indexentry{estimator\_throttle@{estimator\_throttle}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!filter@{filter}|hyperpage}{196}
+\indexentry{filter@{filter}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!iir\_a@{iir\_a}|hyperpage}{196}
+\indexentry{iir\_a@{iir\_a}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!iir\_b@{iir\_b}|hyperpage}{196}
+\indexentry{iir\_b@{iir\_b}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!phi\_filt@{phi\_filt}|hyperpage}{196}
+\indexentry{phi\_filt@{phi\_filt}!LokiDisplacement@{LokiDisplacement}|hyperpage}{196}
+\indexentry{LokiDisplacement@{LokiDisplacement}!phi\_prev@{phi\_prev}|hyperpage}{197}
+\indexentry{phi\_prev@{phi\_prev}!LokiDisplacement@{LokiDisplacement}|hyperpage}{197}
+\indexentry{LokiDisplacement@{LokiDisplacement}!phi\_ref@{phi\_ref}|hyperpage}{197}
+\indexentry{phi\_ref@{phi\_ref}!LokiDisplacement@{LokiDisplacement}|hyperpage}{197}
+\indexentry{LokiDisplacement@{LokiDisplacement}!phi\_turns@{phi\_turns}|hyperpage}{197}
+\indexentry{phi\_turns@{phi\_turns}!LokiDisplacement@{LokiDisplacement}|hyperpage}{197}
+\indexentry{LokiDisplacement@{LokiDisplacement}!scale@{scale}|hyperpage}{197}
+\indexentry{scale@{scale}!LokiDisplacement@{LokiDisplacement}|hyperpage}{197}
+\indexentry{LokiEllipse@{LokiEllipse}|hyperpage}{197}
+\indexentry{LokiEllipse@{LokiEllipse}!A@{A}|hyperpage}{198}
+\indexentry{A@{A}!LokiEllipse@{LokiEllipse}|hyperpage}{198}
+\indexentry{LokiEllipse@{LokiEllipse}!alpha@{alpha}|hyperpage}{198}
+\indexentry{alpha@{alpha}!LokiEllipse@{LokiEllipse}|hyperpage}{198}
+\indexentry{LokiEllipse@{LokiEllipse}!B@{B}|hyperpage}{198}
+\indexentry{B@{B}!LokiEllipse@{LokiEllipse}|hyperpage}{198}
+\indexentry{LokiEllipse@{LokiEllipse}!xc@{xc}|hyperpage}{198}
+\indexentry{xc@{xc}!LokiEllipse@{LokiEllipse}|hyperpage}{198}
+\indexentry{LokiEllipse@{LokiEllipse}!yc@{yc}|hyperpage}{199}
+\indexentry{yc@{yc}!LokiEllipse@{LokiEllipse}|hyperpage}{199}
+\indexentry{LokiEllipseEstimator@{LokiEllipseEstimator}|hyperpage}{199}
+\indexentry{LokiEllipseEstimator@{LokiEllipseEstimator}!impl@{impl}|hyperpage}{199}
+\indexentry{impl@{impl}!LokiEllipseEstimator@{LokiEllipseEstimator}|hyperpage}{199}
+\indexentry{LokiEllipseEstimator@{LokiEllipseEstimator}!instance@{instance}|hyperpage}{199}
+\indexentry{instance@{instance}!LokiEllipseEstimator@{LokiEllipseEstimator}|hyperpage}{199}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}|hyperpage}{200}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!bmp390\_t\_fine@{bmp390\_t\_fine}|hyperpage}{201}
+\indexentry{bmp390\_t\_fine@{bmp390\_t\_fine}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{201}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!channel\_mask@{channel\_mask}|hyperpage}{201}
+\indexentry{channel\_mask@{channel\_mask}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{201}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!channel\_output\_width@{channel\_output\_width}|hyperpage}{201}
+\indexentry{channel\_output\_width@{channel\_output\_width}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{201}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!channels@{channels}|hyperpage}{202}
+\indexentry{channels@{channels}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!clk\_frequency@{clk\_frequency}|hyperpage}{202}
+\indexentry{clk\_frequency@{clk\_frequency}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!cycles\_per\_sample\_max@{cycles\_per\_sample\_max}|hyperpage}{202}
+\indexentry{cycles\_per\_sample\_max@{cycles\_per\_sample\_max}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!data\_mask@{data\_mask}|hyperpage}{202}
+\indexentry{data\_mask@{data\_mask}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!data\_sign\_mask@{data\_sign\_mask}|hyperpage}{202}
+\indexentry{data\_sign\_mask@{data\_sign\_mask}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!data\_width@{data\_width}|hyperpage}{202}
+\indexentry{data\_width@{data\_width}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{202}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!file@{file}|hyperpage}{203}
+\indexentry{file@{file}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!fileno@{fileno}|hyperpage}{203}
+\indexentry{fileno@{fileno}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!out@{out}|hyperpage}{203}
+\indexentry{out@{out}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!raw@{raw}|hyperpage}{203}
+\indexentry{raw@{raw}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!scales@{scales}|hyperpage}{203}
+\indexentry{scales@{scales}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!stop\_request@{stop\_request}|hyperpage}{203}
+\indexentry{stop\_request@{stop\_request}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{203}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!stream\_channels@{stream\_channels}|hyperpage}{204}
+\indexentry{stream\_channels@{stream\_channels}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{204}
+\indexentry{LokiEnvSensors@{LokiEnvSensors}!thread@{thread}|hyperpage}{204}
+\indexentry{thread@{thread}!LokiEnvSensors@{LokiEnvSensors}|hyperpage}{204}
+\indexentry{LokiEnvSensorsSample@{LokiEnvSensorsSample}|hyperpage}{204}
+\indexentry{LokiEnvSensorsSample@{LokiEnvSensorsSample}!channel@{channel}|hyperpage}{205}
+\indexentry{channel@{channel}!LokiEnvSensorsSample@{LokiEnvSensorsSample}|hyperpage}{205}
+\indexentry{LokiFIFO@{LokiFIFO}|hyperpage}{205}
+\indexentry{LokiFIFO@{LokiFIFO}!abort@{abort}|hyperpage}{206}
+\indexentry{abort@{abort}!LokiFIFO@{LokiFIFO}|hyperpage}{206}
+\indexentry{LokiFIFO@{LokiFIFO}!all\_read@{all\_read}|hyperpage}{206}
+\indexentry{all\_read@{all\_read}!LokiFIFO@{LokiFIFO}|hyperpage}{206}
+\indexentry{LokiFIFO@{LokiFIFO}!consumer\_records@{consumer\_records}|hyperpage}{206}
+\indexentry{consumer\_records@{consumer\_records}!LokiFIFO@{LokiFIFO}|hyperpage}{206}
+\indexentry{LokiFIFO@{LokiFIFO}!item\_size@{item\_size}|hyperpage}{206}
+\indexentry{item\_size@{item\_size}!LokiFIFO@{LokiFIFO}|hyperpage}{206}
+\indexentry{LokiFIFO@{LokiFIFO}!mutex@{mutex}|hyperpage}{206}
+\indexentry{mutex@{mutex}!LokiFIFO@{LokiFIFO}|hyperpage}{206}
+\indexentry{LokiFIFO@{LokiFIFO}!producer\_record@{producer\_record}|hyperpage}{207}
+\indexentry{producer\_record@{producer\_record}!LokiFIFO@{LokiFIFO}|hyperpage}{207}
+\indexentry{LokiFIFO@{LokiFIFO}!pulled@{pulled}|hyperpage}{207}
+\indexentry{pulled@{pulled}!LokiFIFO@{LokiFIFO}|hyperpage}{207}
+\indexentry{LokiFIFO@{LokiFIFO}!pushed@{pushed}|hyperpage}{207}
+\indexentry{pushed@{pushed}!LokiFIFO@{LokiFIFO}|hyperpage}{207}
+\indexentry{LokiFIFORecord@{LokiFIFORecord}|hyperpage}{207}
+\indexentry{LokiFIFORecord@{LokiFIFORecord}!item@{item}|hyperpage}{208}
+\indexentry{item@{item}!LokiFIFORecord@{LokiFIFORecord}|hyperpage}{208}
+\indexentry{LokiFIFORecord@{LokiFIFORecord}!next@{next}|hyperpage}{208}
+\indexentry{next@{next}!LokiFIFORecord@{LokiFIFORecord}|hyperpage}{208}
+\indexentry{LokiFIFORecord@{LokiFIFORecord}!status@{status}|hyperpage}{208}
+\indexentry{status@{status}!LokiFIFORecord@{LokiFIFORecord}|hyperpage}{208}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}|hyperpage}{209}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!acc@{acc}|hyperpage}{210}
+\indexentry{acc@{acc}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!coeff\_ptr@{coeff\_ptr}|hyperpage}{210}
+\indexentry{coeff\_ptr@{coeff\_ptr}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!coeffs@{coeffs}|hyperpage}{210}
+\indexentry{coeffs@{coeffs}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!coeffs\_end@{coeffs\_end}|hyperpage}{210}
+\indexentry{coeffs\_end@{coeffs\_end}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!decimation@{decimation}|hyperpage}{210}
+\indexentry{decimation@{decimation}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!is\_clone@{is\_clone}|hyperpage}{210}
+\indexentry{is\_clone@{is\_clone}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!length@{length}|hyperpage}{210}
+\indexentry{length@{length}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{210}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!phase\_length@{phase\_length}|hyperpage}{211}
+\indexentry{phase\_length@{phase\_length}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{211}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!phase\_ptr@{phase\_ptr}|hyperpage}{211}
+\indexentry{phase\_ptr@{phase\_ptr}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{211}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!sample\_index@{sample\_index}|hyperpage}{211}
+\indexentry{sample\_index@{sample\_index}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{211}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!samples@{samples}|hyperpage}{211}
+\indexentry{samples@{samples}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{211}
+\indexentry{LokiFIRFilter@{LokiFIRFilter}!samples\_end@{samples\_end}|hyperpage}{211}
+\indexentry{samples\_end@{samples\_end}!LokiFIRFilter@{LokiFIRFilter}|hyperpage}{211}
+\indexentry{LokiFormatter@{LokiFormatter}|hyperpage}{212}
+\indexentry{LokiFormatter@{LokiFormatter}!impl@{impl}|hyperpage}{212}
+\indexentry{impl@{impl}!LokiFormatter@{LokiFormatter}|hyperpage}{212}
+\indexentry{LokiFormatter@{LokiFormatter}!instance@{instance}|hyperpage}{212}
+\indexentry{instance@{instance}!LokiFormatter@{LokiFormatter}|hyperpage}{212}
+\indexentry{LokiKalman@{LokiKalman}|hyperpage}{212}
+\indexentry{LokiKalman@{LokiKalman}!P@{P}|hyperpage}{213}
+\indexentry{P@{P}!LokiKalman@{LokiKalman}|hyperpage}{213}
+\indexentry{LokiKalman@{LokiKalman}!rv@{rv}|hyperpage}{213}
+\indexentry{rv@{rv}!LokiKalman@{LokiKalman}|hyperpage}{213}
+\indexentry{LokiKalman@{LokiKalman}!rw@{rw}|hyperpage}{213}
+\indexentry{rw@{rw}!LokiKalman@{LokiKalman}|hyperpage}{213}
+\indexentry{LokiKalman@{LokiKalman}!state@{state}|hyperpage}{213}
+\indexentry{state@{state}!LokiKalman@{LokiKalman}|hyperpage}{213}
+\indexentry{LokiModem@{LokiModem}|hyperpage}{214}
+\indexentry{LokiModem@{LokiModem}!clk\_frequency@{clk\_frequency}|hyperpage}{217}
+\indexentry{clk\_frequency@{clk\_frequency}!LokiModem@{LokiModem}|hyperpage}{217}
+\indexentry{LokiModem@{LokiModem}!demod\_channel\_mask@{demod\_channel\_mask}|hyperpage}{217}
+\indexentry{demod\_channel\_mask@{demod\_channel\_mask}!LokiModem@{LokiModem}|hyperpage}{217}
+\indexentry{LokiModem@{LokiModem}!demod\_channel\_output\_width@{demod\_channel\_output\_width}|hyperpage}{218}
+\indexentry{demod\_channel\_output\_width@{demod\_channel\_output\_width}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_channels@{demod\_channels}|hyperpage}{218}
+\indexentry{demod\_channels@{demod\_channels}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_cycles\_per\_sample\_max@{demod\_cycles\_per\_sample\_max}|hyperpage}{218}
+\indexentry{demod\_cycles\_per\_sample\_max@{demod\_cycles\_per\_sample\_max}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_cycles\_per\_sample\_ref@{demod\_cycles\_per\_sample\_ref}|hyperpage}{218}
+\indexentry{demod\_cycles\_per\_sample\_ref@{demod\_cycles\_per\_sample\_ref}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_fir1\_decimation@{demod\_fir1\_decimation}|hyperpage}{218}
+\indexentry{demod\_fir1\_decimation@{demod\_fir1\_decimation}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_fir1\_length@{demod\_fir1\_length}|hyperpage}{218}
+\indexentry{demod\_fir1\_length@{demod\_fir1\_length}!LokiModem@{LokiModem}|hyperpage}{218}
+\indexentry{LokiModem@{LokiModem}!demod\_fir2\_bandwidth@{demod\_fir2\_bandwidth}|hyperpage}{219}
+\indexentry{demod\_fir2\_bandwidth@{demod\_fir2\_bandwidth}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_fir2\_decimation@{demod\_fir2\_decimation}|hyperpage}{219}
+\indexentry{demod\_fir2\_decimation@{demod\_fir2\_decimation}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_fir2\_length@{demod\_fir2\_length}|hyperpage}{219}
+\indexentry{demod\_fir2\_length@{demod\_fir2\_length}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_mixerless@{demod\_mixerless}|hyperpage}{219}
+\indexentry{demod\_mixerless@{demod\_mixerless}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_osc\_wave\_frequency\_min@{demod\_osc\_wave\_frequency\_min}|hyperpage}{219}
+\indexentry{demod\_osc\_wave\_frequency\_min@{demod\_osc\_wave\_frequency\_min}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_power\_fractional\_width@{demod\_power\_fractional\_width}|hyperpage}{219}
+\indexentry{demod\_power\_fractional\_width@{demod\_power\_fractional\_width}!LokiModem@{LokiModem}|hyperpage}{219}
+\indexentry{LokiModem@{LokiModem}!demod\_power\_integer\_width@{demod\_power\_integer\_width}|hyperpage}{220}
+\indexentry{demod\_power\_integer\_width@{demod\_power\_integer\_width}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_power\_max@{demod\_power\_max}|hyperpage}{220}
+\indexentry{demod\_power\_max@{demod\_power\_max}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_sample\_frequency\_ref@{demod\_sample\_frequency\_ref}|hyperpage}{220}
+\indexentry{demod\_sample\_frequency\_ref@{demod\_sample\_frequency\_ref}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_fractional\_width@{demod\_xy\_fractional\_width}|hyperpage}{220}
+\indexentry{demod\_xy\_fractional\_width@{demod\_xy\_fractional\_width}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_integer\_width@{demod\_xy\_integer\_width}|hyperpage}{220}
+\indexentry{demod\_xy\_integer\_width@{demod\_xy\_integer\_width}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_mask@{demod\_xy\_mask}|hyperpage}{220}
+\indexentry{demod\_xy\_mask@{demod\_xy\_mask}!LokiModem@{LokiModem}|hyperpage}{220}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_max@{demod\_xy\_max}|hyperpage}{221}
+\indexentry{demod\_xy\_max@{demod\_xy\_max}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_sign\_mask@{demod\_xy\_sign\_mask}|hyperpage}{221}
+\indexentry{demod\_xy\_sign\_mask@{demod\_xy\_sign\_mask}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!demod\_xy\_width@{demod\_xy\_width}|hyperpage}{221}
+\indexentry{demod\_xy\_width@{demod\_xy\_width}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!file@{file}|hyperpage}{221}
+\indexentry{file@{file}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!fileno@{fileno}|hyperpage}{221}
+\indexentry{fileno@{fileno}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!mod\_cycles\_per\_sample\_max@{mod\_cycles\_per\_sample\_max}|hyperpage}{221}
+\indexentry{mod\_cycles\_per\_sample\_max@{mod\_cycles\_per\_sample\_max}!LokiModem@{LokiModem}|hyperpage}{221}
+\indexentry{LokiModem@{LokiModem}!mod\_cycles\_per\_sample\_ref@{mod\_cycles\_per\_sample\_ref}|hyperpage}{222}
+\indexentry{mod\_cycles\_per\_sample\_ref@{mod\_cycles\_per\_sample\_ref}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_dc\_value\_max@{mod\_dc\_value\_max}|hyperpage}{222}
+\indexentry{mod\_dc\_value\_max@{mod\_dc\_value\_max}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_dc\_value\_res@{mod\_dc\_value\_res}|hyperpage}{222}
+\indexentry{mod\_dc\_value\_res@{mod\_dc\_value\_res}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_dc\_value\_width@{mod\_dc\_value\_width}|hyperpage}{222}
+\indexentry{mod\_dc\_value\_width@{mod\_dc\_value\_width}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_gain\_fractional\_width@{mod\_gain\_fractional\_width}|hyperpage}{222}
+\indexentry{mod\_gain\_fractional\_width@{mod\_gain\_fractional\_width}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_gain\_integer\_width@{mod\_gain\_integer\_width}|hyperpage}{222}
+\indexentry{mod\_gain\_integer\_width@{mod\_gain\_integer\_width}!LokiModem@{LokiModem}|hyperpage}{222}
+\indexentry{LokiModem@{LokiModem}!mod\_gain\_res@{mod\_gain\_res}|hyperpage}{223}
+\indexentry{mod\_gain\_res@{mod\_gain\_res}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_offset\_res@{mod\_offset\_res}|hyperpage}{223}
+\indexentry{mod\_offset\_res@{mod\_offset\_res}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_osc1\_wave\_frequency\_min@{mod\_osc1\_wave\_frequency\_min}|hyperpage}{223}
+\indexentry{mod\_osc1\_wave\_frequency\_min@{mod\_osc1\_wave\_frequency\_min}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_osc2\_wave\_frequency\_min@{mod\_osc2\_wave\_frequency\_min}|hyperpage}{223}
+\indexentry{mod\_osc2\_wave\_frequency\_min@{mod\_osc2\_wave\_frequency\_min}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_pga\_gain\_max@{mod\_pga\_gain\_max}|hyperpage}{223}
+\indexentry{mod\_pga\_gain\_max@{mod\_pga\_gain\_max}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_pga\_gain\_width@{mod\_pga\_gain\_width}|hyperpage}{223}
+\indexentry{mod\_pga\_gain\_width@{mod\_pga\_gain\_width}!LokiModem@{LokiModem}|hyperpage}{223}
+\indexentry{LokiModem@{LokiModem}!mod\_phase\_amplitude\_max@{mod\_phase\_amplitude\_max}|hyperpage}{224}
+\indexentry{mod\_phase\_amplitude\_max@{mod\_phase\_amplitude\_max}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!mod\_phase\_fractional\_width@{mod\_phase\_fractional\_width}|hyperpage}{224}
+\indexentry{mod\_phase\_fractional\_width@{mod\_phase\_fractional\_width}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!mod\_phase\_integer\_width@{mod\_phase\_integer\_width}|hyperpage}{224}
+\indexentry{mod\_phase\_integer\_width@{mod\_phase\_integer\_width}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!mod\_sample\_frequency\_ref@{mod\_sample\_frequency\_ref}|hyperpage}{224}
+\indexentry{mod\_sample\_frequency\_ref@{mod\_sample\_frequency\_ref}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!out@{out}|hyperpage}{224}
+\indexentry{out@{out}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!raw@{raw}|hyperpage}{224}
+\indexentry{raw@{raw}!LokiModem@{LokiModem}|hyperpage}{224}
+\indexentry{LokiModem@{LokiModem}!sim\_channel@{sim\_channel}|hyperpage}{225}
+\indexentry{sim\_channel@{sim\_channel}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!sim\_disp\_phase@{sim\_disp\_phase}|hyperpage}{225}
+\indexentry{sim\_disp\_phase@{sim\_disp\_phase}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!sim\_osc1\_phase@{sim\_osc1\_phase}|hyperpage}{225}
+\indexentry{sim\_osc1\_phase@{sim\_osc1\_phase}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!simulate@{simulate}|hyperpage}{225}
+\indexentry{simulate@{simulate}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!stop\_request@{stop\_request}|hyperpage}{225}
+\indexentry{stop\_request@{stop\_request}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!stream\_channels@{stream\_channels}|hyperpage}{225}
+\indexentry{stream\_channels@{stream\_channels}!LokiModem@{LokiModem}|hyperpage}{225}
+\indexentry{LokiModem@{LokiModem}!thread@{thread}|hyperpage}{226}
+\indexentry{thread@{thread}!LokiModem@{LokiModem}|hyperpage}{226}
+\indexentry{LokiModemSample@{LokiModemSample}|hyperpage}{226}
+\indexentry{LokiModemSample@{LokiModemSample}!channel@{channel}|hyperpage}{227}
+\indexentry{channel@{channel}!LokiModemSample@{LokiModemSample}|hyperpage}{227}
+\indexentry{LokiMSeed@{LokiMSeed}|hyperpage}{227}
+\indexentry{LokiMSeed@{LokiMSeed}!buffer@{buffer}|hyperpage}{227}
+\indexentry{buffer@{buffer}!LokiMSeed@{LokiMSeed}|hyperpage}{227}
+\indexentry{LokiMSeed@{LokiMSeed}!config@{config}|hyperpage}{227}
+\indexentry{config@{config}!LokiMSeed@{LokiMSeed}|hyperpage}{227}
+\indexentry{LokiMSeed@{LokiMSeed}!msr@{msr}|hyperpage}{228}
+\indexentry{msr@{msr}!LokiMSeed@{LokiMSeed}|hyperpage}{228}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{228}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!channel\_names@{channel\_names}|hyperpage}{229}
+\indexentry{channel\_names@{channel\_names}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!location@{location}|hyperpage}{229}
+\indexentry{location@{location}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!network@{network}|hyperpage}{229}
+\indexentry{network@{network}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!raw@{raw}|hyperpage}{229}
+\indexentry{raw@{raw}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!separate\_channels@{separate\_channels}|hyperpage}{229}
+\indexentry{separate\_channels@{separate\_channels}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!station@{station}|hyperpage}{229}
+\indexentry{station@{station}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{229}
+\indexentry{LokiMSeedConfig@{LokiMSeedConfig}!steim2@{steim2}|hyperpage}{230}
+\indexentry{steim2@{steim2}!LokiMSeedConfig@{LokiMSeedConfig}|hyperpage}{230}
+\indexentry{LokiMSeedInputSample@{LokiMSeedInputSample}|hyperpage}{230}
+\indexentry{LokiMSeedInputSample@{LokiMSeedInputSample}!channel@{channel}|hyperpage}{231}
+\indexentry{channel@{channel}!LokiMSeedInputSample@{LokiMSeedInputSample}|hyperpage}{231}
+\indexentry{LokiMSeedOutputSample@{LokiMSeedOutputSample}|hyperpage}{231}
+\indexentry{LokiMSeedOutputSample@{LokiMSeedOutputSample}!f@{f}|hyperpage}{231}
+\indexentry{f@{f}!LokiMSeedOutputSample@{LokiMSeedOutputSample}|hyperpage}{231}
+\indexentry{LokiMSeedOutputSample@{LokiMSeedOutputSample}!i@{i}|hyperpage}{231}
+\indexentry{i@{i}!LokiMSeedOutputSample@{LokiMSeedOutputSample}|hyperpage}{231}
+\indexentry{LokiNLMS@{LokiNLMS}|hyperpage}{232}
+\indexentry{LokiNLMS@{LokiNLMS}!alpha@{alpha}|hyperpage}{232}
+\indexentry{alpha@{alpha}!LokiNLMS@{LokiNLMS}|hyperpage}{232}
+\indexentry{LokiNLMS@{LokiNLMS}!mu@{mu}|hyperpage}{232}
+\indexentry{mu@{mu}!LokiNLMS@{LokiNLMS}|hyperpage}{232}
+\indexentry{LokiNLMS@{LokiNLMS}!state@{state}|hyperpage}{233}
+\indexentry{state@{state}!LokiNLMS@{LokiNLMS}|hyperpage}{233}
+\indexentry{LokiNLMS@{LokiNLMS}!weights@{weights}|hyperpage}{233}
+\indexentry{weights@{weights}!LokiNLMS@{LokiNLMS}|hyperpage}{233}
+\indexentry{LokiPacket@{LokiPacket}|hyperpage}{233}
+\indexentry{LokiPacket@{LokiPacket}!buffer@{buffer}|hyperpage}{234}
+\indexentry{buffer@{buffer}!LokiPacket@{LokiPacket}|hyperpage}{234}
+\indexentry{LokiPacket@{LokiPacket}!timestamp@{timestamp}|hyperpage}{234}
+\indexentry{timestamp@{timestamp}!LokiPacket@{LokiPacket}|hyperpage}{234}
+\indexentry{LokiRaw@{LokiRaw}|hyperpage}{234}
+\indexentry{LokiRaw@{LokiRaw}!out@{out}|hyperpage}{234}
+\indexentry{out@{out}!LokiRaw@{LokiRaw}|hyperpage}{234}
+\indexentry{LokiRecorder@{LokiRecorder}|hyperpage}{235}
+\indexentry{LokiRecorder@{LokiRecorder}!channel\_count@{channel\_count}|hyperpage}{236}
+\indexentry{channel\_count@{channel\_count}!LokiRecorder@{LokiRecorder}|hyperpage}{236}
+\indexentry{LokiRecorder@{LokiRecorder}!channels@{channels}|hyperpage}{236}
+\indexentry{channels@{channels}!LokiRecorder@{LokiRecorder}|hyperpage}{236}
+\indexentry{LokiRecorder@{LokiRecorder}!cid@{cid}|hyperpage}{236}
+\indexentry{cid@{cid}!LokiRecorder@{LokiRecorder}|hyperpage}{236}
+\indexentry{LokiRecorder@{LokiRecorder}!filename@{filename}|hyperpage}{236}
+\indexentry{filename@{filename}!LokiRecorder@{LokiRecorder}|hyperpage}{236}
+\indexentry{LokiRecorder@{LokiRecorder}!filetype@{filetype}|hyperpage}{237}
+\indexentry{filetype@{filetype}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!formatter@{formatter}|hyperpage}{237}
+\indexentry{formatter@{formatter}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!in@{in}|hyperpage}{237}
+\indexentry{in@{in}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!is\_recording@{is\_recording}|hyperpage}{237}
+\indexentry{is\_recording@{is\_recording}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!max\_channels@{max\_channels}|hyperpage}{237}
+\indexentry{max\_channels@{max\_channels}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!multifile@{multifile}|hyperpage}{237}
+\indexentry{multifile@{multifile}!LokiRecorder@{LokiRecorder}|hyperpage}{237}
+\indexentry{LokiRecorder@{LokiRecorder}!mutex@{mutex}|hyperpage}{238}
+\indexentry{mutex@{mutex}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!recording\_done@{recording\_done}|hyperpage}{238}
+\indexentry{recording\_done@{recording\_done}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!sample\_count@{sample\_count}|hyperpage}{238}
+\indexentry{sample\_count@{sample\_count}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!sample\_count\_per\_file@{sample\_count\_per\_file}|hyperpage}{238}
+\indexentry{sample\_count\_per\_file@{sample\_count\_per\_file}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!sample\_size@{sample\_size}|hyperpage}{238}
+\indexentry{sample\_size@{sample\_size}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!sampling\_frequency@{sampling\_frequency}|hyperpage}{238}
+\indexentry{sampling\_frequency@{sampling\_frequency}!LokiRecorder@{LokiRecorder}|hyperpage}{238}
+\indexentry{LokiRecorder@{LokiRecorder}!stop\_request@{stop\_request}|hyperpage}{239}
+\indexentry{stop\_request@{stop\_request}!LokiRecorder@{LokiRecorder}|hyperpage}{239}
+\indexentry{LokiRecorder@{LokiRecorder}!thread@{thread}|hyperpage}{239}
+\indexentry{thread@{thread}!LokiRecorder@{LokiRecorder}|hyperpage}{239}
+\indexentry{LokiRLS@{LokiRLS}|hyperpage}{239}
+\indexentry{LokiRLS@{LokiRLS}!lambda@{lambda}|hyperpage}{240}
+\indexentry{lambda@{lambda}!LokiRLS@{LokiRLS}|hyperpage}{240}
+\indexentry{LokiRLS@{LokiRLS}!lambda\_inv@{lambda\_inv}|hyperpage}{240}
+\indexentry{lambda\_inv@{lambda\_inv}!LokiRLS@{LokiRLS}|hyperpage}{240}
+\indexentry{LokiRLS@{LokiRLS}!P@{P}|hyperpage}{240}
+\indexentry{P@{P}!LokiRLS@{LokiRLS}|hyperpage}{240}
+\indexentry{LokiRLS@{LokiRLS}!state@{state}|hyperpage}{240}
+\indexentry{state@{state}!LokiRLS@{LokiRLS}|hyperpage}{240}
+\indexentry{LokiSocketServer@{LokiSocketServer}|hyperpage}{240}
+\indexentry{LokiSocketServer@{LokiSocketServer}!cid@{cid}|hyperpage}{242}
+\indexentry{cid@{cid}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!data@{data}|hyperpage}{242}
+\indexentry{data@{data}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!data\_size@{data\_size}|hyperpage}{242}
+\indexentry{data\_size@{data\_size}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!filename@{filename}|hyperpage}{242}
+\indexentry{filename@{filename}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!has\_data@{has\_data}|hyperpage}{242}
+\indexentry{has\_data@{has\_data}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!has\_data\_cond@{has\_data\_cond}|hyperpage}{242}
+\indexentry{has\_data\_cond@{has\_data\_cond}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!in@{in}|hyperpage}{242}
+\indexentry{in@{in}!LokiSocketServer@{LokiSocketServer}|hyperpage}{242}
+\indexentry{LokiSocketServer@{LokiSocketServer}!is\_streaming@{is\_streaming}|hyperpage}{243}
+\indexentry{is\_streaming@{is\_streaming}!LokiSocketServer@{LokiSocketServer}|hyperpage}{243}
+\indexentry{LokiSocketServer@{LokiSocketServer}!mutex@{mutex}|hyperpage}{243}
+\indexentry{mutex@{mutex}!LokiSocketServer@{LokiSocketServer}|hyperpage}{243}
+\indexentry{LokiSocketServer@{LokiSocketServer}!receiver\_thread@{receiver\_thread}|hyperpage}{243}
+\indexentry{receiver\_thread@{receiver\_thread}!LokiSocketServer@{LokiSocketServer}|hyperpage}{243}
+\indexentry{LokiSocketServer@{LokiSocketServer}!server\_thread@{server\_thread}|hyperpage}{243}
+\indexentry{server\_thread@{server\_thread}!LokiSocketServer@{LokiSocketServer}|hyperpage}{243}
+\indexentry{LokiSocketServer@{LokiSocketServer}!stop\_request@{stop\_request}|hyperpage}{243}
+\indexentry{stop\_request@{stop\_request}!LokiSocketServer@{LokiSocketServer}|hyperpage}{243}
+\indexentry{LokiSystem@{LokiSystem}|hyperpage}{244}
+\indexentry{LokiSystem@{LokiSystem}!channels@{channels}|hyperpage}{245}
+\indexentry{channels@{channels}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!cid@{cid}|hyperpage}{245}
+\indexentry{cid@{cid}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!config@{config}|hyperpage}{245}
+\indexentry{config@{config}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!disp@{disp}|hyperpage}{245}
+\indexentry{disp@{disp}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!has\_own\_modem@{has\_own\_modem}|hyperpage}{245}
+\indexentry{has\_own\_modem@{has\_own\_modem}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!in@{in}|hyperpage}{245}
+\indexentry{in@{in}!LokiSystem@{LokiSystem}|hyperpage}{245}
+\indexentry{LokiSystem@{LokiSystem}!is\_streaming@{is\_streaming}|hyperpage}{246}
+\indexentry{is\_streaming@{is\_streaming}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystem@{LokiSystem}!modem@{modem}|hyperpage}{246}
+\indexentry{modem@{modem}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystem@{LokiSystem}!mutex@{mutex}|hyperpage}{246}
+\indexentry{mutex@{mutex}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystem@{LokiSystem}!out@{out}|hyperpage}{246}
+\indexentry{out@{out}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystem@{LokiSystem}!stop\_request@{stop\_request}|hyperpage}{246}
+\indexentry{stop\_request@{stop\_request}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystem@{LokiSystem}!thread@{thread}|hyperpage}{246}
+\indexentry{thread@{thread}!LokiSystem@{LokiSystem}|hyperpage}{246}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}|hyperpage}{247}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!cavity\_index@{cavity\_index}|hyperpage}{248}
+\indexentry{cavity\_index@{cavity\_index}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{248}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!distance\_unit@{distance\_unit}|hyperpage}{248}
+\indexentry{distance\_unit@{distance\_unit}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{248}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!estimator\_impl@{estimator\_impl}|hyperpage}{248}
+\indexentry{estimator\_impl@{estimator\_impl}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{248}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!estimator\_initial\_radius@{estimator\_initial\_radius}|hyperpage}{248}
+\indexentry{estimator\_initial\_radius@{estimator\_initial\_radius}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{248}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!estimator\_params@{estimator\_params}|hyperpage}{249}
+\indexentry{estimator\_params@{estimator\_params}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!estimator\_throttle@{estimator\_throttle}|hyperpage}{249}
+\indexentry{estimator\_throttle@{estimator\_throttle}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!filter\_attenuation@{filter\_attenuation}|hyperpage}{249}
+\indexentry{filter\_attenuation@{filter\_attenuation}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!filter\_bandwidth@{filter\_bandwidth}|hyperpage}{249}
+\indexentry{filter\_bandwidth@{filter\_bandwidth}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!filter\_decimation@{filter\_decimation}|hyperpage}{249}
+\indexentry{filter\_decimation@{filter\_decimation}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!filter\_length@{filter\_length}|hyperpage}{249}
+\indexentry{filter\_length@{filter\_length}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{249}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!reflections@{reflections}|hyperpage}{250}
+\indexentry{reflections@{reflections}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{250}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!simulate@{simulate}|hyperpage}{250}
+\indexentry{simulate@{simulate}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{250}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!skip@{skip}|hyperpage}{250}
+\indexentry{skip@{skip}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{250}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!time\_constants@{time\_constants}|hyperpage}{250}
+\indexentry{time\_constants@{time\_constants}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{250}
+\indexentry{LokiSystemConfig@{LokiSystemConfig}!wavelength@{wavelength}|hyperpage}{250}
+\indexentry{wavelength@{wavelength}!LokiSystemConfig@{LokiSystemConfig}|hyperpage}{250}
+\indexentry{LokiSystemSample@{LokiSystemSample}|hyperpage}{251}
+\indexentry{LokiSystemSample@{LokiSystemSample}!channel@{channel}|hyperpage}{251}
+\indexentry{channel@{channel}!LokiSystemSample@{LokiSystemSample}|hyperpage}{251}
+\indexentry{LokiSystemSample@{LokiSystemSample}!value@{value}|hyperpage}{251}
+\indexentry{value@{value}!LokiSystemSample@{LokiSystemSample}|hyperpage}{251}
+\indexentry{LokiSystemSample@{LokiSystemSample}!x\_norm@{x\_norm}|hyperpage}{251}
+\indexentry{x\_norm@{x\_norm}!LokiSystemSample@{LokiSystemSample}|hyperpage}{251}
+\indexentry{LokiSystemSample@{LokiSystemSample}!y\_norm@{y\_norm}|hyperpage}{252}
+\indexentry{y\_norm@{y\_norm}!LokiSystemSample@{LokiSystemSample}|hyperpage}{252}
+\indexentry{libloki-\/class.h@{libloki-\/class.h}|hyperpage}{253}
+\indexentry{libloki-\/class.h@{libloki-\/class.h}|hyperpage}{254}
+\indexentry{libloki-\/common.h@{libloki-\/common.h}|hyperpage}{255}
+\indexentry{libloki-\/common.h@{libloki-\/common.h}|hyperpage}{255}
+\indexentry{libloki-\/consumer.c@{libloki-\/consumer.c}|hyperpage}{256}
+\indexentry{libloki-\/consumer.c@{libloki-\/consumer.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{257}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/consumer.c@{libloki-\/consumer.c}|hyperpage}{257}
+\indexentry{libloki-\/consumer.c@{libloki-\/consumer.c}|hyperpage}{257}
+\indexentry{libloki-\/consumer.h@{libloki-\/consumer.h}|hyperpage}{258}
+\indexentry{libloki-\/consumer.h@{libloki-\/consumer.h}|hyperpage}{259}
+\indexentry{libloki-\/displacement.c@{libloki-\/displacement.c}|hyperpage}{259}
+\indexentry{libloki-\/displacement.c@{libloki-\/displacement.c}|hyperpage}{260}
+\indexentry{libloki-\/displacement.h@{libloki-\/displacement.h}|hyperpage}{262}
+\indexentry{libloki-\/displacement.h@{libloki-\/displacement.h}|hyperpage}{263}
+\indexentry{libloki-\/ellipse-\/estimator.c@{libloki-\/ellipse-\/estimator.c}|hyperpage}{263}
+\indexentry{libloki-\/ellipse-\/estimator.c@{libloki-\/ellipse-\/estimator.c}|hyperpage}{264}
+\indexentry{libloki-\/ellipse-\/estimator.h@{libloki-\/ellipse-\/estimator.h}|hyperpage}{265}
+\indexentry{libloki-\/ellipse-\/estimator.h@{libloki-\/ellipse-\/estimator.h}|hyperpage}{266}
+\indexentry{libloki-\/ellipse.c@{libloki-\/ellipse.c}|hyperpage}{267}
+\indexentry{libloki-\/ellipse.c@{libloki-\/ellipse.c}|hyperpage}{268}
+\indexentry{libloki-\/ellipse.h@{libloki-\/ellipse.h}|hyperpage}{269}
+\indexentry{libloki-\/ellipse.h@{libloki-\/ellipse.h}|hyperpage}{270}
+\indexentry{libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}|hyperpage}{270}
+\indexentry{libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{273}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}|hyperpage}{273}
+\indexentry{libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}|hyperpage}{273}
+\indexentry{libloki-\/env-\/sensors.h@{libloki-\/env-\/sensors.h}|hyperpage}{279}
+\indexentry{libloki-\/env-\/sensors.h@{libloki-\/env-\/sensors.h}|hyperpage}{281}
+\indexentry{libloki-\/fifo.c@{libloki-\/fifo.c}|hyperpage}{281}
+\indexentry{libloki-\/fifo.c@{libloki-\/fifo.c}|hyperpage}{283}
+\indexentry{libloki-\/fifo.h@{libloki-\/fifo.h}|hyperpage}{285}
+\indexentry{libloki-\/fifo.h@{libloki-\/fifo.h}|hyperpage}{286}
+\indexentry{libloki-\/fir.c@{libloki-\/fir.c}|hyperpage}{286}
+\indexentry{libloki-\/fir.c@{libloki-\/fir.c}|hyperpage}{287}
+\indexentry{libloki-\/fir.h@{libloki-\/fir.h}|hyperpage}{291}
+\indexentry{libloki-\/fir.h@{libloki-\/fir.h}|hyperpage}{292}
+\indexentry{libloki-\/formatter.c@{libloki-\/formatter.c}|hyperpage}{292}
+\indexentry{libloki-\/formatter.c@{libloki-\/formatter.c}|hyperpage}{293}
+\indexentry{libloki-\/formatter.h@{libloki-\/formatter.h}|hyperpage}{294}
+\indexentry{libloki-\/formatter.h@{libloki-\/formatter.h}|hyperpage}{295}
+\indexentry{libloki-\/hooks.c@{libloki-\/hooks.c}|hyperpage}{296}
+\indexentry{libloki-\/hooks.c@{libloki-\/hooks.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{297}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/hooks.c@{libloki-\/hooks.c}|hyperpage}{297}
+\indexentry{libloki-\/hooks.c@{libloki-\/hooks.c}|hyperpage}{297}
+\indexentry{libloki-\/hooks.h@{libloki-\/hooks.h}|hyperpage}{298}
+\indexentry{libloki-\/hooks.h@{libloki-\/hooks.h}|hyperpage}{299}
+\indexentry{libloki-\/kalman.c@{libloki-\/kalman.c}|hyperpage}{299}
+\indexentry{libloki-\/kalman.c@{libloki-\/kalman.c}|hyperpage}{300}
+\indexentry{libloki-\/kalman.h@{libloki-\/kalman.h}|hyperpage}{302}
+\indexentry{libloki-\/kalman.h@{libloki-\/kalman.h}|hyperpage}{303}
+\indexentry{libloki-\/modem.c@{libloki-\/modem.c}|hyperpage}{303}
+\indexentry{libloki-\/modem.c@{libloki-\/modem.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{311}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/modem.c@{libloki-\/modem.c}|hyperpage}{311}
+\indexentry{libloki-\/modem.c@{libloki-\/modem.c}|hyperpage}{311}
+\indexentry{libloki-\/modem.h@{libloki-\/modem.h}|hyperpage}{324}
+\indexentry{libloki-\/modem.h@{libloki-\/modem.h}|hyperpage}{330}
+\indexentry{libloki-\/mseed.c@{libloki-\/mseed.c}|hyperpage}{332}
+\indexentry{libloki-\/mseed.c@{libloki-\/mseed.c}|hyperpage}{334}
+\indexentry{libloki-\/mseed.h@{libloki-\/mseed.h}|hyperpage}{337}
+\indexentry{libloki-\/mseed.h@{libloki-\/mseed.h}|hyperpage}{338}
+\indexentry{libloki-\/neon.h@{libloki-\/neon.h}|hyperpage}{338}
+\indexentry{libloki-\/neon.h@{libloki-\/neon.h}|hyperpage}{339}
+\indexentry{libloki-\/nlms.c@{libloki-\/nlms.c}|hyperpage}{340}
+\indexentry{libloki-\/nlms.c@{libloki-\/nlms.c}|hyperpage}{341}
+\indexentry{libloki-\/nlms.h@{libloki-\/nlms.h}|hyperpage}{342}
+\indexentry{libloki-\/nlms.h@{libloki-\/nlms.h}|hyperpage}{343}
+\indexentry{libloki-\/packet.h@{libloki-\/packet.h}|hyperpage}{344}
+\indexentry{libloki-\/packet.h@{libloki-\/packet.h}|hyperpage}{345}
+\indexentry{libloki-\/raw.c@{libloki-\/raw.c}|hyperpage}{345}
+\indexentry{libloki-\/raw.c@{libloki-\/raw.c}|hyperpage}{346}
+\indexentry{libloki-\/raw.h@{libloki-\/raw.h}|hyperpage}{347}
+\indexentry{libloki-\/raw.h@{libloki-\/raw.h}|hyperpage}{348}
+\indexentry{libloki-\/recorder.c@{libloki-\/recorder.c}|hyperpage}{348}
+\indexentry{libloki-\/recorder.c@{libloki-\/recorder.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{350}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/recorder.c@{libloki-\/recorder.c}|hyperpage}{350}
+\indexentry{libloki-\/recorder.c@{libloki-\/recorder.c}|hyperpage}{351}
+\indexentry{libloki-\/recorder.h@{libloki-\/recorder.h}|hyperpage}{354}
+\indexentry{libloki-\/recorder.h@{libloki-\/recorder.h}|hyperpage}{355}
+\indexentry{libloki-\/rls.c@{libloki-\/rls.c}|hyperpage}{355}
+\indexentry{libloki-\/rls.c@{libloki-\/rls.c}|hyperpage}{356}
+\indexentry{libloki-\/rls.h@{libloki-\/rls.h}|hyperpage}{358}
+\indexentry{libloki-\/rls.h@{libloki-\/rls.h}|hyperpage}{359}
+\indexentry{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}|hyperpage}{359}
+\indexentry{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{360}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}|hyperpage}{360}
+\indexentry{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}|hyperpage}{361}
+\indexentry{libloki-\/socket-\/server.h@{libloki-\/socket-\/server.h}|hyperpage}{363}
+\indexentry{libloki-\/socket-\/server.h@{libloki-\/socket-\/server.h}|hyperpage}{364}
+\indexentry{libloki-\/system-\/defaults.h@{libloki-\/system-\/defaults.h}|hyperpage}{365}
+\indexentry{libloki-\/system-\/defaults.h@{libloki-\/system-\/defaults.h}|hyperpage}{366}
+\indexentry{libloki-\/system.c@{libloki-\/system.c}|hyperpage}{367}
+\indexentry{libloki-\/system.c@{libloki-\/system.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}|hyperpage}{371}
+\indexentry{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/system.c@{libloki-\/system.c}|hyperpage}{371}
+\indexentry{libloki-\/system.c@{libloki-\/system.c}|hyperpage}{371}
+\indexentry{libloki-\/system.h@{libloki-\/system.h}|hyperpage}{378}
+\indexentry{libloki-\/system.h@{libloki-\/system.h}|hyperpage}{381}
+\indexentry{libloki-\/time.h@{libloki-\/time.h}|hyperpage}{383}
+\indexentry{libloki-\/time.h@{libloki-\/time.h}|hyperpage}{384}
+\indexentry{libloki.h@{libloki.h}|hyperpage}{385}
+\indexentry{libloki.h@{libloki.h}|hyperpage}{385}
+\indexentry{util.py@{util.py}|hyperpage}{386}

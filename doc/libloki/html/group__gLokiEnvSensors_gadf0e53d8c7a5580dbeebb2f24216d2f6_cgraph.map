@@ -1,0 +1,4 @@
+<map id="LokiEnvSensors_get_packet_length_max" name="LokiEnvSensors_get_packet_length_max">
+<area shape="rect" id="node1" title="Lire la longueur maximale des paquets DMA." alt="" coords="5,5,161,45"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga0e297cd4ccf77382ad54687db062b895" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="209,13,389,38"/>
+</map>

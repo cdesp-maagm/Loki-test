@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-formatter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-formatter.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-formatter_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef LIBLOKI_FORMATTER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define LIBLOKI_FORMATTER_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-class_8h.html">libloki-class.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-time_8h.html">libloki-time.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="group__gLokiFormatter.html#ga0ed4ee37eb7df177e186a8119d531547">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> <a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> *<a class="code hl_function" href="group__gLokiFormatter.html#ga8b0886a7cf3fcedd5f6865cd6db7f4ed">LokiFormatter_new</a>(<span class="keywordtype">void</span> *config);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3">LokiFormatter_work</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> *self, <span class="keyword">const</span> <span class="keywordtype">char</span> *filename, <a class="code hl_typedef" href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp, <span class="keywordtype">bool</span> file_change, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> length, <span class="keywordtype">size_t</span> max_channels, int32_t channels, <span class="keywordtype">size_t</span> sample_size, <span class="keywordtype">float</span> sampling_frequency);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c">LokiFormatter_close</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> *self);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8">LokiFormatter_del</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> *self);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_define" href="group__gLokiClass.html#gad71e11b51da42268464af1bb6e7656e8">LokiClass_interface</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_define" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, <span class="keyword">new</span>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_define" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, work)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_define" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, close)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_define" href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a>(<a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a>, del)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><a class="code hl_struct" href="structLokiFormatter.html">LokiFormatter</a> *<a class="code hl_function" href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36">LokiFormatter_new_with_implementation</a>(<span class="keyword">const</span> LokiFormatterInterface *<a class="code hl_variable" href="structLokiFormatter.html#adcef19d40438599c3b98a6cd5bb01571">impl</a>, <span class="keywordtype">void</span> *config);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="ttc" id="agroup__gLokiClass_html_ga5d764260014249229fd23ebadcc96134"><div class="ttname"><a href="group__gLokiClass.html#ga5d764260014249229fd23ebadcc96134">LokiClass_method</a></div><div class="ttdeci">#define LokiClass_method(prefix, name)</div><div class="ttdoc">Dans une interface, déclare une méthode.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00132">libloki-class.h:132</a></div></div>
+<div class="ttc" id="agroup__gLokiClass_html_gad71e11b51da42268464af1bb6e7656e8"><div class="ttname"><a href="group__gLokiClass.html#gad71e11b51da42268464af1bb6e7656e8">LokiClass_interface</a></div><div class="ttdeci">#define LokiClass_interface(prefix, methods)</div><div class="ttdoc">Déclare une interface.</div><div class="ttdef"><b>Définition</b> <a href="libloki-class_8h_source.html#l00112">libloki-class.h:112</a></div></div>
+<div class="ttc" id="agroup__gLokiFormatter_html_ga061b486e06e9cc730f6cb82103ad53a8"><div class="ttname"><a href="group__gLokiFormatter.html#ga061b486e06e9cc730f6cb82103ad53a8">LokiFormatter_del</a></div><div class="ttdeci">void LokiFormatter_del(LokiFormatter *self)</div><div class="ttdoc">Détruire de mise en forme de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00051">libloki-formatter.c:51</a></div></div>
+<div class="ttc" id="agroup__gLokiFormatter_html_ga764b53438aeaad6ee0d026740b48078c"><div class="ttname"><a href="group__gLokiFormatter.html#ga764b53438aeaad6ee0d026740b48078c">LokiFormatter_close</a></div><div class="ttdeci">void LokiFormatter_close(LokiFormatter *self)</div><div class="ttdoc">Fermer un formateur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00047">libloki-formatter.c:47</a></div></div>
+<div class="ttc" id="agroup__gLokiFormatter_html_ga8108986b27bbe1e5fd15399e3f0a8ce3"><div class="ttname"><a href="group__gLokiFormatter.html#ga8108986b27bbe1e5fd15399e3f0a8ce3">LokiFormatter_work</a></div><div class="ttdeci">void LokiFormatter_work(LokiFormatter *self, const char *filename, LokiTimestamp timestamp, bool file_change, void *data, size_t length, size_t max_channels, int32_t channels, size_t sample_size, float sampling_frequency)</div><div class="ttdoc">Enregistrer un paquet de données.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00043">libloki-formatter.c:43</a></div></div>
+<div class="ttc" id="agroup__gLokiFormatter_html_ga8b0886a7cf3fcedd5f6865cd6db7f4ed"><div class="ttname"><a href="group__gLokiFormatter.html#ga8b0886a7cf3fcedd5f6865cd6db7f4ed">LokiFormatter_new</a></div><div class="ttdeci">LokiFormatter * LokiFormatter_new(void *config)</div><div class="ttdoc">Construire un nouveau formateur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00022">libloki-formatter.c:22</a></div></div>
+<div class="ttc" id="agroup__gLokiFormatter_html_gaf56c5bf018b8dbc9d5fcb2a1edf35f36"><div class="ttname"><a href="group__gLokiFormatter.html#gaf56c5bf018b8dbc9d5fcb2a1edf35f36">LokiFormatter_new_with_implementation</a></div><div class="ttdeci">LokiFormatter * LokiFormatter_new_with_implementation(const LokiFormatterInterface *impl, void *config)</div><div class="ttdoc">Construire un nouveau formateur de séries temporelles avec une implémentation donnée.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00026">libloki-formatter.c:26</a></div></div>
+<div class="ttc" id="agroup__gLokiTime_html_ga775c6dbda9586caf849a80cad5b5b0bc"><div class="ttname"><a href="group__gLokiTime.html#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></div><div class="ttdeci">uint64_t LokiTimestamp</div><div class="ttdoc">Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.</div><div class="ttdef"><b>Définition</b> <a href="libloki-time_8h_source.html#l00017">libloki-time.h:17</a></div></div>
+<div class="ttc" id="alibloki-class_8h_html"><div class="ttname"><a href="libloki-class_8h.html">libloki-class.h</a></div></div>
+<div class="ttc" id="alibloki-time_8h_html"><div class="ttname"><a href="libloki-time_8h.html">libloki-time.h</a></div></div>
+<div class="ttc" id="astructLokiFormatter_html"><div class="ttname"><a href="structLokiFormatter.html">LokiFormatter</a></div><div class="ttdoc">Représentation d&#39;un formateur de séries temporelles.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00011">libloki-formatter.c:11</a></div></div>
+<div class="ttc" id="astructLokiFormatter_html_adcef19d40438599c3b98a6cd5bb01571"><div class="ttname"><a href="structLokiFormatter.html#adcef19d40438599c3b98a6cd5bb01571">LokiFormatter::impl</a></div><div class="ttdeci">LokiFormatterInterface impl</div><div class="ttdoc">L&#39;implémentation des méthodes de ce formateur.</div><div class="ttdef"><b>Définition</b> <a href="libloki-formatter_8c_source.html#l00019">libloki-formatter.c:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

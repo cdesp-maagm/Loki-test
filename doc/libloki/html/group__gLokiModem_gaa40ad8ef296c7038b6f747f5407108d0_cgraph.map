@@ -1,0 +1,11 @@
+<map id="LokiModem_set_mod_sampling_frequency" name="LokiModem_set_mod_sampling_frequency">
+<area shape="rect" id="node1" title="Affecter une fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="5,219,233,259"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef" title="Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="281,63,480,103"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#ga98de366120dea4eeadd67b1b1beaa9f7" title="Lire la fréquence du signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="281,155,480,195"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga3644d43b3d196126fcc4e7cae35586ef" title="Affecter une fréquence au signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="281,219,480,259"/>
+<area shape="rect" id="node8" href="$group__gLokiModem.html#gad2d61f968fc4e72968be42685a916377" title="Affecter un registre du circuit de modulation/démodulation." alt="" coords="551,286,704,311"/>
+<area shape="rect" id="node9" href="$group__gLokiModem.html#gad722211a6ab8be9034460eeaee2e120e" title="Affecter une fréquence au signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="281,333,480,373"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga23886c6a62d90b718d3069b8fe4ab328" title="Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)..." alt="" coords="528,5,727,45"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="775,150,929,175"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gae06c4e0ee00827f70f989a343ca5b89a" title="Lire le pas de réglage de la fréquence du signal en sortie du second oscillateur du modulateur (Fm2)." alt="" coords="528,171,727,211"/>
+</map>

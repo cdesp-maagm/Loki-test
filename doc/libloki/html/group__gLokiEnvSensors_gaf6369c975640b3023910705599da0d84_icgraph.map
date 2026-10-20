@@ -1,0 +1,5 @@
+<map id="LokiEnvSensors_set_packet_item" name="LokiEnvSensors_set_packet_item">
+<area shape="rect" id="node1" title="Convertir un échantillon issu du DMA." alt="" coords="425,5,576,45"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="215,13,377,38"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835" title="Démarrer l&#39;acquisition." alt="" coords="5,5,167,45"/>
+</map>

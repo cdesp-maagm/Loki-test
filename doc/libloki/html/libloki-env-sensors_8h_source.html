@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-env-sensors.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-env-sensors.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-env-sensors_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef LIBLOKI_ENV_SENSORS_H_</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define LIBLOKI_ENV_SENSORS_H_</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group__gLokiEnvSensors.html#ga14689417d7c68408edf52758c9f387e2">   23</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structLokiEnvSensorsSample.html">   26</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structLokiEnvSensorsSample.html#a80f96b2f91086104989c60f5ea46ce41">   28</a></span>    uint32_t <a class="code hl_variable" href="structLokiEnvSensorsSample.html#a80f96b2f91086104989c60f5ea46ce41">channel</a>;</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____.html">   30</a></span>    <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____.html#a635a029d1a2ff0845f59527750e00259">data</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        int32_t <a class="code hl_variable" href="unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____.html#a4aa3f4a30511be76b03d69acb45edb31">data_raw</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <a class="code hl_struct" href="structLokiEnvSensorsSample.html">LokiEnvSensorsSample</a>;</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *<a class="code hl_function" href="group__gLokiEnvSensors.html#ga96d2d529c200e14e2056cb6a07221b51">LokiEnvSensors_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gab4a1dc32803805865b0b76fb8ba9f6e9">LokiEnvSensors_del</a>(<a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gadda8b640c1f17b5d096896d73e2df06d">LokiEnvSensors_restart</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>uint32_t <a class="code hl_function" href="group__gLokiEnvSensors.html#ga30cb4552b6b9b6921e108e3daca8749a">LokiEnvSensors_get_clk_frequency</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga600792997301c4bed3dbbae28c397e79">LokiEnvSensors_get_channels</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">float</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gae7e8ce5a5470bb0d7271e623d45a20fc">LokiEnvSensors_get_sampling_frequency</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga5aeffec7e9fcf6f043d089e3ad157308">LokiEnvSensors_set_sampling_frequency</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self, <span class="keywordtype">float</span> freq);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>uint32_t <a class="code hl_function" href="group__gLokiEnvSensors.html#gadf0e53d8c7a5580dbeebb2f24216d2f6">LokiEnvSensors_get_packet_length_max</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>uint32_t <a class="code hl_function" href="group__gLokiEnvSensors.html#gae4fc28946ee8a1e02238df371861a901">LokiEnvSensors_get_packet_length</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">float</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga176acbc5974ccb760b50c01f30bf2f26">LokiEnvSensors_get_scaling_factor</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self, <span class="keywordtype">size_t</span> channel);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gae08bb0f35070b8ff5d9d68dda74002d4">LokiEnvSensors_set_scaling_factor</a>(<a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self, <span class="keywordtype">size_t</span> channel, <span class="keywordtype">float</span> scale);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordtype">float</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga0ec5f0af8af44aed10903abb24ae7ef6">LokiEnvSensors_get_last_data</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self, <span class="keywordtype">size_t</span> channel);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835">LokiEnvSensors_start_streaming</a>(<a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self, int32_t channels, <span class="keywordtype">bool</span> raw, <a class="code hl_struct" href="structLokiFIFO.html">LokiFIFO</a> *out);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#ga25d2fc754531818073da17164ca9db6a">LokiEnvSensors_stop_streaming</a>(<a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gab19c1189c6764d5e8762043a96afb377">LokiEnvSensors_force_stop</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__gLokiEnvSensors.html#gabde1553662bb4376eb15ed7b9c4ec2fe">LokiEnvSensors_is_streaming</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEnvSensors.html">LokiEnvSensors</a> *self);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga0ec5f0af8af44aed10903abb24ae7ef6"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga0ec5f0af8af44aed10903abb24ae7ef6">LokiEnvSensors_get_last_data</a></div><div class="ttdeci">float LokiEnvSensors_get_last_data(const LokiEnvSensors *self, size_t channel)</div><div class="ttdoc">Lire la valeur du dernier échantillon acquis sur une voie.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00344">libloki-env-sensors.c:344</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga176acbc5974ccb760b50c01f30bf2f26"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga176acbc5974ccb760b50c01f30bf2f26">LokiEnvSensors_get_scaling_factor</a></div><div class="ttdeci">float LokiEnvSensors_get_scaling_factor(const LokiEnvSensors *self, size_t channel)</div><div class="ttdoc">Lire le facteur de mise à l&#39;échelle des échantillons d&#39;une voie.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00336">libloki-env-sensors.c:336</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga25d2fc754531818073da17164ca9db6a"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga25d2fc754531818073da17164ca9db6a">LokiEnvSensors_stop_streaming</a></div><div class="ttdeci">void LokiEnvSensors_stop_streaming(LokiEnvSensors *self)</div><div class="ttdoc">Arrêter l&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00580">libloki-env-sensors.c:580</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga30cb4552b6b9b6921e108e3daca8749a"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga30cb4552b6b9b6921e108e3daca8749a">LokiEnvSensors_get_clk_frequency</a></div><div class="ttdeci">uint32_t LokiEnvSensors_get_clk_frequency(const LokiEnvSensors *self)</div><div class="ttdoc">Lire la fréquence d&#39;horloge du circuit d&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00312">libloki-env-sensors.c:312</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga5aeffec7e9fcf6f043d089e3ad157308"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga5aeffec7e9fcf6f043d089e3ad157308">LokiEnvSensors_set_sampling_frequency</a></div><div class="ttdeci">void LokiEnvSensors_set_sampling_frequency(const LokiEnvSensors *self, float freq)</div><div class="ttdoc">Affecter une fréquence d&#39;échantillonnage au circuit d&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00324">libloki-env-sensors.c:324</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga600792997301c4bed3dbbae28c397e79"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga600792997301c4bed3dbbae28c397e79">LokiEnvSensors_get_channels</a></div><div class="ttdeci">size_t LokiEnvSensors_get_channels(const LokiEnvSensors *self)</div><div class="ttdoc">Lire le nombre de voies du circuit d&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00316">libloki-env-sensors.c:316</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga73bc770ef666badd820b39d8519c2835"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga73bc770ef666badd820b39d8519c2835">LokiEnvSensors_start_streaming</a></div><div class="ttdeci">int LokiEnvSensors_start_streaming(LokiEnvSensors *self, int32_t channels, bool raw, LokiFIFO *out)</div><div class="ttdoc">Démarrer l&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00569">libloki-env-sensors.c:569</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_ga96d2d529c200e14e2056cb6a07221b51"><div class="ttname"><a href="group__gLokiEnvSensors.html#ga96d2d529c200e14e2056cb6a07221b51">LokiEnvSensors_new</a></div><div class="ttdeci">LokiEnvSensors * LokiEnvSensors_new(void)</div><div class="ttdoc">Construire un module d&#39;acquisition pour les capteurs auxiliaires.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00235">libloki-env-sensors.c:235</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gab19c1189c6764d5e8762043a96afb377"><div class="ttname"><a href="group__gLokiEnvSensors.html#gab19c1189c6764d5e8762043a96afb377">LokiEnvSensors_force_stop</a></div><div class="ttdeci">void LokiEnvSensors_force_stop(const LokiEnvSensors *self)</div><div class="ttdoc">Arrêter l&#39;acquisition immédiatement.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00589">libloki-env-sensors.c:589</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gab4a1dc32803805865b0b76fb8ba9f6e9"><div class="ttname"><a href="group__gLokiEnvSensors.html#gab4a1dc32803805865b0b76fb8ba9f6e9">LokiEnvSensors_del</a></div><div class="ttdeci">void LokiEnvSensors_del(LokiEnvSensors *self)</div><div class="ttdoc">Détruire un module d&#39;acquisition pour les capteurs auxiliaires.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00290">libloki-env-sensors.c:290</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gabde1553662bb4376eb15ed7b9c4ec2fe"><div class="ttname"><a href="group__gLokiEnvSensors.html#gabde1553662bb4376eb15ed7b9c4ec2fe">LokiEnvSensors_is_streaming</a></div><div class="ttdeci">bool LokiEnvSensors_is_streaming(const LokiEnvSensors *self)</div><div class="ttdoc">Lire l&#39;état de l&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00593">libloki-env-sensors.c:593</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gadda8b640c1f17b5d096896d73e2df06d"><div class="ttname"><a href="group__gLokiEnvSensors.html#gadda8b640c1f17b5d096896d73e2df06d">LokiEnvSensors_restart</a></div><div class="ttdeci">void LokiEnvSensors_restart(const LokiEnvSensors *self)</div><div class="ttdoc">Redémarrer le module d&#39;acquisition pour les capteurs auxiliaires.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00306">libloki-env-sensors.c:306</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gadf0e53d8c7a5580dbeebb2f24216d2f6"><div class="ttname"><a href="group__gLokiEnvSensors.html#gadf0e53d8c7a5580dbeebb2f24216d2f6">LokiEnvSensors_get_packet_length_max</a></div><div class="ttdeci">uint32_t LokiEnvSensors_get_packet_length_max(const LokiEnvSensors *self)</div><div class="ttdoc">Lire la longueur maximale des paquets DMA.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00328">libloki-env-sensors.c:328</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gae08bb0f35070b8ff5d9d68dda74002d4"><div class="ttname"><a href="group__gLokiEnvSensors.html#gae08bb0f35070b8ff5d9d68dda74002d4">LokiEnvSensors_set_scaling_factor</a></div><div class="ttdeci">void LokiEnvSensors_set_scaling_factor(LokiEnvSensors *self, size_t channel, float scale)</div><div class="ttdoc">Affecter un facteur de mise à l&#39;échelle des échantillons d&#39;une voie.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00340">libloki-env-sensors.c:340</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gae4fc28946ee8a1e02238df371861a901"><div class="ttname"><a href="group__gLokiEnvSensors.html#gae4fc28946ee8a1e02238df371861a901">LokiEnvSensors_get_packet_length</a></div><div class="ttdeci">uint32_t LokiEnvSensors_get_packet_length(const LokiEnvSensors *self)</div><div class="ttdoc">Lire la longueur courante d&#39;un paquet DMA.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00332">libloki-env-sensors.c:332</a></div></div>
+<div class="ttc" id="agroup__gLokiEnvSensors_html_gae7e8ce5a5470bb0d7271e623d45a20fc"><div class="ttname"><a href="group__gLokiEnvSensors.html#gae7e8ce5a5470bb0d7271e623d45a20fc">LokiEnvSensors_get_sampling_frequency</a></div><div class="ttdeci">float LokiEnvSensors_get_sampling_frequency(const LokiEnvSensors *self)</div><div class="ttdoc">Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00320">libloki-env-sensors.c:320</a></div></div>
+<div class="ttc" id="astructLokiEnvSensorsSample_html"><div class="ttname"><a href="structLokiEnvSensorsSample.html">LokiEnvSensorsSample</a></div><div class="ttdoc">Représentation d&#39;un échantillon en provenance des capteurs auxiliaires.</div><div class="ttdef"><b>Définition</b> <a href="#l00026">libloki-env-sensors.h:26</a></div></div>
+<div class="ttc" id="astructLokiEnvSensorsSample_html_a80f96b2f91086104989c60f5ea46ce41"><div class="ttname"><a href="structLokiEnvSensorsSample.html#a80f96b2f91086104989c60f5ea46ce41">LokiEnvSensorsSample::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdoc">Le numéro de la voie sur lequel l&#39;échantillon a été reçu.</div><div class="ttdef"><b>Définition</b> <a href="#l00028">libloki-env-sensors.h:28</a></div></div>
+<div class="ttc" id="astructLokiEnvSensors_html"><div class="ttname"><a href="structLokiEnvSensors.html">LokiEnvSensors</a></div><div class="ttdoc">Représentation de l&#39;interface d&#39;acquisition des capteurs auxiliaires.</div><div class="ttdef"><b>Définition</b> <a href="libloki-env-sensors_8c_source.html#l00025">libloki-env-sensors.c:25</a></div></div>
+<div class="ttc" id="astructLokiFIFO_html"><div class="ttname"><a href="structLokiFIFO.html">LokiFIFO</a></div><div class="ttdoc">Représentation d&#39;une FIFO.</div><div class="ttdef"><b>Définition</b> <a href="libloki-fifo_8c_source.html#l00020">libloki-fifo.c:20</a></div></div>
+<div class="ttc" id="aunionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0_____html_a4aa3f4a30511be76b03d69acb45edb31"><div class="ttname"><a href="unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____.html#a4aa3f4a30511be76b03d69acb45edb31">LokiEnvSensorsSample::[union].__unnamed0__::data_raw</a></div><div class="ttdeci">int32_t data_raw</div><div class="ttdoc">La valeur de l&#39;échantillon, en virgule fixe.</div></div>
+<div class="ttc" id="aunionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0_____html_a635a029d1a2ff0845f59527750e00259"><div class="ttname"><a href="unionLokiEnvSensorsSample_1_1_0funion_0e_8____unnamed0____.html#a635a029d1a2ff0845f59527750e00259">LokiEnvSensorsSample::[union].__unnamed0__::data</a></div><div class="ttdeci">float data</div><div class="ttdoc">La valeur de l&#39;échantillon, en virgule flottante après mise à l&#39;échelle.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="LokiModem_get_mod_osc1_wave_frequency_res" name="LokiModem_get_mod_osc1_wave_frequency_res">
+<area shape="rect" id="node1" title="Lire le pas de réglage de la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)..." alt="" coords="1232,27,1431,67"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gaa37cced8e7800971de36cc98f8cac1ef" title="Lire la fréquence du signal en sortie du premier oscillateur du modulateur (Fm1)." alt="" coords="985,55,1184,95"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="729,5,911,31"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#gaa40ad8ef296c7038b6f747f5407108d0" title="Affecter une fréquence d&#39;échantillonnage en sortie du modulateur." alt="" coords="706,55,934,95"/>
+<area shape="rect" id="node5" href="$group__gLokiModem.html#gac7ad56144a69fcdc52eac5dd41e944d7" title="Affecter les champs d&#39;un échantillon de sortie du démodulateur en mode simulation de capteurs." alt="" coords="703,120,937,145"/>
+<area shape="rect" id="node6" href="$group__gLokiModem.html#gac6d4163ef7524bf1d59a202f19db6fa5" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="517,120,655,145"/>
+<area shape="rect" id="node7" href="$group__gLokiModem.html#ga6cf7d6738460b7362a7bab87ff323efa" title="Démarrer l&#39;acquisition et le traitement des échantillons démodulés." alt="" coords="261,120,469,145"/>
+<area shape="rect" id="node8" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,120,213,145"/>
+</map>

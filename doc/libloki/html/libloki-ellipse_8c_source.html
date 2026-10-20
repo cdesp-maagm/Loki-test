@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki:  Fichier source de libloki-ellipse.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>os</b></li><li class="navelem"><b>meta-eseo</b></li><li class="navelem"><b>recipes-extended</b></li><li class="navelem"><b>libloki</b></li><li class="navelem"><b>files</b></li><li class="navelem"><b>src</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">libloki-ellipse.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="libloki-ellipse_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="libloki-ellipse_8h.html">libloki-ellipse.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;complex.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e">LokiEllipse_set_from_coeffs</a>(<a class="code hl_struct" href="structLokiEllipse.html">LokiEllipse</a> *self, <span class="keyword">const</span> <a class="code hl_typedef" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> coeffs) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">float</span> a   = coeffs[0];</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> b   = coeffs[1];</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">float</span> c   = 1.0f - a;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span> d   = coeffs[2];</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> e   = coeffs[3];</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">float</span> f   = coeffs[4];</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> ac  = a * c;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">float</span> ae  = a * e;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> cma = c - a;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">float</span> b2  = b * b;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">float</span> bd  = b * d;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">float</span> be  = b * e;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">float</span> cd  = c * d;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">float</span> b2m4ac  = b2 - ac * 4;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">float</span> samcpb2 = sqrtf(cma * cma + b2) / 2;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">float</span> A0      = 0.5f + samcpb2; <span class="comment">// 0.5 == (a + c) / 2</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">float</span> B0      = 0.5f - samcpb2; <span class="comment">// 0.5 == (a + c) / 2</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">float</span> xc      = (cd * 2 - be) / b2m4ac;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">float</span> yc      = (ae * 2 - bd) / b2m4ac;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">float</span> df      = a * xc * xc + b * xc * yc + c * yc * yc - f;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// FIXME Est-il utile de calculer alpha sachant que par la suite, on recalcule son cos et son sin?</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a> = atan2f(-b, cma) / 2;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a>    = xc;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a>    = yc;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">A</a>     = sqrtf(fabsf(df / B0));</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">B</a>     = sqrtf(fabsf(df / A0));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga6a9d8dee572f56889695bb96a2835844">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga6a9d8dee572f56889695bb96a2835844">LokiEllipse_get_coeffs</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEllipse.html">LokiEllipse</a> *self, <a class="code hl_typedef" href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a> coeffs) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">float</span> A2         = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">A</a> * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">A</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">float</span> B2         = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">B</a> * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">B</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">float</span> cos_alpha  = cosf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">float</span> sin_alpha  = sinf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">float</span> cos_alpha2 = cos_alpha * cos_alpha;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">float</span> sin_alpha2 = sin_alpha * sin_alpha;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">float</span> xc2        = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a> * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">float</span> yc2        = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a> * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">float</span> K          = A2 + B2;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    coeffs[0] = (A2 * sin_alpha2 + B2 * cos_alpha2) / K;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    coeffs[1] = (B2 - A2) * sin_alpha * cos_alpha * 2 / K;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    coeffs[2] = -coeffs[0] * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a> * 2 - coeffs[1] * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    coeffs[3] = (coeffs[0] - 1) * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a> * 2 - coeffs[1] * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    coeffs[4] = coeffs[0] * xc2 + coeffs[1] * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a> * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a> + (1.0f - coeffs[0]) * yc2 - A2 * B2 / K;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga70aa22f2b32427cb365981412de7daf5">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga70aa22f2b32427cb365981412de7daf5">LokiEllipse_get_point</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEllipse.html">LokiEllipse</a> *self, <span class="keywordtype">float</span> theta, <span class="keywordtype">float</span> *x, <span class="keywordtype">float</span> *y) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    complex <span class="keywordtype">float</span> z = (self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">A</a> * cosf(theta)) + I * (self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">B</a> * sinf(theta));</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    z *= cosf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>) + I * sinf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    *x = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a> + crealf(z);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    *y = self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a> + cimagf(z);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9">   68</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9">LokiEllipse_get_angle</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structLokiEllipse.html">LokiEllipse</a> *self, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> *x_norm, <span class="keywordtype">float</span> *y_norm) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    complex <span class="keywordtype">float</span> z  = x + I * y;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Translation pour recentrer l&#39;ellipse autour de (0, 0).</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    z -= self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">xc</a> + I * self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">yc</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Rotation pour aligner le grand axe sur l&#39;axe horizontal.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    z *= cosf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>) - I * sinf(self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">alpha</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Normalisation pour transformer l&#39;ellipse en un cercle unité.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    *x_norm = x = crealf(z) / self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">A</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    *y_norm = y = cimagf(z) / self-&gt;<a class="code hl_variable" href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">B</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Calcul de l&#39;angle.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> atan2f(y, x);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga35d3ff1907a5e87a070466b4c3204ec9"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga35d3ff1907a5e87a070466b4c3204ec9">LokiEllipse_get_angle</a></div><div class="ttdeci">float LokiEllipse_get_angle(const LokiEllipse *self, float x, float y, float *x_norm, float *y_norm)</div><div class="ttdoc">Calculer l&#39;angle correspondant à un point d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="#l00068">libloki-ellipse.c:68</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga6a9d8dee572f56889695bb96a2835844"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga6a9d8dee572f56889695bb96a2835844">LokiEllipse_get_coeffs</a></div><div class="ttdeci">void LokiEllipse_get_coeffs(const LokiEllipse *self, LokiEllipseEquation coeffs)</div><div class="ttdoc">Calculer les coefficients de l&#39;équation d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="#l00042">libloki-ellipse.c:42</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga6c07dc7246a56661060f219512071d9e"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga6c07dc7246a56661060f219512071d9e">LokiEllipse_set_from_coeffs</a></div><div class="ttdeci">void LokiEllipse_set_from_coeffs(LokiEllipse *self, const LokiEllipseEquation coeffs)</div><div class="ttdoc">Affecter les paramètres d&#39;une ellipse en fonction des coefficients de son équation.</div><div class="ttdef"><b>Définition</b> <a href="#l00010">libloki-ellipse.c:10</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipseEstimator_html_ga70aa22f2b32427cb365981412de7daf5"><div class="ttname"><a href="group__gLokiEllipseEstimator.html#ga70aa22f2b32427cb365981412de7daf5">LokiEllipse_get_point</a></div><div class="ttdeci">void LokiEllipse_get_point(const LokiEllipse *self, float theta, float *x, float *y)</div><div class="ttdoc">Calculer les coordonnées d&#39;un point d&#39;une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="#l00060">libloki-ellipse.c:60</a></div></div>
+<div class="ttc" id="agroup__gLokiEllipse_html_ga63c0457561f0e91f4c8a10dbc92c3163"><div class="ttname"><a href="group__gLokiEllipse.html#ga63c0457561f0e91f4c8a10dbc92c3163">LokiEllipseEquation</a></div><div class="ttdeci">float LokiEllipseEquation[5]</div><div class="ttdoc">Tableau des coefficients de l&#39;équation d&#39;une ellipse en coordonnées cartésiennes.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00029">libloki-ellipse.h:29</a></div></div>
+<div class="ttc" id="alibloki-ellipse_8h_html"><div class="ttname"><a href="libloki-ellipse_8h.html">libloki-ellipse.h</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html"><div class="ttname"><a href="structLokiEllipse.html">LokiEllipse</a></div><div class="ttdoc">Structure de données représentant une ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00015">libloki-ellipse.h:15</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html_a2d2b439f9d8126fc49d616dff4490474"><div class="ttname"><a href="structLokiEllipse.html#a2d2b439f9d8126fc49d616dff4490474">LokiEllipse::yc</a></div><div class="ttdeci">float yc</div><div class="ttdoc">La coordonnée Y du centre de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00023">libloki-ellipse.h:23</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html_a510e5419d6ca09dd022085798c285c99"><div class="ttname"><a href="structLokiEllipse.html#a510e5419d6ca09dd022085798c285c99">LokiEllipse::alpha</a></div><div class="ttdeci">float alpha</div><div class="ttdoc">L&#39;angle entre le grand axe et l&#39;axe horizontal.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00025">libloki-ellipse.h:25</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html_a598acadc87ccfa799461d975867b7ff4"><div class="ttname"><a href="structLokiEllipse.html#a598acadc87ccfa799461d975867b7ff4">LokiEllipse::xc</a></div><div class="ttdeci">float xc</div><div class="ttdoc">La coordonnée X du centre de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00021">libloki-ellipse.h:21</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html_a5a8982951b010dc44e6ea3ebb6bc2c21"><div class="ttname"><a href="structLokiEllipse.html#a5a8982951b010dc44e6ea3ebb6bc2c21">LokiEllipse::A</a></div><div class="ttdeci">float A</div><div class="ttdoc">Le demi-grand axe de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00017">libloki-ellipse.h:17</a></div></div>
+<div class="ttc" id="astructLokiEllipse_html_a930435f6900244ecb119889335c97b50"><div class="ttname"><a href="structLokiEllipse.html#a930435f6900244ecb119889335c97b50">LokiEllipse::B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Le demi-petit axe de l&#39;ellipse.</div><div class="ttdef"><b>Définition</b> <a href="libloki-ellipse_8h_source.html#l00019">libloki-ellipse.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

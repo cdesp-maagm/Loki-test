@@ -1,0 +1,6 @@
+<map id="LokiSensors_dma_stop" name="LokiSensors_dma_stop">
+<area shape="rect" id="node1" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="455,31,613,57"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga37c927170b57fa2979fbdd86bc7cbbe6" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="244,5,407,32"/>
+<area shape="rect" id="node3" href="$group__gLokiSensors.html#ga715fe749a0006ed6ca3952ec8568ccc8" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="261,56,390,83"/>
+<area shape="rect" id="node4" href="$group__gLokiSensors.html#gabc57b82efb0c7c156185c1dfc972f6f7" title="Démarrer l&#39;acquisition." alt="" coords="5,56,196,83"/>
+</map>

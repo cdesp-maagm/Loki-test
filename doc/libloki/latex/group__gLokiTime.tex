@@ -1,0 +1,211 @@
+\doxysubsection{Types et fonctions de gestion du temps }
+\hypertarget{group__gLokiTime}{}\label{group__gLokiTime}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+
+
+Définition de types {\itshape timestamp} et intervalle de temps, et de fonctions de conversion d\textquotesingle{}unités de temps.  
+
+
+Graphe de collaboration de Types et fonctions de gestion du temps:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-time_8h}{libloki-\/time.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}{TIMESTAMP\+\_\+\+SEC}}~1000000000
+\begin{DoxyCompactList}\small\item\em Le nombre d\textquotesingle{}unités du type \doxylink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp} dans une seconde. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiTime_ga991afc2a69e3e5ff2475202bcaa5a284}{TIMESTAMP\+\_\+\+MS}}~1000000
+\begin{DoxyCompactList}\small\item\em Le nombre d\textquotesingle{}unités du type \doxylink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp} dans une milliseconde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}une date, en nanosecondes par rapport à une date de référence. \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4}{Loki\+Time\+Delta}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un intervalle de temps, en nanosecondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} \doxymbox{\hyperlink{group__gLokiTime_ga8ca611d70fff98658ab83c2e6ad29077}{Loki\+Time\+\_\+to\+\_\+timestamp}} (struct timespec ts)
+\begin{DoxyCompactList}\small\item\em Convertir une date en timestamp. \end{DoxyCompactList}\item 
+static time\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_gaab40a41437974e36b8ed59281177b32a}{Loki\+Time\+\_\+seconds}} (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp)
+\begin{DoxyCompactList}\small\item\em Calculer le nombre total de secondes dans un timestamp. \end{DoxyCompactList}\item 
+static time\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_gaf9184c3ae04d720de377b3f7ad426976}{Loki\+Time\+\_\+milliseconds}} (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp)
+\begin{DoxyCompactList}\small\item\em Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp. \end{DoxyCompactList}\item 
+static \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} \doxymbox{\hyperlink{group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96}{Loki\+Time\+\_\+update}} (\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} ref, size\+\_\+t index, float frequency)
+\begin{DoxyCompactList}\small\item\em Calculer le timestamp d\textquotesingle{}un échantillon dans un signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Définition de types {\itshape timestamp} et intervalle de temps, et de fonctions de conversion d\textquotesingle{}unités de temps. 
+
+
+
+\label{group__gLokiTime_doc-define-members}
+\Hypertarget{group__gLokiTime_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiTime_ga991afc2a69e3e5ff2475202bcaa5a284}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!TIMESTAMP\_MS@{TIMESTAMP\_MS}}
+\index{TIMESTAMP\_MS@{TIMESTAMP\_MS}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{TIMESTAMP\_MS}{TIMESTAMP\_MS}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga991afc2a69e3e5ff2475202bcaa5a284} 
+\+\#define TIMESTAMP\+\_\+\+MS~1000000}
+
+
+
+Le nombre d\textquotesingle{}unités du type \doxylink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp} dans une milliseconde. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00026}{26}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+\Hypertarget{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!TIMESTAMP\_SEC@{TIMESTAMP\_SEC}}
+\index{TIMESTAMP\_SEC@{TIMESTAMP\_SEC}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{TIMESTAMP\_SEC}{TIMESTAMP\_SEC}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga74c6657849c03dab21733f4f13f003c5} 
+\+\#define TIMESTAMP\+\_\+\+SEC~1000000000}
+
+
+
+Le nombre d\textquotesingle{}unités du type \doxylink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp} dans une seconde. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+
+
+\label{group__gLokiTime_doc-typedef-members}
+\Hypertarget{group__gLokiTime_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTimeDelta@{LokiTimeDelta}}
+\index{LokiTimeDelta@{LokiTimeDelta}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTimeDelta}{LokiTimeDelta}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4} 
+typedef int64\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_ga46dbc3b25e68f088954bab33cbdd84a4}{Loki\+Time\+Delta}}}
+
+
+
+Représentation d\textquotesingle{}un intervalle de temps, en nanosecondes. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+\Hypertarget{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTimestamp@{LokiTimestamp}}
+\index{LokiTimestamp@{LokiTimestamp}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTimestamp}{LokiTimestamp}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc} 
+typedef uint64\+\_\+t \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}
+
+
+
+Représentation d\textquotesingle{}une date, en nanosecondes par rapport à une date de référence. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+
+
+\label{group__gLokiTime_doc-func-members}
+\Hypertarget{group__gLokiTime_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiTime_gaf9184c3ae04d720de377b3f7ad426976}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_milliseconds@{LokiTime\_milliseconds}}
+\index{LokiTime\_milliseconds@{LokiTime\_milliseconds}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTime\_milliseconds()}{LokiTime\_milliseconds()}}
+{\footnotesize\ttfamily \label{group__gLokiTime_gaf9184c3ae04d720de377b3f7ad426976} 
+time\+\_\+t Loki\+Time\+\_\+milliseconds (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}]{timestamp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em timestamp} & Le timestamp à convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de millisecondes, arrondi à l\textquotesingle{}entier inférieur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00051}{51}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+\Hypertarget{group__gLokiTime_gaab40a41437974e36b8ed59281177b32a}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_seconds@{LokiTime\_seconds}}
+\index{LokiTime\_seconds@{LokiTime\_seconds}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTime\_seconds()}{LokiTime\_seconds()}}
+{\footnotesize\ttfamily \label{group__gLokiTime_gaab40a41437974e36b8ed59281177b32a} 
+time\+\_\+t Loki\+Time\+\_\+seconds (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}]{timestamp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculer le nombre total de secondes dans un timestamp. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em timestamp} & Le timestamp à convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de secondes, arrondi à l\textquotesingle{}entier inférieur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00042}{42}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+\Hypertarget{group__gLokiTime_ga8ca611d70fff98658ab83c2e6ad29077}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_to\_timestamp@{LokiTime\_to\_timestamp}}
+\index{LokiTime\_to\_timestamp@{LokiTime\_to\_timestamp}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTime\_to\_timestamp()}{LokiTime\_to\_timestamp()}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga8ca611d70fff98658ab83c2e6ad29077} 
+\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} Loki\+Time\+\_\+to\+\_\+timestamp (\begin{DoxyParamCaption}\item[{struct timespec}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convertir une date en timestamp. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ts} & La date à convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le timestamp correspondant. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+\Hypertarget{group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96}\index{Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}!LokiTime\_update@{LokiTime\_update}}
+\index{LokiTime\_update@{LokiTime\_update}!Types et fonctions de gestion du temps@{Types et fonctions de gestion du temps}}
+\doxysubsubsubsection{\texorpdfstring{LokiTime\_update()}{LokiTime\_update()}}
+{\footnotesize\ttfamily \label{group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96} 
+\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} Loki\+Time\+\_\+update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}]{ref}{, }\item[{size\+\_\+t}]{index}{, }\item[{float}]{frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculer le timestamp d\textquotesingle{}un échantillon dans un signal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ref} & Le timestamp de l\textquotesingle{}échantillon d\textquotesingle{}indice 0. \\
+\hline
+{\em index} & L\textquotesingle{}indice de l\textquotesingle{}échantillon courant. \\
+\hline
+{\em frequency} & La fréquence d\textquotesingle{}échantillonnage, en Hz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le timestamp de l\textquotesingle{}échantillon courant. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-time_8h_source_l00062}{62}} du fichier \doxymbox{\hyperlink{libloki-time_8h_source}{libloki-\/time.\+h}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2

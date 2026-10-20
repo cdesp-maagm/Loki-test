@@ -1,0 +1,5 @@
+<map id="LokiSensors" name="LokiSensors">
+<area shape="rect" id="node1" title="Représentation de l&#39;interface d&#39;acquisition des capteurs auxiliaires." alt="" coords="17,199,112,225"/>
+<area shape="rect" id="node2" href="$structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="27,109,103,136"/>
+<area shape="rect" id="node3" href="$structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="5,5,124,32"/>
+</map>

@@ -1,0 +1,219 @@
+\doxysection{Référence de la structure Loki\+FIRFilter}
+\hypertarget{structLokiFIRFilter}{}\label{structLokiFIRFilter}\index{LokiFIRFilter@{LokiFIRFilter}}
+
+
+Représentation d\textquotesingle{}un filtre FIR.  
+
+
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{structLokiFIRFilter_a714896bd7caf63333dff0425f08bd17a}{is\+\_\+clone}}
+\begin{DoxyCompactList}\small\item\em Ce filtre est-\/il un clone d\textquotesingle{}un autre filtre ? \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_a748ee8c29617200a9d6bf1939272705e}{coeffs}}
+\begin{DoxyCompactList}\small\item\em Le tableau des coefficients de ce filtre. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_a05cf40780d1f10aa97d63bf3e73f1f9f}{coeffs\+\_\+end}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers la région située après le dernier coefficient de ce filtre. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_aa5e566405570a4f6040c1c35b70b43cb}{coeff\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers le premier coefficient du filtre pour la phase courante. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_ade579b58745494ca8611f46c432365a6}{samples}}
+\begin{DoxyCompactList}\small\item\em Le tableau des échantillons d\textquotesingle{}entrée mémorisés. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_ae6da812d0e7cea9106313991f5ffcaa9}{samples\+\_\+end}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers la région située après le dernier échantillon mémorisé. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiFIRFilter_a75891ad56694c733d36f1f78bce9973d}{sample\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}indice de l\textquotesingle{}échantillon courant dans la phase courante. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiFIRFilter_a12d80eed4de71eefa96144b898fc7e4d}{phase\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Un pointeur vers les échantillons de la phase courante. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structLokiFIRFilter_abdfa0baa70436d1486f05dc6161f7715}{acc}}
+\begin{DoxyCompactList}\small\item\em Le résultat partiel du filtrage. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiFIRFilter_aaebcaf11cbc869831f044b03d9df91f5}{length}}
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients de ce filtre. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiFIRFilter_a3e3229003c7da4b79e75d0bf00c0253f}{decimation}}
+\begin{DoxyCompactList}\small\item\em Le facteur de décimation de ce filtre. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{structLokiFIRFilter_a2164b271702e680e93cd7c12b1fad75d}{phase\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Le nombre de coefficients par phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation d\textquotesingle{}un filtre FIR. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00017}{17}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+
+
+\label{structLokiFIRFilter_doc-variable-members}
+\Hypertarget{structLokiFIRFilter_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiFIRFilter_abdfa0baa70436d1486f05dc6161f7715}\index{LokiFIRFilter@{LokiFIRFilter}!acc@{acc}}
+\index{acc@{acc}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{acc}{acc}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_abdfa0baa70436d1486f05dc6161f7715} 
+float Loki\+FIRFilter::\+acc}
+
+
+
+Le résultat partiel du filtrage. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00035}{35}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_aa5e566405570a4f6040c1c35b70b43cb}\index{LokiFIRFilter@{LokiFIRFilter}!coeff\_ptr@{coeff\_ptr}}
+\index{coeff\_ptr@{coeff\_ptr}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{coeff\_ptr}{coeff\_ptr}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_aa5e566405570a4f6040c1c35b70b43cb} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+coeff\+\_\+ptr}
+
+
+
+Un pointeur vers le premier coefficient du filtre pour la phase courante. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00025}{25}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a748ee8c29617200a9d6bf1939272705e}\index{LokiFIRFilter@{LokiFIRFilter}!coeffs@{coeffs}}
+\index{coeffs@{coeffs}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{coeffs}{coeffs}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a748ee8c29617200a9d6bf1939272705e} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+coeffs}
+
+
+
+Le tableau des coefficients de ce filtre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00021}{21}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a05cf40780d1f10aa97d63bf3e73f1f9f}\index{LokiFIRFilter@{LokiFIRFilter}!coeffs\_end@{coeffs\_end}}
+\index{coeffs\_end@{coeffs\_end}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{coeffs\_end}{coeffs\_end}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a05cf40780d1f10aa97d63bf3e73f1f9f} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+coeffs\+\_\+end}
+
+
+
+Un pointeur vers la région située après le dernier coefficient de ce filtre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00023}{23}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a3e3229003c7da4b79e75d0bf00c0253f}\index{LokiFIRFilter@{LokiFIRFilter}!decimation@{decimation}}
+\index{decimation@{decimation}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{decimation}{decimation}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a3e3229003c7da4b79e75d0bf00c0253f} 
+size\+\_\+t Loki\+FIRFilter::\+decimation}
+
+
+
+Le facteur de décimation de ce filtre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a714896bd7caf63333dff0425f08bd17a}\index{LokiFIRFilter@{LokiFIRFilter}!is\_clone@{is\_clone}}
+\index{is\_clone@{is\_clone}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{is\_clone}{is\_clone}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a714896bd7caf63333dff0425f08bd17a} 
+bool Loki\+FIRFilter::\+is\+\_\+clone}
+
+
+
+Ce filtre est-\/il un clone d\textquotesingle{}un autre filtre ? 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00019}{19}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_aaebcaf11cbc869831f044b03d9df91f5}\index{LokiFIRFilter@{LokiFIRFilter}!length@{length}}
+\index{length@{length}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_aaebcaf11cbc869831f044b03d9df91f5} 
+size\+\_\+t Loki\+FIRFilter::\+length}
+
+
+
+Le nombre de coefficients de ce filtre. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00037}{37}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a2164b271702e680e93cd7c12b1fad75d}\index{LokiFIRFilter@{LokiFIRFilter}!phase\_length@{phase\_length}}
+\index{phase\_length@{phase\_length}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{phase\_length}{phase\_length}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a2164b271702e680e93cd7c12b1fad75d} 
+size\+\_\+t Loki\+FIRFilter::\+phase\+\_\+length}
+
+
+
+Le nombre de coefficients par phase. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a12d80eed4de71eefa96144b898fc7e4d}\index{LokiFIRFilter@{LokiFIRFilter}!phase\_ptr@{phase\_ptr}}
+\index{phase\_ptr@{phase\_ptr}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{phase\_ptr}{phase\_ptr}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a12d80eed4de71eefa96144b898fc7e4d} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+phase\+\_\+ptr}
+
+
+
+Un pointeur vers les échantillons de la phase courante. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_a75891ad56694c733d36f1f78bce9973d}\index{LokiFIRFilter@{LokiFIRFilter}!sample\_index@{sample\_index}}
+\index{sample\_index@{sample\_index}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{sample\_index}{sample\_index}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_a75891ad56694c733d36f1f78bce9973d} 
+size\+\_\+t Loki\+FIRFilter::\+sample\+\_\+index}
+
+
+
+L\textquotesingle{}indice de l\textquotesingle{}échantillon courant dans la phase courante. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_ade579b58745494ca8611f46c432365a6}\index{LokiFIRFilter@{LokiFIRFilter}!samples@{samples}}
+\index{samples@{samples}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_ade579b58745494ca8611f46c432365a6} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+samples}
+
+
+
+Le tableau des échantillons d\textquotesingle{}entrée mémorisés. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00027}{27}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+\Hypertarget{structLokiFIRFilter_ae6da812d0e7cea9106313991f5ffcaa9}\index{LokiFIRFilter@{LokiFIRFilter}!samples\_end@{samples\_end}}
+\index{samples\_end@{samples\_end}!LokiFIRFilter@{LokiFIRFilter}}
+\doxysubsubsection{\texorpdfstring{samples\_end}{samples\_end}}
+{\footnotesize\ttfamily \label{structLokiFIRFilter_ae6da812d0e7cea9106313991f5ffcaa9} 
+float\texorpdfstring{$\ast$}{*} Loki\+FIRFilter::\+samples\+\_\+end}
+
+
+
+Un pointeur vers la région située après le dernier échantillon mémorisé. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-fir_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-fir_8c_source}{libloki-\/fir.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-fir_8c}{libloki-\/fir.\+c}}\end{DoxyCompactItemize}

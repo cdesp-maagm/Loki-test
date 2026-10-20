@@ -1,0 +1,7 @@
+<map id="LokiHooks_setup" name="LokiHooks_setup">
+<area shape="rect" id="node1" title="Affecter les hooks des fonctions malloc et free." alt="" coords="541,56,675,81"/>
+<area shape="rect" id="node2" href="$group__gLokiHooks.html#gaf60068237975d6170328c5dd9fcb875f" title="Une version instrumentée du hook de la fonction free." alt="" coords="361,5,484,31"/>
+<area shape="rect" id="node3" href="$group__gLokiHooks.html#ga8452f9f1793e6d1091ac294f15406592" title="Initialiser l&#39;utilisation des hooks instrumentés pour l&#39;allocation/désallocation de mémoire." alt="" coords="185,81,304,107"/>
+<area shape="rect" id="node5" href="$group__gLokiHooks.html#ga4175410f57244d03a197a9ca698d7fa3" title="Une version instrumentée du hook de la fonction malloc." alt="" coords="352,107,493,132"/>
+<area shape="rect" id="node4" href="$group__gLokiSystem.html#ga84434fa604921c7470b81c375921807f" title="Construire un nouveau système." alt="" coords="5,81,137,107"/>
+</map>

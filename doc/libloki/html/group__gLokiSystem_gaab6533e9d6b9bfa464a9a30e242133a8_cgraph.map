@@ -1,0 +1,6 @@
+<map id="LokiSystem_get_sampling_frequency" name="LokiSystem_get_sampling_frequency">
+<area shape="rect" id="node1" title="Lire la fréquence d&#39;échantillonnage en sortie de ce système." alt="" coords="5,5,199,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga82eebd6d10e869bbbbc3410594d6f80c" title="Lire la fréquence d&#39;échantillonnage en sortie du démodulateur." alt="" coords="247,5,431,45"/>
+<area shape="rect" id="node3" href="$group__gLokiModem.html#ga0ed707637e1b3cf02f37d9caad319a7f" title="Lire la fréquence d&#39;échantillonnage en entrée du démodulateur." alt="" coords="479,5,657,45"/>
+<area shape="rect" id="node4" href="$group__gLokiModem.html#ga31ef33621073ec3f693ff586270240f5" title="Lire un registre du circuit de modulation/démodulation." alt="" coords="705,13,860,38"/>
+</map>

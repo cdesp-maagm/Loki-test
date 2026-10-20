@@ -1,0 +1,4 @@
+<map id="LokiModem_force_stop" name="LokiModem_force_stop">
+<area shape="rect" id="node1" title="Arrêter l&#39;acquisition immédiatement." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga04636b25da663b516cf8634b3470ca52" title="Demander au circuit de modulation/démodulation d&#39;arrêter les transferts DMA." alt="" coords="227,5,396,31"/>
+</map>

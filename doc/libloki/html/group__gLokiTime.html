@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Types et fonctions de gestion du temps</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#files">Fichiers</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Types et fonctions de gestion du temps <div class="ingroups"><a class="el" href="group__ggLokiInterconnect.html">Échange de données entre modules d'acquisition, de traitement et d'enregistrement</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition de types <em>timestamp</em> et intervalle de temps, et de fonctions de conversion d'unités de temps.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Types et fonctions de gestion du temps:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiTime.png" border="0" usemap="#agroup____gLokiTime" loading="lazy" alt=""/></div>
+<map name="agroup____gLokiTime" id="agroup____gLokiTime">
+<area shape="rect" title="Définition de types timestamp et intervalle de temps, et de fonctions de conversion d&#39;unités de temps..." alt="" coords="301,13,460,53"/>
+<area shape="rect" href="group__ggLokiInterconnect.html" title=" " alt="" coords="5,5,253,60"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Fichiers</h2></td></tr>
+<tr class="memitem:libloki-time_2Eh" id="r_libloki-time_2Eh"><td class="memItemLeft">fichier &#160;</td><td class="memItemRight"><a class="el" href="libloki-time_8h.html">libloki-time.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga74c6657849c03dab21733f4f13f003c5" id="r_ga74c6657849c03dab21733f4f13f003c5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga74c6657849c03dab21733f4f13f003c5">TIMESTAMP_SEC</a>&#160;&#160;&#160;1000000000</td></tr>
+<tr class="memdesc:ga74c6657849c03dab21733f4f13f003c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre d'unités du type <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc" title="Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.">LokiTimestamp</a> dans une seconde.  <br /></td></tr>
+<tr class="memitem:ga991afc2a69e3e5ff2475202bcaa5a284" id="r_ga991afc2a69e3e5ff2475202bcaa5a284"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga991afc2a69e3e5ff2475202bcaa5a284">TIMESTAMP_MS</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:ga991afc2a69e3e5ff2475202bcaa5a284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre d'unités du type <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc" title="Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.">LokiTimestamp</a> dans une milliseconde.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga775c6dbda9586caf849a80cad5b5b0bc" id="r_ga775c6dbda9586caf849a80cad5b5b0bc"><td class="memItemLeft">typedef uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td></tr>
+<tr class="memdesc:ga775c6dbda9586caf849a80cad5b5b0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'une date, en nanosecondes par rapport à une date de référence.  <br /></td></tr>
+<tr class="memitem:ga46dbc3b25e68f088954bab33cbdd84a4" id="r_ga46dbc3b25e68f088954bab33cbdd84a4"><td class="memItemLeft">typedef int64_t&#160;</td><td class="memItemRight"><a class="el" href="#ga46dbc3b25e68f088954bab33cbdd84a4">LokiTimeDelta</a></td></tr>
+<tr class="memdesc:ga46dbc3b25e68f088954bab33cbdd84a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représentation d'un intervalle de temps, en nanosecondes.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga8ca611d70fff98658ab83c2e6ad29077" id="r_ga8ca611d70fff98658ab83c2e6ad29077"><td class="memItemLeft">static <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga8ca611d70fff98658ab83c2e6ad29077">LokiTime_to_timestamp</a> (struct timespec ts)</td></tr>
+<tr class="memdesc:ga8ca611d70fff98658ab83c2e6ad29077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertir une date en timestamp.  <br /></td></tr>
+<tr class="memitem:gaab40a41437974e36b8ed59281177b32a" id="r_gaab40a41437974e36b8ed59281177b32a"><td class="memItemLeft">static time_t&#160;</td><td class="memItemRight"><a class="el" href="#gaab40a41437974e36b8ed59281177b32a">LokiTime_seconds</a> (<a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp)</td></tr>
+<tr class="memdesc:gaab40a41437974e36b8ed59281177b32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le nombre total de secondes dans un timestamp.  <br /></td></tr>
+<tr class="memitem:gaf9184c3ae04d720de377b3f7ad426976" id="r_gaf9184c3ae04d720de377b3f7ad426976"><td class="memItemLeft">static time_t&#160;</td><td class="memItemRight"><a class="el" href="#gaf9184c3ae04d720de377b3f7ad426976">LokiTime_milliseconds</a> (<a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> timestamp)</td></tr>
+<tr class="memdesc:gaf9184c3ae04d720de377b3f7ad426976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp.  <br /></td></tr>
+<tr class="memitem:ga4ecb76bda575caf4ad17e18e65b0bb96" id="r_ga4ecb76bda575caf4ad17e18e65b0bb96"><td class="memItemLeft">static <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4ecb76bda575caf4ad17e18e65b0bb96">LokiTime_update</a> (<a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> ref, size_t index, float frequency)</td></tr>
+<tr class="memdesc:ga4ecb76bda575caf4ad17e18e65b0bb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculer le timestamp d'un échantillon dans un signal.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition de types <em>timestamp</em> et intervalle de temps, et de fonctions de conversion d'unités de temps. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentation des macros</h2>
+<a id="ga991afc2a69e3e5ff2475202bcaa5a284" name="ga991afc2a69e3e5ff2475202bcaa5a284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga991afc2a69e3e5ff2475202bcaa5a284">&#9670;&#160;</a></span>TIMESTAMP_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMESTAMP_MS&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre d'unités du type <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc" title="Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.">LokiTimestamp</a> dans une milliseconde. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00026">26</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a id="ga74c6657849c03dab21733f4f13f003c5" name="ga74c6657849c03dab21733f4f13f003c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74c6657849c03dab21733f4f13f003c5">&#9670;&#160;</a></span>TIMESTAMP_SEC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIMESTAMP_SEC&#160;&#160;&#160;1000000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre d'unités du type <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc" title="Représentation d&#39;une date, en nanosecondes par rapport à une date de référence.">LokiTimestamp</a> dans une seconde. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00023">23</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentation des définitions de type</h2>
+<a id="ga46dbc3b25e68f088954bab33cbdd84a4" name="ga46dbc3b25e68f088954bab33cbdd84a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46dbc3b25e68f088954bab33cbdd84a4">&#9670;&#160;</a></span>LokiTimeDelta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int64_t <a class="el" href="#ga46dbc3b25e68f088954bab33cbdd84a4">LokiTimeDelta</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'un intervalle de temps, en nanosecondes. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00020">20</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a id="ga775c6dbda9586caf849a80cad5b5b0bc" name="ga775c6dbda9586caf849a80cad5b5b0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga775c6dbda9586caf849a80cad5b5b0bc">&#9670;&#160;</a></span>LokiTimestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint64_t <a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Représentation d'une date, en nanosecondes par rapport à une date de référence. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00017">17</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions</h2>
+<a id="gaf9184c3ae04d720de377b3f7ad426976" name="gaf9184c3ae04d720de377b3f7ad426976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9184c3ae04d720de377b3f7ad426976">&#9670;&#160;</a></span>LokiTime_milliseconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t LokiTime_milliseconds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculer le nombre de millisecondes depuis la dernière seconde dans un timestamp. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Le timestamp à convertir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de millisecondes, arrondi à l'entier inférieur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00051">51</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a id="gaab40a41437974e36b8ed59281177b32a" name="gaab40a41437974e36b8ed59281177b32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab40a41437974e36b8ed59281177b32a">&#9670;&#160;</a></span>LokiTime_seconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t LokiTime_seconds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculer le nombre total de secondes dans un timestamp. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Le timestamp à convertir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le nombre de secondes, arrondi à l'entier inférieur. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00042">42</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a id="ga8ca611d70fff98658ab83c2e6ad29077" name="ga8ca611d70fff98658ab83c2e6ad29077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ca611d70fff98658ab83c2e6ad29077">&#9670;&#160;</a></span>LokiTime_to_timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> LokiTime_to_timestamp </td>
+          <td>(</td>
+          <td class="paramtype">struct timespec</td>          <td class="paramname"><span class="paramname"><em>ts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convertir une date en timestamp. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>La date à convertir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le timestamp correspondant. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00033">33</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+
+</div>
+</div>
+<a id="ga4ecb76bda575caf4ad17e18e65b0bb96" name="ga4ecb76bda575caf4ad17e18e65b0bb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ecb76bda575caf4ad17e18e65b0bb96">&#9670;&#160;</a></span>LokiTime_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a> LokiTime_update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga775c6dbda9586caf849a80cad5b5b0bc">LokiTimestamp</a></td>          <td class="paramname"><span class="paramname"><em>ref</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>frequency</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculer le timestamp d'un échantillon dans un signal. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ref</td><td>Le timestamp de l'échantillon d'indice 0. </td></tr>
+    <tr><td class="paramname">index</td><td>L'indice de l'échantillon courant. </td></tr>
+    <tr><td class="paramname">frequency</td><td>La fréquence d'échantillonnage, en Hz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Le timestamp de l'échantillon courant. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-time_8h_source.html#l00062">62</a> du fichier <a class="el" href="libloki-time_8h_source.html">libloki-time.h</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96_cgraph.png" border="0" usemap="#agroup__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96_cgraph" loading="lazy" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="group__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96_icgraph.png" border="0" usemap="#agroup__gLokiTime_ga4ecb76bda575caf4ad17e18e65b0bb96_icgraph" loading="lazy" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

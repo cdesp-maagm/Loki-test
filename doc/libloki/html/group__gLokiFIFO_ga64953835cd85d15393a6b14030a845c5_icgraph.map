@@ -1,0 +1,11 @@
+<map id="LokiFIFO_get_consumer_item" name="LokiFIFO_get_consumer_item">
+<area shape="rect" id="node1" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="499,80,713,105"/>
+<area shape="rect" id="node2" href="$group__gLokiConsumer.html#gac44de59993950d0183ecd089f65091d1" title="Lire les données de la FIFO." alt="" coords="279,5,433,31"/>
+<area shape="rect" id="node4" href="$group__gLokiRecorder.html#ga537585a8b069b651a6eaeb26a421eaf1" title="Enregistrer les données." alt="" coords="283,55,429,80"/>
+<area shape="rect" id="node6" href="$group__gLokiSocketServer.html#ga2812e3037b7580d56b3a3762ea1d2e02" title="Recevoir les données d&#39;entrée." alt="" coords="261,104,451,129"/>
+<area shape="rect" id="node8" href="$group__gLokiSystem.html#gad239747d22dd513e4bab292592f7807e" title="Calculer le déplacement à partir des données démodulées." alt="" coords="287,153,425,179"/>
+<area shape="rect" id="node3" href="$group__gLokiConsumer.html#ga365cf2545eef317565f4a35ac3ef1c4d" title="Démarrer un consommateur." alt="" coords="33,5,185,31"/>
+<area shape="rect" id="node5" href="$group__gLokiRecorder.html#ga2065789d6a43516492fd3540ed9f251e" title="Démarrer l&#39;enregistrement." alt="" coords="37,55,181,80"/>
+<area shape="rect" id="node7" href="$group__gLokiSocketServer.html#gae93b5af5135cc58ce3e13229becc3241" title="Démarrer un serveur." alt="" coords="24,104,195,129"/>
+<area shape="rect" id="node9" href="$group__gLokiSystem.html#ga04a5c88f3de5a3f48b4d73bfdfd31568" title="Démarrer l&#39;acquisition et le traitement." alt="" coords="5,153,213,179"/>
+</map>

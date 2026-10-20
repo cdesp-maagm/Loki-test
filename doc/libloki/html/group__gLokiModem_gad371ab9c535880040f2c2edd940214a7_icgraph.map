@@ -1,0 +1,4 @@
+<map id="LokiModem_set_demod_delay_y" name="LokiModem_set_demod_delay_y">
+<area shape="rect" id="node1" title="Affecter un retard à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="231,5,408,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#gab3cc855369372902491bf46d42aa072a" title="Affecter un déphasage à la composante Y (Q) du signal démodulé pour une voie." alt="" coords="5,5,183,45"/>
+</map>

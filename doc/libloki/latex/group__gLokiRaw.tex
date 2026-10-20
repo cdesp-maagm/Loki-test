@@ -1,0 +1,187 @@
+\doxysubsection{Enregistrement de séries temporelles brutes }
+\hypertarget{group__gLokiRaw}{}\label{group__gLokiRaw}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+
+
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiFormatter}{Loki\+Formatter}.  
+
+
+Graphe de collaboration de Enregistrement de séries temporelles brutes:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-raw_8c}{libloki-\/raw.\+c}}
+\item 
+fichier \doxymbox{\hyperlink{libloki-raw_8h}{libloki-\/raw.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de données brutes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Loki\+Raw \doxymbox{\hyperlink{group__gLokiRaw_gaf669dd5fc7b64550a55a9611ad25b7a5}{Loki\+Raw}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un formateur de données brutes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74}{Loki\+Raw\+\_\+new}} (void \texorpdfstring{$\ast$}{*}config)
+\begin{DoxyCompactList}\small\item\em Construire un formateur de données brutes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d}{Loki\+Raw\+\_\+work}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}filename, \doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}} timestamp, bool file\+\_\+change, void \texorpdfstring{$\ast$}{*}data, size\+\_\+t length, size\+\_\+t max\+\_\+channels, int32\+\_\+t channels, size\+\_\+t sample\+\_\+size, float sampling\+\_\+frequency)
+\begin{DoxyCompactList}\small\item\em Enregistrer un paquet de données. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}{Loki\+Raw\+\_\+close}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Fermer un formateur de données brutes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c}{Loki\+Raw\+\_\+del}} (\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un formateur de données brutes. \end{DoxyCompactList}\item 
+\Hypertarget{group__gLokiRaw_ga3fb22bde7cf7aa2f832e0a6a8d12ec68}\label{group__gLokiRaw_ga3fb22bde7cf7aa2f832e0a6a8d12ec68} 
+{\bfseries Loki\+Class\+\_\+implementation} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}, \doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, new) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, work) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, close) \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}}, del))
+\item 
+\Hypertarget{group__gLokiRaw_ga71d2a09cf5a3f62e429634f258bcfb1d}\label{group__gLokiRaw_ga71d2a09cf5a3f62e429634f258bcfb1d} 
+{\bfseries Loki\+Class\+\_\+declare\+\_\+implementation} (\doxymbox{\hyperlink{structLokiFormatter}{Loki\+Formatter}}, \doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module implémente l\textquotesingle{}interface \doxylink{group__gLokiFormatter}{Loki\+Formatter}. 
+
+
+
+\label{group__gLokiRaw_doc-typedef-members}
+\Hypertarget{group__gLokiRaw_doc-typedef-members}
+\doxysubsubsection{Documentation des définitions de type}
+\Hypertarget{group__gLokiRaw_gaf669dd5fc7b64550a55a9611ad25b7a5}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw@{LokiRaw}}
+\index{LokiRaw@{LokiRaw}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+\doxysubsubsubsection{\texorpdfstring{LokiRaw}{LokiRaw}}
+{\footnotesize\ttfamily \label{group__gLokiRaw_gaf669dd5fc7b64550a55a9611ad25b7a5} 
+typedef struct Loki\+Raw Loki\+Raw}
+
+
+
+Représentation d\textquotesingle{}un formateur de données brutes. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-raw_8h_source_l00016}{16}} du fichier \doxymbox{\hyperlink{libloki-raw_8h_source}{libloki-\/raw.\+h}}.
+
+
+
+\label{group__gLokiRaw_doc-func-members}
+\Hypertarget{group__gLokiRaw_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_close@{LokiRaw\_close}}
+\index{LokiRaw\_close@{LokiRaw\_close}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+\doxysubsubsubsection{\texorpdfstring{LokiRaw\_close()}{LokiRaw\_close()}}
+{\footnotesize\ttfamily \label{group__gLokiRaw_gaa38e5099d8c9467d2a8b112c67d8be0b} 
+void Loki\+Raw\+\_\+close (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Fermer un formateur de données brutes. 
+
+Cette fonction ferme le dernier fichier ouvert. Elle doit être appelée à la fin de l\textquotesingle{}enregistrement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur à fermer. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-raw_8c_source_l00048}{48}} du fichier \doxymbox{\hyperlink{libloki-raw_8c_source}{libloki-\/raw.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_del@{LokiRaw\_del}}
+\index{LokiRaw\_del@{LokiRaw\_del}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+\doxysubsubsubsection{\texorpdfstring{LokiRaw\_del()}{LokiRaw\_del()}}
+{\footnotesize\ttfamily \label{group__gLokiRaw_ga6b2790a504e7c8ce2403a1f0e778b98c} 
+void Loki\+Raw\+\_\+del (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Détruire un formateur de données brutes. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur à détruire. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-raw_8c_source_l00055}{55}} du fichier \doxymbox{\hyperlink{libloki-raw_8c_source}{libloki-\/raw.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
+Voici le graphe des appelants de cette fonction :
+% FIG 4
+\Hypertarget{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_new@{LokiRaw\_new}}
+\index{LokiRaw\_new@{LokiRaw\_new}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+\doxysubsubsubsection{\texorpdfstring{LokiRaw\_new()}{LokiRaw\_new()}}
+{\footnotesize\ttfamily \label{group__gLokiRaw_ga11394b9444c573a8c98a37491c188d74} 
+\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*} Loki\+Raw\+\_\+new (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Construire un formateur de données brutes. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em config} & La configuration à appliquer (inutilisée pour ce format). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un nouveau formateur de données brutes. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-raw_8c_source_l00020}{20}} du fichier \doxymbox{\hyperlink{libloki-raw_8c_source}{libloki-\/raw.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 5
+Voici le graphe des appelants de cette fonction :
+% FIG 6
+\Hypertarget{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d}\index{Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}!LokiRaw\_work@{LokiRaw\_work}}
+\index{LokiRaw\_work@{LokiRaw\_work}!Enregistrement de séries temporelles brutes@{Enregistrement de séries temporelles brutes}}
+\doxysubsubsubsection{\texorpdfstring{LokiRaw\_work()}{LokiRaw\_work()}}
+{\footnotesize\ttfamily \label{group__gLokiRaw_gacfce93c6c5932d70a60fb659a775d53d} 
+void Loki\+Raw\+\_\+work (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiRaw}{Loki\+Raw}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{\doxymbox{\hyperlink{group__gLokiTime_ga775c6dbda9586caf849a80cad5b5b0bc}{Loki\+Timestamp}}}]{timestamp}{, }\item[{bool}]{file\+\_\+change}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{, }\item[{size\+\_\+t}]{max\+\_\+channels}{, }\item[{int32\+\_\+t}]{channels}{, }\item[{size\+\_\+t}]{sample\+\_\+size}{, }\item[{float}]{sampling\+\_\+frequency}{}\end{DoxyParamCaption})}
+
+
+
+Enregistrer un paquet de données. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em self} & Le formateur de données brutes à utiliser. \\
+\hline
+{\em filename} & Le nom du fichier de destination. \\
+\hline
+{\em timestamp} & La date du paquet de données (inutilisée pour ce format). \\
+\hline
+{\em file\+\_\+change} & Faut-\/il ouvrir un nouveau fichier de destination ou poursuivre le fichier précédent ? \\
+\hline
+{\em data} & Les données à écrire. \\
+\hline
+{\em length} & Le nombre d\textquotesingle{}échantillons à écrire. \\
+\hline
+{\em max\+\_\+channels} & Le nombre maximal de voies à traiter. \\
+\hline
+{\em channels} & Un masque indiquant les voies à traiter. \\
+\hline
+{\em sample\+\_\+size} & La taille d\textquotesingle{}un échantillon, en octets. \\
+\hline
+{\em sampling\+\_\+frequency} & La fréquence d\textquotesingle{}échantillonage (inutilisée pour ce format). \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-raw_8c_source_l00027}{27}} du fichier \doxymbox{\hyperlink{libloki-raw_8c_source}{libloki-\/raw.\+c}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 7
+Voici le graphe des appelants de cette fonction :
+% FIG 8

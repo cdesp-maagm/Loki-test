@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+from wsgiref.simple_server import make_server, WSGIServer
+from urllib.parse          import parse_qs
+from socketserver          import ThreadingMixIn
+from queue                 import Queue
+from threading             import Thread
+
+import eseo.loki.web.config    as config
+import eseo.loki.web.plot      as plot
+import eseo.loki.web.status    as status
+import eseo.loki.web.files     as files
+import eseo.loki.web.startstop as startstop
+import eseo.loki.web.dispreset as dispreset
+
+routes = {
+    "config"     : config.run,
+    "plot"       : plot.run,
+    "status"     : status.run,
+    "files"      : files.run_list,
+    "download"   : files.run_download,
+    "start"      : startstop.run_start,
+    "stop"       : startstop.run_stop,
+    "disp-reset" : dispreset.run
+}
+
+class ThreadPoolMixIn(ThreadingMixIn):
+    '''
+    use a thread pool instead of a new thread on every request
+    '''
+    num_threads = 10
+    allow_reuse_address = True  # seems to fix socket.error on server restart
+
+    def serve_forever(self):
+        '''
+        Handle one request at a time until doomsday.
+        '''
+        # set up the threadpool
+        self.requests = Queue(self.num_threads)
+
+        for x in range(self.num_threads):
+            Thread(target=self.process_request_thread, daemon=True).start()
+
+        # server main loop
+        while True:
+            self.handle_request()
+
+        self.server_close()
+
+
+    def process_request_thread(self):
+        '''
+        obtain request from queue instead of directly from server socket
+        '''
+        while True:
+            ThreadingMixIn.process_request_thread(self, *self.requests.get())
+
+
+    def handle_request(self):
+        '''
+        simply collect requests and put them on the queue for the workers.
+        '''
+        try:
+            request, client_address = self.get_request()
+        except socket.error:
+            return
+        if self.verify_request(request, client_address):
+            self.requests.put((request, client_address))
+
+
+class ThreadingWSGIServer(ThreadPoolMixIn, WSGIServer):
+    pass
+
+def application(environ, start_response):
+    p = environ["PATH_INFO"].split("/")
+    if len(p) > 2 and p[2] in routes:
+        # Lire les données passées par la méthode POST
+        try:
+            request_body_size = int(environ.get('CONTENT_LENGTH', 0))
+        except (ValueError):
+            request_body_size = 0
+        request_body = environ['wsgi.input'].read(request_body_size)
+        form = parse_qs(request_body.decode())
+        args = parse_qs(environ['QUERY_STRING'])
+        return routes[p[2]](args, form, start_response)
+
+    start_response("404 Not Found", [('Content-Type', 'text/plain;charset=utf-8')])
+    return [b"Service not found: " + environ["PATH_INFO"].encode()]
+
+httpd = make_server('', 8000, application, ThreadingWSGIServer)
+print("Loki local server, serving on port 8000...")
+httpd.serve_forever()
+print("Loki local server, terminated.")

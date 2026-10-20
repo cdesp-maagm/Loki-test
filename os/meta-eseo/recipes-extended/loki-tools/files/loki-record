@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+import argparse
+import time
+import os.path
+import subprocess
+import sys
+import asyncio
+from threading import Thread
+from eseo.loki.native import *
+from eseo.loki.util import *
+import eseo.loki.defaults
+
+modem = LokiModem()
+
+parser = argparse.ArgumentParser()
+
+def bounded(t, a, b=None):
+    def check(x):
+        res = t(x)
+        if res < a or (b is not None and res > b):
+            raise argparse.ArgumentTypeError("Value out of bounds")
+        return res
+    return check
+
+parser.add_argument("--force",
+    action="store_true", default=argparse.SUPPRESS,
+    help="Start recording even if the current time is not synchronized")
+
+parser.add_argument("-c", "--channels", dest="stream_channels",
+    type=bounded(int, -1, (1 << modem.get_demod_channels()) - 1), default=argparse.SUPPRESS,
+    help="The channel to record (default, -1 for all channels)")
+parser.add_argument("-t", "--duration",
+    type=bounded(float, 0.0), default=argparse.SUPPRESS,
+    help="The recording duration (seconds, defaults to infinite)")
+parser.add_argument("-T", "--duration-per-file",
+    type=bounded(float, 0.0), default=argparse.SUPPRESS,
+    help="Record to multiple files with the given maximum duration per file (seconds)")
+parser.add_argument("-k", "--skip",
+    type=bounded(float, 0), default=argparse.SUPPRESS,
+    help="Duration to skip")
+parser.add_argument("--packet-length",
+    type=bounded(int, 1), default=argparse.SUPPRESS,
+    help="Number of samples per packet")
+parser.add_argument("--fifo-length",
+    type=bounded(int, 1), default=argparse.SUPPRESS,
+    help="Number of queued packets between processing stages")
+
+parser.add_argument("-w", "--wavelength",
+    type=bounded(float, 1.0), default=argparse.SUPPRESS,
+    help="Laser wavelength")
+parser.add_argument("-r", "--reflections",
+    type=bounded(int, 1), default=argparse.SUPPRESS,
+    help="Number of reflections")
+parser.add_argument("-i", "--cavity-index",
+    type=bounded(float, 0.0), default=argparse.SUPPRESS,
+    help="Cavity index")
+parser.add_argument("-u", "--distance-unit",
+    type=str, choices=["p", "n", "u", "m"], default=argparse.SUPPRESS,
+    help="Distance unit prefix")
+
+parser.add_argument("--simulate",
+    action="store_true", default=argparse.SUPPRESS,
+    help="Simulate sensors in software")
+parser.add_argument("--no-simulate",
+    dest="simulate", action="store_false", default=argparse.SUPPRESS,
+    help="Do not simulate sensors in software")
+
+parser.add_argument("-e", "--ellipse-estimator", dest="estimator_name",
+    type=str, choices=["rls", "nlms", "kalman"], default=argparse.SUPPRESS,
+    help="The adaptive filter to estimate ellipse parameters")
+parser.add_argument("-R", "--ellipse-initial-radius", dest="estimator_initial_radius",
+    type=bounded(float, 0), default=argparse.SUPPRESS,
+    help="The radius of the initial ellipse for the adaptive filter")
+parser.add_argument("-P", "--ellipse-estimator-param",
+    type=float, action="append",
+    help="A parameter of the adaptive filter")
+
+parser.add_argument("-b", "--filter-bandwidth",
+    type=float, default=argparse.SUPPRESS,
+    help="The fictive displacement elimination filter bandwidth")
+parser.add_argument("-a", "--filter-attenuation",
+    type=float, default=argparse.SUPPRESS,
+    help="The fictive displacement elimination filter attenuation")
+parser.add_argument("-l", "--filter-length",
+    type=bounded(int, 1), default=argparse.SUPPRESS,
+    help="The fictive displacement elimination filter length")
+parser.add_argument("-d", "--filter-decimation",
+    type=bounded(int, 1), default=argparse.SUPPRESS,
+    help="The fictive displacement elimination filter decimation")
+
+parser.add_argument("--xy",
+    action="store_true", default=argparse.SUPPRESS,
+    help="Also record the raw ellipse points")
+parser.add_argument("--no-xy",
+    dest="xy", action="store_false", default=argparse.SUPPRESS,
+    help="Do not record the raw ellipse points")
+
+parser.add_argument("-f", "--format",
+    type=str, choices=["raw", "mseed"], default=argparse.SUPPRESS,
+    help="File format for displacement data")
+parser.add_argument("--mseed-separate-channels",
+    action="store_true", default=argparse.SUPPRESS,
+    help="MiniSEED record channels in separate files")
+parser.add_argument("--mseed-no-separate-channels",
+    dest="mseed_separate_channels", action="store_false", default=argparse.SUPPRESS,
+    help="MiniSEED record all channels in the same files")
+parser.add_argument("--mseed-network",
+    type=str, default=argparse.SUPPRESS,
+    help="MiniSEED network code (2 characters)")
+parser.add_argument("--mseed-station",
+    type=str, default=argparse.SUPPRESS,
+    help="MiniSEED station code (5 characters)")
+parser.add_argument("--mseed-location",
+    type=str, default=argparse.SUPPRESS,
+    help="MiniSEED location identifier (2 characters)")
+parser.add_argument("--mseed-float",
+    dest="mseed_steim2", action="store_false", default=argparse.SUPPRESS,
+    help="MiniSEED use 32-bit float encoding")
+parser.add_argument("--mseed-steim2",
+    action="store_true", default=argparse.SUPPRESS,
+    help="MiniSEED use 32-bit integer encoding and Steim-2 compression")
+
+parser.add_argument("--save",
+    type=str, default=argparse.SUPPRESS,
+    help="Save configuration to file")
+parser.add_argument("--load",
+    type=str, default=argparse.SUPPRESS,
+    help="Load configuration from file")
+
+parser.add_argument("--path",
+    type=str, default=argparse.SUPPRESS,
+    help="Folder where the recordinds will be stored")
+
+parser.add_argument("filename",
+    type=str, nargs="?", default=argparse.SUPPRESS,
+    help="The target file base name")
+
+def exit_with_error(msg):
+    sys.stderr.write(msg)
+    exit()
+
+def ntpstat():
+    return subprocess.run(["ntpstat"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+
+args = parser.parse_args()
+
+system_config = LokiSystemConfig()
+
+record_config = dict(eseo.loki.defaults.record_config)
+
+if hasattr(args, "load"):
+    load_system_config(system_config, record_config, None, args.load)
+
+for name in record_config.keys():
+    if hasattr(args, name):
+        record_config[name] = getattr(args, name)
+
+if record_config["filename"] is None:
+    exit_with_error("No filename: exiting")
+
+for name in system_config_properties:
+    if hasattr(args, name):
+        getattr(system_config, "set_" + name)(getattr(args, name))
+
+if args.ellipse_estimator_param is not None:
+    for i, v in enumerate(args.ellipse_estimator_param):
+        system_config.set_estimator_param(i, v)
+
+if hasattr(args, "save"):
+    save_system_config(system_config, record_config, None, args.save)
+
+if not record_config["force"]:
+    # Wait until the current system time is synchronized, if applicable.
+    print("Waiting for clock synchronization.")
+    while not ntpstat():
+        time.sleep(5)
+    print("Clock synchronized.")
+
+system = LokiSystem(system_config, modem)
+
+# Désactiver le mode bypass du modem.
+modem.set_demod_bypass(False)
+
+xy_filename   = os.path.join(record_config["path"], record_config["filename"] + "-xy")
+disp_filename = os.path.join(record_config["path"], record_config["filename"] + "-d")
+
+xy_sample_size   = modem.get_sample_size()
+disp_sample_size = system.get_sample_size()
+
+if record_config["xy"]:
+    xy_clients = 3
+else:
+    xy_clients = 2
+
+if record_config["format"] == "mseed":
+    channel_names = ",".join(record_config["mseed_channel_names"])
+    fmt_config = LokiMSeedConfig(record_config["mseed_separate_channels"], record_config["mseed_station"], record_config["mseed_location"], record_config["mseed_network"], False, record_config["mseed_steim2"], channel_names)
+else:
+    fmt_config = None
+
+demod_channels = modem.get_demod_channels()
+
+disp_recorder = LokiRecorder(disp_filename, record_config["format"], demod_channels, record_config["stream_channels"], disp_sample_size, system.get_sampling_frequency(), record_config["duration"], record_config["duration_per_file"], fmt_config)
+disp_server = LokiSocketServer("/tmp/loki-stream-d.sock")
+xy_server = LokiSocketServer("/tmp/loki-stream-xy.sock")
+
+fifo_length   = int(record_config["fifo_length"])
+packet_length = int(record_config["fifo_packet_length"]) * disp_recorder.get_channel_count()
+
+disp_fifo = LokiFIFO(get_fifo_item_size(packet_length, disp_sample_size), fifo_length, 2)
+xy_fifo   = LokiFIFO(get_fifo_item_size(packet_length, xy_sample_size),   fifo_length, xy_clients)
+
+disp_recorder.start(disp_fifo, 0)
+disp_server.start(disp_fifo, 1)
+xy_server.start(xy_fifo, 1)
+
+if record_config["xy"]:
+    # xy_recorder est configuré sans limite de durée.
+    # Il sera arrêté à la fin de l'enregistrement des déplacements par disp_recorder.
+    xy_recorder = LokiRecorder(xy_filename, "raw", demod_channels, record_config["stream_channels"], xy_sample_size, modem.get_demod_xy_sampling_frequency(), -1, record_config["duration_per_file"])
+    xy_recorder.start(xy_fifo, 2)
+
+# Démarrer un serveur local pour interagir avec ce programme par IPC.
+async def on_connect(reader, writer):
+    print("Client connected")
+    cmd = await reader.read()
+    cmd = cmd.decode()
+    if cmd == "disp-reset":
+        print("Resetting displacement")
+        system.displacement_reset()
+    else:
+        print("Unknown command: {}".format(cmd))
+
+async def server():
+    server = await asyncio.start_unix_server(on_connect, "/tmp/loki-record.sock")
+    await server.wait_closed()
+
+def start_server():
+    loop = asyncio.new_event_loop()
+    loop.run_until_complete(server())
+
+Thread(target=start_server, daemon=True).start()
+
+# Démarrer l'acquisition.
+print("Recording...")
+
+if modem.is_streaming():
+    modem.force_stop()
+    time.sleep(1)
+
+err = system.start_streaming(record_config["stream_channels"], xy_fifo, disp_fifo, 0)
+if err:
+    exit_with_error("Error: " + os.strerror(err))
+
+start_time = time.time()
+disp_recorder.wait()
+end_time = time.time()
+
+disp_server.stop()
+xy_server.stop()
+if record_config["xy"]:
+    xy_recorder.stop()
+
+system.stop_streaming()
+
+print("Recording stopped after {:.1f} seconds".format(end_time - start_time))

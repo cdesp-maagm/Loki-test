@@ -1,0 +1,75 @@
+\doxysection{Référence du fichier libloki-\/socket-\/server.c}
+\hypertarget{libloki-socket-server_8c}{}\label{libloki-socket-server_8c}\index{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}}
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$pthread.\+h$>$}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+types.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+socket.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+un.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/socket-\/server.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}}
+\begin{DoxyCompactList}\small\item\em Représentation d\textquotesingle{}un serveur de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{libloki-socket-server_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\begin{DoxyCompactList}\small\item\em Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_gaf9a8245cd675157f3ab859b5b93ec3a3}{Loki\+Socket\+Server\+\_\+new}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Construire un serveur de données. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_ga2812e3037b7580d56b3a3762ea1d2e02}{Loki\+Socket\+Server\+\_\+receive}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Recevoir les données d\textquotesingle{}entrée. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiSocketServer_gad43863e67afcbce842c5d1d5ebd86ccf}{Loki\+Socket\+Server\+\_\+serve}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Gérer les connexions et transmettre les données aux clients. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiSocketServer_gae93b5af5135cc58ce3e13229becc3241}{Loki\+Socket\+Server\+\_\+start}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}in, size\+\_\+t cid)
+\begin{DoxyCompactList}\small\item\em Démarrer un serveur. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiSocketServer_gaedd8533779526c5febfacfa5238bc1f9}{Loki\+Socket\+Server\+\_\+is\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état du serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa92bff856b113d9609a5ffbe2acc8a23}{Loki\+Socket\+Server\+\_\+stop}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter un serveur. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiSocketServer_gaa39ef8dd070cc5b528bdfe6182501107}{Loki\+Socket\+Server\+\_\+del}} (\doxymbox{\hyperlink{structLokiSocketServer}{Loki\+Socket\+Server}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+
+
+
+\label{libloki-socket-server_8c_doc-define-members}
+\Hypertarget{libloki-socket-server_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{libloki-socket-server_8c_a369266c24eacffb87046522897a570d5}\index{libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/socket-\/server.c@{libloki-\/socket-\/server.c}}
+\doxysubsubsection{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \label{libloki-socket-server_8c_a369266c24eacffb87046522897a570d5} 
+\+\#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+
+
+Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-socket-server_8c_source_l00003}{3}} du fichier \doxymbox{\hyperlink{libloki-socket-server_8c_source}{libloki-\/socket-\/server.\+c}}.
+

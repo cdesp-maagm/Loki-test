@@ -1,0 +1,18 @@
+<map id="LokiEnvSensors_start_streaming" name="LokiEnvSensors_start_streaming">
+<area shape="rect" id="node1" title="Démarrer l&#39;acquisition." alt="" coords="5,284,167,324"/>
+<area shape="rect" id="node2" href="$group__gLokiEnvSensors.html#gab282e701c71cb22e44a21f18d69f0c9a" title="Lire l&#39;état des transferts DMA." alt="" coords="216,255,376,295"/>
+<area shape="rect" id="node3" href="$group__gLokiEnvSensors.html#ga2336b6bb8fdf12c31243b5755b6600b2" title="Traiter un tableau d&#39;échantillons issu d&#39;un transfert DMA." alt="" coords="215,319,377,345"/>
+<area shape="rect" id="node4" href="$group__gLokiEnvSensors.html#gaf621212c675d44cd6eee63fe26036f2f" title="Lire la date du dernier transfert DMA." alt="" coords="449,5,609,45"/>
+<area shape="rect" id="node5" href="$group__gLokiEnvSensors.html#ga425190f4045458c8a81f72e387d0655d" title="Demander au circuit d&#39;acquisition de démarrer les transferts DMA." alt="" coords="449,69,609,109"/>
+<area shape="rect" id="node6" href="$group__gLokiEnvSensors.html#ga5fab192073e0ff3f77dfa4127f5ce603" title="Demander au circuit d&#39;acquisition d&#39;arrêter les transferts DMA." alt="" coords="432,134,627,159"/>
+<area shape="rect" id="node7" href="$group__gLokiEnvSensors.html#gac1a06a888cc956d40a0e617e4ff42cd9" title="Lire l&#39;indice d&#39;un paquet reçu." alt="" coords="453,184,605,224"/>
+<area shape="rect" id="node8" href="$group__gLokiEnvSensors.html#gae4fc28946ee8a1e02238df371861a901" title="Lire la longueur courante d&#39;un paquet DMA." alt="" coords="453,248,605,288"/>
+<area shape="rect" id="node10" href="$group__gLokiEnvSensors.html#gae7e8ce5a5470bb0d7271e623d45a20fc" title="Lire la fréquence d&#39;échantillonnage du circuit d&#39;acquisition." alt="" coords="449,312,610,352"/>
+<area shape="rect" id="node11" href="$group__gLokiEnvSensors.html#gaf6369c975640b3023910705599da0d84" title="Convertir un échantillon issu du DMA." alt="" coords="454,376,605,416"/>
+<area shape="rect" id="node12" href="$group__gLokiFIFO.html#gac4ae3143767c6ead1aaae6b0bdb3e463" title="Obtenir une référence vers l&#39;élément courant en écriture." alt="" coords="425,441,633,466"/>
+<area shape="rect" id="node13" href="$group__gLokiFIFO.html#ga9d21708a76ac74826125a8fbf5a5efaf" title="Valider l&#39;élément courant en écriture." alt="" coords="471,490,588,515"/>
+<area shape="rect" id="node14" href="$group__gLokiPacket.html#gae0204abb3e85eacc5e915eb170245555" title="Lire la longueur des paquets supportés par une FIFO." alt="" coords="446,539,613,565"/>
+<area shape="rect" id="node16" href="$group__gLokiTime.html#ga8ca611d70fff98658ab83c2e6ad29077" title="Convertir une date en timestamp." alt="" coords="439,589,619,614"/>
+<area shape="rect" id="node9" href="$group__gLokiEnvSensors.html#ga0e297cd4ccf77382ad54687db062b895" title="Lire un registre du circuit d&#39;acquisition." alt="" coords="681,287,861,313"/>
+<area shape="rect" id="node15" href="$group__gLokiFIFO.html#gaa57901e87eacff515a67b913d69e5229" title="Obtenir la taille d&#39;un élément de la FIFO, en octets." alt="" coords="683,539,860,565"/>
+</map>

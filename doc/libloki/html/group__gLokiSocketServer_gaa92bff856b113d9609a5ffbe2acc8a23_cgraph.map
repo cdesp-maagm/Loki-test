@@ -1,0 +1,4 @@
+<map id="LokiSocketServer_stop" name="LokiSocketServer_stop">
+<area shape="rect" id="node1" title="Arrêter un serveur." alt="" coords="5,5,175,31"/>
+<area shape="rect" id="node2" href="$group__gLokiFIFO.html#gaaff05dfee1870a70b14718028d830f21" title="Terminer les attentes en cours." alt="" coords="223,5,343,31"/>
+</map>

@@ -1,0 +1,64 @@
+From 557e0d7598eb36ba9ae4aa4ca2b528bb9cc92e12 Mon Sep 17 00:00:00 2001
+From: Yen <>
+Date: Wed, 2 Jun 2021 17:15:33 +0100
+Subject: [PATCH] Eliminate a C undefined behaviour by replacing a few int64_t
+ with uint64_t
+
+---
+ src/generic.c | 12 ++++++------
+ src/generic.h |  4 ++--
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/src/generic.c b/src/generic.c
+index 1d336e5..92f43fe 100644
+--- a/src/generic.c
++++ b/src/generic.c
+@@ -223,22 +223,22 @@ HPnow (void)
+  *
+  * Returns the hash of the string.
+  ***************************************************************************/
+-int64_t
+-FVNhash64 (char *str)
++uint64_t
++FVNhash64 (const char *str)
+ {
+-  unsigned char *s = (unsigned char *)str; /* unsigned string */
++  const unsigned char *s = (const unsigned char *)str; /* unsigned string */
+ 
+   /* Seed hash value with FVN1_64_INIT */
+-  int64_t hval = (int64_t)0xcbf29ce484222325ULL;
++  uint64_t hval = (uint64_t)0xcbf29ce484222325ULL;
+ 
+   /* FNV-1 hash each octet of the string */
+   while (*s)
+   {
+     /* Multiply by the 64 bit FNV magic prime mod 2^64 */
+-    hval *= (int64_t)0x100000001b3ULL;
++    hval *= (uint64_t)0x100000001b3ULL;
+ 
+     /* XOR the bottom with the current octet */
+-    hval ^= (int64_t)*s++;
++    hval ^= (uint64_t)*s++;
+   }
+ 
+   return hval;
+diff --git a/src/generic.h b/src/generic.h
+index 79730d7..05b06b8 100644
+--- a/src/generic.h
++++ b/src/generic.h
+@@ -29,13 +29,13 @@ extern "C" {
+ #include <libmseed.h>
+ 
+ /* Key for B-trees */
+-typedef int64_t Key;
++typedef uint64_t Key;
+ 
+ extern int      SplitStreamID (char *streamid, char delim, int maxlength,
+                                char *id1, char *id2, char *id3, char *id4, char *id5, char *id6,
+                                char *type);
+ extern hptime_t HPnow (void);
+-extern int64_t  FVNhash64 (char *str);
++extern uint64_t FVNhash64 (const char *);
+ extern int      KeyCompare (const void *a, const void *b);
+ extern int      IsAllDigits (char *string);
+ 

@@ -1,0 +1,4 @@
+<map id="LokiSensors_set_packet_length" name="LokiSensors_set_packet_length">
+<area shape="rect" id="node1" title="Affecter la longueur d&#39;un paquet DMA pour une voie." alt="" coords="5,5,171,47"/>
+<area shape="rect" id="node2" href="$group__gLokiSensors.html#ga71385643e6a7b2ed2959a2bfe216e2d6" title="Affecter un registre du circuit d&#39;acquisition." alt="" coords="219,13,363,39"/>
+</map>

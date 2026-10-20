@@ -1,0 +1,4 @@
+<map id="LokiModem_get_mod_dc_value" name="LokiModem_get_mod_dc_value">
+<area shape="rect" id="node1" title="Lire le courant moyen de commande de la diode laser." alt="" coords="235,5,419,45"/>
+<area shape="rect" id="node2" href="$group__gLokiModem.html#ga7e173717a8ef2324dd74cd624041e87e" title="Afficher la configuration d&#39;un modem sur la sortie standard." alt="" coords="5,13,187,38"/>
+</map>

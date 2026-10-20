@@ -1,0 +1,387 @@
+\doxysubsection{Support de structures de données avec polymorphisme. }
+\hypertarget{group__gLokiClass}{}\label{group__gLokiClass}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+
+
+Ce module fournit des macros facilitant la définition d\textquotesingle{}interfaces et de classes.  
+
+
+Graphe de collaboration de Support de structures de données avec polymorphisme.:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-class_8h}{libloki-\/class.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{Loki\+Class\+\_\+interface\+\_\+name}}(prefix)
+\begin{DoxyCompactList}\small\item\em Construit un nom d\textquotesingle{}interface pour le préfixe donné. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{Loki\+Class\+\_\+class\+\_\+name}}(prefix)
+\begin{DoxyCompactList}\small\item\em Construit un nom de classe pour le préfixe donné. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}{Loki\+Class\+\_\+function\+\_\+name}}(prefix,  name)
+\begin{DoxyCompactList}\small\item\em Construit un nom de fonction pour une méthode d\textquotesingle{}une classe. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_gad71e11b51da42268464af1bb6e7656e8}{Loki\+Class\+\_\+interface}}(prefix,  methods)
+\begin{DoxyCompactList}\small\item\em Déclare une interface. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240}{Loki\+Class\+\_\+attribute}}(decl)
+\begin{DoxyCompactList}\small\item\em Dans une interface, déclare un attribut. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{Loki\+Class\+\_\+method}}(prefix,  name)
+\begin{DoxyCompactList}\small\item\em Dans une interface, déclare une méthode. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad}{Loki\+Class\+\_\+declare\+\_\+implementation}}(superclass,  prefix)
+\begin{DoxyCompactList}\small\item\em Déclare une classe qui implémente une interface donnée. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{Loki\+Class\+\_\+implementation}}(superclass,  prefix,  impls)
+\begin{DoxyCompactList}\small\item\em Définit le contenu d\textquotesingle{}une classe qui implémente une interface donnée. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{Loki\+Class\+\_\+set\+\_\+attribute}}(name,  value)
+\begin{DoxyCompactList}\small\item\em Dans une implémentation, affecte une valeur à un attribut. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{Loki\+Class\+\_\+define\+\_\+method}}(prefix,  name)
+\begin{DoxyCompactList}\small\item\em Dans une implémentation, associe une fonction à une méthode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Ce module fournit des macros facilitant la définition d\textquotesingle{}interfaces et de classes. 
+
+
+\begin{DoxyItemize}
+\item Une interface est un type {\ttfamily struct} qui déclare des attributs (des champs de données) et des méthodes (des pointeurs sur des fonctions).
+\item Une implémentation est une variable de ce type {\ttfamily struct}, dans laquelle on a affecté des valeurs aux attributs, et des fonctions aux méthodes.
+\end{DoxyItemize}
+
+On ne fournit pas de support particulier pour créer des instances de ces classes.
+
+Exemple :
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Déclarer\ une\ interface\ Config.}}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_gad71e11b51da42268464af1bb6e7656e8}{LokiClass\_interface}}(Config,}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240}{LokiClass\_attribute}}(\textcolor{keywordtype}{char}\ *category)}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}{LokiClass\_method}}(Config,\ \textcolor{keyword}{new})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Le\ type\ des\ instances\ de\ Config.}}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ *instance;}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Les\ pointeurs\ vers\ les\ méthodes\ seront\ copiés\ ici\ pour\ éviter\ un\ niveau}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ d'indirection\ supplémentaire\ et\ réduire\ la\ durée\ d'un\ appel\ de\ méthode.}}
+\DoxyCodeLine{\ \ \ \ ConfigInterface\ impl;}
+\DoxyCodeLine{\}\ Config;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Un\ constructeur\ de\ Config,\ qui\ délègue\ à\ une\ implémentation.}}
+\DoxyCodeLine{Config\ *Config\_new(\textcolor{keyword}{const}\ ConfigInterface\ *impl)\ \{}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}Création\ d'une\ configuration\ dans\ la\ catégorie\ :\ \%s.\(\backslash\)n"{}},\ impl-\/>category);}
+\DoxyCodeLine{\ \ \ \ Config\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(Config));}
+\DoxyCodeLine{\ \ \ \ self-\/>instance\ =\ impl-\/>new();}
+\DoxyCodeLine{\ \ \ \ memcpy(\&self-\/>impl,\ impl,\ \textcolor{keyword}{sizeof}(ConfigInterface));}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Déclarer\ une\ classe\ UserConfig\ qui\ implémente\ Config.}}
+\DoxyCodeLine{\textcolor{comment}{//\ Cette\ ligne\ se\ place\ généralement\ dans\ un\ fichier\ .h}}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad}{LokiClass\_declare\_implementation}}(Config,\ UserConfig)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Le\ type\ des\ instances\ de\ UserConfig.}}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\}\ UserConfig;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Le\ constructeur\ de\ UserConfig,\ associé\ à\ la\ méthode\ Config.new.}}
+\DoxyCodeLine{UserConfig\ *UserConfig\_new()\ \{}
+\DoxyCodeLine{\ \ \ \ UserConfig\ *self\ =\ calloc(1,\ \textcolor{keyword}{sizeof}(UserConfig));}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ self;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Définir\ l'implémentation\ de\ UserConfig.}}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{LokiClass\_implementation}}(Config,\ UserConfig,}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}{LokiClass\_set\_attribute}}(category,\ \textcolor{stringliteral}{"{}User"{}})}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}{LokiClass\_define\_method}}(UserConfig,\ \textcolor{keyword}{new})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\ \ \ \ Config\ *cfg\ =\ Config\_new(UserConfig);}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\label{group__gLokiClass_doc-define-members}
+\Hypertarget{group__gLokiClass_doc-define-members}
+\doxysubsubsection{Documentation des macros}
+\Hypertarget{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_attribute@{LokiClass\_attribute}}
+\index{LokiClass\_attribute@{LokiClass\_attribute}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_attribute}{LokiClass\_attribute}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga73dc50ecb993ab72efa7f10803140240} 
+\+\#define Loki\+Class\+\_\+attribute(\begin{DoxyParamCaption}\item[{}]{decl}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{decl;}
+
+\end{DoxyCode}
+
+
+Dans une interface, déclare un attribut. 
+
+Un attribut est un champ qui sera affecté dans la structure qui décrit une classe (voir \doxylink{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}{Loki\+Class\+\_\+implementation}).
+
+
+\begin{DoxyParams}{Paramètres}
+{\em decl} & Une déclaration de champ, sans {\ttfamily ;} terminal. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00124}{124}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_class\_name@{LokiClass\_class\_name}}
+\index{LokiClass\_class\_name@{LokiClass\_class\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_class\_name}{LokiClass\_class\_name}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8} 
+\+\#define Loki\+Class\+\_\+class\+\_\+name(\begin{DoxyParamCaption}\item[{}]{prefix}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiCommon_ga9404439ed46dc67d489a7d4ec2853e8f}{CAT}}(prefix,\ Class)}
+
+\end{DoxyCode}
+
+
+Construit un nom de classe pour le préfixe donné. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de la classe.\\
+\hline
+\end{DoxyParams}
+Exemple : 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{LokiClass\_class\_name}}(UserConfig)\ \textcolor{comment}{//\ -\/-\/>\ UserConfigClass}}
+
+\end{DoxyCode}
+ 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00093}{93}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_declare\_implementation@{LokiClass\_declare\_implementation}}
+\index{LokiClass\_declare\_implementation@{LokiClass\_declare\_implementation}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_declare\_implementation}{LokiClass\_declare\_implementation}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga9a873899c9f1e6e82823479c42632dad} 
+\+\#define Loki\+Class\+\_\+declare\+\_\+implementation(\begin{DoxyParamCaption}\item[{}]{superclass}{, }\item[{}]{prefix}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{LokiClass\_interface\_name}}(superclass)\ \doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{LokiClass\_class\_name}}(prefix)}
+
+\end{DoxyCode}
+
+
+Déclare une classe qui implémente une interface donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em superclass} & Le nom de base de l\textquotesingle{}interface. \\
+\hline
+{\em prefix} & Le nom de base de la classe. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00140}{140}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_define\_method@{LokiClass\_define\_method}}
+\index{LokiClass\_define\_method@{LokiClass\_define\_method}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_define\_method}{LokiClass\_define\_method}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga6da5df82ee2afb9112000c287919133f} 
+\+\#define Loki\+Class\+\_\+define\+\_\+method(\begin{DoxyParamCaption}\item[{}]{prefix}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.name\ =\ (typeof(\doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{LokiClass\_class\_name}}(prefix).name))\doxymbox{\hyperlink{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}{LokiClass\_function\_name}}(prefix,\ name),}
+
+\end{DoxyCode}
+
+
+Dans une implémentation, associe une fonction à une méthode. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de la classe. \\
+\hline
+{\em name} & Le nom de la méthode. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00167}{167}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_function\_name@{LokiClass\_function\_name}}
+\index{LokiClass\_function\_name@{LokiClass\_function\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_function\_name}{LokiClass\_function\_name}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71} 
+\+\#define Loki\+Class\+\_\+function\+\_\+name(\begin{DoxyParamCaption}\item[{}]{prefix}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiCommon_gaa6fa13246c1d6df342c083aac0f2ef95}{CAT3}}(prefix,\ \_,\ name)}
+
+\end{DoxyCode}
+
+
+Construit un nom de fonction pour une méthode d\textquotesingle{}une classe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de l\textquotesingle{}interface ou de la classe. \\
+\hline
+{\em name} & Le nom de la méthode.\\
+\hline
+\end{DoxyParams}
+Exemple : 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}{LokiClass\_function\_name}}(Config,\ \textcolor{keyword}{new})\ \textcolor{comment}{//\ -\/-\/>\ Config\_new}}
+
+\end{DoxyCode}
+ 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00105}{105}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_implementation@{LokiClass\_implementation}}
+\index{LokiClass\_implementation@{LokiClass\_implementation}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_implementation}{LokiClass\_implementation}}
+{\footnotesize\ttfamily \label{group__gLokiClass_gaa8e41e7a9fd0583e6314d14c757d26ff} 
+\+\#define Loki\+Class\+\_\+implementation(\begin{DoxyParamCaption}\item[{}]{superclass}{, }\item[{}]{prefix}{, }\item[{}]{impls}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{LokiClass\_interface\_name}}(superclass)\ \doxymbox{\hyperlink{group__gLokiClass_ga1cd222081c0b93c561a3a02830d10dd8}{LokiClass\_class\_name}}(prefix)\ =\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ impls\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Définit le contenu d\textquotesingle{}une classe qui implémente une interface donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em superclass} & Le nom de base de l\textquotesingle{}interface. \\
+\hline
+{\em prefix} & Le nom de base de la classe. \\
+\hline
+{\em impls} & Les affectations d\textquotesingle{}attributs et de méthodes qui implémentent l\textquotesingle{}interface. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00149}{149}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_gad71e11b51da42268464af1bb6e7656e8}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_interface@{LokiClass\_interface}}
+\index{LokiClass\_interface@{LokiClass\_interface}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_interface}{LokiClass\_interface}}
+{\footnotesize\ttfamily \label{group__gLokiClass_gad71e11b51da42268464af1bb6e7656e8} 
+\+\#define Loki\+Class\+\_\+interface(\begin{DoxyParamCaption}\item[{}]{prefix}{, }\item[{}]{methods}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ methods\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{LokiClass\_interface\_name}}(prefix)}
+
+\end{DoxyCode}
+
+
+Déclare une interface. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de l\textquotesingle{}interface. \\
+\hline
+{\em methods} & Les attributs ou méthodes déclarées dans cette interface. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00112}{112}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_interface\_name@{LokiClass\_interface\_name}}
+\index{LokiClass\_interface\_name@{LokiClass\_interface\_name}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_interface\_name}{LokiClass\_interface\_name}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862} 
+\+\#define Loki\+Class\+\_\+interface\+\_\+name(\begin{DoxyParamCaption}\item[{}]{prefix}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiCommon_ga9404439ed46dc67d489a7d4ec2853e8f}{CAT}}(prefix,\ Interface)}
+
+\end{DoxyCode}
+
+
+Construit un nom d\textquotesingle{}interface pour le préfixe donné. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de l\textquotesingle{}interface.\\
+\hline
+\end{DoxyParams}
+Exemple : 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__gLokiClass_ga022adc7968dc4c2770aa21581bf8b862}{LokiClass\_interface\_name}}(Config)\ \textcolor{comment}{//\ -\/-\/>\ ConfigInterface}}
+
+\end{DoxyCode}
+ 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00082}{82}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga5d764260014249229fd23ebadcc96134}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_method@{LokiClass\_method}}
+\index{LokiClass\_method@{LokiClass\_method}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_method}{LokiClass\_method}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga5d764260014249229fd23ebadcc96134} 
+\+\#define Loki\+Class\+\_\+method(\begin{DoxyParamCaption}\item[{}]{prefix}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{typeof(\doxymbox{\hyperlink{group__gLokiClass_ga7b53f2a9bf24378ca9c4117e777d8d71}{LokiClass\_function\_name}}(prefix,\ name))\ *name;}
+
+\end{DoxyCode}
+
+
+Dans une interface, déclare une méthode. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prefix} & Le nom de base de l\textquotesingle{}interface. \\
+\hline
+{\em name} & Le nom de la méthode. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00132}{132}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+
+\Hypertarget{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f}\index{Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}!LokiClass\_set\_attribute@{LokiClass\_set\_attribute}}
+\index{LokiClass\_set\_attribute@{LokiClass\_set\_attribute}!Support de structures de données avec polymorphisme.@{Support de structures de données avec polymorphisme.}}
+\doxysubsubsubsection{\texorpdfstring{LokiClass\_set\_attribute}{LokiClass\_set\_attribute}}
+{\footnotesize\ttfamily \label{group__gLokiClass_ga8ba32abc96ab47c9211d12fa57c3ba3f} 
+\+\#define Loki\+Class\+\_\+set\+\_\+attribute(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{value}{}\end{DoxyParamCaption})}
+
+{\bfseries Valeur :}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.name\ =\ value,}
+
+\end{DoxyCode}
+
+
+Dans une implémentation, affecte une valeur à un attribut. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em name} & Le nom de l\textquotesingle{}attribut. \\
+\hline
+{\em value} & La valeur de l\textquotesingle{}attribut. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-class_8h_source_l00159}{159}} du fichier \doxymbox{\hyperlink{libloki-class_8h_source}{libloki-\/class.\+h}}.
+

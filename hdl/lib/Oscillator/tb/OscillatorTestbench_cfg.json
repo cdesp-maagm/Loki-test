@@ -1,0 +1,14 @@
+{
+    "package_name" : "OscillatorTestbench_cfg",
+    "TB_use" : "Oscillator_pkg",
+    "declarations" : {
+        "OSC_SIN_COS_FRACTIONAL_WIDTH" : {"type" : "integer", "value"  : 16},
+        "TB_CHANNELS"                  : {"type" : "integer", "value"  : 8},
+        "TB_SIN_COS_INTEGER_WIDTH"     : {"type" : "integer", "value"  : 2},
+        "TB_PERIODS"                   : {"type" : "integer", "value"  : 4},
+        "TB_CLK_PERIOD"                : {"type" : "time",    "value"  : "20 ns"},
+        "TB_WAVE_FREQUENCY"            : {"type" : "natural", "value"  : 50000},
+        "TB_WAVE_FREQUENCY_MIN"        : {"type" : "positive", "value" : 200},
+        "TB_SAMPLE_FREQUENCY"          : {"type" : "positive", "value" : 10000000}
+    }
+}

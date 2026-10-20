@@ -1,0 +1,5 @@
+<map id="LokiConsumer_work" name="LokiConsumer_work">
+<area shape="rect" id="node1" title="Lire les données de la FIFO." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="node2" href="$group__LokiFIFO.html#ga64953835cd85d15393a6b14030a845c5" title="Obtenir une référence vers l&#39;élément courant en lecture." alt="" coords="195,5,392,32"/>
+<area shape="rect" id="node3" href="$group__LokiFIFO.html#ga4e8cda4ed922ac5128c716735c0724c8" title="Libérer l&#39;élément courant en lecture." alt="" coords="242,56,345,83"/>
+</map>

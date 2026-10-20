@@ -1,0 +1,31 @@
+
+&amba_pl {
+	env_sensors: LokiEnvSensors@41240000 {
+		compatible = "eseo,loki-env-sensors";
+		reg = <0x41240000 0x1000>;
+		dmas = <&env_sensors_dma 0>;
+		dma-names = "s2mm";
+	};
+
+	env_sensors_dma: dma@41230000 {
+		#dma-cells = <1>;
+		clock-names = "s_axi_lite_aclk", "m_axi_sg_aclk", "m_axi_s2mm_aclk";
+		clocks = <&clkc 15>, <&clkc 15>, <&clkc 15>;
+		compatible = "xlnx,axi-dma-1.00.a";
+		interrupt-names = "s2mm_introut";
+		interrupt-parent = <&intc>;
+		interrupts = <0 30 4>; /* IRQ_F2P[1], maps to Linux IRQ 62 */
+		reg = <0x41230000 0x10000>;
+		xlnx,addrwidth = <0x20>; /* Adresses sur 32 bits */
+		xlnx,include-sg;
+		xlnx,sg-length-width = <16>;
+		dma-channel@41230000 {
+			compatible = "xlnx,axi-dma-s2mm-channel";
+			dma-channels = <0x1>;
+			interrupts = <0 30 4>;   /* IRQ_F2P[1], maps to Linux IRQ 62 */
+			xlnx,datawidth = <0x20>; /* Données sur 32 bits */
+			xlnx,device-id = <0x1>;
+		};
+	};
+};
+

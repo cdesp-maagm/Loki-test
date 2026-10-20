@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>libloki: Référence de la structure LokiRecorder</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">libloki
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Recherche" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Champs de données</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la structure LokiRecorder<div class="ingroups"><a class="el" href="group__ggLokiRecording.html">Enregistrement et transmission de données</a> &raquo; <a class="el" href="group__gLokiRecorder.html">Enregistrement de séries temporelles</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Représentation d'un enregistreur de séries temporelles.  
+ <a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de LokiRecorder:</div>
+<div class="dyncontent">
+<div class="center"><img src="structLokiRecorder__coll__graph.png" border="0" usemap="#aLokiRecorder_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aLokiRecorder_coll__map" id="aLokiRecorder_coll__map">
+<area shape="rect" title="Représentation d&#39;un enregistreur de séries temporelles." alt="" coords="62,196,169,221"/>
+<area shape="rect" href="structLokiFormatter.html" title="Représentation d&#39;un formateur de séries temporelles." alt="" coords="5,108,119,133"/>
+<area shape="rect" href="structLokiFIFO.html" title="Représentation d&#39;une FIFO." alt="" coords="143,108,221,133"/>
+<area shape="rect" href="structLokiFIFORecord.html" title="Représentation d&#39;un enregistrement dans une FIFO." alt="" coords="120,5,244,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Champs de données</h2></td></tr>
+<tr class="memitem:a9fc80d1dbce59b5ec31e57548b00a1b3" id="r_a9fc80d1dbce59b5ec31e57548b00a1b3"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a9fc80d1dbce59b5ec31e57548b00a1b3">filename</a></td></tr>
+<tr class="memdesc:a9fc80d1dbce59b5ec31e57548b00a1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nom de base des fichiers de destination (sans extension).  <br /></td></tr>
+<tr class="memitem:a1d6bca3a226f84ec37f82339bd10dc4e" id="r_a1d6bca3a226f84ec37f82339bd10dc4e"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a1d6bca3a226f84ec37f82339bd10dc4e">filetype</a></td></tr>
+<tr class="memdesc:a1d6bca3a226f84ec37f82339bd10dc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le format des fichiers de destination ("raw" ou "mseed").  <br /></td></tr>
+<tr class="memitem:a7b761edaa9f28eb07d59d7a1b948b9d6" id="r_a7b761edaa9f28eb07d59d7a1b948b9d6"><td class="memItemLeft"><a class="el" href="structLokiFormatter.html">LokiFormatter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7b761edaa9f28eb07d59d7a1b948b9d6">formatter</a></td></tr>
+<tr class="memdesc:a7b761edaa9f28eb07d59d7a1b948b9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le formateur à utiliser pour écrire dans les fichiers.  <br /></td></tr>
+<tr class="memitem:afd00b906ebc7b3e5951bbc0fe21166c8" id="r_afd00b906ebc7b3e5951bbc0fe21166c8"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#afd00b906ebc7b3e5951bbc0fe21166c8">max_channels</a></td></tr>
+<tr class="memdesc:afd00b906ebc7b3e5951bbc0fe21166c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre maximal de voies que cet enregistreur peut traiter.  <br /></td></tr>
+<tr class="memitem:aa1f2fad80e1728976bf7cc1300111805" id="r_aa1f2fad80e1728976bf7cc1300111805"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#aa1f2fad80e1728976bf7cc1300111805">channels</a></td></tr>
+<tr class="memdesc:aa1f2fad80e1728976bf7cc1300111805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un masque indiquant quelles voies enregistrer.  <br /></td></tr>
+<tr class="memitem:a0f3c09751c3e7ae87f36a5d699b745d9" id="r_a0f3c09751c3e7ae87f36a5d699b745d9"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a0f3c09751c3e7ae87f36a5d699b745d9">channel_count</a></td></tr>
+<tr class="memdesc:a0f3c09751c3e7ae87f36a5d699b745d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre de voies à enregistrer.  <br /></td></tr>
+<tr class="memitem:ac3e59b5fd45b119b6b83b48581d45156" id="r_ac3e59b5fd45b119b6b83b48581d45156"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac3e59b5fd45b119b6b83b48581d45156">sampling_frequency</a></td></tr>
+<tr class="memdesc:ac3e59b5fd45b119b6b83b48581d45156"><td class="mdescLeft">&#160;</td><td class="mdescRight">La fréquence d'échantillonnage, en Hz.  <br /></td></tr>
+<tr class="memitem:abc75d5f39bafdac8a0c3de5dfc646c85" id="r_abc75d5f39bafdac8a0c3de5dfc646c85"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#abc75d5f39bafdac8a0c3de5dfc646c85">sample_size</a></td></tr>
+<tr class="memdesc:abc75d5f39bafdac8a0c3de5dfc646c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">La taille d'un échantillon, en octets.  <br /></td></tr>
+<tr class="memitem:a5b67667d919a7fa9856aa8e5e00fba0f" id="r_a5b67667d919a7fa9856aa8e5e00fba0f"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a5b67667d919a7fa9856aa8e5e00fba0f">sample_count</a></td></tr>
+<tr class="memdesc:a5b67667d919a7fa9856aa8e5e00fba0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre total d'échantillons à enregistrer toutes voies confondues, 0 pour enregistrer indéfiniment.  <br /></td></tr>
+<tr class="memitem:a2863fa0bdfbd70431faca15abcc2bf95" id="r_a2863fa0bdfbd70431faca15abcc2bf95"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a2863fa0bdfbd70431faca15abcc2bf95">sample_count_per_file</a></td></tr>
+<tr class="memdesc:a2863fa0bdfbd70431faca15abcc2bf95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le nombre total d'échantillons à enregistrer par fichier toutes voies confondues, 0 pour tout enregistrer dans un seul fichier.  <br /></td></tr>
+<tr class="memitem:a788bdd06663b44df6cb0ed126e824357" id="r_a788bdd06663b44df6cb0ed126e824357"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a788bdd06663b44df6cb0ed126e824357">multifile</a></td></tr>
+<tr class="memdesc:a788bdd06663b44df6cb0ed126e824357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faut-il produire plusieurs fichiers (true si sample_count_per_file &gt; 0).  <br /></td></tr>
+<tr class="memitem:aa467b2260da34bd08b7b0a1e226ae5f0" id="r_aa467b2260da34bd08b7b0a1e226ae5f0"><td class="memItemLeft"><a class="el" href="structLokiFIFO.html">LokiFIFO</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa467b2260da34bd08b7b0a1e226ae5f0">in</a></td></tr>
+<tr class="memdesc:aa467b2260da34bd08b7b0a1e226ae5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">La FIFO contenant les données à enregistrer.  <br /></td></tr>
+<tr class="memitem:a89d4667439b403fe453795d90c6456c2" id="r_a89d4667439b403fe453795d90c6456c2"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a89d4667439b403fe453795d90c6456c2">cid</a></td></tr>
+<tr class="memdesc:a89d4667439b403fe453795d90c6456c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le numéro de consommateur de cette instance dans la FIFO.  <br /></td></tr>
+<tr class="memitem:a98295a223c1e22b7fa4a7333449eb9ed" id="r_a98295a223c1e22b7fa4a7333449eb9ed"><td class="memItemLeft">volatile bool&#160;</td><td class="memItemRight"><a class="el" href="#a98295a223c1e22b7fa4a7333449eb9ed">stop_request</a></td></tr>
+<tr class="memdesc:a98295a223c1e22b7fa4a7333449eb9ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de demande d'arrêt de l'enregistrement.  <br /></td></tr>
+<tr class="memitem:afe1e496c9ec488ae00283f62f83abfe5" id="r_afe1e496c9ec488ae00283f62f83abfe5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afe1e496c9ec488ae00283f62f83abfe5">is_recording</a></td></tr>
+<tr class="memdesc:afe1e496c9ec488ae00283f62f83abfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur d'enregistrement en cours.  <br /></td></tr>
+<tr class="memitem:afa597b588fe89f578c6cb0b4f8bfac8c" id="r_afa597b588fe89f578c6cb0b4f8bfac8c"><td class="memItemLeft">pthread_mutex_t&#160;</td><td class="memItemRight"><a class="el" href="#afa597b588fe89f578c6cb0b4f8bfac8c">mutex</a></td></tr>
+<tr class="memdesc:afa597b588fe89f578c6cb0b4f8bfac8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un mutex pour gérer les accès concurrents à l'état de l'enregistrement.  <br /></td></tr>
+<tr class="memitem:a70a6127a872e1bd375d7d899b473d8b8" id="r_a70a6127a872e1bd375d7d899b473d8b8"><td class="memItemLeft">pthread_cond_t&#160;</td><td class="memItemRight"><a class="el" href="#a70a6127a872e1bd375d7d899b473d8b8">recording_done</a></td></tr>
+<tr class="memdesc:a70a6127a872e1bd375d7d899b473d8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable conditionnelle activée en fin d'enregistrement.  <br /></td></tr>
+<tr class="memitem:a19ccec1e82c8bf7612c02dc51d967413" id="r_a19ccec1e82c8bf7612c02dc51d967413"><td class="memItemLeft">pthread_t&#160;</td><td class="memItemRight"><a class="el" href="#a19ccec1e82c8bf7612c02dc51d967413">thread</a></td></tr>
+<tr class="memdesc:a19ccec1e82c8bf7612c02dc51d967413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le thread qui lit les données de la FIFO et les enregistre.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Représentation d'un enregistreur de séries temporelles. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00020">20</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentation des champs</h2>
+<a id="a0f3c09751c3e7ae87f36a5d699b745d9" name="a0f3c09751c3e7ae87f36a5d699b745d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3c09751c3e7ae87f36a5d699b745d9">&#9670;&#160;</a></span>channel_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::channel_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre de voies à enregistrer. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00032">32</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="aa1f2fad80e1728976bf7cc1300111805" name="aa1f2fad80e1728976bf7cc1300111805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f2fad80e1728976bf7cc1300111805">&#9670;&#160;</a></span>channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t LokiRecorder::channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un masque indiquant quelles voies enregistrer. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00030">30</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a89d4667439b403fe453795d90c6456c2" name="a89d4667439b403fe453795d90c6456c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d4667439b403fe453795d90c6456c2">&#9670;&#160;</a></span>cid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::cid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le numéro de consommateur de cette instance dans la FIFO. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00046">46</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a9fc80d1dbce59b5ec31e57548b00a1b3" name="a9fc80d1dbce59b5ec31e57548b00a1b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc80d1dbce59b5ec31e57548b00a1b3">&#9670;&#160;</a></span>filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* LokiRecorder::filename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nom de base des fichiers de destination (sans extension). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00022">22</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a1d6bca3a226f84ec37f82339bd10dc4e" name="a1d6bca3a226f84ec37f82339bd10dc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6bca3a226f84ec37f82339bd10dc4e">&#9670;&#160;</a></span>filetype</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* LokiRecorder::filetype</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le format des fichiers de destination ("raw" ou "mseed"). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00024">24</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a7b761edaa9f28eb07d59d7a1b948b9d6" name="a7b761edaa9f28eb07d59d7a1b948b9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b761edaa9f28eb07d59d7a1b948b9d6">&#9670;&#160;</a></span>formatter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFormatter.html">LokiFormatter</a>* LokiRecorder::formatter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le formateur à utiliser pour écrire dans les fichiers. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00026">26</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="aa467b2260da34bd08b7b0a1e226ae5f0" name="aa467b2260da34bd08b7b0a1e226ae5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa467b2260da34bd08b7b0a1e226ae5f0">&#9670;&#160;</a></span>in</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structLokiFIFO.html">LokiFIFO</a>* LokiRecorder::in</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La FIFO contenant les données à enregistrer. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00044">44</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="afe1e496c9ec488ae00283f62f83abfe5" name="afe1e496c9ec488ae00283f62f83abfe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1e496c9ec488ae00283f62f83abfe5">&#9670;&#160;</a></span>is_recording</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiRecorder::is_recording</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicateur d'enregistrement en cours. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00050">50</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="afd00b906ebc7b3e5951bbc0fe21166c8" name="afd00b906ebc7b3e5951bbc0fe21166c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd00b906ebc7b3e5951bbc0fe21166c8">&#9670;&#160;</a></span>max_channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::max_channels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre maximal de voies que cet enregistreur peut traiter. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00028">28</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a788bdd06663b44df6cb0ed126e824357" name="a788bdd06663b44df6cb0ed126e824357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788bdd06663b44df6cb0ed126e824357">&#9670;&#160;</a></span>multifile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LokiRecorder::multifile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faut-il produire plusieurs fichiers (true si sample_count_per_file &gt; 0). </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00042">42</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="afa597b588fe89f578c6cb0b4f8bfac8c" name="afa597b588fe89f578c6cb0b4f8bfac8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa597b588fe89f578c6cb0b4f8bfac8c">&#9670;&#160;</a></span>mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t LokiRecorder::mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un mutex pour gérer les accès concurrents à l'état de l'enregistrement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00052">52</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a70a6127a872e1bd375d7d899b473d8b8" name="a70a6127a872e1bd375d7d899b473d8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a6127a872e1bd375d7d899b473d8b8">&#9670;&#160;</a></span>recording_done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_cond_t LokiRecorder::recording_done</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable conditionnelle activée en fin d'enregistrement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00054">54</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a5b67667d919a7fa9856aa8e5e00fba0f" name="a5b67667d919a7fa9856aa8e5e00fba0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b67667d919a7fa9856aa8e5e00fba0f">&#9670;&#160;</a></span>sample_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::sample_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre total d'échantillons à enregistrer toutes voies confondues, 0 pour enregistrer indéfiniment. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00038">38</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a2863fa0bdfbd70431faca15abcc2bf95" name="a2863fa0bdfbd70431faca15abcc2bf95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2863fa0bdfbd70431faca15abcc2bf95">&#9670;&#160;</a></span>sample_count_per_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::sample_count_per_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le nombre total d'échantillons à enregistrer par fichier toutes voies confondues, 0 pour tout enregistrer dans un seul fichier. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00040">40</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="abc75d5f39bafdac8a0c3de5dfc646c85" name="abc75d5f39bafdac8a0c3de5dfc646c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc75d5f39bafdac8a0c3de5dfc646c85">&#9670;&#160;</a></span>sample_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LokiRecorder::sample_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La taille d'un échantillon, en octets. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00036">36</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="ac3e59b5fd45b119b6b83b48581d45156" name="ac3e59b5fd45b119b6b83b48581d45156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e59b5fd45b119b6b83b48581d45156">&#9670;&#160;</a></span>sampling_frequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LokiRecorder::sampling_frequency</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>La fréquence d'échantillonnage, en Hz. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00034">34</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a98295a223c1e22b7fa4a7333449eb9ed" name="a98295a223c1e22b7fa4a7333449eb9ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98295a223c1e22b7fa4a7333449eb9ed">&#9670;&#160;</a></span>stop_request</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool LokiRecorder::stop_request</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicateur de demande d'arrêt de l'enregistrement. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00048">48</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<a id="a19ccec1e82c8bf7612c02dc51d967413" name="a19ccec1e82c8bf7612c02dc51d967413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ccec1e82c8bf7612c02dc51d967413">&#9670;&#160;</a></span>thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t LokiRecorder::thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le thread qui lit les données de la FIFO et les enregistre. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="libloki-recorder_8c_source.html#l00056">56</a> du fichier <a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="libloki-recorder_8c_source.html">libloki-recorder.c</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

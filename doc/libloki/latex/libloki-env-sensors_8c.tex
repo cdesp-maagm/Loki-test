@@ -1,0 +1,124 @@
+\doxysection{Référence du fichier libloki-\/env-\/sensors.c}
+\hypertarget{libloki-env-sensors_8c}{}\label{libloki-env-sensors_8c}\index{libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}}
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$errno.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$pthread.\+h$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+ioctl.\+h$>$}\newline
+{\ttfamily \+\#include $<$sys/\+mman.\+h$>$}\newline
+{\ttfamily \+\#include $<$loki-\/env-\/sensors-\/regs.\+h$>$}\newline
+{\ttfamily \+\#include $<$loki-\/device-\/ioctl.\+h$>$}\newline
+{\ttfamily \+\#include "{}libloki.\+h"{}}\newline
+Graphe des dépendances par inclusion de libloki-\/env-\/sensors.c:
+% FIG 0
+\doxysubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}}
+\begin{DoxyCompactList}\small\item\em Représentation de l\textquotesingle{}interface d\textquotesingle{}acquisition des capteurs auxiliaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{libloki-env-sensors_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\begin{DoxyCompactList}\small\item\em Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__gLokiEnvSensors_gac65edfa5d1dbb5f1b560b4383a72555f}{USE\+\_\+\+MMAP}}
+\begin{DoxyCompactList}\small\item\em Utiliser la fonction {\ttfamily mmap} pour accéder aux données DMA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gaddedaed69cd104ec1095687841046fc8}{Loki\+DMASample}}
+\begin{DoxyCompactList}\small\item\em Le type de donnée brut d\textquotesingle{}un échantillon passé par transfert DMA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_ga0e297cd4ccf77382ad54687db062b895}{Loki\+Env\+Sensors\+\_\+get\+\_\+reg}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, Loki\+Env\+Sensors\+Register reg)
+\begin{DoxyCompactList}\small\item\em Lire un registre du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_gab1a9ddca7f23c277de1236b32392ce5a}{Loki\+Env\+Sensors\+\_\+set\+\_\+reg}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, Loki\+Env\+Sensors\+Register reg, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Affecter un registre du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga425190f4045458c8a81f72e387d0655d}{Loki\+Env\+Sensors\+\_\+dma\+\_\+start}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Demander au circuit d\textquotesingle{}acquisition de démarrer les transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga5fab192073e0ff3f77dfa4127f5ce603}{Loki\+Env\+Sensors\+\_\+dma\+\_\+stop}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Demander au circuit d\textquotesingle{}acquisition d\textquotesingle{}arrêter les transferts DMA. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{group__gLokiEnvSensors_gab282e701c71cb22e44a21f18d69f0c9a}{Loki\+Env\+Sensors\+\_\+dma\+\_\+is\+\_\+streaming}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état des transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga6505ddd6905800887ae74b6014959272}{Loki\+Env\+Sensors\+\_\+dma\+\_\+get\+\_\+start\+\_\+time}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, struct timespec \texorpdfstring{$\ast$}{*}res)
+\begin{DoxyCompactList}\small\item\em Lire la date de démarrage des transferts DMA. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_gaf621212c675d44cd6eee63fe26036f2f}{Loki\+Env\+Sensors\+\_\+dma\+\_\+get\+\_\+packet\+\_\+time}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, struct timespec \texorpdfstring{$\ast$}{*}res)
+\begin{DoxyCompactList}\small\item\em Lire la date du dernier transfert DMA. \end{DoxyCompactList}\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gaebbec1b9fc4479533515ef3c826361ce}{Loki\+Env\+Sensors\+\_\+bmp390\+\_\+compensate\+\_\+temperature}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t data)
+\item 
+static int32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gac79b976c4bbd764a3c15a0e42ff22f84}{Loki\+Env\+Sensors\+\_\+bmp390\+\_\+compensate\+\_\+pressure}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, uint32\+\_\+t data)
+\item 
+\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEnvSensors_ga96d2d529c200e14e2056cb6a07221b51}{Loki\+Env\+Sensors\+\_\+new}} (void)
+\begin{DoxyCompactList}\small\item\em Construire un module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gab4a1dc32803805865b0b76fb8ba9f6e9}{Loki\+Env\+Sensors\+\_\+del}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Détruire un module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gadda8b640c1f17b5d096896d73e2df06d}{Loki\+Env\+Sensors\+\_\+restart}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Redémarrer le module d\textquotesingle{}acquisition pour les capteurs auxiliaires. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_ga30cb4552b6b9b6921e108e3daca8749a}{Loki\+Env\+Sensors\+\_\+get\+\_\+clk\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}horloge du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_ga600792997301c4bed3dbbae28c397e79}{Loki\+Env\+Sensors\+\_\+get\+\_\+channels}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire le nombre de voies du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_gae7e8ce5a5470bb0d7271e623d45a20fc}{Loki\+Env\+Sensors\+\_\+get\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la fréquence d\textquotesingle{}échantillonnage du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga5aeffec7e9fcf6f043d089e3ad157308}{Loki\+Env\+Sensors\+\_\+set\+\_\+sampling\+\_\+frequency}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, float freq)
+\begin{DoxyCompactList}\small\item\em Affecter une fréquence d\textquotesingle{}échantillonnage au circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gadf0e53d8c7a5580dbeebb2f24216d2f6}{Loki\+Env\+Sensors\+\_\+get\+\_\+packet\+\_\+length\+\_\+max}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur maximale des paquets DMA. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gae4fc28946ee8a1e02238df371861a901}{Loki\+Env\+Sensors\+\_\+get\+\_\+packet\+\_\+length}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire la longueur courante d\textquotesingle{}un paquet DMA. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_ga176acbc5974ccb760b50c01f30bf2f26}{Loki\+Env\+Sensors\+\_\+get\+\_\+scaling\+\_\+factor}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire le facteur de mise à l\textquotesingle{}échelle des échantillons d\textquotesingle{}une voie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gae08bb0f35070b8ff5d9d68dda74002d4}{Loki\+Env\+Sensors\+\_\+set\+\_\+scaling\+\_\+factor}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel, float scale)
+\begin{DoxyCompactList}\small\item\em Affecter un facteur de mise à l\textquotesingle{}échelle des échantillons d\textquotesingle{}une voie. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{group__gLokiEnvSensors_ga0ec5f0af8af44aed10903abb24ae7ef6}{Loki\+Env\+Sensors\+\_\+get\+\_\+last\+\_\+data}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, size\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Lire la valeur du dernier échantillon acquis sur une voie. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \doxymbox{\hyperlink{group__gLokiEnvSensors_gac1a06a888cc956d40a0e617e4ff42cd9}{Loki\+Env\+Sensors\+\_\+get\+\_\+packet\+\_\+index}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{group__gLokiEnvSensors_gaddedaed69cd104ec1095687841046fc8}{Loki\+DMASample}} raw\+\_\+item)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}indice d\textquotesingle{}un paquet reçu. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiEnvSensors_gaf6369c975640b3023910705599da0d84}{Loki\+Env\+Sensors\+\_\+set\+\_\+packet\+\_\+item}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, \doxymbox{\hyperlink{structLokiEnvSensorsSample}{Loki\+Env\+Sensors\+Sample}} \texorpdfstring{$\ast$}{*}item, \doxymbox{\hyperlink{group__gLokiEnvSensors_gaddedaed69cd104ec1095687841046fc8}{Loki\+DMASample}} raw\+\_\+item)
+\begin{DoxyCompactList}\small\item\em Convertir un échantillon issu du DMA. \end{DoxyCompactList}\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiEnvSensors_ga2336b6bb8fdf12c31243b5755b6600b2}{Loki\+Env\+Sensors\+\_\+work}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Traiter un tableau d\textquotesingle{}échantillons issu d\textquotesingle{}un transfert DMA. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__gLokiEnvSensors_ga73bc770ef666badd820b39d8519c2835}{Loki\+Env\+Sensors\+\_\+start\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self, int32\+\_\+t channels, bool raw, \doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}out)
+\begin{DoxyCompactList}\small\item\em Démarrer l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_ga25d2fc754531818073da17164ca9db6a}{Loki\+Env\+Sensors\+\_\+stop\+\_\+streaming}} (\doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiEnvSensors_gab19c1189c6764d5e8762043a96afb377}{Loki\+Env\+Sensors\+\_\+force\+\_\+stop}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Arrêter l\textquotesingle{}acquisition immédiatement. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{group__gLokiEnvSensors_gabde1553662bb4376eb15ed7b9c4ec2fe}{Loki\+Env\+Sensors\+\_\+is\+\_\+streaming}} (const \doxymbox{\hyperlink{structLokiEnvSensors}{Loki\+Env\+Sensors}} \texorpdfstring{$\ast$}{*}self)
+\begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}état de l\textquotesingle{}acquisition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+
+
+\label{libloki-env-sensors_8c_doc-define-members}
+\Hypertarget{libloki-env-sensors_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{libloki-env-sensors_8c_a369266c24eacffb87046522897a570d5}\index{libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/env-\/sensors.c@{libloki-\/env-\/sensors.c}}
+\doxysubsubsection{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \label{libloki-env-sensors_8c_a369266c24eacffb87046522897a570d5} 
+\+\#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+
+
+Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily pthread\+\_\+setname\+\_\+np} pour modifier le nom d\textquotesingle{}un thread. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00005}{5}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+

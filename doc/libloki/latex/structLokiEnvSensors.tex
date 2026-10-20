@@ -1,0 +1,303 @@
+\doxysection{Référence de la structure Loki\+Env\+Sensors}
+\hypertarget{structLokiEnvSensors}{}\label{structLokiEnvSensors}\index{LokiEnvSensors@{LokiEnvSensors}}
+
+
+Représentation de l\textquotesingle{}interface d\textquotesingle{}acquisition des capteurs auxiliaires.  
+
+
+
+
+Graphe de collaboration de Loki\+Env\+Sensors:
+% FIG 0
+\doxysubsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiEnvSensors_aabe3a9efb563e21cc88065156811b0a6}{file}}
+\begin{DoxyCompactList}\small\item\em Le fichier représentant le périphérique qui gère les capteurs. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structLokiEnvSensors_a483a2ba72c5c1f5596b361ad12dc32da}{fileno}}
+\begin{DoxyCompactList}\small\item\em Le numéro du fichier représentant le périphérique qui gère les capteurs. \end{DoxyCompactList}\item 
+volatile bool \doxymbox{\hyperlink{structLokiEnvSensors_a512f4272b84767e4fcfc314c3cbf5a6a}{stop\+\_\+request}}
+\begin{DoxyCompactList}\small\item\em Indicateur de demande d\textquotesingle{}arrêt d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiEnvSensors_adc474781c9fb486e6ec8463ccd668a6e}{out}}
+\begin{DoxyCompactList}\small\item\em La FIFO de sortie de ce module d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structLokiEnvSensors_add2f85f1302b9e491421619da21c0dbb}{raw}}
+\begin{DoxyCompactList}\small\item\em Conserver les données brutes (entiers sans mise à l\textquotesingle{}échelle). \end{DoxyCompactList}\item 
+int32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a01b5cd899501caf9f62f9bb181a97558}{stream\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Un masque indiquant les voies à traiter, -\/1 pour toutes les voies. \end{DoxyCompactList}\item 
+pthread\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a3e55628db3400517a03efd5bec33388b}{thread}}
+\begin{DoxyCompactList}\small\item\em Le thread démarré par Loki\+Env\+Sensors\+\_\+start\+\_\+streaming. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a99051faed96820012f83c53406513ec0}{clk\+\_\+frequency}}
+\begin{DoxyCompactList}\small\item\em La fréquence d\textquotesingle{}horloge du circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_afe1b954bd4b30a4ecbb395ecfa87c2a3}{channels}}
+\begin{DoxyCompactList}\small\item\em Le nombre de voies supportées par le circuit d\textquotesingle{}acquisition. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_acaa93943c3cb6fabdf0b465d99cd2712}{cycles\+\_\+per\+\_\+sample\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Le nombre maximal de cycles d\textquotesingle{}horloge par échantillon. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a1c8978789f46511789df34b07ab596f0}{channel\+\_\+output\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits représentant le numéro de voie dans un échantillon brut. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a832e806f3cda5018f3fa71e1ae595fa9}{data\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Le nombre de bits de données dans un échantillon brut. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a116649a6d2b66cd0f96396fb38d73d0c}{channel\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire permettant d\textquotesingle{}isoler le numéro de voie dans un échantillon brut. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_a03ae20b887bd89c7e475bcb9011766ea}{data\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire permettant d\textquotesingle{}isoler la valeur d\textquotesingle{}un échantillon brut. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_abf7344a32fdf2979054d72a32c30df61}{data\+\_\+sign\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em Le masque binaire permettant d\textquotesingle{}isoler le bit de signe de la valeur d\textquotesingle{}un échantillon brut. \end{DoxyCompactList}\item 
+int64\+\_\+t \doxymbox{\hyperlink{structLokiEnvSensors_ad1a95b9a6fe085dd56c9de874a5f7581}{bmp390\+\_\+t\+\_\+fine}}
+\begin{DoxyCompactList}\small\item\em La dernière valeur de température lue sur le capteur BMP390 après compensation. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structLokiEnvSensors_afd7a87b1668affc5b162b42d696ff161}{scales}}
+\begin{DoxyCompactList}\small\item\em Le tableau des facteurs d\textquotesingle{}échelle à appliquer à chaque voie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représentation de l\textquotesingle{}interface d\textquotesingle{}acquisition des capteurs auxiliaires. 
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00025}{25}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+
+
+\label{structLokiEnvSensors_doc-variable-members}
+\Hypertarget{structLokiEnvSensors_doc-variable-members}
+\doxysubsection{Documentation des champs}
+\Hypertarget{structLokiEnvSensors_ad1a95b9a6fe085dd56c9de874a5f7581}\index{LokiEnvSensors@{LokiEnvSensors}!bmp390\_t\_fine@{bmp390\_t\_fine}}
+\index{bmp390\_t\_fine@{bmp390\_t\_fine}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{bmp390\_t\_fine}{bmp390\_t\_fine}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_ad1a95b9a6fe085dd56c9de874a5f7581} 
+int64\+\_\+t Loki\+Env\+Sensors::\+bmp390\+\_\+t\+\_\+fine}
+
+
+
+La dernière valeur de température lue sur le capteur BMP390 après compensation. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00057}{57}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a116649a6d2b66cd0f96396fb38d73d0c}\index{LokiEnvSensors@{LokiEnvSensors}!channel\_mask@{channel\_mask}}
+\index{channel\_mask@{channel\_mask}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{channel\_mask}{channel\_mask}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a116649a6d2b66cd0f96396fb38d73d0c} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+channel\+\_\+mask}
+
+
+
+Le masque binaire permettant d\textquotesingle{}isoler le numéro de voie dans un échantillon brut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00051}{51}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a1c8978789f46511789df34b07ab596f0}\index{LokiEnvSensors@{LokiEnvSensors}!channel\_output\_width@{channel\_output\_width}}
+\index{channel\_output\_width@{channel\_output\_width}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{channel\_output\_width}{channel\_output\_width}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a1c8978789f46511789df34b07ab596f0} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+channel\+\_\+output\+\_\+width}
+
+
+
+Le nombre de bits représentant le numéro de voie dans un échantillon brut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00047}{47}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_afe1b954bd4b30a4ecbb395ecfa87c2a3}\index{LokiEnvSensors@{LokiEnvSensors}!channels@{channels}}
+\index{channels@{channels}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_afe1b954bd4b30a4ecbb395ecfa87c2a3} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+channels}
+
+
+
+Le nombre de voies supportées par le circuit d\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00043}{43}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a99051faed96820012f83c53406513ec0}\index{LokiEnvSensors@{LokiEnvSensors}!clk\_frequency@{clk\_frequency}}
+\index{clk\_frequency@{clk\_frequency}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{clk\_frequency}{clk\_frequency}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a99051faed96820012f83c53406513ec0} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+clk\+\_\+frequency}
+
+
+
+La fréquence d\textquotesingle{}horloge du circuit d\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_acaa93943c3cb6fabdf0b465d99cd2712}\index{LokiEnvSensors@{LokiEnvSensors}!cycles\_per\_sample\_max@{cycles\_per\_sample\_max}}
+\index{cycles\_per\_sample\_max@{cycles\_per\_sample\_max}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{cycles\_per\_sample\_max}{cycles\_per\_sample\_max}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_acaa93943c3cb6fabdf0b465d99cd2712} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+cycles\+\_\+per\+\_\+sample\+\_\+max}
+
+
+
+Le nombre maximal de cycles d\textquotesingle{}horloge par échantillon. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00045}{45}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a03ae20b887bd89c7e475bcb9011766ea}\index{LokiEnvSensors@{LokiEnvSensors}!data\_mask@{data\_mask}}
+\index{data\_mask@{data\_mask}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{data\_mask}{data\_mask}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a03ae20b887bd89c7e475bcb9011766ea} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+data\+\_\+mask}
+
+
+
+Le masque binaire permettant d\textquotesingle{}isoler la valeur d\textquotesingle{}un échantillon brut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00053}{53}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_abf7344a32fdf2979054d72a32c30df61}\index{LokiEnvSensors@{LokiEnvSensors}!data\_sign\_mask@{data\_sign\_mask}}
+\index{data\_sign\_mask@{data\_sign\_mask}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{data\_sign\_mask}{data\_sign\_mask}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_abf7344a32fdf2979054d72a32c30df61} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+data\+\_\+sign\+\_\+mask}
+
+
+
+Le masque binaire permettant d\textquotesingle{}isoler le bit de signe de la valeur d\textquotesingle{}un échantillon brut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00055}{55}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a832e806f3cda5018f3fa71e1ae595fa9}\index{LokiEnvSensors@{LokiEnvSensors}!data\_width@{data\_width}}
+\index{data\_width@{data\_width}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{data\_width}{data\_width}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a832e806f3cda5018f3fa71e1ae595fa9} 
+uint32\+\_\+t Loki\+Env\+Sensors::\+data\+\_\+width}
+
+
+
+Le nombre de bits de données dans un échantillon brut. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00049}{49}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_aabe3a9efb563e21cc88065156811b0a6}\index{LokiEnvSensors@{LokiEnvSensors}!file@{file}}
+\index{file@{file}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_aabe3a9efb563e21cc88065156811b0a6} 
+FILE\texorpdfstring{$\ast$}{*} Loki\+Env\+Sensors::\+file}
+
+
+
+Le fichier représentant le périphérique qui gère les capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00027}{27}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a483a2ba72c5c1f5596b361ad12dc32da}\index{LokiEnvSensors@{LokiEnvSensors}!fileno@{fileno}}
+\index{fileno@{fileno}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{fileno}{fileno}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a483a2ba72c5c1f5596b361ad12dc32da} 
+int Loki\+Env\+Sensors::\+fileno}
+
+
+
+Le numéro du fichier représentant le périphérique qui gère les capteurs. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00029}{29}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_adc474781c9fb486e6ec8463ccd668a6e}\index{LokiEnvSensors@{LokiEnvSensors}!out@{out}}
+\index{out@{out}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_adc474781c9fb486e6ec8463ccd668a6e} 
+\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}}\texorpdfstring{$\ast$}{*} Loki\+Env\+Sensors::\+out}
+
+
+
+La FIFO de sortie de ce module d\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00033}{33}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_add2f85f1302b9e491421619da21c0dbb}\index{LokiEnvSensors@{LokiEnvSensors}!raw@{raw}}
+\index{raw@{raw}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_add2f85f1302b9e491421619da21c0dbb} 
+bool Loki\+Env\+Sensors::\+raw}
+
+
+
+Conserver les données brutes (entiers sans mise à l\textquotesingle{}échelle). 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00035}{35}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_afd7a87b1668affc5b162b42d696ff161}\index{LokiEnvSensors@{LokiEnvSensors}!scales@{scales}}
+\index{scales@{scales}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{scales}{scales}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_afd7a87b1668affc5b162b42d696ff161} 
+float\texorpdfstring{$\ast$}{*} Loki\+Env\+Sensors::\+scales}
+
+
+
+Le tableau des facteurs d\textquotesingle{}échelle à appliquer à chaque voie. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00059}{59}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a512f4272b84767e4fcfc314c3cbf5a6a}\index{LokiEnvSensors@{LokiEnvSensors}!stop\_request@{stop\_request}}
+\index{stop\_request@{stop\_request}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{stop\_request}{stop\_request}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a512f4272b84767e4fcfc314c3cbf5a6a} 
+volatile bool Loki\+Env\+Sensors::\+stop\+\_\+request}
+
+
+
+Indicateur de demande d\textquotesingle{}arrêt d\textquotesingle{}acquisition. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a01b5cd899501caf9f62f9bb181a97558}\index{LokiEnvSensors@{LokiEnvSensors}!stream\_channels@{stream\_channels}}
+\index{stream\_channels@{stream\_channels}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{stream\_channels}{stream\_channels}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a01b5cd899501caf9f62f9bb181a97558} 
+int32\+\_\+t Loki\+Env\+Sensors::\+stream\+\_\+channels}
+
+
+
+Un masque indiquant les voies à traiter, -\/1 pour toutes les voies. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00037}{37}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+\Hypertarget{structLokiEnvSensors_a3e55628db3400517a03efd5bec33388b}\index{LokiEnvSensors@{LokiEnvSensors}!thread@{thread}}
+\index{thread@{thread}!LokiEnvSensors@{LokiEnvSensors}}
+\doxysubsubsection{\texorpdfstring{thread}{thread}}
+{\footnotesize\ttfamily \label{structLokiEnvSensors_a3e55628db3400517a03efd5bec33388b} 
+pthread\+\_\+t Loki\+Env\+Sensors::\+thread}
+
+
+
+Le thread démarré par Loki\+Env\+Sensors\+\_\+start\+\_\+streaming. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-env-sensors_8c_source_l00039}{39}} du fichier \doxymbox{\hyperlink{libloki-env-sensors_8c_source}{libloki-\/env-\/sensors.\+c}}.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{libloki-env-sensors_8c}{libloki-\/env-\/sensors.\+c}}\end{DoxyCompactItemize}

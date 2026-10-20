@@ -1,0 +1,66 @@
+\doxysection{Référence du fichier libloki-\/hooks.c}
+\hypertarget{libloki-hooks_8c}{}\label{libloki-hooks_8c}\index{libloki-\/hooks.c@{libloki-\/hooks.c}}
+{\ttfamily \+\#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \+\#include $<$malloc.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de libloki-\/hooks.c:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{libloki-hooks_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\begin{DoxyCompactList}\small\item\em Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily dladdr} pour connaître le nom de la fonction référencée par un pointeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gLokiHooks_ga4175410f57244d03a197a9ca698d7fa3}{Loki\+Hooks\+\_\+malloc}} (size\+\_\+t size, const void \texorpdfstring{$\ast$}{*}caller)
+\begin{DoxyCompactList}\small\item\em Une version instrumentée du hook de la fonction {\ttfamily malloc}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_gaf60068237975d6170328c5dd9fcb875f}{Loki\+Hooks\+\_\+free}} (void \texorpdfstring{$\ast$}{*}ptr, const void \texorpdfstring{$\ast$}{*}caller)
+\begin{DoxyCompactList}\small\item\em Une version instrumentée du hook de la fonction {\ttfamily free}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_ga754ec741c3c59c815440fa4b8bc5bda2}{Loki\+Hooks\+\_\+setup}} (void)
+\begin{DoxyCompactList}\small\item\em Affecter les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{group__gLokiHooks_gadc8f630bfbfcb249ae0e14722f9e3141}{Loki\+Hooks\+\_\+save}} (void)
+\begin{DoxyCompactList}\small\item\em Sauvegarder les hooks des fonctions {\ttfamily malloc} et {\ttfamily free}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiHooks_gaa7d235f5db9c92d3af4c3e816983f4ae}{Loki\+Hooks\+\_\+restore}} (void)
+\begin{DoxyCompactList}\small\item\em Restaurer les hooks d\textquotesingle{}origine pour l\textquotesingle{}allocation/\+désallocation de mémoire. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__gLokiHooks_ga8452f9f1793e6d1091ac294f15406592}{Loki\+Hooks\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialiser l\textquotesingle{}utilisation des hooks instrumentés pour l\textquotesingle{}allocation/\+désallocation de mémoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group__gLokiHooks_gaa645859efa9eecf1d6279f922cf25147}{Loki\+Hooks\+\_\+saved\+\_\+malloc}} (size\+\_\+t, const void \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Pointeur vers le hook qui exécute la fonction {\ttfamily malloc} d\textquotesingle{}origine. \end{DoxyCompactList}\item 
+static void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group__gLokiHooks_ga2d338f0f660cf9d8d44cbc22e134b003}{Loki\+Hooks\+\_\+saved\+\_\+free}} (void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Pointeur vers le hook qui exécute la fonction {\ttfamily free} d\textquotesingle{}origine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+Guillaume Savaton 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+ESEO 
+\end{DoxyCopyright}
+
+
+Définition dans le fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+
+
+
+\label{libloki-hooks_8c_doc-define-members}
+\Hypertarget{libloki-hooks_8c_doc-define-members}
+\doxysubsection{Documentation des macros}
+\Hypertarget{libloki-hooks_8c_a369266c24eacffb87046522897a570d5}\index{libloki-\/hooks.c@{libloki-\/hooks.c}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!libloki-\/hooks.c@{libloki-\/hooks.c}}
+\doxysubsubsection{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \label{libloki-hooks_8c_a369266c24eacffb87046522897a570d5} 
+\+\#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+
+
+Permettre l\textquotesingle{}utilisation de la fonction {\ttfamily dladdr} pour connaître le nom de la fonction référencée par un pointeur. 
+
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-hooks_8c_source_l00003}{3}} du fichier \doxymbox{\hyperlink{libloki-hooks_8c_source}{libloki-\/hooks.\+c}}.
+

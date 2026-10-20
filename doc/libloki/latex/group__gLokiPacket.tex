@@ -1,0 +1,89 @@
+\doxysubsection{Type paquets d\textquotesingle{}échantillons }
+\hypertarget{group__gLokiPacket}{}\label{group__gLokiPacket}\index{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}}
+
+
+Type de données pour la communication de paquets d\textquotesingle{}échantillons datés entre threads.  
+
+
+Graphe de collaboration de Type paquets d\textquotesingle{}échantillons:
+% FIG 0
+\doxysubsubsubsection*{Fichiers}
+\begin{DoxyCompactItemize}
+\item 
+fichier \doxymbox{\hyperlink{libloki-packet_8h}{libloki-\/packet.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structLokiPacket}{Loki\+Packet}}
+\begin{DoxyCompactList}\small\item\em Structure d\textquotesingle{}un paquet d\textquotesingle{}échantillons échangés entre tâches concurrentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \doxymbox{\hyperlink{group__gLokiPacket_ga91d3ac839aebdf27cd0a1764a633b963}{Loki\+Packet\+\_\+get\+\_\+fifo\+\_\+item\+\_\+size}} (size\+\_\+t packet\+\_\+length, size\+\_\+t sample\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Calculer la taille d\textquotesingle{}un paquet de données. \end{DoxyCompactList}\item 
+static size\+\_\+t \doxymbox{\hyperlink{group__gLokiPacket_gae0204abb3e85eacc5e915eb170245555}{Loki\+Packet\+\_\+get\+\_\+length}} (\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}fifo, size\+\_\+t sample\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Lire la longueur des paquets supportés par une FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Description détaillée}
+Type de données pour la communication de paquets d\textquotesingle{}échantillons datés entre threads. 
+
+
+
+\label{group__gLokiPacket_doc-func-members}
+\Hypertarget{group__gLokiPacket_doc-func-members}
+\doxysubsubsection{Documentation des fonctions}
+\Hypertarget{group__gLokiPacket_ga91d3ac839aebdf27cd0a1764a633b963}\index{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}!LokiPacket\_get\_fifo\_item\_size@{LokiPacket\_get\_fifo\_item\_size}}
+\index{LokiPacket\_get\_fifo\_item\_size@{LokiPacket\_get\_fifo\_item\_size}!Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}}
+\doxysubsubsubsection{\texorpdfstring{LokiPacket\_get\_fifo\_item\_size()}{LokiPacket\_get\_fifo\_item\_size()}}
+{\footnotesize\ttfamily \label{group__gLokiPacket_ga91d3ac839aebdf27cd0a1764a633b963} 
+size\+\_\+t Loki\+Packet\+\_\+get\+\_\+fifo\+\_\+item\+\_\+size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{packet\+\_\+length}{, }\item[{size\+\_\+t}]{sample\+\_\+size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculer la taille d\textquotesingle{}un paquet de données. 
+
+Le résultat inclut la taille des métadonnées contenues dans le paquet.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em packet\+\_\+length} & Le nombre d\textquotesingle{}échantillons contenus dans le paquet. \\
+\hline
+{\em sample\+\_\+size} & La taille d\textquotesingle{}un échantillon, en octets. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-packet_8h_source_l00031}{31}} du fichier \doxymbox{\hyperlink{libloki-packet_8h_source}{libloki-\/packet.\+h}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 1
+Voici le graphe des appelants de cette fonction :
+% FIG 2
+\Hypertarget{group__gLokiPacket_gae0204abb3e85eacc5e915eb170245555}\index{Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}!LokiPacket\_get\_length@{LokiPacket\_get\_length}}
+\index{LokiPacket\_get\_length@{LokiPacket\_get\_length}!Type paquets d\textquotesingle{}échantillons@{Type paquets d\textquotesingle{}échantillons}}
+\doxysubsubsubsection{\texorpdfstring{LokiPacket\_get\_length()}{LokiPacket\_get\_length()}}
+{\footnotesize\ttfamily \label{group__gLokiPacket_gae0204abb3e85eacc5e915eb170245555} 
+size\+\_\+t Loki\+Packet\+\_\+get\+\_\+length (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structLokiFIFO}{Loki\+FIFO}} \texorpdfstring{$\ast$}{*}}]{fifo}{, }\item[{size\+\_\+t}]{sample\+\_\+size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lire la longueur des paquets supportés par une FIFO. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fifo} & La FIFO à interroger. \\
+\hline
+{\em sample\+\_\+size} & La taille d\textquotesingle{}un échantillon, en octets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre d\textquotesingle{}échantillons par paquet dans cette FIFO. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \doxymbox{\hyperlink{libloki-packet_8h_source_l00041}{41}} du fichier \doxymbox{\hyperlink{libloki-packet_8h_source}{libloki-\/packet.\+h}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction :
+% FIG 3
